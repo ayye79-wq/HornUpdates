@@ -33,6 +33,7 @@ RSS_FEEDS = [
     "https://www.voanews.com/rss/section/africa",
     "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
   "https://www.aljazeera.com/xml/rss/africa.xml",
+    "https://capitalethiopia.com/feed/",
 
 
     # 🇪🇹 Ethiopia
@@ -253,7 +254,11 @@ def main():
     }
 
     print(f"\nWriting {len(all_articles)} articles to {OUTPUT_PATH}")
-    OUTPUT_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+OUTPUT_PATH.write_text(
+    json.dumps(payload, ensure_ascii=False, indent=2),
+    encoding="utf-8"
+)
+
 
 
 if __name__ == "__main__":
