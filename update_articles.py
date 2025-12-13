@@ -57,13 +57,14 @@ ALWAYS_INCLUDE_FEEDS = [
     "garoweonline.com",
     "theeastafrican.co.ke",
     "sudantribune.com",
+    "bbci.co.uk",
+
 ]
 
 # Block some domains entirely (e.g., ENA, Borkena, Al Jazeera)
 BLOCKED_SOURCES = [
     "borkena.com",
-    "aljazeera.com",
-    "ena.et",   # 🔴 Block ENA (Ethiopian News Agency)
+
 ]
 
 HORN_KEYWORDS = [
