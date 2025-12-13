@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horn Updates • Reader</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #f5f6f8;
+      color: #111827;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 18px; }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; margin-bottom: 14px;
+    }
+    .brand a { text-decoration: none; color: #111827; font-weight: 900; }
+    .btn {
+      display: inline-block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      color: #111827;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn:hover { filter: brightness(0.98); }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.06);
+      padding: 18px;
+    }
+    .meta { color: #6b7280; font-size: .95rem; display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill { background: #f3f4f6; padding: 4px 10px; border-radius: 999px; font-size: .85rem; }
+    h1 { font-size: 1.4rem; line-height: 1.25; margin: 10px 0 10px; }
+    .summary { margin-top: 10px; font-size: 1.02rem; }
+    .divider { height: 1px; background: #e5e7eb; margin: 14px 0; }
+    .muted { color: #6b7280; }
+    .error { color: #b91c1c; font-weight: 700; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <a href="index.html">Horn Updates</a>
+        <span class="muted">• Reader</span>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
+        <button id="copyBtn" class="btn" type="button">Copy link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="meta" id="metaLine">
+        <span class="pill" id="sourcePill">Source</span>
+        <span class="pill" id="datePill">Date</span>
+        <span class="pill" id="catPill" style="display:none;">Category</span>
+        <span class="pill" id="countryPill" style="display:none;">Country</span>
+      </div>
+
+      <h1 id="title">Loading…</h1>
+
+      <div class="divider"></div>
+
+      <div id="summary" class="summary">
+        <span class="muted">Loading summary…</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="muted" style="font-size:.95rem;">
+        <strong>Attribution:</strong> This summary is written by Horn Updates. Full article remains on the publisher’s website.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function getParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+
+    function safeHost(u) {
+      try { return new URL(u).hostname.replace(/^www\./, ""); }
+      catch { return ""; }
+    }
+
+    function formatDate(d) {
+      if (!d) return "";
+      const dt = new Date(d);
+      if (isNaN(dt.getTime())) return d;
+      return dt.toLocaleString(undefined, { year:"numeric", month:"short", day:"2-digit" });
+    }
+
+    // Escape HTML to prevent injection
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    // Decode entities like &#8230; into real characters
+    function decodeEntities(str) {
+      const txt = document.createElement("textarea");
+      txt.innerHTML = str;
+      return txt.value;
+    }
+
+    function renderSafeSummary(summaryText) {
+      const decoded = decodeEntities(summaryText || "");
+      const safe = escapeHtml(decoded);
+      return safe.replace(/\n/g, "<br>");
+    }
+
+    function normalize(u) {
+      try {
+        const x = new URL(u);
+        return x.hostname.replace(/^www\./, "") + x.pathname.replace(/\/$/, "");
+      } catch {
+        return "";
+      }
+    }
+
+    async function load() {
+      const articleUrl = getParam("url");
+      if (!articleUrl) {
+        document.getElementById("title").innerHTML = '<span class="error">Missing url parameter.</span>';
+        document.getElementById("summary").innerHTML = 'Open reader like: <code>reader.html?url=https://example.com</code>';
+        document.getElementById("openBtn").style.display = "none";
+        return;
+      }
+
+      // Set open button
+      const openBtn = document.getElementById("openBtn");
+      openBtn.href = articleUrl;
+
+      // Copy button
+      document.getElementById("copyBtn").onclick = async () => {
+        try {
+          await navigator.clipboard.writeText(articleUrl);
+          alert("Link copied!");
+        } catch {
+          prompt("Copy this link:", articleUrl);
+        }
+      };
+
+      // Defaults (in case not found in JSON)
+      const host = safeHost(articleUrl);
+      document.getElementById("sourcePill").textContent = host ? `Source: ${host}` : "Source";
+      document.getElementById("datePill").textContent = "Date: —";
+      document.getElementById("title").textContent = "Article";
+      document.getElementById("summary").innerHTML =
+        `<p class="muted">We’re loading the summary for this story…</p>`;
+
+      // Try to match article in articles.json
+      try {
+        const res = await fetch("articles.json", { cache: "no-store" });
+        const data = await res.json();
+        const articles = Array.isArray(data) ? data : (data.articles || []);
+
+        const target = normalize(articleUrl);
+
+        const match = articles.find(a => {
+          const candidate = normalize(a.url || a.link || a.source_url || "");
+          return candidate === target;
+        });
+
+        if (!match) {
+          document.getElementById("summary").innerHTML =
+            `<p class="muted">We could not match this article inside <code>articles.json</code>. You can still read the full story using the button above.</p>`;
+          return;
+        }
+
+        const title = match.title || "Article";
+        const summary = match.summary || match.excerpt || match.ai_summary || "";
+        const published = match.published_at || match.published || match.date || "";
+        const sourceName = match.source || match.source_name || host || "Source";
+        const category = match.category || "";
+        const countries = Array.isArray(match.countries) ? match.countries.join(", ") : (match.countries || "");
+
+        document.getElementById("title").textContent = title;
+        document.getElementById("sourcePill").textContent = `Source: ${sourceName}`;
+        document.getElementById("datePill").textContent = `Date: ${published ? formatDate(published) : "—"}`;
+
+        if (category) {
+          const el = document.getElementById("catPill");
+          el.style.display = "inline-block";
+          el.textContent = `Category: ${category}`;
+        }
+
+        if (countries) {
+          const el = document.getElementById("countryPill");
+          el.style.display = "inline-block";
+          el.textContent = `Country: ${countries}`;
+        }
+
+        document.getElementById("summary").innerHTML = summary
+          ? `<p>${renderSafeSummary(summary)}</p>`
+          : `<p class="muted">Summary not available for this story yet.</p>`;
+
+      } catch (e) {
+        console.warn("Reader load error:", e);
+        document.getElementById("summary").innerHTML =
+          `<p class="muted">Could not load <code>articles.json</code>. Please try again.</p>`;
+      }
+    }
+
+    load();
+  </script>
+</body>
+</html>
