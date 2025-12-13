@@ -32,7 +32,8 @@ RSS_FEEDS = [
     "https://www.reuters.com/rssFeed/africaNews",
     "https://www.voanews.com/rss/section/africa",
     "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
-    "https://www.aljazeera.com/xml/rss/all.xml",
+  "https://www.aljazeera.com/xml/rss/africa.xml",
+
 
     # 🇪🇹 Ethiopia
     "https://www.addisstandard.com/feed/",
