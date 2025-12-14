@@ -1,261 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-
   <meta charset="UTF-8" />
   <title>Horn Updates</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
-     crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/favicon.ico" />
 </head>
 
 <body>
-  <div class="page">
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="brand">
-        <img src="Horn1_logo.png" alt="Horn Updates logo" class="logo" />
-        <div class="brand-text">
-          <h1>Horn Updates</h1>
-          <p class="tagline">News from the Horn of Africa</p>
-        </div>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="brand">
+      <img src="Horn1_logo.png" class="logo" />
+      <div>
+        <h1>Horn Updates</h1>
+        <p class="tagline">News from the Horn of Africa</p>
       </div>
+    </div>
 
-      <!-- FILTER NAV -->
-      <nav class="nav-filters">
-        <button class="filter-pill active" data-filter="all">All</button>
-        <button class="filter-pill" data-filter="Politics">Politics</button>
-        <button class="filter-pill" data-filter="Business">Business</button>
-        <button class="filter-pill" data-filter="Society">Society</button>
-        <button class="filter-pill" data-filter="Security">Security</button>
-        <button class="filter-pill" data-filter="Culture">Culture</button>
-        <button class="filter-pill" data-filter="Diaspora">Diaspora</button>
-      </nav>
-    </header>
+    <nav class="nav-filters">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="politics">Politics</button>
+      <button class="filter-pill" data-filter="business">Business</button>
+      <button class="filter-pill" data-filter="society">Society</button>
+      <button class="filter-pill" data-filter="security">Security</button>
+      <button class="filter-pill" data-filter="culture">Culture</button>
+      <button class="filter-pill" data-filter="diaspora">Diaspora</button>
+    </nav>
+  </header>
 
-    <!-- INTRO -->
-    <p class="intro">
-      HornUpdates scans trusted news sources like Reuters, BBC, and VOA, filters for the Horn of Africa,
-      and generates clean AI-powered summaries with links back to the original publishers.
-    </p>
+  <p class="intro">
+    HornUpdates aggregates trusted sources like Reuters, BBC, and VOA,
+    delivering AI-powered summaries focused on the Horn of Africa.
+  </p>
 
-    <!-- BREAKING BAR -->
-    <section class="breaking-bar" id="breaking-bar">
-      <span class="breaking-label">BREAKING</span>
-      <a id="breaking-link" class="breaking-link" href="#"></a>
+  <!-- BREAKING -->
+  <section class="breaking-bar">
+    <span class="breaking-label">BREAKING</span>
+    <a id="breaking-link" class="breaking-link"></a>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="content">
+
+    <section class="featured-section">
+      <h2>Featured story</h2>
+      <div id="featured-container"></div>
     </section>
 
-    <!-- FEATURED STORY -->
-    <main class="content">
-      <section class="featured-section">
-        <h2>Featured story</h2>
-        <div id="featured-container"></div>
-      </section>
+    <section class="latest-section">
+      <h2>Latest stories</h2>
+      <div id="latest-container"></div>
+    </section>
 
-      <!-- LATEST STORIES -->
-      <section class="latest-section">
-        <h2>Latest stories</h2>
-        <div id="latest-container"></div>
-      </section>
-    </main>
+  </main>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <p>© 2025 Horn Updates. All rights reserved.</p>
-      <p class="footer-meta">
-        Sources include Reuters, BBC, VOA, and other reputable outlets.
-      </p>
-    </footer>
-  </div>
+  <footer class="site-footer">
+    © 2025 Horn Updates
+  </footer>
+</div>
 
-  <!-- MAIN JS LOGIC -->
-  <script>
-    // ---------- HELPERS ----------
-    function buildReaderLink(sourceUrl) {
-      return "reader.html?url=" + encodeURIComponent(sourceUrl || "#");
+<script>
+/* ===================== HELPERS ===================== */
+
+const buildReaderLink = url =>
+  "reader.html?url=" + encodeURIComponent(url || "#");
+
+const clamp = (t, n) => t && t.length > n ? t.slice(0,n) + "…" : (t || "");
+
+const getCountries = a =>
+  Array.isArray(a.countries) ? a.countries :
+  Array.isArray(a.country_tags) ? a.country_tags : [];
+
+function pickRotatingFeatured(list) {
+  const pool = list.slice(1, 8);
+  const last = sessionStorage.getItem("horn_last_featured") || "";
+  let pick = pool[0];
+
+  for (let i = 0; i < pool.length; i++) {
+    const c = pool[Math.floor(Math.random() * pool.length)];
+    const key = (c.source_url || c.link || "").trim();
+    if (key && key !== last) {
+      pick = c;
+      sessionStorage.setItem("horn_last_featured", key);
+      break;
     }
-
-    function getCountries(article) {
-      // Support either `countries` or `country_tags`
-      const raw = article.countries || article.country_tags || [];
-      if (!raw) return [];
-      if (Array.isArray(raw)) return raw;
-      return [String(raw)];
-    }
-
-    function formatCountries(article) {
-      const countries = getCountries(article);
-      return countries.join(" • ");
-    }
-
-    function clamp(text, max) {
-      if (!text) return "";
-      return text.length > max ? text.slice(0, max) + "…" : text;
-    }
-
-    // ---------- RENDER FUNCTIONS ----------
-    function renderStoryCard(article, isFeatured = false) {
-      const countriesArr = getCountries(article);
-      const countriesStr = countriesArr.join(" • ");
-      const category = article.category || article.topic || "General";
-      const published = article.published_at || "";
-      const sourceName = article.source_name || article.source || "";
-      const href = buildReaderLink(article.url || article.source_url || article.link);
-
-
-      const title = clamp(article.title || "Untitled story", isFeatured ? 160 : 120);
-      const summary = clamp(
-        article.summary || article.excerpt || "",
-        isFeatured ? 280 : 220
-      );
-
-      const cardClass = "story-card" + (isFeatured ? " story-card--featured" : "");
-
-      const countryTags = countriesArr
-        .map(c => `<span class="tag-pill">${c}</span>`)
-        .join("");
-
-      return `
-        <article class="${cardClass}">
-          <header class="story-header">
-            <div class="story-tags">
-              ${countryTags}
-              <span class="tag-pill tag-category">${category}</span>
-            </div>
-            <h3 class="story-title">
-              <a class="story-link" href="${href}">
-                ${title}
-              </a>
-            </h3>
-          </header>
-          ${summary ? `<p class="story-summary">${summary}</p>` : ""}
-          <footer class="story-meta">
-            ${sourceName ? `<span class="story-source">${sourceName}</span>` : ""}
-            ${published ? `<span class="story-date">${published}</span>` : ""}
-          </footer>
-        </article>
-      `;
-    }
-
-    function setBreakingBar(article) {
-      const linkEl = document.getElementById("breaking-link");
-      if (!linkEl || !article) return;
-
-      const countriesStr = formatCountries(article);
-      let label = article.title || "";
-      if (countriesStr) label += " — " + countriesStr;
-      label = clamp(label, 140);
-
-      linkEl.textContent = label;
-      linkEl.href = buildReaderLink(article.source_url || article.link);
-    }
-
-    // ---------- STATE ----------
-    let allArticles = [];
-    let currentFilter = "all";
-
-    function matchesFilter(article, filter) {
-      if (filter === "all") return true;
-      const needle = filter.toLowerCase();
-
-      const countries = getCountries(article).join(" ").toLowerCase();
-      const category = (article.category || "").toLowerCase();
-      const topic = (article.topic || "").toLowerCase();
-      const title = (article.title || "").toLowerCase();
-      const summary = (article.summary || article.excerpt || "").toLowerCase();
-
-      return (
-        countries.includes(needle) ||
-        category.includes(needle) ||
-        topic.includes(needle) ||
-        title.includes(needle) ||
-        summary.includes(needle)
-      );
-    }
-
-    function renderPage(filteredList) {
-      const featuredContainer = document.getElementById("featured-container");
-      const latestContainer = document.getElementById("latest-container");
-
-      if (!filteredList.length) {
-        featuredContainer.innerHTML = "<p>No stories available.</p>";
-        latestContainer.innerHTML = "";
-        return;
-      }
-
-      const featured = filteredList[0];
-      const latest = filteredList.slice(1); // show the rest
-
-      featuredContainer.innerHTML = renderStoryCard(featured, true);
-      latestContainer.innerHTML = latest.map(a => renderStoryCard(a, false)).join("");
-
-      setBreakingBar(featured);
-    }
-
-    function applyFilter() {
-      const filtered = allArticles.filter(a => matchesFilter(a, currentFilter));
-      renderPage(filtered.length ? filtered : allArticles);
-    }
-
-    function setupFilters() {
-      document.querySelectorAll(".filter-pill").forEach(btn => {
-        btn.addEventListener("click", () => {
-          document.querySelectorAll(".filter-pill").forEach(b =>
-            b.classList.remove("active")
-          );
-          btn.classList.add("active");
-          currentFilter = btn.dataset.filter || "all";
-          applyFilter();
-        });
-      });
-    }
-
-  function loadArticles() {
-  fetch("articles.json?ts=" + Date.now(), { cache: "no-store" })
-    .then(res => {
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json();
-    })
-    .then(data => {
-      let list = Array.isArray(data) ? data : (data.articles || []);
-
-      // Only keep items that have a title + link
-      list = list.filter(a => a && a.title && (a.source_url || a.link));
-
-      // De-dupe by URL (prevents repeats from dominating)
-      const seen = new Set();
-      list = list.filter(a => {
-        const url = (a.source_url || a.link || "").trim();
-        if (!url) return false;
-        if (seen.has(url)) return false;
-        seen.add(url);
-        return true;
-      });
-
-      // Sort newest first by published_at (safe parsing)
-      list.sort((a, b) => {
-        const da = Date.parse(a.published_at || "") || 0;
-        const db = Date.parse(b.published_at || "") || 0;
-        return db - da;
-      });
-
-      allArticles = list;
-      applyFilter();
-    })
-    .catch(err => {
-      console.error("Error loading articles.json:", err);
-      const el = document.getElementById("featured-container");
-      if (el) el.innerHTML = "<p>Failed to load stories.</p>";
-    });
+  }
+  return pick;
 }
 
-    window.addEventListener("DOMContentLoaded", () => {
-      setupFilters();
-      loadArticles();
-    });
-  </script>
+/* ===================== RENDER ===================== */
+
+function renderCard(a, featured=false) {
+  const countries = getCountries(a).map(c=>`<span class="tag-pill">${c}</span>`).join("");
+  return `
+  <article class="story-card ${featured ? "story-card--featured":""}">
+    <header>
+      <div class="story-tags">${countries}<span class="tag-pill tag-category">${a.category||"General"}</span></div>
+      <h3><a href="${buildReaderLink(a.source_url||a.link)}">${clamp(a.title, featured?160:120)}</a></h3>
+    </header>
+    ${a.summary ? `<p>${clamp(a.summary, featured?280:220)}</p>` : ""}
+    <footer>${a.source_name||""} ${a.published_at||""}</footer>
+  </article>`;
+}
+
+function setBreaking(a) {
+  const el = document.getElementById("breaking-link");
+  el.textContent = clamp(a.title,140);
+  el.href = buildReaderLink(a.source_url||a.link);
+}
+
+/* ===================== STATE ===================== */
+
+let allArticles = [];
+let filter = "all";
+
+/* ===================== FILTER ===================== */
+
+function applyFilter() {
+  const list = filter==="all"
+    ? allArticles
+    : allArticles.filter(a =>
+        JSON.stringify(a).toLowerCase().includes(filter)
+      );
+
+  render(list.length ? list : allArticles);
+}
+
+function render(list) {
+  const featuredEl = document.getElementById("featured-container");
+  const latestEl = document.getElementById("latest-container");
+
+  const breaking = list[0];
+  const featured = pickRotatingFeatured(list) || breaking;
+  const latest = list.filter(a => a!==breaking && a!==featured);
+
+  setBreaking(breaking);
+  featuredEl.innerHTML = renderCard(featured,true);
+  latestEl.innerHTML = latest.map(a=>renderCard(a)).join("");
+}
+
+document.querySelectorAll(".filter-pill").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll(".filter-pill").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    filter=b.dataset.filter;
+    applyFilter();
+  }
+});
+
+/* ===================== LOAD ===================== */
+
+fetch("articles.json?ts="+Date.now(),{cache:"no-store"})
+  .then(r=>r.json())
+  .then(d=>{
+    const list = Array.isArray(d.articles)?d.articles:d;
+    const seen=new Set();
+    allArticles=list.filter(a=>{
+      const u=(a.source_url||a.link||"").trim();
+      if(!u||seen.has(u))return false;
+      seen.add(u);return true;
+    }).sort((a,b)=>Date.parse(b.published_at||0)-Date.parse(a.published_at||0));
+    applyFilter();
+  })
+  .catch(e=>console.error("Load failed",e));
+
+</script>
 </body>
 </html>
