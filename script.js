@@ -2,12 +2,33 @@
 // Utility helpers
 // ============================
 function pickRandomFeatured(list) {
-  if (!Array.isArray(list) || list.length < 2) return list[0];
+  if (!Array.isArray(list) || list.length < 3) return list[0];
 
-  // Skip the very first (breaking) story
-  const pool = list.slice(1, Math.min(list.length, 10));
-  return pool[Math.floor(Math.random() * pool.length)];
+  // Exclude breaking (index 0)
+  const pool = list.slice(1, 8);
+
+  const last = sessionStorage.getItem("horn_last_featured") || "";
+
+  let pick = pool[Math.floor(Math.random() * pool.length)];
+
+  // Try again if same as last
+  let safety = 0;
+  while (
+    safety < 5 &&
+    (pick?.source_url || pick?.link) === last
+  ) {
+    pick = pool[Math.floor(Math.random() * pool.length)];
+    safety++;
+  }
+
+  sessionStorage.setItem(
+    "horn_last_featured",
+    pick?.source_url || pick?.link || ""
+  );
+
+  return pick;
 }
+
 
 // Build internal link (keeps user inside HornUpdates)
 function buildArticleLink(sourceUrl) {
@@ -333,7 +354,8 @@ const heroSideArticles = articles
       }
 
       // Breaking bar (use heroMain or next best)
-  updateBreakingBar(breakingArticle);
+  updateBreakingBar(breakingArticle !== heroMainArticle ? breakingArticle : articles[1]);
+
 
 
       // Latest list renderer (used by filters too)
