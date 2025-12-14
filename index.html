@@ -102,7 +102,8 @@ function pickRotatingFeatured(list) {
 
   for (let i = 0; i < pool.length; i++) {
     const c = pool[Math.floor(Math.random() * pool.length)];
-    const key = (c.source_url || c.link || "").trim();
+ const key = (c.source_url || c.url || c.link || "").trim();
+
     if (key && key !== last) {
       pick = c;
       sessionStorage.setItem("horn_last_featured", key);
@@ -120,7 +121,7 @@ function renderCard(a, featured=false) {
   <article class="story-card ${featured ? "story-card--featured":""}">
     <header>
       <div class="story-tags">${countries}<span class="tag-pill tag-category">${a.category||"General"}</span></div>
-      <h3><a href="${buildReaderLink(a.source_url||a.link)}">${clamp(a.title, featured?160:120)}</a></h3>
+      <h3><a href="${buildReaderLink(a.source_url||a.url||a.link)}">${clamp(a.title, featured?160:120)}</a></h3>
     </header>
     ${a.summary ? `<p>${clamp(a.summary, featured?280:220)}</p>` : ""}
     <footer>${a.source_name||""} ${a.published_at||""}</footer>
@@ -130,7 +131,7 @@ function renderCard(a, featured=false) {
 function setBreaking(a) {
   const el = document.getElementById("breaking-link");
   el.textContent = clamp(a.title,140);
-  el.href = buildReaderLink(a.source_url||a.link);
+  el.href = buildReaderLink(a.source_url||a.url||a.link);
 }
 
 /* ===================== STATE ===================== */
