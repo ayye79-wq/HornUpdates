@@ -366,14 +366,14 @@ const heroSideArticles = articles
 
       // Initial latest list (skip hero articles)
      const latestArticles = articles.filter(a => {
-  const u = (a.source_url || a.link || "").trim();
+  const u = (a.source_url || a.url || a.link || "").trim();
   return u && !excludeUrls.has(u);
 });
 renderLatestList(latestArticles);
 
 
       // Setup filters
-      setupFilters(articles, renderLatestList);
+      setupFilters(articles, renderLatestList, excludeUrls);
     })
     .catch((err) => {
       console.error("HornUpdates: error loading articles.json", err);
