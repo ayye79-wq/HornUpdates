@@ -109,7 +109,8 @@ function renderStoryCard(article) {
   const sourceName = article.source_name || article.source || "";
   const title = article.title || "Untitled story";
   const summary = article.summary || article.excerpt || "";
-  const href = buildArticleLink(article.source_url || article.link);
+  const href = buildArticleLink(article.source_url || article.url || article.link);
+
 
   return `
     <article class="story-card">
