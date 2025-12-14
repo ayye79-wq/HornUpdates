@@ -51,7 +51,7 @@ function dedupeArticles(list) {
   return out;
 }
 
-// Pick a featured story that rotates (doesn't repeat every load)
+
 
 
 // Countries formatting
