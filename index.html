@@ -164,14 +164,13 @@ function render(list) {
   const breaking = list[0];
   const featured = pickRotatingFeatured(list) || breaking;
 
-  const breakingUrl = (breaking?.source_url || breaking?.link || "").trim();
-  const featuredUrl = (featured?.source_url || featured?.link || "").trim();
+const breakingUrl = (breaking?.source_url || breaking?.url || breaking?.link || "").trim();
+const featuredUrl = (featured?.source_url || featured?.url || featured?.link || "").trim();
 
-  const latest = list.filter(a => {
-    const u = (a?.source_url || a?.link || "").trim();
-    return u && u !== breakingUrl && u !== featuredUrl;
-  });
-
+const latest = list.filter(a => {
+  const u = (a?.source_url || a?.url || a?.link || "").trim();
+  return u && u !== breakingUrl && u !== featuredUrl;
+});
   setBreaking(breaking);
   featuredEl.innerHTML = renderCard(featured, true);
   latestEl.innerHTML = latest.map(a => renderCard(a)).join("");
