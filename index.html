@@ -139,10 +139,6 @@
         </article>
       `;
     }
-function buildReaderLink(sourceUrl) {
-  if (!sourceUrl) return "#";
-  return `reader.html?url=${encodeURIComponent(sourceUrl)}`;
-}
 
     function setBreakingBar(article) {
       const linkEl = document.getElementById("breaking-link");
