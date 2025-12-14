@@ -217,29 +217,44 @@ function buildReaderLink(sourceUrl) {
       });
     }
 
-    function loadArticles() {
-      fetch("articles.json?ts=" + Date.now())
+  function loadArticles() {
+  fetch("articles.json?ts=" + Date.now(), { cache: "no-store" })
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      let list = Array.isArray(data) ? data : (data.articles || []);
 
-        .then(res => res.json())
-        .then(data => {
-          let list = Array.isArray(data) ? data : (data.articles || []);
-          // Only keep items that have a title + link
-          list = list.filter(a => a.title && (a.source_url || a.link));
-          // Sort newest first by published_at
-          list.sort((a, b) => {
-            const da = new Date(a.published_at || 0);
-            const db = new Date(b.published_at || 0);
-            return db - da;
-          });
-          allArticles = list;
-          applyFilter();
-        })
-        .catch(err => {
-          console.error("Error loading articles.json:", err);
-          document.getElementById("featured-container").innerHTML =
-            "<p>Failed to load stories.</p>";
-        });
-    }
+      // Only keep items that have a title + link
+      list = list.filter(a => a && a.title && (a.source_url || a.link));
+
+      // De-dupe by URL (prevents repeats from dominating)
+      const seen = new Set();
+      list = list.filter(a => {
+        const url = (a.source_url || a.link || "").trim();
+        if (!url) return false;
+        if (seen.has(url)) return false;
+        seen.add(url);
+        return true;
+      });
+
+      // Sort newest first by published_at (safe parsing)
+      list.sort((a, b) => {
+        const da = Date.parse(a.published_at || "") || 0;
+        const db = Date.parse(b.published_at || "") || 0;
+        return db - da;
+      });
+
+      allArticles = list;
+      applyFilter();
+    })
+    .catch(err => {
+      console.error("Error loading articles.json:", err);
+      const el = document.getElementById("featured-container");
+      if (el) el.innerHTML = "<p>Failed to load stories.</p>";
+    });
+}
 
     window.addEventListener("DOMContentLoaded", () => {
       setupFilters();
