@@ -15,16 +15,18 @@ function pickRandomFeatured(list) {
   let safety = 0;
   while (
     safety < 5 &&
-    (pick?.source_url || pick?.link) === last
+   (pick?.source_url || pick?.url || pick?.link) === last
+
   ) {
     pick = pool[Math.floor(Math.random() * pool.length)];
     safety++;
   }
 
-  sessionStorage.setItem(
-    "horn_last_featured",
-    pick?.source_url || pick?.link || ""
-  );
+sessionStorage.setItem(
+  "horn_last_featured",
+  pick?.source_url || pick?.url || pick?.link || ""
+);
+
 
   return pick;
 }
