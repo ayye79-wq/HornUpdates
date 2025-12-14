@@ -244,7 +244,7 @@ function filterArticles(allArticles, filterValue) {
   });
 }
 
-function setupFilters(allArticles, renderLatestFn) {
+function setupFilters(allArticles, renderLatestFn, excludeUrls) {
   const buttons = Array.from(document.querySelectorAll(".filter-btn"));
   if (!buttons.length) return;
 
@@ -252,12 +252,16 @@ function setupFilters(allArticles, renderLatestFn) {
     btn.addEventListener("click", () => {
       const filterVal = btn.getAttribute("data-filter") || "all";
 
-      // Toggle active state
       buttons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
 
       const filtered = filterArticles(allArticles, filterVal.toLowerCase());
-      renderLatestFn(filtered);
+      const filteredNoHero = filtered.filter(a => {
+        const u = (a.source_url || a.url || a.link || "").trim();
+        return u && !excludeUrls.has(u);
+      });
+
+      renderLatestFn(filteredNoHero);
     });
   });
 }
@@ -290,14 +294,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.json())
     .then((data) => {
       const rawArticles = Array.isArray(data.articles) ? data.articles : data;
-      let articles = rawArticles.map(normalizeArticle);
+      let articles = dedupeArticles(rawArticles.map(normalizeArticle));
 
-      // Sort newest -> oldest
-      articles.sort((a, b) => {
-        const da = new Date(a.published_at || 0).getTime();
-        const db = new Date(b.published_at || 0).getTime();
-        return db - da;
-      });
+// Sort newest -> oldest (safer)
+articles.sort((a, b) => parseTime(b.published_at) - parseTime(a.published_at));
+
 
       // HERO main + side
      // BREAKING stays newest
@@ -310,13 +311,14 @@ const heroMainArticle = pickRandomFeatured(articles) || breakingArticle;
 const excludeUrls = new Set(
   [breakingArticle, heroMainArticle]
     .filter(Boolean)
-    .map(a => (a.source_url || a.link || "").trim())
+  .map(a => (a.source_url || a.url || a.link || "").trim())
+
 );
 
 // HERO side stories (no duplicates)
 const heroSideArticles = articles
   .filter(a => {
-    const u = (a.source_url || a.link || "").trim();
+    const u = (a.source_url || a.url || a.link || "").trim();
     return u && !excludeUrls.has(u);
   })
   .slice(0, 3);
