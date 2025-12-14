@@ -77,6 +77,7 @@
   <p class="footer-meta">
     Horn Updates aggregates publicly available news and provides summaries with
     links to original publishers. All rights remain with the respective sources.
+    This site may display ads served by Google AdSense.
   </p>
 </footer>
 
@@ -189,10 +190,10 @@ document.querySelectorAll(".filter-pill").forEach(b=>{
 fetch("articles.json?ts="+Date.now(),{cache:"no-store"})
   .then(r=>r.json())
   .then(d=>{
-    const list = Array.isArray(d.articles)?d.articles:d;
+   const list = Array.isArray(d) ? d : (Array.isArray(d.articles) ? d.articles : []);
     const seen=new Set();
     allArticles=list.filter(a=>{
-      const u=(a.source_url||a.link||"").trim();
+     const u=(a.source_url||a.url||a.link||"").trim();
       if(!u||seen.has(u))return false;
       seen.add(u);return true;
     }).sort((a,b)=>Date.parse(b.published_at||0)-Date.parse(a.published_at||0));
