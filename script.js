@@ -52,19 +52,7 @@ function dedupeArticles(list) {
 }
 
 // Pick a featured story that rotates (doesn't repeat every load)
-function pickFeatured(list) {
-  const key = "hornupdates_last_featured_url";
-  const last = localStorage.getItem(key);
 
-  // Prefer something that isn't the same as last time
-  let pick = list.find(a => (a.source_url || a.url) && (a.source_url || a.url) !== last);
-
-  // Fallback to first item
-  if (!pick) pick = list[0];
-
-  if (pick) localStorage.setItem(key, pick.source_url || pick.url || "");
-  return pick;
-}
 
 // Countries formatting
 function formatCountries(countries) {
