@@ -300,8 +300,27 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       // HERO main + side
-      const heroMainArticle = articles[0] || null;
-      const heroSideArticles = articles.slice(1, 4); // up to 3 side stories
+     // BREAKING stays newest
+const breakingArticle = articles[0] || null;
+
+// FEATURED (hero main) rotates every page load
+const heroMainArticle = pickRandomFeatured(articles) || breakingArticle;
+
+// Exclude breaking + featured from side & latest
+const excludeUrls = new Set(
+  [breakingArticle, heroMainArticle]
+    .filter(Boolean)
+    .map(a => (a.source_url || a.link || "").trim())
+);
+
+// HERO side stories (no duplicates)
+const heroSideArticles = articles
+  .filter(a => {
+    const u = (a.source_url || a.link || "").trim();
+    return u && !excludeUrls.has(u);
+  })
+  .slice(0, 3);
+
 
       if (heroMainSlot && heroMainArticle) {
         heroMainSlot.innerHTML = renderHeroMain(heroMainArticle);
