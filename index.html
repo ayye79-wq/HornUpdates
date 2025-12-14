@@ -218,7 +218,8 @@ function buildReaderLink(sourceUrl) {
     }
 
     function loadArticles() {
-      fetch("articles.json")
+      fetch("articles.json?ts=" + Date.now())
+
         .then(res => res.json())
         .then(data => {
           let list = Array.isArray(data) ? data : (data.articles || []);
