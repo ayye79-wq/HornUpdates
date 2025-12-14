@@ -331,7 +331,8 @@ const heroSideArticles = articles
       }
 
       // Breaking bar (use heroMain or next best)
-      updateBreakingBar(heroMainArticle || articles[0]);
+  updateBreakingBar(breakingArticle);
+
 
       // Latest list renderer (used by filters too)
       function renderLatestList(list) {
@@ -340,8 +341,12 @@ const heroSideArticles = articles
       }
 
       // Initial latest list (skip hero articles)
-      const latestArticles = articles.slice(1);
-      renderLatestList(latestArticles);
+     const latestArticles = articles.filter(a => {
+  const u = (a.source_url || a.link || "").trim();
+  return u && !excludeUrls.has(u);
+});
+renderLatestList(latestArticles);
+
 
       // Setup filters
       setupFilters(articles, renderLatestList);
