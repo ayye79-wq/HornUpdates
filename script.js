@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("HornUpdates: no target containers found in DOM.");
   }
 
-  fetch("articles.json?v=" + Date.now())
+  fetch("articles.json?ts=" + Date.now(), { cache: "no-store" })
     .then((res) => res.json())
     .then((data) => {
       const rawArticles = Array.isArray(data.articles) ? data.articles : data;
