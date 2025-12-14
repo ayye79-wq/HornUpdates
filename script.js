@@ -364,8 +364,8 @@ const heroSideArticles = articles
         latestContainer.innerHTML = list.map(renderStoryCard).join("");
       }
 
-      // Initial latest list (skip hero articles)
-     const latestArticles = articles.filter(a => {
+// Initial latest list (skip hero articles)
+const latestArticles = articles.filter(a => {
   const u = (a.source_url || a.url || a.link || "").trim();
   return u && !excludeUrls.has(u);
 });
