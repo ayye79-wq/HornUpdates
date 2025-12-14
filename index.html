@@ -67,12 +67,12 @@
 <footer class="site-footer">
   <p>© 2025 Horn Updates. All rights reserved.</p>
 
-  <nav class="footer-links" aria-label="Footer navigation">
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<nav class="footer-links" aria-label="Footer navigation">
+  <a href="about.html" rel="nofollow">About</a>
+  <a href="privacy.html" rel="nofollow">Privacy Policy</a>
+  <a href="terms.html" rel="nofollow">Terms</a>
+  <a href="contact.html" rel="nofollow">Contact</a>
+</nav>
 
   <p class="footer-meta">
     Horn Updates aggregates publicly available news and provides summaries with
@@ -153,13 +153,26 @@ function render(list) {
   const featuredEl = document.getElementById("featured-container");
   const latestEl = document.getElementById("latest-container");
 
+  if (!Array.isArray(list) || list.length === 0) {
+    featuredEl.innerHTML = "<p>No stories available.</p>";
+    latestEl.innerHTML = "";
+    return;
+  }
+
   const breaking = list[0];
   const featured = pickRotatingFeatured(list) || breaking;
-  const latest = list.filter(a => a!==breaking && a!==featured);
+
+  const breakingUrl = (breaking?.source_url || breaking?.link || "").trim();
+  const featuredUrl = (featured?.source_url || featured?.link || "").trim();
+
+  const latest = list.filter(a => {
+    const u = (a?.source_url || a?.link || "").trim();
+    return u && u !== breakingUrl && u !== featuredUrl;
+  });
 
   setBreaking(breaking);
-  featuredEl.innerHTML = renderCard(featured,true);
-  latestEl.innerHTML = latest.map(a=>renderCard(a)).join("");
+  featuredEl.innerHTML = renderCard(featured, true);
+  latestEl.innerHTML = latest.map(a => renderCard(a)).join("");
 }
 
 document.querySelectorAll(".filter-pill").forEach(b=>{
