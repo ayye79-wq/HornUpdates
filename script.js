@@ -1,6 +1,13 @@
 // ============================
 // Utility helpers
 // ============================
+function pickRandomFeatured(list) {
+  if (!Array.isArray(list) || list.length < 2) return list[0];
+
+  // Skip the very first (breaking) story
+  const pool = list.slice(1, Math.min(list.length, 10));
+  return pool[Math.floor(Math.random() * pool.length)];
+}
 
 // Build internal link (keeps user inside HornUpdates)
 function buildArticleLink(sourceUrl) {
