@@ -7,8 +7,16 @@ Horn Updates scraper:
 - Filters for Horn of Africa stories
 - ALWAYS includes Horn-focused feeds (Addis Standard, Reporter, Hiiraan, Garowe, EastAfrican, Sudan Tribune)
 - Blocks unwanted / geo-blocked sources (ENA, AJ, Borkena)
-- Drops very old stories
 - Builds articles.json for the frontend
+
+STRICT MODE:
+- Only includes entries with a real publish date
+- Only includes entries newer than last_run_utc.txt
+- Does NOT overwrite articles.json if 0 new items (keeps existing file)
+
+FIX (Dec 2025):
+- Do NOT update last_run_utc.txt when 0 items are found
+- When items ARE found, update last_run_utc.txt to the newest published_dt included (not wall-clock "now")
 """
 
 import json
@@ -18,37 +26,54 @@ import urllib.parse as urlparse
 
 import feedparser  # pip install feedparser
 
+
+# ----------------------------
+# 0. STRICT MODE STATE
+# ----------------------------
+
+LAST_RUN_FILE = Path(__file__).with_name("last_run_utc.txt")
+
+def utc_now():
+    return dt.datetime.now(dt.UTC)
+
+def load_last_run():
+    if LAST_RUN_FILE.exists():
+        txt = LAST_RUN_FILE.read_text(encoding="utf-8").strip()
+        if txt:
+            try:
+                return dt.datetime.fromisoformat(txt)
+            except Exception:
+                # If file content is corrupt, fall back safely
+                pass
+    # First run default: last 1 day
+    return utc_now() - dt.timedelta(days=1)
+
+def save_last_run(ts: dt.datetime):
+    # Always write as ISO with timezone
+    if ts.tzinfo is None:
+        ts = ts.replace(tzinfo=dt.UTC)
+    LAST_RUN_FILE.write_text(ts.isoformat(), encoding="utf-8")
+
+
 # ----------------------------
 # 1. CONFIG
 # ----------------------------
 
 OUTPUT_PATH = Path("articles.json")
 
-# Keep stories only from the last N days
-MAX_AGE_DAYS = 10  # 🔧 Change this if you want a shorter/longer window
-
 RSS_FEEDS = [
     # 🌍 General Africa / regional
-    "https://www.reuters.com/rssFeed/africaNews",
-    "https://www.voanews.com/rss/section/africa",
     "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
-  "https://www.aljazeera.com/xml/rss/africa.xml",
-    "https://capitalethiopia.com/feed/",
-
 
     # 🇪🇹 Ethiopia
     "https://www.addisstandard.com/feed/",
     "https://www.thereporterethiopia.com/feed/",
 
-    # 🇸🇴 Somalia
-    "https://www.hiiraan.com/rss/english/news.xml",
-    "https://www.garoweonline.com/en/rss",
-
     # 🇰🇪 Kenya / region
-    "https://www.theeastafrican.co.ke/rss/2148232-2148660-format-rss-2.0.xml",
+    "https://www.theeastafrican.co.ke/rss.xml",
 
     # 🇸🇩 Sudan
-    "https://sudantribune.com/feed/",
+    "https://sudantribune.net/feed/",
 ]
 
 # Feeds that are already Horn-of-Africa focused -> keep ALL their stories
@@ -59,19 +84,17 @@ ALWAYS_INCLUDE_FEEDS = [
     "garoweonline.com",
     "theeastafrican.co.ke",
     "sudantribune.com",
-    "bbci.co.uk",
-
 ]
 
-# Block some domains entirely (e.g., ENA, Borkena, Al Jazeera)
+# Block some domains entirely
 BLOCKED_SOURCES = [
     "borkena.com",
-
+    # Add more blocked domains here if needed
 ]
 
 HORN_KEYWORDS = [
     "ethiopia", "addis ababa", "amhara", "oromia", "tigray",
-    "eritrea", "asmara",
+    "eritrea", "asmara", "oromo", "amhara", "amara", "tigray", "tegaru",
     "somalia", "mogadishu", "puntland", "somaliland",
     "djibouti",
     "sudan", "south sudan", "khartoum",
@@ -89,6 +112,7 @@ COUNTRY_TAGS = {
     "kenya": "Kenya",
 }
 
+
 # ----------------------------
 # 2. HELPERS
 # ----------------------------
@@ -98,7 +122,6 @@ def is_horn_story(text: str) -> bool:
         return False
     lower = text.lower()
     return any(kw in lower for kw in HORN_KEYWORDS)
-
 
 def extract_countries(text: str):
     if not text:
@@ -117,37 +140,12 @@ def extract_countries(text: str):
             seen.add(c)
     return unique
 
-
-def extract_published_dt(entry) -> dt.datetime:
-    """Return a datetime object (UTC) for the entry."""
-    dt_obj = None
-
-    if getattr(entry, "published_parsed", None):
-        try:
-            dt_obj = dt.datetime(*entry.published_parsed[:6])
-        except Exception:
-            dt_obj = None
-
-    if dt_obj is None and getattr(entry, "updated_parsed", None):
-        try:
-            dt_obj = dt.datetime(*entry.updated_parsed[:6])
-        except Exception:
-            dt_obj = None
-
-    if dt_obj is None:
-        dt_obj = dt.datetime.utcnow()
-
-    # assume feed timestamps are UTC or naive
-    if dt_obj.tzinfo is not None:
-        dt_obj = dt_obj.astimezone(dt.timezone.utc).replace(tzinfo=None)
-
-    return dt_obj
-
-
-def format_published_iso(entry) -> str:
-    """Return ISO8601 string with Z suffix for JSON."""
-    return extract_published_dt(entry).isoformat() + "Z"
-
+def extract_published_dt(entry) -> dt.datetime | None:
+    """Return a timezone-aware datetime in UTC for the entry, or None if missing."""
+    tm = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
+    if tm:
+        return dt.datetime(*tm[:6], tzinfo=dt.UTC)
+    return None
 
 def make_summary(entry):
     for field in ("summary", "description"):
@@ -155,11 +153,9 @@ def make_summary(entry):
             return getattr(entry, field)
     return ""
 
-
 def should_always_include(feed_url: str) -> bool:
     low = feed_url.lower()
     return any(snippet in low for snippet in ALWAYS_INCLUDE_FEEDS)
-
 
 def is_blocked(link: str) -> bool:
     link = link or ""
@@ -176,14 +172,25 @@ def is_blocked(link: str) -> bool:
 
 def main():
     all_articles = []
-    now = dt.datetime.utcnow()
+
+    last_run = load_last_run()
+    now = utc_now()
+    print(f"[INFO] Strict mode enabled. Last run = {last_run.isoformat()}")
+
+    # Track newest published time we actually include
+    newest_included: dt.datetime | None = None
 
     for feed_url in RSS_FEEDS:
         print(f"\n=== Fetching: {feed_url} ===")
-        parsed = feedparser.parse(feed_url)
 
-        if parsed.bozo:
-            print(f"[!] Problem parsing feed: {parsed.bozo_exception}")
+        parsed = feedparser.parse(
+            feed_url,
+            request_headers={"User-Agent": "HornUpdatesBot/1.0 (+https://hornupdates.com)"}
+        )
+
+        if not parsed.entries:
+            print(f"[!] No entries returned for: {feed_url}")
+            continue
 
         include_all = should_always_include(feed_url)
         count_included = 0
@@ -193,14 +200,22 @@ def main():
             link = getattr(entry, "link", "") or ""
             summary = make_summary(entry)
 
-            # 🔴 Skip blocked domains entirely
+            # Blocked domains
             if is_blocked(link):
                 continue
 
-            # 🔴 Drop very old stories
             published_dt = extract_published_dt(entry)
-            age_days = (now - published_dt).days
-            if age_days > MAX_AGE_DAYS:
+
+            # STRICT: skip entries with no publish date
+            if not published_dt:
+                continue
+
+            # STRICT: only include stories newer than last run
+            if published_dt <= last_run:
+                continue
+
+            # Safety: skip future-dated items
+            if published_dt > now + dt.timedelta(minutes=5):
                 continue
 
             combined_text = f"{title}\n{summary}"
@@ -209,7 +224,6 @@ def main():
             if not include_all and not is_horn_story(combined_text):
                 continue
 
-            published_at = published_dt.isoformat() + "Z"
             countries = extract_countries(combined_text)
 
             topic_tags = []
@@ -230,7 +244,7 @@ def main():
                 "summary": summary,
                 "country_tags": countries,
                 "topic_tags": topic_tags,
-                "published_at": published_at,
+                "published_at": published_dt.isoformat(),
                 "source_url": link,
                 "source_name": source_name,
             }
@@ -238,27 +252,41 @@ def main():
             all_articles.append(article)
             count_included += 1
 
+            # Track newest included publish time
+            if newest_included is None or published_dt > newest_included:
+                newest_included = published_dt
+
         print(f"Included {count_included} items from this feed.")
 
-    # Sort newest first
+    # Sort newest first (after all feeds)
     all_articles.sort(key=lambda a: a.get("published_at", ""), reverse=True)
 
-    # Optional: cap total articles
+    # Cap total articles
     MAX_ARTICLES = 200
     if len(all_articles) > MAX_ARTICLES:
         all_articles = all_articles[:MAX_ARTICLES]
 
+    # 🚫 Do NOT overwrite articles.json if no new articles
+    if len(all_articles) == 0 and OUTPUT_PATH.exists():
+        print("[INFO] No new articles since last run. Keeping existing articles.json.")
+        print("[INFO] last_run_utc.txt NOT updated (no new items).")
+        return
+
     payload = {
-        "generated_at": dt.datetime.utcnow().isoformat() + "Z",
+        "generated_at": now.isoformat(),
         "articles": all_articles,
     }
 
     print(f"\nWriting {len(all_articles)} articles to {OUTPUT_PATH}")
-OUTPUT_PATH.write_text(
-    json.dumps(payload, ensure_ascii=False, indent=2),
-    encoding="utf-8"
-)
+    OUTPUT_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
+    # ✅ Update last_run only when we actually included items,
+    # and set it to the newest published_dt included (not wall-clock now).
+    if newest_included:
+        save_last_run(newest_included)
+        print(f"[INFO] Updated last_run_utc.txt → {newest_included.isoformat()}")
+    else:
+        print("[INFO] last_run_utc.txt NOT updated (no new items).")
 
 
 if __name__ == "__main__":

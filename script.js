@@ -1,60 +1,11 @@
 // ============================
 // Utility helpers
 // ============================
-function pickRandomFeatured(list) {
-  if (!Array.isArray(list) || list.length < 3) return list[0];
-
-  // Exclude breaking (index 0)
-  const pool = list.slice(1, 8);
-
-  const last = sessionStorage.getItem("horn_last_featured") || "";
-
-  let pick = pool[Math.floor(Math.random() * pool.length)];
-
-  // Try again if same as last
-  let safety = 0;
-  while (
-    safety < 5 &&
-   (pick?.source_url || pick?.url || pick?.link) === last
-
-  ) {
-    pick = pool[Math.floor(Math.random() * pool.length)];
-    safety++;
-  }
-
-sessionStorage.setItem(
-  "horn_last_featured",
-  pick?.source_url || pick?.url || pick?.link || ""
-);
-
-
-  return pick;
-}
-
 
 // Build internal link (keeps user inside HornUpdates)
 function buildArticleLink(sourceUrl) {
   return `reader.html?url=${encodeURIComponent(sourceUrl || "#")}`;
 }
-function parseTime(s) {
-  const t = Date.parse(s || "");
-  return Number.isFinite(t) ? t : 0;
-}
-
-function dedupeArticles(list) {
-  const seen = new Set();
-  const out = [];
-  for (const a of list || []) {
-    const key = (a.source_url || a.url || a.link || a.title || "").trim().toLowerCase();
-    if (!key || seen.has(key)) continue;
-    seen.add(key);
-    out.push(a);
-  }
-  return out;
-}
-
-
-
 
 // Countries formatting
 function formatCountries(countries) {
@@ -109,8 +60,7 @@ function renderStoryCard(article) {
   const sourceName = article.source_name || article.source || "";
   const title = article.title || "Untitled story";
   const summary = article.summary || article.excerpt || "";
-  const href = buildArticleLink(article.source_url || article.url || article.link);
-
+  const href = buildArticleLink(article.source_url || article.link);
 
   return `
     <article class="story-card">
@@ -256,7 +206,7 @@ function filterArticles(allArticles, filterValue) {
   });
 }
 
-function setupFilters(allArticles, renderLatestFn, excludeUrls) {
+function setupFilters(allArticles, renderLatestFn) {
   const buttons = Array.from(document.querySelectorAll(".filter-btn"));
   if (!buttons.length) return;
 
@@ -264,16 +214,12 @@ function setupFilters(allArticles, renderLatestFn, excludeUrls) {
     btn.addEventListener("click", () => {
       const filterVal = btn.getAttribute("data-filter") || "all";
 
+      // Toggle active state
       buttons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
 
       const filtered = filterArticles(allArticles, filterVal.toLowerCase());
-      const filteredNoHero = filtered.filter(a => {
-        const u = (a.source_url || a.url || a.link || "").trim();
-        return u && !excludeUrls.has(u);
-      });
-
-      renderLatestFn(filteredNoHero);
+      renderLatestFn(filtered);
     });
   });
 }
@@ -302,39 +248,22 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("HornUpdates: no target containers found in DOM.");
   }
 
-  fetch("articles.json?ts=" + Date.now(), { cache: "no-store" })
+  fetch("articles.json?v=" + Date.now())
     .then((res) => res.json())
     .then((data) => {
       const rawArticles = Array.isArray(data.articles) ? data.articles : data;
-      let articles = dedupeArticles(rawArticles.map(normalizeArticle));
+      let articles = rawArticles.map(normalizeArticle);
 
-// Sort newest -> oldest (safer)
-articles.sort((a, b) => parseTime(b.published_at) - parseTime(a.published_at));
-
+      // Sort newest -> oldest
+      articles.sort((a, b) => {
+        const da = new Date(a.published_at || 0).getTime();
+        const db = new Date(b.published_at || 0).getTime();
+        return db - da;
+      });
 
       // HERO main + side
-     // BREAKING stays newest
-const breakingArticle = articles[0] || null;
-
-// FEATURED (hero main) rotates every page load
-const heroMainArticle = pickRandomFeatured(articles) || breakingArticle;
-
-// Exclude breaking + featured from side & latest
-const excludeUrls = new Set(
-  [breakingArticle, heroMainArticle]
-    .filter(Boolean)
-  .map(a => (a.source_url || a.url || a.link || "").trim())
-
-);
-
-// HERO side stories (no duplicates)
-const heroSideArticles = articles
-  .filter(a => {
-    const u = (a.source_url || a.url || a.link || "").trim();
-    return u && !excludeUrls.has(u);
-  })
-  .slice(0, 3);
-
+      const heroMainArticle = articles[0] || null;
+      const heroSideArticles = articles.slice(1, 4); // up to 3 side stories
 
       if (heroMainSlot && heroMainArticle) {
         heroMainSlot.innerHTML = renderHeroMain(heroMainArticle);
@@ -345,9 +274,7 @@ const heroSideArticles = articles
       }
 
       // Breaking bar (use heroMain or next best)
-  updateBreakingBar(breakingArticle !== heroMainArticle ? breakingArticle : articles[1]);
-
-
+      updateBreakingBar(heroMainArticle || articles[0]);
 
       // Latest list renderer (used by filters too)
       function renderLatestList(list) {
@@ -355,16 +282,12 @@ const heroSideArticles = articles
         latestContainer.innerHTML = list.map(renderStoryCard).join("");
       }
 
-// Initial latest list (skip hero articles)
-const latestArticles = articles.filter(a => {
-  const u = (a.source_url || a.url || a.link || "").trim();
-  return u && !excludeUrls.has(u);
-});
-renderLatestList(latestArticles);
-
+      // Initial latest list (skip hero articles)
+      const latestArticles = articles.slice(1);
+      renderLatestList(latestArticles);
 
       // Setup filters
-      setupFilters(articles, renderLatestList, excludeUrls);
+      setupFilters(articles, renderLatestList);
     })
     .catch((err) => {
       console.error("HornUpdates: error loading articles.json", err);
