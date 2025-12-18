@@ -7,6 +7,44 @@
      crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Sidebar layout + X feed styles (kept inline so you don't have to edit style.css) -->
+  <style>
+    /* Two-column layout (main + right sidebar) */
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 20px;
+      align-items: start;
+      margin-top: 12px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 16px;
+    }
+    .sidebar-box {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+    .sidebar-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+    }
+
+    /* Hide sidebar on mobile for better UX */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -45,19 +83,49 @@
       <a id="breaking-link" class="breaking-link" href="#"></a>
     </section>
 
-    <!-- FEATURED STORY -->
-    <main class="content">
-      <section class="featured-section">
-        <h2>Featured story</h2>
-        <div id="featured-container"></div>
-      </section>
+    <!-- MAIN LAYOUT: CONTENT + RIGHT SIDEBAR -->
+    <div class="layout">
+      <!-- FEATURED STORY + LATEST STORIES -->
+      <main class="content">
+        <section class="featured-section">
+          <h2>Featured story</h2>
+          <div id="featured-container"></div>
+        </section>
 
-      <!-- LATEST STORIES -->
-      <section class="latest-section">
-        <h2>Latest stories</h2>
-        <div id="latest-container"></div>
-      </section>
-    </main>
+        <!-- LATEST STORIES -->
+        <section class="latest-section">
+          <h2>Latest stories</h2>
+          <div id="latest-container"></div>
+        </section>
+      </main>
+
+      <!-- RIGHT SIDEBAR (X FEED) -->
+      <aside class="sidebar">
+        <section class="sidebar-box twitter-box">
+          <h3 class="sidebar-title">On X</h3>
+
+          <!-- X timeline -->
+          <a class="twitter-timeline"
+             href="https://x.com/HornUpdates"
+             data-height="700"
+             data-dnt="true"
+             data-chrome="noheader nofooter noborders transparent">
+            Posts by @HornUpdates
+          </a>
+
+          <!-- Fallback for privacy browsers / blockers (only shows if JS is disabled) -->
+          <noscript>
+            <p style="font-size: 0.9rem;">
+              Live updates available on
+              <a href="https://x.com/HornUpdates" target="_blank" rel="noopener">
+                X @HornUpdates
+              </a>
+            </p>
+          </noscript>
+
+        </section>
+      </aside>
+    </div>
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -67,6 +135,9 @@
       </p>
     </footer>
   </div>
+
+  <!-- X Widgets loader (must be present once) -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <!-- MAIN JS LOGIC -->
   <script>

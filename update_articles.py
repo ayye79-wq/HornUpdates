@@ -6,17 +6,12 @@ Horn Updates scraper:
 - Fetches RSS feeds
 - Filters for Horn of Africa stories
 - ALWAYS includes Horn-focused feeds (Addis Standard, Reporter, Hiiraan, Garowe, EastAfrican, Sudan Tribune)
-- Blocks unwanted / geo-blocked sources (ENA, AJ, Borkena)
+- Blocks unwanted sources
 - Builds articles.json for the frontend
 
 STRICT MODE:
-- Only includes entries with a real publish date
-- Only includes entries newer than last_run_utc.txt
-- Does NOT overwrite articles.json if 0 new items (keeps existing file)
-
-FIX (Dec 2025):
-- Do NOT update last_run_utc.txt when 0 items are found
-- When items ARE found, update last_run_utc.txt to the newest published_dt included (not wall-clock "now")
+- Only FETCHES entries newer than last_run_utc.txt
+- But OUTPUT keeps a rolling backlog by MERGING with existing articles.json
 """
 
 import json
@@ -38,21 +33,12 @@ def utc_now():
 
 def load_last_run():
     if LAST_RUN_FILE.exists():
-        txt = LAST_RUN_FILE.read_text(encoding="utf-8").strip()
-        if txt:
-            try:
-                return dt.datetime.fromisoformat(txt)
-            except Exception:
-                # If file content is corrupt, fall back safely
-                pass
+        return dt.datetime.fromisoformat(LAST_RUN_FILE.read_text().strip())
     # First run default: last 1 day
     return utc_now() - dt.timedelta(days=1)
 
 def save_last_run(ts: dt.datetime):
-    # Always write as ISO with timezone
-    if ts.tzinfo is None:
-        ts = ts.replace(tzinfo=dt.UTC)
-    LAST_RUN_FILE.write_text(ts.isoformat(), encoding="utf-8")
+    LAST_RUN_FILE.write_text(ts.isoformat())
 
 
 # ----------------------------
@@ -62,21 +48,13 @@ def save_last_run(ts: dt.datetime):
 OUTPUT_PATH = Path("articles.json")
 
 RSS_FEEDS = [
-    # 🌍 General Africa / regional
     "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
-
-    # 🇪🇹 Ethiopia
     "https://www.addisstandard.com/feed/",
     "https://www.thereporterethiopia.com/feed/",
-
-    # 🇰🇪 Kenya / region
     "https://www.theeastafrican.co.ke/rss.xml",
-
-    # 🇸🇩 Sudan
     "https://sudantribune.net/feed/",
 ]
 
-# Feeds that are already Horn-of-Africa focused -> keep ALL their stories
 ALWAYS_INCLUDE_FEEDS = [
     "addisstandard.com",
     "thereporterethiopia.com",
@@ -86,10 +64,8 @@ ALWAYS_INCLUDE_FEEDS = [
     "sudantribune.com",
 ]
 
-# Block some domains entirely
 BLOCKED_SOURCES = [
     "borkena.com",
-    # Add more blocked domains here if needed
 ]
 
 HORN_KEYWORDS = [
@@ -112,6 +88,8 @@ COUNTRY_TAGS = {
     "kenya": "Kenya",
 }
 
+MAX_ARTICLES = 200
+
 
 # ----------------------------
 # 2. HELPERS
@@ -131,7 +109,7 @@ def extract_countries(text: str):
     for needle, country_name in COUNTRY_TAGS.items():
         if needle in lower:
             found.append(country_name)
-    # de-duplicate
+    # de-duplicate while preserving order
     seen = set()
     unique = []
     for c in found:
@@ -141,7 +119,6 @@ def extract_countries(text: str):
     return unique
 
 def extract_published_dt(entry) -> dt.datetime | None:
-    """Return a timezone-aware datetime in UTC for the entry, or None if missing."""
     tm = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
     if tm:
         return dt.datetime(*tm[:6], tzinfo=dt.UTC)
@@ -165,20 +142,56 @@ def is_blocked(link: str) -> bool:
         host = link.lower()
     return any(bad in host for bad in BLOCKED_SOURCES)
 
+def load_existing_articles():
+    """Return existing articles list from articles.json (if any)."""
+    if not OUTPUT_PATH.exists():
+        return []
+    try:
+        payload = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        if isinstance(payload, dict):
+            return payload.get("articles", []) or []
+        if isinstance(payload, list):
+            return payload
+    except Exception:
+        pass
+    return []
+
+def merge_dedupe(old_list, new_list):
+    """
+    Merge old + new, de-dupe by source_url (or link),
+    keep newest version if duplicates appear.
+    """
+    merged = []
+    seen = set()
+
+    # Put new first so it wins
+    for a in new_list + old_list:
+        key = (a.get("source_url") or a.get("link") or "").strip()
+        if not key:
+            # fallback key if missing URL
+            key = (a.get("title","") + "|" + a.get("published_at","")).strip()
+        if key in seen:
+            continue
+        seen.add(key)
+        merged.append(a)
+
+    # Sort newest first
+    merged.sort(key=lambda x: x.get("published_at", ""), reverse=True)
+
+    # Cap
+    return merged[:MAX_ARTICLES]
+
 
 # ----------------------------
 # 3. MAIN
 # ----------------------------
 
 def main():
-    all_articles = []
+    new_articles = []
 
     last_run = load_last_run()
     now = utc_now()
     print(f"[INFO] Strict mode enabled. Last run = {last_run.isoformat()}")
-
-    # Track newest published time we actually include
-    newest_included: dt.datetime | None = None
 
     for feed_url in RSS_FEEDS:
         print(f"\n=== Fetching: {feed_url} ===")
@@ -200,7 +213,6 @@ def main():
             link = getattr(entry, "link", "") or ""
             summary = make_summary(entry)
 
-            # Blocked domains
             if is_blocked(link):
                 continue
 
@@ -210,7 +222,7 @@ def main():
             if not published_dt:
                 continue
 
-            # STRICT: only include stories newer than last run
+            # STRICT: only fetch stories newer than last run
             if published_dt <= last_run:
                 continue
 
@@ -220,10 +232,10 @@ def main():
 
             combined_text = f"{title}\n{summary}"
 
-            # General feeds require Horn filtering
             if not include_all and not is_horn_story(combined_text):
                 continue
 
+            published_at = published_dt.isoformat()
             countries = extract_countries(combined_text)
 
             topic_tags = []
@@ -244,49 +256,37 @@ def main():
                 "summary": summary,
                 "country_tags": countries,
                 "topic_tags": topic_tags,
-                "published_at": published_dt.isoformat(),
+                "published_at": published_at,
                 "source_url": link,
                 "source_name": source_name,
             }
 
-            all_articles.append(article)
+            new_articles.append(article)
             count_included += 1
-
-            # Track newest included publish time
-            if newest_included is None or published_dt > newest_included:
-                newest_included = published_dt
 
         print(f"Included {count_included} items from this feed.")
 
-    # Sort newest first (after all feeds)
-    all_articles.sort(key=lambda a: a.get("published_at", ""), reverse=True)
+    # Merge with existing to keep backlog
+    existing = load_existing_articles()
+    merged_articles = merge_dedupe(existing, new_articles)
 
-    # Cap total articles
-    MAX_ARTICLES = 200
-    if len(all_articles) > MAX_ARTICLES:
-        all_articles = all_articles[:MAX_ARTICLES]
-
-    # 🚫 Do NOT overwrite articles.json if no new articles
-    if len(all_articles) == 0 and OUTPUT_PATH.exists():
+    # If nothing new AND file exists, keep it (still update last_run)
+    if len(new_articles) == 0 and OUTPUT_PATH.exists():
         print("[INFO] No new articles since last run. Keeping existing articles.json.")
-        print("[INFO] last_run_utc.txt NOT updated (no new items).")
+        save_last_run(now)
+        print(f"[INFO] Updated last_run_utc.txt → {now.isoformat()}")
         return
 
     payload = {
         "generated_at": now.isoformat(),
-        "articles": all_articles,
+        "articles": merged_articles,
     }
 
-    print(f"\nWriting {len(all_articles)} articles to {OUTPUT_PATH}")
-    OUTPUT_PATH.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    print(f"\nWriting {len(merged_articles)} total articles to {OUTPUT_PATH} (new: {len(new_articles)})")
+    OUTPUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    # ✅ Update last_run only when we actually included items,
-    # and set it to the newest published_dt included (not wall-clock now).
-    if newest_included:
-        save_last_run(newest_included)
-        print(f"[INFO] Updated last_run_utc.txt → {newest_included.isoformat()}")
-    else:
-        print("[INFO] last_run_utc.txt NOT updated (no new items).")
+    save_last_run(now)
+    print(f"[INFO] Updated last_run_utc.txt → {now.isoformat()}")
 
 
 if __name__ == "__main__":

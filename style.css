@@ -306,3 +306,25 @@ body {
     font-size: 0.9rem;
   }
 }
+/* =========================
+   Right Sidebar (X feed)
+   ========================= */
+
+.sidebar {
+  position: sticky;
+  top: 16px;
+}
+
+/* Show sidebar on desktop + tablets */
+@media (max-width: 900px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+/* Hide sidebar ONLY on small phones */
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}
