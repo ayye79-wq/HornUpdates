@@ -14,9 +14,9 @@ body {
 
 /* Page container */
 .page {
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 16px 16px 32px;
+  padding: 20px 16px 32px;
 }
 
 /* ========== HEADER ========== */
@@ -25,7 +25,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   flex-wrap: wrap;
 }
 
@@ -220,10 +220,6 @@ body {
 
 /* ========== RESPONSIVE TWEAKS ========== */
 @media (min-width: 640px) {
-  .page {
-    padding: 20px 24px 40px;
-  }
-
   .logo {
     width: 68px;
   }
@@ -255,21 +251,7 @@ body {
     font-size: 0.95rem;
   }
 }
-.page {
-  max-width: 980px;   /* was 1100+ before, narrower feels more like a news site */
-  margin: 0 auto;
-  padding: 20px 16px;
-}
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 18px;   /* a bit tighter */
-}
-.breaking-strip {
-  margin: 8px 0 18px;
-}
+
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
@@ -282,49 +264,24 @@ body {
     margin-top: 10px;
   }
 
-  .filter-btn {
-    padding: 6px 10px;
-    font-size: 0.85rem;
-  }
-
-  .breaking-strip {
-    font-size: 0.85rem;
-    padding: 8px 12px;
-  }
-
   .story-card {
     padding: 14px;
     margin: 10px 0;
   }
-
-  .card-title {
-    font-size: 1rem;
-    line-height: 1.35;
-  }
-
-  .card-text {
-    font-size: 0.9rem;
-  }
-}
-/* =========================
-   Right Sidebar (X feed)
-   ========================= */
-
-.sidebar {
-  position: sticky;
-  top: 16px;
 }
 
-/* Show sidebar on desktop + tablets */
-@media (max-width: 900px) {
-  .sidebar {
-    display: block;
-  }
+/* ========== X Follow Button ========== */
+.x-follow-btn {
+  display: block;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-/* Hide sidebar ONLY on small phones */
-@media (max-width: 600px) {
-  .sidebar {
-    display: none;
-  }
+.x-follow-btn:hover {
+  opacity: 0.9;
 }

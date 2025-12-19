@@ -36,14 +36,14 @@
     }
 
     /* Hide sidebar on mobile for better UX */
-    @media (max-width: 900px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-      .sidebar {
-        display: none;
-      }
-    }
+   @media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .sidebar { display: none; }
+}
+
   </style>
 </head>
 
@@ -100,31 +100,25 @@
       </main>
 
       <!-- RIGHT SIDEBAR (X FEED) -->
-      <aside class="sidebar">
-        <section class="sidebar-box twitter-box">
-          <h3 class="sidebar-title">On X</h3>
+<aside class="sidebar">
+  <section class="sidebar-box twitter-box">
+    <h3 class="sidebar-title">Breaking alerts</h3>
 
-          <!-- X timeline -->
-          <a class="twitter-timeline"
-             href="https://x.com/HornUpdates"
-             data-height="700"
-             data-dnt="true"
-             data-chrome="noheader nofooter noborders transparent">
-            Posts by @HornUpdates
-          </a>
+    <a href="https://x.com/HornUpdatesHQ"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="x-follow-btn">
+      Follow @HornUpdatesHQ on X
+    </a>
 
-          <!-- Fallback for privacy browsers / blockers (only shows if JS is disabled) -->
-          <noscript>
-            <p style="font-size: 0.9rem;">
-              Live updates available on
-              <a href="https://x.com/HornUpdates" target="_blank" rel="noopener">
-                X @HornUpdates
-              </a>
-            </p>
-          </noscript>
+    <p style="margin-top:10px; font-size:.9rem; color:#4b5563;">
+      X embeds are blocked on some browsers. For live alerts, open our X profile.
+    </p>
+  </section>
+</aside>
 
-        </section>
-      </aside>
+
+
     </div>
 
     <!-- FOOTER -->
@@ -136,8 +130,8 @@
     </footer>
   </div>
 
-  <!-- X Widgets loader (must be present once) -->
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 
   <!-- MAIN JS LOGIC -->
   <script>
@@ -334,6 +328,7 @@
     loadArticles();
   });
 </script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </body>
 </html>
