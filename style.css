@@ -431,3 +431,13 @@ body {
     padding: 6px;
   }
 }
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Slightly smaller on small screens so it doesn’t overflow */
+@media (max-width: 520px) {
+  .btn { padding: 9px 10px; border-radius: 12px; }
+}

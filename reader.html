@@ -34,6 +34,15 @@
       cursor: pointer;
     }
     .btn:hover { filter: brightness(0.98); }
+
+    /* ✅ Actions row for buttons */
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
     .card {
       background: #fff;
       border: 1px solid #e5e7eb;
@@ -56,6 +65,10 @@
       line-height: 1.9;
       font-family: "Segoe UI", Tahoma, Arial, sans-serif;
     }
+
+    @media (max-width: 520px) {
+      .btn { padding: 9px 10px; }
+    }
   </style>
 </head>
 
@@ -67,9 +80,13 @@
         <span class="muted">• Reader</span>
       </div>
 
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <div class="actions">
         <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
         <button id="copyBtn" class="btn" type="button">Copy link</button>
+        <button id="shareBtn" class="btn" type="button">Share</button>
+        <a id="waBtn" class="btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a id="tgBtn" class="btn" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a id="fbBtn" class="btn" target="_blank" rel="noopener noreferrer">Facebook</a>
       </div>
     </div>
 
@@ -115,7 +132,6 @@
       return dt.toLocaleString(undefined, { year:"numeric", month:"short", day:"2-digit" });
     }
 
-    // Escape HTML to prevent injection
     function escapeHtml(str) {
       return String(str)
         .replaceAll("&", "&amp;")
@@ -125,39 +141,27 @@
         .replaceAll("'", "&#039;");
     }
 
-    // Decode entities like &#8230; into real characters
     function decodeEntities(str) {
       const txt = document.createElement("textarea");
       txt.innerHTML = str;
       return txt.value;
     }
 
-    // Detect Arabic characters (RTL)
     function isArabic(text) {
       return /[\u0600-\u06FF]/.test(text || "");
     }
 
-    // NEW: Convert HTML-ish summaries into clean readable text (Arabic WP feeds etc.)
     function htmlToCleanText(raw) {
       const decoded = decodeEntities(raw || "");
-
-      // If the summary contains HTML tags, strip them safely using DOM parsing
       if (/<[a-z][\s\S]*>/i.test(decoded)) {
         const temp = document.createElement("div");
         temp.innerHTML = decoded;
-
-        // Remove images/scripts/styles (common in WP feeds)
         temp.querySelectorAll("img, script, style, iframe").forEach(el => el.remove());
-
-        // Get plain text
         return (temp.innerText || "").trim();
       }
-
-      // Otherwise treat as normal plain text
       return decoded.trim();
     }
 
-    // NEW: Render as safe HTML (no raw tags), preserving line breaks
     function renderSafeTextAsHtml(text) {
       const safe = escapeHtml(text || "");
       return safe.replace(/\n/g, "<br>");
@@ -185,13 +189,48 @@
       const openBtn = document.getElementById("openBtn");
       openBtn.href = articleUrl;
 
+      // ---- SHARE BUTTONS LOGIC (defaults) ----
+      const shareBtn = document.getElementById("shareBtn");
+      const waBtn = document.getElementById("waBtn");
+      const tgBtn = document.getElementById("tgBtn");
+      const fbBtn = document.getElementById("fbBtn");
+
+      // Default fallback (URL only)
+      waBtn.href = `https://wa.me/?text=${encodeURIComponent(articleUrl)}`;
+      tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(articleUrl)}`;
+      fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`;
+
+      // Share button: native share on mobile, else copy link on desktop
+      shareBtn.onclick = async () => {
+        const titleText = document.getElementById("title")?.textContent || "Horn Updates";
+        const isRtl = document.getElementById("summary")?.classList.contains("rtl");
+
+        const shareText = isRtl
+          ? `${titleText}\n\nاقرأ الخبر الكامل هنا:\n${articleUrl}`
+          : `${titleText}\n\nRead the full article:\n${articleUrl}`;
+
+        if (navigator.share) {
+          try {
+            await navigator.share({ title: "Horn Updates", text: shareText, url: articleUrl });
+          } catch (_) {}
+        } else {
+          try {
+            await navigator.clipboard.writeText(articleUrl);
+            alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
+          } catch {
+            prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", articleUrl);
+          }
+        }
+      };
+
       // Copy button
       document.getElementById("copyBtn").onclick = async () => {
+        const isRtl = document.getElementById("summary")?.classList.contains("rtl");
         try {
           await navigator.clipboard.writeText(articleUrl);
-          alert("Link copied!");
+          alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
         } catch {
-          prompt("Copy this link:", articleUrl);
+          prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", articleUrl);
         }
       };
 
@@ -245,20 +284,29 @@
           el.textContent = `Country: ${countries}`;
         }
 
-        // NEW: clean HTML junk (esp. Arabic WP feeds), then render safely
         const cleanText = htmlToCleanText(rawSummary);
-
         const summaryEl = document.getElementById("summary");
+
         if (cleanText) {
           summaryEl.innerHTML = `<p>${renderSafeTextAsHtml(cleanText)}</p>`;
 
-          // NEW: RTL auto-format if Arabic detected
-          if (isArabic(cleanText) || isArabic(title)) {
+          const rtl = isArabic(cleanText) || isArabic(title);
+          if (rtl) {
             summaryEl.classList.add("rtl");
             document.getElementById("title").classList.add("rtl");
             summaryEl.setAttribute("dir", "rtl");
             document.getElementById("title").setAttribute("dir", "rtl");
           }
+
+          // Upgrade share links with proper text after we know the title/lang
+          const shareMsg = rtl
+            ? `${title}\n\nاقرأ الخبر الكامل هنا:\n${articleUrl}`
+            : `${title}\n\nRead the full article:\n${articleUrl}`;
+
+          waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareMsg)}`;
+          tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(title)}`;
+          fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`;
+
         } else {
           summaryEl.innerHTML = `<p class="muted">Summary not available for this story yet.</p>`;
         }
