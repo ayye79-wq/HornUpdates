@@ -186,19 +186,17 @@
 
     async function load() {
       const articleUrl = getParam("url");
-const shareUrl = new URL(window.location.href).toString();
+const shareUrl = window.location.origin + window.location.pathname + window.location.search;
+
  // Horn Updates reader link (for tracking)
 
 if (!articleUrl) {
-  // Hide action buttons
   ["openBtn", "copyBtn", "shareBtn", "waBtn", "tgBtn", "fbBtn"].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.style.display = "none";
   });
 
-  document.getElementById("title").innerHTML =
-    "Horn Updates Reader";
-
+  document.getElementById("title").textContent = "Horn Updates Reader";
   document.getElementById("summary").innerHTML = `
     <p class="muted">
       This page shows clean summaries of news stories from the Horn of Africa.
@@ -209,7 +207,14 @@ if (!articleUrl) {
     <p>
       👉 <a href="https://hornupdates.com">Go to homepage</a>
     </p>
+    <p class="muted" style="font-size:.9rem;">
+      Redirecting you shortly…
+    </p>
   `;
+
+  setTimeout(() => {
+    window.location.href = "https://hornupdates.com";
+  }, 5000);
 
   return;
 }
