@@ -183,6 +183,33 @@
         return "";
       }
     }
+function ensureLeadText(text, title) {
+  const clean = (text || "").trim();
+  if (!clean) return "";
+
+  // Split into sentences safely (English + Arabic)
+  const parts = clean
+    .replace(/([.!?؟۔])\s+/g, "$1|")
+    .split("|")
+    .map(s => s.trim())
+    .filter(s => s.length > 0);
+
+  // Take up to 3 sentences
+  let lead = parts.slice(0, 3).join(" ");
+
+  // If it's already solid, keep it
+  if (lead.length >= 160 && parts.length >= 2) {
+    return lead;
+  }
+
+  // If still too short, add a neutral second/third line
+  const rtl = isArabic(lead) || isArabic(title);
+  lead += rtl
+    ? "\n\nاقرأ الخبر عبر Horn Updates لمزيد من التفاصيل."
+    : "\n\nRead via Horn Updates for more details.";
+
+  return lead;
+}
 
     async function load() {
       const articleUrl = getParam("url");
@@ -323,7 +350,9 @@ document.getElementById("copyBtn").onclick = async () => {
           el.textContent = `Country: ${countries}`;
         }
 
-        const cleanText = htmlToCleanText(rawSummary);
+       let cleanText = htmlToCleanText(rawSummary);
+cleanText = ensureLeadText(cleanText, title);
+
         const summaryEl = document.getElementById("summary");
 
         if (cleanText) {
