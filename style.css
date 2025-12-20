@@ -441,3 +441,23 @@ body {
 @media (max-width: 520px) {
   .btn { padding: 9px 10px; border-radius: 12px; }
 }
+/* Make secondary buttons softer */
+.btn.secondary{
+  background:#f3f4f6;
+  border-color:#e5e7eb;
+  font-weight:600;
+}
+
+/* Make the action buttons slightly smaller */
+.actions .btn{
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: .95rem;
+}
+
+/* On small screens, keep it tidy */
+@media (max-width: 720px){
+  .topbar{ flex-direction: column; align-items: flex-start; }
+  .actions{ justify-content: flex-start; width: 100%; }
+}
+

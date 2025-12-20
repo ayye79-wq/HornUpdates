@@ -34,6 +34,13 @@
       cursor: pointer;
     }
     .btn:hover { filter: brightness(0.98); }
+/* Secondary buttons look softer */
+.btn.secondary{
+  background:#f3f4f6;
+  border-color:#e5e7eb;
+  font-weight:600;
+}
+
 
     /* ✅ Actions row for buttons */
     .actions {
@@ -81,12 +88,13 @@
       </div>
 
       <div class="actions">
-        <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
-        <button id="copyBtn" class="btn" type="button">Copy link</button>
-        <button id="shareBtn" class="btn" type="button">Share</button>
-        <a id="waBtn" class="btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a id="tgBtn" class="btn" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a id="fbBtn" class="btn" target="_blank" rel="noopener noreferrer">Facebook</a>
+<a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
+<button id="copyBtn" class="btn secondary" type="button">Copy link</button>
+<button id="shareBtn" class="btn secondary" type="button">Share</button>
+<a id="waBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a id="tgBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
+<a id="fbBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
+
       </div>
     </div>
 
@@ -178,6 +186,9 @@
 
     async function load() {
       const articleUrl = getParam("url");
+const shareUrl = new URL(window.location.href).toString();
+ // Horn Updates reader link (for tracking)
+
       if (!articleUrl) {
         document.getElementById("title").innerHTML = '<span class="error">Missing url parameter.</span>';
         document.getElementById("summary").innerHTML = 'Open reader like: <code>reader.html?url=https://example.com</code>';
@@ -196,9 +207,10 @@
       const fbBtn = document.getElementById("fbBtn");
 
       // Default fallback (URL only)
-      waBtn.href = `https://wa.me/?text=${encodeURIComponent(articleUrl)}`;
-      tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(articleUrl)}`;
-      fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`;
+waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
+tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}`;
+fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
 
       // Share button: native share on mobile, else copy link on desktop
       shareBtn.onclick = async () => {
@@ -206,33 +218,36 @@
         const isRtl = document.getElementById("summary")?.classList.contains("rtl");
 
         const shareText = isRtl
-          ? `${titleText}\n\nاقرأ الخبر الكامل هنا:\n${articleUrl}`
-          : `${titleText}\n\nRead the full article:\n${articleUrl}`;
+         ? `${titleText}\n\nاقرأ الخبر عبر Horn Updates:\n${shareUrl}`
+: `${titleText}\n\nRead via Horn Updates:\n${shareUrl}`;
+
 
         if (navigator.share) {
           try {
-            await navigator.share({ title: "Horn Updates", text: shareText, url: articleUrl });
+            await navigator.share({ title: "Horn Updates", text: shareText, url: shareUrl });
           } catch (_) {}
         } else {
           try {
-            await navigator.clipboard.writeText(articleUrl);
+            await navigator.clipboard.writeText(shareUrl);
             alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
           } catch {
-            prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", articleUrl);
+            prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", shareUrl);
           }
         }
       };
 
-      // Copy button
-      document.getElementById("copyBtn").onclick = async () => {
-        const isRtl = document.getElementById("summary")?.classList.contains("rtl");
-        try {
-          await navigator.clipboard.writeText(articleUrl);
-          alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
-        } catch {
-          prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", articleUrl);
-        }
-      };
+   
+   // Copy button (copies Horn Updates reader link)
+document.getElementById("copyBtn").onclick = async () => {
+  const isRtl = document.getElementById("summary")?.classList.contains("rtl");
+  try {
+    await navigator.clipboard.writeText(shareUrl);
+    alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
+  } catch {
+    prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", shareUrl);
+  }
+};
+
 
       // Defaults (in case not found in JSON)
       const host = safeHost(articleUrl);
@@ -300,12 +315,14 @@
 
           // Upgrade share links with proper text after we know the title/lang
           const shareMsg = rtl
-            ? `${title}\n\nاقرأ الخبر الكامل هنا:\n${articleUrl}`
-            : `${title}\n\nRead the full article:\n${articleUrl}`;
+          ? `${title}\n\nاقرأ الخبر عبر Horn Updates:\n${shareUrl}`
+: `${title}\n\nRead via Horn Updates:\n${shareUrl}`;
 
-          waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareMsg)}`;
-          tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(title)}`;
-          fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`;
+
+         waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareMsg)}`;
+tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent("Horn Updates — " + title)}`;
+
+fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
 
         } else {
           summaryEl.innerHTML = `<p class="muted">Summary not available for this story yet.</p>`;
