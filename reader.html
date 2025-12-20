@@ -44,10 +44,18 @@
     .meta { color: #6b7280; font-size: .95rem; display: flex; flex-wrap: wrap; gap: 10px; }
     .pill { background: #f3f4f6; padding: 4px 10px; border-radius: 999px; font-size: .85rem; }
     h1 { font-size: 1.4rem; line-height: 1.25; margin: 10px 0 10px; }
-    .summary { margin-top: 10px; font-size: 1.02rem; }
+    .summary { margin-top: 10px; font-size: 1.02rem; white-space: pre-wrap; }
     .divider { height: 1px; background: #e5e7eb; margin: 14px 0; }
     .muted { color: #6b7280; }
     .error { color: #b91c1c; font-weight: 700; }
+
+    /* RTL support for Arabic */
+    .rtl {
+      direction: rtl;
+      text-align: right;
+      line-height: 1.9;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
   </style>
 </head>
 
@@ -124,9 +132,34 @@
       return txt.value;
     }
 
-    function renderSafeSummary(summaryText) {
-      const decoded = decodeEntities(summaryText || "");
-      const safe = escapeHtml(decoded);
+    // Detect Arabic characters (RTL)
+    function isArabic(text) {
+      return /[\u0600-\u06FF]/.test(text || "");
+    }
+
+    // NEW: Convert HTML-ish summaries into clean readable text (Arabic WP feeds etc.)
+    function htmlToCleanText(raw) {
+      const decoded = decodeEntities(raw || "");
+
+      // If the summary contains HTML tags, strip them safely using DOM parsing
+      if (/<[a-z][\s\S]*>/i.test(decoded)) {
+        const temp = document.createElement("div");
+        temp.innerHTML = decoded;
+
+        // Remove images/scripts/styles (common in WP feeds)
+        temp.querySelectorAll("img, script, style, iframe").forEach(el => el.remove());
+
+        // Get plain text
+        return (temp.innerText || "").trim();
+      }
+
+      // Otherwise treat as normal plain text
+      return decoded.trim();
+    }
+
+    // NEW: Render as safe HTML (no raw tags), preserving line breaks
+    function renderSafeTextAsHtml(text) {
+      const safe = escapeHtml(text || "");
       return safe.replace(/\n/g, "<br>");
     }
 
@@ -190,7 +223,7 @@
         }
 
         const title = match.title || "Article";
-        const summary = match.summary || match.excerpt || match.ai_summary || "";
+        const rawSummary = match.summary || match.excerpt || match.ai_summary || "";
         const published = match.published_at || match.published || match.date || "";
         const sourceName = match.source || match.source_name || host || "Source";
         const category = match.category || "";
@@ -212,9 +245,23 @@
           el.textContent = `Country: ${countries}`;
         }
 
-        document.getElementById("summary").innerHTML = summary
-          ? `<p>${renderSafeSummary(summary)}</p>`
-          : `<p class="muted">Summary not available for this story yet.</p>`;
+        // NEW: clean HTML junk (esp. Arabic WP feeds), then render safely
+        const cleanText = htmlToCleanText(rawSummary);
+
+        const summaryEl = document.getElementById("summary");
+        if (cleanText) {
+          summaryEl.innerHTML = `<p>${renderSafeTextAsHtml(cleanText)}</p>`;
+
+          // NEW: RTL auto-format if Arabic detected
+          if (isArabic(cleanText) || isArabic(title)) {
+            summaryEl.classList.add("rtl");
+            document.getElementById("title").classList.add("rtl");
+            summaryEl.setAttribute("dir", "rtl");
+            document.getElementById("title").setAttribute("dir", "rtl");
+          }
+        } else {
+          summaryEl.innerHTML = `<p class="muted">Summary not available for this story yet.</p>`;
+        }
 
       } catch (e) {
         console.warn("Reader load error:", e);
