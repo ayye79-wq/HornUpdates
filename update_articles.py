@@ -18,6 +18,8 @@ import json
 import datetime as dt
 from pathlib import Path
 import urllib.parse as urlparse
+import re
+import html
 
 import feedparser  # pip install feedparser
 
@@ -124,11 +126,72 @@ def extract_published_dt(entry) -> dt.datetime | None:
         return dt.datetime(*tm[:6], tzinfo=dt.UTC)
     return None
 
-def make_summary(entry):
-    for field in ("summary", "description"):
-        if hasattr(entry, field) and getattr(entry, field):
-            return getattr(entry, field)
-    return ""
+def _strip_html(s: str) -> str:
+    """Remove HTML tags/entities and normalize whitespace."""
+    if not s:
+        return ""
+    s = html.unescape(s)
+    s = re.sub(r"<[^>]+>", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+def _sentences(text: str):
+    """Lightweight sentence splitter (good enough for news blurbs)."""
+    if not text:
+        return []
+    text = text.strip()
+    parts = re.split(r"(?<=[.!?])\s+", text)
+    return [p.strip() for p in parts if p and p.strip()]
+
+def make_summary(entry) -> str:
+    """
+    Build a better summary than raw RSS teasers.
+    - Prefer richer fields (content, summary_detail) when present
+    - Strip HTML
+    - Return up to 4 sentences (no artificial 2-sentence cap)
+    - If teaser ends with "..." and is short, convert to a clean period
+    """
+    candidates = []
+
+    # 1) Rich 'content' (list of dicts with 'value')
+    content = getattr(entry, "content", None)
+    if isinstance(content, list) and content:
+        for c in content:
+            val = (c.get("value") if isinstance(c, dict) else "") or ""
+            val = _strip_html(val)
+            if val:
+                candidates.append(val)
+
+    # 2) summary_detail can be better than summary
+    sd = getattr(entry, "summary_detail", None)
+    if isinstance(sd, dict):
+        val = _strip_html(sd.get("value", "") or "")
+        if val:
+            candidates.append(val)
+
+    # 3) Classic fields
+    for field in ("summary", "description", "subtitle"):
+        val = getattr(entry, field, "") or ""
+        val = _strip_html(val)
+        if val:
+            candidates.append(val)
+
+    # Choose the longest candidate (usually most informative)
+    text = max(candidates, key=len) if candidates else ""
+    if not text:
+        return ""
+
+    sents = _sentences(text)
+    out = " ".join(sents[:4]).strip() if sents else text
+
+    # If it ends with "..." but is short, make it look complete
+    if out.endswith("...") and len(out) < 180:
+        out = out[:-3].rstrip()
+        if out and not out.endswith((".", "!", "?")):
+            out += "."
+
+    return out
+
 
 def should_always_include(feed_url: str) -> bool:
     low = feed_url.lower()
@@ -168,7 +231,6 @@ def merge_dedupe(old_list, new_list):
     for a in new_list + old_list:
         key = (a.get("source_url") or a.get("link") or "").strip()
         if not key:
-            # fallback key if missing URL
             key = (a.get("title","") + "|" + a.get("published_at","")).strip()
         if key in seen:
             continue
@@ -178,7 +240,6 @@ def merge_dedupe(old_list, new_list):
     # Sort newest first
     merged.sort(key=lambda x: x.get("published_at", ""), reverse=True)
 
-    # Cap
     return merged[:MAX_ARTICLES]
 
 
@@ -266,11 +327,9 @@ def main():
 
         print(f"Included {count_included} items from this feed.")
 
-    # Merge with existing to keep backlog
     existing = load_existing_articles()
     merged_articles = merge_dedupe(existing, new_articles)
 
-    # If nothing new AND file exists, keep it (still update last_run)
     if len(new_articles) == 0 and OUTPUT_PATH.exists():
         print("[INFO] No new articles since last run. Keeping existing articles.json.")
         save_last_run(now)
