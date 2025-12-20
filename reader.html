@@ -187,26 +187,22 @@ function ensureLeadText(text, title) {
   const clean = (text || "").trim();
   if (!clean) return "";
 
-  // Split into sentences safely (English + Arabic)
-  const parts = clean
-    .replace(/([.!?؟۔])\s+/g, "$1|")
-    .split("|")
+  // Split into sentences (English + Arabic)
+  let sentences = clean
+    .split(/(?<=[.!?؟۔])\s+/)
     .map(s => s.trim())
-    .filter(s => s.length > 0);
+    .filter(s => s.length > 20); // ignore very short fragments
 
-  // Take up to 3 sentences
-  let lead = parts.slice(0, 3).join(" ");
+  // Take up to 3 sentences max
+  let lead = sentences.slice(0, 3).join(" ");
 
-  // If it's already solid, keep it
-  if (lead.length >= 160 && parts.length >= 2) {
-    return lead;
-  }
-
-  // If still too short, add a neutral second/third line
+  // If still too short (truncated RSS), add a neutral line
   const rtl = isArabic(lead) || isArabic(title);
-  lead += rtl
-    ? "\n\nاقرأ الخبر عبر Horn Updates لمزيد من التفاصيل."
-    : "\n\nRead via Horn Updates for more details.";
+  if (lead.length < 120) {
+    lead += rtl
+      ? "\n\nاقرأ الخبر الكامل عبر Horn Updates."
+      : "\n\nRead the full story via Horn Updates.";
+  }
 
   return lead;
 }
