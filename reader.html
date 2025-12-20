@@ -189,12 +189,31 @@
 const shareUrl = new URL(window.location.href).toString();
  // Horn Updates reader link (for tracking)
 
-      if (!articleUrl) {
-        document.getElementById("title").innerHTML = '<span class="error">Missing url parameter.</span>';
-        document.getElementById("summary").innerHTML = 'Open reader like: <code>reader.html?url=https://example.com</code>';
-        document.getElementById("openBtn").style.display = "none";
-        return;
-      }
+if (!articleUrl) {
+  // Hide action buttons
+  ["openBtn", "copyBtn", "shareBtn", "waBtn", "tgBtn", "fbBtn"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = "none";
+  });
+
+  document.getElementById("title").innerHTML =
+    "Horn Updates Reader";
+
+  document.getElementById("summary").innerHTML = `
+    <p class="muted">
+      This page shows clean summaries of news stories from the Horn of Africa.
+    </p>
+    <p>
+      Please open an article from <strong>hornupdates.com</strong>.
+    </p>
+    <p>
+      👉 <a href="https://hornupdates.com">Go to homepage</a>
+    </p>
+  `;
+
+  return;
+}
+
 
       // Set open button
       const openBtn = document.getElementById("openBtn");
