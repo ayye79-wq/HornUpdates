@@ -20,6 +20,7 @@ from pathlib import Path
 import urllib.parse as urlparse
 import re
 import html
+import urllib.request
 
 import feedparser  # pip install feedparser
 
@@ -148,7 +149,7 @@ def make_summary(entry) -> str:
     Build a better summary than raw RSS teasers.
     - Prefer richer fields (content, summary_detail) when present
     - Strip HTML
-    - Return up to 4 sentences (no artificial 2-sentence cap)
+    - Return up to 4 sentences
     - If teaser ends with "..." and is short, convert to a clean period
     """
     candidates = []
@@ -176,7 +177,6 @@ def make_summary(entry) -> str:
         if val:
             candidates.append(val)
 
-    # Choose the longest candidate (usually most informative)
     text = max(candidates, key=len) if candidates else ""
     if not text:
         return ""
@@ -191,7 +191,6 @@ def make_summary(entry) -> str:
             out += "."
 
     return out
-
 
 def should_always_include(feed_url: str) -> bool:
     low = feed_url.lower()
@@ -227,7 +226,6 @@ def merge_dedupe(old_list, new_list):
     merged = []
     seen = set()
 
-    # Put new first so it wins
     for a in new_list + old_list:
         key = (a.get("source_url") or a.get("link") or "").strip()
         if not key:
@@ -237,10 +235,33 @@ def merge_dedupe(old_list, new_list):
         seen.add(key)
         merged.append(a)
 
-    # Sort newest first
     merged.sort(key=lambda x: x.get("published_at", ""), reverse=True)
-
     return merged[:MAX_ARTICLES]
+
+def _fetch_html(url: str, timeout: int = 10) -> str:
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (HornUpdatesBot/1.0; +https://hornupdates.com)"
+            }
+        )
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            charset = resp.headers.get_content_charset() or "utf-8"
+            return resp.read().decode(charset, errors="replace")
+    except Exception:
+        return ""
+
+def _extract_text_from_html(html_text: str) -> str:
+    if not html_text:
+        return ""
+    # Remove scripts/styles
+    html_text = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", html_text)
+    # Pull paragraph-ish text
+    paras = re.findall(r"(?is)<p[^>]*>(.*?)</p>", html_text)
+    paras = [_strip_html(p) for p in paras]
+    paras = [p for p in paras if len(p) > 40]  # keep meaningful paragraphs
+    return " ".join(paras[:8]).strip()  # a few paragraphs is enough
 
 
 # ----------------------------
@@ -290,6 +311,18 @@ def main():
             # Safety: skip future-dated items
             if published_dt > now + dt.timedelta(minutes=5):
                 continue
+
+            # --- EastAfrican upgrade: RSS is often teaser-only, fetch page text when needed
+            host = urlparse.urlparse(link).netloc.lower()
+            if "theeastafrican.co.ke" in host:
+                # If too short or teaser-ish, try to expand using page text
+                if (len(summary) < 170) or summary.strip().endswith("..."):
+                    page_html = _fetch_html(link, timeout=10)
+                    page_text = _extract_text_from_html(page_html)
+                    if page_text:
+                        sents = _sentences(page_text)
+                        if sents:
+                            summary = " ".join(sents[:4]).strip()
 
             combined_text = f"{title}\n{summary}"
 
