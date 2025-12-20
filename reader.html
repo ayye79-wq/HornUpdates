@@ -34,13 +34,12 @@
       cursor: pointer;
     }
     .btn:hover { filter: brightness(0.98); }
-/* Secondary buttons look softer */
-.btn.secondary{
-  background:#f3f4f6;
-  border-color:#e5e7eb;
-  font-weight:600;
-}
-
+    /* Secondary buttons look softer */
+    .btn.secondary{
+      background:#f3f4f6;
+      border-color:#e5e7eb;
+      font-weight:600;
+    }
 
     /* ✅ Actions row for buttons */
     .actions {
@@ -88,13 +87,12 @@
       </div>
 
       <div class="actions">
-<a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
-<button id="copyBtn" class="btn secondary" type="button">Copy link</button>
-<button id="shareBtn" class="btn secondary" type="button">Share</button>
-<a id="waBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-<a id="tgBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
-<a id="fbBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
-
+        <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
+        <button id="copyBtn" class="btn secondary" type="button">Copy link</button>
+        <button id="shareBtn" class="btn secondary" type="button">Share</button>
+        <a id="waBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a id="tgBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a id="fbBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
       </div>
     </div>
 
@@ -183,65 +181,63 @@
         return "";
       }
     }
-function ensureLeadText(text, title) {
-  const clean = (text || "").trim();
-  if (!clean) return "";
 
-  // Split into sentences (English + Arabic)
-  let sentences = clean
-    .split(/(?<=[.!?؟۔])\s+/)
-    .map(s => s.trim())
-    .filter(s => s.length > 20); // ignore very short fragments
+    function ensureLeadText(text, title) {
+      let clean = (text || "").trim();
+      if (!clean) return "";
 
-  // Take up to 3 sentences max
-  let lead = sentences.slice(0, 3).join(" ");
+      // If RSS teaser ends with "..." or "when..." etc, trim that dangling fragment
+      clean = clean.replace(/\s+\w+\.\.\.$/, "...");
+      clean = clean.replace(/\b(when|while|as|because|after)\s*\.\.\.$/i, "...");
 
-  // If still too short (truncated RSS), add a neutral line
-  const rtl = isArabic(lead) || isArabic(title);
-  if (lead.length < 120) {
-    lead += rtl
-      ? "\n\nاقرأ الخبر الكامل عبر Horn Updates."
-      : "\n\nRead the full story via Horn Updates.";
-  }
+      // Split into sentences (English + Arabic)
+      let sentences = clean
+        .split(/(?<=[.!?؟۔])\s+/)
+        .map(s => s.trim())
+        .filter(s => s.length > 20);
 
-  return lead;
-}
+      // If we couldn't split well, keep original
+      let lead = sentences.length ? sentences.slice(0, 3).join(" ") : clean;
+
+      // If lead ends with a dangling connector, remove it
+      lead = lead.replace(/\b(when|while|as|because|after)\s*\.{0,3}\s*$/i, "").trim();
+
+      return lead;
+    }
 
     async function load() {
       const articleUrl = getParam("url");
-const shareUrl = window.location.origin + window.location.pathname + window.location.search;
+      const shareUrl = window.location.origin + window.location.pathname + window.location.search;
 
- // Horn Updates reader link (for tracking)
+      // If opened directly (no url param)
+      if (!articleUrl) {
+        ["openBtn", "copyBtn", "shareBtn", "waBtn", "tgBtn", "fbBtn"].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.style.display = "none";
+        });
 
-if (!articleUrl) {
-  ["openBtn", "copyBtn", "shareBtn", "waBtn", "tgBtn", "fbBtn"].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.style.display = "none";
-  });
+        document.getElementById("title").textContent = "Horn Updates Reader";
+        document.getElementById("summary").innerHTML = `
+          <p class="muted">
+            This page shows clean summaries of news stories from the Horn of Africa.
+          </p>
+          <p>
+            Please open an article from <strong>hornupdates.com</strong>.
+          </p>
+          <p>
+            👉 <a href="https://hornupdates.com">Go to homepage</a>
+          </p>
+          <p class="muted" style="font-size:.9rem;">
+            Redirecting you shortly…
+          </p>
+        `;
 
-  document.getElementById("title").textContent = "Horn Updates Reader";
-  document.getElementById("summary").innerHTML = `
-    <p class="muted">
-      This page shows clean summaries of news stories from the Horn of Africa.
-    </p>
-    <p>
-      Please open an article from <strong>hornupdates.com</strong>.
-    </p>
-    <p>
-      👉 <a href="https://hornupdates.com">Go to homepage</a>
-    </p>
-    <p class="muted" style="font-size:.9rem;">
-      Redirecting you shortly…
-    </p>
-  `;
+        setTimeout(() => {
+          window.location.href = "https://hornupdates.com";
+        }, 5000);
 
-  setTimeout(() => {
-    window.location.href = "https://hornupdates.com";
-  }, 5000);
-
-  return;
-}
-
+        return;
+      }
 
       // Set open button
       const openBtn = document.getElementById("openBtn");
@@ -254,10 +250,9 @@ if (!articleUrl) {
       const fbBtn = document.getElementById("fbBtn");
 
       // Default fallback (URL only)
-waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
-tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}`;
-fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-
+      waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
+      tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}`;
+      fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
 
       // Share button: native share on mobile, else copy link on desktop
       shareBtn.onclick = async () => {
@@ -265,9 +260,8 @@ fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
         const isRtl = document.getElementById("summary")?.classList.contains("rtl");
 
         const shareText = isRtl
-         ? `${titleText}\n\nاقرأ الخبر عبر Horn Updates:\n${shareUrl}`
-: `${titleText}\n\nRead via Horn Updates:\n${shareUrl}`;
-
+          ? `${titleText}\n\nاقرأ الخبر عبر Horn Updates:\n${shareUrl}`
+          : `${titleText}\n\nRead via Horn Updates:\n${shareUrl}`;
 
         if (navigator.share) {
           try {
@@ -283,18 +277,16 @@ fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
         }
       };
 
-   
-   // Copy button (copies Horn Updates reader link)
-document.getElementById("copyBtn").onclick = async () => {
-  const isRtl = document.getElementById("summary")?.classList.contains("rtl");
-  try {
-    await navigator.clipboard.writeText(shareUrl);
-    alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
-  } catch {
-    prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", shareUrl);
-  }
-};
-
+      // Copy button (copies Horn Updates reader link)
+      document.getElementById("copyBtn").onclick = async () => {
+        const isRtl = document.getElementById("summary")?.classList.contains("rtl");
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+          alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
+        } catch {
+          prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", shareUrl);
+        }
+      };
 
       // Defaults (in case not found in JSON)
       const host = safeHost(articleUrl);
@@ -346,8 +338,19 @@ document.getElementById("copyBtn").onclick = async () => {
           el.textContent = `Country: ${countries}`;
         }
 
-       let cleanText = htmlToCleanText(rawSummary);
-cleanText = ensureLeadText(cleanText, title);
+        let cleanText = htmlToCleanText(rawSummary);
+        cleanText = ensureLeadText(cleanText, title);
+
+        // ✅ EastAfrican short-lead helper (ONLY after sourceName + cleanText exist)
+        const isEastAfrican = String(sourceName || "").toLowerCase().includes("eastafrican");
+        const isShortLead = (cleanText || "").length < 160 || (cleanText || "").trim().endsWith("...");
+
+        if (isEastAfrican && isShortLead) {
+          const rtlHint = isArabic(cleanText) || isArabic(title);
+          cleanText += rtlHint
+            ? "\n\n— هذا مقتطف قصير من الناشر. اضغط “Read full article” للتفاصيل."
+            : "\n\n— Brief lead from the publisher. Tap “Read full article” for details.";
+        }
 
         const summaryEl = document.getElementById("summary");
 
@@ -364,14 +367,12 @@ cleanText = ensureLeadText(cleanText, title);
 
           // Upgrade share links with proper text after we know the title/lang
           const shareMsg = rtl
-          ? `${title}\n\nاقرأ الخبر عبر Horn Updates:\n${shareUrl}`
-: `${title}\n\nRead via Horn Updates:\n${shareUrl}`;
+            ? `${title}\n\nاقرأ الخبر عبر Horn Updates:\n${shareUrl}`
+            : `${title}\n\nRead via Horn Updates:\n${shareUrl}`;
 
-
-         waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareMsg)}`;
-tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent("Horn Updates — " + title)}`;
-
-fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+          waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareMsg)}`;
+          tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent("Horn Updates — " + title)}`;
+          fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
 
         } else {
           summaryEl.innerHTML = `<p class="muted">Summary not available for this story yet.</p>`;
