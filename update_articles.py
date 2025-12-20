@@ -294,6 +294,39 @@ def _extract_text_from_html(html_text: str) -> str:
     text = " ".join(paras[:10]).strip()
 
     return text
+def upgrade_eastafrican_summary(article: dict) -> dict:
+    try:
+        url = (article.get("source_url") or "").strip()
+        if not url:
+            return article
+
+        host = urlparse.urlparse(url).netloc.lower()
+        if "theeastafrican.co.ke" not in host:
+            return article
+
+        summary = (article.get("summary") or "").strip()
+
+        # Only upgrade if clearly teaser/too short
+        if len(summary) >= 170 and not summary.endswith("..."):
+            return article
+
+        page_html = _fetch_html(url, timeout=10)
+        page_text = _extract_text_from_html(page_html)
+
+        print(
+            f"[EA BACKLOG] old_len={len(summary)} html_len={len(page_html)} "
+            f"extracted_len={len(page_text)} url={url}"
+        )
+
+        if page_text:
+            sents = _sentences(page_text)
+            if sents:
+                article["summary"] = " ".join(sents[:4]).strip()
+
+        return article
+    except Exception:
+        return article
+
 
 
 
@@ -404,6 +437,20 @@ def main():
 
     existing = load_existing_articles()
     merged_articles = merge_dedupe(existing, new_articles)
+    # Upgrade old EastAfrican teaser summaries in the backlog (limit to avoid slow runs)
+    upgraded = 0
+    for a in merged_articles:
+        if upgraded >= 15:  # safety cap per run
+            break
+        before = len((a.get("summary") or "").strip())
+        a2 = upgrade_eastafrican_summary(a)
+        after = len((a2.get("summary") or "").strip())
+        if after > before:
+            upgraded += 1
+
+    if upgraded:
+        print(f"[INFO] Upgraded {upgraded} EastAfrican backlog summaries.")
+
 
     if len(new_articles) == 0 and OUTPUT_PATH.exists():
         print("[INFO] No new articles since last run. Keeping existing articles.json.")
