@@ -251,17 +251,50 @@ def _fetch_html(url: str, timeout: int = 10) -> str:
             return resp.read().decode(charset, errors="replace")
     except Exception:
         return ""
-
 def _extract_text_from_html(html_text: str) -> str:
     if not html_text:
         return ""
-    # Remove scripts/styles
-    html_text = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", html_text)
-    # Pull paragraph-ish text
-    paras = re.findall(r"(?is)<p[^>]*>(.*?)</p>", html_text)
+
+    # Remove scripts/styles (keep json-ld for later)
+    cleaned = re.sub(r"(?is)<style.*?>.*?</style>", " ", html_text)
+    cleaned = re.sub(r"(?is)<script(?![^>]*application/ld\+json).*?>.*?</script>", " ", cleaned)
+
+    # 0) Try JSON-LD (often contains description / articleBody)
+    # NOTE: We don't parse full JSON safely here; we extract common fields via regex.
+    jsonld_blocks = re.findall(r'(?is)<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', html_text)
+    for block in jsonld_blocks:
+        block = block.strip()
+        # Try articleBody
+        m = re.search(r'"articleBody"\s*:\s*"([^"]{80,})"', block)
+        if m:
+            return _strip_html(m.group(1))
+        # Try description
+        m = re.search(r'"description"\s*:\s*"([^"]{80,})"', block)
+        if m:
+            return _strip_html(m.group(1))
+
+    # 1) Try meta description
+    m = re.search(r'(?is)<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']', html_text)
+    if m:
+        meta_desc = _strip_html(m.group(1))
+        if len(meta_desc) > 120:
+            return meta_desc
+
+    # 2) Try og:description
+    m = re.search(r'(?is)<meta[^>]+property=["\']og:description["\'][^>]+content=["\'](.*?)["\']', html_text)
+    if m:
+        og_desc = _strip_html(m.group(1))
+        if len(og_desc) > 120:
+            return og_desc
+
+    # 3) Fallback: paragraph extraction
+    paras = re.findall(r"(?is)<p[^>]*>(.*?)</p>", cleaned)
     paras = [_strip_html(p) for p in paras]
-    paras = [p for p in paras if len(p) > 40]  # keep meaningful paragraphs
-    return " ".join(paras[:8]).strip()  # a few paragraphs is enough
+    paras = [p for p in paras if len(p) > 40]
+    text = " ".join(paras[:10]).strip()
+
+    return text
+
 
 
 # ----------------------------
@@ -312,17 +345,26 @@ def main():
             if published_dt > now + dt.timedelta(minutes=5):
                 continue
 
-            # --- EastAfrican upgrade: RSS is often teaser-only, fetch page text when needed
+                       # --- EastAfrican upgrade: RSS is often teaser-only, fetch page text when needed
             host = urlparse.urlparse(link).netloc.lower()
             if "theeastafrican.co.ke" in host:
                 # If too short or teaser-ish, try to expand using page text
                 if (len(summary) < 170) or summary.strip().endswith("..."):
                     page_html = _fetch_html(link, timeout=10)
                     page_text = _extract_text_from_html(page_html)
+
+                    print(
+                        f"[EA DEBUG] rss_len={len(summary)} "
+                        f"html_len={len(page_html)} "
+                        f"extracted_len={len(page_text)} "
+                        f"url={link}"
+                    )
+
                     if page_text:
                         sents = _sentences(page_text)
                         if sents:
                             summary = " ".join(sents[:4]).strip()
+
 
             combined_text = f"{title}\n{summary}"
 
