@@ -406,3 +406,28 @@ body {
 .about-mini h3 {
   font-weight: 600;
 }
+/* Tighten spacing between X link and Quick Updates */
+.about-mini {
+  margin-top: 8px;
+}
+
+.about-mini h3 {
+  font-weight: 600;
+}
+
+/* Sidebar Ad block */
+.sidebar-ad {
+  text-align: center;
+  overflow: hidden;   /* prevents weird overflow on mobile */
+}
+
+/* Make sure the ad has breathing room on small screens */
+@media (max-width: 768px) {
+  .sidebar-box {
+    margin-top: 12px;
+  }
+
+  .sidebar-ad {
+    padding: 6px;
+  }
+}
