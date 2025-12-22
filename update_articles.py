@@ -56,16 +56,40 @@ RSS_FEEDS = [
     "https://www.thereporterethiopia.com/feed/",
     "https://www.theeastafrican.co.ke/rss.xml",
     "https://sudantribune.net/feed/",
+
+    "https://nation.africa/kenya/rss",
+    "https://nation.africa/africa/rss",
+    "https://www.standardmedia.co.ke/rss",
+    "https://www.citizen.digital/rss",
+    "https://www.the-star.co.ke/rss",
+    "https://www.ktnnews.com/feeds/rss.xml",
+
+"https://www.standardmedia.co.ke/rss/headlines.php",
+"https://www.standardmedia.co.ke/rss/kenya.php",
+"https://www.standardmedia.co.ke/rss/world.php",
+"https://www.standardmedia.co.ke/rss/business.php",
+"https://www.standardmedia.co.ke/rss/politics.php",
+
 ]
+
+
 
 ALWAYS_INCLUDE_FEEDS = [
     "addisstandard.com",
     "thereporterethiopia.com",
     "hiiraan.com",
     "garoweonline.com",
-    "theeastafrican.co.ke",
+    
     "sudantribune.com",
+
+    "nation.africa",
+    "standardmedia.co.ke",
+    "citizen.digital",
+    "the-star.co.ke",
+    "ktnnews.com",
 ]
+
+
 
 BLOCKED_SOURCES = [
     "borkena.com",
@@ -294,6 +318,38 @@ def _extract_text_from_html(html_text: str) -> str:
     text = " ".join(paras[:10]).strip()
 
     return text
+def upgrade_eastafrican_summary(article: dict) -> bool:
+    """
+    Returns True if upgraded.
+    Only touches the EastAfrican items with short/teaser summaries.
+    """
+    url = (article.get("source_url") or "").strip()
+    if not url:
+        return False
+
+    host = urlparse.urlparse(url).netloc.lower()
+    if "theeastafrican.co.ke" not in host:
+        return False
+
+    summary = (article.get("summary") or "").strip()
+    if len(summary) >= 170 and not summary.endswith("..."):
+        return False
+
+    page_html = _fetch_html(url, timeout=10)
+    page_text = _extract_text_from_html(page_html)
+
+    print(f"[EA BACKLOG] old_len={len(summary)} html_len={len(page_html)} extracted_len={len(page_text)} url={url}")
+
+    if not page_text:
+        return False
+
+    sents = _sentences(page_text)
+    if not sents:
+        return False
+
+    article["summary"] = " ".join(sents[:4]).strip()
+    return True
+
 def upgrade_eastafrican_summary(article: dict) -> dict:
     try:
         url = (article.get("source_url") or "").strip()
@@ -437,6 +493,17 @@ def main():
 
     existing = load_existing_articles()
     merged_articles = merge_dedupe(existing, new_articles)
+    # Upgrade some old EastAfrican teaser summaries in the merged backlog
+    upgraded = 0
+    for a in merged_articles:
+        if upgraded >= 20:   # safety cap per run (prevents slow runs)
+            break
+        if upgrade_eastafrican_summary(a):
+            upgraded += 1
+
+    if upgraded:
+        print(f"[INFO] Upgraded {upgraded} EastAfrican backlog summaries.")
+
     # Upgrade old EastAfrican teaser summaries in the backlog (limit to avoid slow runs)
     upgraded = 0
     for a in merged_articles:
