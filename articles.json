@@ -1,6 +1,19 @@
 {
-  "generated_at": "2025-12-22T11:46:23.314714+00:00",
+  "generated_at": "2025-12-22T12:53:47.796442+00:00",
   "articles": [
+    {
+      "title": "Why banks are pushing for lower PAYE",
+      "summary": "The Association made the proposals against the National Treasury's invitation for comments from Kenyans on tax policies to inform the Finance Bill 2026.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-22T12:04:52+00:00",
+      "source_url": "https://www.standardmedia.co.ke/business/article/2001537115/why-banks-are-pushing-for-lower-paye",
+      "source_name": "The Standard Business"
+    },
     {
       "title": "Building Africa's green flight path: How PPPs can unlock sustainable aviation fuel",
       "summary": "Building Africa's green flight path: How PPPs can unlock sustainable aviation fuel",
@@ -748,7 +761,7 @@
     },
     {
       "title": "Tanzanian billionaires push into Kenya’s LPG market after court wins",
-      "summary": "The billionaires are breaking into Kenya’s cooking gas market, overcoming legal hurdles to...",
+      "summary": "The billionaires are breaking into Kenya’s cooking gas market, overcoming legal hurdles to challenge established players and expand LPG access.",
       "country_tags": [
         "Kenya"
       ],
