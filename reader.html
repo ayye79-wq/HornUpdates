@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horn Updates • Reader</title>
+
+  <!-- ✅ AdSense loader (ONLY ONCE per page) -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
+    crossorigin="anonymous"></script>
+
   <style>
     * { box-sizing: border-box; }
     body {
@@ -33,47 +39,28 @@
       font-weight: 700;
       cursor: pointer;
     }
-    .btn:hover { filter: brightness(0.98); }
-    /* Secondary buttons look softer */
-    .btn.secondary{
-      background:#f3f4f6;
-      border-color:#e5e7eb;
-      font-weight:600;
-    }
-
-    /* ✅ Actions row for buttons */
-    .actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+    .btn.secondary { background:#f3f4f6; font-weight:600; }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
 
     .card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 18px;
-      box-shadow: 0 10px 28px rgba(0,0,0,.06);
-      padding: 18px;
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:18px;
+      box-shadow:0 10px 28px rgba(0,0,0,.06);
+      padding:18px;
     }
-    .meta { color: #6b7280; font-size: .95rem; display: flex; flex-wrap: wrap; gap: 10px; }
-    .pill { background: #f3f4f6; padding: 4px 10px; border-radius: 999px; font-size: .85rem; }
-    h1 { font-size: 1.4rem; line-height: 1.25; margin: 10px 0 10px; }
-    .summary { margin-top: 10px; font-size: 1.02rem; white-space: pre-wrap; }
-    .divider { height: 1px; background: #e5e7eb; margin: 14px 0; }
-    .muted { color: #6b7280; }
-    .error { color: #b91c1c; font-weight: 700; }
+    .meta { color:#6b7280; font-size:.95rem; display:flex; gap:10px; flex-wrap:wrap; }
+    .pill { background:#f3f4f6; padding:4px 10px; border-radius:999px; font-size:.85rem; }
+    h1 { font-size:1.4rem; margin:10px 0; }
+    .summary { font-size:1.02rem; white-space:pre-wrap; }
+    .divider { height:1px; background:#e5e7eb; margin:18px 0; }
+    .muted { color:#6b7280; }
 
-    /* RTL support for Arabic */
     .rtl {
       direction: rtl;
       text-align: right;
       line-height: 1.9;
       font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    }
-
-    @media (max-width: 520px) {
-      .btn { padding: 9px 10px; }
     }
   </style>
 </head>
@@ -97,11 +84,10 @@
     </div>
 
     <div class="card">
-      <div class="meta" id="metaLine">
+      <div class="meta">
         <span class="pill" id="sourcePill">Source</span>
         <span class="pill" id="datePill">Date</span>
-        <span class="pill" id="catPill" style="display:none;">Category</span>
-        <span class="pill" id="countryPill" style="display:none;">Country</span>
+        <span class="pill" id="countryPill" style="display:none;"></span>
       </div>
 
       <h1 id="title">Loading…</h1>
@@ -112,11 +98,39 @@
         <span class="muted">Loading summary…</span>
       </div>
 
+      <!-- ✅ AdSense: Reader Top Ad -->
+      <div class="reader-ad reader-ad-top" style="margin:22px 0;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7773342225754932"
+             data-ad-slot="8296199432"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+
       <div class="divider"></div>
 
       <div class="muted" style="font-size:.95rem;">
-        <strong>Attribution:</strong> This summary is written by Horn Updates. Full article remains on the publisher’s website.
+        <strong>Attribution:</strong>
+        This summary is written by Horn Updates.
+        Full article remains on the publisher’s website.
       </div>
+
+      <!-- ✅ AdSense: Reader Bottom Ad (add near end of content) -->
+      <div class="reader-ad reader-ad-bottom" style="margin:22px 0;">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7773342225754932"
+             data-ad-slot="REPLACE_WITH_BOTTOM_SLOT"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
   </div>
 
@@ -126,262 +140,61 @@
       return url.searchParams.get(name);
     }
 
-    function safeHost(u) {
-      try { return new URL(u).hostname.replace(/^www\./, ""); }
-      catch { return ""; }
-    }
-
-    function formatDate(d) {
-      if (!d) return "";
-      const dt = new Date(d);
-      if (isNaN(dt.getTime())) return d;
-      return dt.toLocaleString(undefined, { year:"numeric", month:"short", day:"2-digit" });
-    }
-
-    function escapeHtml(str) {
-      return String(str)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    function decodeEntities(str) {
-      const txt = document.createElement("textarea");
-      txt.innerHTML = str;
-      return txt.value;
-    }
-
     function isArabic(text) {
       return /[\u0600-\u06FF]/.test(text || "");
     }
 
-    function htmlToCleanText(raw) {
-      const decoded = decodeEntities(raw || "");
-      if (/<[a-z][\s\S]*>/i.test(decoded)) {
-        const temp = document.createElement("div");
-        temp.innerHTML = decoded;
-        temp.querySelectorAll("img, script, style, iframe").forEach(el => el.remove());
-        return (temp.innerText || "").trim();
-      }
-      return decoded.trim();
-    }
-
-    function renderSafeTextAsHtml(text) {
-      const safe = escapeHtml(text || "");
-      return safe.replace(/\n/g, "<br>");
-    }
-
-    function normalize(u) {
+    function norm(u) {
       try {
         const x = new URL(u);
         return x.hostname.replace(/^www\./, "") + x.pathname.replace(/\/$/, "");
-      } catch {
-        return "";
-      }
-    }
-
-    function ensureLeadText(text, title) {
-      let clean = (text || "").trim();
-      if (!clean) return "";
-
-      // If RSS teaser ends with "..." or "when..." etc, trim that dangling fragment
-      clean = clean.replace(/\s+\w+\.\.\.$/, "...");
-      clean = clean.replace(/\b(when|while|as|because|after)\s*\.\.\.$/i, "...");
-
-      // Split into sentences (English + Arabic)
-      let sentences = clean
-        .split(/(?<=[.!?؟۔])\s+/)
-        .map(s => s.trim())
-        .filter(s => s.length > 20);
-
-      // If we couldn't split well, keep original
-      let lead = sentences.length ? sentences.slice(0, 3).join(" ") : clean;
-
-      // If lead ends with a dangling connector, remove it
-      lead = lead.replace(/\b(when|while|as|because|after)\s*\.{0,3}\s*$/i, "").trim();
-
-      return lead;
+      } catch { return ""; }
     }
 
     async function load() {
       const articleUrl = getParam("url");
-      const shareUrl = window.location.origin + window.location.pathname + window.location.search;
+      if (!articleUrl) { window.location.href = "index.html"; return; }
 
-      // If opened directly (no url param)
-      if (!articleUrl) {
-        ["openBtn", "copyBtn", "shareBtn", "waBtn", "tgBtn", "fbBtn"].forEach(id => {
-          const el = document.getElementById(id);
-          if (el) el.style.display = "none";
-        });
+      document.getElementById("openBtn").href = articleUrl;
 
-        document.getElementById("title").textContent = "Horn Updates Reader";
-        document.getElementById("summary").innerHTML = `
-          <p class="muted">
-            This page shows clean summaries of news stories from the Horn of Africa.
-          </p>
-          <p>
-            Please open an article from <strong>hornupdates.com</strong>.
-          </p>
-          <p>
-            👉 <a href="https://hornupdates.com">Go to homepage</a>
-          </p>
-          <p class="muted" style="font-size:.9rem;">
-            Redirecting you shortly…
-          </p>
-        `;
-
-        setTimeout(() => {
-          window.location.href = "https://hornupdates.com";
-        }, 5000);
-
-        return;
-      }
-
-      // Set open button
-      const openBtn = document.getElementById("openBtn");
-      openBtn.href = articleUrl;
-
-      // ---- SHARE BUTTONS LOGIC (defaults) ----
-      const shareBtn = document.getElementById("shareBtn");
-      const waBtn = document.getElementById("waBtn");
-      const tgBtn = document.getElementById("tgBtn");
-      const fbBtn = document.getElementById("fbBtn");
-
-      // Default fallback (URL only)
-      waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
-      tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}`;
-      fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-
-      // Share button: native share on mobile, else copy link on desktop
-      shareBtn.onclick = async () => {
-        const titleText = document.getElementById("title")?.textContent || "Horn Updates";
-        const isRtl = document.getElementById("summary")?.classList.contains("rtl");
-
-        const shareText = isRtl
-          ? `${titleText}\n\nاقرأ الخبر عبر Horn Updates:\n${shareUrl}`
-          : `${titleText}\n\nRead via Horn Updates:\n${shareUrl}`;
-
-        if (navigator.share) {
-          try {
-            await navigator.share({ title: "Horn Updates", text: shareText, url: shareUrl });
-          } catch (_) {}
-        } else {
-          try {
-            await navigator.clipboard.writeText(shareUrl);
-            alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
-          } catch {
-            prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", shareUrl);
-          }
-        }
-      };
-
-      // Copy button (copies Horn Updates reader link)
-      document.getElementById("copyBtn").onclick = async () => {
-        const isRtl = document.getElementById("summary")?.classList.contains("rtl");
-        try {
-          await navigator.clipboard.writeText(shareUrl);
-          alert(isRtl ? "تم نسخ الرابط!" : "Link copied!");
-        } catch {
-          prompt(isRtl ? "انسخ الرابط:" : "Copy this link:", shareUrl);
-        }
-      };
-
-      // Defaults (in case not found in JSON)
-      const host = safeHost(articleUrl);
-      document.getElementById("sourcePill").textContent = host ? `Source: ${host}` : "Source";
-      document.getElementById("datePill").textContent = "Date: —";
-      document.getElementById("title").textContent = "Article";
-      document.getElementById("summary").innerHTML =
-        `<p class="muted">We’re loading the summary for this story…</p>`;
-
-      // Try to match article in articles.json
       try {
         const res = await fetch("articles.json", { cache: "no-store" });
         const data = await res.json();
         const articles = Array.isArray(data) ? data : (data.articles || []);
+        const target = norm(articleUrl);
 
-        const target = normalize(articleUrl);
-
-        const match = articles.find(a => {
-          const candidate = normalize(a.url || a.link || a.source_url || "");
-          return candidate === target;
-        });
-
+        const match = articles.find(a => norm(a.source_url || a.link || "") === target);
         if (!match) {
-          document.getElementById("summary").innerHTML =
-            `<p class="muted">We could not match this article inside <code>articles.json</code>. You can still read the full story using the button above.</p>`;
+          document.getElementById("title").textContent = "Article";
+          document.getElementById("summary").textContent =
+            "We could not match this article in articles.json yet. You can still read the full story.";
           return;
         }
 
-        const title = match.title || "Article";
-        const rawSummary = match.summary || match.excerpt || match.ai_summary || "";
-        const published = match.published_at || match.published || match.date || "";
-        const sourceName = match.source || match.source_name || host || "Source";
-        const category = match.category || "";
-        const countries = Array.isArray(match.countries) ? match.countries.join(", ") : (match.countries || "");
+        document.getElementById("title").textContent = match.title || "Article";
+        document.getElementById("summary").textContent = match.summary || "";
 
-        document.getElementById("title").textContent = title;
-        document.getElementById("sourcePill").textContent = `Source: ${sourceName}`;
-        document.getElementById("datePill").textContent = `Date: ${published ? formatDate(published) : "—"}`;
+        document.getElementById("sourcePill").textContent =
+          "Source: " + (match.source_name || "Source");
+        document.getElementById("datePill").textContent =
+          "Date: " + (match.published_at ? new Date(match.published_at).toLocaleDateString() : "—");
 
-        if (category) {
-          const el = document.getElementById("catPill");
-          el.style.display = "inline-block";
-          el.textContent = `Category: ${category}`;
+        if (Array.isArray(match.country_tags) && match.country_tags.length) {
+          const c = document.getElementById("countryPill");
+          c.style.display = "inline-block";
+          c.textContent = "Country: " + match.country_tags.join(", ");
         }
 
-        if (countries) {
-          const el = document.getElementById("countryPill");
-          el.style.display = "inline-block";
-          el.textContent = `Country: ${countries}`;
-        }
-
-        let cleanText = htmlToCleanText(rawSummary);
-        cleanText = ensureLeadText(cleanText, title);
-
-        // ✅ EastAfrican short-lead helper (ONLY after sourceName + cleanText exist)
-        const isEastAfrican = String(sourceName || "").toLowerCase().includes("eastafrican");
-        const isShortLead = (cleanText || "").length < 160 || (cleanText || "").trim().endsWith("...");
-
-        if (isEastAfrican && isShortLead) {
-          const rtlHint = isArabic(cleanText) || isArabic(title);
-          cleanText += rtlHint
-            ? "\n\n— هذا مقتطف قصير من الناشر. اضغط “Read full article” للتفاصيل."
-            : "\n\n— Brief lead from the publisher. Tap “Read full article” for details.";
-        }
-
-        const summaryEl = document.getElementById("summary");
-
-        if (cleanText) {
-          summaryEl.innerHTML = `<p>${renderSafeTextAsHtml(cleanText)}</p>`;
-
-          const rtl = isArabic(cleanText) || isArabic(title);
-          if (rtl) {
-            summaryEl.classList.add("rtl");
-            document.getElementById("title").classList.add("rtl");
-            summaryEl.setAttribute("dir", "rtl");
-            document.getElementById("title").setAttribute("dir", "rtl");
-          }
-
-          // Upgrade share links with proper text after we know the title/lang
-          const shareMsg = rtl
-            ? `${title}\n\nاقرأ الخبر عبر Horn Updates:\n${shareUrl}`
-            : `${title}\n\nRead via Horn Updates:\n${shareUrl}`;
-
-          waBtn.href = `https://wa.me/?text=${encodeURIComponent(shareMsg)}`;
-          tgBtn.href = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent("Horn Updates — " + title)}`;
-          fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-
-        } else {
-          summaryEl.innerHTML = `<p class="muted">Summary not available for this story yet.</p>`;
+        const sumEl = document.getElementById("summary");
+        const rtl = isArabic(match.summary) || isArabic(match.title);
+        if (rtl) {
+          sumEl.classList.add("rtl");
+          document.getElementById("title").classList.add("rtl");
         }
 
       } catch (e) {
-        console.warn("Reader load error:", e);
-        document.getElementById("summary").innerHTML =
-          `<p class="muted">Could not load <code>articles.json</code>. Please try again.</p>`;
+        document.getElementById("title").textContent = "Error";
+        document.getElementById("summary").textContent = "Could not load articles.json.";
       }
     }
 
