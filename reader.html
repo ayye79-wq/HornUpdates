@@ -71,7 +71,6 @@
         <span class="muted">• Reader</span>
       </div>
 
-
       <div class="actions">
         <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
         <button id="copyBtn" class="btn secondary" type="button">Copy link</button>
@@ -170,10 +169,49 @@
 
     async function load() {
       const articleUrl = getParam("url");
-    if (!articleUrl) { window.location.href = "/"; return; }
 
+      // ✅ NO REDIRECT: show a friendly fallback (avoids "Page with redirect")
+      if (!articleUrl) {
+        // Hide ad containers on "no article" view (policy-safe)
+        document.querySelectorAll(".reader-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
+
+        // Hide buttons that depend on articleUrl
+        document.getElementById("openBtn").style.display = "none";
+        document.getElementById("copyBtn").style.display = "none";
+        document.getElementById("shareBtn").style.display = "none";
+        document.getElementById("waBtn").style.display = "none";
+        document.getElementById("tgBtn").style.display = "none";
+        document.getElementById("fbBtn").style.display = "none";
+
+        document.getElementById("title").textContent = "Article not available";
+        document.getElementById("summary").innerHTML = `
+          <p>This page displays article summaries when opened from Horn Updates.</p>
+          <p>Please return to the <a href="/">homepage</a> to browse the latest stories.</p>
+        `;
+        return;
+      }
 
       document.getElementById("openBtn").href = articleUrl;
+
+      // ✅ Wire share links/buttons (use current reader URL so it shares correctly)
+      const shareUrl = window.location.href;
+      document.getElementById("waBtn").href =
+        "https://wa.me/?text=" + encodeURIComponent(shareUrl);
+      document.getElementById("tgBtn").href =
+        "https://t.me/share/url?url=" + encodeURIComponent(shareUrl);
+      document.getElementById("fbBtn").href =
+        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareUrl);
+
+      document.getElementById("copyBtn").onclick = async () => {
+        try { await navigator.clipboard.writeText(shareUrl); } catch (e) {}
+      };
+
+      document.getElementById("shareBtn").onclick = async () => {
+        try {
+          if (navigator.share) await navigator.share({ url: shareUrl });
+          else await navigator.clipboard.writeText(shareUrl);
+        } catch (e) {}
+      };
 
       try {
         const res = await fetch("articles.json", { cache: "no-store" });
@@ -209,38 +247,42 @@
           document.getElementById("title").classList.add("rtl");
         }
 
-        // ✅ ADS ONLY IF CONTENT IS REAL
+        // ✅ ADS ONLY IF CONTENT IS REAL (>= 120 words)
         const wc = wordCount(sumEl);
         if (wc >= 120) {
           document.querySelectorAll(".reader-ad").forEach(el => el.style.display = "block");
           loadAdSenseOnce();
           setTimeout(pushAdsSafely, 800);
+        } else {
+          // keep ads hidden on thin content
+          document.querySelectorAll(".reader-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
         }
 
       } catch (e) {
         document.getElementById("title").textContent = "Error";
         document.getElementById("summary").textContent = "Could not load article.";
+        document.querySelectorAll(".reader-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
       }
     }
 
     load();
   </script>
-<footer class="site-footer" style="margin-top:32px; padding:18px; text-align:center; font-size:.9rem; color:#6b7280;">
-  <p>© 2025 Horn Updates. All rights reserved.</p>
 
-  <p class="footer-links" style="margin:8px 0;">
-    <a href="about.html">About</a> •
-    <a href="editorial-policy.html">Editorial Policy</a> •
-    <a href="privacy.html">Privacy</a> •
-    <a href="terms.html">Terms</a> •
-    <a href="disclaimer.html">Disclaimer</a> •
-    <a href="contact.html">Contact</a>
-  </p>
+  <footer class="site-footer" style="margin-top:32px; padding:18px; text-align:center; font-size:.9rem; color:#6b7280;">
+    <p>© 2025 Horn Updates. All rights reserved.</p>
 
-  <p style="margin-top:6px;">
-    This page displays AI-generated summaries with links to original publishers.
-  </p>
-</footer>
+    <p class="footer-links" style="margin:8px 0;">
+      <a href="/about.html">About</a> •
+      <a href="/editorial.html">Editorial Policy</a> •
+      <a href="/privacy.html">Privacy</a> •
+      <a href="/terms.html">Terms</a> •
+      <a href="/contact.html">Contact</a>
+    </p>
+
+    <p style="margin-top:6px;">
+      This page displays AI-generated summaries with links to original publishers.
+    </p>
+  </footer>
 
 </body>
 </html>
