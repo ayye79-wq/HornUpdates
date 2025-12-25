@@ -335,6 +335,38 @@
 
         allArticles = list;
         applyFilter();
+        // ✅ after your articles are rendered:
+const MIN_ARTICLES_FOR_ADS = 5; // safe threshold
+
+if (list.length >= MIN_ARTICLES_FOR_ADS) {
+  loadAdSenseOnce();
+
+  // Wait until AdSense script loads AND DOM has the <ins> tags
+  const MAX_TRIES = 20;
+  let tries = 0;
+
+  const t = setInterval(() => {
+    tries++;
+
+    const hasAdUnits = document.querySelectorAll("ins.adsbygoogle").length > 0;
+    const scriptLoaded = !!window.adsbygoogle; // becomes available after script executes
+
+    if (hasAdUnits && scriptLoaded) {
+      clearInterval(t);
+      pushAdsSafely();
+    }
+
+    if (tries >= MAX_TRIES) {
+      clearInterval(t);
+      // Give up quietly to avoid policy-unsafe behavior
+    }
+  }, 350);
+} else {
+  // Not enough content → hide ad containers so Google never sees "ads on empty pages"
+  document.querySelectorAll("ins.adsbygoogle, .reader-ad, .ad-slot, .ad-container")
+    .forEach(el => el.style.display = "none");
+}
+
       })
       .catch(err => {
         console.error("Error loading articles.json:", err);
