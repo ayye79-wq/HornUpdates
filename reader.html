@@ -8,9 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horn Updates • Reader</title>
 
-  <!-- ✅ AdSense loader (ONLY ONCE per page) -->
-  
-
   <style>
     * { box-sizing: border-box; }
     body {
@@ -60,6 +57,9 @@
       line-height: 1.9;
       font-family: "Segoe UI", Tahoma, Arial, sans-serif;
     }
+
+    /* 🔒 Ads hidden by default (policy safe) */
+    .reader-ad { display: none; }
   </style>
 </head>
 
@@ -96,7 +96,7 @@
         <span class="muted">Loading summary…</span>
       </div>
 
-      <!-- ✅ AdSense: Reader Top Ad -->
+      <!-- Reader Top Ad (hidden until content is valid) -->
       <div class="reader-ad reader-ad-top" style="margin:22px 0;">
         <ins class="adsbygoogle"
              style="display:block"
@@ -105,7 +105,7 @@
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
       </div>
-  
+
       <div class="divider"></div>
 
       <div class="muted" style="font-size:.95rem;">
@@ -114,7 +114,7 @@
         Full article remains on the publisher’s website.
       </div>
 
-      <!-- ✅ AdSense: Reader Bottom Ad (add near end of content) -->
+      <!-- Reader Bottom Ad (optional) -->
       <div class="reader-ad reader-ad-bottom" style="margin:22px 0;">
         <ins class="adsbygoogle"
              style="display:block"
@@ -123,14 +123,37 @@
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
       </div>
-  
     </div>
   </div>
 
   <script>
+    // ---------- ADSENSE SAFE LOADER ----------
+    function loadAdSenseOnce() {
+      if (window.__adsense_loaded) return;
+      window.__adsense_loaded = true;
+
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932";
+      s.crossOrigin = "anonymous";
+      document.head.appendChild(s);
+    }
+
+    function pushAdsSafely() {
+      if (!window.adsbygoogle) window.adsbygoogle = [];
+      document.querySelectorAll("ins.adsbygoogle").forEach(ins => {
+        if (ins.getAttribute("data-adsbygoogle-status") === "done") return;
+        try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+      });
+    }
+
+    function wordCount(el) {
+      const t = (el?.innerText || "").trim();
+      return t ? t.split(/\s+/).length : 0;
+    }
+
     function getParam(name) {
-      const url = new URL(window.location.href);
-      return url.searchParams.get(name);
+      return new URL(window.location.href).searchParams.get(name);
     }
 
     function isArabic(text) {
@@ -160,7 +183,7 @@
         if (!match) {
           document.getElementById("title").textContent = "Article";
           document.getElementById("summary").textContent =
-            "We could not match this article in articles.json yet. You can still read the full story.";
+            "We could not match this article yet. You can still read the full story.";
           return;
         }
 
@@ -179,15 +202,22 @@
         }
 
         const sumEl = document.getElementById("summary");
-        const rtl = isArabic(match.summary) || isArabic(match.title);
-        if (rtl) {
+        if (isArabic(match.summary) || isArabic(match.title)) {
           sumEl.classList.add("rtl");
           document.getElementById("title").classList.add("rtl");
         }
 
+        // ✅ ADS ONLY IF CONTENT IS REAL
+        const wc = wordCount(sumEl);
+        if (wc >= 120) {
+          document.querySelectorAll(".reader-ad").forEach(el => el.style.display = "block");
+          loadAdSenseOnce();
+          setTimeout(pushAdsSafely, 800);
+        }
+
       } catch (e) {
         document.getElementById("title").textContent = "Error";
-        document.getElementById("summary").textContent = "Could not load articles.json.";
+        document.getElementById("summary").textContent = "Could not load article.";
       }
     }
 
