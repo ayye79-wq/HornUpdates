@@ -31,14 +31,17 @@ import feedparser  # pip install feedparser
 
 LAST_RUN_FILE = Path(__file__).with_name("last_run_utc.txt")
 
+
 def utc_now():
     return dt.datetime.now(dt.UTC)
+
 
 def load_last_run():
     if LAST_RUN_FILE.exists():
         return dt.datetime.fromisoformat(LAST_RUN_FILE.read_text().strip())
     # First run default: last 1 day
     return utc_now() - dt.timedelta(days=1)
+
 
 def save_last_run(ts: dt.datetime):
     LAST_RUN_FILE.write_text(ts.isoformat())
@@ -64,22 +67,19 @@ RSS_FEEDS = [
     "https://www.the-star.co.ke/rss",
     "https://www.ktnnews.com/feeds/rss.xml",
 
-"https://www.standardmedia.co.ke/rss/headlines.php",
-"https://www.standardmedia.co.ke/rss/kenya.php",
-"https://www.standardmedia.co.ke/rss/world.php",
-"https://www.standardmedia.co.ke/rss/business.php",
-"https://www.standardmedia.co.ke/rss/politics.php",
-
+    "https://www.standardmedia.co.ke/rss/headlines.php",
+    "https://www.standardmedia.co.ke/rss/kenya.php",
+    "https://www.standardmedia.co.ke/rss/world.php",
+    "https://www.standardmedia.co.ke/rss/business.php",
+    "https://www.standardmedia.co.ke/rss/politics.php",
 ]
-
-
 
 ALWAYS_INCLUDE_FEEDS = [
     "addisstandard.com",
     "thereporterethiopia.com",
     "hiiraan.com",
     "garoweonline.com",
-    
+
     "sudantribune.com",
 
     "nation.africa",
@@ -88,8 +88,6 @@ ALWAYS_INCLUDE_FEEDS = [
     "the-star.co.ke",
     "ktnnews.com",
 ]
-
-
 
 BLOCKED_SOURCES = [
     "borkena.com",
@@ -117,6 +115,10 @@ COUNTRY_TAGS = {
 
 MAX_ARTICLES = 200
 
+# --- Summary quality controls (AdSense-friendly) ---
+MIN_SUMMARY_WORDS_DROP = 40      # hard drop if summary too thin
+MIN_SUMMARY_WORDS_TARGET = 80    # if below this, pad with safe context
+
 
 # ----------------------------
 # 2. HELPERS
@@ -127,6 +129,7 @@ def is_horn_story(text: str) -> bool:
         return False
     lower = text.lower()
     return any(kw in lower for kw in HORN_KEYWORDS)
+
 
 def extract_countries(text: str):
     if not text:
@@ -145,11 +148,13 @@ def extract_countries(text: str):
             seen.add(c)
     return unique
 
+
 def extract_published_dt(entry) -> dt.datetime | None:
     tm = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
     if tm:
         return dt.datetime(*tm[:6], tzinfo=dt.UTC)
     return None
+
 
 def _strip_html(s: str) -> str:
     """Remove HTML tags/entities and normalize whitespace."""
@@ -160,6 +165,7 @@ def _strip_html(s: str) -> str:
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
+
 def _sentences(text: str):
     """Lightweight sentence splitter (good enough for news blurbs)."""
     if not text:
@@ -167,6 +173,7 @@ def _sentences(text: str):
     text = text.strip()
     parts = re.split(r"(?<=[.!?])\s+", text)
     return [p.strip() for p in parts if p and p.strip()]
+
 
 def make_summary(entry) -> str:
     """
@@ -216,9 +223,11 @@ def make_summary(entry) -> str:
 
     return out
 
+
 def should_always_include(feed_url: str) -> bool:
     low = feed_url.lower()
     return any(snippet in low for snippet in ALWAYS_INCLUDE_FEEDS)
+
 
 def is_blocked(link: str) -> bool:
     link = link or ""
@@ -227,6 +236,7 @@ def is_blocked(link: str) -> bool:
     except Exception:
         host = link.lower()
     return any(bad in host for bad in BLOCKED_SOURCES)
+
 
 def load_existing_articles():
     """Return existing articles list from articles.json (if any)."""
@@ -242,6 +252,7 @@ def load_existing_articles():
         pass
     return []
 
+
 def merge_dedupe(old_list, new_list):
     """
     Merge old + new, de-dupe by source_url (or link),
@@ -253,7 +264,7 @@ def merge_dedupe(old_list, new_list):
     for a in new_list + old_list:
         key = (a.get("source_url") or a.get("link") or "").strip()
         if not key:
-            key = (a.get("title","") + "|" + a.get("published_at","")).strip()
+            key = (a.get("title", "") + "|" + a.get("published_at", "")).strip()
         if key in seen:
             continue
         seen.add(key)
@@ -262,19 +273,20 @@ def merge_dedupe(old_list, new_list):
     merged.sort(key=lambda x: x.get("published_at", ""), reverse=True)
     return merged[:MAX_ARTICLES]
 
+
 def _fetch_html(url: str, timeout: int = 10) -> str:
     try:
         req = urllib.request.Request(
             url,
-            headers={
-                "User-Agent": "Mozilla/5.0 (HornUpdatesBot/1.0; +https://hornupdates.com)"
-            }
+            headers={"User-Agent": "Mozilla/5.0 (HornUpdatesBot/1.0; +https://hornupdates.com)"}
         )
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             charset = resp.headers.get_content_charset() or "utf-8"
             return resp.read().decode(charset, errors="replace")
     except Exception:
         return ""
+
+
 def _extract_text_from_html(html_text: str) -> str:
     if not html_text:
         return ""
@@ -284,8 +296,10 @@ def _extract_text_from_html(html_text: str) -> str:
     cleaned = re.sub(r"(?is)<script(?![^>]*application/ld\+json).*?>.*?</script>", " ", cleaned)
 
     # 0) Try JSON-LD (often contains description / articleBody)
-    # NOTE: We don't parse full JSON safely here; we extract common fields via regex.
-    jsonld_blocks = re.findall(r'(?is)<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', html_text)
+    jsonld_blocks = re.findall(
+        r'(?is)<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        html_text
+    )
     for block in jsonld_blocks:
         block = block.strip()
         # Try articleBody
@@ -318,53 +332,46 @@ def _extract_text_from_html(html_text: str) -> str:
     text = " ".join(paras[:10]).strip()
 
     return text
+
+
+def word_count(text: str) -> int:
+    if not text:
+        return 0
+    return len(text.strip().split())
+
+
+def pad_summary_context(summary: str, topic_tags, countries) -> str:
+    """Adds non-speculative publisher-value context to borderline summaries."""
+    topic = (topic_tags[0] if topic_tags else "General").strip()
+    place = ", ".join(countries) if countries else "the Horn of Africa region"
+
+    extra = (
+        f"\n\nWhy this matters: This update relates to {topic.lower()} developments in {place} "
+        "and may influence regional conditions."
+        "\nWhat to watch: Follow-up reporting, official statements, and any policy or security actions connected to this story."
+    )
+    return (summary or "").strip() + extra
+
+
 def upgrade_eastafrican_summary(article: dict) -> bool:
     """
+    Upgrade EastAfrican teaser summaries by fetching page text.
     Returns True if upgraded.
-    Only touches the EastAfrican items with short/teaser summaries.
     """
-    url = (article.get("source_url") or "").strip()
-    if not url:
-        return False
-
-    host = urlparse.urlparse(url).netloc.lower()
-    if "theeastafrican.co.ke" not in host:
-        return False
-
-    summary = (article.get("summary") or "").strip()
-    if len(summary) >= 170 and not summary.endswith("..."):
-        return False
-
-    page_html = _fetch_html(url, timeout=10)
-    page_text = _extract_text_from_html(page_html)
-
-    print(f"[EA BACKLOG] old_len={len(summary)} html_len={len(page_html)} extracted_len={len(page_text)} url={url}")
-
-    if not page_text:
-        return False
-
-    sents = _sentences(page_text)
-    if not sents:
-        return False
-
-    article["summary"] = " ".join(sents[:4]).strip()
-    return True
-
-def upgrade_eastafrican_summary(article: dict) -> dict:
     try:
         url = (article.get("source_url") or "").strip()
         if not url:
-            return article
+            return False
 
         host = urlparse.urlparse(url).netloc.lower()
         if "theeastafrican.co.ke" not in host:
-            return article
+            return False
 
         summary = (article.get("summary") or "").strip()
 
         # Only upgrade if clearly teaser/too short
         if len(summary) >= 170 and not summary.endswith("..."):
-            return article
+            return False
 
         page_html = _fetch_html(url, timeout=10)
         page_text = _extract_text_from_html(page_html)
@@ -378,12 +385,11 @@ def upgrade_eastafrican_summary(article: dict) -> dict:
             sents = _sentences(page_text)
             if sents:
                 article["summary"] = " ".join(sents[:4]).strip()
+                return True
 
-        return article
+        return False
     except Exception:
-        return article
-
-
+        return False
 
 
 # ----------------------------
@@ -434,10 +440,9 @@ def main():
             if published_dt > now + dt.timedelta(minutes=5):
                 continue
 
-                       # --- EastAfrican upgrade: RSS is often teaser-only, fetch page text when needed
+            # --- EastAfrican upgrade (RSS is often teaser-only)
             host = urlparse.urlparse(link).netloc.lower()
             if "theeastafrican.co.ke" in host:
-                # If too short or teaser-ish, try to expand using page text
                 if (len(summary) < 170) or summary.strip().endswith("..."):
                     page_html = _fetch_html(link, timeout=10)
                     page_text = _extract_text_from_html(page_html)
@@ -453,7 +458,6 @@ def main():
                         sents = _sentences(page_text)
                         if sents:
                             summary = " ".join(sents[:4]).strip()
-
 
             combined_text = f"{title}\n{summary}"
 
@@ -474,6 +478,13 @@ def main():
             if not topic_tags:
                 topic_tags.append("General")
 
+            # --- Enforce summary quality (drop thin, pad borderline) ---
+            wc = word_count(summary)
+            if wc < MIN_SUMMARY_WORDS_DROP:
+                continue
+            if wc < MIN_SUMMARY_WORDS_TARGET:
+                summary = pad_summary_context(summary, topic_tags, countries)
+
             source_name = parsed.feed.get("title", "") if parsed.feed else ""
 
             article = {
@@ -493,31 +504,17 @@ def main():
 
     existing = load_existing_articles()
     merged_articles = merge_dedupe(existing, new_articles)
-    # Upgrade some old EastAfrican teaser summaries in the merged backlog
+
+    # Upgrade some old EastAfrican teaser summaries in the merged backlog (limit to avoid slow runs)
     upgraded = 0
     for a in merged_articles:
-        if upgraded >= 20:   # safety cap per run (prevents slow runs)
+        if upgraded >= 15:   # safety cap per run
             break
         if upgrade_eastafrican_summary(a):
             upgraded += 1
 
     if upgraded:
         print(f"[INFO] Upgraded {upgraded} EastAfrican backlog summaries.")
-
-    # Upgrade old EastAfrican teaser summaries in the backlog (limit to avoid slow runs)
-    upgraded = 0
-    for a in merged_articles:
-        if upgraded >= 15:  # safety cap per run
-            break
-        before = len((a.get("summary") or "").strip())
-        a2 = upgrade_eastafrican_summary(a)
-        after = len((a2.get("summary") or "").strip())
-        if after > before:
-            upgraded += 1
-
-    if upgraded:
-        print(f"[INFO] Upgraded {upgraded} EastAfrican backlog summaries.")
-
 
     if len(new_articles) == 0 and OUTPUT_PATH.exists():
         print("[INFO] No new articles since last run. Keeping existing articles.json.")
