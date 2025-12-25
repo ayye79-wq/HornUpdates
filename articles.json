@@ -1,6 +1,482 @@
 {
-  "generated_at": "2025-12-22T17:30:16.883598+00:00",
+  "generated_at": "2025-12-25T11:43:01.747707+00:00",
   "articles": [
+    {
+      "title": "'I'm not retiring' - Kipchoge's marathon world tour",
+      "summary": "Sporting great Eliud Kipchoge says his plan to run marathons on seven different continents is about purpose, not records.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-25T09:56:48+00:00",
+      "source_url": "https://www.bbc.com/sport/athletics/articles/c5yq7042ly9o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Sudan coach Appiah seeks to bring joy through Afcon amid war at home",
+      "summary": "Sudan coach James Kwesi Appiah says his team will play the Africa Cup of Nations to lift the...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-25T07:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/sudan-coach-seeks-to-bring-joy-through-afcon-amid-war-at-home-5307896",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "UN extends African Union Somalia mission amid funding concerns",
+      "summary": "UN Security Council warns that funding gaps and the continued threat from al-Shabaab risk...",
+      "country_tags": [
+        "Somalia"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-25T05:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/un-extends-african-union-somalia-mission-amid-funding-concerns-5307886",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "African journalists demand release of Burundian writer Sandra Muhoza",
+      "summary": "Women journalists across Africa, backed by press freedom groups, are calling for the immediate...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-25T03:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/african-journalists-demand-release-of-burundian-sandra-muhoza-5307892",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Bomb blast in packed Nigerian mosque kills five",
+      "summary": "Another 35 people were injured in the explosion during evening prayers in the city of Maiduguri, police say.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-25T00:19:53+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c0je3v3en01o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "«الصحة»: تفشي الملاريا وحمى الضنك والكبد الوبائي وسط نقص العلاج",
+      "summary": "الخرطوم، 24 ديسمبر 2025 – كشفت وزارة الصحة، الأربعاء، عن ارتفاع حالات الملاريا وحمى الضنك والحصبة والكبد الوبائي في بعض الولايات، مع استمرار نقص الأدوية في بعض الولايات. وقالت الوزارة، في بيان، إن “حالات حمى الضنك...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T22:00:09+00:00",
+      "source_url": "https://sudantribune.net/article/308600",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Eleven arrested over mass shooting in South Africa tavern",
+      "summary": "Preliminary investigations revealed the motive could be linked to illegal mining turf wars, police said.",
+      "country_tags": [],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-24T21:31:37+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c75v0kwy017o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "الشرطة تغلق (40) مكتبًا لمنتحلي صفة القوات النظامية في «الخرطوم»",
+      "summary": "الخرطوم، 24 ديسمبر 2025 – كشف المتحدث باسم الشرطة، الأربعاء، عن إغلاق 40 مكتبًا لمنتحلي صفة القوات النظامية وتوقيف 5 آلاف متهم في ولاية الخرطوم خلال فترة وجيزة. وتحاول السلطات استعادة الأمن والخدمات في الخرطوم، فيما...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T17:57:05+00:00",
+      "source_url": "https://sudantribune.net/article/308589",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Algerian law declares France's colonisation a crime",
+      "summary": "Lawmakers unanimously approve a law, which demands an apology and reparations from the former colonial power.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T17:37:07+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c14vdpyj1vjo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "مأساة حرب السودان كما تعكسها الأرقام في العام 2025",
+      "summary": "منتدى الإعلام السوداني الخرطوم، 24 ديسمبر 2025، (سودانايل)- ماذا تبقى للإنسان السوداني أن يدفعه ثمنا للحرب اللعينة الدائرة بين الجيش وقوات الدعم السريع؟ حياته، أخلاقه، تعليم أبنائه، صحته، نزوحه داخل بلاده أم تشتته في...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T16:44:40+00:00",
+      "source_url": "https://sudantribune.net/article/308586",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "بلا مأوى ولا حماية.. سودانيات يهربن من الحرب الى فخ الجوع والتحرش",
+      "summary": "أم درمان، 24 ديسمبر 2025 – أظهرت نتائج دراسة حديثة أجرتها جامعة الأحفاد افتقار بائعات الشاي وعاملات المنازل في أم درمان بولاية الخرطوم والقضارف شرقي السودان للحماية، وسط تدهور أوضاعهن المالية وتعرضهن للتحرش. وتسبب...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T16:12:43+00:00",
+      "source_url": "https://sudantribune.net/article/308584",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "«الدعم السريع» تسيطر على بلدتين في شمال دارفور بعد انسحاب «المشتركة»",
+      "summary": "أبو قمرة، 24 ديسمبر 2025 – أخلت القوة المشتركة المتحالفة مع الجيش، الأربعاء، مواقعها الدفاعية في منطقتي «أبو قمرة» و«أمبرو» بولاية شمال دارفور، ما أتاح لقوات الدعم السريع التقدم والسيطرة على البلدتين، في إطار تحركات...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T16:03:39+00:00",
+      "source_url": "https://sudantribune.net/article/308581",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "ما الذي لم يقله الدكتور كامل إدريس؟",
+      "summary": "العبيد أحمد مروح في الثالث عشر من ديسمبر الجاري، طلب السودان رسمياً من مجلس الأمن الدولي عقد جلسة لبحث تطورات الأوضاع في البلاد، وهو الطلب الذي لم يتم الإفصاح عنه إلا قبل يوم من جلسة الأمس، ضمن نشرة صحفية أصدرها...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T15:52:05+00:00",
+      "source_url": "https://sudantribune.net/article/308579",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Why raising growth capital has become harder for African companies",
+      "summary": "Total private capital raised during the period stood at $2.6 billion, just over half of the $4...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T13:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/why-raising-growth-capital-become-harder-for-african-companies-5307316",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Chronic water shortages dampen holiday mood in Tanzania's biggest city",
+      "summary": "A drought has led to water being rationed in Dar es Salaam, with taps sometimes dry for weeks.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T12:38:02+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c1dz1w6vz42o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "South Sudanese migrants sue Trump administration over protection cuts",
+      "summary": "The lawsuit argues the agency's action... was motivated by discrimination against migrants who...",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T12:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/south-sudanese-migrants-sue-trump-over-protection-cuts-5307888",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Afcon 'bringing hope' to Sudan amid civil war",
+      "summary": "Sudan's participation in the Africa Cup of Nations is \"bringing hope\" to the country amid its civil war, forward Abobaker Eisa says.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-24T11:43:38+00:00",
+      "source_url": "https://www.bbc.com/sport/football/articles/cy07z8373rzo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "A restless citizenry is a potent recipe for trouble",
+      "summary": "Authorities in Kenya, Tanzania and Uganda have shown an unholy union of coordinated state...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T10:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/a-restless-citizenry-is-a-potent-recipe-for-trouble-5306934",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Fed Inks USD 1.5bln Health Cooperation Agreement with Washington",
+      "summary": "Ethiopia commits to 70bln Birr increase in health spending as part of MoU Ethiopian authorities have signed a memorandum of understanding (MoU) for a USD 1.5 billion public health cooperation program with the US...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T10:41:48+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48301/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "اصابة أكثر من (40) ألف طفل سوداني بسوء التغذية الوخيم",
+      "summary": "بورتسودان، 24 ديسمبر 2025 – قال ممثل منظمة الصحة العالمية في السودان، شبل صهباني، إن الأطفال دون سن الخامسة والنساء الحوامل معرضون للخطر بشكل خاص، مشيرًا إلى هناك 4.9 مليون شخص في حاجة ماسة إلى تدخلات غذائية منقذة...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T10:15:51+00:00",
+      "source_url": "https://sudantribune.net/article/308576",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Libya's army chief killed in air crash in Turkey",
+      "summary": "Signal was earlier lost with a jet that took off from Ankara with Gen Mohammed Ali Ahmed al-Haddad and four others on board.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T09:27:31+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cyvgzyepdqno?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "How Myanmar scam compounds trap East Africans",
+      "summary": "Dozens more Kenyans and other East Africans have been rescued from online scam compounds in...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T03:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/how-myanmar-scam-compounds-trap-east-africans-5306922",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "An alleged drug cartel and a murdered witness: South Africa's police corruption probe",
+      "summary": "Allegations of graft and political interference in the police have been aired at public hearings.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-24T00:02:58+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cj69d8we98jo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Man City in advanced talks with Bournemouth's Semenyo",
+      "summary": "Antoine Semenyo is set to make a final decision on his future with Manchester City in advanced talks over a January move for the Bournemouth forward.",
+      "country_tags": [],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-23T23:25:30+00:00",
+      "source_url": "https://www.bbc.com/sport/football/articles/cx2djq1jdrdo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Mbeumo & Wissa 'inspiring' - Ouattara",
+      "summary": "As he competes at Afcon 2025 with Burkina Faso, Dango Ouattara says Bryan Mbeumo and Yoane Wissa inspired him to become the latest African to star for Brentford.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T22:11:34+00:00",
+      "source_url": "https://www.bbc.com/sport/football/articles/cpq43rr2lqno?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "السودان وتركيا يوقعان اتفاق توأمة بين مينائي بورتسودان ومرسين",
+      "summary": "مرسين، 23 ديسمبر 2025 – توصل السودان وتركيا، الثلاثاء، إلى اتفاق توأمة بين ميناء بورتسودان وميناء مرسين، في خطوة يعقبها تبادل الخبرات ونقل التكنولوجيا ورفع كفاءة التشغيل. وأبدى سفير تركيا لدى السودان، فاتح يلدز، في...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T21:32:20+00:00",
+      "source_url": "https://sudantribune.net/article/308555",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "«مناوي» يحث أهالي شمال دارفور على التمسك بالأرض ومقاومة «الغزاة»",
+      "summary": "بورتسودان، 23 ديسمبر 2025 – دعا رئيس حركة تحرير السودان مني أركو مناوي، الثلاثاء، سكان المناطق الحدودية بولاية شمال دارفور المتاخمة لدولة تشاد إلى التمسك بأراضيهم والدفاع عنها، محذرًا من التخلي عنها لما اسماهم...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T20:26:45+00:00",
+      "source_url": "https://sudantribune.net/article/308548",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "US offers $3,000 cash, free flights for immigrants self deportation",
+      "summary": "The Trump administration has raised financial incentives for undocumented migrants to...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T19:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/us-offers-3-000-cash-free-flights-immigrants-self-deportation-5306864",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "الهجرة الدولية: استمرار النزوح من مدن جنوب كردفان",
+      "summary": "كادقلي، 23 ديسمبر 2025 – قالت منظمة الهجرة التابعة للأمم المتحدة، الثلاثاء، إن انعدام الأمن أجبر المزيد من السكان على النزوح من كادقلي والدلنج ودلامي بولاية جنوب كردفان. وتصاعدت العمليات العسكرية التي تنفذها الحركة...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T18:18:06+00:00",
+      "source_url": "https://sudantribune.net/article/308546",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "UN angered by recurrent Sudan violence",
+      "summary": "Sudan’s war has morphed into an arena for war crimes, genocide and crimes against humanity...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-23T15:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/north-africa/un-angered-by-recurrent-sudan-violence-5306662",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Poverty is the engine of African politics",
+      "summary": "African politics is not built on ideology alone but on survival. Where the state fails to...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T14:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/opinion/guest-blogs/poverty-is-the-engine-of-african-politics-5306080",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Building A Resilient Future",
+      "summary": "WaterAid’s initiative From Taps to Policy Tackling the core challenges of access to water, sanitation, and hygiene (WASH) is no one man show. What ought to be a basic human right is a far-fetched reality for so many...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T13:33:43+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48295/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Congo unlocks $442m IMF funding on key reforms",
+      "summary": "IMF approves funding, citing resilient economic performance despite renewed violence in the...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T11:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/congo-unlocks-usd-442m-imf-funding-on-key-reforms-5306288",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "I'm not retiring, I'm evolving - Kipchoge",
+      "summary": "The Kenyan marathoner has all the running accolades he needs but is now focusing on new goals.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T11:25:02+00:00",
+      "source_url": "https://www.bbc.com/news/videos/c3d037183geo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Uganda restricts Starlink imports weeks before election",
+      "summary": "Uganda has imposed new restrictions on imports of Starlink satellite internet equipment...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2025-12-23T09:50:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/uganda-restricts-starlink-imports-weeks-before-election-5306098",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Afrobeats star Asake 'devastated' after fan dies in Kenya stadium crush",
+      "summary": "Police are investigating the circumstances of the death of 20-year-old Karen Lojore.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T08:59:40+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c36zd2ddd5lo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Nigeria ready to win 'dream' Afcon - Osimhen",
+      "summary": "Victor Osimhen is determined to lead a \"talented\" Super Eagles squad to the 2025 Africa Cup of Nations title, aiming to overcome past disappointments.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-23T07:29:56+00:00",
+      "source_url": "https://www.bbc.com/sport/football/articles/cde6wgjwknno?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Mohamud at odds with Deni, Madobe as Somalia elections near",
+      "summary": "Somalia is edging toward another political crisis as opposition leaders reject plans for...",
+      "country_tags": [
+        "Somalia"
+      ],
+      "topic_tags": [
+        "Politics & Governance",
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-23T03:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/mohamud-at-odds-with-deni-madobe-as-somalia-elections-near-5305576",
+      "source_name": "The EastAfrican"
+    },
     {
       "title": "Ghana official rejects 'Detty December' label",
       "summary": "The term is widely used to describe Ghana and Nigeria's wild, end-of-year party seasons.",
