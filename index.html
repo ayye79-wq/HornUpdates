@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Horn Updates</title>
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 
@@ -35,14 +35,16 @@
     }
 
     /* Hide sidebar on mobile for better UX */
-   @media (max-width: 900px) {
-  .layout { grid-template-columns: 1fr; }
-}
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+    }
 
-@media (max-width: 600px) {
-  .sidebar { display: none; }
-}
+    @media (max-width: 600px) {
+      .sidebar { display: none; }
+    }
 
+    /* 🔒 AdSense containers hidden by default (policy-safe) */
+    .sidebar-ad { display: none; }
   </style>
 </head>
 
@@ -98,47 +100,35 @@
         </section>
       </main>
 
-      <!-- RIGHT SIDEBAR (X FEED) -->
-<aside class="sidebar">
+      <!-- RIGHT SIDEBAR -->
+      <aside class="sidebar">
 
-  <!-- Twitter / X link -->
-  <a href="https://x.com/HornUpdatesHQ" target="_blank" class="twitter-link">
-    Follow us on X
-  </a>
+        <!-- Twitter / X link -->
+        <a href="https://x.com/HornUpdatesHQ" target="_blank" class="twitter-link">
+          Follow us on X
+        </a>
 
-  <!-- Quick Updates box -->
-  <div class="sidebar-box about-mini">
-    <h3>Quick Updates</h3>
-    <p>
-      Stay informed without information overload.
-      Scan key headlines, read short summaries,
-      and click through only when you want more.
-    </p>
-  </div>
+        <!-- Quick Updates box -->
+        <div class="sidebar-box about-mini">
+          <h3>Quick Updates</h3>
+          <p>
+            Stay informed without information overload.
+            Scan key headlines, read short summaries,
+            and click through only when you want more.
+          </p>
+        </div>
 
-  <!-- AdSense Sidebar Slot -->
-   <!-- AdSense Sidebar Slot -->
-  <div class="sidebar-box sidebar-ad">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7773342225754932"
-         data-ad-slot="REPLACE_WITH_REAL_SLOT_ID"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+        <!-- AdSense Sidebar Slot (hidden until content is valid) -->
+        <div class="sidebar-box sidebar-ad">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-7773342225754932"
+               data-ad-slot="REPLACE_WITH_REAL_SLOT_ID"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+        </div>
 
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
-
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-</aside>
-
-
+      </aside>
     </div>
 
     <!-- FOOTER -->
@@ -150,18 +140,38 @@
     </footer>
   </div>
 
-
-
-
   <!-- MAIN JS LOGIC -->
   <script>
+  // ---------- ADSENSE SAFE LOADER ----------
+  function loadAdSenseOnce() {
+    if (window.__adsense_loaded) return;
+    window.__adsense_loaded = true;
+
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932";
+    s.crossOrigin = "anonymous";
+    document.head.appendChild(s);
+  }
+
+  function pushAdsSafely() {
+    if (!window.adsbygoogle) window.adsbygoogle = [];
+    document.querySelectorAll("ins.adsbygoogle").forEach(ins => {
+      if (ins.getAttribute("data-adsbygoogle-status") === "done") return;
+      try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+    });
+  }
+
+  function showSidebarAds() {
+    document.querySelectorAll(".sidebar-ad").forEach(el => el.style.display = "block");
+  }
+
   // ---------- HELPERS ----------
   function buildReaderLink(sourceUrl) {
     return "reader.html?url=" + encodeURIComponent(sourceUrl || "#");
   }
 
   function getCountries(article) {
-    // Support either `countries` or `country_tags`
     const raw = article.countries || article.country_tags || [];
     if (!raw) return [];
     if (Array.isArray(raw)) return raw;
@@ -178,7 +188,6 @@
     return text.length > max ? text.slice(0, max) + "…" : text;
   }
 
-  // Prefer topic_tags from Python (array), fall back to older fields
   function getTopicLabel(article) {
     if (Array.isArray(article.topic_tags) && article.topic_tags.length) {
       return String(article.topic_tags[0] || "").trim() || "General";
@@ -261,7 +270,6 @@
 
     const countries = getCountries(article).join(" ").toLowerCase();
 
-    // Combine topic_tags + older fields into one searchable string
     const topics = (
       (Array.isArray(article.topic_tags) ? article.topic_tags.join(" ") : "") +
       " " + (article.category || "") +
@@ -308,9 +316,7 @@
   function setupFilters() {
     document.querySelectorAll(".filter-pill").forEach(btn => {
       btn.addEventListener("click", () => {
-        document.querySelectorAll(".filter-pill").forEach(b =>
-          b.classList.remove("active")
-        );
+        document.querySelectorAll(".filter-pill").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         currentFilter = btn.dataset.filter || "all";
         applyFilter();
@@ -319,54 +325,42 @@
   }
 
   function loadArticles() {
-    // Cache-buster ensures you always see the newest articles.json
     fetch(`articles.json?v=${Date.now()}`)
       .then(res => res.json())
       .then(data => {
         let list = Array.isArray(data) ? data : (data.articles || []);
         list = list.filter(a => a.title && (a.source_url || a.link));
 
-        // Sort newest first
-        list.sort((a, b) => {
-          const da = new Date(a.published_at || 0);
-          const db = new Date(b.published_at || 0);
-          return db - da;
-        });
+        list.sort((a, b) => new Date(b.published_at || 0) - new Date(a.published_at || 0));
 
         allArticles = list;
         applyFilter();
-        // ✅ after your articles are rendered:
-const MIN_ARTICLES_FOR_ADS = 5; // safe threshold
 
-if (list.length >= MIN_ARTICLES_FOR_ADS) {
-  loadAdSenseOnce();
+        // ✅ AdSense AFTER content is rendered:
+        const MIN_ARTICLES_FOR_ADS = 5;
 
-  // Wait until AdSense script loads AND DOM has the <ins> tags
-  const MAX_TRIES = 20;
-  let tries = 0;
+        if (list.length >= MIN_ARTICLES_FOR_ADS) {
+          showSidebarAds();
+          loadAdSenseOnce();
 
-  const t = setInterval(() => {
-    tries++;
+          const MAX_TRIES = 20;
+          let tries = 0;
 
-    const hasAdUnits = document.querySelectorAll("ins.adsbygoogle").length > 0;
-    const scriptLoaded = !!window.adsbygoogle; // becomes available after script executes
+          const t = setInterval(() => {
+            tries++;
+            const hasAdUnits = document.querySelectorAll("ins.adsbygoogle").length > 0;
+            const scriptLoaded = !!window.adsbygoogle;
 
-    if (hasAdUnits && scriptLoaded) {
-      clearInterval(t);
-      pushAdsSafely();
-    }
-
-    if (tries >= MAX_TRIES) {
-      clearInterval(t);
-      // Give up quietly to avoid policy-unsafe behavior
-    }
-  }, 350);
-} else {
-  // Not enough content → hide ad containers so Google never sees "ads on empty pages"
-  document.querySelectorAll("ins.adsbygoogle, .reader-ad, .ad-slot, .ad-container")
-    .forEach(el => el.style.display = "none");
-}
-
+            if (hasAdUnits && scriptLoaded) {
+              clearInterval(t);
+              pushAdsSafely();
+            }
+            if (tries >= MAX_TRIES) clearInterval(t);
+          }, 350);
+        } else {
+          document.querySelectorAll(".sidebar-ad, ins.adsbygoogle")
+            .forEach(el => el.style.display = "none");
+        }
       })
       .catch(err => {
         console.error("Error loading articles.json:", err);
@@ -379,8 +373,8 @@ if (list.length >= MIN_ARTICLES_FOR_ADS) {
     setupFilters();
     loadArticles();
   });
-</script>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </script>
 
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
