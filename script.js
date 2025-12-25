@@ -49,6 +49,86 @@ function formatDate(iso) {
 }
 
 // ============================
+// AdSense-safe helpers (NEW / FIXED)
+// ============================
+
+function loadAdSenseOnce() {
+  if (window.__adsense_loaded) return;
+  window.__adsense_loaded = true;
+
+  const s = document.createElement("script");
+  s.async = true;
+  s.src =
+    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932";
+  s.crossOrigin = "anonymous";
+  document.head.appendChild(s);
+}
+
+function pushAdsSafely() {
+  if (!window.adsbygoogle) window.adsbygoogle = [];
+  document.querySelectorAll("ins.adsbygoogle").forEach((ins) => {
+    // prevent double-push
+    if (ins.getAttribute("data-adsbygoogle-status") === "done") return;
+    try {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      // fail quietly
+    }
+  });
+}
+
+// Count how many story cards are actually visible on screen
+function getRenderedStoryCount() {
+  return document.querySelectorAll(
+    ".story-card, .hero-main, .hero-side-card"
+  ).length;
+}
+
+// Show/hide ad containers so Google never sees ads on thin/empty screens
+function setAdsVisibility(shouldShow) {
+  document
+    .querySelectorAll(".sidebar-ad, .reader-ad, .ad-slot, .ad-container, ins.adsbygoogle")
+    .forEach((el) => {
+      // Only toggle the containers you control; AdSense itself may inject wrappers
+      if (el.classList?.contains("adsbygoogle")) {
+        // keep ins visible only when shouldShow
+        el.style.display = shouldShow ? "block" : "none";
+      } else {
+        el.style.display = shouldShow ? "" : "none";
+      }
+    });
+}
+
+function maybeRunAds(minCards = 5) {
+  const count = getRenderedStoryCount();
+  const ok = count >= minCards;
+
+  if (!ok) {
+    setAdsVisibility(false);
+    return;
+  }
+
+  // Show containers, then load + push
+  setAdsVisibility(true);
+  loadAdSenseOnce();
+
+  let tries = 0;
+  const MAX_TRIES = 20;
+
+  const t = setInterval(() => {
+    tries++;
+    const scriptLoaded = !!window.adsbygoogle;
+    const hasAdUnits = document.querySelectorAll("ins.adsbygoogle").length > 0;
+
+    if (scriptLoaded && hasAdUnits) {
+      clearInterval(t);
+      pushAdsSafely();
+    }
+    if (tries >= MAX_TRIES) clearInterval(t);
+  }, 350);
+}
+
+// ============================
 // Render functions
 // ============================
 
@@ -220,6 +300,9 @@ function setupFilters(allArticles, renderLatestFn) {
 
       const filtered = filterArticles(allArticles, filterVal.toLowerCase());
       renderLatestFn(filtered);
+
+      // ✅ Re-evaluate ads after filter changes (FIXED)
+      maybeRunAds(5);
     });
   });
 }
@@ -247,6 +330,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!latestContainer && !heroMainSlot) {
     console.warn("HornUpdates: no target containers found in DOM.");
   }
+
+  // Hide ads immediately on load (policy-safe)
+  setAdsVisibility(false);
 
   fetch("articles.json?v=" + Date.now())
     .then((res) => res.json())
@@ -280,6 +366,9 @@ document.addEventListener("DOMContentLoaded", () => {
       function renderLatestList(list) {
         if (!latestContainer) return;
         latestContainer.innerHTML = list.map(renderStoryCard).join("");
+
+        // ✅ Re-evaluate ads after latest list render (FIXED)
+        maybeRunAds(5);
       }
 
       // Initial latest list (skip hero articles)
@@ -288,29 +377,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Setup filters
       setupFilters(articles, renderLatestList);
+
+      // ✅ Final check after everything is painted
+      setTimeout(() => maybeRunAds(5), 300);
     })
     .catch((err) => {
       console.error("HornUpdates: error loading articles.json", err);
+      setAdsVisibility(false);
     });
 });
-function loadAdSenseOnce() {
-  if (window.__adsense_loaded) return;
-  window.__adsense_loaded = true;
-
-  const s = document.createElement("script");
-  s.async = true;
-  s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932";
-  s.crossOrigin = "anonymous";
-  document.head.appendChild(s);
-}
-
-function pushAdsSafely() {
-  // Only push ads after script exists
-  if (!window.adsbygoogle) window.adsbygoogle = [];
-  document.querySelectorAll("ins.adsbygoogle").forEach(ins => {
-    // prevent double-push
-    if (ins.getAttribute("data-adsbygoogle-status") === "done") return;
-    try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
-  });
-}
-
