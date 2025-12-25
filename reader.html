@@ -170,7 +170,8 @@
 
     async function load() {
       const articleUrl = getParam("url");
-      if (!articleUrl) { window.location.href = "index.html"; return; }
+    if (!articleUrl) { window.location.href = "/"; return; }
+
 
       document.getElementById("openBtn").href = articleUrl;
 
