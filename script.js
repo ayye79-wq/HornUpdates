@@ -293,3 +293,24 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("HornUpdates: error loading articles.json", err);
     });
 });
+function loadAdSenseOnce() {
+  if (window.__adsense_loaded) return;
+  window.__adsense_loaded = true;
+
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932";
+  s.crossOrigin = "anonymous";
+  document.head.appendChild(s);
+}
+
+function pushAdsSafely() {
+  // Only push ads after script exists
+  if (!window.adsbygoogle) window.adsbygoogle = [];
+  document.querySelectorAll("ins.adsbygoogle").forEach(ins => {
+    // prevent double-push
+    if (ins.getAttribute("data-adsbygoogle-status") === "done") return;
+    try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+  });
+}
+
