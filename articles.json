@@ -1,6 +1,19 @@
 {
-  "generated_at": "2025-12-26T11:48:09.972131+00:00",
+  "generated_at": "2025-12-26T14:19:15.383332+00:00",
   "articles": [
+    {
+      "title": "اتهامات للدعم السريع باختطاف تجار في ولاية غرب كردفان",
+      "summary": "غبيش، 26 ديسمبر 2025 – اتهم ناشطون، الجمعة، قوات الدعم السريع باختطاف نحو عشرة تجار على الأقل من مدينة غبيش بولاية غرب كردفان، واقتيادهم إلى جهة غير معلومة، في حادثة أثارت مخاوف واسعة وسط الأهالي. وتشهد ولاية غرب...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-26T13:29:34+00:00",
+      "source_url": "https://sudantribune.net/article/308658",
+      "source_name": "سودان تربيون"
+    },
     {
       "title": "US launches strikes against Islamic State in Nigeria",
       "summary": "President Donald Trump has previously accused the Nigerian government of failing to protect Christians from jihadist groups.",
@@ -9,9 +22,35 @@
         "Politics & Governance",
         "Security & Conflict"
       ],
-      "published_at": "2025-12-26T09:53:35+00:00",
+      "published_at": "2025-12-26T13:20:19+00:00",
       "source_url": "https://www.bbc.com/news/articles/cj69j8l918do?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News"
+    },
+    {
+      "title": "مقتل 17 شخصًا في غارة جوية استهدفت موقعين بالجنينة",
+      "summary": "الجنينة، 26 ديسمبر 2025 – قُتل، الجمعة، نحو 17 شخصًا على الأقل وأصيب آخرين جراء غارة جوية شنتها طائرة مسيّرة استهدفت موقعين على الأقل بمدينة الجنينة عاصمة ولاية غرب دارفور. وتخضع الجنينة منذ نوفمبر 2023 لسيطرة قوات...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-26T12:28:53+00:00",
+      "source_url": "https://sudantribune.net/article/308655",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "رئيس الوزراء يعلن رفض السودان لأي قوات دولية في أي عملية سلام",
+      "summary": "بورتسودان، 26 ديسمبر 2025 – قال رئيس الوزراء السوداني كامل إدريس، الجمعة، إن الحكومة لن تقبل بنشر قوات دولية في أي عملية سلام قادمة مع الموافقة على مراقبة مشروطة. وأكد إدريس في مؤتمر صحفي عقده بمطار بورتسودان لدى...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-26T12:09:25+00:00",
+      "source_url": "https://sudantribune.net/article/308652",
+      "source_name": "سودان تربيون"
     },
     {
       "title": "Comesa states lag in intra-bloc investment as China gains ground",
