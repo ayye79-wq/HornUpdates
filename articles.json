@@ -1,6 +1,494 @@
 {
-  "generated_at": "2025-12-26T14:19:15.383332+00:00",
+  "generated_at": "2025-12-28T12:27:07.612569+00:00",
   "articles": [
+    {
+      "title": "What’s the place of minority shareholders, investing public in big-ticket share deals?",
+      "summary": "Analysts hold divergent views on whether the minority investors should be considered in the...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-28T06:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/what-s-the-place-of-minority-shareholders-investing-public-5309348",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Conflict watchlist: Africans could face more pain in 2026 as strife persists",
+      "summary": "Analysts warn that without decisive interventions, the New Year could usher in even greater...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-28T06:15:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/africans-could-face-more-pain-in-2026-as-strife-persists-5309288",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Oromia State Puts New Fee on Coffee Bean Sales",
+      "summary": "Our subscribers to the print edition are entitled to get a bonus in a form of early access to our digital edition.Use the bank detail below or call our office at +251-011-416-3020 to subscribe – only 657.00 Br for 52...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-28T03:00:15+00:00",
+      "source_url": "https://addisfortune.news/oromia-state-puts-new-fee-on-coffee-bean-sales",
+      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
+    },
+    {
+      "title": "Famine Stalks Ethiopians While Politics Undermines Effective Responses",
+      "summary": "Our subscribers to the print edition are entitled to get a bonus in a form of early access to our digital edition.Use the bank detail below or call our office at +251-011-416-3020 to subscribe – only 657.00 Br for 52...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-28T02:58:15+00:00",
+      "source_url": "https://addisfortune.news/famine-stalks-ethiopians-while-politics-under-mines-effective-responses",
+      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
+    },
+    {
+      "title": "Godfather of Ethiopian jazz plays his last live concert",
+      "summary": "Mulatu Astatke has been blending jazz influences from home and abroad for the past six decades.",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-28T00:00:21+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cy073xp2yj0o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "UK restricts DR Congo visas over migrant return policy",
+      "summary": "The Home Office says Kinshasa has failed to agree to measures allowing the return of illegal immigrants and foreign national offenders.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T22:35:46+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c5y21xlxng2o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "السودان يبدأ إجراء معاملات التجارة الخارجية إلكترونيًا",
+      "summary": "الخرطوم، 27 ديسمبر 2025 – أعلنت وزارة التحول الرقمي والاتصالات في السودان، السبت، عن بدء إجراء معاملات للتجارة الخارجية إلكترونيًا عبر منصة “بلدنا”، في أولى خطوات إنهاء التعامل الورقي في الصادرات. وتُعد “بلدنا”، التي...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T20:43:05+00:00",
+      "source_url": "https://sudantribune.net/article/308709",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "الخرطوم وإنجمينا تتهمان الدعم السريع بقصف موقع عسكري تشادي",
+      "summary": "الخرطوم، 27 ديسمبر 2025 – اتهم الجيشان السوداني والتشادي، السبت، قوات الدعم السريع بتنفيذ الهجوم على موقع عسكري داخل تشاد على الحدود مع السودان. وقُتل جنديان تشاديان، الجمعة، في هجوم بطائرة مسيّرة استهدفت موقعًا...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T19:39:07+00:00",
+      "source_url": "https://sudantribune.net/article/308705",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "وفاة سوداني بعد تعرّضه لاعتداء عنيف في «القاهرة»",
+      "summary": "القاهرة، 27 ديسمبر 2025 – كشفت الجالية السودانية في مصر، السبت، عن وفاة الشاب محمد صلاح سليمان الفكي، متأثرًا بإصابته بعد تعرّضه لاعتداء على يد سودانيين في المنطقة الصناعية بمدينة بدر شرق القاهرة. ولجأ إلى مصر حوالي...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T17:17:23+00:00",
+      "source_url": "https://sudantribune.net/article/308702",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "US launches strikes against Islamic State in Nigeria",
+      "summary": "Trump tells Politico he ordered the strikes as \"a Christmas present\" - contradicting a statement by Nigerian officials.",
+      "country_tags": [],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-27T16:54:19+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cj69j8l918do?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "مسؤول: الجيش السوداني يستعد لهجوم من أراضي «إثيوبيا» على النيل الأزرق",
+      "summary": "الدمازين، 27 ديسمبر 2025 – قال مسؤول حكومي رفيع المستوى، السبت، إن الجيش السوداني يتحسب لصد هجوم تخطط لشنه قوات الدعم السريع وحلفاؤها على بلدات الكرمك وقيسان في إقليم النيل الأزرق انطلاقًا من الأراضي الإثيوبية. وفي...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T16:23:49+00:00",
+      "source_url": "https://sudantribune.net/article/308698",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Music comes alive at Blankets & Wine",
+      "summary": "By the time the final notes echoed across Laureate Gardens, it was clear that Blankets &",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T11:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/music-comes-alive-at-blankets-wine-5309266",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "أطباء: مقتل 200 مدنيّ على يد «الدعم السريع» في غرب شمال دارفور",
+      "summary": "سربا، 27 ديسمبر 2025 – قالت شبكة أطباء السودان، السبت، إن قوات الدعم السريع قتلت 200 شخص، بينهم أطفال ونساء، في ثلاث مناطق تقع في غرب شمال دارفور. وشنّت الدعم السريع، خلال الأيام الماضية، هجمات على مواقع في سربا بغرب...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T10:22:17+00:00",
+      "source_url": "https://sudantribune.net/article/308693",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Israel Ends Somaliland’s Three-Decade Wait for Recognition",
+      "summary": "Analysts suggest sovereignty could offer better alternatives in Ethiopia’s sea access quest Israeli Prime Minister Benjamin Netanyahu publicly announced his country’s decision to recognize Somaliland as a sovereign...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2025-12-27T09:49:01+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48391/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "High Court to Rule on Human Rights First IDP Lawsuit on Friday",
+      "summary": "The Federal High Court’s Fundamental Human Rights Protection Bench will rule next week on a lawsuit filed against the Council of Ministers, the Ministry of Peace, the Tigray Interim Administration, and the Amhara and...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T09:46:35+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48388/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "After Israel recognition of Somaliland, what next?",
+      "summary": "Somaliland, formerly British Somaliland, voluntarily united with southern Somalia at...",
+      "country_tags": [
+        "Somalia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T09:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/israel-first-nation-to-recognise-somaliland-s-independence-5309368",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Reluctance Surrounding Genome Editing Grounds Biotech Research Ambitions",
+      "summary": "AU report indicates MIDROC, Luna Group among private firms to express interest in gene editing Dalliance in the approval of gene editing projects is delaying research and arresting desperately needed improvements in...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T09:44:04+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48385/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Soap Manufacturers on ‘Verge of Collapse’ as Supply Chokepoint Throttles Production",
+      "summary": "Lobby group alleges input supply monopoly and unfair trade practices A lobby group representing soap and detergent manufacturers says forex-related issues burdening a foreign-owned supplier of essential chemical...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "published_at": "2025-12-27T09:32:14+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48380/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Transparency Critical To Ensuring Elections Legitimacy",
+      "summary": "With about only five months to go before Ethiopia heads to 7th general elections, which are scheduled to be conducted on June 1, 2026, the country stands at a critical democratic crossroads. Elections are not merely...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2025-12-27T09:27:54+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48377/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Ethiopian Peacekeeping Troops to Remain in Somalia as AUSSOM Extended to December 2026",
+      "summary": "The security councils of the African Union and the United Nations have extended the life of the ongoing AU Support and Stabilization Mission in Somalia (AUSSOM) by a year as peacekeeping efforts continue to suffer...",
+      "country_tags": [
+        "Ethiopia",
+        "Somalia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T09:24:20+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48374/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Brazen Looters Strip Copper Cables in Broad Daylight",
+      "summary": "Telecommunication copper cables, plastic conduits, and metal components have been repeatedly looted in broad daylight along an under-construction road in Addis Ababa, with the theft taking place in full view of...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T09:16:58+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48371/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "ESX Targets Nine IPOs by September",
+      "summary": "Dashen Bank issues prospectus ahead of offering 2.2 million shares The Ethiopian Securities Exchange (ESX) has ambitions to list nine companies before the end of the Ethiopian calendar year in September, according to...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T09:13:51+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48368/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Ethiopia Lags in AI Readiness as Digital Divide Deepens, World Bank Warns",
+      "summary": "Ethiopia is among the world’s lowest-performing countries in artificial intelligence (AI) readiness, trailing on both scale and intensity of AI capacity, according to a World Bank assessment. The 2025 edition of the...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-27T09:08:53+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48365/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "The best players who never won Afcon?",
+      "summary": "As two-time runner-up Mohamed Salah begins another tilt at the Africa Cup of Nations, BBC Sport Africa profiles top stars who never lifted the trophy.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T09:04:48+00:00",
+      "source_url": "https://www.bbc.com/sport/football/videos/c1dz1d7r9vno?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Red Sea Pressures Intensified; Ethiopia’s Search for Access Reordering the Horn",
+      "summary": "On the eve of the New Year, diplomatic traffic through Addis Ababa has intensified in ways that appear routine on the surface but, upon closer inspection, reveal a region under growing strategic strain. Ethiopia...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T09:03:50+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48361/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "الأمم المتحدة تعلن وصول بعثة تقييم إلى «الفاشر»",
+      "summary": "الفاشر، 27 ديسمبر 2025 – أعلن مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية “أوتشا”، وصول بعثة تقييم إلى الفاشر بولاية شمال دارفور غربي السودان. ويتوقّع أن يشمل التقييم الانتهاكات التي تعرّض لها السكان والوضع الإنساني،...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T08:55:37+00:00",
+      "source_url": "https://sudantribune.net/article/308691",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Econet exits Zimbabwe stockmarket due to ‘undervaluation’ of its stock",
+      "summary": "The telco lamented that for several years, since it’s listing in 1998, it has traded at a...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "published_at": "2025-12-27T08:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/econet-exits-zimbabwe-stockmarket-due-to-undervaluation-5309358",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Nairobi, London trade surges to a record $2.83bn in 12 months in favour of Kenya",
+      "summary": "Report shows increased trade has largely been fueled by Kenya’s increased exports to UK market.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "published_at": "2025-12-27T07:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/nairobi-london-trade-surges-to-a-record-2-83b-5309344",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "African leaders take back Congo peace talks as violence spirals",
+      "summary": "Continent’s leaders are attempting to regain the peace initiative in the DRC and the wider...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T06:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/african-leaders-take-back-congo-peace-talks-5309242",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Shrinking democratic space as countries stifle internet and social media freedoms",
+      "summary": "Uganda is limiting Starlink imports, warning of social media blocks and internet shutdowns as...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2025-12-27T06:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/sustainability/innovation/shrinking-democratic-space-as-countries-stifle-internet-5309300",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Somalia peace mission extended for another year, but funds crisis persists",
+      "summary": "Aussom is expected to lose an estimated $130 million from the UNSOS logistics support package.",
+      "country_tags": [
+        "Somalia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T06:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/somalia-peace-mission-extended-for-another-year-5309296",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Miss World Kenya: Crown is not new to my heart",
+      "summary": "As Miss World Kenya, she speaks of championing education equality and women empowerment, and of...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T06:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/miss-world-kenya-crown-is-not-new-to-my-heart-5309236",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Suluhu’s fresh headache in 2026 amid poll crisis",
+      "summary": "The UN’s human rights office published a report detailing the alleged atrocities committed by...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-27T05:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/suluhu-s-fresh-headache-in-2026-amid-poll-crisis-5309238",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "One general, one mathematician: The men competing for power in two African elections",
+      "summary": "The leaders of Guinea and the Central African Republic aim to consolidate power after Sunday's polls.",
+      "country_tags": [],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2025-12-27T00:57:52+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cpwk9grv290o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Israel recognises Somaliland as independent state, Netanyahu says",
+      "summary": "The decision has been condemned by Somalia, Egypt, Turkey and Djibouti, who call it a dangerous precedent.",
+      "country_tags": [
+        "Somalia",
+        "Djibouti"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-26T21:44:42+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c4g417md05go?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "كيانات مدنية تبدي قلقها من توقيف ناشط احتفى بثورة ديسمبر في دنقلا",
+      "summary": "الخرطوم 26 ديسمبر 2025 – أعربت المجموعة السودانية للدفاع عن الحقوق والحريات وهيئة محامي دارفور، الجمعة، عن قلقهما بشأن توقيف الناشط منيب عبد العزيز بدنقلا شمالي السودان بسبب احتفائه بذكرى ثورة ديسمبر وترديده...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-26T20:49:01+00:00",
+      "source_url": "https://sudantribune.net/article/308667",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "مقتل جنديين تشاديين في هجوم بطائرة مسيّرة مصدرها السودان",
+      "summary": "انجمينا 26 ديسمبر 2025 – قالت السلطات التشادية ومصدر أمني تشادي إن جنديين تشاديين قتلا في هجوم بطائرة مسيّرة قدمت من السودان وهاجمت معسكر عسكري قرب الحدود السودانية قبيل فجر الجمعة. وأضافت المصادر لرويترز أنه لم يتضح...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-26T17:40:35+00:00",
+      "source_url": "https://sudantribune.net/article/308664",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "“تأسيس”: مقتل وإصابة 31 مدنيا بمسيرة للجيش في جنوب كردفان",
+      "summary": "الخرطوم 26 ديسمبر 2025 – أعلنت قوات تحالف تأسيس، الجمعة، مقتل 12 مدنيا وجرح 19 آخرين في غارة نفذتها طائرة مسيّرة للجيش السوداني على منطقة “بيام جلد” بولاية جنوب كردفان. وطبقا لبيان أصدره التحالف الذي يضم قوات الدعم...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2025-12-26T17:08:52+00:00",
+      "source_url": "https://sudantribune.net/article/308661",
+      "source_name": "سودان تربيون"
+    },
     {
       "title": "اتهامات للدعم السريع باختطاف تجار في ولاية غرب كردفان",
       "summary": "غبيش، 26 ديسمبر 2025 – اتهم ناشطون، الجمعة، قوات الدعم السريع باختطاف نحو عشرة تجار على الأقل من مدينة غبيش بولاية غرب كردفان، واقتيادهم إلى جهة غير معلومة، في حادثة أثارت مخاوف واسعة وسط الأهالي. وتشهد ولاية غرب...",
@@ -13,18 +501,6 @@
       "published_at": "2025-12-26T13:29:34+00:00",
       "source_url": "https://sudantribune.net/article/308658",
       "source_name": "سودان تربيون"
-    },
-    {
-      "title": "US launches strikes against Islamic State in Nigeria",
-      "summary": "President Donald Trump has previously accused the Nigerian government of failing to protect Christians from jihadist groups.",
-      "country_tags": [],
-      "topic_tags": [
-        "Politics & Governance",
-        "Security & Conflict"
-      ],
-      "published_at": "2025-12-26T13:20:19+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cj69j8l918do?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
     },
     {
       "title": "مقتل 17 شخصًا في غارة جوية استهدفت موقعين بالجنينة",
