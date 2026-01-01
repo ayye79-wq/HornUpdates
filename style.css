@@ -549,4 +549,7 @@ h1 {
     line-height: 1.7;
   }
 }
+.reader-page h1 {
+  letter-spacing: -0.01em;
+}
 
