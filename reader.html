@@ -7,6 +7,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horn Updates • Reader</title>
+<link rel="canonical" id="canonicalLink" href="https://hornupdates.com/reader.html" />
 
   <style>
     * { box-sizing: border-box; }
@@ -125,6 +126,17 @@
       </div>
     </div>
   </div>
+<script>
+  (function () {
+    const id = new URLSearchParams(window.location.search).get("id");
+    if (id) {
+      const canon = document.getElementById("canonicalLink");
+      if (canon) {
+        canon.href = `https://hornupdates.com/reader.html?id=${encodeURIComponent(id)}`;
+      }
+    }
+  })();
+</script>
 
   <script>
     // ---------- ADSENSE SAFE LOADER ----------
