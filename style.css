@@ -471,4 +471,20 @@ body {
   white-space: nowrap;
   border: 0;
 }
+/* ===============================
+   Reader typography refinement
+   =============================== */
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  font-weight: 800;
+  max-width: 680px;
+}
+
+.summary {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  max-width: 680px;
+}
 
