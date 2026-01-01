@@ -2,6 +2,9 @@
   <meta charset="UTF-8" />
   <title>Horn Updates – News from the Horn of Africa</title>
 
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
   <link rel="canonical" href="https://hornupdates.com/" />
 
   <meta name="description" content="Horn Updates is an independent news aggregation platform covering the Horn of Africa — Ethiopia, Somalia, Eritrea, Djibouti, and Sudan. We publish original summaries with links to trusted sources.">
@@ -9,6 +12,25 @@
   <meta name="robots" content="index,follow">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b1220">
+
+  <!-- WebSite Schema (Sitelinks Search Box eligibility) -->
+  <script type="application/ld+json" id="websiteSchema">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://hornupdates.com/#website",
+    "url": "https://hornupdates.com/",
+    "name": "Horn Updates",
+    "publisher": {
+      "@id": "https://hornupdates.com/#organization"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://hornupdates.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
   <!-- Organization Schema (SITE IDENTITY) -->
   <script type="application/ld+json" id="orgSchema">
@@ -30,9 +52,8 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Sidebar layout + X feed styles (kept inline so you don't have to edit style.css) -->
+  <!-- Sidebar layout + X feed styles -->
   <style>
-    /* Two-column layout (main + right sidebar) */
     .layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 360px;
@@ -56,17 +77,12 @@
       font-weight: 600;
       margin: 0 0 10px 0;
     }
-
-    /* Hide sidebar on mobile for better UX */
     @media (max-width: 900px) {
       .layout { grid-template-columns: 1fr; }
     }
-
     @media (max-width: 600px) {
       .sidebar { display: none; }
     }
-
-    /* 🔒 AdSense containers hidden by default (policy-safe) */
     .sidebar-ad { display: none; }
   </style>
 </head>
