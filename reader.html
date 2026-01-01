@@ -10,6 +10,24 @@
 
   <link rel="canonical" id="canonicalLink" href="https://hornupdates.com/reader.html" />
 
+  <!-- Organization Schema (site identity) -->
+  <script type="application/ld+json" id="orgSchema">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://hornupdates.com/#organization",
+    "name": "Horn Updates",
+    "url": "https://hornupdates.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hornupdates.com/Horn1_logo.png"
+    },
+    "sameAs": [
+      "https://x.com/HornUpdatesHQ"
+    ]
+  }
+  </script>
+
   <!-- NewsArticle Schema Placeholder (populated after match is found) -->
   <script type="application/ld+json" id="newsSchema">
   {
@@ -223,23 +241,15 @@
             "name": "Horn Updates"
           },
           "publisher": {
-            "@type": "Organization",
-            "name": "Horn Updates",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://hornupdates.com/Horn1_logo.png"
-            }
+            "@id": "https://hornupdates.com/#organization"
           },
           "isBasedOn": match.source_url || match.link
         };
 
-        // remove empty fields
         Object.keys(data).forEach(k => (data[k] == null || data[k] === "") && delete data[k]);
 
         schemaEl.textContent = JSON.stringify(data);
-      } catch (e) {
-        // fail silently
-      }
+      } catch (e) {}
     }
 
     async function load() {
