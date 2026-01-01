@@ -88,6 +88,47 @@
 
     /* 🔒 Ads hidden by default (policy safe) */
     .reader-ad { display: none; }
+/* =========================
+   Reader-only typography
+   ========================= */
+.reader-page .card {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.reader-page #title {
+  font-size: 1.85rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 12px 0 10px;
+}
+
+.reader-page .summary {
+  font-size: 1.12rem;
+  line-height: 1.85;
+  letter-spacing: 0.005em;
+}
+
+.reader-page .meta {
+  font-size: 0.95rem;
+}
+
+.reader-page .pill {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .reader-page #title { font-size: 1.55rem; }
+  .reader-page .summary { font-size: 1.05rem; line-height: 1.8; }
+}
+/* Arabic / RTL readability */
+.reader-page .rtl {
+  font-size: 1.15rem;
+  line-height: 2.0;
+  letter-spacing: 0;
+}
+
+    
   </style>
 </head>
 
