@@ -487,4 +487,20 @@ h1 {
   line-height: 1.75;
   max-width: 680px;
 }
+/* ===============================
+   Reader-only typography
+   =============================== */
+
+.reader-page h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  font-weight: 800;
+  max-width: 680px;
+}
+
+.reader-page .summary {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  max-width: 680px;
+}
 
