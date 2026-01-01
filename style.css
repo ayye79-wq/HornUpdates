@@ -503,4 +503,50 @@ h1 {
   line-height: 1.75;
   max-width: 680px;
 }
+/* =========================
+   Reader-only typography
+   (BBC-style readability)
+========================= */
+
+.reader-page h1 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.reader-page .summary {
+  font-size: 1.12rem;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  color: #1f2937;
+  max-width: 68ch; /* ideal reading width */
+}
+
+.reader-page .meta {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.reader-page .pill {
+  font-size: 0.8rem;
+}
+
+/* Arabic / RTL boost */
+.reader-page .rtl {
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
+
+/* Mobile tuning */
+@media (max-width: 600px) {
+  .reader-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .reader-page .summary {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}
 
