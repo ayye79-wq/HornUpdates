@@ -552,4 +552,10 @@ h1 {
 .reader-page h1 {
   letter-spacing: -0.01em;
 }
+.site-description {
+  font-size: 1rem;        /* slightly larger */
+  line-height: 1.65;     /* easier reading */
+  max-width: 720px;      /* prevents wide text blocks */
+  color: #374151;        /* softer than pure black */
+}
 
