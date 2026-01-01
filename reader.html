@@ -7,13 +7,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horn Updates • Reader</title>
-<link rel="canonical" id="canonicalLink" href="https://hornupdates.com/reader.html" />
-<script type="application/ld+json" id="newsSchema">
-{
-  "@context": "https://schema.org",
-  "@type": "NewsArticle"
-}
-</script>
+
+  <link rel="canonical" id="canonicalLink" href="https://hornupdates.com/reader.html" />
+
+  <!-- NewsArticle Schema Placeholder (populated after match is found) -->
+  <script type="application/ld+json" id="newsSchema">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle"
+  }
+  </script>
 
   <style>
     * { box-sizing: border-box; }
@@ -132,17 +135,19 @@
       </div>
     </div>
   </div>
-<script>
-  (function () {
-    const id = new URLSearchParams(window.location.search).get("id");
-    if (id) {
-      const canon = document.getElementById("canonicalLink");
-      if (canon) {
-        canon.href = `https://hornupdates.com/reader.html?id=${encodeURIComponent(id)}`;
+
+  <!-- Canonical updater for ?id= -->
+  <script>
+    (function () {
+      const id = new URLSearchParams(window.location.search).get("id");
+      if (id) {
+        const canon = document.getElementById("canonicalLink");
+        if (canon) {
+          canon.href = `https://hornupdates.com/reader.html?id=${encodeURIComponent(id)}`;
+        }
       }
-    }
-  })();
-</script>
+    })();
+  </script>
 
   <script>
     // ---------- ADSENSE SAFE LOADER ----------
@@ -185,15 +190,64 @@
       } catch { return ""; }
     }
 
+    // ✅ NewsArticle schema writer (called ONLY when match exists)
+    function setNewsSchema(match, canonicalUrl) {
+      try {
+        const schemaEl = document.getElementById("newsSchema");
+        if (!schemaEl) return;
+
+        const description = (match.summary || "")
+          .replace(/\s+/g, " ")
+          .trim()
+          .slice(0, 200);
+
+        const publishedISO = match.published_at
+          ? new Date(match.published_at).toISOString()
+          : undefined;
+
+        const imageUrl = match.image_url || "https://hornupdates.com/Horn1_logo.png";
+
+        const data = {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
+          },
+          "headline": (match.title || "Horn Updates").trim().slice(0, 110),
+          "description": description || "AI-generated summary with a link to the original publisher.",
+          "datePublished": publishedISO,
+          "image": [imageUrl],
+          "author": {
+            "@type": "Organization",
+            "name": "Horn Updates"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Horn Updates",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://hornupdates.com/Horn1_logo.png"
+            }
+          },
+          "isBasedOn": match.source_url || match.link
+        };
+
+        // remove empty fields
+        Object.keys(data).forEach(k => (data[k] == null || data[k] === "") && delete data[k]);
+
+        schemaEl.textContent = JSON.stringify(data);
+      } catch (e) {
+        // fail silently
+      }
+    }
+
     async function load() {
       const articleUrl = getParam("url");
 
-      // ✅ NO REDIRECT: show a friendly fallback (avoids "Page with redirect")
+      // ✅ NO REDIRECT: show a friendly fallback
       if (!articleUrl) {
-        // Hide ad containers on "no article" view (policy-safe)
         document.querySelectorAll(".reader-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
-
-        // Hide buttons that depend on articleUrl
         document.getElementById("openBtn").style.display = "none";
         document.getElementById("copyBtn").style.display = "none";
         document.getElementById("shareBtn").style.display = "none";
@@ -211,60 +265,11 @@
 
       document.getElementById("openBtn").href = articleUrl;
 
-
-function setNewsSchema(match, canonicalUrl) {
-  const schemaEl = document.getElementById("newsSchema");
-  if (!schemaEl) return;
-
-  const description = (match.summary || "")
-    .replace(/\s+/g, " ")
-    .trim()
-    .slice(0, 200);
-
-  const publishedISO = match.published_at
-    ? new Date(match.published_at).toISOString()
-    : undefined;
-
-  const imageUrl = match.image_url || "https://hornupdates.com/Horn1_logo.png";
-
-  const data = {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": canonicalUrl
-    },
-    "headline": (match.title || "").slice(0, 110),
-    "description": description,
-    "datePublished": publishedISO,
-    "image": [imageUrl],
-    "author": {
-      "@type": "Organization",
-      "name": "Horn Updates"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Horn Updates",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://hornupdates.com/Horn1_logo.png"
-      }
-    },
-    "isBasedOn": match.source_url || match.link
-  };
-
-  schemaEl.textContent = JSON.stringify(data);
-}
-
-      
-      // ✅ Wire share links/buttons (use current reader URL so it shares correctly)
+      // ✅ Wire share links/buttons
       const shareUrl = window.location.href;
-      document.getElementById("waBtn").href =
-        "https://wa.me/?text=" + encodeURIComponent(shareUrl);
-      document.getElementById("tgBtn").href =
-        "https://t.me/share/url?url=" + encodeURIComponent(shareUrl);
-      document.getElementById("fbBtn").href =
-        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareUrl);
+      document.getElementById("waBtn").href = "https://wa.me/?text=" + encodeURIComponent(shareUrl);
+      document.getElementById("tgBtn").href = "https://t.me/share/url?url=" + encodeURIComponent(shareUrl);
+      document.getElementById("fbBtn").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareUrl);
 
       document.getElementById("copyBtn").onclick = async () => {
         try { await navigator.clipboard.writeText(shareUrl); } catch (e) {}
@@ -284,6 +289,7 @@ function setNewsSchema(match, canonicalUrl) {
         const target = norm(articleUrl);
 
         const match = articles.find(a => norm(a.source_url || a.link || "") === target);
+
         if (!match) {
           document.getElementById("title").textContent = "Article";
           document.getElementById("summary").textContent =
@@ -294,8 +300,13 @@ function setNewsSchema(match, canonicalUrl) {
         document.getElementById("title").textContent = match.title || "Article";
         document.getElementById("summary").textContent = match.summary || "";
 
+        // ✅ Populate NewsArticle schema only when real content exists
+        const canonicalUrl = document.getElementById("canonicalLink").href;
+        setNewsSchema(match, canonicalUrl);
+
         document.getElementById("sourcePill").textContent =
           "Source: " + (match.source_name || "Source");
+
         document.getElementById("datePill").textContent =
           "Date: " + (match.published_at ? new Date(match.published_at).toLocaleDateString() : "—");
 
@@ -318,7 +329,6 @@ function setNewsSchema(match, canonicalUrl) {
           loadAdSenseOnce();
           setTimeout(pushAdsSafely, 800);
         } else {
-          // keep ads hidden on thin content
           document.querySelectorAll(".reader-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
         }
 
