@@ -7,8 +7,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horn Updates • Reader</title>
-<meta name="description" id="metaDescription"
-      content="Read concise AI-generated news summaries from Horn Updates, with links to original publishers." />
 
   <link rel="canonical" id="canonicalLink" href="https://hornupdates.com/reader.html" />
 
@@ -209,26 +207,6 @@
         return x.hostname.replace(/^www\./, "") + x.pathname.replace(/\/$/, "");
       } catch { return ""; }
     }
-function setReaderMeta(match) {
-  if (!match) return;
-
-  // 🔹 Title (max ~60 chars preferred)
-  const titleText = `${match.title} | Horn Updates`;
-  document.title = titleText.slice(0, 65);
-
-  // 🔹 Meta description (150–160 chars ideal)
-  const descEl = document.getElementById("metaDescription");
-  if (!descEl) return;
-
-  const desc =
-    (match.summary || "")
-      .replace(/\s+/g, " ")
-      .trim()
-      .slice(0, 155) ||
-    "Read a concise summary with a link to the full article on the original publisher’s site.";
-
-  descEl.setAttribute("content", desc);
-}
 
     // ✅ NewsArticle schema writer (called ONLY when match exists)
     function setNewsSchema(match, canonicalUrl) {
@@ -331,7 +309,6 @@ function setReaderMeta(match) {
 
         document.getElementById("title").textContent = match.title || "Article";
         document.getElementById("summary").textContent = match.summary || "";
-       setReaderMeta(match);
 
         // ✅ Populate NewsArticle schema only when real content exists
         const canonicalUrl = document.getElementById("canonicalLink").href;
