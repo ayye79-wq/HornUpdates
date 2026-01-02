@@ -711,3 +711,72 @@ body.policy-page .page{
 body.policy-page .policy-content{
   padding-right: 0;
 }
+/* ===========================
+   Legal / Policy pages (shared)
+   =========================== */
+
+body.policy-page .page{
+  max-width: 980px;          /* keep your site width */
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+body.policy-page .policy-header,
+body.policy-page .policy-content{
+  max-width: 760px;          /* clean readable column */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.policy-page .policy-header{
+  display: block;
+  margin: 0 0 18px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.policy-page .policy-header .site-name{
+  font-weight: 800;
+  font-size: 2.05rem;        /* ✅ tune Horn Updates top size here */
+  line-height: 1.08;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+body.policy-page .policy-header .site-name a{
+  color: inherit;
+  text-decoration: none;
+}
+
+body.policy-page .policy-header h1{
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+body.policy-page .policy-header .last-updated{
+  margin: 0 0 10px;
+  color: #6b7280;
+  font-size: .95rem;
+}
+
+body.policy-page .policy-header .policy-intro{
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+body.policy-page .policy-content h3{
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+body.policy-page .policy-content p,
+body.policy-page .policy-content li{
+  margin: 10px 0;
+  line-height: 1.65;
+}
+
+body.policy-page .policy-content ul{
+  padding-left: 18px;
+}
