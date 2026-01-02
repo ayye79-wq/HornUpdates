@@ -780,3 +780,11 @@ body.policy-page .policy-content li{
 body.policy-page .policy-content ul{
   padding-left: 18px;
 }
+/* === Legal pages brand size refinement === */
+body.policy-page .policy-header .site-name{
+  font-size: 1.55rem;   /* 🔽 reduced, balanced */
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
