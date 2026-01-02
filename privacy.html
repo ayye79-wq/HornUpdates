@@ -5,10 +5,13 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
   <meta charset="UTF-8" />
-  <title>Privacy Policy | Horn Updates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Privacy Policy | Horn Updates</title>
   <link rel="canonical" href="https://hornupdates.com/privacy.html" />
   <meta name="description" content="Horn Updates privacy policy explains what data we collect, how it is used, and your choices.">
+
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Organization Schema (site identity) -->
   <script type="application/ld+json" id="orgSchema">
@@ -28,52 +31,71 @@
   }
   </script>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- ✅ Fix header layout (prevents split/messed-up top lines) -->
+  <!-- ✅ Policy page layout fix (scoped, won't affect home/reader) -->
   <style>
-    /* Privacy Policy header – force clean single-column layout */
-    .policy-header{
-      max-width: 980px;           /* adjust if your .page width differs */
-      margin: 0 auto 18px;
-      padding: 18px 18px 0;
-      display: block;             /* overrides any inherited flex/grid */
+    /* Prevent any global .content grid/layout from shifting policy pages */
+    body.policy-page .content { display:block !important; }
+
+    body.policy-page .policy-header,
+    body.policy-page .policy-content{
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .policy-header .site-name{
+    body.policy-page .policy-header{
+      margin: 0 0 18px;
+      padding: 0;
+      display: block;
+    }
+
+    body.policy-page .policy-header .site-name{
       font-weight: 800;
       font-size: 2.2rem;
       line-height: 1.05;
       margin: 0 0 10px;
     }
 
-    .policy-header .site-name a{
+    body.policy-page .policy-header .site-name a{
       color: inherit;
       text-decoration: none;
     }
 
-    .policy-header h1{
+    body.policy-page .policy-header h1{
       margin: 0 0 8px;
       font-size: 1.6rem;
     }
 
-    .policy-header .last-updated{
+    body.policy-page .policy-header .last-updated{
       margin: 0 0 10px;
       color: #6b7280;
       font-size: .95rem;
     }
 
-    .policy-header .policy-intro{
+    body.policy-page .policy-header .policy-intro{
       margin: 0;
       line-height: 1.6;
+    }
+
+    body.policy-page .policy-header{
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    body.policy-page .policy-content h3{
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    body.policy-page .policy-content p{
+      margin: 10px 0;
+      line-height: 1.65;
     }
   </style>
 </head>
 
-<body>
-<div class="page policy-page">
-
+<body class="policy-page">
+  <div class="page">
 
     <header class="policy-header">
       <div class="site-name">
@@ -89,10 +111,7 @@
       </p>
     </header>
 
-   <main class="policy-content">
-
-      <!-- ✅ Removed duplicate "Privacy Policy" heading that caused layout/spacing issues -->
-
+    <main class="policy-content">
       <p>
         At Horn Updates, one of our main priorities is the privacy of our visitors.
         This Privacy Policy describes what information may be collected and how it is used.
@@ -129,4 +148,41 @@
         review the privacy policies of any third-party sites you visit.
       </p>
 
+      <h3>Children’s Privacy</h3>
+      <p>
+        Horn Updates does not knowingly collect personal information from children under 13.
+        If you believe a child has provided personal information to us, please contact us and we
+        will take steps to remove such information.
+      </p>
 
+      <h3>Changes to This Policy</h3>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be posted on this page
+        with an updated effective date.
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        If you have questions about this Privacy Policy, please contact us at
+        <strong>admin@hornupdates.com</strong>.
+      </p>
+
+      <p class="muted" style="margin-top:14px;">
+        Effective date: January 1, 2026
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2025 Horn Updates. All rights reserved.</p>
+      <p class="footer-links" style="margin-top:8px; font-size:.9rem;">
+        <a href="/about.html">About</a> •
+        <a href="/editorial-policy.html">Editorial Policy</a> •
+        <a href="/privacy.html">Privacy</a> •
+        <a href="/terms.html">Terms</a> •
+        <a href="/contact.html">Contact</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
