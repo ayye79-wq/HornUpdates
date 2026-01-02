@@ -788,3 +788,23 @@ body.policy-page .policy-header .site-name{
   margin-bottom: 6px;
   letter-spacing: -0.01em;
 }
+/* Breadcrumb (legal pages) */
+body.policy-page .breadcrumb{
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 2px 0 8px;
+}
+
+body.policy-page .breadcrumb a{
+  color: #2563eb;
+  text-decoration: none;
+}
+
+body.policy-page .breadcrumb a:hover{
+  text-decoration: underline;
+}
+
+body.policy-page .breadcrumb .sep{
+  margin: 0 6px;
+  color: #9ca3af;
+}
