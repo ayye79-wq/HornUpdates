@@ -599,4 +599,39 @@ h1 {
   font-weight: 500;
   cursor: default;
 }
+/* Privacy Policy header – force clean single-column layout */
+.policy-header{
+  max-width: 980px;           /* match your page width if different */
+  margin: 0 auto 18px;
+  padding: 18px 18px 0;
+  display: block;             /* overrides any flex/grid */
+}
+
+.policy-header .site-name{
+  font-weight: 800;
+  font-size: 2.2rem;          /* big brand like your screenshot */
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+
+.policy-header .site-name a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.policy-header h1{
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.policy-header .last-updated{
+  margin: 0 0 10px;
+  color: #6b7280;
+  font-size: .95rem;
+}
+
+.policy-header .policy-intro{
+  margin: 0;
+  line-height: 1.6;
+}
 
