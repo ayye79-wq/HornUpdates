@@ -828,3 +828,10 @@ body.policy-page .breadcrumb .sep{
 .breadcrumb a:hover {
   text-decoration: underline;
 }
+/* About page – soften brand size */
+.about-page .brand-text h1,
+.about-page .site-name {
+  font-size: 1.9rem;   /* down from ~2.4–2.6 */
+  font-weight: 800;
+  line-height: 1.2;
+}
