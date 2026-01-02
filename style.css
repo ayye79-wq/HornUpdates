@@ -558,4 +558,18 @@ h1 {
   max-width: 720px;      /* prevents wide text blocks */
   color: #374151;        /* softer than pure black */
 }
+.contact-nav {
+  margin: 6px 0 14px;
+  font-size: 0.95rem;
+}
+
+.contact-nav a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-nav a:hover {
+  text-decoration: underline;
+}
 
