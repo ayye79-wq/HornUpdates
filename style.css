@@ -694,3 +694,20 @@ main {
   margin: 0 auto;    /* ✅ THIS is the missing piece */
 }
 .policy-page .policy-content { max-width: 760px; margin: 0 auto; }
+/* ===== FIX: Policy pages alignment (kills right indentation) ===== */
+body.policy-page .policy-header,
+body.policy-page .policy-content{
+  width: 100%;
+  max-width: 760px;
+  margin-left: 0 !important;   /* align with left edge */
+  margin-right: auto !important;
+}
+
+body.policy-page .page{
+  max-width: 980px;            /* keep your page width */
+}
+
+/* make sure the policy content doesn't get centered weirdly */
+body.policy-page .policy-content{
+  padding-right: 0;
+}
