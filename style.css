@@ -737,7 +737,7 @@ body.policy-page .policy-header{
 
 body.policy-page .policy-header .site-name{
   font-weight: 800;
-  font-size: 2.05rem;        /* ✅ tune Horn Updates top size here */
+  font-size: 1.6rem;        /* ✅ tune Horn Updates top size here */
   line-height: 1.08;
   margin: 0 0 10px;
   letter-spacing: -0.01em;
