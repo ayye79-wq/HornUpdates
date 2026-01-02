@@ -835,3 +835,6 @@ body.policy-page .breadcrumb .sep{
   font-weight: 800;
   line-height: 1.2;
 }
+.about-page .brand {
+  margin-bottom: 6px;
+}
