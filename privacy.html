@@ -36,12 +36,12 @@
     /* Prevent any global .content grid/layout from shifting policy pages */
     body.policy-page .content { display:block !important; }
 
-    body.policy-page .policy-header,
-    body.policy-page .policy-content{
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+ body.policy-page .policy-header,
+body.policy-page .policy-content{
+  width: 100%;
+  max-width: 980px;          /* match your .page width */
+  margin: 0;                 /* not centered column */
+}
 
     body.policy-page .policy-header{
       margin: 0 0 18px;
@@ -187,4 +187,5 @@
   </div>
 </body>
 </html>
+
 
