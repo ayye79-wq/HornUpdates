@@ -597,10 +597,11 @@ body {
 
 .policy-header .site-name{
   font-weight: 800;
-  font-size: 2.2rem;
-  line-height: 1.05;
-  margin: 0 0 10px;
+  font-size: 1.85rem;   /* smaller, cleaner */
+  line-height: 1.15;
+  margin: 0 0 8px;
 }
+
 
 .policy-header .site-name a{
   color: inherit;
@@ -665,4 +666,25 @@ main {
 
 .policy-page .policy-header {
   margin-top: 0;
+}
+/* Constrain legal text width for readability */
+.policy-page .policy-content {
+  max-width: 760px;
+}
+/* === Policy page typography polish === */
+
+.policy-header .site-name {
+  font-weight: 800;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.policy-page .policy-content {
+  max-width: 760px;
+}
+
+.policy-header .policy-intro {
+  font-size: 0.95rem;
+  color: #374151;
 }
