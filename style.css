@@ -845,3 +845,16 @@ body.policy-page .breadcrumb .sep{
 .about-page .brand {
   margin-bottom: 6px;
 }
+/* === Fix About/Header title being too big (override global h1) === */
+.site-header .brand h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .site-header .brand h1 {
+    font-size: 1.4rem;
+  }
+}
