@@ -814,3 +814,17 @@ body.policy-page .breadcrumb .sep{
   font-weight: 800;
   line-height: 1.2;
 }
+.breadcrumb {
+  font-size: 0.85rem;
+  margin: 4px 0 10px;
+  color: #6b7280;
+}
+
+.breadcrumb a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
