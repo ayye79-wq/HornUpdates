@@ -808,3 +808,9 @@ body.policy-page .breadcrumb .sep{
   margin: 0 6px;
   color: #9ca3af;
 }
+/* Policy pages: reduce brand prominence */
+.policy-page .site-name {
+  font-size: 1.6rem;   /* ⬅ smaller than About */
+  font-weight: 800;
+  line-height: 1.2;
+}
