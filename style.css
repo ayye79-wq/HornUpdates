@@ -28,6 +28,13 @@ body {
   margin-bottom: 18px;
   flex-wrap: wrap;
 }
+/* Header site title (override global h1 safely) */
+.site-header .brand-text h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
 
 .brand {
   display: flex;
