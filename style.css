@@ -658,3 +658,11 @@ main {
   max-height: none !important;
   overflow: visible !important;
 }
+/* Tighten top spacing for policy/legal pages */
+.policy-page {
+  padding-top: 8px; /* default is 20px */
+}
+
+.policy-page .policy-header {
+  margin-top: 0;
+}
