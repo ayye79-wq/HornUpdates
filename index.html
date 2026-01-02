@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
- <title>Horn Updates | Horn of Africa News & Analysis</title>
-
+  <title>Horn Updates | Horn of Africa News & Analysis</title>
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
   <link rel="canonical" href="https://hornupdates.com/" />
 
- <meta name="description" content="Horn Updates delivers independent news, analysis, and AI-powered summaries focused on the Horn of Africa, including Ethiopia, Somalia, Eritrea, Djibouti, and Sudan." />
-
+  <meta name="description" content="Horn Updates delivers independent news, analysis, and AI-powered summaries focused on the Horn of Africa, including Ethiopia, Somalia, Eritrea, Djibouti, and Sudan." />
   <meta name="robots" content="index,follow">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b1220">
@@ -70,7 +68,9 @@
     }
     @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
     @media (max-width: 600px) { .sidebar { display: none; } }
-    .sidebar-ad { display: none; } /* policy-safe */
+
+    /* ✅ Ads only in sidebar, hidden by default until we decide to show */
+    .sidebar-ad { display: none; }
   </style>
 </head>
 
@@ -102,7 +102,7 @@
 
     <!-- INTRO -->
     <p class="intro">
-     Horn Updates aggregates reporting from trusted international and regional news organizations, 
+      Horn Updates aggregates reporting from trusted international and regional news organizations,
       filters stories relevant to the Horn of Africa,
       and publishes concise AI-assisted summaries with clear links to the original sources.
     </p>
@@ -116,25 +116,10 @@
     <!-- MAIN LAYOUT -->
     <div class="layout">
       <main class="content">
-       <section class="featured-section">
-  <h2>Featured story</h2>
-  <div id="featured-container"></div>
-</section>
-
-<!-- ✅ AdSense: Homepage Mid (between Featured + Latest) -->
-<div class="ad-slot">
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-7773342225754932"
-       data-ad-slot="PASTE_YOUR_HOMEPAGE_MID_SLOT"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-</div>
-
-<section class="latest-section">
-  <h2>Latest stories</h2>
-  <div id="latest-container"></div>
-</section>
+        <section class="featured-section">
+          <h2>Featured story</h2>
+          <div id="featured-container"></div>
+        </section>
 
         <section class="latest-section">
           <h2>Latest stories</h2>
@@ -147,6 +132,16 @@
           Follow us on X
         </a>
 
+        <!-- ✅ Sidebar AdSense (single unit) -->
+        <div class="sidebar-box sidebar-ad" id="sidebar-ad">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-7773342225754932"
+               data-ad-slot="8296199432"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+        </div>
+
         <div class="sidebar-box about-mini">
           <h3>Quick Updates</h3>
           <p>
@@ -154,16 +149,6 @@
             Scan key headlines, read short summaries,
             and click through only when you want more.
           </p>
-        </div>
-
-        <!-- AdSense Sidebar Slot (hidden until content is valid) -->
-        <div class="sidebar-box sidebar-ad">
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-7773342225754932"
-               data-ad-slot="8296199432"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
         </div>
       </aside>
     </div>
@@ -188,7 +173,7 @@
   </div>
 
   <script>
-  // ---------- ADSENSE SAFE LOADER ----------
+  // ---------- ADSENSE SAFE LOADER (sidebar only) ----------
   function loadAdSenseOnce() {
     if (window.__adsense_loaded) return;
     window.__adsense_loaded = true;
@@ -208,8 +193,9 @@
     });
   }
 
-  function showSidebarAds() {
-    document.querySelectorAll(".sidebar-ad").forEach(el => el.style.display = "block");
+  function showSidebarAd() {
+    const el = document.getElementById("sidebar-ad");
+    if (el) el.style.display = "block";
   }
 
   // ---------- HELPERS ----------
@@ -374,10 +360,10 @@
         allArticles = list;
         applyFilter();
 
-        // ✅ AdSense AFTER content is rendered:
+        // ✅ Sidebar AdSense AFTER content is rendered
         const MIN_ARTICLES_FOR_ADS = 5;
         if (list.length >= MIN_ARTICLES_FOR_ADS) {
-          showSidebarAds();
+          showSidebarAd();
           loadAdSenseOnce();
 
           let tries = 0;
@@ -392,7 +378,8 @@
             if (tries >= 20) clearInterval(t);
           }, 350);
         } else {
-          document.querySelectorAll(".sidebar-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
+          const ad = document.getElementById("sidebar-ad");
+          if (ad) ad.style.display = "none";
         }
       })
       .catch(err => {
