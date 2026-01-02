@@ -858,3 +858,32 @@ body.policy-page .breadcrumb .sep{
     font-size: 1.4rem;
   }
 }
+/* ===============================
+   AdSense layout safety (CLS fix)
+   =============================== */
+
+.ad-slot {
+  width: 100%;
+  min-height: 250px;     /* desktop reserve */
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+/* Mobile tuning */
+@media (max-width: 600px) {
+  .ad-slot {
+    min-height: 180px;
+    margin: 16px 0;
+  }
+}
+
+/* Prevent ads from breaking layout */
+.ad-slot ins {
+  display: block;
+  max-width: 100%;
+}
+
+/* Kill horizontal scroll from ads */
+html, body {
+  overflow-x: hidden;
+}
