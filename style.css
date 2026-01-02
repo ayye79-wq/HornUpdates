@@ -631,3 +631,30 @@ body {
 .policy-content p{
   margin: 8px 0;
 }
+.policy-content {
+  max-width: 760px;
+}
+.policy-header {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.policy-content p {
+  margin: 10px 0;
+  line-height: 1.65;
+}
+/* === Force full-page scrolling for policy pages === */
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+/* If any wrapper is locking height, this frees it */
+.page,
+.content,
+.policy-content,
+main {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
