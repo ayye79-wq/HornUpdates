@@ -917,3 +917,57 @@ html, body {
 .story-card--featured .story-tags {
   margin-bottom: 6px;
 }
+/* =========================
+   Reader – Mobile polish
+   ========================= */
+@media (max-width: 600px) {
+
+  /* Reduce top header height */
+  .reader-page .topbar,
+  .reader-page .reader-topbar {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  /* Make share buttons less dominant */
+  .reader-page .share-buttons,
+  .reader-page .share-group {
+    margin-top: 6px;
+    gap: 8px;
+  }
+
+  .reader-page .share-buttons button,
+  .reader-page .share-group a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+  }
+
+  /* Tighten the main article card */
+  .reader-page .reader-card,
+  .reader-page .article-card {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  /* Title: slightly tighter without shrinking impact */
+  .reader-page h1 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin: 10px 0 8px;
+  }
+
+  /* Metadata pills spacing */
+  .reader-page .meta,
+  .reader-page .story-meta {
+    margin-bottom: 8px;
+    gap: 6px;
+  }
+
+  /* Attribution should feel subtle */
+  .reader-page .attribution {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 10px;
+  }
+}
