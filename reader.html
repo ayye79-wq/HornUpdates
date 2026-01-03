@@ -161,17 +161,30 @@
         <a href="/">Horn Updates</a>
         <span class="muted">• Reader</span>
       </div>
+<div class="actions">
+  <!-- Always visible -->
+  <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">
+    Read full article ↗
+  </a>
 
-      <div class="actions">
-        <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
-        <button id="copyBtn" class="btn secondary" type="button">Copy link</button>
-        <button id="shareBtn" class="btn secondary" type="button">Share</button>
-        <a id="waBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a id="tgBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a id="fbBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
-      </div>
-    </div>
+  <!-- Share toggle -->
+  <button id="shareToggle"
+          class="btn secondary"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sharePanel">
+    Share
+  </button>
 
+  <!-- Collapsible share panel -->
+  <div id="sharePanel" class="share-panel" hidden>
+    <button id="copyBtn" class="btn secondary" type="button">Copy link</button>
+    <a id="waBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a id="tgBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
+    <a id="fbBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
+  </div>
+</div>
+</div>
     <div class="card">
       <div class="meta">
         <span class="pill" id="sourcePill">Source</span>
