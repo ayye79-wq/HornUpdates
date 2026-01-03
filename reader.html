@@ -168,13 +168,13 @@
   </a>
 
   <!-- Share toggle -->
-  <button id="shareToggle"
-          class="btn secondary"
-          type="button"
-          aria-expanded="false"
-          aria-controls="sharePanel">
-    Share
-  </button>
+ <button id="shareBtn"
+        class="btn secondary"
+        type="button"
+        aria-expanded="false"
+        aria-controls="sharePanel">
+  Share
+</button>
 
   <!-- Collapsible share panel -->
   <div id="sharePanel" class="share-panel" hidden>
@@ -243,8 +243,8 @@
     })();
   </script>
 <script>
-  const toggle = document.getElementById("shareToggle");
-  const panel = document.getElementById("sharePanel");
+  const toggle = document.getElementById("shareBtn");
+  const panel  = document.getElementById("sharePanel");
 
   if (toggle && panel) {
     toggle.addEventListener("click", () => {
@@ -254,6 +254,7 @@
     });
   }
 </script>
+
 
   <script>
     // ---------- ADSENSE SAFE LOADER ----------
