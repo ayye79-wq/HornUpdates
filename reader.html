@@ -242,6 +242,18 @@
       }
     })();
   </script>
+<script>
+  const toggle = document.getElementById("shareToggle");
+  const panel = document.getElementById("sharePanel");
+
+  if (toggle && panel) {
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      panel.hidden = isOpen;
+    });
+  }
+</script>
 
   <script>
     // ---------- ADSENSE SAFE LOADER ----------
