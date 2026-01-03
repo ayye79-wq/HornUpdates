@@ -887,3 +887,11 @@ body.policy-page .breadcrumb .sep{
 html, body {
   overflow-x: hidden;
 }
+/* Homepage intro emphasis (BBC-style, subtle) */
+.intro {
+  font-size: 1.05rem;        /* slightly larger than body */
+  line-height: 1.65;
+  color: #374151;            /* softer than pure black */
+  max-width: 920px;
+  margin: 14px 0 18px;
+}
