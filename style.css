@@ -895,3 +895,25 @@ html, body {
   max-width: 920px;
   margin: 14px 0 18px;
 }
+/* ===== Featured story spacing refinement ===== */
+.story-card--featured {
+  padding: 14px 16px;        /* was likely 18–20px */
+}
+
+.story-card--featured .story-title {
+  margin-bottom: 6px;        /* tighten gap below title */
+}
+
+.story-card--featured .story-summary {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.story-card--featured .story-meta {
+  margin-top: 6px;
+  font-size: 0.85rem;        /* slightly tighter meta */
+}
+/* Option A: slightly tighter tags row */
+.story-card--featured .story-tags {
+  margin-bottom: 6px;
+}
