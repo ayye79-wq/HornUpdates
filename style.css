@@ -971,3 +971,20 @@ html, body {
     margin-top: 10px;
   }
 }
+.share-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .share-panel {
+    display: flex !important;
+    flex-direction: row;
+    gap: 10px;
+  }
+  #shareToggle {
+    display: none;
+  }
+}
