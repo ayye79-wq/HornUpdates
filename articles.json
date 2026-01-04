@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-01-04T11:43:46.788703+00:00",
+  "generated_at": "2026-01-04T16:26:39.609181+00:00",
   "articles": [
+    {
+      "title": "Schools to start reopening after Nigeria mass abduction",
+      "summary": "Schools in \"safe and secure areas\" will be allowed to reopen after 250 children were taken in November.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-04T12:56:59+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c0lxprn290xo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
     {
       "title": "مسيرات «الدعم السريع» تهاجم مواقع حيوية بولايتي شمال كردفان والنيل الأبيض",
       "summary": "الأبيض، 4 يناير 2026 – هاجمت مسيرات الدعم السريع عدة مواقع حيوية في الأبيض عاصمة ولاية شمال كردفان وفي ولاية النيل الأبيض في أواسط السودان. ورصد شهود عيان مساء أمس و فجر اليوم مسيرات انقضاضية استهدفت مواقع مدنية وأخرى حيوية بولايتي النيل الأبيض وشمال كردفان. وأكدت شركة كهرباء السودان في بيان تعرض محطة الأبيض الحرارية فجر الأحد لاعتداء بالمسيرات أسفر عن إصابات مباشرة لحريق مبنى الماكينات. وأضاف البيان أن قوات الدفاع المدني جهودا كبيرة في إخماد الحريق ومن ستتم عملية التقييم الفني لآثار الاعتداء ومن ثم اتخاذ المعالجات المطلوبة.",
@@ -2537,19 +2548,6 @@
       "published_at": "2025-12-23T20:26:45+00:00",
       "source_url": "https://sudantribune.net/article/308548",
       "source_name": "سودان تربيون"
-    },
-    {
-      "title": "US offers $3,000 cash, free flights for immigrants self deportation",
-      "summary": "The Trump administration has raised financial incentives for undocumented migrants to...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-23T19:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/us-offers-3-000-cash-free-flights-immigrants-self-deportation-5306864",
-      "source_name": "The EastAfrican"
     }
   ]
 }
