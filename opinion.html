@@ -24,7 +24,17 @@
     a:hover{text-decoration:underline}
     .top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
     .logo{width:34px;height:34px;border-radius:8px}
-    .muted{color:#6b7280;font-size:14px}
+   .muted { color:#6b7280; }          /* no forced tiny font */
+.meta { font-size:13px; color:#6b7280; margin:6px 0 0; }  /* meta stays small */
+
+.post .muted,
+.sidebar .muted {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+
     .nav{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 0}
     h1{margin:10px 0 8px;font-size:28px}
     .hero{margin:12px 0 14px;padding:14px;border-radius:12px;background:#f9fafb;border:1px solid #e5e7eb}
@@ -136,6 +146,7 @@ Somaliland Recognition: Who Moves Next — and Why?
   </div>
 </body>
 </html>
+
 
 
 
