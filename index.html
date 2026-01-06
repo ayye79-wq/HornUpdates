@@ -8,7 +8,9 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-  <link rel="canonical" href="https://hornupdates.com/" />
+<link rel="canonical" href="https://hornupdates.com/diaspora.html" />
+
+
 
   <meta name="description" content="Horn Updates provides independent news and concise analysis from across the Horn of Africa, covering Ethiopia, Somalia, Eritrea, Djibouti, and Sudan with daily updates and links to trusted sources." />
 
@@ -256,7 +258,8 @@ function getCategoryValue(article) {
   // ---------- RENDER ----------
   function renderStoryCard(article, isFeatured = false) {
     const countriesArr = getCountries(article);
-    const category = getTopicLabel(article);
+    const category = (getCategoryValue(article) || "general").replace(/^\w/, c => c.toUpperCase());
+
     const published = article.published_at || "";
     const sourceName = article.source_name || article.source || "";
     const href = buildReaderLink(article.source_url || article.link);
