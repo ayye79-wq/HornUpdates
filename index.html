@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />diaspora.html
+  <meta charset="UTF-8"/>
  <title>Horn Updates | Horn of Africa News, Analysis & Daily Briefings</title>
 
 
@@ -243,6 +243,15 @@
     const d = new Date(iso);
     return isNaN(d) ? String(iso) : d.toLocaleString();
   }
+function getCategoryValue(article) {
+  // Prefer explicit category/topic if present
+  const cat =
+    String(article.category || "").trim() ||
+    String(article.topic || "").trim() ||
+    (Array.isArray(article.topic_tags) && article.topic_tags.length ? String(article.topic_tags[0] || "").trim() : "");
+
+  return cat.toLowerCase();
+}
 
   // ---------- RENDER ----------
   function renderStoryCard(article, isFeatured = false) {
@@ -296,29 +305,46 @@
   let allArticles = [];
   let currentFilter = "all";
 
-  function matchesFilter(article, filter) {
-    if (filter === "all") return true;
-    const needle = String(filter || "").toLowerCase();
+ function matchesFilter(article, filter) {
+  if (!filter || filter === "all") return true;
 
-    const countries = getCountries(article).join(" ").toLowerCase();
-    const topics = (
-      (Array.isArray(article.topic_tags) ? article.topic_tags.join(" ") : "") +
-      " " + (article.category || "") +
-      " " + (article.topic || "")
-    ).toLowerCase();
+  const needle = String(filter).toLowerCase();
 
-    const title = (article.title || "").toLowerCase();
-    const summary = (article.summary || article.excerpt || "").toLowerCase();
-    const source = (article.source_name || article.source || "").toLowerCase();
+  // ✅ STRICT category filters for your nav buttons
+  const strictCategories = new Set([
+    "politics",
+    "business",
+    "society",
+    "security",
+    "culture",
+    "diaspora",
+    "opinion"
+  ]);
 
-    return (
-      countries.includes(needle) ||
-      topics.includes(needle) ||
-      title.includes(needle) ||
-      summary.includes(needle) ||
-      source.includes(needle)
-    );
+  if (strictCategories.has(needle)) {
+    return getCategoryValue(article) === needle;
   }
+
+  // ✅ Otherwise fallback to your current "search everywhere" behavior
+  const countries = getCountries(article).join(" ").toLowerCase();
+  const topics = (
+    (Array.isArray(article.topic_tags) ? article.topic_tags.join(" ") : "") +
+    " " + (article.category || "") +
+    " " + (article.topic || "")
+  ).toLowerCase();
+
+  const title = (article.title || "").toLowerCase();
+  const summary = (article.summary || article.excerpt || "").toLowerCase();
+  const source = (article.source_name || article.source || "").toLowerCase();
+
+  return (
+    countries.includes(needle) ||
+    topics.includes(needle) ||
+    title.includes(needle) ||
+    summary.includes(needle) ||
+    source.includes(needle)
+  );
+}
 
   function renderPage(filteredList) {
     const featuredContainer = document.getElementById("featured-container");
@@ -341,10 +367,11 @@
     setBreakingBar(featured);
   }
 
-  function applyFilter() {
-    const filtered = allArticles.filter(a => matchesFilter(a, currentFilter));
-    renderPage(filtered.length ? filtered : allArticles);
-  }
+ function applyFilter() {
+  const filtered = allArticles.filter(a => matchesFilter(a, currentFilter));
+  renderPage(filtered);
+}
+
 
   function setupFilters() {
     document.querySelectorAll(".filter-pill").forEach(btn => {
