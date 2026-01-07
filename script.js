@@ -49,123 +49,6 @@ function formatDate(iso) {
 }
 
 // ============================
-// Publisher-value helpers (Step 2)
-// ============================
-
-function hoursAgo(iso) {
-  if (!iso) return null;
-  const t = new Date(iso).getTime();
-  if (Number.isNaN(t)) return null;
-  return Math.round((Date.now() - t) / (1000 * 60 * 60));
-}
-
-function buildPublisherValue(article) {
-  const topic = (article.category || article.topic || "News").toString();
-  const countriesArr = Array.isArray(article.countries) ? article.countries : [];
-  const countries = countriesArr.length ? countriesArr.join(", ") : "the region";
-  const hrs = hoursAgo(article.published_at);
-  const recency =
-    hrs == null ? "" : (hrs <= 24 ? "in the last 24 hours" : `in the last ${hrs} hours`);
-
-  // Short, non-speculative
-  const why = `This ${topic.toLowerCase()} update from ${countries} helps readers track developments ${recency || "as they unfold"}.`;
-  const watch = `Watch for official statements, follow-up reporting, and any policy or security actions tied to this story.`;
-
-  return { why, watch };
-}
-
-function renderPublisherValueBlock(article) {
-  const pv = buildPublisherValue(article);
-  return `
-    <div class="publisher-value" style="margin-top:10px;">
-      <p style="margin:0; font-size:.95rem;">
-        <strong>Why this matters:</strong> ${pv.why}
-      </p>
-      <p style="margin:6px 0 0; font-size:.95rem;">
-        <strong>What to watch:</strong> ${pv.watch}
-      </p>
-    </div>
-  `;
-}
-
-// ============================
-// AdSense-safe helpers (NEW / FIXED)
-// ============================
-
-function loadAdSenseOnce() {
-  if (window.__adsense_loaded) return;
-  window.__adsense_loaded = true;
-
-  const s = document.createElement("script");
-  s.async = true;
-  s.src =
-    "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932";
-  s.crossOrigin = "anonymous";
-  document.head.appendChild(s);
-}
-
-function pushAdsSafely() {
-  if (!window.adsbygoogle) window.adsbygoogle = [];
-  document.querySelectorAll("ins.adsbygoogle").forEach((ins) => {
-    // prevent double-push
-    if (ins.getAttribute("data-adsbygoogle-status") === "done") return;
-    try {
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      // fail quietly
-    }
-  });
-}
-
-// Count how many story cards are actually visible on screen
-function getRenderedStoryCount() {
-  return document.querySelectorAll(
-    ".story-card, .hero-main, .hero-side-card"
-  ).length;
-}
-
-// Show/hide ad containers so Google never sees ads on thin/empty screens
-function setAdsVisibility(shouldShow) {
-  document
-    .querySelectorAll(".sidebar-ad, .reader-ad, .ad-slot, .ad-container, ins.adsbygoogle")
-    .forEach((el) => {
-      if (el.classList?.contains("adsbygoogle")) {
-        el.style.display = shouldShow ? "block" : "none";
-      } else {
-        el.style.display = shouldShow ? "" : "none";
-      }
-    });
-}
-
-function maybeRunAds(minCards = 5) {
-  const count = getRenderedStoryCount();
-  const ok = count >= minCards;
-
-  if (!ok) {
-    setAdsVisibility(false);
-    return;
-  }
-
-  setAdsVisibility(true);
-  loadAdSenseOnce();
-
-  let tries = 0;
-  const MAX_TRIES = 20;
-
-  const t = setInterval(() => {
-    tries++;
-    const scriptLoaded = !!window.adsbygoogle;
-    const hasAdUnits = document.querySelectorAll("ins.adsbygoogle").length > 0;
-
-    if (scriptLoaded && hasAdUnits) {
-      clearInterval(t);
-      pushAdsSafely();
-    }
-    if (tries >= MAX_TRIES) clearInterval(t);
-  }, 350);
-}
-
-// ============================
 // Render functions
 // ============================
 
@@ -192,11 +75,7 @@ function renderStoryCard(article) {
           </a>
         </h3>
       </header>
-
       ${summary ? `<p class="story-summary">${summary}</p>` : ""}
-
-      ${renderPublisherValueBlock(article)}
-
       <footer class="story-meta">
         ${sourceName ? `<span class="story-source">${sourceName}</span>` : ""}
         ${published ? `<span class="story-date">${published}</span>` : ""}
@@ -227,12 +106,8 @@ function renderHeroMain(article) {
         <h2 class="hero-main-title">
           <a class="card-link" href="${href}">${title}</a>
         </h2>
-
         ${summary ? `<p class="hero-main-summary">${summary}</p>` : ""}
-
-        ${renderPublisherValueBlock(article)}
       </div>
-
       <footer class="hero-main-meta">
         ${sourceName ? `<span class="hero-main-source">${sourceName}</span>` : ""}
         ${published ? `<span class="hero-main-date">${published}</span>` : ""}
@@ -298,6 +173,7 @@ function filterArticles(allArticles, filterValue) {
 
   const fv = filterValue.toLowerCase();
 
+  // Map simple buttons to backend-style topics
   const topicMap = {
     politics: "politics & governance",
     business: "business & economy",
@@ -315,10 +191,12 @@ function filterArticles(allArticles, filterValue) {
       ? a.topic_tags.join(" ").toLowerCase()
       : "";
 
+    // Match on topic/category
     if (cat.includes(mapped) || topic.includes(mapped) || joinedTags.includes(mapped)) {
       return true;
     }
 
+    // Also allow filtering by country name
     const countries = Array.isArray(a.countries) ? a.countries : [];
     if (countries.some((c) => c.toLowerCase().includes(mapped))) {
       return true;
@@ -336,14 +214,12 @@ function setupFilters(allArticles, renderLatestFn) {
     btn.addEventListener("click", () => {
       const filterVal = btn.getAttribute("data-filter") || "all";
 
+      // Toggle active state
       buttons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
 
       const filtered = filterArticles(allArticles, filterVal.toLowerCase());
       renderLatestFn(filtered);
-
-      // ✅ Re-evaluate ads after filter changes
-      maybeRunAds(5);
     });
   });
 }
@@ -367,11 +243,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#latest-list") ||
     document.querySelector(".latest-stories");
 
+  // Safety check
   if (!latestContainer && !heroMainSlot) {
     console.warn("HornUpdates: no target containers found in DOM.");
   }
-
-  setAdsVisibility(false);
 
   fetch("articles.json?v=" + Date.now())
     .then((res) => res.json())
@@ -379,14 +254,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const rawArticles = Array.isArray(data.articles) ? data.articles : data;
       let articles = rawArticles.map(normalizeArticle);
 
+      // Sort newest -> oldest
       articles.sort((a, b) => {
         const da = new Date(a.published_at || 0).getTime();
         const db = new Date(b.published_at || 0).getTime();
         return db - da;
       });
 
+      // HERO main + side
       const heroMainArticle = articles[0] || null;
-      const heroSideArticles = articles.slice(1, 4);
+      const heroSideArticles = articles.slice(1, 4); // up to 3 side stories
 
       if (heroMainSlot && heroMainArticle) {
         heroMainSlot.innerHTML = renderHeroMain(heroMainArticle);
@@ -396,25 +273,23 @@ document.addEventListener("DOMContentLoaded", () => {
         heroSideSlot.innerHTML = heroSideArticles.map(renderHeroSide).join("");
       }
 
+      // Breaking bar (use heroMain or next best)
       updateBreakingBar(heroMainArticle || articles[0]);
 
+      // Latest list renderer (used by filters too)
       function renderLatestList(list) {
         if (!latestContainer) return;
         latestContainer.innerHTML = list.map(renderStoryCard).join("");
-
-        // ✅ Re-evaluate ads after latest list render
-        maybeRunAds(5);
       }
 
+      // Initial latest list (skip hero articles)
       const latestArticles = articles.slice(1);
       renderLatestList(latestArticles);
 
+      // Setup filters
       setupFilters(articles, renderLatestList);
-
-      setTimeout(() => maybeRunAds(5), 300);
     })
     .catch((err) => {
       console.error("HornUpdates: error loading articles.json", err);
-      setAdsVisibility(false);
     });
 });

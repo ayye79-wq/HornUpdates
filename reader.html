@@ -8,33 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horn Updates • Reader</title>
 
-  <link rel="canonical" id="canonicalLink" href="https://hornupdates.com/reader.html" />
-
-  <!-- Organization Schema (site identity) -->
-  <script type="application/ld+json" id="orgSchema">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://hornupdates.com/#organization",
-    "name": "Horn Updates",
-    "url": "https://hornupdates.com/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://hornupdates.com/Horn1_logo.png"
-    },
-    "sameAs": [
-      "https://x.com/HornUpdatesHQ"
-    ]
-  }
-  </script>
-
-  <!-- NewsArticle Schema Placeholder (populated after match is found) -->
-  <script type="application/ld+json" id="newsSchema">
-  {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle"
-  }
-  </script>
+  <!-- ✅ AdSense loader (ONLY ONCE per page) -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
+    crossorigin="anonymous"></script>
 
   <style>
     * { box-sizing: border-box; }
@@ -85,106 +62,27 @@
       line-height: 1.9;
       font-family: "Segoe UI", Tahoma, Arial, sans-serif;
     }
-
-    /* 🔒 Ads hidden by default (policy safe) */
-    .reader-ad { display: none; }
-/* =========================
-   Reader-only typography
-   ========================= */
-.reader-page .card {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.reader-page #title {
-  font-size: 1.85rem;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin: 12px 0 10px;
-}
-
-.reader-page .summary {
-  font-size: 1.12rem;
-  line-height: 1.85;
-  letter-spacing: 0.005em;
-}
-
-.reader-page .meta {
-  font-size: 0.95rem;
-}
-
-.reader-page .pill {
-  font-size: 0.85rem;
-}
-
-@media (max-width: 600px) {
-  .reader-page #title { font-size: 1.55rem; }
-  .reader-page .summary { font-size: 1.05rem; line-height: 1.8; }
-}
-/* Arabic / RTL readability */
-.reader-page .rtl {
-  font-size: 1.15rem;
-  line-height: 2.0;
-  letter-spacing: 0;
-}
-/* ===== Reader-only typography refinements ===== */
-/* Reader headline (BBC-style, controlled) */
-.reader-page #title {
-  font-size: 1.45rem;   /* ← KEY FIX */
-  line-height: 1.3;
-  font-weight: 700;
-  margin-top: 12px;
-}
-
-.reader-page .summary,
-#summary {
-  font-size: 1.08rem;
-  line-height: 1.75;
-  color: #1f2937;
-}
-
-.reader-page .meta,
-.meta {
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-    
   </style>
 </head>
 
-<body class="reader-page">
-
+<body>
   <div class="wrap">
     <div class="topbar">
       <div class="brand">
-        <a href="/">Horn Updates</a>
+        <a href="index.html">Horn Updates</a>
         <span class="muted">• Reader</span>
       </div>
-<div class="actions">
-  <!-- Always visible -->
-  <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">
-    Read full article ↗
-  </a>
 
-  <!-- Share toggle -->
- <button id="shareBtn"
-        class="btn secondary"
-        type="button"
-        aria-expanded="false"
-        aria-controls="sharePanel">
-  Share
-</button>
+      <div class="actions">
+        <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
+        <button id="copyBtn" class="btn secondary" type="button">Copy link</button>
+        <button id="shareBtn" class="btn secondary" type="button">Share</button>
+        <a id="waBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a id="tgBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a id="fbBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+    </div>
 
-  <!-- Collapsible share panel -->
-  <div id="sharePanel" class="share-panel" hidden>
-    <button id="copyBtn" class="btn secondary" type="button">Copy link</button>
-    <a id="waBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-    <a id="tgBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
-    <a id="fbBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
-  </div>
-</div>
-</div>
     <div class="card">
       <div class="meta">
         <span class="pill" id="sourcePill">Source</span>
@@ -200,7 +98,7 @@
         <span class="muted">Loading summary…</span>
       </div>
 
-      <!-- Reader Top Ad (hidden until content is valid) -->
+      <!-- ✅ AdSense: Reader Top Ad -->
       <div class="reader-ad reader-ad-top" style="margin:22px 0;">
         <ins class="adsbygoogle"
              style="display:block"
@@ -209,6 +107,9 @@
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
       </div>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
 
       <div class="divider"></div>
 
@@ -218,7 +119,7 @@
         Full article remains on the publisher’s website.
       </div>
 
-      <!-- Reader Bottom Ad (optional) -->
+      <!-- ✅ AdSense: Reader Bottom Ad (add near end of content) -->
       <div class="reader-ad reader-ad-bottom" style="margin:22px 0;">
         <ins class="adsbygoogle"
              style="display:block"
@@ -227,63 +128,16 @@
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
       </div>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
   </div>
 
-  <!-- Canonical updater for ?id= -->
   <script>
-    (function () {
-      const id = new URLSearchParams(window.location.search).get("id");
-      if (id) {
-        const canon = document.getElementById("canonicalLink");
-        if (canon) {
-          canon.href = `https://hornupdates.com/reader.html?id=${encodeURIComponent(id)}`;
-        }
-      }
-    })();
-  </script>
-<script>
-  const toggle = document.getElementById("shareBtn");
-  const panel  = document.getElementById("sharePanel");
-
-  if (toggle && panel) {
-    toggle.addEventListener("click", () => {
-      const isOpen = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!isOpen));
-      panel.hidden = isOpen;
-    });
-  }
-</script>
-
-
-  <script>
-    // ---------- ADSENSE SAFE LOADER ----------
-    function loadAdSenseOnce() {
-      if (window.__adsense_loaded) return;
-      window.__adsense_loaded = true;
-
-      const s = document.createElement("script");
-      s.async = true;
-      s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932";
-      s.crossOrigin = "anonymous";
-      document.head.appendChild(s);
-    }
-
-    function pushAdsSafely() {
-      if (!window.adsbygoogle) window.adsbygoogle = [];
-      document.querySelectorAll("ins.adsbygoogle").forEach(ins => {
-        if (ins.getAttribute("data-adsbygoogle-status") === "done") return;
-        try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
-      });
-    }
-
-    function wordCount(el) {
-      const t = (el?.innerText || "").trim();
-      return t ? t.split(/\s+/).length : 0;
-    }
-
     function getParam(name) {
-      return new URL(window.location.href).searchParams.get(name);
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
     }
 
     function isArabic(text) {
@@ -297,89 +151,11 @@
       } catch { return ""; }
     }
 
-    // ✅ NewsArticle schema writer (called ONLY when match exists)
-    function setNewsSchema(match, canonicalUrl) {
-      try {
-        const schemaEl = document.getElementById("newsSchema");
-        if (!schemaEl) return;
-
-        const description = (match.summary || "")
-          .replace(/\s+/g, " ")
-          .trim()
-          .slice(0, 200);
-
-        const publishedISO = match.published_at
-          ? new Date(match.published_at).toISOString()
-          : undefined;
-
-        const imageUrl = match.image_url || "https://hornupdates.com/Horn1_logo.png";
-
-        const data = {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": canonicalUrl
-          },
-          "headline": (match.title || "Horn Updates").trim().slice(0, 110),
-          "description": description || "AI-generated summary with a link to the original publisher.",
-          "datePublished": publishedISO,
-          "image": [imageUrl],
-          "author": {
-            "@type": "Organization",
-            "name": "Horn Updates"
-          },
-          "publisher": {
-            "@id": "https://hornupdates.com/#organization"
-          },
-          "isBasedOn": match.source_url || match.link
-        };
-
-        Object.keys(data).forEach(k => (data[k] == null || data[k] === "") && delete data[k]);
-
-        schemaEl.textContent = JSON.stringify(data);
-      } catch (e) {}
-    }
-
     async function load() {
       const articleUrl = getParam("url");
-
-      // ✅ NO REDIRECT: show a friendly fallback
-      if (!articleUrl) {
-        document.querySelectorAll(".reader-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
-        document.getElementById("openBtn").style.display = "none";
-        document.getElementById("copyBtn").style.display = "none";
-        document.getElementById("shareBtn").style.display = "none";
-        document.getElementById("waBtn").style.display = "none";
-        document.getElementById("tgBtn").style.display = "none";
-        document.getElementById("fbBtn").style.display = "none";
-
-        document.getElementById("title").textContent = "Article not available";
-        document.getElementById("summary").innerHTML = `
-          <p>This page displays article summaries when opened from Horn Updates.</p>
-          <p>Please return to the <a href="/">homepage</a> to browse the latest stories.</p>
-        `;
-        return;
-      }
+      if (!articleUrl) { window.location.href = "index.html"; return; }
 
       document.getElementById("openBtn").href = articleUrl;
-
-      // ✅ Wire share links/buttons
-      const shareUrl = window.location.href;
-      document.getElementById("waBtn").href = "https://wa.me/?text=" + encodeURIComponent(shareUrl);
-      document.getElementById("tgBtn").href = "https://t.me/share/url?url=" + encodeURIComponent(shareUrl);
-      document.getElementById("fbBtn").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareUrl);
-
-      document.getElementById("copyBtn").onclick = async () => {
-        try { await navigator.clipboard.writeText(shareUrl); } catch (e) {}
-      };
-
-      document.getElementById("shareBtn").onclick = async () => {
-        try {
-          if (navigator.share) await navigator.share({ url: shareUrl });
-          else await navigator.clipboard.writeText(shareUrl);
-        } catch (e) {}
-      };
 
       try {
         const res = await fetch("articles.json", { cache: "no-store" });
@@ -388,24 +164,18 @@
         const target = norm(articleUrl);
 
         const match = articles.find(a => norm(a.source_url || a.link || "") === target);
-
         if (!match) {
           document.getElementById("title").textContent = "Article";
           document.getElementById("summary").textContent =
-            "We could not match this article yet. You can still read the full story.";
+            "We could not match this article in articles.json yet. You can still read the full story.";
           return;
         }
 
         document.getElementById("title").textContent = match.title || "Article";
         document.getElementById("summary").textContent = match.summary || "";
 
-        // ✅ Populate NewsArticle schema only when real content exists
-        const canonicalUrl = document.getElementById("canonicalLink").href;
-        setNewsSchema(match, canonicalUrl);
-
         document.getElementById("sourcePill").textContent =
           "Source: " + (match.source_name || "Source");
-
         document.getElementById("datePill").textContent =
           "Date: " + (match.published_at ? new Date(match.published_at).toLocaleDateString() : "—");
 
@@ -416,46 +186,19 @@
         }
 
         const sumEl = document.getElementById("summary");
-        if (isArabic(match.summary) || isArabic(match.title)) {
+        const rtl = isArabic(match.summary) || isArabic(match.title);
+        if (rtl) {
           sumEl.classList.add("rtl");
           document.getElementById("title").classList.add("rtl");
         }
 
-        // ✅ ADS ONLY IF CONTENT IS REAL (>= 120 words)
-        const wc = wordCount(sumEl);
-        if (wc >= 120) {
-          document.querySelectorAll(".reader-ad").forEach(el => el.style.display = "block");
-          loadAdSenseOnce();
-          setTimeout(pushAdsSafely, 800);
-        } else {
-          document.querySelectorAll(".reader-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
-        }
-
       } catch (e) {
         document.getElementById("title").textContent = "Error";
-        document.getElementById("summary").textContent = "Could not load article.";
-        document.querySelectorAll(".reader-ad, ins.adsbygoogle").forEach(el => el.style.display = "none");
+        document.getElementById("summary").textContent = "Could not load articles.json.";
       }
     }
 
     load();
   </script>
-
-  <footer class="site-footer" style="margin-top:32px; padding:18px; text-align:center; font-size:.9rem; color:#6b7280;">
-    <p>© 2025 Horn Updates. All rights reserved.</p>
-
-    <p class="footer-links" style="margin:8px 0;">
-      <a href="/about.html">About</a> •
-      <a href="/editorial-policy.html">Editorial Policy</a> •
-      <a href="/privacy.html">Privacy</a> •
-      <a href="/terms.html">Terms</a> •
-      <a href="/contact.html">Contact</a>
-    </p>
-
-    <p style="margin-top:6px;">
-      This page displays AI-generated summaries with links to original publishers.
-    </p>
-  </footer>
-
 </body>
 </html>
