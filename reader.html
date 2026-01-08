@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horn Updates • Reader</title>
 
-  <!-- ✅ AdSense loader (ONLY ONCE per page) -->
+  <!-- ✅ AdSense loader -->
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
     crossorigin="anonymous"></script>
@@ -23,31 +23,18 @@
       line-height: 1.6;
     }
     .wrap { max-width: 920px; margin: 0 auto; padding: 18px; }
-    .topbar {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 10px; margin-bottom: 14px;
-    }
-    .brand a { text-decoration: none; color: #111827; font-weight: 900; }
+    .topbar { display:flex; justify-content:space-between; margin-bottom:14px; gap:10px; }
+    .brand a { text-decoration:none; color:#111827; font-weight:900; }
     .btn {
-      display: inline-block;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid #e5e7eb;
-      background: #fff;
-      color: #111827;
-      text-decoration: none;
-      font-weight: 700;
-      cursor: pointer;
+      padding:10px 12px; border-radius:12px; border:1px solid #e5e7eb;
+      background:#fff; font-weight:700; cursor:pointer; text-decoration:none; color:#111827;
     }
     .btn.secondary { background:#f3f4f6; font-weight:600; }
     .actions { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
 
     .card {
-      background:#fff;
-      border:1px solid #e5e7eb;
-      border-radius:18px;
-      box-shadow:0 10px 28px rgba(0,0,0,.06);
-      padding:18px;
+      background:#fff; border:1px solid #e5e7eb; border-radius:18px;
+      box-shadow:0 10px 28px rgba(0,0,0,.06); padding:18px;
     }
     .meta { color:#6b7280; font-size:.95rem; display:flex; gap:10px; flex-wrap:wrap; }
     .pill { background:#f3f4f6; padding:4px 10px; border-radius:999px; font-size:.85rem; }
@@ -56,221 +43,116 @@
     .divider { height:1px; background:#e5e7eb; margin:18px 0; }
     .muted { color:#6b7280; }
 
-    /* ✅ Reader context box */
     .reader-box {
-      margin: 22px 0;
-      padding: 16px;
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      display: none; /* ✅ hidden until content loads */
+      margin:22px 0; padding:16px; background:#f9fafb;
+      border:1px solid #e5e7eb; border-radius:14px; display:none;
     }
-    .reader-box h3 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-    }
-    .reader-box p {
-      margin: 0;
-      line-height: 1.7;
-    }
+    .reader-box h3 { margin:0 0 8px; font-size:1rem; }
 
-    .rtl {
-      direction: rtl;
-      text-align: right;
-      line-height: 1.9;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    }
+    .rtl { direction:rtl; text-align:right; line-height:1.9; }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">
-        <a href="index.html">Horn Updates</a>
-        <span class="muted">• Reader</span>
-      </div>
-
-      <div class="actions">
-        <a id="openBtn" class="btn" target="_blank" rel="noopener noreferrer">Read full article ↗</a>
-        <button id="copyBtn" class="btn secondary" type="button">Copy link</button>
-        <button id="shareBtn" class="btn secondary" type="button">Share</button>
-        <a id="waBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a id="tgBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a id="fbBtn" class="btn secondary" target="_blank" rel="noopener noreferrer">Facebook</a>
-      </div>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">
+      <a href="index.html">Horn Updates</a>
+      <span class="muted">• Reader</span>
     </div>
-
-    <div class="card">
-      <div class="meta">
-        <span class="pill" id="sourcePill">Source</span>
-        <span class="pill" id="datePill">Date</span>
-        <span class="pill" id="countryPill" style="display:none;"></span>
-      </div>
-
-      <h1 id="title">Loading…</h1>
-
-      <div class="divider"></div>
-
-      <div id="summary" class="summary">
-        <span class="muted">Loading summary…</span>
-      </div>
-
-      <!-- ✅ Context block (hidden until match loads) -->
-      <div class="reader-box" id="whyBox">
-        <h3>Why this matters</h3>
-        <p>
-          Developments like this can signal broader economic, political, or regional shifts
-          affecting the Horn of Africa and neighboring markets. Tracking these changes helps
-          explain longer-term trends beyond a single headline.
-        </p>
-      </div>
-
-      <!-- ✅ AdSense: Reader Top Ad -->
-      <div class="reader-ad reader-ad-top" style="margin:22px 0;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7773342225754932"
-             data-ad-slot="8296199432"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-      </div>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-
-      <div class="divider"></div>
-
-      <div class="muted" style="font-size:.95rem;">
-        <strong>Attribution:</strong>
-        This summary is written by Horn Updates.
-        Full article remains on the publisher’s website.
-      </div>
-
-      <!-- ✅ AdSense: Reader Bottom Ad -->
-      <div class="reader-ad reader-ad-bottom" style="margin:22px 0;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7773342225754932"
-             data-ad-slot="REPLACE_WITH_BOTTOM_SLOT"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-      </div>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+    <div class="actions">
+      <a id="openBtn" class="btn" target="_blank">Read full article ↗</a>
+      <button id="copyBtn" class="btn secondary">Copy link</button>
+      <button id="shareBtn" class="btn secondary">Share</button>
+      <a id="waBtn" class="btn secondary" target="_blank">WhatsApp</a>
+      <a id="tgBtn" class="btn secondary" target="_blank">Telegram</a>
+      <a id="fbBtn" class="btn secondary" target="_blank">Facebook</a>
     </div>
   </div>
 
-  <script>
-    function getParam(name) {
-      const url = new URL(window.location.href);
-      return url.searchParams.get(name);
-    }
+  <div class="card">
+    <div class="meta">
+      <span class="pill" id="sourcePill">Source</span>
+      <span class="pill" id="datePill">Date</span>
+      <span class="pill" id="countryPill" style="display:none;"></span>
+    </div>
 
-    function isArabic(text) {
-      return /[\u0600-\u06FF]/.test(text || "");
-    }
+    <h1 id="title">Loading…</h1>
+    <div class="divider"></div>
+    <div id="summary" class="summary"><span class="muted">Loading summary…</span></div>
 
-    function norm(u) {
-      try {
-        const x = new URL(u);
-        return x.hostname.replace(/^www\./, "") + x.pathname.replace(/\/$/, "");
-      } catch { return ""; }
-    }
+    <div class="reader-box" id="whyBox">
+      <h3>Why this matters</h3>
+      <p id="whyText"></p>
+    </div>
 
-    function setShareLinks(articleUrl, titleText) {
-      const encUrl = encodeURIComponent(articleUrl || "");
-      const encText = encodeURIComponent((titleText || "Horn Updates") + " — " + (articleUrl || ""));
+    <div class="reader-ad reader-ad-top" style="margin:22px 0;">
+      <ins class="adsbygoogle" style="display:block"
+        data-ad-client="ca-pub-7773342225754932"
+        data-ad-slot="8296199432"
+        data-ad-format="auto"></ins>
+    </div>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 
-      document.getElementById("waBtn").href = "https://wa.me/?text=" + encText;
-      document.getElementById("tgBtn").href = "https://t.me/share/url?url=" + encUrl + "&text=" + encodeURIComponent(titleText || "Horn Updates");
-      document.getElementById("fbBtn").href = "https://www.facebook.com/sharer/sharer.php?u=" + encUrl;
-    }
+    <div class="divider"></div>
+    <div class="muted"><strong>Attribution:</strong> This summary is written by Horn Updates.</div>
+  </div>
+</div>
 
-    async function load() {
-      const articleUrl = getParam("url");
-      if (!articleUrl) { window.location.href = "index.html"; return; }
+<script>
+/* ========= helpers ========= */
+function normalizeStr(s){return(s??"").toString().toLowerCase().replace(/\s+/g," ").trim();}
+function safeArr(x){return Array.isArray(x)?x:(x?[x]:[]);}
+function includesAny(h,n){const s=normalizeStr(h);return safeArr(n).some(k=>s.includes(normalizeStr(k)));}
+function stableHash(str){let h=2166136261;for(const c of String(str||"")){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;}
 
-      const openBtn = document.getElementById("openBtn");
-      openBtn.href = articleUrl;
+function pickWhyThisMatters(article,cfg){
+  const text = normalizeStr(`${article.title} ${article.summary} ${article.source} ${(article.country_tags||[]).join(" ")}`);
+  let best=null,p=-1;
+  for(const g of cfg.groups){
+    if(includesAny(text,g.match.any_keyword)&&g.priority>p){best=g;p=g.priority;}
+  }
+  const t=best?.templates||[cfg.default];
+  return t[stableHash(article.title)%t.length];
+}
 
-      // buttons
-      document.getElementById("copyBtn").addEventListener("click", async () => {
-        try {
-          await navigator.clipboard.writeText(articleUrl);
-          document.getElementById("copyBtn").textContent = "Copied ✅";
-          setTimeout(() => (document.getElementById("copyBtn").textContent = "Copy link"), 1200);
-        } catch {
-          alert("Could not copy. Please copy from the address bar.");
-        }
-      });
+/* ========= config ========= */
+const WHY_CFG={
+  default:{text:"Developments like this can signal broader regional or policy shifts affecting the Horn of Africa."},
+  groups:[{
+    priority:100,
+    match:{any_keyword:["aid","humanitarian","wfp","unicef","usaid","refugee","famine","drought"]},
+    templates:[
+      {text:"Aid decisions can reshape access to food, medicine, and essential services, especially in fragile regions."},
+      {text:"Humanitarian funding changes often reflect donor priorities and accountability concerns."}
+    ]
+  }]
+};
 
-      document.getElementById("shareBtn").addEventListener("click", async () => {
-        try {
-          if (navigator.share) {
-            await navigator.share({ title: document.getElementById("title").textContent, url: articleUrl });
-          } else {
-            alert("Sharing not supported here. Use the buttons (WhatsApp/Telegram/Facebook) or Copy link.");
-          }
-        } catch {}
-      });
+/* ========= load ========= */
+async function load(){
+  const articleUrl=new URL(location.href).searchParams.get("url");
+  if(!articleUrl)return location.href="index.html";
+  openBtn.href=articleUrl;
 
-      const target = norm(articleUrl);
+  const res=await fetch("articles.json",{cache:"no-store"});
+  const data=await res.json();
+  const a=(data.articles||[]).find(x=>articleUrl.includes(x.link||""));
+  if(!a)return;
 
-      try {
-        const res = await fetch("articles.json", { cache: "no-store" });
-        const data = await res.json();
-        const articles = Array.isArray(data) ? data : (data.articles || []);
+  title.textContent=a.title;
+  summary.textContent=a.summary;
+  sourcePill.textContent="Source: "+a.source_name;
+  datePill.textContent="Date: "+new Date(a.published_at).toLocaleDateString();
 
-        // ✅ FIXED MATCHER (tolerant)
-        const match = articles.find(a => {
-          const u = norm(a.source_url || a.link || "");
-          return u === target || u.includes(target) || target.includes(u);
-        });
+  const why=pickWhyThisMatters({
+    title:a.title, summary:a.summary, source:a.source_name, country_tags:a.country_tags||[]
+  },WHY_CFG);
 
-        if (!match) {
-          document.getElementById("title").textContent = "Article";
-          document.getElementById("summary").textContent =
-            "We could not match this article in articles.json yet. You can still read the full story.";
-          setShareLinks(articleUrl, "Horn Updates");
-          return;
-        }
-
-        document.getElementById("title").textContent = match.title || "Article";
-        document.getElementById("summary").textContent = match.summary || "";
-
-        document.getElementById("sourcePill").textContent =
-          "Source: " + (match.source_name || "Source");
-        document.getElementById("datePill").textContent =
-          "Date: " + (match.published_at ? new Date(match.published_at).toLocaleDateString() : "—");
-
-        if (Array.isArray(match.country_tags) && match.country_tags.length) {
-          const c = document.getElementById("countryPill");
-          c.style.display = "inline-block";
-          c.textContent = "Country: " + match.country_tags.join(", ");
-        }
-
-        // ✅ show context box only after real content loads
-        document.getElementById("whyBox").style.display = "block";
-
-        // RTL support
-        const rtl = isArabic(match.summary) || isArabic(match.title);
-        if (rtl) {
-          document.getElementById("summary").classList.add("rtl");
-          document.getElementById("title").classList.add("rtl");
-        }
-
-        setShareLinks(articleUrl, match.title || "Horn Updates");
-
-      } catch (e) {
-        document.getElementById("title").textContent = "Error";
-        document.getElementById("summary").textContent = "Could not load articles.json.";
-        setShareLinks(articleUrl, "Horn Updates");
-      }
-    }
-
-    load();
-  </script>
+  whyText.textContent=why.text;
+  whyBox.style.display="block";
+}
+load();
+</script>
 </body>
 </html>
