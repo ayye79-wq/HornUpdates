@@ -466,4 +466,17 @@ body {
   margin-top: 10px;
   font-style: italic;
 }
+.footer-links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:10px;
+}
+.footer-links a{
+  color:#374151;
+  font-weight:600;
+  text-decoration:none;
+}
+.footer-links a:hover{ text-decoration:underline; }
 
