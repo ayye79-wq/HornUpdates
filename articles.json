@@ -1,6 +1,270 @@
 {
-  "generated_at": "2026-01-08T11:11:48.607370+00:00",
+  "generated_at": "2026-01-09T11:24:59.730198+00:00",
   "articles": [
+    {
+      "title": "Kenya’s KCSE results show modest gains in university entry",
+      "summary": "Elite schools continue to dominate top grades highlighting deep structural inequalities as the...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-09T09:15:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/kenya-kcse-results-show-modest-gains-in-university-entry-5320984",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "የፈረንሳይ ግዙፍ የገበያ ማዕከል ኢትዮጵያ ሊገባ ነው",
+      "summary": "​በአለም አቀፍ የችርቻሮ ንግድ ዘርፍ ግዙፍ ስም ያለው ካርፎር፣ ከሜድሮክ ኢንቨስትመንት ግሩፕ ጋር ባደረገው ስምምነት መሰረት የኩዊንስ ሱፐርማርኬትን ተክቶ ስራ ሊጀምር ነው። ​በጀማል አህመድ የሚመራው የሜድሮክ ኢንቨስትመንት ግሩፕ፣ በስራ ላይ የሚገኙትን 13 የኩዊንስ ሱፐርማርኬት ቅርንጫፎች በሙሉ ወደ ካርፎር የንግድ ምልክት ለመቀየር ተስማምቷል። የሽግግሩ የመጀመሪያ ምዕራፍ በጎርጎሮሳውያን ዘመን እስከ 2026 አጋማሽ ድረስ እንደሚጠናቀቅ የሚጠበቅ ሲሆን፣ በቀጣዮቹ ሁለት ዓመታት ውስጥም ተጨማሪ 17 አዳዲስ የካርፎር መደብሮችን ለመክፈት እቅድ ተይዟል። ​ፈረንሳይ ውስጥ በ1950ዎቹ የተመሰረተው ካርፎር፣ በዓለም አቀፍ ደረጃ የ”ሃይፐር ማርኬት” (Hypermarket) የንግድ ዘይቤን በማስተዋወቅ ፈር ቀዳጅ እንደሆነ ይታወቃል። ኩባንያው በአሁኑ ወቅት በዓለም ዙሪያ ከ40 በላይ ሃገራት ውስጥ የሚገኝ ሲሆን፣ በ30 ሃገራት ውስጥ ከሚገኙ 3,000 የፍራንቻይዝ መደብሮች ጋር በመሆን በአጠቃላይ ወደ 15,000 የሚጠጉ መደብሮች አሉት። በፈረንጆቹ 2024 ዐመተ ምህረት የ94.6 ቢሊዮን ዩሮ የሽያጭ ገቢ ያስመዘገበው...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "published_at": "2026-01-09T07:09:22+00:00",
+      "source_url": "https://addisfortune.news/queens-supermarket-to-rebrand-as-carrefour-2",
+      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
+    },
+    {
+      "title": "Jersey returns £7m of 'tainted' funds to Nigeria",
+      "summary": "The Royal Court found the funds were \"more likely than not\" proceeds from a corrupt scheme.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-09T06:11:28+00:00",
+      "source_url": "https://www.bbc.com/news/articles/ckgl8rnl744o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Why Africa’s central banks are warming to Islamic finance",
+      "summary": "African central banks are accelerating the adoption of Islamic finance, backing regulatory...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-01-09T03:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/why-africa-central-banks-are-warming-to-islamic-finance-5320316",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "The secret mission to fly a president's body back home - pilot speaks to the BBC",
+      "summary": "An ex-air force pilot explains how he carried out an undercover mission to fly Siad Barre's body home for burial.",
+      "country_tags": [],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-01-09T00:17:11+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c5y2v2p3nl8o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "واشنطن تخطط لتنظيم مؤتمر مانحين لمساعدة السودان",
+      "summary": "أبو ظبي، 8 يناير 2026 – قال مستشار الرئيس الأميركي للشؤون الإفريقية، مسعد بولس، الخميس، إن بلاده تخطط لتنظيم مؤتمر مانحين بشأن السودان، فيما تتصل مساعيه لتأمين هدنة إنسانية. ويحتاج 33.7 مليون شخص، من بينهم 17.3 مليون طفل، إلى مساعدات إنسانية هذا العام، وفقًا لمنظمة الأمم المتحدة لرعاية الطفولة “يونيسف”. وقال بولس، في مقابلة مع قناة سكاي نيوز عربية، إن “الولايات المتحدة تعمل على تنظيم مؤتمر للمانحين بشأن السودان سيُعقد في الأسابيع القليلة المقبلة“. وأشار إلى أن واشنطن تسعى إلى تأسيس صندوق وجمع أموال تُستعمل مباشرة في معالجة الأزمة الإنسانية في السودان، موضحًا أن الرئيس دونالد ترامب يرى أن هذه الأزمة “سيئة جدًا، بل أكبر كارثة إنسانية في...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T22:47:11+00:00",
+      "source_url": "https://sudantribune.net/article/309147",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "مع دخول حرب السودان يومها الألف …بريطانيا ترفض اتهامها بـ «ازدواجية المعايير»",
+      "summary": "لندن 8 يناير 2026 – وصفت البارونة تشابمان أوف دارلينجتون، وزيرة الدولة البريطانية للتنمية الدولية وشؤون أفريقيا، بلوغ الصراع في السودان يومه الألف بأنه “محطة قاتمة” من المعاناة التي لا يمكن تصورها، وتعهدت بأن المملكة المتحدة لن تغض الطرف مع تفشي المجاعة في غالب أنحاء البلاد. وفي مقابلة حصرية مع “سودان تربيون” سلطت البارونة تشابمان الضوء على “الفظائع التي لا توصف” التي يواجهها النساء والأطفال، وأشارت إلى أن 30 مليون شخص يحتاجون الآن إلى مساعدات منقذة للحياة. ومع نزوح 12 مليون شخص، “أصبح السودان موقعاً لأكبر أزمة نزوح في العالم”. ورداً على اتهامات بـ “ازدواجية المعايير” وادعاءات بأن الدول الغربية رفعت الأولوية عن السودان مقارنة بالأزمات...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T22:36:21+00:00",
+      "source_url": "https://sudantribune.net/article/309131",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "ناشطون: الدعم السريع يرحّل معتقلين من غرب كردفان إلى «نيالا»",
+      "summary": "النهود، 8 يناير 2026 – قال متطوعون، الخميس، إن قوات الدعم السريع رحّلت عشرات المعتقلين من غرب كردفان إلى مدينة نيالا بولاية جنوب دارفور. وتحتجز الدعم السريع أكثر من 19 ألف شخص، بينهم 5 آلاف مدني، في معتقلات بمدينة نيالا التي اتخذتها مقرًا للحكومة الموازية، فيما تتحدث تقارير عن وفيات داخل المعتقلات بسبب الجوع والتعذيب والإهمال الطبي. وقالت غرفة طوارئ دار حمر، في بيان، إن “ميليشيا الدعم السريع رحّلت قرابة 40 شابًا من المعتقلين قسرًا من النهود بغرب كردفان إلى نيالا”. وأفادت أن هؤلاء الشباب جرى اختطافهم من مناطق مختلفة في ولاية غرب كردفان.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T20:35:44+00:00",
+      "source_url": "https://sudantribune.net/article/309132",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "الإعلان عن لجنة تحقيق في مزاعم تزوير شهادات جامعة الخرطوم",
+      "summary": "الخرطوم، 8 فبراير 2026 – أعلنت وزارة التعليم العالي والبحث العلمي، الخميس، تشكيل لجنة تحقق في اتهامات أثارها أمين الشؤون العلمية بجامعة الخرطوم، علي عبد الرحمن رباح، بحدوث اختراق وتزوير في الشهادات الأكاديمية. والأربعاء، قدّم رباح استقالته من منصب أمين الشؤون العلمية بجامعة الخرطوم، مرجعًا الخطوة إلى تعرضه لضغوط خارجية للسكوت عن وصول طرف ثالث بطريقة غير مشروعة إلى سجل الجامعة في وزارة التعليم، والصمت عن محاولة تزوير الشهادات الأكاديمية. ونفت وزارة التعليم العالي، بعد ساعات من حديث رباح، اختراق بيانات الطلاب، مشيرة إلى أنها تحمي البيانات وفق آليات تأمين ذات موثوقية عالية، دون التعامل مع أي جهات خارج الأطر الرسمية. وقالت وزارة التعليم...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T18:54:34+00:00",
+      "source_url": "https://sudantribune.net/article/309129",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Nigerian author Chimamanda Ngozi Adichie 'devastated' by death of young son",
+      "summary": "The Half of a Yellow Sun and We Should All Be Feminists writer's twin boys were born in 2024.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T18:35:01+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c62wx32re2po?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Algeria apologises after player mocks Congolese superfan dressed as pan-African hero",
+      "summary": "Michel Nkuka Mboladinga stood motionless throughout DR Congo's Afcon matches in tribute to Patrice Lumumba.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T17:57:49+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cj0nqqgy77ro?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "حكومة «الدعم السريع» تعتزم تعيين وزير مالية وإنشاء نظام مصرفي",
+      "summary": "نيالا 8 يناير 2026 – شرعت الإدارة المدنية التابعة لقوات الدعم السريع، بالتعاون مع تحالف «تأسيس»، في اتخاذ خطوات عملية لتأسيس بنك مركزي ونظام مصرفي موازٍ في المناطق الخاضعة لسيطرتها، في خطوة تنذر بتعميق الانقسام المؤسسي والاقتصادي في السودان الغارق في الحرب. وفي أواخر يوليو 2025 أعلن تحالف السودان التأسيسي”تأسيس”- ائتلاف يمثل الذراع السياسي للدعم السريع- التوافق على تكوين مجلس رئاسي يتزعمه محمد حمدان “حميدتي” ويشارك فيه 15 عضوًا، كما جرى تعيين عضو مجلس السيادة السابق محمد حسن التعايشي رئيسًا للوزراء على أن يتوالى تباعًا إعلان تكوينها الرسمي. ولم تحظَ الحكومة الموازية باعتراف إقليمي أو دولي بل قوبلت برفض رسمي من الهيئات المؤثرة عالميًا على...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T17:29:17+00:00",
+      "source_url": "https://sudantribune.net/article/309126",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Kenya tournament chiefs admit errors over viral tennis wildcard",
+      "summary": "The organisers of a professional women's tournament which has gone viral because of a wildcard player's poor performance acknowledge she should not have been allowed to play.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T16:28:22+00:00",
+      "source_url": "https://www.bbc.com/sport/tennis/articles/cx2gr00ndmyo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "انطلاق حملة تطعيم (6) ملايين طفل ضد الحصبة في «دارفور»",
+      "summary": "نيالا، 8 يناير 2026 – كشفت منظمة الأمم المتحدة لرعاية الطفولة “يونيسف”، الخميس، عن انطلاق حملة تطعيم 6 ملايين طفل ضد الحصبة في ولايات دارفور. وتزايدت حالات الحصبة في وسط وجنوب وغرب دارفور خلال الفترة الماضية، في ظل غياب حملات تطعيم فعالة وتأخر وصول اللقاحات، وسط مخاوف من أن يؤدي المزج بين الحصبة وسوء التغذية الحاد إلى مضاعفات مهددة للحياة. وقالت يونيسف، في بيان، إنها “أطلقت بالتعاون مع السلطات الصحية والشركاء حملة تطعيم تعويضية تستهدف 6 ملايين طفل في دارفور ضد الحصبة والحصبة الألمانية”. وأشارت إلى أن الحملة في نيالا شمال ونيالا جنوب وشرق جبل مرة في جنوب دارفور، والتي بدأت أمس الأربعاء، تخطط لتطعيم 430 ألف طفل تتراوح أعمارهم بين 9 أشهر و15...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T16:17:58+00:00",
+      "source_url": "https://sudantribune.net/article/309120",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Humanitarian outlook: Why 2026 is grim for Eastern Africa",
+      "summary": "The crises of 2025 were a clear warning. The message is unmistakable: this is not a lack of...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-01-08T16:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/sustainability/health/humanitarian-outlook-why-2026-is-grim-for-eastern-africa-5320560",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "US halts assistance to Somalia over claims food aid was illegally seized",
+      "summary": "Somalia denies the claims and says the 76 tonnes of aid is still in the hands of the World Food Programme.",
+      "country_tags": [
+        "Somalia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T15:50:33+00:00",
+      "source_url": "https://www.bbc.com/news/articles/ckgn1lpq52ko?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Somalia, South Sudan in eye of storm over theft of US aid",
+      "summary": "The United States has suspended humanitarian assistance to Somalia and parts of South Sudan...",
+      "country_tags": [
+        "Somalia",
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T15:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/somalia-south-sudan-in-eye-of-storm-over-theft-of-us-aid-5320510",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "IMF’s Abebe Aemro Selassie to Retire in May",
+      "summary": "Abebe Aemro Selassie is set to part ways with the International Monetary Fund (IMF) in the coming May, retiring from his post at the helm of the organization’s Africa Department and closing a 32-year career at the Fund. IMF Managing Director Kristalina Georgieva thanked Abebe for his work in a statement released yesterday, particularly as Director of the African Department. “I am deeply grateful for Abe’s visionary leadership, dedication to the Fund’s mission, and unwavering commitments to the members in the region,” Georgieva wrote. An Ethiopian national, Abebe studied in England, earning a graduate degree in economic history from the...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T14:32:31+00:00",
+      "source_url": "https://www.thereporterethiopia.com/48514/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Ambassador Sebastian Groth on diplomacy, music and all that jazz",
+      "summary": "The wry-humoured German ambassador to Kenya has created a name in the local jazz scene for his...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T13:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/sebastian-groth-on-diplomacy-music-and-all-that-jazz-5320248",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Ex-Ghana minister detained by US immigration",
+      "summary": "Ken Ofori-Atta's lawyers say he is co-operating and is in the process of changing his US visa status.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-08T12:27:00+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c0ergnj54vro?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Birth of rare mountain gorilla twins recorded in Congo park",
+      "summary": "A mountain gorilla has given birth to twin males in war-ravaged eastern DRC, in what Virunga...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-01-08T11:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/birth-of-rare-mountain-gorilla-twins-recorded-in-congo-park-5320054",
+      "source_name": "The EastAfrican"
+    },
     {
       "title": "Nigeria's ex-justice minister granted bail in $6m corruption case",
       "summary": "Abubakar Malami was one of the most influential figures in the administration of former President Buhari.",
@@ -24,19 +288,6 @@
       "published_at": "2026-01-08T10:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/ethiopia-s-fresh-quest-for-sea-access-unsettles-the-horn-5319872",
       "source_name": "The EastAfrican"
-    },
-    {
-      "title": "US halts assistance to Somalia over claims food aid was illegally seized",
-      "summary": "Donald Trump's administration has a zero-tolerance policy for waste, a US official tweeted.",
-      "country_tags": [
-        "Somalia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-08T09:15:49+00:00",
-      "source_url": "https://www.bbc.com/news/articles/ckgn1lpq52ko?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
     },
     {
       "title": "«التعليم العالي» تفنّد ما أثير عن اختراق سجل شهادات جامعة الخرطوم",
@@ -2295,263 +2546,6 @@
       "published_at": "2025-12-27T22:35:46+00:00",
       "source_url": "https://www.bbc.com/news/articles/c5y21xlxng2o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News"
-    },
-    {
-      "title": "السودان يبدأ إجراء معاملات التجارة الخارجية إلكترونيًا",
-      "summary": "الخرطوم، 27 ديسمبر 2025 – أعلنت وزارة التحول الرقمي والاتصالات في السودان، السبت، عن بدء إجراء معاملات للتجارة الخارجية إلكترونيًا عبر منصة “بلدنا”، في أولى خطوات إنهاء التعامل الورقي في الصادرات. وتُعد “بلدنا”، التي...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T20:43:05+00:00",
-      "source_url": "https://sudantribune.net/article/308709",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "الخرطوم وإنجمينا تتهمان الدعم السريع بقصف موقع عسكري تشادي",
-      "summary": "الخرطوم، 27 ديسمبر 2025 – اتهم الجيشان السوداني والتشادي، السبت، قوات الدعم السريع بتنفيذ الهجوم على موقع عسكري داخل تشاد على الحدود مع السودان. وقُتل جنديان تشاديان، الجمعة، في هجوم بطائرة مسيّرة استهدفت موقعًا...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T19:39:07+00:00",
-      "source_url": "https://sudantribune.net/article/308705",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "وفاة سوداني بعد تعرّضه لاعتداء عنيف في «القاهرة»",
-      "summary": "القاهرة، 27 ديسمبر 2025 – كشفت الجالية السودانية في مصر، السبت، عن وفاة الشاب محمد صلاح سليمان الفكي، متأثرًا بإصابته بعد تعرّضه لاعتداء على يد سودانيين في المنطقة الصناعية بمدينة بدر شرق القاهرة. ولجأ إلى مصر حوالي...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T17:17:23+00:00",
-      "source_url": "https://sudantribune.net/article/308702",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "US launches strikes against Islamic State in Nigeria",
-      "summary": "Trump tells Politico he ordered the strikes as \"a Christmas present\" - contradicting a statement by Nigerian officials.",
-      "country_tags": [],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2025-12-27T16:54:19+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cj69j8l918do?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "مسؤول: الجيش السوداني يستعد لهجوم من أراضي «إثيوبيا» على النيل الأزرق",
-      "summary": "الدمازين، 27 ديسمبر 2025 – قال مسؤول حكومي رفيع المستوى، السبت، إن الجيش السوداني يتحسب لصد هجوم تخطط لشنه قوات الدعم السريع وحلفاؤها على بلدات الكرمك وقيسان في إقليم النيل الأزرق انطلاقًا من الأراضي الإثيوبية. وفي...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T16:23:49+00:00",
-      "source_url": "https://sudantribune.net/article/308698",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Music comes alive at Blankets & Wine",
-      "summary": "By the time the final notes echoed across Laureate Gardens, it was clear that Blankets &",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T11:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/music-comes-alive-at-blankets-wine-5309266",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "أطباء: مقتل 200 مدنيّ على يد «الدعم السريع» في غرب شمال دارفور",
-      "summary": "سربا، 27 ديسمبر 2025 – قالت شبكة أطباء السودان، السبت، إن قوات الدعم السريع قتلت 200 شخص، بينهم أطفال ونساء، في ثلاث مناطق تقع في غرب شمال دارفور. وشنّت الدعم السريع، خلال الأيام الماضية، هجمات على مواقع في سربا بغرب...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T10:22:17+00:00",
-      "source_url": "https://sudantribune.net/article/308693",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Israel Ends Somaliland’s Three-Decade Wait for Recognition",
-      "summary": "Analysts suggest sovereignty could offer better alternatives in Ethiopia’s sea access quest Israeli Prime Minister Benjamin Netanyahu publicly announced his country’s decision to recognize Somaliland as a sovereign...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2025-12-27T09:49:01+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48391/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "High Court to Rule on Human Rights First IDP Lawsuit on Friday",
-      "summary": "The Federal High Court’s Fundamental Human Rights Protection Bench will rule next week on a lawsuit filed against the Council of Ministers, the Ministry of Peace, the Tigray Interim Administration, and the Amhara and...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T09:46:35+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48388/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "After Israel recognition of Somaliland, what next?",
-      "summary": "Somaliland, formerly British Somaliland, voluntarily united with southern Somalia at...",
-      "country_tags": [
-        "Somalia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T09:45:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/israel-first-nation-to-recognise-somaliland-s-independence-5309368",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Reluctance Surrounding Genome Editing Grounds Biotech Research Ambitions",
-      "summary": "AU report indicates MIDROC, Luna Group among private firms to express interest in gene editing Dalliance in the approval of gene editing projects is delaying research and arresting desperately needed improvements in...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T09:44:04+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48385/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Soap Manufacturers on ‘Verge of Collapse’ as Supply Chokepoint Throttles Production",
-      "summary": "Lobby group alleges input supply monopoly and unfair trade practices A lobby group representing soap and detergent manufacturers says forex-related issues burdening a foreign-owned supplier of essential chemical...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Business & Economy"
-      ],
-      "published_at": "2025-12-27T09:32:14+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48380/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Transparency Critical To Ensuring Elections Legitimacy",
-      "summary": "With about only five months to go before Ethiopia heads to 7th general elections, which are scheduled to be conducted on June 1, 2026, the country stands at a critical democratic crossroads. Elections are not merely...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2025-12-27T09:27:54+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48377/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Ethiopian Peacekeeping Troops to Remain in Somalia as AUSSOM Extended to December 2026",
-      "summary": "The security councils of the African Union and the United Nations have extended the life of the ongoing AU Support and Stabilization Mission in Somalia (AUSSOM) by a year as peacekeeping efforts continue to suffer...",
-      "country_tags": [
-        "Ethiopia",
-        "Somalia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T09:24:20+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48374/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Brazen Looters Strip Copper Cables in Broad Daylight",
-      "summary": "Telecommunication copper cables, plastic conduits, and metal components have been repeatedly looted in broad daylight along an under-construction road in Addis Ababa, with the theft taking place in full view of...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T09:16:58+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48371/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "ESX Targets Nine IPOs by September",
-      "summary": "Dashen Bank issues prospectus ahead of offering 2.2 million shares The Ethiopian Securities Exchange (ESX) has ambitions to list nine companies before the end of the Ethiopian calendar year in September, according to...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T09:13:51+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48368/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Ethiopia Lags in AI Readiness as Digital Divide Deepens, World Bank Warns",
-      "summary": "Ethiopia is among the world’s lowest-performing countries in artificial intelligence (AI) readiness, trailing on both scale and intensity of AI capacity, according to a World Bank assessment. The 2025 edition of the...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2025-12-27T09:08:53+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48365/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "The best players who never won Afcon?",
-      "summary": "As two-time runner-up Mohamed Salah begins another tilt at the Africa Cup of Nations, BBC Sport Africa profiles top stars who never lifted the trophy.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T09:04:48+00:00",
-      "source_url": "https://www.bbc.com/sport/football/videos/c1dz1d7r9vno?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Red Sea Pressures Intensified; Ethiopia’s Search for Access Reordering the Horn",
-      "summary": "On the eve of the New Year, diplomatic traffic through Addis Ababa has intensified in ways that appear routine on the surface but, upon closer inspection, reveal a region under growing strategic strain. Ethiopia...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T09:03:50+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48361/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "الأمم المتحدة تعلن وصول بعثة تقييم إلى «الفاشر»",
-      "summary": "الفاشر، 27 ديسمبر 2025 – أعلن مكتب الأمم المتحدة لتنسيق الشؤون الإنسانية “أوتشا”، وصول بعثة تقييم إلى الفاشر بولاية شمال دارفور غربي السودان. ويتوقّع أن يشمل التقييم الانتهاكات التي تعرّض لها السكان والوضع الإنساني،...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2025-12-27T08:55:37+00:00",
-      "source_url": "https://sudantribune.net/article/308691",
-      "source_name": "سودان تربيون"
     }
   ]
 }
