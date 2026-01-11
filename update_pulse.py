@@ -55,11 +55,17 @@ def fetch_telegram() -> List[Dict]:
         return []
 
     # Your channel allowlist (usernames without @)
-    channels = [
-        "FanaMediaCorp",
-        "EthiopianPressAgency",
-        # add more...
-    ]
+   channels = [
+    "FanaMediaCorp",
+    "EthiopianPressAgency",
+    "addisstandard",
+    "EthiopiaGov",
+    "ENA_Ethiopia",
+    "OMN_Oromia",
+    "EBCWorld",
+    "WaltaInfo",
+]
+
 
     results: List[Dict] = []
 
