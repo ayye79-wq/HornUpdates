@@ -502,4 +502,23 @@ p{ margin: 0 0 10px; }
   text-decoration:none;
 }
 .footer-links a:hover{ text-decoration:underline; }
+/* Cards */
+.card, .story-card, .featured-card{
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0,0,0,.08);
+}
+
+/* Story title + summary */
+.story-title, .card h3, .card h2{
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.story-summary, .card p{
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+}
 
