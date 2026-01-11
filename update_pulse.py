@@ -13,6 +13,10 @@ OUTPUT_PATH = Path(__file__).resolve().parent / "ethio_articles.json"
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_PATH = BASE_DIR / "ethio" / "ethio_articles.json"
 print("✅ EthioPulse OUTPUT_PATH:", OUTPUT_PATH)
+OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+OUTPUT_PATH.write_text('{"created": true}', encoding="utf-8")
+print("✅ CREATED:", OUTPUT_PATH)
+raise SystemExit
 
 
 
