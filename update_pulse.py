@@ -10,9 +10,10 @@ from pathlib import Path
 from typing import List, Dict, Any
 
 OUTPUT_PATH = Path(__file__).resolve().parent / "ethio_articles.json"
-OUTPUT_PATH.write_text('{"test": true}', encoding="utf-8")
-print("WROTE TEST FILE TO:", OUTPUT_PATH)
-exit()
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUT_PATH = BASE_DIR / "ethio" / "ethio_articles.json"
+print("✅ EthioPulse OUTPUT_PATH:", OUTPUT_PATH)
+
 
 
 def now_utc_iso() -> str:
