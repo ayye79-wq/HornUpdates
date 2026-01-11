@@ -99,11 +99,18 @@ p{ margin: 0 0 10px; }
 
 /* Intro text */
 .intro {
-  margin-top: 6px;
-  margin-bottom: 12px;
-  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  padding-left: 14px;
+
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: #4b5563;
+
+  border-left: 3px solid #e5e7eb;   /* soft newsroom accent */
+  max-width: 760px;
 }
+
 
 /* ========== BREAKING BAR ========== */
 .breaking-bar {
