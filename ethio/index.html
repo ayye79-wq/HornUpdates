@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Horn Updates</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
+     crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Sidebar layout + X feed styles (kept inline so you don't have to edit style.css) -->
+  <style>
+    /* Two-column layout (main + right sidebar) */
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 20px;
+      align-items: start;
+      margin-top: 12px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 16px;
+    }
+    .sidebar-box {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+    .sidebar-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+    }
+
+    /* Hide sidebar on mobile for better UX */
+   @media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .sidebar { display: none; }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="brand">
+        <img src="Horn1_logo.png" alt="Horn Updates logo" class="logo" />
+        <div class="brand-text">
+          <h1>Horn Updates</h1>
+          <p class="tagline">News from the Horn of Africa</p>
+        </div>
+      </div>
+
+      <!-- FILTER NAV -->
+      <nav class="nav-filters">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="Politics">Politics</button>
+        <button class="filter-pill" data-filter="Business">Business</button>
+        <button class="filter-pill" data-filter="Society">Society</button>
+        <button class="filter-pill" data-filter="Security">Security</button>
+        <button class="filter-pill" data-filter="Culture">Culture</button>
+        <button class="filter-pill" data-filter="Diaspora">Diaspora</button>
+      </nav>
+    </header>
+
+    <!-- INTRO -->
+    <p class="intro">
+      HornUpdates scans trusted news sources like Reuters, BBC, and VOA, filters for the Horn of Africa,
+      and generates clean AI-powered summaries with links back to the original publishers.
+    </p>
+
+    <!-- BREAKING BAR -->
+    <section class="breaking-bar" id="breaking-bar">
+      <span class="breaking-label">BREAKING</span>
+      <a id="breaking-link" class="breaking-link" href="#"></a>
+    </section>
+
+    <!-- MAIN LAYOUT: CONTENT + RIGHT SIDEBAR -->
+    <div class="layout">
+      <!-- FEATURED STORY + LATEST STORIES -->
+      <main class="content">
+        <section class="featured-section">
+          <h2>Featured story</h2>
+          <div id="featured-container"></div>
+        </section>
+
+        <!-- LATEST STORIES -->
+        <section class="latest-section">
+          <h2>Latest stories</h2>
+          <div id="latest-container"></div>
+        </section>
+      </main>
+
+      <!-- RIGHT SIDEBAR (X FEED) -->
+<aside class="sidebar">
+
+  <!-- Twitter / X link -->
+  <a href="https://x.com/HornUpdatesHQ" target="_blank" class="twitter-link">
+    Follow us on X
+  </a>
+
+  <!-- Quick Updates box -->
+  <div class="sidebar-box about-mini">
+    <h3>Quick Updates</h3>
+    <p>
+      Stay informed without information overload.
+      Scan key headlines, read short summaries,
+      and click through only when you want more.
+    </p>
+  </div>
+
+  <!-- AdSense Sidebar Slot -->
+   <!-- AdSense Sidebar Slot -->
+  <div class="sidebar-box sidebar-ad">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7773342225754932"
+         data-ad-slot="REPLACE_WITH_REAL_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</aside>
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>© 2025 Horn Updates. All rights reserved.</p>
+      <p class="footer-meta">
+        Sources include Reuters, BBC, VOA, and other reputable outlets.
+      </p>
+    </footer>
+  </div>
+
+
+
+
+  <!-- MAIN JS LOGIC -->
+  <script>
+  // ---------- HELPERS ----------
+  function buildReaderLink(sourceUrl) {
+    return "reader.html?url=" + encodeURIComponent(sourceUrl || "#");
+  }
+
+  function getCountries(article) {
+    // Support either `countries` or `country_tags`
+    const raw = article.countries || article.country_tags || [];
+    if (!raw) return [];
+    if (Array.isArray(raw)) return raw;
+    return [String(raw)];
+  }
+
+  function formatCountries(article) {
+    const countries = getCountries(article);
+    return countries.join(" • ");
+  }
+
+  function clamp(text, max) {
+    if (!text) return "";
+    return text.length > max ? text.slice(0, max) + "…" : text;
+  }
+
+  // Prefer topic_tags from Python (array), fall back to older fields
+  function getTopicLabel(article) {
+    if (Array.isArray(article.topic_tags) && article.topic_tags.length) {
+      return String(article.topic_tags[0] || "").trim() || "General";
+    }
+    return (
+      String(article.category || "").trim() ||
+      String(article.topic || "").trim() ||
+      "General"
+    );
+  }
+
+  function niceDate(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    return isNaN(d) ? String(iso) : d.toLocaleString();
+  }
+
+  // ---------- RENDER FUNCTIONS ----------
+  function renderStoryCard(article, isFeatured = false) {
+    const countriesArr = getCountries(article);
+    const category = getTopicLabel(article);
+    const published = article.published_at || "";
+    const sourceName = article.source_name || article.source || "";
+    const href = buildReaderLink(article.source_url || article.link);
+
+    const title = clamp(article.title || "Untitled story", isFeatured ? 160 : 120);
+    const summary = clamp(
+      article.summary || article.excerpt || "",
+      isFeatured ? 280 : 220
+    );
+
+    const cardClass = "story-card" + (isFeatured ? " story-card--featured" : "");
+
+    const countryTags = countriesArr
+      .map(c => `<span class="tag-pill">${c}</span>`)
+      .join("");
+
+    return `
+      <article class="${cardClass}">
+        <header class="story-header">
+          <div class="story-tags">
+            ${countryTags}
+            <span class="tag-pill tag-category">${category}</span>
+          </div>
+          <h3 class="story-title">
+            <a class="story-link" href="${href}">
+              ${title}
+            </a>
+          </h3>
+        </header>
+        ${summary ? `<p class="story-summary">${summary}</p>` : ""}
+        <footer class="story-meta">
+          ${sourceName ? `<span class="story-source">${sourceName}</span>` : ""}
+          ${published ? `<span class="story-date">${niceDate(published)}</span>` : ""}
+        </footer>
+      </article>
+    `;
+  }
+
+  function setBreakingBar(article) {
+    const linkEl = document.getElementById("breaking-link");
+    if (!linkEl || !article) return;
+
+    const countriesStr = formatCountries(article);
+    let label = article.title || "";
+    if (countriesStr) label += " — " + countriesStr;
+    label = clamp(label, 140);
+
+    linkEl.textContent = label;
+    linkEl.href = buildReaderLink(article.source_url || article.link);
+  }
+
+  // ---------- STATE ----------
+  let allArticles = [];
+  let currentFilter = "all";
+
+  function matchesFilter(article, filter) {
+    if (filter === "all") return true;
+    const needle = String(filter || "").toLowerCase();
+
+    const countries = getCountries(article).join(" ").toLowerCase();
+
+    // Combine topic_tags + older fields into one searchable string
+    const topics = (
+      (Array.isArray(article.topic_tags) ? article.topic_tags.join(" ") : "") +
+      " " + (article.category || "") +
+      " " + (article.topic || "")
+    ).toLowerCase();
+
+    const title = (article.title || "").toLowerCase();
+    const summary = (article.summary || article.excerpt || "").toLowerCase();
+    const source = (article.source_name || article.source || "").toLowerCase();
+
+    return (
+      countries.includes(needle) ||
+      topics.includes(needle) ||
+      title.includes(needle) ||
+      summary.includes(needle) ||
+      source.includes(needle)
+    );
+  }
+
+  function renderPage(filteredList) {
+    const featuredContainer = document.getElementById("featured-container");
+    const latestContainer = document.getElementById("latest-container");
+
+    if (!filteredList.length) {
+      featuredContainer.innerHTML = "<p>No stories available.</p>";
+      latestContainer.innerHTML = "";
+      return;
+    }
+
+    const featured = filteredList[0];
+    const latest = filteredList.slice(1);
+
+    featuredContainer.innerHTML = renderStoryCard(featured, true);
+    latestContainer.innerHTML = latest.map(a => renderStoryCard(a, false)).join("");
+
+    setBreakingBar(featured);
+  }
+
+  function applyFilter() {
+    const filtered = allArticles.filter(a => matchesFilter(a, currentFilter));
+    renderPage(filtered.length ? filtered : allArticles);
+  }
+
+  function setupFilters() {
+    document.querySelectorAll(".filter-pill").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-pill").forEach(b =>
+          b.classList.remove("active")
+        );
+        btn.classList.add("active");
+        currentFilter = btn.dataset.filter || "all";
+        applyFilter();
+      });
+    });
+  }
+
+  function loadArticles() {
+    // Cache-buster ensures you always see the newest articles.json
+    fetch(`articles.json?v=${Date.now()}`)
+      .then(res => res.json())
+      .then(data => {
+        let list = Array.isArray(data) ? data : (data.articles || []);
+        list = list.filter(a => a.title && (a.source_url || a.link));
+
+        // Sort newest first
+        list.sort((a, b) => {
+          const da = new Date(a.published_at || 0);
+          const db = new Date(b.published_at || 0);
+          return db - da;
+        });
+
+        allArticles = list;
+        applyFilter();
+      })
+      .catch(err => {
+        console.error("Error loading articles.json:", err);
+        document.getElementById("featured-container").innerHTML =
+          "<p>Failed to load stories.</p>";
+      });
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    setupFilters();
+    loadArticles();
+  });
+</script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</body>
+</html>

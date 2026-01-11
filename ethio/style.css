@@ -1,0 +1,469 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  line-height: 1.5;
+}
+
+/* Page container */
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+/* ========== HEADER ========== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 56px;
+  height: auto;
+}
+
+.brand-text h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+/* Filters row */
+.nav-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-start;
+}
+
+.filter-pill {
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #374151;
+}
+
+.filter-pill.active {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #111827;
+}
+
+/* Intro text */
+.intro {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* ========== BREAKING BAR ========== */
+.breaking-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #b91c1c;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 8px 12px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.breaking-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: #7f1d1d;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.breaking-link {
+  flex: 1;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.breaking-link:hover {
+  text-decoration: underline;
+}
+
+.breaking-link:visited {
+  color: #ffffff; /* kill purple visited */
+}
+
+/* ========== SECTIONS ========== */
+.featured-section,
+.latest-section {
+  margin-bottom: 12px;
+}
+
+.featured-section h2,
+.latest-section h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ========== STORY CARDS ========== */
+.story-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 14px 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  margin-bottom: 12px;
+}
+
+.story-card--featured {
+  border-left: 4px solid #111827;
+}
+
+.story-header {
+  margin-bottom: 6px;
+}
+
+.story-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.tag-pill {
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+}
+
+.tag-category {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.story-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.story-link,
+.story-link:visited {
+  color: #111827;
+  text-decoration: none;
+}
+
+.story-link:hover {
+  text-decoration: underline;
+}
+
+.story-summary {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.story-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.story-source::after {
+  content: " •";
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #6b7280;
+  text-align: left;
+}
+
+.footer-meta {
+  margin-top: 2px;
+}
+
+/* ========== RESPONSIVE TWEAKS ========== */
+@media (min-width: 640px) {
+  .logo {
+    width: 68px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .story-card {
+    padding: 16px 18px 14px;
+    margin-bottom: 14px;
+  }
+
+  .story-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .page {
+    padding-top: 24px;
+  }
+
+  .site-header {
+    align-items: flex-end;
+  }
+
+  .intro {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-filters {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .story-card {
+    padding: 14px;
+    margin: 10px 0;
+  }
+}
+
+/* ========== X Follow Button ========== */
+.x-follow-btn {
+  display: block;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.x-follow-btn:hover {
+  opacity: 0.9;
+}
+/* Breaking Alerts + Trending Now panel */
+.alerts-panel{
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  padding: 16px;
+}
+
+.alerts-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.alerts-head h3{
+  margin:0;
+  font-size: 18px;
+}
+
+.alerts-actions{ display:flex; gap:10px; }
+
+.alerts-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration:none;
+  font-weight: 600;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #0f172a;
+  color: #fff;
+  font-size: 14px;
+}
+
+.alerts-btn:hover{ opacity: .92; }
+
+.alerts-note{
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(0,0,0,.65);
+  margin-bottom: 12px;
+}
+
+.trending-block{
+  border-top: 1px solid rgba(0,0,0,.08);
+  padding-top: 12px;
+}
+
+.trending-title{
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .2px;
+  margin-bottom: 10px;
+}
+
+.trending-list{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+
+.trending-item{
+  display:flex;
+  gap: 10px;
+  align-items:flex-start;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.08);
+  text-decoration:none;
+  color: inherit;
+}
+
+.trending-item:hover{
+  background: rgba(15,23,42,.03);
+}
+
+.trending-badge{
+  flex: 0 0 auto;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(0,0,0,.03);
+}
+
+.trending-meta{
+  font-size: 12px;
+  color: rgba(0,0,0,.60);
+  margin-top: 4px;
+}
+
+.trending-skeleton{
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px dashed rgba(0,0,0,.18);
+  color: rgba(0,0,0,.55);
+  font-size: 13px;
+}
+
+/* Mobile polish */
+@media (max-width: 720px){
+  .alerts-head{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .alerts-btn{
+    width: 100%;
+  }
+}
+.about-mini {
+  margin-top: 8px;
+}
+
+.about-mini h3 {
+  font-weight: 600;
+}
+/* Tighten spacing between X link and Quick Updates */
+.about-mini {
+  margin-top: 8px;
+}
+
+.about-mini h3 {
+  font-weight: 600;
+}
+
+/* Sidebar Ad block */
+.sidebar-ad {
+  text-align: center;
+  overflow: hidden;   /* prevents weird overflow on mobile */
+}
+
+/* Make sure the ad has breathing room on small screens */
+@media (max-width: 768px) {
+  .sidebar-box {
+    margin-top: 12px;
+  }
+
+  .sidebar-ad {
+    padding: 6px;
+  }
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Slightly smaller on small screens so it doesn’t overflow */
+@media (max-width: 520px) {
+  .btn { padding: 9px 10px; border-radius: 12px; }
+}
+/* Make secondary buttons softer */
+.btn.secondary{
+  background:#f3f4f6;
+  border-color:#e5e7eb;
+  font-weight:600;
+}
+
+/* Make the action buttons slightly smaller */
+.actions .btn{
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: .95rem;
+}
+
+/* On small screens, keep it tidy */
+@media (max-width: 720px){
+  .topbar{ flex-direction: column; align-items: flex-start; }
+  .actions{ justify-content: flex-start; width: 100%; }
+}
+.summary-note {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 10px;
+  font-style: italic;
+}
+
