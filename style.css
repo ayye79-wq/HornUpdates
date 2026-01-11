@@ -513,8 +513,9 @@ p{ margin: 0 0 10px; }
 .story-title, .card h3, .card h2{
   font-size: 20px;
   line-height: 1.35;
-  font-weight: 800;
+  font-weight: 650;   /* was 800 */
 }
+
 
 .story-summary, .card p{
   font-size: 16px;
