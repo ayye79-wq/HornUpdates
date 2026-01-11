@@ -1,19 +1,18 @@
-const CACHE_VERSION = "ethio-pulse-v1";
+const CACHE_VERSION = "ethio-pulse-v2";
 const APP_SHELL_CACHE = `app-shell-${CACHE_VERSION}`;
 const DATA_CACHE = `data-${CACHE_VERSION}`;
 
 const APP_SHELL_FILES = [
-  "/",               // important
+  "/",
   "/index.html",
   "/style.css",
   "/manifest.json",
   "/icons/icon-192.png",
   "/icons/icon-512.png",
-  "/Horn1_logo.png", // adjust if your logo filename is different
+  "/Horn1_logo.png",
   "/favicon.ico"
 ];
 
-// Install: cache the shell
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(APP_SHELL_CACHE).then((cache) => cache.addAll(APP_SHELL_FILES))
@@ -21,7 +20,6 @@ self.addEventListener("install", (event) => {
   self.skipWaiting();
 });
 
-// Activate: cleanup old caches
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
@@ -48,11 +46,20 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  // 1b) Manifest + icons: network-first (prevents stale install metadata/icons)
+  if (
+    url.pathname === "/manifest.json" ||
+    url.pathname.startsWith("/icons/") ||
+    url.pathname === "/favicon.ico"
+  ) {
+    event.respondWith(networkFirst(req, APP_SHELL_CACHE));
+    return;
+  }
+
   // 2) App shell / static: cache-first
   if (
     req.method === "GET" &&
     (APP_SHELL_FILES.includes(url.pathname) ||
-      url.pathname.startsWith("/icons/") ||
       url.pathname.endsWith(".png") ||
       url.pathname.endsWith(".jpg") ||
       url.pathname.endsWith(".jpeg") ||
@@ -88,7 +95,6 @@ async function networkFirst(request, cacheName) {
   } catch (e) {
     const cached = await cache.match(request);
     if (cached) return cached;
-    // Optional: return an empty JSON so UI doesn't crash
     return new Response(JSON.stringify({ articles: [] }), {
       headers: { "Content-Type": "application/json" }
     });
