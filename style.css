@@ -9,7 +9,30 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background-color: #f3f4f6;
   color: #111827;
-  line-height: 1.5;
+
+  /* readability upgrade */
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* =========================
+   Global Typography
+   ========================= */
+html { font-size: 16px; }
+
+/* Headings */
+h1{ font-size: 32px; line-height: 1.15; margin: 0; font-weight: 800; }
+h2{ font-size: 22px; line-height: 1.25; margin: 0 0 8px; font-weight: 750; }
+h3{ font-size: 18px; line-height: 1.3;  margin: 0 0 6px; font-weight: 700; }
+
+p{ margin: 0 0 10px; }
+
+/* Arabic / RTL support */
+[lang="ar"], .rtl, .arabic {
+  direction: rtl;
+  text-align: right;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
 }
 
 /* Page container */
