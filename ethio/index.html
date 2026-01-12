@@ -340,10 +340,13 @@
 
 <script>
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js")
-      .then(() => console.log("EthioPulse SW registered"))
-      .catch(err => console.error("SW failed:", err));
+  window.addEventListener("load", async () => {
+    // Important: unregister any old SWs that might be controlling the site
+    const regs = await navigator.serviceWorker.getRegistrations();
+    for (const r of regs) await r.unregister();
+
+    // Now register EthioPulse SW under /ethio/
+    await navigator.serviceWorker.register("./sw.js");
   });
 }
 </script>
