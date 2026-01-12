@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "default": {
+    "id": "generic-01",
+    "text": "Developments like this can signal broader economic, political, or regional shifts affecting the Horn of Africa and neighboring markets. Tracking these changes helps explain longer-term trends beyond a single headline."
+  },
+  "groups": [
+    {
+      "group_id": "aid_humanitarian",
+      "priority": 100,
+      "match": {
+        "any_category": ["Humanitarian", "Aid", "Relief", "Health"],
+        "any_keyword": ["aid", "food aid", "humanitarian", "relief", "famine", "drought", "malnutrition", "wfp", "unicef", "usaid", "displaced", "refugees", "cholera"]
+      },
+      "templates": [
+        {
+          "id": "aid-01",
+          "text": "Aid decisions can reshape access to food, medicine, and basic services, and they often reflect shifting donor priorities and accountability pressures. In the Horn of Africa, even short pauses can ripple through vulnerable communities and local markets."
+        },
+        {
+          "id": "aid-02",
+          "text": "Humanitarian moves like this may affect delivery routes, partner operations, and trust between donors and local institutions. Tracking the follow-up actions matters as much as the announcement."
+        }
+      ]
+    },
+    {
+      "group_id": "security_conflict",
+      "priority": 90,
+      "match": {
+        "any_category": ["Security", "Conflict", "Defense"],
+        "any_keyword": ["attack", "bomb", "militants", "al-shabaab", "isis", "security", "troops", "insurgency", "airstrike", "clashes", "ceasefire", "armed", "terror", "violence"]
+      },
+      "templates": [
+        {
+          "id": "sec-01",
+          "text": "Security developments in the Horn of Africa can carry cross-border spillover risks, shaping trade routes, displacement patterns, and diplomatic alignments. Small escalations can become wider regional pressures if not contained."
+        }
+      ]
+    },
+    {
+      "group_id": "politics_governance",
+      "priority": 80,
+      "match": {
+        "any_category": ["Politics", "Governance", "Elections", "Diplomacy"],
+        "any_keyword": ["election", "parliament", "president", "prime minister", "cabinet", "protest", "constitution", "vote", "diplomatic", "talks", "sanctions", "recognition", "deal", "agreement"]
+      },
+      "templates": [
+        {
+          "id": "pol-01",
+          "text": "Political decisions often signal shifting alliances and internal power dynamics that can affect stability and policy direction. Watching who benefits—and how institutions respond—helps explain what may come next."
+        }
+      ]
+    },
+    {
+      "group_id": "economy_trade",
+      "priority": 70,
+      "match": {
+        "any_category": ["Business", "Economy", "Trade"],
+        "any_keyword": ["inflation", "currency", "debt", "imf", "world bank", "budget", "trade", "port", "shipping", "investment", "oil", "gas", "tax", "prices"]
+      },
+      "templates": [
+        {
+          "id": "eco-01",
+          "text": "Economic shifts can hint at deeper pressures on budgets, currencies, and household costs. In a trade-linked region like the Horn of Africa, policy changes can quickly affect cross-border commerce and investor confidence."
+        }
+      ]
+    },
+    {
+      "group_id": "climate_environment",
+      "priority": 60,
+      "match": {
+        "any_category": ["Climate", "Environment"],
+        "any_keyword": ["drought", "flood", "rainfall", "locust", "heat", "climate", "crop", "harvest", "water", "environment"]
+      },
+      "templates": [
+        {
+          "id": "cli-01",
+          "text": "Climate shocks in the Horn of Africa can amplify food insecurity, displacement, and economic strain. Tracking early indicators—rainfall, harvests, and water access—helps explain why crises escalate or ease."
+        }
+      ]
+    }
+  ],
+  "rotation": {
+    "mode": "hash", 
+    "salt": "hornupdates",
+    "hash_fields": ["title", "source", "published_at"]
+  }
+}

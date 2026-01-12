@@ -9,26 +9,29 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Any
 
-OUTPUT_PATH = Path(__file__).resolve().parent / "ethio_articles.json"
+
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_PATH = BASE_DIR / "ethio" / "ethio_articles.json"
 print("✅ EthioPulse OUTPUT_PATH:", OUTPUT_PATH)
 OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-OUTPUT_PATH.write_text('{"created": true}', encoding="utf-8")
-print("✅ CREATED:", OUTPUT_PATH)
-raise SystemExit
 
 
 
 def now_utc_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
+URL_RE = re.compile(r"https?://\S+", re.IGNORECASE)
 
 def normalize_text(s: str) -> str:
     s = (s or "").strip()
     s = re.sub(r"\s+", " ", s)
     return s
 
+def strip_urls(s: str) -> str:
+    s = (s or "").strip()
+    s = URL_RE.sub("", s)          # remove URLs
+    s = re.sub(r"\s+", " ", s)     # collapse spaces
+    return s.strip()
 
 def load_existing() -> Dict[str, Any]:
     if OUTPUT_PATH.exists():
@@ -66,13 +69,6 @@ def dedupe(existing: List[Dict[str, Any]], incoming: List[Dict[str, Any]]) -> Li
 # -----------------------------
 
 def fetch_telegram() -> List[Dict[str, Any]]:
-    """
-    Telegram via Telethon (recommended).
-    Requires env vars:
-      - TELEGRAM_API_ID
-      - TELEGRAM_API_HASH
-    A session file will be created on first run.
-    """
     try:
         from telethon import TelegramClient
     except ImportError:
@@ -81,21 +77,20 @@ def fetch_telegram() -> List[Dict[str, Any]]:
 
     api_id = os.getenv("TELEGRAM_API_ID")
     api_hash = os.getenv("TELEGRAM_API_HASH")
+
     if not api_id or not api_hash:
         print("[WARN] TELEGRAM_API_ID / TELEGRAM_API_HASH not set. Skipping Telegram.")
         return []
 
     # Your channel allowlist (usernames without @)
     channels = [
-        "FanaMediaCorp",
-        "EthiopianPressAgency",
-        "addisstandard",
-        "EthiopiaGov",
-        "ENA_Ethiopia",
-        "OMN_Oromia",
-        "EBCWorld",
-        "WaltaInfo",
+        "FanaMediaCorp",          # Fana Media (official)
+        "EthiopianPressAgency",   # Ethiopian Press Agency
+        "addisstandard",          # Addis Standard
     ]
+
+
+
 
     results: List[Dict[str, Any]] = []
     client = TelegramClient("ethio_pulse_session", int(api_id), api_hash)
@@ -164,9 +159,10 @@ def fetch_rss_feeds() -> List[Dict[str, Any]]:
     for url in feeds:
         d = feedparser.parse(url)
         for e in getattr(d, "entries", [])[:25]:
-            title = normalize_text(getattr(e, "title", ""))
+            title = strip_urls(normalize_text(getattr(e, "title", "")))
             link = getattr(e, "link", None)
-            summary = normalize_text(getattr(e, "summary", ""))[:280]
+            summary = strip_urls(normalize_text(getattr(e, "summary", "")))[:280]
+
 
             published = getattr(e, "published", None) or getattr(e, "updated", None) or now_utc_iso()
 
@@ -207,6 +203,20 @@ def main() -> None:
 
     merged = dedupe(existing, new_items)
 
+    BLOCK_SOURCES = {
+        "Telegram: @EBCWorld",
+    }
+
+    merged = [
+        a for a in merged
+        if (a.get("source") or "") not in BLOCK_SOURCES
+    ]
+
+    # ✅ Final cleanup: remove URLs from ALL titles/summaries (old + new)
+    for a in merged:
+        a["title"] = strip_urls(normalize_text(a.get("title", "")))
+        a["summary"] = strip_urls(normalize_text(a.get("summary", "")))
+
     payload = {
         "generated_at": now_utc_iso(),
         "articles": merged,
@@ -216,6 +226,7 @@ def main() -> None:
         json.dumps(payload, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
+
 
     print(f"[OK] Wrote {len(merged)} total items (new fetched this run: {len(new_items)})")
     print(f"[OK] Output → {OUTPUT_PATH}")

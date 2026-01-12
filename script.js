@@ -248,11 +248,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("HornUpdates: no target containers found in DOM.");
   }
 
- fetch("../ethio_articles.json?v=" + Date.now())
-  .then((res) => res.json())
-  .then((data) => {
-    const rawArticles = Array.isArray(data.articles) ? data.articles : data;
-    let articles = rawArticles.map(normalizeArticle);
+  fetch("articles.json?v=" + Date.now())
+    .then((res) => res.json())
+    .then((data) => {
+      const rawArticles = Array.isArray(data.articles) ? data.articles : data;
+      let articles = rawArticles.map(normalizeArticle);
 
       // Sort newest -> oldest
       articles.sort((a, b) => {

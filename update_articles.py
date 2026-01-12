@@ -196,6 +196,8 @@ def load_existing_articles():
 
 
 def parse_feed_no_cache(url: str):
+    from urllib.error import HTTPError, URLError
+
     req = urllib.request.Request(
         url,
         headers={
@@ -204,9 +206,25 @@ def parse_feed_no_cache(url: str):
             "Pragma": "no-cache",
         }
     )
-    with urllib.request.urlopen(req, timeout=20) as r:
-        data = r.read()
+
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            data = r.read()
+
+    except HTTPError as e:
+        # ✅ 304 = Not Modified (server says "nothing changed")
+        if e.code == 304:
+            print("[INFO] Feed returned 304 Not Modified → treating as no new items.")
+            return None
+        raise  # other HTTP errors should still raise
+
+    except URLError as e:
+        print(f"[WARN] Network error fetching feed: {e}")
+        return None
+
+    # ✅ Only runs if fetch succeeded
     return feedparser.parse(data)
+
 
 
 def merge_dedupe(old_list, new_list):
