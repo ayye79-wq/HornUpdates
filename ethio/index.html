@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Horn Updates</title>
+  <title>EthioPulse</title>
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#111827">
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
      crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,11 +55,11 @@
     <!-- HEADER -->
     <header class="site-header">
       <div class="brand">
-        <img src="Horn1_logo.png" alt="Horn Updates logo" class="logo" />
         <div class="brand-text">
-          <h1>Horn Updates</h1>
-          <p class="tagline">News from the Horn of Africa</p>
-        </div>
+  <h1>EthioPulse</h1>
+  <p class="tagline">Ethiopia, in real time.</p>
+</div>
+
       </div>
 
       <!-- FILTER NAV -->
@@ -73,8 +76,8 @@
 
     <!-- INTRO -->
     <p class="intro">
-      HornUpdates scans trusted news sources like Reuters, BBC, and VOA, filters for the Horn of Africa,
-      and generates clean AI-powered summaries with links back to the original publishers.
+      EthioPulse tracks Ethiopia-focused Telegram and RSS sources and shows short, fast headlines with links to the originals.
+
     </p>
 
     <!-- BREAKING BAR -->
@@ -101,53 +104,27 @@
 
       <!-- RIGHT SIDEBAR (X FEED) -->
 <aside class="sidebar">
-
-  <!-- Twitter / X link -->
-  <a href="https://x.com/HornUpdatesHQ" target="_blank" class="twitter-link">
-    Follow us on X
-  </a>
-
-  <!-- Quick Updates box -->
   <div class="sidebar-box about-mini">
-    <h3>Quick Updates</h3>
+    <h3>About EthioPulse</h3>
     <p>
-      Stay informed without information overload.
-      Scan key headlines, read short summaries,
-      and click through only when you want more.
+      Live Ethiopia-only pulse feed. Short summaries. Click through for the full source.
     </p>
+    <p id="last-updated" style="margin-top:10px;font-size:.9rem;opacity:.8"></p>
   </div>
-
-  <!-- AdSense Sidebar Slot -->
-   <!-- AdSense Sidebar Slot -->
-  <div class="sidebar-box sidebar-ad">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7773342225754932"
-         data-ad-slot="REPLACE_WITH_REAL_SLOT_ID"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
-
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
 </aside>
+
 
 
     </div>
 
     <!-- FOOTER -->
     <footer class="site-footer">
-      <p>© 2025 Horn Updates. All rights reserved.</p>
+      <p>© 2026 EthioPulse. All rights reserved.
+       </p>
       <p class="footer-meta">
-        Sources include Reuters, BBC, VOA, and other reputable outlets.
-      </p>
+  Sources include Ethiopia-focused Telegram channels and RSS feeds.
+</p>
+
     </footer>
   </div>
 
@@ -158,17 +135,17 @@
   <script>
   // ---------- HELPERS ----------
   function buildReaderLink(sourceUrl) {
-    return "reader.html?url=" + encodeURIComponent(sourceUrl || "#");
+    return "../reader.html?url=" + encodeURIComponent(sourceUrl || "#");
   }
-
   function getCountries(article) {
-    // Support either `countries` or `country_tags`
-    const raw = article.countries || article.country_tags || [];
-    if (!raw) return [];
-    if (Array.isArray(raw)) return raw;
-    return [String(raw)];
-  }
-
+  const raw =
+    article.countries ||
+    article.country_tags ||
+    (article.country ? [article.country] : []);
+  if (!raw) return [];
+  if (Array.isArray(raw)) return raw;
+  return [String(raw)];
+}
   function formatCountries(article) {
     const countries = getCountries(article);
     return countries.join(" • ");
@@ -321,10 +298,16 @@
 
   function loadArticles() {
     // Cache-buster ensures you always see the newest articles.json
-    fetch(`articles.json?v=${Date.now()}`)
+   fetch("./ethio_articles.json?v=" + Date.now())
+
       .then(res => res.json())
       .then(data => {
         let list = Array.isArray(data) ? data : (data.articles || []);
+		const updatedEl = document.getElementById("last-updated");
+       if (updatedEl && data.generated_at) {
+     updatedEl.textContent = "Last updated: " + niceDate(data.generated_at);
+    }
+
         list = list.filter(a => a.title && (a.source_url || a.link));
 
         // Sort newest first
@@ -338,7 +321,7 @@
         applyFilter();
       })
       .catch(err => {
-        console.error("Error loading articles.json:", err);
+        console.error("Error loading ethio_articles.json:", err);
         document.getElementById("featured-container").innerHTML =
           "<p>Failed to load stories.</p>";
       });
@@ -349,7 +332,13 @@
     loadArticles();
   });
 </script>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js");
+  }
+</script>
+
 
 </body>
 </html>
