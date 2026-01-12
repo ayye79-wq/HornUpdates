@@ -1,7 +1,9 @@
 {
   "name": "Ethio Pulse",
   "short_name": "EthioPulse",
-  "start_url": "/?source=pwa",
+  ""start_url": "/ethio/",
+"scope": "/ethio/",
+
   "display": "standalone",
   "background_color": "#f3f4f6",
   "theme_color": "#111827",
@@ -10,3 +12,4 @@
     { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
+
