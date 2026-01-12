@@ -2,3 +2,7 @@
 http://hornupdates.com/*  https://hornupdates.com/:splat  301!
 http://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
+/ethio/*   /ethio/index.html   200
+/*         /index.html         200
+
+
