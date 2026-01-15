@@ -75,12 +75,9 @@
 
 <div class="actions">
   <a class="btn" href="#" id="readFull">Read full article ↗</a>
-  <a class="btn secondary" href="#" id="copyLink">Copy link</a>
   <a class="btn secondary" href="#" id="shareNative">Share</a>
-  <a class="btn secondary" href="#" id="shareWhatsApp">WhatsApp</a>
-  <a class="btn secondary" href="#" id="shareTelegram">Telegram</a>
-  <a class="btn secondary" href="#" id="shareFacebook">Facebook</a>
 </div>
+
 
 
     </div>
@@ -203,5 +200,22 @@
 
     load();
   </script>
+  <script>
+  document.getElementById("shareNative")?.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const url = window.location.href;
+
+    if (navigator.share) {
+      await navigator.share({
+        title: document.getElementById("title").textContent,
+        url
+      });
+    } else {
+      await navigator.clipboard.writeText(url);
+      alert("Link copied");
+    }
+  });
+</script>
+
 </body>
 </html>
