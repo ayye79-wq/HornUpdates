@@ -74,13 +74,14 @@
       </div>
 
 <div class="actions">
-  <a href="#" id="readFull">Read full article ↗</a>
-  <a href="#" id="copyLink">Copy link</a>
-  <a href="#" id="shareNative">Share</a>
-  <a href="#" id="shareWhatsApp">WhatsApp</a>
-  <a href="#" id="shareTelegram">Telegram</a>
-  <a href="#" id="shareFacebook">Facebook</a>
+  <a class="btn" href="#" id="readFull">Read full article ↗</a>
+  <a class="btn secondary" href="#" id="copyLink">Copy link</a>
+  <a class="btn secondary" href="#" id="shareNative">Share</a>
+  <a class="btn secondary" href="#" id="shareWhatsApp">WhatsApp</a>
+  <a class="btn secondary" href="#" id="shareTelegram">Telegram</a>
+  <a class="btn secondary" href="#" id="shareFacebook">Facebook</a>
 </div>
+
 
     </div>
 
@@ -156,7 +157,8 @@
       const articleUrl = getParam("url");
       if (!articleUrl) { window.location.href = "index.html"; return; }
 
-      document.getElementById("openBtn").href = articleUrl;
+     document.getElementById("readFull").href = articleUrl;
+
 
       try {
         const res = await fetch("articles.json", { cache: "no-store" });
