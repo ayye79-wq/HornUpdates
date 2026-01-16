@@ -1,15 +1,64 @@
 {
-  "generated_at": "2026-01-16T11:40:18.050340+00:00",
+  "generated_at": "2026-01-16T14:46:43.132089+00:00",
   "articles": [
     {
-      "title": "Museveni takes strong lead in early results of Uganda presidential race",
-      "summary": "President Museveni has about 76% of the vote with results in from nearly half of all polling stations.",
+      "title": "Opposition supporters killed in overnight clashes as Uganda president takes election lead",
+      "summary": "President Museveni has about 75% of the vote with results in from more than half of all polling stations.",
       "country_tags": [],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Security & Conflict"
       ],
-      "published_at": "2026-01-16T11:07:27+00:00",
+      "published_at": "2026-01-16T13:22:51+00:00",
       "source_url": "https://www.bbc.com/news/articles/c78vzye1l2no?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Kruger National Park shuts as deadly floods strike South Africa",
+      "summary": "Severe flooding believed to be worsened by climate change has killed at least 19 people in South Africa in recent weeks.",
+      "country_tags": [],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-01-16T12:17:53+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cgl8n3jjnd1o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "قوات «تأسيس» تؤكد تصديها لهجوم من الجيش في هبيلا بجنوب كردفان",
+      "summary": "هبيلا، 16 يناير 2026 – قالت كل من الحركة الشعبية – شمال وقوات الدعم السريع إن قواتهما تحت تحالف “تأسيس” صدت هجوما للجيش السوداني على هبيلا بولاية جنوب كردفان. ودارت معارك ضارية أمس الخميس في هبيلا التي تبعد حوالي 30 كيلومترًا من مدينة الدلنج ثاني أكبر مدن ولاية جنوب كردفان، وذلك إثر هجوم للجيش على قوات الدعم السريع لفك الحصار عن الدلنج. ولم يصدر أي تعليق من الجيش السوداني بشأن المعارك التي دارت أمس في منطقة هبيلا. وتقع هبيلا على الطريق الرابط بين الدلنج وكادقلي، حيث يسعى الطرفان للسيطرة على الطريق الحيوي.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-16T11:51:57+00:00",
+      "source_url": "https://sudantribune.net/article/309432",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "DR Congo banks on iron project to inject $679bn in economy",
+      "summary": "DRC launches a $28.9bn iron ore project aimed at moving beyond raw exports into processing...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "published_at": "2026-01-16T11:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/dr-congo-banks-on-iron-project-to-inject-679bn-in-economy-5328738",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "US accuses South Africa military of 'cosying up to Iran'",
+      "summary": "The defence minister orders an inquiry into reports the military flouted orders to expel Iran from naval drills.",
+      "country_tags": [],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-01-16T11:42:07+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c8x95nk72k2o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News"
     },
     {
@@ -21,17 +70,6 @@
       ],
       "published_at": "2026-01-16T10:37:05+00:00",
       "source_url": "https://www.bbc.com/news/articles/c2d70kx6nn3o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Famed safari park shuts as deadly floods strike South Africa",
-      "summary": "Severe flooding believed to be worsened by climate change has killed at least 19 people in South Africa in recent weeks.",
-      "country_tags": [],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-01-16T09:05:49+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cgl8n3jjnd1o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News"
     },
     {
@@ -2496,41 +2534,6 @@
       ],
       "published_at": "2026-01-06T09:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/uganda-could-shut-internet-amnesty-warns-5317750",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Central African Republic president  wins third term by landslide",
-      "summary": "The main opposition coalition boycotted the vote after a referendum allowed the removal of term limits.",
-      "country_tags": [],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-06T06:30:15+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c0q40xg3j0jo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Long wait for justice leaves South African families in limbo",
-      "summary": "With tens of thousands of cases waiting to be heard, some people have to wait four years for their trials to start.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-06T00:02:46+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cx2drqwg32do?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Uganda bans live coverage of protests ahead of January election",
-      "summary": "The government has barred live broadcasts of riots and “unlawful processions” as President...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-05T14:20:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/uganda-bans-live-coverage-of-protests-ahead-january-election-5317122",
       "source_name": "The EastAfrican"
     }
   ]
