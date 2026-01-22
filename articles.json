@@ -1,6 +1,268 @@
 {
-  "generated_at": "2026-01-20T18:35:04.450522+00:00",
+  "generated_at": "2026-01-22T11:31:08.923822+00:00",
   "articles": [
+    {
+      "title": "Guinea-Bissau coup leaders set December election date",
+      "summary": "Regional powers Ecowas had previously warned junta head Horta N'Tam against such a long wait for elections.",
+      "country_tags": [],
+      "topic_tags": [
+        "Politics & Governance",
+        "Security & Conflict"
+      ],
+      "published_at": "2026-01-22T11:14:11+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cx2xxq0qpvgo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "South African police not yet able to defeat gangs, minister says",
+      "summary": "Police Minister Firoz Cachalia says organised crime is growing more complex, requiring new strategies.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-22T08:23:36+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cx2ll9wr562o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Slashed incomes and gamers go cold turkey: the fallout from Uganda's internet shutdown",
+      "summary": "The internet was shut during the general election, leaving many people without any income - or entertainment.",
+      "country_tags": [],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-01-22T04:14:19+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cx2p54rm4k4o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "«وادي النيل» للملاحة تعلن قرب استئناف الرحلات بين السودان ومصر",
+      "summary": "وادي حلفا 21 يناير 2026م- أعلنت هيئة وادي النيل للملاحة النهرية، الأربعاء عن قرب عودة حركة الملاحة النهرية بين السودان ومصر بعد توقف استمر لستة أعوام، في خطوة تُعد بداية فعلية لاستعادة الأنشطة الاقتصادية والاجتماعية الموسعة بين البلدين. وهيئة وادي النيل للملاحة النهرية مؤسسة حكومية مشتركة تأسست عام 1975م، وتختص بنقل الركاب والبضائع بين مينائي السد العالي بأسوان ووادي حلفا. وكان الخط الملاحي توقف منذ عام 2019م لأسباب فنية وتشغيلية واقتصادية، شملت أعطال البواخر وارتفاع تكاليف التشغيل وتراجع الجدوى الاقتصادية، بالإضافة إلى تذبذب منسوب المياه وإجراءات التنسيق الحدودي، وصولاً إلى التحديات الأمنية الأخيرة في السودان. وأكد مدير عام الهيئة،...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T22:28:19+00:00",
+      "source_url": "https://sudantribune.net/article/309689",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "والي الجزيرة: (6333) قتيلاً بيد «الدعم السريع» وعشرة آلاف ضحية بسبب الحرب",
+      "summary": "ود مدني 21 يناير 2026 – أعلن والي ولاية الجزيرة، الطاهر إبراهيم، الأربعاء، عن تسجيل أكثر من 60 ألف دعوى جنائية ضد قوات الدعم السريع، متهمًا إياها بارتكاب جرائم قتل مباشرة طالت أكثر من 6 آلاف مواطن. وارتكبت الدعم السريع، خلال سيطرتها على ولاية الجزيرة في الفترة من ديسمبر 2023 إلى مطلع 2025، جرائم قتل وعنف جنسي في هجمات انتقامية استهدفت مئات القرى والتجمعات السكانية. وقال الطاهر إبراهيم، لدى لقائه وفداً إعلامياً تركياً، إن “مليشيا الدعم السريع قتلت أكثر من 6,333 مواطناً قتلاً مباشراً، فيما توفي أكثر من 10 آلاف آخرين بسبب الحرب”. وأفاد أن السلطات قيدت أكثر من 60 ألف بلاغ انتهاك شمل جرائم سرقة ونهب وقتل ارتكبتها الدعم السريع في الولاية...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T21:01:08+00:00",
+      "source_url": "https://sudantribune.net/article/309681",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Life of veteran Ugandan opposition leader in danger, wife says",
+      "summary": "Kizza Besigye's wife has been to visit him at Luzira Prison and says he is extremely weak.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T18:19:52+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c5y2q5j71pqo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "حملة تضامن مع ناشط موقوف في شمال السودان",
+      "summary": "دنقلا 21 يناير 2026 – أطلق قانونيون وسياسيون وناشطون في المجتمع المدني، الأربعاء، حملة للإفراج عن رئيس التجمع النوبي والصيدلاني أحمد شفا الذي يواجه اتهامات خطيرة. وقيدت الشرطة في يوليو 2025 دعوى جنائية ضد أحمد شفا بموجب المادة 62 من القانون الجنائي المتعلقة بإثارة التذمر وسط القوات النظامية، والمادة 69 الخاصة بالإخلال بالسلامة العامة، بذريعة الإساءة إلى أحد عناصر كتيبة البراء بن مالك كان قُتل في معارك كردفان. وأعلن أكثر من 100 من القانونيين والإعلاميين والسياسيين ومنظمات المجتمع المدني، في بيان، عن “إطلاق حملة تضامن واسعة مع د. أحمد شفا، الذي يواجه محاكمة غير عادلة أمام محكمة دنقلا الجنائية بسبب مطالبته بوقف الحرب”.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T18:11:53+00:00",
+      "source_url": "https://sudantribune.net/article/309674",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Court declines interim orders to keep Congolese doctors in Kenyan hospitals",
+      "summary": "A Kenyan court has declined to issue temporary orders allowing Congolese doctors to continue...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T18:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/court-declines-interim-orders-keep-congolese-doctors-in-kenya-5334256",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "What we learned from Afcon 2025",
+      "summary": "After chaotic scenes in the Africa Cup of Nations final, BBC Sport Africa explores what else we learned from just under a month of competition in Morocco.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T17:49:23+00:00",
+      "source_url": "https://www.bbc.com/sport/football/articles/c620nnj0z8lo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "ሜድሮክ ዋቢ ሸበሌ ሆቴልን ተረከበ",
+      "summary": "ዋቢ ሸበሌ ሆቴል ወደ ሜድሮክ ኢንቨስትመንት ግሩፕ መዘዋወሩን ተከትሎ አዲስ ምዕራፍ ጀምሯል። በኢትዮጵያ የንግድና የኢንቨስትመንት እንቅስቃሴ ውስጥ ትልቅ ስፍራ የሚሰጠው ይህ የባለቤትነት ሽግግር የሆቴሉን ረጅም ጉዞ ተከትሎ የተመዘገበ አዲስ ክንውን ሆኖ ተመዝግቧል። ሆቴሉ በ1950ዎቹ መገባደጃ ላይ በንጉሠ ነገሥት ቀዳማዊ ኃይለ ሥላሴ አማካኝነት ለልጅ ልጆቻቸው ገቢ እንዲያስገኝ ታስቦ የተገነባ ቢሆንም፣ በደርግ ዘመን በመንግሥት ከተወረሰ በኋላ በ2000ዎቹ መጀመሪያ ላይ ግን ለንጉሣዊ ቤተሰቡ ወራሾች ተመልሷል። ይህንን ታሪካዊ የንብረት ዝውውር በዛሬው ዕለት ጥር 13 ቀን 2018 ዓ.ም. ያከናወኑት በሜድሮክ በኩል ዋና ሥራ አስፈፃሚው ጀማል አህመድ እና በሆቴሉ በኩል የቦርድ ፀሐፊው በሆኑት በዕደማርያም መኮንን ኃይለሥላሴ (ልዑል) መካከል በተደረገ የስምምነት ፊርማ ነው። በዕደማርያም በፊርማ ሥነ-ሥርዓቱ ላይ ሚድሮክ ለታሪክና ለዘመናዊነት ያለውን ራዕይ ያደነቁ ሲሆን፣ ድርጅቱ የሆቴሉን ጥንታዊ ገፅታ ሳይለቅ ዘመናዊ መልክ እንዲይዝ ለማድረግ የገባውን ቃልም አረጋግጠዋል። በ40 ሺህ ካሬ ሜትር ቦታ ላይ ያረፈው ይህ...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T17:31:16+00:00",
+      "source_url": "https://addisfortune.news/midroc-group-acquires-wabe-shebelle-hotel-2",
+      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
+    },
+    {
+      "title": "مجلسا السيادة والوزراء يجيزان الموازنة الطارئة في أول اجتماع بـ «الخرطوم»",
+      "summary": "الخرطوم 21 يناير 2026 – صادق مجلسا السيادة والوزراء – البرلمان المؤقت، الأربعاء، الموازنة الطارئة لهذا العام في أول اجتماع يُعقد في العاصمة الخرطوم منذ اندلاع الحرب في أبريل 2023. ومنذ نشوب الحرب درجت الحكومة على عدم إعلان تفاصيل الموازنة، حيث تذهب معظم الموارد لدعم العمليات العسكرية والرواتب مع صرف محدود على الخدمات. وقال مجلس السيادة، في بيان، إنّه “ومجلس الوزراء عقدا اجتماعاً مشتركاً بالعاصمة الخرطوم، في أعقاب عودة مجلس السيادة وحكومة الأمل لمزاولة مهامهما من الخرطوم”. وأفاد وزير الثقافة والإعلام خالد الإعيسر في تصريح صحفي بأن الاجتماع صادق على الموازنة الطارئة للدولة للعام 2026، كما أجاز عدداً من القوانين، مع استمرار النظر في مشروعات...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T16:26:02+00:00",
+      "source_url": "https://sudantribune.net/article/309671",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Ruto dispatches envoys to fill vacant diplomatic posts",
+      "summary": "Ruto urges new ambassadors to actively promote trade and open markets for Kenya.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "published_at": "2026-01-21T14:46:58+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/ruto-dispatches-envoys-to-fill-vacant-diplomatic-posts-5333956",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Ethiopian Airlines orders 9 Dreamliners as long-haul travel demand grows",
+      "summary": "Airline to deploy the additional wide-body aircraft to expand its route network.",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T14:17:36+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/ethiopian-airlines-orders-9-dreamliners-travel-demand-grows-5333904",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Nigeria police confirm mass church abductions after previous denial",
+      "summary": "More than 160 people were reportedly taken from three churches in the northern Kaduna state.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T13:08:20+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c4grw9vg7y4o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "New deal to demolish trade barriers in North, Central corridors",
+      "summary": "Deal to remain in force for five years, with provisions for renewal and expansion",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "published_at": "2026-01-21T12:00:05+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/new-deal-to-demolish-trade-barriers-in-north-central-corridors-5333690",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "From costumes to scrubs: Kenyan actress’ career pivot in US",
+      "summary": "Clarice Otieno's journey from a Kenyan household name to a surgical technologist in the US.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T12:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/from-costumes-to-scrubs-kenyan-actress-career-pivot-in-us--5333648",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "China turns to soft power to expand economic influence in Africa",
+      "summary": "China’s soft power strategy will centre on cultural exchanges without interfering in internal...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T11:47:11+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/china-turns-soft-power-to-expand-economic-influence-in-africa-5333620",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Kasibante drags Museveni election victory to Supreme Court",
+      "summary": "A fringe presidential candidate has petitioned Uganda’s Supreme Court to annul President-elect...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-01-21T10:13:43+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/kasibante-drags-museveni-election-victory-to-supreme-court-5333574",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "A citizen without a country: Former MP’s fight for nationality",
+      "summary": "Nearly two years after an African Union rights body ruled that her citizenship was arbitrarily...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-21T03:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/a-citizen-without-a-country-former-mp-fight-for-nationality--5333102",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "قيادات «صمود» تبحث مع مسؤولين فرنسيين سبل وقف الحرب في السودان",
+      "summary": "باريس 20 يناير 2026- عقد وفد من التحالف المدني الديمقراطي لقوى الثورة “صمود” برئاسة عبد الله حمدوك، الثلاثاء، اجتماعاً مع مدير عام الشؤون الإفريقية بوزارة الخارجية الفرنسية ايمانويل بلاتمان والمسؤولين عن ملف السودان والقرن الإفريقي، وذلك في مفتتح جولة أوربية للتحالف لبحث الأزمة السودانية. وبحث الاجتماع وفقا لبيان عن التحالف تداعيات الحرب المدمّرة في السودان وما خلفته من آثار إنسانية كارثية، بالإضافة إلى الانتهاكات الجسيمة المرتكبة من طرفي النزاع. وشدد وفد “صمود” على ضرورة اضطلاع المجتمع الدولي بدور فاعل لضمان الوقف الفوري للحرب، تفادياً لتفكك الدولة السودانية وحفاظاً على وحدتها، وحذر من المخاطر المترتبة على استمرار الصراع بما في ذلك تحول...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-20T21:17:57+00:00",
+      "source_url": "https://sudantribune.net/article/309656",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "«فن الصفقة» في مواجهة سد النهضة.. هل يكسر ترمب جمود السنوات؟",
+      "summary": "أديس أبابا 20 يناير 2026 – يبرز ملف سد النهضة كأحد أكثر الاختبارات تعقيداً لسياسة “فن الصفقة”؛ فبينما تصر إثيوبيا على أن السد بات حقيقة واقعة وسيادية، وتمسك مصر بحقها التاريخي كقضية وجود، يقف السودان في منطقة الوسط القلقة، لتأتي من جديد الوساطة الأميركية كمحاولةً لكسر الجمود الذي استمر لسنوات. وكان رئيس الوزراء الإثيوبي، آبي أحمد، افتتح رسمياً في التاسع من سبتمبر الماضي سد النهضة الإثيوبي الكبير، الذي بدأ تشييده عام 2011 وسط خلافات مستمرة مع السودان ومصر. وفي المقابل، أعلن الرئيس دونالد ترمب استعداده لإعادة إطلاق الوساطة لحل نزاع “تقاسم مياه النيل” مرة واحدة وإلى الأبد، موجهاً خطاباً للرئيس المصري عبد الفتاح السيسي في 16 يناير الحالي، أكد...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-20T19:32:05+00:00",
+      "source_url": "https://sudantribune.net/article/309643",
+      "source_name": "سودان تربيون"
+    },
     {
       "title": "منسيون في المنفى.. «كرياندانغو» يروي مأساة السودانيين في أوغندا",
       "summary": "كمبالا 20 يناير 2026 – في أطراف معسكر “كرياندانغو” بأوغندا، تسرد اللاجئة السودانية “وهيبة” قصتها التي لا تختلف كثيراً عن آلاف الحكايات التي خلفتها الحرب، لكنها تُروى هذه المرة بصوت أمٍ وحيدة، تحمل عبء النجاة ومسؤولية الحياة معاً. هربت وهيبة من السودان برفقة أطفالها الأربعة، تاركةً خلفها بيتاً وذكريات وحياة انهارت تحت وطأة العنف، لتجد نفسها في فضاء مفتوح يُسمى “اللجوء”، حيث لا ضمانة فيه لشيء سوى القلق. تتحدث السيدة لسودان تربيون بهدوء مُنهك عن تفاصيل يومية بسيطة في ظاهرها، لكنها قاسية في جوهرها؛ من البحث عن مياه صالحة للشرب، ومحاولة توفير وجبة كافية لأطفالها، إلى انتظار دور طويل أمام مركز صحي قد لا يملك الدواء أو القدرة على الاستجابة. تقول...",
@@ -2243,276 +2505,6 @@
       "published_at": "2026-01-12T16:44:58+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/why-somalia-is-cancelling-uae-port-deals-5324586",
       "source_name": "The EastAfrican"
-    },
-    {
-      "title": "«فولكر تروك» يزور السودان خلال يومين ويستثني «دارفور»",
-      "summary": "جنيف، 12 يناير 2026 – قالت مفوضية الأمم المتحدة لحقوق الإنسان، الاثنين، إن مفوضها السامي فولكر تروك يعتزم زيارة شرق وشمال السودان لمدة أربعة أيام اعتبارًا من بعد غد الأربعاء، دون أن تمتد رحلته إلى دارفور غربي البلاد. ودرج كبار مسؤولي الأمم المتحدة الذين يزورون السودان على الوصول إلى دارفور عبر تشاد بتصاريح من السلطات، حيث يخضع معظم الإقليم لسيطرة الدعم السريع. وقالت المفوضية، في بيان، إن “مفوض حقوق الإنسان فولكر تورك سيزور السودان خلال الفترة من 14 إلى 18 يناير الحالي”. وأشارت إلى أن المفوض سيعقد لقاءات مع مسؤولين في الحكومة بمدينة بورتسودان شرقي البلاد، إضافة إلى ممثلي المجتمع المدني وفريق الأمم المتحدة.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-12T16:29:49+00:00",
-      "source_url": "https://sudantribune.net/article/309276",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Congolese doctors sue over licence ban in Kenya",
-      "summary": "Doctors from DR Congo have gone to court to block a Health ministry decision barring renewal of...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-12T15:45:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/congolese-doctors-sue-over-licence-ban-in-kenya-5324462",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "مسيّرات «الدعم السريع» تقتل وتصيب 18 مدنياً بجنوب كردفان",
-      "summary": "كادقلي، 12 يناير 2026 ـ لقي خمسة أشخاص مصرعهم وأُصيب 13 آخرون، جراء استهداف طائرات مسيّرة تابعة لقوات الدعم السريع منطقة “كرتالا” بولاية جنوب كردفان، حسبما أفادت شبكة أطباء السودان، الاثنين. وسبق أن شهدت هذه المنطقة في ديسمبر المنصرم معارك بين الجيش والحركة الشعبية وقوات الدعم السريع المتحالفة معها، ضمن مساعي الجيش لفك الحصار الذي تفرضه الحركة والدعم السريع على “الدلنج”، وصولاً إلى كادقلي. وقالت الشبكة الطبية في بيان إن “5 أشخاص قتلوا وأصيب 13 آخرون، جراء استهداف مسيّرة موجهة للدعم السريع لسوق “كرتالا” بمنطقة الجبال الستة بولاية جنوب كردفان صباح الأحد”. ونقلت عن فريق الشبكة أن القتلى والمصابين جميعهم من المدنيين الذين كانوا داخل السوق...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-12T15:36:23+00:00",
-      "source_url": "https://sudantribune.net/article/309274",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "ለልማት ባንክ አምስት አዳዲስ ምክትል ፕሬዝዳንቶች ተሾሙ",
-      "summary": "​መንግሥታዊው የፖሊሲ ባንክ የኢትዮጵያ ልማት ባንክ (ኢልባ) በአመራር እርከኑ ላይ አምስት አዳዲስ ምክትል ፕሬዝዳንቶችን ዛሬ ጥር 4 ቀን 2018 ዓ.ም. አግኝቷል። ​የባንኩ የዳይሬክተሮች ቦርድ ሰብሳቢ ብሩክ ታየ (ዶ/ር) በባንኩ ውስጥ ረጅም ዘመን ያገለገሉትን ጌታቸው ዋቄን በመተካት የኔነህ ግዛውን የኮርፖሬት አገልግሎት ዘርፍ ምክትል ፕሬዝዳንት አድርገው ሾመዋል። በተመሳሳይ ጌታሰው ፈንታው የአነስተኛና መካከለኛ ኢንተርፕራይዞች ፋይናንስ ዘርፍን በምክትል ፕሬዝዳንትነት እንዲመሩ ተመድበዋል። ​አቶ ጌታቸው በላይ የኮርፖሬት ደንበኞች አስተዳደር ምክትል ፕሬዝዳንት፤ አበባው ሲራጅ የፋይናንስና ዓለም አቀፍ ባንክ አገልግሎት ምክትል ፕሬዝዳንት፤ እና ደሳለኝ ኃይሌ የኢንፎርሜሽን ሲስተምና ዲጂታል ባንክ አገልግሎት ምክትል ፕሬዝዳንት ሆነዋል። ​የኢትዮጵያ ኢንቨስትመንት ሆልዲንግስ ዋና ሥራ አስፈፃሚ የሆኑት ብሩክ፣ የቀድሞውን የብሔራዊ ባንክ ገዢ አቶ ተክለወልድ አጥናፉን ተክተው የልማት ባንክ የቦርድ ሰብሳቢ ከሆኑ ወዲህ በባንኩ የአመራር መዋቅር ላይ ፈጣን ለውጦች እየታዩ ነው። ሰሞኑን እመቤት መለሰን (ዶ/ር)...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-12T15:23:10+00:00",
-      "source_url": "https://addisfortune.news/dbe-appoints-five-vice-presidents-2",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "What is at stake in Uganda’s presidential election?",
-      "summary": "Museveni, who came to power at the head of a rebellion in 1986, is aiming for a seventh term in...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-12T14:11:24+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/what-is-at-stake-in-uganda-presidential-election-5324358",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "The unexpected gift: How losing West’s billions of dollars in aid saves East Africa",
-      "summary": "This could be a world where the West isn’t the architect of the African house, but an invited...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-12T14:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/how-losing-west-billions-of-dollars-in-aid-saves-east-africa-5324304",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "A Review of the Prime Minister’s Intervention on the Role of Intellectuals",
-      "summary": "Introduction Prime Minister Abiy has initiated a vital discussion on the role of intellectuals, one that should not end with his intervention. This long overdue conversation should be welcomed by intellectuals before anyone. The Prime Minister should be applauded for taking the time to engage with academics at the Addis Ababa University and for triggering important lines of inquiry. He made important remarks concerning the definition of intellectuals, their roles in history and society, and the challenges they face.",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-12T13:43:03+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48639/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "تحقيق لـ «سودان تربيون» يكشف مواقع المقابر الجماعية ومراكز الاحتجاز السري في الفاشر",
-      "summary": "الفاشر 12 يناير 2026 – في السادس والعشرين من أكتوبر 2025، سقطت مدينة الفاشر، عاصمة ولاية شمال دارفور، في قبضة قوات الدعم السريع، بعد حصار خانق استمر أكثر من 500 يوم، لكن ما أعقب هذا السقوط لم يكن مجرد تغيير عسكري في خارطة السيطرة، بل بداية فصل مظلم من الانتهاكات التي طالت المدنيين، وسط اتهامات بارتكاب جرائم ترقى إلى الإبادة الجماعية والتطهير العرقي. وتقدر وكالات الأمم المتحدة، عدد سكان الفاشر والمناطق المحيطة بها قبيل حصارها بما في ذلك معسكرا أبو شوك وزمزم، بنحو 1.5 مليون نسمة. وبحلول أبريل 2025، أشارت التقارير الرسمية إلى انخفاض عدد السكان إلى 900 ألف نسمة، حيث شهد الشهر ذاته هجوماً من قوات الدعم السريع على معسكر زمزم، أكبر مخيمات...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-12T12:34:24+00:00",
-      "source_url": "https://sudantribune.net/article/309260",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Nigerian stars dominate All Africa Music Awards",
-      "summary": "Global superstar Burna Boy claimed the prestigious Album of the Year award for his latest work No Sign of Weakness.",
-      "country_tags": [],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-01-12T11:25:27+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c5y2gkydpp5o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "'Hounded and harassed': The former pop star taking on Uganda's long-time president",
-      "summary": "Bobi Wine - a former musician - has been arrested numerous times as he challenges President Yoweri Museveni.",
-      "country_tags": [],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-12T10:48:32+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cz0pr807yz7o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "‘Kayoola’ made it to Cape Town and back and the AU is just quiet",
-      "summary": "Africa’s electric-bus breakthrough shows AfCFTA turning integration into reality.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-12T09:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/-kayoola-made-it-to-cape-town-and-the-au-is-just-quiet-5322598",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Oh, these men of small ambitions",
-      "summary": "Nigeria’s wealth and talent are undermined by insecurity, banditry, and poor governance.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-12T07:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/oh-these-men-of-small-ambitions-5322552",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Trump, this one, the other... It’s the era of might is right all over again",
-      "summary": "Tanzania’s post-election unrest exposes deep cracks in democracy, as youth-led movements demand...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-12T05:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/trump-this-one-the-other-it-s-the-era-of-might-is-right-5322518",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Global South is reshaping world order; 2026 will be turning point",
-      "summary": "As unipolarity fades, the Global South is reshaping the world toward a multipolar order.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-01-12T03:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/opinion/guest-blogs/global-south-is-reshaping-world-order-2026-turning-point-5322578",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "محامون: اعتقال «منيب» يكشف نمطًا ممنهجًا في تحويل العدالة لأداة قمع",
-      "summary": "الخرطوم، 11 مايو 2026 – قالت مجموعة محامو الطوارئ، الأحد، إن الانتهاكات الحقوقية التي صاحبت اعتقال الناشط منيب عبد العزيز تكشف نمطًا ممنهجًا في تحويل إجراءات العدالة إلى أدوات قمع. واعتقلت السلطات منيب في 19 ديسمبر الماضي، بعد ساعات من تنظيمه مخاطبة جماهيرية أمام مسجد بعد صلاة الجمعة في منطقة مقاصر بمدينة دنقلا شمالي السودان. ونظم منيب المخاطبة في سياق الاحتفال بذكرى ثورة ديسمبر السلمية التي اندلعت في 19 ديسمبر 2018، لتنجح في إجبار قادة الجيش على عزل الرئيس عمر البشير من الحكم الذي استمر فيه 30 عامًا. وقال محامو الطوارئ، في بيان، إن “عملية اعتقال منيب شابتها جملة من الانتهاكات الحقوقية والقانونية الخطيرة، التي تكشف بوضوح عن نمطٍ ممنهج في...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-11T21:26:07+00:00",
-      "source_url": "https://sudantribune.net/article/309244",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "تدمير (28) طائرة بمطار الخرطوم خلال الحرب",
-      "summary": "الخرطوم، 11 يناير 2026 – كشفت مصادر واسعة الاطلاع في قطاع الطيران المدني لـ “سودان تربيون”، الأحد، أن مطار الخرطوم استقبل أمس السبت رحلة خاصة بمجلس السيادة، دون الإعلان عن موعد رسمي لاستئناف الرحلات الجوية. وتعرض مطار الخرطوم لاستهداف مباشر وعنيف من قوات الدعم السريع في بداية الحرب منتصف أبريل 2023؛ مما أدى إلى وقوع أضرار جسيمة في منشآته وعدد من الطائرات التي كانت رابضة في المدرج. وقال مصدر مسؤول بإحدى شركات الطيران لـ “سودان تربيون”: “إن عدد الطائرات التي تعرضت للتدمير بلغ 28 طائرة تتبع لشركات وطنية وأجنبية، وتشمل طائرات شحن وركاب”. وأكد المصدر أن شركات الطيران العاملة حالياً تواجه تحديات تشغيلية كبيرة، في حين لا يزال التأمين يمثل هاجساً...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-11T20:01:59+00:00",
-      "source_url": "https://sudantribune.net/article/309241",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Sudan's government returns to capital after nearly 3 years of war",
-      "summary": "The military-backed government is back in Khartoum after being driven out by its paramilitary rival.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "Politics & Governance",
-        "Security & Conflict"
-      ],
-      "published_at": "2026-01-11T17:50:02+00:00",
-      "source_url": "https://www.bbc.com/news/articles/ckgn5g90lggo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "«المشتركة» تتهم الدعم السريع بتصفية (19) مدنياً في شمال دارفور",
-      "summary": "الطينة، 11 يناير 2026 ـ اتهمت القوة المشتركة المتحالفة مع الجيش، الأحد، قوات الدعم السريع بارتكاب انتهاكات واسعة بحق المدنيين في مناطق نائية بولاية شمال دارفور، أسفرت عن مقتل ما لا يقل عن 19 شخصاً. ومنذ ثلاثة أيام، تدور معارك ضارية بين حلفاء الجيش السوداني وقوات الدعم السريع في منطقتي “جرجيرة” و”مستورة” التابعتين لمحلية الطينة على الحدود مع دولة تشاد. ويأتي تصعيد هجمات الدعم السريع في هذه المناطق ضمن تحركات أوسع تهدف إلى السيطرة على آخر معاقل الجيش والقوة المشتركة في إقليم دارفور، وهي محليات: الطينة، وأمبرو، وكرنوي. وقالت القوة المشتركة في بيان: “إنه في أعقاب الفشل الميداني للمليشيا” –في إشارة إلى الدعم السريع– “ارتكبت أعمالاً إجرامية بحق...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-11T17:39:09+00:00",
-      "source_url": "https://sudantribune.net/article/309239",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "رئيس الوزراء السوداني يعلن عودة الحكومة لممارسة مهامها من الخرطوم",
-      "summary": "الخرطوم، 11 يناير 2026 -أعلن رئيس الوزراء السوداني، كامل إدريس، الأحد، عودة الحكومة لممارسة مهامها بشكل رسمي من العاصمة الخرطوم، مؤكداً أن العودة تشمل المؤسسات الحكومية كافة دون استثناء. وكانت مؤسسات الحكومة الاتحادية قد انتقلت إلى مدينة بورتسودان على ساحل البحر الأحمر شرقي البلاد، إثر اندلاع الحرب بين الجيش وقوات الدعم السريع في أبريل 2023؛ حيث اتُّخِذت المدينة عاصمة إدارية مؤقتة نتيجة الدمار الذي لحق بالمؤسسات في الخرطوم. وعقب تمكن الجيش في مايو 2025 من استعادة الخرطوم، شكل مجلس السيادة لجنة عليا لتهيئة الأوضاع لعودة النازحين والمؤسسات إلى العاصمة، حيث عملت اللجنة على صيانة الطرق وتوفير المياه والكهرباء لمناطق واسعة استعداداً للعودة....",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-11T16:55:28+00:00",
-      "source_url": "https://sudantribune.net/article/309218",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "ODM contagion and the changing ways of Kenya party politics ahead of 2027 elections",
-      "summary": "The 20-year-old ODM has been rocked by internal fallouts among its top officials following...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-11T13:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/odm-contagion-and-the-changing-ways-of-kenya-party-politics-5322340",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "أطباء: خروج ثلاثة مستشفيات من الخدمة بمدينة الدلنج",
-      "summary": "الدلنج، 11 يناير 2025 ـ أعلنت شبكة اطباء السودان، الأحد، عن خروج ثلاثة مستشفيات عن العمل بمدينة الدلنج بولاية جنوب كردفان جراء استهدافها بواسطة الطائرات المسيّرة والمدفعية الثقيلة التابعة لقوات الدعم السريع والحركة الشعبية بقيادة عبدالعزيز الحلو. وخلال الأسابيع الماضية رفعت قوات الدعم السريع والحركة الشعبية وتيرة القصف عبر المدافع والطائرات المسيّرة على الدلنج وهي ثاني أكبر مدن ولاية جنوب كردفان، بالتزامن مع الهجمات الجوية على كادقلي، وهو ما أوقع عشرات القتلى وتدمير مرافق خدمية. وقالت شبكة أطباء السودان في بيان ان “نحو ثلاثة مستشفيات رئيسية بالدلنج خرجت عن الخدمة فيما قتل 4 كوادر طبية جراء القصف المتعمد للدعم السريع وحركة الحلو على...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-11T12:54:12+00:00",
-      "source_url": "https://sudantribune.net/article/309231",
-      "source_name": "سودان تربيون"
     }
   ]
 }
