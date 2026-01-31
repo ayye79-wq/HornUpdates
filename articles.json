@@ -1,16 +1,66 @@
 {
-  "generated_at": "2026-01-30T11:41:19.502123+00:00",
+  "generated_at": "2026-01-31T11:48:46.599529+00:00",
   "articles": [
     {
-      "title": "Burkina Faso junta announces ban on all political parties",
-      "summary": "The multiparty system had been \"promoting division among citizens\", the country's interior minister said.",
+      "title": "Tanzania faces litmus test on universal health cover",
+      "summary": "Many citizens are reluctant to join government-backed schemes, citing mismanagement, graft and...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-01-31T05:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/dar-faces-litmus-test-on-universal-health-cover-5343718",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "This army chief threatened to castrate opposition leader and claimed descent from Jesus",
+      "summary": "The Ugandan president’s son, notorious for explosive remarks on X, has ambitions to succeed his father.",
       "country_tags": [],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-01-31T00:05:52+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cdjnp9m8wvgo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Mali lawmaker jailed in Ivory Coast for insulting president",
+      "summary": "Prosecutors say Mamadou Hawa Gassama described Alassane Ouattara as a \"tyrant\" and \"an enemy of Mali\".",
+      "country_tags": [],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-01-30T18:09:20+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c74vgxp0zr4o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "السودان ينفي طلبه من القاهرة توقيف وترحيل اللاجئين الى مصر",
+      "summary": "القاهرة 30 يناير 2026 – نفت السفارة السودانية بالقاهرة، الجمعة، أن تكون حملات توقيف وترحيل السودانيين بمصر بطلب من السودان، بينما دعت قوى سياسية سودانية السلطات المصرية بوقف حملات التوقيف والترحيل القسري للسودانيين. وقال السفير السوداني بمصر عماد الدين عدوي في مؤتمر صحفي عقده اليوم الجمعة إن ما ذكرته احدى الصحفيات المصريات عن توجيه حكومة السودان بترحيل السودانيين من مصر “أوهام وتجن وتجاوز للخطوط الحمراء”. وقال عدوي إن عدد السجناء السودانيين في مصر لا يتجاوز 400 سجين، وحينما تقارنه بـ 6 ملايين شخص يؤكد ذلك حجم الانضباط الكبير للجالية السودانية. وأشار إلى أنه بتوجيه من وزير العمل المصري تم منح تصاريح عمل للوجود السوداني في مصر وخفض قيمة...",
+      "country_tags": [
+        "Sudan"
+      ],
       "topic_tags": [
         "General"
       ],
-      "published_at": "2026-01-30T10:52:57+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cevnlv9my1no?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "published_at": "2026-01-30T17:45:40+00:00",
+      "source_url": "https://sudantribune.net/article/310041",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "البرهان يهاجم حمدوك وتحالف «صمود» بعنف",
+      "summary": "الخرطوم 30 يناير 2026 – شن قائد الجيش السوداني ورئيس مجلس السيادة عبد الفتاح البرهان، الجمعة، هجوما عنيفا على القوى المدنية برئاسة عبد الله حمدوك. وقال البرهان خلال مخاطبته المصلين في مجمع الشيخ الهدية بضاحية الكلاكلة جنوبي الخرطوم إن عبد الله حمدوك رئيس التحالف المدني الديمقراطي لقوى الثورة “صمود” ومجموعته لن تطأ أرجلهم أرض السودان وهم يتسولون بقضايا الشعب السوداني. وأكد أن ما سماه بادعاءات قادة صمود بأن القوات المسلحة تستخدم الأسلحة الكيمائية لن تجد من يستمع إليها من الشعب السوداني لأن الشعب هو القوات المسلحة – حسب تعبيره -. وتابع قائلا “رسالتي لبعض الدول التي لا زالت تستقبل وتستمع إلى حمدوك ومجموعته بأن هؤلاء يعملون ضد مصالح بلادهم...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-30T17:38:09+00:00",
+      "source_url": "https://sudantribune.net/article/310037",
+      "source_name": "سودان تربيون"
     },
     {
       "title": "Suspected jihadists attack airport near Niger's capital",
@@ -19,9 +69,136 @@
       "topic_tags": [
         "Security & Conflict"
       ],
-      "published_at": "2026-01-30T10:17:46+00:00",
+      "published_at": "2026-01-30T17:25:09+00:00",
       "source_url": "https://www.bbc.com/news/articles/cvgp47neze4o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News"
+    },
+    {
+      "title": "South Africa and Israel expel each other's envoys in diplomatic row",
+      "summary": "South Africa accuses the Israeli envoy of insulting President Ramaphosa. Israel says the expulsion is \"baseless\".",
+      "country_tags": [],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-01-30T16:10:24+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cvgn8ejljqwo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Tit-for-tat expulsions of top diplomats deepen South Africa–Israel rift",
+      "summary": "South Africa and Israel have expelled each other’s top diplomats, escalating tensions over Gaza.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-30T15:55:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/southern-africa/tit-for-tat-expulsions-of-top-diplomats-deepen-sa-israel-rift-5343678",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Tshisekedi meets AU mediators as diplomacy intensifies in DRC",
+      "summary": "African mediation is expected to build on gains from the Doha and Washington processes, which have largely focused on diplomatic commitments.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-30T15:15:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/tshisekedi-meets-au-mediators-as-diplomacy-intensifies-in-drc-5343406",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "وصول السلع الضرورية إلى الدلنج للمرة الأولى منذ عامين",
+      "summary": "الدلنج، 30 يناير 2026 – انسابت الجمعة السلع الضرورية إلى مدينة الدلنج، ثاني أكبر مدن ولاية جنوب كردفان، مما انعكس فوراً بانخفاض كبير في أسعارها بالأسواق المحلية. ويأتي هذا الانفراج بعد إعلان الجيش السوداني، في 26 يناير الجاري، إنهاء حصار المدينة بربطها من الاتجاه الشرقي مع ولاية شمال كردفان، إثر معارك عنيفة ضد قوات الدعم السريع وحليفتها الحركة الشعبية لتحرير السودان – شمال بقيادة عبد العزيز الحلو. وتمكنت أكثر من عشر شاحنات محملة بالسكر، الدقيق، الذرة، البصل، والوقود من الوصول إلى المدينة قادمة من شمال كردفان؛ وهي القافلة الأولى التي تصل الدلنج بهذا الحجم منذ أكثر من عامين. وأكدت مصادر محلية لـ “سودان تربيون” توفر أغلب السلع في الأسواق منذ...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-30T15:07:37+00:00",
+      "source_url": "https://sudantribune.net/article/310035",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "President Ruto savours mini election triumph, predicts landslide win in 2027",
+      "summary": "Kenya’s President says by-election victories have boosted his confidence as rivals court the Mt...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-01-30T14:09:47+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/president-ruto-savours-mini-election-triumph-predicts-landslide-5343348",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Kenya warns citizens in South Sudan as fighting escalates",
+      "summary": "Clashes over the past three months have affected 60 percent of the country, mostly between...",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-01-30T14:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/kenya-warns-citizens-in-south-sudan-as-fighting-escalates-5343496",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Burkina Faso junta announces ban on all political parties",
+      "summary": "The multiparty system had been \"promoting division among citizens\", the country's interior minister said.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-30T13:57:56+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cevnlv9my1no?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "هجمات عنيفة بالمسيرات على الأبيض بشمال كردفان",
+      "summary": "الأبيض، 30 يناير 2026 – قالت مصادر عسكرية، إن قوات الدعم السريع شنت، الجمعة، هجمات بالمسيرات الانقضاضية هي الأعنف، على عدة مواقع حيوية في مدينة الأبيض عاصمة ولاية شمال كردفان. ولم يتأكد بعد ما إذا كانت الهجمات بالطيران المسير قد أسفرت عن خسائر بشرية. ولم يصدر الجيش السوداني أي تعليق، كما لم تتبنَ قوات الدعم السريع الهجمات على مدينة الأبيض بشكل رسمي. وتتمركز الدعم السريع شمال وجنوب وغرب مدينة الأبيض كبرى المدن في إقليم كردفان المتاخم لولايات الخرطوم والنيل الأبيض والشمالية.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-30T13:32:21+00:00",
+      "source_url": "https://sudantribune.net/article/310032",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Rwandan politician held over YouTube content",
+      "summary": "Rwanda Investigations Bureau did not specify the content or timing of the alleged false...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-30T13:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/rwandan-politician-held-over-youtube-content-5343446",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Gates, OpenAI to drive AI adoption by health clinics",
+      "summary": "The tools are designed to assist healthcare workers with access to guideline-based medical...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-01-30T11:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/sustainability/health/gates-openai-to-drive-ai-adoption-by-health-clinics-5343246",
+      "source_name": "The EastAfrican"
     },
     {
       "title": "Eurobond Restructuring Efforts Suffer Major Setback as Creditors Committee Rejects AIP",
@@ -2350,182 +2527,6 @@
       "published_at": "2026-01-19T10:46:50+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/c70ljednyl6o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News"
-    },
-    {
-      "title": "التأسيس أم الابتناء؟ في ضبط المفهوم لا محو التاريخ",
-      "summary": "الواثق كمير kameir@yahoo.com مُقدمة: لم يكن مصطلح «تأسيس الدولة» موضوعاً لنقاشٍ عام واسع في الفضاء السياسي السوداني، رغم أن مجموعة من الفاعلين المدنيين، المنخرطين في بلورة رؤية للسودان ما بعد الحرب، كانت تطمح منذ وقت مبكر إلى فتح حوار جاد حول معنى التأسيس وموقعه في معالجة الأزمة الوطنية (الواثق كمير، «سودان ما بعد الحرب: ملامح من رؤية!»، سودانايل، 10 ديسمبر 2023). وقد جاء مقال الدكتور مكي الشبلي ليضع المصطلح في واجهة النقاش العام، من خلال تساؤلات نقدية مشروعة حول استخدامه من قبل بعض الفاعلين المسلحين، وعلى رأسهم قوات الدعم السريع، بجانب الحركات المسلحة والسياسيين المتحالفين معها، ولو أنه لم يُشر إليهم صراحة (مكي الشبلي، «تأسيس أم ابتناء:...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-19T09:16:26+00:00",
-      "source_url": "https://sudantribune.net/article/309560",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Kenya takes largest share of Africa’s venture capital funding",
-      "summary": "Solar home system maker Sun King was among the local startups that reported large investment...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Business & Economy"
-      ],
-      "published_at": "2026-01-19T04:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/kenya-takes-largest-share-of-africa-venture-capital-funding-5329968",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "My children were recruited in a trafficking scam. I joined a police hunt to find them",
-      "summary": "BBC Africa Eye joins an anti-trafficking police unit in Sierra Leone helping a man look for his missing children.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-19T01:12:12+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cx2w9q28xjxo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "World Football",
-      "summary": "Lee James and guests reflect on a chaotic AFCON final, in which Senegal became champions.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T23:47:00+00:00",
-      "source_url": "https://www.bbc.co.uk/sounds/play/p0mvrrb7?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "'An ambassador for African football' - Mane is Senegal's Afcon hero",
-      "summary": "Senegal forward Sadio Mane is the hero once again, but this time for unexpected reasons as his side leaves the pitch during the chaotic Afcon final win over Morocco.",
-      "country_tags": [],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-01-18T23:45:52+00:00",
-      "source_url": "https://www.bbc.com/sport/football/articles/clynjj2ngy8o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "طائرة «سودانير» الوحيدة تعود للتحليق بعد أشهر من التوقف",
-      "summary": "بورتسودان، 18 يناير 2026 – أعلنت شركة الخطوط الجوية السودانية “سودانير”، الأحد، عن استئناف رحلاتها خلال هذا الأسبوع إلى عدد من الوجهات بعد توقفها لعدة أشهر بسبب أعمال الصيانة للطائرة الوحيدة التي تمتلكها. وتوقفت رحلات سودانير منذ 11 يوليو 2025، لإجراء أعمال الصيانة الدورية. وأفادت سودانير، في بيان، بأن “طائرتها من طراز إيرباص A320 عادت إلى الخدمة التشغيلية، بعد استكمال أعمال الصيانة الشاملة وفق أعلى المعايير الدولية للسلامة الجوية، حيث تبدأ الرحلات اعتبارًا من الثلاثاء المقبل”. وأشارت إلى أن الطائرة خضعت لفحوصات وصيانة دقيقة في مراكز متخصصة، لتعود بكفاءة عالية تدعم استئناف العمليات المنتظمة.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T22:20:52+00:00",
-      "source_url": "https://sudantribune.net/article/309547",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "اتهامات للدعم السريع بقتل قرابة مائة مدني في «أبو زبد»",
-      "summary": "أبو زبد، 18 يناير 2026 – كشف ناشطون محليون، الأحد، عن مقتل ما يقرب من 100 شخص برصاص قوات الدعم السريع، واختطاف أكثر من 50 مدنياً خلال ثلاثة أسابيع في منطقة “أبو زبد” بولاية غرب كردفان، في أحدث تصعيد للانتهاكات التي تطال المدنيين بالمنطقة. وتشهد محلية أبو زبد والمناطق المحيطة بها، الخاضعة كلياً لسيطرة الدعم السريع، موجة عنف هي الأشد منذ أشهر؛ حيث تتعرض تلك المناطق لانتهاكات ممنهجة تشمل القتل والنهب والاختطاف، دخلت أسبوعها الثالث على التوالي. وقالت غرفة طوارئ “دار حمر” في بيان: “عبر رصد ميداني دقيق، تم توثيق ارتقاء 91 شهيداً من المدنيين العزل نتيجة القتل المباشر والقصف العشوائي في أبو زبد”، مشيرة إلى تسجيل نحو 53 حالة اختطاف لمواطنين...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T20:12:31+00:00",
-      "source_url": "https://sudantribune.net/article/309538",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "رئيس «أطباء بلا حدود» يحذر من التجاهل الدولي لأزمة السودان",
-      "summary": "بورتسودان، 18 يناير 2026 – حذر رئيس منظمة أطباء بلا حدود جافيد عبد المنعم، من أن نقص التمويل وإهمال المجتمع الدولي للكارثة الإنسانية الناجمة عن الحرب في السودان سيؤديان إلى تفاقم تدهور الخدمات الصحية ومعاناة المدنيين، بما يؤدي الى سقوط المزيد من الضحايا وكوارث صحية. وكشف جافيد في مقابلة مع “سودان تربيون” الأحد خلال زيارته الأولى للسودان منذ توليه منصبه عن خططه للقاء عدة منظمات دولية لتسليط الضوء على آثار الحرب ونقص التمويل على الوضع الصحي والإنساني. وقال “سأشرح للمجتمع الدولي، بما في ذلك المنظمات الدولية والأمم المتحدة ووكالاتها، حجم الكارثة الإنسانية وتأثير عدم كفاية التمويل ونقص الاهتمام الدولي، فضلاً عن العواقب المترتبة على المدنيين...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T19:08:17+00:00",
-      "source_url": "https://sudantribune.net/article/309525",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "«الفاو» تدعم قطاعي الثروة الحيوانية والسمكية في السودان بسبعة ملايين دولار",
-      "summary": "الخرطوم، 18 يناير 2026- أطلقت منظمة الأغذية والزراعة للأمم المتحدة “الفاو”، الأحد، مبادرة جديدة لدعم قطاع الثروة الحيوانية وتنمية مصائد الأسماك في السودان تمثلت في الدفع بسبعة ملايين دولار . ويعاني قطاع الثروة الحيوانية في السودان من مشكلات عديدة، بينها ضعف التمويل الكافي للقطاع، فضلًا عن تذبذب السياسات الحكومية ونشاط التهريب، ما يُفقد البلاد عائدات تُقدر بملايين الدولارات سنويًا. وقالت وزارة المالية، في بيان، إن “الفاو وفرت منحة بمبلغ 3.5 مليون دولار لدعم قطاع الثروة الحيوانية في السودان، و3.5 مليون دولار أخرى لتنمية مصائد الأسماك”. ودعا وزير المالية جبريل إبراهيم، خلال لقائه ممثل منظمة الفاو في السودان هونجي يانج، الوكالة الأممية إلى...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T19:06:06+00:00",
-      "source_url": "https://sudantribune.net/article/309529",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "تحذيرات من حصار وشيك لـ«الأبيض» مع إنشاء متاريس ترابية",
-      "summary": "الأبيض، 18 يناير 2026 – حذر مختبر الشؤون الإنسانية التابع لجامعة ييل الأميركية، الأحد، من حصار وشيك للدعم السريع على مدينة الأبيض بولاية شمال كردفان. وفي 23 فبراير 2025، أنهى الجيش حصار الدعم السريع الذي كانت تفرضه على الأبيض منذ اندلاع النزاع، لكنها لا تزال تتواجد في مواقع قرب المدينة من ثلاث اتجاهات. وقال المختبر، في تقرير، إن “مدينة الأبيض تواجه خطر الحصار، فيما تخضع كادقلي والدلنج بجنوب كردفان لحصار من تحالف الدعم السريع والحركة الشعبية – شمال بقيادة عبد العزيز الحلو”. وأوضح أن صور الأقمار الصناعية تكشف عن نشاط عسكري دفاعي حول الأبيض، بما في ذلك إنشاء حواجز ترابية أُنشئت حديثًا على طول مخارج رئيسية من المدينة وحول بعض البنى التحتية...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T17:56:16+00:00",
-      "source_url": "https://sudantribune.net/article/309523",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "معارك ضارية على طريق الصادرات والجيش يصد هجوماً بشمال كردفان",
-      "summary": "الأبيض 18 يناير 2026 – اندلعت الأحد، اشتباكات عنيفة بين الجيش السوداني وقوات الدعم السريع في مناطق حدودية بين ولايتي شمال كردفان والخرطوم، استخدمت فيها مختلف أنواع الأسلحة. وظلت مناطق واسعة من ولاية شمال كردفان تشهد منذ أشهر معارك ضارية بين الطرفين، حيث تسعى الدعم السريع لعرقلة تقدم الجيش من غرب أم درمان باتجاه شمال كردفان وتأمين الأبيض من الناحية الشرقية، كما تعمل على منع خروج الجيش من مدينة الأبيض، وعرقلة تحركاته وانفتاحه جنوباً وغرباً. وقالت مصادر عسكرية لـ “سودان تربيون” إن “قوة كبيرة من الدعم السريع شنت هجوماً مباغتاً على مواقع الجيش على طول طريق الصادرات (أم درمان – بارا)”. وأفادت بأن معارك ضارية اندلعت بين الطرفين في منطقة “وادي...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T16:55:34+00:00",
-      "source_url": "https://sudantribune.net/article/309519",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "المفوض الأممي لحقوق الانسان يطالب الجيش والدعم السريع بوقف مهاجمة الأعيان المدنية",
-      "summary": "بورتسودان 18 يناير 2026 – طالب المفوض السامي لحقوق الإنسان بالأمم المتحدة فولكر تورك، الأحد، الجيش السوداني وقوات الدعم السريع بإيقاف الهجمات على الأعيان المدنية والأسواق والمرافق الصحية. وقال تورك في مؤتمر صحفي ببورتسودان في ختام زيارته للسودان إن هجمات الدعم السريع عبر المسيرات على منشآت مدنية وبنية تحتية تعد انتهاكات جسيمة قد ترقى إلى جرائم حرب. وأضاف أنه “من المشين شراء أسلحة متطورة وكان من المفترض استخدام هذه الأموال لتخفيف معاناة السكان”. وخلال الفترة الأخيرة كثف طرفا القتال في السودان من استخدام الطيران المسير في الحرب المندلعة منذ منتصف أبريل 2023.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T12:16:55+00:00",
-      "source_url": "https://sudantribune.net/article/309515",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Eurobond back on the table as Kenya’s spending pressures mount",
-      "summary": "Kenya is weighing a fresh Eurobond issuance to ease pressure on domestic borrowing as revenue...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T08:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/eurobond-back-on-the-table-as-kenya-spending-pressures-mount-5329904",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "At 82, Wanjira Bishota earned a PhD, and that’s just one chapter of her story",
-      "summary": "From parading Kenya’s first flag at independence to earning a PhD in public law at 82, Mary...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-18T06:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/at-82-wanjira-bishota-earned-a-phd-chapter-of-her-story-5329858",
-      "source_name": "The EastAfrican"
     }
   ]
 }
