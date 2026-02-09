@@ -1,6 +1,158 @@
 {
-  "generated_at": "2026-02-08T12:06:34.591267+00:00",
+  "generated_at": "2026-02-09T12:18:43.266881+00:00",
   "articles": [
+    {
+      "title": "Eritrea accuses Ethiopia of fabricating report its troops had crossed the border",
+      "summary": "Ethiopia had alleged that Eritrean soldiers were on its territory and supporting rebels in the north.",
+      "country_tags": [
+        "Ethiopia",
+        "Eritrea"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-09T10:35:34+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cn87lzrj1l7o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "'Colossus' of Ghanaian highlife music Ebo Taylor dies at 90",
+      "summary": "The guitarist, composer and band leader fused Ghanaian music and funk to create tracks sampled around the world.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-09T08:51:59+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c1e9p04n8y9o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Senegal arrests 14 members of alleged paedophile gang linked to France",
+      "summary": "Police say the \"transnational\" criminal group has been in operation since 2017.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-09T08:08:09+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cy4wy2xy300o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "How off-the-shelf drones are changing jihadist warfare in West Africa",
+      "summary": "Insurgents have carried out a wave of drone strikes on military positions in the region.",
+      "country_tags": [],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-09T00:09:18+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cew8vldpzdyo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "الجمارك تنفي فرض رسوم جمركية على أمتعة العائدين طوعاً",
+      "summary": "الخرطوم 8 فبراير 2026 – نفت هيئة الجمارك السودانية ما أثير حول فرض رسوم جمركية على الأثاث المنزلي والأجهزة الكهربائية الشخصية للعائدين إلى السودان ضمن برنامج العودة الطوعية. وكان مجلس الوزراء قد أصدر في نوفمبر من العام الماضي قراراً بإعفاء الأمتعة الشخصية والأثاثات المنزلية والأجهزة الكهربائية المستعملة من الرسوم الجمركية. وأكدت دائرة الإعلام والعلاقات العامة بهيئة الجمارك في بيان صحفي، الأحد، التزام الهيئة الكامل بتنفيذ قرارات الدولة الداعمة للعودة الطوعية وتخفيف الأعباء على المواطنين العائدين، مشيرة إلى عدم صحة ما جرى تداوله على منصات التواصل الاجتماعي بشأن فرض رسوم جمركية على الأثاث المنزلي والأجهزة الكهربائية الشخصية ضمن برنامج العودة...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-08T20:44:11+00:00",
+      "source_url": "https://sudantribune.net/article/310427",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "السودان يعود إلى «إيقاد» بعد عامين من التجميد",
+      "summary": "جيبوتي 8 فبراير 2026 – أعلنت جيبوتي، التي تترأس الدورة الحالية للهيئة الحكومية الدولية للتنمية “إيقاد”، الأحد، عودة السودان إلى المنظمة، في خطوة اعتُبرت معززة للتماسك الإقليمي. وعلّق السودان في 20 يناير 2024 عضويته في منظمة “إيقاد” احتجاجًا على مشاركة قائد قوات الدعم السريع محمد حمدان دقلو “حميدتي” في قمة لرؤساء المنظمة عُقدت في العاصمة الأوغندية كمبالا. وقالت وزارة خارجية جيبوتي في بيان إنها “ترحب بعودة السودان إلى عضوية منظمة الإيقاد، والتي تمت عبر رسالة رسمية موجّهة من وزير الخارجية السوداني إلى الأمين التنفيذي للمنظمة”. ولم تصدر الحكومة السودانية بياناً حول العودة للمنظمة الاقليمية.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-08T19:38:49+00:00",
+      "source_url": "https://sudantribune.net/article/310424",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "توالي الإدانات الدولية لهجوم «الدعم السريع» على قافلة إغاثة في شمال كردفان",
+      "summary": "الخرطوم 8 فبراير 2026 – أدان الاتحاد الأوروبي وتركيا وقطر ودول أخرى ومنظمات، الأحد، الهجوم الذي شنته قوات الدعم السريع على قافلة إغاثة في شمال كردفان، وسط مطالبات بمحاسبة المسؤولين عن الجريمة. ونفذت الدعم السريع، الجمعة، هجومًا على قافلة تابعة لبرنامج الأغذية العالمي كانت في طريقها لتوصيل إغاثة إلى عائلات نازحة قرب مدينة الأبيض عاصمة شمال كردفان، كما شنت هجومًا على مركبة تُقلّ نازحين. وقال رئيس بعثة الاتحاد الأوروبي لدى السودان فولفرام فيتر، في منشور على فيسبوك إن “هجمات الدعم السريع على قافلة مساعدات برنامج الأغذية العالمي، وحافلة النازحين، ومستشفى الكويك، تُشكّل انتهاكات صارخة وجسيمة لجميع المعايير الإنسانية والقوانين الدولية”. وأضاف:...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-08T17:16:49+00:00",
+      "source_url": "https://sudantribune.net/article/310420",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "انخفاض أسعار السلع وانتعاش أسواق «كادقلي» بعد أيام من فك الحصار",
+      "summary": "كادقلي 8 فبراير 2026 – كشف تجار في سوق كادقلي بولاية جنوب كردفان، الأحد، عن انخفاض كبير في أسعار السلع إثر وصول قوافل تجارية إلى المدينة التي عانت طويلًا من نقص الغذاء جراء الحصار. واستطاع الجيش في 3 فبراير الحالي إنهاء حصار استمر أكثر من عامين على كادقلي، عبر عملية عسكرية انطلقت من مناطق شرق الولاية عبر هبيلا والدلنج وصولًا إلى عاصمة جنوب كردفان. وأدى الحصار إلى حدوث مجاعة في كادقلي التي نزح منها قرابة 147 ألف شخص، بما يعادل 80% من السكان وفقًا للأمم المتحدة، فيما كانت الدلنج تعيش ظروفًا مشابهة قبل ربطها بشمال كردفان في أواخر يناير المنصرم. وقال التاجر في سوق كادقلي محمد آدم لـ”سودان تربيون” إن “السوق شهد تحسنًا كبيرًا خلال ساعات قليلة...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-08T16:03:42+00:00",
+      "source_url": "https://sudantribune.net/article/310414",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "المقاومة الشعبية: وفاة (300) معتقل داخل سجن شالا في «الفاشر»",
+      "summary": "الفاشر 8 فبراير 2026 – كشفت المقاومة الشعبية بولاية شمال دارفور، الأحد، عن وفاة أكثر من 300 معتقل داخل سجن شالا في الفاشر بولاية شمال دارفور، خلال الشهرين الماضيين. وسيطرت قوات الدعم السريع على الفاشر في 26 أكتوبر الماضي، وسرعان ما ارتكبت جرائم قتل جماعي وعنف جنسي، مع تنفيذ حملة اعتقالات واسعة أبقت بعضهم في معتقلات داخل المدينة، فيما نُقل البعض الآخر إلى مدينة نيالا بجنوب دارفور. وقالت المقاومة الشعبية، في بيان، إنها “وثّقت أكثر من 300 حالة وفاة خلال الشهرين الماضيين في سجن شالا بسبب تدهور الأوضاع الصحية والإنسانية”. وأشارت إلى أن الدعم السريع تحتجز في سجن شالا الواقع جنوب غرب الفاشر ما يزيد على 9 آلاف مدني.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-08T15:07:40+00:00",
+      "source_url": "https://sudantribune.net/article/310406",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Ethiopia Demands Eritrea withdraw Troops from Ethiopian Territory",
+      "summary": "Ethiopia has ordered Eritrea to withdraw its forces from Ethiopian territory and demanded that Asmara cease providing support to various armed groups in the country. “Eritrean forces have occupied Ethiopian territory along our common border and the government of Eritrea has been providing direct material assistance and support for various militant groups in Ethiopia,” reads a statement issued by the Ethiopian Ministry of Foreign Affairs today. The statement emphasizes that repeated calls to end what the Ministry describes as a violation of sovereignty and territorial integrity, have gone unheeded by Asmara, which it accuses of “outright...",
+      "country_tags": [
+        "Ethiopia",
+        "Eritrea"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-08T14:44:47+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49021/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "«الدعم السريع» تواصل استهداف القوافل التجارية في شمال وجنوب كردفان",
+      "summary": "الأبيض 8 فبراير 2026 – واصلت قوات الدعم السريع، الأحد، استهداف القوافل التجارية ومركبات النقل العام التي تتحرك على الطريق القومي الرابط بين ولايتي شمال وجنوب كردفان، لليوم الثالث على التوالي. وصعّدت الدعم السريع، منذ الأسبوع الماضي، هجمات الطائرات المسيّرة على قوافل الإمدادات والمساعدات الإنسانية في شمال وجنوب كردفان، فضلاً عن قصف المراكز الصحية والمستشفيات، ما أسفر عن سقوط أعداد كبيرة من الضحايا. ولقيت هذه الهجمات تنديدًا ورفضًا من الولايات المتحدة الأمريكية والمملكة العربية السعودية، فضلاً عن مصر والكويت وجامعة الدول العربية، كون هذه الهجمات تعيق إيصال المساعدات الإنسانية للمتضررين من النزاع العسكري في إقليم كردفان. وقالت مصادر محلية...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-08T14:44:10+00:00",
+      "source_url": "https://sudantribune.net/article/310404",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "السودان ينتقد تجاهل المجتمع الدولي لتوريد السلاح إلى «دارفور»",
+      "summary": "الخرطوم، 8 فبراير 2026 – صعّدت وزارة الخارجية السودانية، الأحد، انتقاداتها إزاء صمت المجتمع الدولي على توريد الأسلحة إلى دارفور غربي البلاد. ويتهم السودان الإمارات بتقديم العتاد الحربي والأسلحة المتطورة إلى قوات الدعم السريع عبر مسارات تهريب تشمل شرق ليبيا ودولًا أفريقية أخرى ومطار نيالا جنوب دارفور. وقالت وزارة الخارجية في بيان إن “مخالفة قرار مجلس الأمن الداعي إلى حظر دخول السلاح إلى دارفور تضع مصداقيته على المحك”. وأوضحت أن التجاهل المتعمد لمصادر توريد هذه الأسلحة والجهات المموّلة والدول التي ترسلها وتسهّل إيصالها إلى أيدي ما وصفتهم بالمجرمين يضع المجتمع الدولي وآلياته المختصة في موضع الشك وعدم المصداقية.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-08T14:34:13+00:00",
+      "source_url": "https://sudantribune.net/article/310401",
+      "source_name": "سودان تربيون"
+    },
     {
       "title": "Man named in South Africa's police corruption probe found dead",
       "summary": "Reports say Wiandre Pretorius, who last week said he survived an assassination attempt, shot himself.",
@@ -2375,162 +2527,6 @@
       "published_at": "2026-01-28T21:01:18+00:00",
       "source_url": "https://www.bbc.com/news/articles/ckgjprg5828o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News"
-    },
-    {
-      "title": "«كامل إدريس» يبحث مع رئيس جيبوتي التعاون حول الموانئ والتجارة",
-      "summary": "جيبوتي 28 يناير 2026 – أجرى رئيس الوزراء السوداني كامل إدريس، الأربعاء، مباحثات في جيبوتي مع الرئيس إسماعيل عمر جيلي ناقشت تبادل الخبرات في مجال الموانئ وتقوية العلاقات التجارية والاقتصادية. ورافق كامل إدريس في الزيارة إلى جيبوتي وكيل وزارة الخارجية معاوية عثمان خالد، ونائب مدير جهاز المخابرات العامة عباس محمد بخيت، إضافة إلى مستشاريه نزار عبد الله وبدر الدين الجعفري. وقال كامل إدريس خلال اللقاء مع الرئيس الجيبوتي، وفقًا لوكالة السودان للأنباء، إن “الحكومة حريصة على التعاون مع جيبوتي وتبادل الخبرات في مجال الموانئ وتفعيل اللجان الفنية ولجان التشاور وتقوية العلاقات التجارية والاقتصادية”. وذكر أن الحكومة ترغب في تحقيق السلام والاستقرار في...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-28T19:54:09+00:00",
-      "source_url": "https://sudantribune.net/article/309959",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "EU, India Strike Historic Preferential Trade Deal amid US Tariff Spree",
-      "summary": "The European Union (EU) and India have reached a historic trade deal substantially reducing trade barriers amid growing volatility in international trade driven largely by Washington’s tariff diplomacy under President Donald Trump. The new deal allows free trade of goods between the 27 EU states, and India- the world’s most populous country. Combined, the two blocks account for a quarter of global GDP and a two-billion-people market. The deal is expected to double EU exports to India by 2032 by eliminating or reducing tariffs in 96.6 percent of traded goods by value, and will lead to savings of USD 4.75 billion in duties for European...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance",
-        "Security & Conflict",
-        "Business & Economy"
-      ],
-      "published_at": "2026-01-28T17:53:15+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48788/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "«بنك السودان»: التعامل مع تطبيق الدعم السريع المالي يخالف القانون",
-      "summary": "الخرطوم، 28 يناير 2026 – حذر بنك السودان المركزي، الأربعاء، من التعامل مع تطبيق مالي إلكتروني غير مرخص في مناطق سيطرة قوات الدعم السريع بجنوب دارفور، حيث أنه يخالف قانون مكافحة غسل الأموال. وأطلقت قوات الدعم السريع تطبيقًا يُعنى بالتحويلات المالية تحت مسمى «المستقبل للخدمات المصرفية والمالية»، في خطوة عدّها مراقبون نواة لإنشاء نظام مصرفي منفصل. وقال بنك السودان المركزي في منشور إنه “لاحظ مؤخرًا ظهور تطبيق مالي إلكتروني غير مرخص في مناطق سيطرة مليشيا الدعم السريع المتمردة بجنوب دارفور”. وأوضح أن التطبيق غير مرخص للعمل داخل البلاد، وأن أي تعامل معه يُعد مخالفة للقوانين الوطنية وقانون مكافحة غسل الأموال وتمويل الإرهاب لسنة 2014.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-28T16:54:05+00:00",
-      "source_url": "https://sudantribune.net/article/309955",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "US YouTube star IShowSpeed to get Ghanaian passport as Africa tour ends",
-      "summary": "Ghana's foreign minister says the influencer is a \"worthy ambassador\", but some Ghanaians criticised the move.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-28T16:30:34+00:00",
-      "source_url": "https://www.bbc.com/news/articles/czx12q8qnweo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "ብሔራዊ ባንክ የውጭ ምንዛሬ ግብይት ሥርዓትን የሚቀይር አውቶማቲክ የንግድ ሥርዓት ሥራ ላይ አዋለ",
-      "summary": "የኢትዮጵያ ብሔራዊ ባንክ በንግድ ባንኮች መካከል የሚደረገውን የውጭ ምንዛሬ ግብይት ሥርዓት ሙሉ በሙሉ የሚቀይር አውቶማቲክ የንግድ ሥርዓት በይፋ ዛሬ ሥራ ላይ አውሏል። በኢትዮጵያ የሰነድ ሙዓለ ንዋዮች ገበያ (ESX) ውስጥ እንዲካተት ተደርጎ የተቀረጸው ይህ አዲስ ቴክኖሎጂ፤ ባንኮች ቀደም ሲል ይጠቀሙበት የነበረውንና በስልክ እንዲሁም እጅ በእጅ በሚከናወኑ ሰነዶች ላይ የተመሠረተውን ኋላቀር አሠራር በዲጂታል አማራጭ የሚተካ ነው። ​ይህ አዲስ የግብይት መድረክ ፈቃድ ያላቸው የንግድ ባንኮችና በብሔራዊ ባንክ ዕውቅና የተሰጣቸው ተቋማት ብቻ የሚሳተፉበት ሲሆን፤ ግብይቱም በባንኩ ጥብቅ የቁጥጥር ማዕቀፍ ውስጥ ሆኖ ወደ ተዓማኒና በገበያ መርህ ወደሚመራ ሥርዓት እንዲሸጋገር ለማድረግ ያለመ ነው። የብሔራዊ ባንክ ገዥ እዮብ ተካልኝ (ዶ/ር) የሥርዓቱን መጀመር አስመልክተው በሰጡት መግለጫ፤ መድረኩ የውጭ ምንዛሬ ተመን በገበያ ፍላጎትና አቅርቦት ላይ ተመሥርቶ በቅጽበት እንዲወሰን የሚያስችል ከመሆኑም በላይ ግልጽነትና ሕግን የተከተለ አሠራር እንዲሰፍን የሚያደርግ ወሳኝ እርምጃ እንደሆነ ገልጸዋል። ​አዲሱ ቴክኖሎጂ ባንኮች...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-28T16:17:50+00:00",
-      "source_url": "https://addisfortune.news/https-addisfortune-news-news-alert-central-bank-debuts-real-time-interbank-forex-trading-platform-2",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "تقرير: تعرض غالبية السودانيين المهاجرين إلى أوروبا للعنف",
-      "summary": "الخرطوم 28 يناير 2026 – كشفت المنظمة الدولية للهجرة التابعة للأمم المتحدة، الثلاثاء، عن تعرض معظم السودانيين الذين هاجروا إلى أوروبا خلال العام السابق لانتهاكات شملت العنف الجسدي والعمل القسري والاحتجاز خلال الرحلة. ويدفع استمرار النزاع آلاف السودانيين إلى اتخاذ مسارات هجرة عالية الخطورة عبر البحر الأبيض المتوسط بغرض الوصول إلى أوروبا انطلاقًا من ليبيا ومصر، وسط تزايد الاعتماد على اليونان كنقطة دخول رئيسية. وقالت المنظمة، في تقرير، إن “70% من السودانيين الذين سلكوا المسار الأوسط للبحر المتوسط نحو إيطاليا أفادوا بتعرضهم لعنف جسدي، فيما أبلغ 41% من الذين عبروا المسار الشرقي للبحر المتوسط باتجاه اليونان عن تجارب مماثلة”. وأشارت إلى أن...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-28T16:05:04+00:00",
-      "source_url": "https://sudantribune.net/article/309950",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "عشرات القتلى والجرحى في هجوم بالمسيّرات على «الدلنج»",
-      "summary": "الدلنج، 28 يناير 2026 – قُتل عشرات المدنيين، الأربعاء، وأُصيب آخرون جراء قصف نفذته طائرة مسيّرة تابعة للدعم السريع، استهدف تجمعاً للمدنيين في مدينة الدلنج بولاية جنوب كردفان. وفي أعقاب الهجوم، دعت “شبكة أطباء السودان” إلى تسيير جسر إنساني عاجل وتوفير الإمدادات الطبية والغذائية اللازمة للسكان، في ظل تدهور الأوضاع الإنسانية ونقص الخدمات الصحية في المدينة. وفي 26 يناير الجاري، أعلن الجيش السوداني عن إنهاء حصار الدلنج بربطها من الاتجاه الشرقي مع ولاية شمال كردفان، بعد معارك عنيفة خاضها الجيش ومسانده ضد الدعم السريع وحليفتها “الحركة الشعبية لتحرير السودان – شمال” بقيادة عبد العزيز الحلو. ومنذ ذلك الحين، ظلت المدينة تتعرض لهجمات جوية تنفذها...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-28T14:00:15+00:00",
-      "source_url": "https://sudantribune.net/article/309947",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Ugandan court frees prominent rights activist on bail after election arrest",
-      "summary": "A Ugandan court has released prominent rights activist Sarah Bireete on bail after her arrest...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-28T13:45:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/-ugandan-court-frees-prominent-rights-activist-on-bail-5341200",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Rwanda seeks arbitration over cancellation of asylum deal with UK",
-      "summary": "Rwanda said it was prepared to agree, provided the treaty was terminated and new financial...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-28T13:30:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/rwanda-seeks-arbitration-over-cancellation-of-deal-with-uk-5341156",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Kenya, India to negotiate trade deal",
-      "summary": "Kenya is elevating ties with its largest business partners worldwide.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Business & Economy"
-      ],
-      "published_at": "2026-01-28T11:30:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/kenya-india-to-negotiate-trade-deal-5340936",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Ecobank Rwanda $620,000 cyber fraud convict appeals seven-year jail term",
-      "summary": "Ntumwa is accused of working with accomplices still at large to siphon money from the bank...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-28T11:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/ecobank-rwanda-620-000-cyber-fraud-convict-appeals-jail-term-5340854",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Why EAC trades more with SADC than with itself",
-      "summary": "The shift coincided with renewed non-tariff disputes, including blocked goods, transport...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Business & Economy"
-      ],
-      "published_at": "2026-01-28T10:30:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/why-eac-trades-more-with-sadc-than-with-itself-5340840",
-      "source_name": "The EastAfrican"
     }
   ]
 }
