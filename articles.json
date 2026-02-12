@@ -1,16 +1,275 @@
 {
-  "generated_at": "2026-02-11T11:33:59.769953+00:00",
+  "generated_at": "2026-02-12T14:06:13.543309+00:00",
   "articles": [
     {
-      "title": "Ghana declares Wednesday 'Fugu Day' to promote traditional outfit after online mockery",
+      "title": "Port city in ruins as storm rips through Madagascar and on towards Mozambique",
+      "summary": "More than half the population is affected and most infrastructure destroyed in Toamasina, Madagascar's main port.",
+      "country_tags": [],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-12T14:01:04+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c931zzzep0eo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Electoral Board Postpones Voter Registration Date",
+      "summary": "Officials of the National Election Board (NEBE) have rescheduled voters’ registration deadline, shifting it from February 14 to March 7, 2026. The change followed a two-week extension granted to the candidate registration period. Digital registration will be implemented in regions possessing 3G or faster internet connectivity. For areas with restricted internet access, officials will facilitate registration using tablets at designated polling stations.",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-12T13:55:17+00:00",
+      "source_url": "https://addisfortune.news/electoral-board-postpones-voter-registration-date",
+      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
+    },
+    {
+      "title": "الشعب يستحق معرفة الحقائق.. الطريق إلى الهدنة الإنسانية محفوف بالمصاعب",
+      "summary": "ياسر عرمان شعبنا يستحق معرفة الحقائق بعيداً عن التعتيم والصورة الوردية التي تحيط بالبحث المضني عن الهدنة الانسانية، فالطريق اليها محفوف بالمصاعب كما ان الامال الكاذبة اسوأ من انعدام الأمل خصوصاً في ازمنة الحروب، والوعود التي تجافي الحقائق تولد الاحباط والألم. لم تكن هي المرة الأولى التي يُعلن فيها اننا على مرمى حجر من الهدنة الانسانية ونجد انفسنا امام جبل وليس حجر تتعثر أمامه الهدنة الانسانية، ومن المهم ان نصارح شعبنا بالحقائق وان لا نتركه نهباً للتعتيم. نشعر بالامتنان لكل جهد يبذله الوسطاء من اجل الهدنة ولكن يظل السؤال قائما حول أدوات الضغط التي يملكونها واذا ما كانوا يستخدمونها مع اطراف الحرب، وهل قضية الحرب في السودان نفسها تعتبر...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-12T13:50:04+00:00",
+      "source_url": "https://sudantribune.net/article/310592",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "الإسلامويون: إعادة إنتاج النفوذ بأسماء وأشكال جديدة",
+      "summary": "محمد الأمين عبد النبي إن قراءة ظاهرة “الإسلامويين” في السودان على أنهم مجرد بقايا نظام سابق سقط، أو أن صراعهم الحالي ليس سوى سكرات موت أو خروج روح، هي قراءة مريحة لكنها لا تلامس الواقع. تكمن خطورة هذه الجماعة في امتلاكها مشروعاً أيديولوجياً يسعى لإعادة تشكيل الدولة والمجتمع معاً؛ بدءاً من الخدمة المدنية وصولاً إلى الأجهزة النظامية، ومن الاقتصاد إلى التعليم والإعلام. هذا التمكين لا يزول بمجرد سقوط النظام؛ لأنه مُشيَّد على شبكات مصالح وولاءات متشابكة وخطاب ديني تعبوي. إن تجاهل هذا الإرث يخلق وهماً بانتهاء الظاهرة، بينما يؤكد الواقع تجذرها داخل مؤسسات الدولة؛ لذا، فإن فهم الظاهرة يتطلب أدوات وعي نقدية، وليس إنكار وجودها.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-12T13:11:15+00:00",
+      "source_url": "https://sudantribune.net/article/310590",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "At least 21 dead after boat sinks on Sudan's River Nile",
+      "summary": "Search efforts are continuing for the missing passengers, who included children.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-12T11:51:41+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cp851zp41m5o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "القاهرة: لا توافق في مجلس السلم الأفريقي حول إنهاء تعليق عضوية السودان",
+      "summary": "أديس أبابا 12 فبراير 2026– أقر وزير الخارجية المصري بدر عبد العاطي، الخميس، بعدم التوصل لتوافق بين أعضاء مجلس السلم والأمن الأفريقي حول فك تجميد عضوية السودان في الاتحاد الأفريقي، وأعلن في الوقت نفسه الدفع القوي باتجاه إنهاء التعليق والتعامل مع مؤسسات الحكم الشرعية الحالية. ويمنع الاتحاد الأفريقي الانقلابات والتغييرات غير الدستورية بموجب القانون التأسيسي (المادة 30)، وإعلان لومي 2000، والميثاق الأفريقي للديمقراطية، حيث يتم تعليق عضوية الدول التي تصل فيها حكومات غير دستورية للسلطة. ويركز الاتحاد على رفض الاستيلاء على السلطة بالقوة، ويفرض عقوبات تتضمن تجميد العضوية؛ حيث تم بناءً على ذلك تجميد عضوية السودان في المنظومة الأفريقية منذ أكتوبر...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-12T11:51:00+00:00",
+      "source_url": "https://sudantribune.net/article/310582",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "السودان يطالب بمقعده في الاتحاد الأفريقي ويحذر من تأجيج خارجي للصراع",
+      "summary": "أديس أبابا، 12 فبراير 2026- قال وزير الخارجية السوداني محي الدين سالم، إن تدخل جهات خارجية يؤجج الحرب في السودان، مطالبًا الاتحاد الأفريقي بإنهاء تعليق عضوية السودان. ولأول مرة منذ تعليق عضوية السودان بعد انقلاب قائد الجيش عبد الفتاح البرهان على الحكومة المدنية والسيطرة على السلطة في اكتوبر 2021، خاطب وزير الخارجية السوداني اجتماعًا رسميًا لمجلس السلم والأمن الأفريقي، اليوم الخميس، بمقر الاتحاد في أديس أبابا. ودعا سالم المجلس إلى دعم مبادرة السودان لوقف الحرب، التي قال إنها فُرضت على الدولة بعد تمرد “مليشيا الدعم السريع”. وأشار في الوقت نفسه إلى وجود أجندات إقليمية وتدخلات خارجية في الحرب بدعم “المليشيا” بالأسلحة المتطورة والطائرات...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-12T08:21:25+00:00",
+      "source_url": "https://sudantribune.net/article/310572",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Saudi’s Top Diplomat Visits for Security Talks with PM",
+      "summary": "Saudi Arabia’s Minister of Foreign Affairs, Prince Faisal bin Farhan Abdullah, arrived in Addis Ababa today for talks with Prime Minister Abiy Ahmed (PhD) on “developments in the region and efforts to enhance regional security and stability.” The Minister arrives against a backdrop of growing pressures in the intertwined geopolitics of the Gulf and Horn regions, and coincides with the start of the 39th AU summit in the Ethiopian capital. PM Abiy tweeted that the two held “productive discussions on a broad range of bilateral and multilateral issues.” “Our talks focused on strengthening the longstanding ties between our two countries,...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-11T23:34:25+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49088/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "مصرع (15) شخصًا في غرق زورق شمالي السودان",
+      "summary": "شندي 11 فبراير 2026 – كشفت شبكة أطباء السودان، الأربعاء، عن مصرع 15 شخصًا ونجاة 6 آخرين في حادث غرق عبارة نهرية كانت تقل 27 راكبًا بينهم نساء وأطفال وكبار سن، في نهر النيل شمالي السودان. وتشهد مناطق شمال السودان حوادث غرق للزوارق النيلية بين الحين والآخر، يروح ضحيتها عشرات الأشخاص في كل حادث. وقالت الشبكة في بيان إن “أكثر من 27 شخصًا بينهم نساء وأطفال وكبار سن، غرقوا أثناء استقلالهم مركبًا بين منطقتي طيبة الخواض وديم القراي بمحلية شندي التابعة لولاية نهر النيل”. وأشارت إلى أنه جرى انتشال جثث 15 غريقًا، فيما نجا 6 أشخاص من الحادث، بينما يبحث الأهالي وقوات الدفاع المدني عن جثث بقية الضحايا.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-11T22:10:31+00:00",
+      "source_url": "https://sudantribune.net/article/310550",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "البرهان يحل لجنة «تهيئة عودة مواطني الخرطوم» ويحيل صلاحياتها لمجلس الوزراء",
+      "summary": "الخرطوم 11 فبراير 2026– علمت “سودان تربيون” من مصادر موثوقة بأن رئيس مجلس السيادة عبد الفتاح البرهان قرر حل اللجنة العليا لتهيئة البيئة لعودة مواطني الخرطوم التي يرأسها عضو مجلس السيادة إبراهيم جابر. وكان البرهان أصدر في 16 يوليو 2025 قراراً بتشكيل لجنة قومية عليا لتهيئة ولاية الخرطوم للعودة العاجلة للمؤسسات الاتحادية والمواطنين. وعملت اللجنة على استعادة خدمات التعليم والصحة والمياه والكهرباء، كما نشطت في إعمار المرافق الحكومية بما في ذلك مطار الخرطوم، إضافة إلى إبعاد التشكيلات العسكرية من الأحياء السكنية. وقالت المصادر إن القرار الذي صدر أمس الثلاثاء نص على إحالة صلاحيات اللجنة بالكامل إلى رئاسة مجلس الوزراء لمواصلة المهام الخاصة بتهيئة...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-11T21:43:17+00:00",
+      "source_url": "https://sudantribune.net/article/310547",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "South African Epstein survivor calls on UK Royal Family to search Andrew's files",
+      "summary": "Juliette Bryant has called on the Palace to \"act\" on revelations about Andrew's relationship with Epstein.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-11T20:03:52+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cvg5ww8lq9zo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "السودان: مجلس شؤون الأحزاب يبدأ تحديث سجل القوى السياسية",
+      "summary": "الخرطوم 11 فبراير 2026- أعلنت رئيس مجلس شؤون الأحزاب ليلى عثمان إبراهيم، الأربعاء، عن بدء تحديث سجل القوى السياسية بما يشمل كشوفات العضوية والبيانات المالية وأسماء قادة التنظيمات. وقالت ليلى عثمان، في تصريح صحفي، إن المجلس يعلن عن “بدء فترة تجديد البيانات الدورية لكافة الأحزاب السياسية المسجلة، في إطار جهوده الرامية إلى تعزيز الشفافية وتحديث سجل الأحزاب للعام 2026”. ودعت الأحزاب السياسية إلى ضرورة الالتزام بتقديم كشوفات العضوية المحدثة والبيانات المالية في موعد أقصاه 15 مارس المقبل. وذكرت أن التحديثات تشمل أسماء رئيس الحزب وأعضاء الهيئات القيادية، ومقار الأحزاب، إلى جانب الموازنات السنوية المعتمدة.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-11T19:04:08+00:00",
+      "source_url": "https://sudantribune.net/article/310543",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "وزير الخارجية السوداني يجري مشاورات مع مبعوث أممي في أديس",
+      "summary": "أديس أبابا 11 فبراير 2026 – بحث وزير الخارجية محيي الدين سالم، الأربعاء، الأوضاع الإنسانية وإعادة الإعمار والعملية السياسية مع مبعوث الأمين العام للأمم المتحدة الخاص للسودان رمضان لعمامرة. وجرى اللقاء في مقر إقامة الوزير بالقصر الرئاسي في العاصمة الإثيوبية أديس أبابا، بحضور سفير السودان في الدولة المجاورة الزين إبراهيم حسين. وقالت وزارة الخارجية، في بيان، إن محيي الدين ولعمامرة “استعرضا آخر تطورات الأوضاع في السودان”. وأفادت بأن سالم أطلع لعمامرة على المساعي المبذولة لأمن واستقرار السودان، مجددًا حرص الخرطوم على التعاون مع الأمم المتحدة ووكالاتها.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-11T18:49:07+00:00",
+      "source_url": "https://sudantribune.net/article/310539",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "السودان يطلب من مجلس السلم والأمن إنهاء تعليق عضويته في الاتحاد الأفريقي",
+      "summary": "أديس أبابا 11 فبراير 2026 كشفت مصادر دبلوماسية سودانية لـ”سودان تربيون”، الأربعاء، عن عزم السودان تقديم طلب رسمي لمجلس السلم والأمن الأفريقي، خلال اجتماعه غداً الخميس؛ لإنهاء تعليق عضويته في الاتحاد الأفريقي. وعلّق الاتحاد الأفريقي، في 27 أكتوبر 2021، عضوية السودان بعد أيام من استيلاء العسكر على السلطة بالانقلاب على حكومة رئيس الوزراء عبد الله حمدوك، ورهن القرار فك التعليق بالاستعادة الفعلية للسلطات الانتقالية بقيادة مدنية. وانطلقت في العاصمة الإثيوبية أديس أبابا، اليوم الأربعاء، أعمال الدورة الـ 48 للمجلس التنفيذي للاتحاد الأفريقي، بمشاركة وزراء الخارجية، تمهيداً لانعقاد القمة الـ 39 لرؤساء الدول والحكومات الأفريقية يومي 14 و15 فبراير...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-11T18:21:23+00:00",
+      "source_url": "https://sudantribune.net/article/310536",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Somalia Wins Seat on AU Peace and Security Council",
+      "summary": "Somalia is among the 10 countries whose representatives have secured a seat on the AU Peace and Security Council (AU PSC). Others who will serve a two-year term on the Council include DRC, Gabon, Uganda, Morocco, Lesotho, South Africa, Benin, Cote d’Ivoire, and Sierra Leone. This marks the first time Somalia will sit on the continent’s premier peace and security organ, and the results of the vote at the ongoing 39th AU summit grant the Horn of Africa country direct access in AU systems to shape decisions on conflict prevention, mediation and regional stability, and signals growing diplomatic traction after years of internal security...",
+      "country_tags": [
+        "Somalia"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-11T18:18:45+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49083/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Ghanaians embrace 'Fugu Day' after online mockery of traditional outfits",
       "summary": "The iconic attire has been trending online for days following the banter between Ghanaians and Zambians.",
       "country_tags": [],
       "topic_tags": [
         "General"
       ],
-      "published_at": "2026-02-11T11:23:20+00:00",
+      "published_at": "2026-02-11T17:15:17+00:00",
       "source_url": "https://www.bbc.com/news/articles/cgqg8xegxqxo?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News"
+    },
+    {
+      "title": "Central Bank Introduces Weighty Changes to Forex Directive",
+      "summary": "– Service exporters now able to retain forex earnings in full The National Bank of Ethiopia (NBE) has introduced an amendment to its foreign currency directive allowing service exporters to retain 100 percent of their export proceeds in a forex retention account indefinitely. The directive, signed and approved by Governor Eyob Tekalign (PhD) today, lifts several restrictions on access and use of forex. Beginning tomorrow, commercial banks will no longer require visa and travel documents to put foreign currency on internationally recognized debit cards belonging to account holders. The amendment scraps minimum requirements for opening...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-11T15:43:35+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49079/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "مسيّرات «الدعم السريع» تستهدف خلوة ومرافق تعليمية بكردفان والجيش يرد",
+      "summary": "الأبيض 11 فبراير 2026 – هاجمت طائرات مسيّرة تابعة للدعم السريع، الأربعاء، ثلاثة مواقع في ولايتي جنوب وشمال كردفان، بينها خلوة لتحفيظ القرآن الكريم؛ مما أوقع قتيلاً واحداً على الأقل وأصيب آخرون من الطلاب، فيما هاجم الجيش مواقعا للدعم السريع في محيط بارا بشمال كردفان. وقالت مصادر محلية لـ “سودان تربيون” إن “طالباً واحداً على الأقل قُتل وأُصيب نحو 18 آخرين بإصابات متفاوتة، جراء استهداف طائرة مسيّرة تابعة للدعم السريع مجمّع الشيخ أحمد البدوي لتحفيظ القرآن الكريم بمدينة الرهد بولاية شمال كردفان”. وأفادت المصادر أن المسيّرات هاجمت أيضاً أهدافاً مدنية في قرية تندلتي غربي مدينة الرهد؛ مما أوقع ضحايا وسط المدنيين، واستهدفت المسيّرات كذلك مدرسة علي...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-11T13:42:55+00:00",
+      "source_url": "https://sudantribune.net/article/310525",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "A simple guide to the crisis in South Sudan",
+      "summary": "The political rift that could spiral into conflict again after the vice-president was accused of treason.",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Politics & Governance",
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-11T12:34:52+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c7933p4xe7po?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Concerns over Tumultuous Global Politics on Display at AU Summit",
+      "summary": "The 39 th African Union summit kicked off in Addis Ababa today with the continent’s leaders voicing concerns about the impacts of shifting global geopolitics on Africa. In a lengthy opening speech, Gedion Timotiwos (PhD), Ethiopia’s minister of Foreign Affairs, described a geopolitical landscape in which security, cutthroat competition for resources, and a technological arms race are quickly supplanting economic and humanitarian cooperation. “Our continent remains gripped by incidents of unconstitutional changes of governments which are undermining the normative foundation of our Union. The evolving geopolitical landscape, in which...",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-11T12:07:55+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49068/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "UAZ in Talks to Launch Vehicle Assembly Plant in Ethiopia",
+      "summary": "Russian automaker UAZ (Ulyanovsk Automobile Plant) is officially in negotiations with the Ethiopian government to launch a local vehicle assembly plant. This move, part of the company’s 2026 global expansion strategy, aims to transition from simple imports to a robust local production line. According to the social media post from the Russian Embassy in Addis Ababa, the proposed facility will produce both standard passenger SUVs and special-purpose vehicles tailored for the Ethiopian terrain. This initiative, according to the post, follows a series of diplomatic efforts to deepen economic ties.",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics & Governance",
+        "Business & Economy"
+      ],
+      "published_at": "2026-02-11T11:42:11+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49064/",
+      "source_name": "The Reporter Ethiopia"
     },
     {
       "title": "Addis Ababa Bars Motorcycles as AU Summit Precaution",
@@ -2281,259 +2540,6 @@
       "published_at": "2026-02-01T03:00:50+00:00",
       "source_url": "https://addisfortune.news/new-bill-targets-chaos-in-the-spice-trade",
       "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Soaring Oil Prices Squeeze the Urban Poor",
-      "summary": "At around 8:00pm last week, Saba Aschalew stood beside her frying pan near the Gotera junction, a place that usually hum...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-01T02:59:03+00:00",
-      "source_url": "https://addisfortune.news/soaring-oil-prices-squeeze-the-urban-poor",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Ethiopia Aid a Nobel Idea Until Shiferaw Thinks About Its Financing",
-      "summary": "Shiferaw Teklemariam (PhD), czar of the federal relief operations, is wrestling with a problem that is growing faster th...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-01T02:58:22+00:00",
-      "source_url": "https://addisfortune.news/ethiopia-aid-a-nobel-idea-until-shiferaw-thinks-about-its-financing",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Lion’s Last Roar Echoes to a Spark",
-      "summary": "After nearly 19 years operating as Lion International Bank, Anbesa Bank has chosen to start again, symbolically, at leas...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-01T02:57:35+00:00",
-      "source_url": "https://addisfortune.news/lions-last-roar-echoes-to-a-spark",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Supreme Court Blocks VAT Drive on Lawyers",
-      "summary": "A legal battle over value-added tax (VAT) policy has placed the Ministry of Finance on the defensive after justices of t...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-01T02:56:43+00:00",
-      "source_url": "https://addisfortune.news/supreme-court-blocks-vat-drive-on-lawyers",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Hijira Bank Flushes With Cash in a Market Starved of Credit",
-      "summary": "Hijra Bank closed the last financial year with numbers that would flatter any young lender, with profits multiplied, dep...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Business & Economy"
-      ],
-      "published_at": "2026-02-01T02:54:41+00:00",
-      "source_url": "https://addisfortune.news/hijira-bank-flushes-with-cash-in-a-market-starved-of-credit",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Central Bank Keeps a Tight Grip as the Birr Crawls Downward",
-      "summary": "The global flower trade is in the middle of a shake-up. Recent regulatory shifts have... Ethiopia's rapid economic growth, fueled by the rise of industrial parks in Hawassa,... Jan 31 , 2026 .",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Security & Conflict",
-        "Business & Economy"
-      ],
-      "published_at": "2026-02-01T02:53:32+00:00",
-      "source_url": "https://addisfortune.news/central-bank-keeps-a-tight-grip-as-the-birr-crawls-downward",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "International Labour Organisation Launches Labour Migration Project",
-      "summary": "The International Labour Organisation (ILO) launched a project aimed at strengthening inter-regional cooperation for safe, regular, and orderly labour migration in Ethiopia. The project is being implemented with financial support from the European Union. The project launching ceremony, held last week at the Hyatt Regency Hotel, disclosed that the initiative seeks to enhance institutional capacity, professionalise recruitment practices, strengthen the protection of migrant workers’ rights, and improve skills development and recognition. The project will also work to strengthen bilateral and multilateral cooperation and improve labour...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-01T02:52:44+00:00",
-      "source_url": "https://addisfortune.news/international-labour-organisation-launches-labour-migration-project",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Authority Orders Ethio telecom to Cut Infrastructure Rental Prices for Safaricom",
-      "summary": "The International Labour Organisation (ILO) launched a project aimed at strengthening inter-regional cooperation for safe, regular, and orderly labour migration in Ethiopia. The project is being implemented with financial support from the European Union. The project launching ceremony, held last week at the Hyatt Regency Hotel, disclosed that the initiative seeks to enhance institutional capacity, professionalise recruitment practices, strengthen the protection of migrant workers' rights, and... Ethiopian Eden Power and China's Southern Power Grid Technology (CSGT) have signed a strategic, exclusive partnership to develop a \"Green Tech\" hub.",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-01T02:51:31+00:00",
-      "source_url": "https://addisfortune.news/authority-orders-ethio-telecom-to-cut-infrastructure-rental-prices-for-safaricom",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Eden Power, China Sign Deal to Establish Green Tech Hub",
-      "summary": "Ethiopian Eden Power and China’s Southern Power Grid Technology (CSGT) have signed a strategic, exclusive partnership to develop a “Green Tech” hub. The agreement was signed on January 26, 2026, by Hamde Ebrahim for Eden Power and Jiang Junpeng, General Manager of CSGT’s International Development Department, in the presence of Bayissa Bedada (PhD), Minister of Innovation & Technology. Eden Power Group, an electro-mechanical engineering and manufacturing company, supplies power generation equipment, water pumping systems, agricultural machinery, solar solutions, and electrical control systems. Under the agreement, Eden Power will work with...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Business & Economy"
-      ],
-      "published_at": "2026-02-01T02:50:19+00:00",
-      "source_url": "https://addisfortune.news/eden-power-china-sign-deal-to-establish-green-tech-hub",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "Why Young People Choose Protest",
-      "summary": "In early December, Kenyan environmental activist Truphena Muthoni made history by hugging a tree for 72 hours straight. The goal was not only to raise awareness of the growing threats posed by climate change and deforestation but also to highlight the limits of conventional advocacy in driving meaningful policy change. Her protest reflects a broader global shift. From climate strikes in Europe to student protests in Latin America, youth movements gained momentum in 2025, signalling a growing refusal among younger generations to accept incremental policy responses to systemic challenges.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-02-01T02:49:56+00:00",
-      "source_url": "https://addisfortune.news/why-young-people-choose-protest",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "How Developing Countries Can Make the Most of AI",
-      "summary": "Since the 2008 global financial crisis, industrial policy has crept back into respectable economic discourse, after decades of being derided as misguided interventionism, particularly for developing countries. But its renaissance is being led by the advanced economies that once rejected it, with the push into artificial intelligence (AI) and renewable energy hastening the shift. For developing countries, this revival presents new opportunities, provided that they can manage three major constraints: a weak enabling environment (a lack of infrastructure and other necessary inputs), limited autonomy in policy-making, and fiscal constraints....",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-01T02:48:40+00:00",
-      "source_url": "https://addisfortune.news/how-developing-countries-can-make-the-most-of-ai",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "The king's speech - and why it has foreigners in South Africa worried",
-      "summary": "The Zulu king was trying to calm anti-migrant feelings but ended up using a highly derogatory phrase.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-01T00:00:43+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cd6we3009dgo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Why Zimbabwe's Maswanhise is Scotland's hottest property",
-      "summary": "BBC Scotland looks at the rise of Motherwell's Tawanda Maswanhise this season.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-31T22:03:24+00:00",
-      "source_url": "https://www.bbc.com/sport/football/articles/c5y4667j2zgo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "مسؤولة حكومية: المختبر البيئي الوحيد في السودان خارج الخدمة",
-      "summary": "الخرطوم 31 يناير 2026– قالت مسؤولة حكومية إن المختبر البيئي الوحيد في ولاية الخرطوم، والمعني بفحص التربة والمياه وقياس تلوث الهواء والإشعاع، خرج تماماً عن العمل جراء استهدافه من قوات الدعم السريع، بينما قُدّرت تكلفة إعادته بحوالي 500 ألف دولار. وتعرضت الخرطوم أثناء انتشار قوات الدعم السريع لعمليات نهب وتخريب واسعة مع بداية الحرب في منتصف أبريل 2023م، طالت العديد من المؤسسات الحكومية والخاصة وممتلكات المواطنين. وتسعى لجنة حكومية تُعنى بإعادة تهيئة البيئة في ولاية الخرطوم لإعادة تطبيع الحياة في الولاية المنكوبة. وقالت مديرة المختبر البيئي بالمجلس الأعلى للبيئة والترقية، أم الخير مختار عبد الله، لـ “سودان تربيون” إن المختبر البيئي الوحيد في...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-31T20:06:09+00:00",
-      "source_url": "https://sudantribune.net/article/310076",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "السودان يتطلع إلى شراكة استراتيجية مع الهند بتفعيل آليات التعاون",
-      "summary": "نيودلهي 31 يناير 2026 – أجرى وزير الخارجية السوداني محي الدين سالم، السبت، مباحثات مع رئيس الوزراء الهندي ناريندرا مودي، أبدى خلالها تطلع بلاده إلى بناء شراكة استراتيجية مع نيودلهي في مرحلة الإعمار عبر تفعيل آليات التعاون الثنائي. ووصل سالم إلى العاصمة نيودلهي يوم الخميس للمشاركة في أعمال الاجتماع الوزاري العربي الهندي الذي تنظمه الأمانة العامة لجامعة الدول العربية بالتعاون مع وزارة الخارجية الهندية. وقال وزير الخارجية، في تصريح صحفي، إن “السودان يتطلع إلى بناء شراكة استراتيجية مع الهند في مرحلة الإعمار عبر تفعيل آليات التعاون الثنائي بين وزارتي الخارجية في البلدين”. وأبدى أمله في تتويج الجهود الثنائية بتبادل الزيارات على مستوى كبار...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-31T19:15:49+00:00",
-      "source_url": "https://sudantribune.net/article/310073",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "England level series with win against South Africa",
-      "summary": "England level their three-game series with South Africa at 1-1 with a 61-49 win in front of a sellout crowd in Johannesburg.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-31T18:57:34+00:00",
-      "source_url": "https://www.bbc.com/sport/netball/articles/ce9y75nyk73o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "السلطات العسكرية تعتقل معلمًا في شمال كردفان بعد مطالبته بوقف الحرب",
-      "summary": "الأبيض، 31 يناير 2026 – قال متحدث باسم لجنة المعلمين السودانيين، السبت، إن استخبارات الجيش العسكرية في مدينة الأبيض اعتقلت المعلم علي حسن، بسبب دعوته لوقف الحرب. وتصاعدت شكاوى المعلمين من استمرار اعتقال زملائهم أو استدعائهم من جهات أمنية، على خلفية نشاطهم النقابي أو آرائهم المتعلقة بالحرب والأوضاع المعيشية. وقال المتحدث سامي الباقر، لـ “سودان تربيون”، إن “الاستخبارات العسكرية بمدينة الأبيض اعتقلت المعلم علي حسن لنشره منشورات على حسابه في فيسبوك يدعو فيها إلى إيقاف الحرب”. وأوضح أن السلطات لم توجه اليه حتى الآن أي تهم، كما لم يتم إخطار أسرته أو اللجنة بمكان احتجازه، الأمر الذي يثير مخاوف جدية بشأن سلامته القانونية والإنسانية.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-31T18:46:19+00:00",
-      "source_url": "https://sudantribune.net/article/310067",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "«سودانير» تعلن تسيير أول رحلة إلى مطار الخرطوم",
-      "summary": "الخرطوم، 31 يناير 2026 – أعلنت شركة الخطوط الجوية السودانية “سودانير”، السبت، تسيير أول رحلة إلى مطار الخرطوم الدولي منذ اندلاع الحرب بأسعار منخفضة. واستأنفت سودانير تحليقها في رحلات إلى العاصمة المصرية القاهرة وجدة في السعودية في 20 يناير الحالي من مطار بورتسودان شرقي السودان، بعد انتهاء أعمال الصيانة للطائرة الوحيدة التي تمتلكها. وقالت سودانير، في بيان، إنها “سوف تُسيِّر أول رحلة من بورتسودان إلى مطار الخرطوم غدًا الأحد، في خطوة تعكس عودة الروح واستمرار الربط بين أبناء الوطن”. وأشارت إلى أن الرحلة ستكون بأسعار تشجيعية مخفّضة بواقع 200 ألف جنيه سوداني أو 50 دولارًا، تأكيدًا لالتزام الناقل الوطني بخدمة المواطن وتخفيف أعباء السفر.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-01-31T14:54:38+00:00",
-      "source_url": "https://sudantribune.net/article/310064",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Tanzania faces litmus test on universal health cover",
-      "summary": "Many citizens are reluctant to join government-backed schemes, citing mismanagement, graft and...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-31T05:00:00+00:00",
-      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/dar-faces-litmus-test-on-universal-health-cover-5343718",
-      "source_name": "The EastAfrican"
-    },
-    {
-      "title": "This army chief threatened to castrate opposition leader and claimed descent from Jesus",
-      "summary": "The Ugandan president’s son, notorious for explosive remarks on X, has ambitions to succeed his father.",
-      "country_tags": [],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-01-31T00:05:52+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cdjnp9m8wvgo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
     }
   ]
 }
