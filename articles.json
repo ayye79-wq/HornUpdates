@@ -1,6 +1,41 @@
 {
-  "generated_at": "2026-02-16T18:20:26.893194+00:00",
+  "generated_at": "2026-02-17T12:21:41.939927+00:00",
   "articles": [
+    {
+      "title": "Flights delayed for up to 20 hours as  Kenya airport staff strike for second day",
+      "summary": "Airlines are urging travellers to check their flight status before heading to the crowded airport.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-17T10:32:21+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Fake funeral suspects allegedly used hearse to smuggle charcoal in Malawi",
+      "summary": "Officials allege that an empty coffin was placed over concealed bags of charcoal in a hearse.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-17T08:52:48+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cwygdq11jwlo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "How the tide turned against the leader of South Africa's second-biggest party",
+      "summary": "John Steenhuisen will not seek re-election as DA leader, leaving the race wide open for a successor.",
+      "country_tags": [],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-17T01:07:00+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c6209vqv3nlo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
     {
       "title": "مقتل (28) شخصاً في قصف على سوق بولاية شمال كردفان",
       "summary": "الأبيض 16 فبراير 2026- أعلنت مجموعة “محامو الطوارئ “الاثنين، مقتل 28 شخصاً على الأقل إثر قصف جوي نفذته طائرة مسيرة استهدف سوقاً بمنطقة الصافية في ولاية شمال كردفان. ويأتي الحادث في ظل تصعيد عسكري واسع يشهده إقليم كردفان بين الجيش السوداني وقوات الدعم السريع، مع تزايد الاعتماد على الطيران المسير من الجانبين؛ مما أسفر عن سقوط عشرات الضحايا المدنيين وتدمير مرافق خدمية وبنى تحتية أساسية. وأوضحت المجموعة في بيان أن “طائرات مسيرة استهدفت مساء أمس سوق منطقة الصافية، الواقعة شمال شرق محلية سودري، مما أدى إلى مقتل 28 شخصاً وإصابة العشرات بجروح متفاوتة، في حصيلة أولية مرشحة للارتفاع”. وأشار البيان إلى أن الهجوم وقع أثناء ذروة النشاط التجاري...",
@@ -62,19 +97,6 @@
       "published_at": "2026-02-16T14:43:04+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/ruto-calls-emergency-eac-summit-over-89m-shortfall-5361416",
       "source_name": "The EastAfrican"
-    },
-    {
-      "title": "Kenya strike delays flights at international hub airport",
-      "summary": "Authorities say they have put in place contingency measures as a labour dispute affects travel.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-02-16T12:18:45+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c363096kd5po?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
     },
     {
       "title": "Uganda's cranes call us to action: Why our national bird's future depends on what we do today",
@@ -2529,28 +2551,6 @@
       "published_at": "2026-02-06T15:44:04+00:00",
       "source_url": "https://sudantribune.net/article/310330",
       "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Fisherman fleeing elephants killed by crocodile in Zambia",
-      "summary": "The fisherman ran into a stream near the river after he and two friends encountered a herd of elephants.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-06T14:47:22+00:00",
-      "source_url": "https://www.bbc.com/news/articles/czx1xl98qkpo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Nigerian film shows masculinity and vulnerability aren't exclusive",
-      "summary": "Film-maker Akinola Davies Jr says he wanted to explore the depiction of father-son relationships.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-06T14:45:50+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c1wzvpw9g8jo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
     }
   ]
 }
