@@ -1,6 +1,281 @@
 {
-  "generated_at": "2026-02-17T12:21:41.939927+00:00",
+  "generated_at": "2026-02-19T12:31:05.160400+00:00",
   "articles": [
+    {
+      "title": "Ethiopian Airlines Expands Domestic Network as African Partners Strengthen Fleet and Operations",
+      "summary": "Ethiopian Airlines has announced plans to inaugurate three new domestic airports and commence passenger services to Negele Borena, Gore Metu, and Debre Markos by mid-April 2026, further expanding its national footprint. The airline said it will operate three weekly flights to each destination. With the addition of the new routes, Ethiopian’s domestic network will grow to 26 destinations, strengthening air connectivity and improving access to key regional centers. The expansion announcement comes as the airline reports strong financial and operational performance in the first half of the fiscal year.",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-19T12:25:09+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49246/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Son of Robert Mugabe arrested in South Africa after reported shooting",
+      "summary": "Bellarmine Mugabe is in custody after he allegedly shot a security guard at a property in Johannesburg.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-19T12:22:16+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c1jkx2pkyyro?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Suspected carbon-monoxide leak kills at least 30 miners in Nigeria, witnesses say",
+      "summary": "The workers are believed to have collapsed after the gas built up in poorly ventilated tunnels.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-19T11:27:14+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cwyk6nr80kxo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "تحالف قوات «الشعبية» و«الدعم السريع» يهاجم الكرمك بالمسيرات",
+      "summary": "الكرمك 19 فبراير 2026 – قال محافظ الكرمك بإقليم النيل الأزرق، الخميس، إن مسيرات للحركة الشعبية – شمال والدعم السريع هاجمت مدينة الكرمك، مما أدى إلى سقوط قتلى وجرحى وتضرر أعيان مدنية. وطبقا لمحافظ محافظة الكرمك عبد العاطي الفكي في بيان فإن الهجوم المسير استهدف أحياءً في مدينة الكرمك مساء أمس وتسبب في مقتل مدني واحد وإصابة آخرين إصابات متفاوتة. كما أشار إلى أن الغارة أسفرت أيضًا عن تعطيل مطحن للغلال بمدينة الكرمك التي تتاخم الحدود الإثيوبية. وأكد محافظ الكرمك أن الأوضاع داخل المحافظة تحت سيطرة الجيش السوداني ويسودها الهدوء التام – حسب تعبيره -، وأدان هجوم الدعم السريع والحركة الشعبية على الكرمك بالمسيرات.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-19T11:07:23+00:00",
+      "source_url": "https://sudantribune.net/article/310864",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Islamic police in Nigeria arrest nine Muslims for not fasting during Ramadan",
+      "summary": "Officers in Kano search cafes and restaurants every year during Ramadan looking for Muslims breaking the fast.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-19T10:51:03+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c62gjgl75jpo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Over 1,000 Kenyans enlisted to fight in Russia-Ukraine war, report says",
+      "summary": "Investigators call the recruitment a well-organised trafficking ring involving immigration staff and security agencies.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-19T10:44:14+00:00",
+      "source_url": "https://www.bbc.com/news/articles/ce8w266769go?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Sudan atrocities are 'hallmarks of genocide', UN says",
+      "summary": "A UN fact-finding mission issued the report after investigating the capture of el-Fasher by the Rapid Support Forces.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-19T08:08:41+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cpqw74d81jqo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "The two farms in Senegal that supply many of the UK's vegetables",
+      "summary": "During winter in Britain fresh produce is sent by cargo ship from the West African nation every week.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-19T00:16:54+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cwy6171wvppo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "ارتفاع وارد المحاصيل يفاقم خسائر مزارعي القضارف",
+      "summary": "القضارف 18 فبراير 2026- أطلق مزارعون في ولاية القضارف تحذيرات من تفاقم الخسائر جراء ارتفاع وارد المحاصيل الزراعية إلى بورصة المحاصيل في الولاية، مشيرين إلى أنهم اضطروا لبيع محاصيلهم بسبب ارتفاع مديونيتهم لدى شركات الأسمدة والبنوك وارتفاع تكاليف الإنتاج. وشهدت بورصة أسواق محاصيل القضارف، الثلاثاء، ارتفاعًا كبيرًا في وارد المحاصيل الزراعية، إذ بلغ الوارد من محصول الذرة (30470) جوالًا، فيما بلغ الوارد من السمسم (1958) جوالًا، أما التسالي فبلغ الوارد منها (8110) جوالات، بينما بلغ الوارد من الدخن (2521) جوالًا. وظل سعر قنطار السمسم ثابتًا طوال الشهر الماضي عند مبلغ (165) ألف جنيه، فيما ارتفع سعر أردب الدخن إلى (260) ألف جنيه، كما ارتفع طن...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-18T21:55:52+00:00",
+      "source_url": "https://sudantribune.net/article/310844",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "اتهامات للجيش السوداني بشن هجمات جوية في كردفان أسقطت ضحايا مدنيين",
+      "summary": "الفولة 18 فبراير 2026 – ندّدت قوى سياسية وجماعات حقوقية، الأربعاء، بتصاعد الهجمات التي تشنّها طائرات مسيّرة على عدة مواقع في أقاليم كردفان والنيل الأزرق، أسفرت عن سقوط عشرات الضحايا بينهم أطفال ونساء، وسط اتهامات للجيش بالمسؤولية عنها. وقالت مجموعة محامو الطوارئ في بيان إن “طائرة مسيّرة قصفت ظهر اليوم مورد المياه (دونكي) في منطقة أم رسوم بمحلية السنوط بولاية غرب كردفان، في منطقة خالية تمامًا من أي وجود عسكري، في هجوم وحشي ومتعمد على المدنيين الأبرياء”. وتخضع كامل ولاية غرب كردفان لسيطرة الدعم السريع، وظلت مناطق واسعة منها تتعرض لهجمات جوية بواسطة طائرات مسيّرة يطلقها الجيش السوداني. وأشار البيان إلى أن الهجوم على “أم رسوم” أسفر عن مجزرة...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-18T19:58:32+00:00",
+      "source_url": "https://sudantribune.net/article/310838",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "السودان : تحذيرات من تمدد «حمى الضنك» ونقص حاد في أدوية الملاريا",
+      "summary": "الخرطوم 18 فبراير 2026- أعلنت وزارة الصحة السودانية، الأربعاء ارتفاع حالات الإصابة بحمى الضنك في ست ولايات، مع استمرار تسجيل إصابات بالتهاب الكبد الوبائي (E) بولاية الجزيرة، وسط نقص في بعض الأدوية والمستهلكات الطبية الخاصة بالأوبئة. ويأتي هذا الارتفاع في ظل وضع صحي هش يشهده السودان منذ اندلاع الحرب، حيث تضررت البنية التحتية للمرافق الصحية وتوقف العمل في عدد من المستشفيات، مما أدى لنقص حاد في الكوادر والأدوية وارتفاع مخاطر الأوبئة الموسمية. وذكر بيان لمركز عمليات الطوارئ بوزارة الصحة الاتحادية أن تقرير الترصد لم يسجل إصابات جديدة بالكوليرا، مقابل رصد حالات حمى الضنك في ولايات الخرطوم والجزيرة ونهر النيل والنيل الأبيض وكسلا والشمالية، بينما...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-18T18:25:45+00:00",
+      "source_url": "https://sudantribune.net/article/310835",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Parliament Extends Dialogue Commission Term by Eight Months",
+      "summary": "The House of Peoples’ Representatives has voted to extend the term of existence of the National Dialogue Commission (NDC), granting it an additional eight months to meet its objectives. Lawmakers voted on the extension today after convening to discuss the Commission’s performance and decide the next steps for the national dialogue initiative. The Commission was established in 2022 with a mandate to carry out the dialogue process within a three-year timeframe. Last year, MPs voted to grant the Commission an additional six months, giving it until February 2025 to finalize its work.",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-18T14:58:58+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49242/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "قوى سياسية سودانية تدعو طرفَي النزاع إلى هدنة في رمضان",
+      "summary": "الخرطوم 18 فبراير 2026- دعت قوى مدنية وسياسية سودانية، الأربعاء، قيادتي القوات المسلحة السودانية والدعم السريع إلى إعلان هدنة إنسانية فورية وشاملة مع بداية شهر رمضان، والإفراج عن جميع المدنيين المعتقلين، والشروع في ترتيبات تبادل الأسرى تحت إشراف دولي. وتضم القوى الموقعة على المذكرة أحزاباً سياسية مدنية بارزة، من بينها حزب الأمة القومي، والمؤتمر السوداني، والمؤتمر الشعبي، والتجمع الاتحادي، وأحزاب قومية وناصرية وبعثية، إضافة إلى التحالف الوطني السوداني، وتنظيمات نقابية ومهنية، وتنسيقيات لجان مقاومة وقوى مدنية ضمن تحالف “صمود”. وتأتي الدعوة في ظل استمرار الحرب في السودان منذ أبريل 2023، والتي أدت إلى تدهور غير مسبوق في الأوضاع الإنسانية...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-18T14:04:24+00:00",
+      "source_url": "https://sudantribune.net/article/310832",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "قافلة مساعدات أممية تصل جنوب كردفان بعد فك الحصار",
+      "summary": "الخرطوم 18 فبراير 2026 – أعلنت ثلاث وكالات تابعة للأمم المتحدة، الأربعاء، وصول قافلة مساعدات تحمل إمدادات لصالح 110 آلاف شخص على الأقل في كادقلي والدلنج في ولاية جنوب كردفان. وتمكّن الجيش في 3 فبراير الجاري من إنهاء الحصار المفروض لقرابة عامين على مدينة كادقلي، بعد أسبوع من فك حصار مماثل على الدلنج، عبر عملية عسكرية انطلقت من مناطق شرق الولاية عبر منطقة هبيلة، مما أتاح وصول الإمدادات إلى المدينتين. وقال برنامج الأغذية العالمي وبرنامج الأمم المتحدة الإنمائي ومنظمة الأمم المتحدة للطفولة “يونيسف”، في بيان مشترك، إنهم أوصلوا “قافلة محملة بإمدادات إنسانية حيوية إلى كادقلي والدلنج”. وأشار البيان إلى أن القافلة، التي تضم 15 شاحنة من برنامج...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-18T13:51:40+00:00",
+      "source_url": "https://sudantribune.net/article/310827",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "وحدة المصير في زمن الاختبار: الحكمة المصرية والعظمة السودانية",
+      "summary": "حاتم السر سكينجو المحامي تمرّ العلاقات بين الدول بلحظات اختبار تكشف جوهرها الحقيقي. وتبرز في مثل هذه اللحظات الفوارق بين علاقات تُدار بالانفعال، وأخرى تستند إلى التاريخ والعقل والمصلحة المشتركة. وتنتمي العلاقة بين السودان ومصر إلى الصنف الثاني، إذ تشكّلت عبر قرون من التداخل الإنساني، والتكامل الاجتماعي، والشراكة في صناعة المصير على ضفاف نهر واحد. يعيش السودان اليوم مرحلة دقيقة من تاريخه الوطني.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-18T13:46:24+00:00",
+      "source_url": "https://sudantribune.net/article/310825",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "الإعلان من «الخرطوم» عن تحالف سياسي واسع يدعو للمصالحة",
+      "summary": "الخرطوم 18 فبراير 2026 – شهدت العاصمة السودانية، الثلاثاء، الإعلان رسمياً عن تأسيس تحالف “قوى الثورة للقضايا الوطنية”، كأول ائتلاف سياسي يتشكل في الخرطوم منذ اندلاع الحرب، مطالباً بنزع سلاح المليشيات وتشكيل حكومة مدنية كاملة. ويضم التحالف الجديد فصيلاً منشقاً من التجمع الاتحادي، والتيار الوطني، وحزب البعث العربي الاشتراكي، وتيار الوسط، والإرادة الوطنية، إضافة إلى حركة “حقوق” الشبابية. وقال الأمين العام للتجمع الاتحادي، قريب الله السماني، لـ “سودان تربيون” الأربعاء، إن التحالف يطرح رؤية إيجابية تجاه جميع المكونات الوطنية، ويدعو إلى مصالحة شاملة واستعادة النظام الدستوري من خلال حكومة مدنية خالصة تشمل مجلساً تشريعياً، مع التأكيد على إبعاد...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-18T13:42:20+00:00",
+      "source_url": "https://sudantribune.net/article/310822",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Turkey's president rejects Israel's recognition of Somaliland",
+      "summary": "He made the comment on an official visit to Ethiopia, saying it could prove dangerous for a volatile region.",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-18T13:10:03+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c0lj0plkg09o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "Social media suspended in Gabon for 'spreading of false information'",
+      "summary": "The media regulator said the ban would be in place \"until further notice\".",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-18T11:05:05+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cx2rg2vndk1o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "السودان : معدل التضخم يوالي الانخفاض مسجّلًا 60.26% في يناير",
+      "summary": "الخرطوم 17 فبراير 2026- واصل معدل التضخم السنوي في السودان انخفاضه، مسجّلًا 60.26% خلال شهر يناير 2026، متراجعا بحوالي ثمانية نقاط عن الشهر الذي سبقه وفقًا لبيان صادر عن الجهاز المركزي للإحصاء. وكان معدل التضخم بلغ ذروته في يوليو 2021، وهي النسبة الأعلى في تاريخ البلاد، قبل أن يبدأ في التراجع تدريجيًا، ليسجل 74.02% في نوفمبر 2025، و68% في ديسمبر الماضي رغم استمرار انخفاض العملة المحلية أمام نظيراتها الأجنبية وارتفاع أسعار السلع. وأوضح الجهاز المركزي للإحصاء، في بيان صحفي اطّلعت عليه “سودان تربيون” الثلاثاء، أن الرقم القياسي العام لأسعار المستهلك بلغ 606095.49 نقطة في يناير 2026، مقارنة بـ 631072.80 نقطة في ديسمبر 2025، بانخفاض قدره...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-17T19:32:14+00:00",
+      "source_url": "https://sudantribune.net/article/310806",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "وزارة الصحة : تزايد معدلات الإصابة بالأوبئة في الخرطوم",
+      "summary": "الخرطوم 17 فبراير 2026 — أعلنت وزارة الصحة بولاية الخرطوم عن زيادة في معدلات الأوبئة وأمراض الطفولة بمحليات الولاية السبع، وسط تحديات عديدة بسبب آثار الحرب على النظام الصحي. ويأتي الإعلان وسط تدهور الوضع الصحي في السودان نتيجة الحرب المستمرة منذ أبريل 2023، ما أدى إلى نقص حاد في الأدوية والمستلزمات الطبية، وتدمير أجزاء من البنية التحتية للمراكز والمستشفيات، وتوقف بعض الخدمات الأساسية في العديد من الولايات. وقال مركز عمليات الطوارئ خلال اجتماع الثلاثاء برئاسة مدير الطوارئ والاوبئة محمد التجاني، إن التقرير الوبائي للأسبوع السادس لعام 2026 سجل 10,361 حالة إصابة بالملاريا، و467 حالة حمى الضنك، و52 حالة جرب محصورة في محليتي كرري وشرق النيل،...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-17T17:26:49+00:00",
+      "source_url": "https://sudantribune.net/article/310801",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Ethiopia Welcomes Turkish President",
+      "summary": "Recep Tayyip Erdogan, president of Türkiye, arrived in Addis Ababa today for talks with Prime Minister Abiy Ahmed (PhD). Observers expect the talks will revolve around Somalia’s territorial integrity following Israel’s recognition of breakaway Somaliland, as well as developments in Gaza. The Turkish President was scheduled to land in the UAE ahead of his Ethiopia visit, but plans changed owing to an unnamed illness affecting President Mohamed bin Zayed. A social media post from the Office of the Prime Minister said the two leaders are expected to “discuss a wide range of bilateral and regional issues of mutual interest” during Erdogan’s stay.",
+      "country_tags": [
+        "Ethiopia",
+        "Somalia"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-17T15:02:10+00:00",
+      "source_url": "https://www.thereporterethiopia.com/49234/",
+      "source_name": "The Reporter Ethiopia"
+    },
+    {
+      "title": "Nigerians hang on to hope of 2026 World Cup reprieve",
+      "summary": "Nigeria fans are still hoping Fifa may rule in their favour over allegations that DR Congo fielded ineligible players during Africa's 2026 World Cup play-offs.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-17T13:47:44+00:00",
+      "source_url": "https://www.bbc.com/sport/football/articles/c07jzv51ygvo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
     {
       "title": "Flights delayed for up to 20 hours as  Kenya airport staff strike for second day",
       "summary": "Airlines are urging travellers to check their flight status before heading to the crowded airport.",
@@ -2270,286 +2545,6 @@
       ],
       "published_at": "2026-02-07T15:38:55+00:00",
       "source_url": "https://sudantribune.net/article/310369",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "حاتم السر : الإتحادي  الأصل يعكف على رؤية حول تكوين البرلمان",
-      "summary": "شندي 7 فبراير 2026- أعلن مستشار رئيس الحزب الاتحادي الأصل، حاتم السر، موافقة حزبه المبدئية على المشاركة في المجلس التشريعي الانتقالي، مؤكداً أهمية إطلاق حوار سوداني –سوداني شامل داخل البلاد، بملكية وطنية خالصة، لإنهاء الحرب وتأسيس سلام مستدام. ويتبنى الاتحادي الأصل موقفا داعما لمؤسسات الدولة السودانية في مواجهة قوات الدعم السريع، ويحمّل الأخيرة مسؤولية اندلاع الحرب وما ترتب عليها من انتهاكات واسعة ضد المدنيين والبنية التحتية في عدد من الولايات. وقال السر، في كلمة ألقاها أمس الجمعة خلال لقاء بولاية نهر النيل، إن قيادات الحزب، وبتوجيهات من رئيس الحزب محمد عثمان الميرغني، تعمل حالياً على إعداد رؤية متكاملة بشأن تشكيل المجلس التشريعي لاستكمال...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-07T15:35:33+00:00",
-      "source_url": "https://sudantribune.net/article/310367",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "بنك الخرطوم يعيد مبالغ «ضمان الودائع» إلى حسابات العملاء",
-      "summary": "الخرطوم7 فبراير 2026- أكد بنك الخرطوم التزامه بتوجيهات بنك السودان المركزي، والشروع الفوري في إعادة المبالغ التي جرى خصمها من الحسابات الادخارية للعملاء تحت بند “رسوم ضمان الودائع المصرفية”. وفي 29 يناير، بدأ بنك الخرطوم خصم مبالغ من حسابات العملاء دون إخطارهم، الأمر الذي أثار موجة من الجدل والاستنكار، قبل أن يصدر بنك السودان المركزي توجيهات الزم بموجبها بنك الخرطوم باسترداد تلك المبالغ، وتصحيح الأوضاع. وأكد بنك الخرطوم، في بيان صحفي السبت، استجابته لموجهات بنك السودان، وتكفله بتحمل كافة تكاليف صندوق ضمان الودائع للحسابات الادخارية من موارده الخاصة نيابة عن عملائه، والشروع فوراً في إعادة المبالغ التي خُصمت لصالح صندوق ضمان الودائع...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-07T13:23:50+00:00",
-      "source_url": "https://sudantribune.net/article/310365",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "صور أقمار صناعية ترصد مواقع إطلاق مسيّرات ونظام دفاع جوي في «نيالا»",
-      "summary": "نيالا، 7 فبراير 2026 – كشفت صور أقمار صناعية نشرها مختبر البحوث الإنسانية بجامعة ييل، السبت، عن رصد موقعَين جديدَين لإطلاق طائرات مسيّرة ونظام دفاع جوي في مدينة نيالا بولاية جنوب دارفور. وفي أواخر يناير الماضي، نشرت منصات قريبة من الجيش صورًا مسرّبة لمنظومة دفاع جوي متقدمة من طراز FK-2000 في نيالا، قالت إنه جرى استيرادها عبر سلسلة إمداد منضبطة نسبيًا تحرص على سلامة المعدات وجاهزيتها التشغيلية. وقال المختبر، في تقرير عن تحليل صور أقمار صناعية، إنه “حدّد 85 جسمًا على الأقل يتطابق مع مسيّرات انتحارية في موقعَين داخل مدينة نيالا الخاضعة لسيطرة قوات الدعم السريع خلال يناير 2026”. وأوضح أنه رصد 40 جسمًا متطابقًا مع الذخائر المتسكعة، وهي عبارة...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-07T11:06:12+00:00",
-      "source_url": "https://sudantribune.net/article/310356",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "(24) قتيلًا في قصف لـ«الدعم السريع» على نازحين بشمال كردفان",
-      "summary": "الأبيض، 7 فبراير 2026 – قال أطباء وحكومة ولاية شمال كردفان، السبت، إن 24 مدنيًا على الأقل قُتلوا في قصف شنّته قوات الدعم السريع على مركبة تُقلّ نازحين. وصعّدت الدعم السريع، منذ الأسبوع الماضي، هجمات الطائرات المسيّرة على قوافل الإمدادات والمساعدات الإنسانية في شمال وجنوب كردفان، علاوة على قصف المراكز الصحية والمستشفيات، ما أسفر عن وقوع أعداد كبيرة من الضحايا. وقالت حكومة ولاية شمال كردفان، في بيان، إن الدعم السريع “استهدفت بصورة متعمدة ومباشرة سيارة تُقلّ نازحين مدنيين قادمين من منطقة دبيكر بجنوب كردفان إلى مدينة الرهد، ما أسفر عن مقتل 24 مدنيًا بينهم نساء وأطفال وكبار سن، إضافة إلى إصابة عدد كبير من المدنيين”. وأدانت الحكومة القصف الذي...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-07T11:00:04+00:00",
-      "source_url": "https://sudantribune.net/article/310354",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Zambian leader backs traditional Ghanaian outfit after online trolling",
-      "summary": "Some Zambians outraged Ghanaians by describing the outfit worn by their president as a \"blouse\".",
-      "country_tags": [],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-02-07T09:54:55+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cq5y5w2z344o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "“There is Nothing that Cannot be Solved through Discussion”",
-      "summary": "French Ambassador Urges Dialogue in Maritime Access Quest, IDP Return France, has not only been backing Ethiopia’s political-economy reform from the outset, but also co-chairs Ethiopia’s Official Creditor Committee (OCC), alongside China. Critical issues including development, FDI, and humanitarian needs have witnessed setbacks due to persistent challenges but currently there are signals of improvement, observes Alexis Lamek, French Ambassador to Ethiopia and representative to the African Union (AU). On Ethiopia’s national interest of access to sea port, the ambassador stresses the request is legitimate and can be resolved through...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Business & Economy"
-      ],
-      "published_at": "2026-02-07T08:35:26+00:00",
-      "source_url": "https://www.thereporterethiopia.com/49003/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "MIDROC Execs Applaud Cyanide Certificate as UN Scrutinizes Toxic Waste in Lege Dembi",
-      "summary": "Two contradictory reports surrounding toxic mining pollution at MIDROC Gold’s Lege Dembi site have placed the controversial commercial-scale gold extraction project under renewed scrutiny. The International Cyanide Management Institute (ICMI), a non-profit that administers a voluntary international code for the safe use of cyanide in gold and silver mining, certified MIDROC’s production site in Lege […]",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-07T08:24:04+00:00",
-      "source_url": "https://www.thereporterethiopia.com/49001/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Infrastructure, Capacity Gaps Stall NBE’s Movable Collateral Program",
-      "summary": "A novel initiative seeking to enable low-incomers to access bank loans using movable collateral, such as livestock, remains stuck in its pilot phase owing to shortcomings in know-how and infrastructure, central bank regulators told Parliament this week. The central bank introduced legal frameworks intended to enable the use of movable collateral more than five years […]",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-02-07T08:21:37+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48998/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "EEU Defends Tariff increments, Says Power Subsidy still High Despite Public Complaints",
-      "summary": "By Sara Solomon The Ethiopian Electric Utility (EEU) says it continues to supply electricity at one of the lowest tariff rates globally, despite growing public complaints over recent adjustments. Presenting the utility’s six-month performance report to the media, EEU Chief Executive Officer Getu Geremew said households are charged about USD 0.005 per kilowatt-hour (kWh), a […]",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-07T08:08:25+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48994/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "No Credible Elections Without Media Freedom",
-      "summary": "As Ethiopia heads toward the 7th general elections due to be held on June 1, the credibility of the process will not be judged merely by the ballots cast or the votes counted. It will be judged by whether citizens are genuinely informed, whether debate is free, and whether scrutiny is possible. That is the job of the media. And yet, Ethiopia’s media, particularly the few privately-owned outlets, remain under pressure, underfunded, and too often undermined.",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance",
-        "Security & Conflict"
-      ],
-      "published_at": "2026-02-07T07:58:28+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48991/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "AU Security Council Seats up for Grabs at Upcoming Summit",
-      "summary": "The upcoming 39 th AU Summit in Addis Ababa will see an election for 10 seats on the AU Peace and Security Council (PSC). Regional blocs and non-sanctioned member states are already vying for the seats. The PSC is the AU body charged with handling conflicts and conflict resolution. Its current members are nearing the end of their two-year term after being elected in February 2024 during the 37th ordinary session of the AU Assembly.",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance",
-        "Security & Conflict"
-      ],
-      "published_at": "2026-02-07T07:56:21+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48989/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "UN Committee Rings Alarm over Worsening Child Right Violations in Ethiopia",
-      "summary": "Urges greater independence for Rights Commission, Ombudsman The UN Committee on the Rights of the Child has expressed alarm over what it says is a significant increase in grave violations against children, including killing and maiming, sexual violence, abduction, and denial of humanitarian access, under the context of conflict in Ethiopia. The Committee published its findings on the child rights situation in Ethiopia this week after officials from the Ministry of Justice and UN delegates submitted a series of reports to it over the past months. The Committee urges Ethiopia to comply with applicable international law and to end and...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-02-07T07:51:34+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48986/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Pension Fund Eyes Securities Exchange in Bid to Exercise New Investment Clause",
-      "summary": "The government agency in charge of administering the pensions of private sector employees is eyeing investment in the securities exchange as attempts to gain a foothold in Addis Ababa’s lucrative real estate stall. Abate Mitiku, head of the Private Organization Employees’ Social Security Administration (POESSA), informed lawmakers about the agency’s investment ambitions while the National […]",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance",
-        "Business & Economy"
-      ],
-      "published_at": "2026-02-07T07:39:40+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48983/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Terrorists Increasingly Targeting Energy Infrastructure in Horn Region: AU, UN",
-      "summary": "Terrorist groups in the Horn of Africa are targeting energy infrastructure more frequently, warn experts from the AU and UN. The growing threat was the central topic of a regional counter-terrorism convention held in Addis Ababa last week. The meeting was organized by the UN Office of Counter-Terrorism (UNOCT) and the African Union Counter-Terrorism Centre (AUCTC), and saw the attendance of security experts, government officials, and the representatives of regional and international organizations in eastern Africa. It highlighted the growing vulnerability of major energy projects in the region, including oil and gas pipelines and...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance",
-        "Security & Conflict"
-      ],
-      "published_at": "2026-02-07T07:35:53+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48981/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "Gov’t Revisits Sugar Privatization Prospects Yet Again",
-      "summary": "The federal government is preparing yet again to privatize sugar estates under the Ethiopian Sugar Industry Group as part of ongoing economic reforms, reviving an initiative that has failed repeatedly over the past eight years. In a letter addressed to International Monetary Fund (IMF) Director Kristina Georgieva, Finance Minister Ahmed Shide stated the privatization process […]",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-02-07T07:32:30+00:00",
-      "source_url": "https://www.thereporterethiopia.com/48979/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "From Hollywood to the homeland: Why African countries are courting black American stars",
-      "summary": "Ciara and Samuel L Jackson are among the big names who have become citizens of African countries in recent years.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-07T00:00:31+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c86vz6v07d3o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "البرهان: لا نرفض السلام أو الهدنة لكن بشرط ألا تكون لتمكين العدو",
-      "summary": "الجزيرة، 6 فبراير 2026 – قال قائد الجيش السوداني ورئيس مجلس السيادة عبد الفتاح البرهان، الجمعة، إن الدولة لا ترفض السلام ولا الهدنة، ولكن يجب ألا تكون الهدنة فرصة لتمكين العدو من جديد. وكان البرهان يتحدث خلال مخاطبته حشدًا بقرية طيبة الشيخ عبد الباقي بولاية الجزيرة، حيث سجادة الطريقة القادرية العركية بولاية الجزيرة وسط البلاد. وجاء حديث قائد الجيش بشأن الهدنة عقب أيام من تصريحات لمسعد بولس، مستشار الرئيس الأمريكي لشؤون العربية والأفريقية، بشأن اتفاقية لتحقيق السلام بالسودان سترفع لمجلس الأمن الدولي ومجلس السلام. ولم تتمكن عدد من المبادرات من فرض تسوية بين الجيش السوداني وقوات الدعم السريع لوقف الحرب المشتعلة منذ منتصف أبريل 2023.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-06T20:35:49+00:00",
-      "source_url": "https://sudantribune.net/article/310343",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "أول قافلة إغاثية تتوجه إلى كادوقلي والدلنج بعد فك الحصار",
-      "summary": "بورتسودان، 6 فبراير 2026 – أعلنت مفوضة العون الإنساني بالسودان سلوى آدم بنية، الجمعة، عن وصول أول قافلة إغاثة للحكومة السودانية إلى مدينتي كادوقلي والدلنج بولاية جنوب كردفان على متنها حوالي 2250 طن من المساعدات. ودشنت المفوضة القافلة الإغاثية لولاية جنوب كردفان المكونة من مواد غذائية وإيوائية بمدينة بورتسودان، لدعم المواطنين المتأثرين بالحرب. وأفادت المفوضة في تصريحات صحفية أن القافلة تضم (45) شاحنة، تحمل كل منها نحو (50) طناً من المواد الغذائية ومواد الإغاثة المتنوعة. وأكدت استمرار تسيير قوافل الإغاثة بصورة عاجلة لإيصال المساعدات إلى المحتاجين، خاصة المتأثرين جراء استخدام قوات الدعم السريع الحصار كسلاح لتجويع المواطنين، حتى م فك الحصار...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-06T18:38:22+00:00",
-      "source_url": "https://sudantribune.net/article/310334",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "As US cash dries up South Africa's fight to stop Aids gets harder",
-      "summary": "Health experts fear that as testing and monitoring drops the risk of the further spread of HIV rises.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-06T17:57:45+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c5ydyr53np1o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "'They sent a letter asking to preach. Then they massacred us' - Nigerians on jihadist attack",
-      "summary": "Armed jihadists devastate a community that refused to convert to their hard-line interpretation of Islam.",
-      "country_tags": [],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-02-06T15:58:43+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c1dkd3llw1lo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Nigerian court orders UK to pay £420m over 1949 killing of miners",
-      "summary": "The colonial police, made up of Nigerians and Europeans, shot dead workers striking for better conditions.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-06T15:50:35+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c4g3g51klyno?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "البرهان يظهر في وسط السودان مع زعيم قبلي عاقبه الاتحاد الأوروبي",
-      "summary": "الجزيرة، 6 فبراير 2026 – ظهر قائد الجيش السوداني ورئيس مجلس السيادة عبد الفتاح البرهان، الجمعة، في قرية سرحان الشيخ تاي الله بولاية الجزيرة وسط السودان رفقة أحد قادة المقاومة الشعبية فرض الاتحاد الأوروبي عقوبات عليه الأسبوع الماضي. وحسب مجلس السيادة في تعميم صحفي، فإن البرهان، زار منطقة سُرحان الشيخ تاي الله بولاية الجزيرة وسط استقبالات حاشدة من مواطني المنطقة. وتشير سودان تربيون إلى أن البرهان ظهر في مقاطع مصورة مع أمير الكواهلة النفيدية الأمير الطيب الإمام جودة في قريته سرحان الشيخ تاي الله وذلك بعد نحو أسبوع من فرض الاتحاد الأوروبي عقوبات على الرجل الذي يعد من أبرز قادة المقاومة الشعبية التي قاتلت إلى جانب الجيش ضد قوات الدعم السريع....",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-06T15:44:04+00:00",
-      "source_url": "https://sudantribune.net/article/310330",
       "source_name": "سودان تربيون"
     }
   ]
