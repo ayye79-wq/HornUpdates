@@ -1,6 +1,260 @@
 {
-  "generated_at": "2026-02-20T12:22:46.949358+00:00",
+  "generated_at": "2026-02-21T16:29:29.863778+00:00",
   "articles": [
+    {
+      "title": "مسؤول سوداني: خسائر قطاع المعادن جراء الحرب تصل إلى 7 مليارات دولار",
+      "summary": "الخرطوم 21 فبراير 2026 – قال مسؤول سوداني في قطاع المعادن، السبت، إن خسائر القطاع بلغت 7 مليارات دولار جراء الحرب المتواصلة منذ 34 شهرًا. وتعرّضت القطاعات الحكومية والخاصة في السودان لعمليات نهب وتخريب بسبب الحرب، ما أدى إلى فقدان بنيتها التحتية كليًا أو جزئيًا، مع خسائر تتراوح بين ملايين ومليارات الدولارات في مختلف القطاعات نتيجة الأضرار التي لحقت بها. وقال مدير الهيئة العامة للأبحاث الجيولوجية أحمد هارون التوم، في بيان، إن “خسائر قطاع المعادن في السودان جراء الحرب بلغت نحو 7 مليارات دولار”. وكشف عن تقلّص نشاط الهيئة من 18 ولاية قبل اندلاع الحرب إلى 6 ولايات فقط حاليًا، ما أثّر بشكل مباشر على عمليات البحث والاستكشاف والإيرادات العامة.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-21T13:38:36+00:00",
+      "source_url": "https://sudantribune.net/article/310945",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "منظمة الصحة العالمية تحذر من انهيار النظام الصحي في السودان جراء الهجمات",
+      "summary": "الخرطوم 21 فبراير 2026 – حذّرت منظمة الصحة العالمية التابعة للأمم المتحدة، السبت، من انهيار النظام الصحي في السودان في ظل استمرار الهجمات التي تتسبب في مقتل العاملين الصحيين والمرضى. وتعرّضت المرافق الصحية لأربعة هجمات خلال فبراير الجاري، ثلاث منها استهدفت مراكز صحية في كردفان وأسفرت عن مقتل 30 شخصًا، والرابعة طالت مستشفى المزموم بولاية سنار، وجميعها نُسبت إلى قوات الدعم السريع. وقالت منظمة الصحة العالمية، في تغريدة على منصة (X)، إن “الهجمات تتواصل على القطاع الصحي لتدفع النظام الصحي في السودان إلى حافة الانهيار”. وأشارت إ أن هذه الهجمات تتسبب في مقتل وإصابة المرضى والعاملين الصحيين، إضافة إلى إلحاق أضرار بالمرافق.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-21T13:35:28+00:00",
+      "source_url": "https://sudantribune.net/article/310943",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Why upcoming EAC summit likely to decide future of cash-strapped bloc",
+      "summary": "EAC member states meet in Arusha in March to choose the next Secretary General and tackle the...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-21T13:15:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/why-upcoming-eac-summit-likely-to-decide-future-bloc-5367438",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "US Supreme Court reasserts its power, strikes down Trump global tarrifs",
+      "summary": "The US Supreme Court finally drew the line, striking down Trump’s sweeping global tariffs and...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-21T12:45:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/us-supreme-court-reasserts-its-power-strikes-down-trump-tarrifs-5367416",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Kenyan government in another bid to raid Nairobi city functions",
+      "summary": "Kenya’s new NMS agreement sparks controversy, with critics calling it a backdoor takeover of...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Politics & Governance"
+      ],
+      "published_at": "2026-02-21T11:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/kenyan-government-in-another-bid-to-raid-nairobi-city-functions-5367290",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "How Africans became the dogs of war in ongoing deadly Russia-Ukraine fight",
+      "summary": "Once seen as distant, the war now hits African villages as families mourn sons lured by promises of riches.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-21T08:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/world/how-africans-became-the-dogs-of-war-in-russia-ukraine-fight-5366854",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Nairobi meeting pushes for Africa forests protection",
+      "summary": "African leaders and experts urge urgent action to save Africa’s forests and promote sustainable...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-21T07:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/sustainability/climate/nairobi-meeting-pushes-for-africa-forests-protection-5366568",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "No country owns the Nile waters, Egypt maintains",
+      "summary": "'Without water, there was no Egypt, no civilisation, no pyramids. It’s a matter of life or death.'",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-21T06:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/north-africa/no-country-owns-the-nile-waters-egypt-maintains-5366354",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "How Brilliant Maroko rose to become Miss Intercontinental Africa",
+      "summary": "'Knowing this is something I manifested, wrote down, and worked towards makes it even more...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-21T03:00:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/magazine/how-brilliant-maroko-to-become-miss-intercontinental-africa-5364962",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Catch of the day: Pictures from spectacular Nigerian fishing festival",
+      "summary": "Days of competition culminate in a fishing contest rooted in efforts to cement local peace.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-21T01:57:30+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cwy6vdl3pxlo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "حميدتي يهاجم السعودية ويقول إن مفاوضات جدة حالت دون التوصل للسلام",
+      "summary": "كمبالا 20 فبراير 2026 – حمل قائد قوات الدعم السريع محمد حمدان دقلو حميدتي، الجمعة، مسؤولية فشل التوصل للسلام مع الجيش السوداني لمفاوضات جدة، قائلا إنها كان مجرد “تاكتيك” لإخراج قائد الجيش عبد الفتاح البرهان من الحصار. وكانت مفاوضات جدة قد انطلقت في 6 مايو 2023 بعد أقل من شهر من تندلاع الحرب في السودان برعاية من السعودية والولايات المتحدة الأمريكية. وقال حميدتي لدى مخاطبته حشدا من السودانيين في العاصمة الأوغندية إن مفاوضات جدة أضرت بالدعم السريع. وأشار إلى أنه أصر على أن يخرج وفد الدعم السريع المفاوض حينها بيانا عقب كل جولة حتى لا يتم تحميل الأخطاء للدعم السريع، لكن لتقديرات تتعلق بمكانة السعودية آثر الوفد الصمت.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-21T00:29:02+00:00",
+      "source_url": "https://sudantribune.net/article/310932",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "السلطات الصحية بالولاية الشمالية تعلن تسجيل (9) حالات جديدة بحمى الضنك",
+      "summary": "دنقلا، 20 فبراير 2026 – أعلنت وزارة الصحة بالولاية الشمالية، الجمعة، تسجيل 9 حالات جديدة بحمى الضنك في محلية مروي، ما يرفع إجمالي الإصابات إلى 69 حالة منذ بدء الرصد، دون تسجيل أي وفيات حتى الآن. وتشهد عدد من مناطق الولاية الشمالية خلال الفترة الأخيرة تزايدًا في حالات الإصابة بحمى الضنك، في ظل ظروف بيئية تساعد على تكاثر البعوض الناقل للمرض، الأمر الذي دفع السلطات الصحية إلى تكثيف أنشطة الترصد والاستجابة الميدانية وتعزيز حملات المكافحة والتوعية. وأوضح إعلام وزارة الصحة بولاية الشمالية في بيان اليوم أن معظم الحالات سُجلت في منطقة الغريبة بعدد 67 إصابة، إضافة إلى حالة واحدة في منطقة الباسا وأخرى في الأراك. وأكد البيان أن الفرق الميدانية تواصل...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-20T19:31:13+00:00",
+      "source_url": "https://sudantribune.net/article/310913",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "تحذيرات من تفاقم المجاعة بمخيمات النزوح في دارفور",
+      "summary": "طويلة، 20 فبراير 2026 – كشفت المنسقية العامة للنازحين واللاجئين في إقليم دارفور، الجمعة، عن أوضاع إنسانية وصفتها بالمأساوية في مخيمات النزوح محذّرة من تفاقم خطر المجاعة وتدهور الأوضاع المعيشية مع استمرار نقص المساعدات الغذائية. وتواجه مخيمات النزوح في عدد من ولايات السودان أوضاعاً إنسانية متدهورة منذ أشهر، في ظل تراجع حجم الاستجابة الإنسانية وصعوبات إيصال المساعدات، ما أدى إلى اتساع فجوة الاحتياجات الأساسية، خاصة الغذاء والمياه والخدمات الصحية والتعليم. وقال المتحدث باسم المنسقية العامة للنازحين واللاجئين في إقليم دارفور، آدم رجال، لسودان تربيون، إن مخيمات النزوح في دارفور وكردفان والنيل الأزرق تشهد حاجة ماسة وعاجلة للمساعدات الإنسانية،...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-20T17:40:28+00:00",
+      "source_url": "https://sudantribune.net/article/310908",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "الجيش والدعم السريع يتبادلان الهجمات بالطيران المسير",
+      "summary": "الخرطوم، 20 فبراير 2026 – تبادل الجيش السوداني وقوات الدعم، الجمعة، الهجمات بالطيران في أقاليم دارفور وكردفان والنيل الأزرق. وهاجمت مسيرات الدعم السريع مدينة الدويم بولاية النيل الأبيض وسط السودان، حيث استهدفت ارتكاز الدويم الغربي. وحاولت الدفاعات الأرضية التابعة للجيش التصدي لها، لكن الغارة الجوية أسفرت عن مقتل شخص واحد وإصابة آخرين. في ذات السياق أكدت مصادر محلية لسودان تربيون أن مسيرات انتحارية للدعم السريع شنت غارات على مناطق العباسية وأبو كرشولا بولاية جنوب كردفان.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-20T17:35:35+00:00",
+      "source_url": "https://sudantribune.net/article/310906",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "Uganda’s Museveni meets Sudan RSF warlord Hemedti",
+      "summary": "The meeting focused on ending ongoing conflict in Sudan and restoring regional stability.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "Security & Conflict"
+      ],
+      "published_at": "2026-02-20T17:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/uganda-s-museveni-meets-sudan-rsf-warlord-hemedti-5366890",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Deportation of Chagos Islanders blocked by judge",
+      "summary": "A court upholds a challenge about the lawfulness of the orders to remove four men who travelled to the territory.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-20T15:58:51+00:00",
+      "source_url": "https://www.bbc.com/news/articles/c1jk5p0ewx0o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "استمرار عمليات نهب واسعة لمصانع جنوب الخرطوم على يد مسلحين",
+      "summary": "الخرطوم 20 فبراير 2026 – كشف اتحاد الغرف الصناعية السوداني عن استمرار عمليات نهب واسعة للمصانع في المنطقة الصناعية جنوب الخرطوم، متهماً قوى مسلحة – لم يسمّها – بالتورط في تلك الانتهاكات. وقال الأمين العام للاتحاد، عباس علي السيد، في تصريحات لـ”سودان تربيون”، إن المصانع الواقعة في المنطقة الصناعية جنوب الخرطوم ما تزال تتعرض لعمليات نهب مسلح في وضح النهار، مشيراً إلى أن منفذيها يحملون رتب عسكرية ويقومون بشحن المنهوبات من داخل المصانع. وأوضح أن القطاع الصناعي يُعد أكبر القطاعات تضرراً من الحرب، إذ تأثرت كافة مقوماته، خاصة الصناعات التي كانت قائمة في الخرطوم والمناطق المجاورة للأحزمة العشوائية حول العاصمة. وأضاف أن المنطقة الصناعية المحاذية...",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-20T15:10:13+00:00",
+      "source_url": "https://sudantribune.net/article/310904",
+      "source_name": "سودان تربيون"
+    },
+    {
+      "title": "A storm in a teacup? A Wake-up call on global trading landscape uncertainty",
+      "summary": "East African exports surge despite US tariffs, showing the region’s resilience to global trade...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "published_at": "2026-02-20T14:30:00+00:00",
+      "source_url": "https://www.theeastafrican.co.ke/tea/opinion/guest-blogs/wake-up-call-on-global-trading-landscape-uncertainty-5366650",
+      "source_name": "The EastAfrican"
+    },
+    {
+      "title": "Rare prison sentences handed to Cameroon soldiers after killing of 21 civilians",
+      "summary": "In a rare occurence, three soldiers were handed jail terms for killings in the troubled Anglophone region.",
+      "country_tags": [],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-20T13:44:30+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cev74dywd7eo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News"
+    },
+    {
+      "title": "الرئيس الأوغندي يستقبل قائد الدعم السريع في القصر الرئاسي",
+      "summary": "عنتبي 20 فبراير 2026 – استقبل الرئيس الأوغندي، يوري موسفيني، الجمعة في قصر الدولة بمدينة عنتبي قائد قوات الدعم السريع، محمد حمدان دقلو (حميدتي). وكتب موسفيني في منشور على حسابه الرسمي بمنصة إكس أنه أكد خلال اللقاء أن الحوار والحل السياسي السلمي هما السبيلان الوحيدان لتحقيق الاستقرار المستدام للسودان والمنطقة. وكان تحالف السودان التأسيسي “تأسيس” قال في وقت سابق الجمعة إن رئيس التحالف محمد حمدان دقلو “حميدتي” وصل كمبالا في زيارة رسمية. ويعد ظهور حميدتي في أوغندا الأول من نوعه بعد آخر ظهور معلن في خطاب أمام عناصر قوات الدعم السريع خلال يونيو 2025 في منطقة نائية بدارفور.",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "published_at": "2026-02-20T12:41:48+00:00",
+      "source_url": "https://sudantribune.net/article/310901",
+      "source_name": "سودان تربيون"
+    },
     {
       "title": "'Emotional' Mourinho should apologise - McCarthy",
       "summary": "Benni McCarthy says Jose Mourinho should admit his \"mistake\" following the Benfica manager's post-match comments after Real Madrid's Vinicius Jr claimed he was racially abused.",
@@ -2286,258 +2540,6 @@
       "published_at": "2026-02-09T21:18:35+00:00",
       "source_url": "https://sudantribune.net/article/310460",
       "source_name": "سودان تربيون"
-    },
-    {
-      "title": "استمرار التشاور بين العسكريين والكتلة الديمقراطية لتشكيل البرلمان",
-      "summary": "الخرطوم 9 فبراير 2026 – أجرى عضو مجلس السيادة ومساعد قائد الجيش ياسر العطا، الاثنين، مشاورات مع قوى الحرية والتغيير – الكتلة الديمقراطية، حول تشكيل المجلس التشريعي. ويسعى الجيش إلى تسريع تكوين البرلمان خاصة بعد عودة مؤسسات الدولة إلى العمل من العاصمة الخرطوم، حيث يتشاور قادته هذه الأيام مع القوى السياسية بغرض التوصل إلى رؤية موحدة لتسمية أعضاء المجلس التشريعي . وكان رئيس مجلس السيادة عبد الفتاح البرهان التقى مؤخرا وفدا من الكتلة الديموقراطية وجرى نقاش حول تكوين البرلمان. وقال مقرر اللجنة السياسية في الكتلة الديمقراطية معتز الفحل، لسودان تربيون إن “الائتلاف عقد لقاءً مع ياسر العطا بُحث خلاله تشكيل المجلس التشريعي”.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-09T21:14:25+00:00",
-      "source_url": "https://sudantribune.net/article/310458",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "حريق مروع يلتهم مأوى النازحين في «طويلة» ويخلف ضحايا",
-      "summary": "طويلة 9 فبراير 2025 – لقي شخصان على الأقل مصرعهما، الاثنين، إثر اندلاع حريق هائل التهم مئات المنازل المؤقتة للنازحين ببلدة طويلة في ولاية شمال دارفور. وباتت طويلة، التي تبعد 60 كيلومتراً تقريباً غربي الفاشر، مأوى لـ 655 ألف نازح، معظمهم فرّ من الفاشر حيث يقيم 21% منهم في المخيمات، بينما استقر 74% في مستوطنات عشوائية وأماكن تجمع مفتوحة. وشهدت البلدة تزايداً في أعداد النازحين عقب سيطرة قوات الدعم السريع على الفاشر في 26 أكتوبر الماضي؛ الأمر الذي دفع آلاف المواطنين إلى النزوح القسري في رحلات شاقة ومحفوفة بالمخاطر نحو طويلة ومناطق مجاورة. وقال يحيى إبراهيم، وهو عضو في غرفة طوارئ طويلة، لـ”سودان تربيون”: إن “شخصين على الأقل، من بينهما طفل يبلغ...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-09T19:48:41+00:00",
-      "source_url": "https://sudantribune.net/article/310451",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Tseday Bank Names New President",
-      "summary": "– Yohannes Ayalew Takes on Another Rescue Mission Tseday Bank S.C. has appointed Yohannes Ayalew (PhD), a veteran macroeconomist turned banker, as its new president, pending approval from the National Bank of Ethiopia (NBE). Yohannes previously served for nearly two decades as chief economist and vice governor of the NBE, a tenure that ended following […]",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-02-09T19:00:25+00:00",
-      "source_url": "https://www.thereporterethiopia.com/49038/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "الهجرة الدولية: 3.5 مليون سوداني عادوا إلى الديار",
-      "summary": "الخرطوم 9 فبراير 2026 – كشفت منظمة الهجرة الدولية التابعة للأمم المتحدة، الاثنين، عن ارتفاع عدد العائدين إلى ديارهم إلى أكثر من 3.5 مليون شخص من داخل السودان وخارجه في 9 ولايات من أصل 18 ولاية. وبدأت حركة العودة من مواقع النزوح ودول اللجوء بعد استعادة الجيش ولايات سنار والجزيرة والخرطوم، مما أدى إلى انخفاض أعداد النازحين بنسبة 21% مقارنةً بأعلى عدد سُجِّل في يناير 2025، حيث بلغ آنذاك 11.5 مليون نازح. وقالت منظمة الهجرة في بيان إن “2,915,306 أفراد عادوا إلى ديارهم من النزوح الداخلي، فيما رجع 585,176 شخصًا من خارج السودان”. وأشارت إلى أن هؤلاء الأشخاص عادوا إلى 2,575 موقعًا يقع في 65 محلية ضمن 9 ولايات، حيث استقر 97% منهم في مناطقهم...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-09T16:22:39+00:00",
-      "source_url": "https://sudantribune.net/article/310449",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Migrant boat capsizes off Libya leaving 53 dead",
-      "summary": "The IOM says that almost 500 people have been reported dead or missing off Libya so far this year.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-09T14:45:08+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cy9ge3844q0o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Eritrea accuses Ethiopia of fabricating report its troops had crossed the border",
-      "summary": "Ethiopia had alleged that Eritrean soldiers were on its territory and supporting rebels in the north.",
-      "country_tags": [
-        "Ethiopia",
-        "Eritrea"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-09T10:35:34+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cn87lzrj1l7o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "'Colossus' of Ghanaian highlife music Ebo Taylor dies at 90",
-      "summary": "The guitarist, composer and band leader fused Ghanaian music and funk to create tracks sampled around the world.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-09T08:51:59+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c1e9p04n8y9o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Senegal arrests 14 members of alleged paedophile gang linked to France",
-      "summary": "Police say the \"transnational\" criminal group has been in operation since 2017.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-09T08:08:09+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cy4wy2xy300o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "How off-the-shelf drones are changing jihadist warfare in West Africa",
-      "summary": "Insurgents have carried out a wave of drone strikes on military positions in the region.",
-      "country_tags": [],
-      "topic_tags": [
-        "Security & Conflict"
-      ],
-      "published_at": "2026-02-09T00:09:18+00:00",
-      "source_url": "https://www.bbc.com/news/articles/cew8vldpzdyo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "الجمارك تنفي فرض رسوم جمركية على أمتعة العائدين طوعاً",
-      "summary": "الخرطوم 8 فبراير 2026 – نفت هيئة الجمارك السودانية ما أثير حول فرض رسوم جمركية على الأثاث المنزلي والأجهزة الكهربائية الشخصية للعائدين إلى السودان ضمن برنامج العودة الطوعية. وكان مجلس الوزراء قد أصدر في نوفمبر من العام الماضي قراراً بإعفاء الأمتعة الشخصية والأثاثات المنزلية والأجهزة الكهربائية المستعملة من الرسوم الجمركية. وأكدت دائرة الإعلام والعلاقات العامة بهيئة الجمارك في بيان صحفي، الأحد، التزام الهيئة الكامل بتنفيذ قرارات الدولة الداعمة للعودة الطوعية وتخفيف الأعباء على المواطنين العائدين، مشيرة إلى عدم صحة ما جرى تداوله على منصات التواصل الاجتماعي بشأن فرض رسوم جمركية على الأثاث المنزلي والأجهزة الكهربائية الشخصية ضمن برنامج العودة...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T20:44:11+00:00",
-      "source_url": "https://sudantribune.net/article/310427",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "السودان يعود إلى «إيقاد» بعد عامين من التجميد",
-      "summary": "جيبوتي 8 فبراير 2026 – أعلنت جيبوتي، التي تترأس الدورة الحالية للهيئة الحكومية الدولية للتنمية “إيقاد”، الأحد، عودة السودان إلى المنظمة، في خطوة اعتُبرت معززة للتماسك الإقليمي. وعلّق السودان في 20 يناير 2024 عضويته في منظمة “إيقاد” احتجاجًا على مشاركة قائد قوات الدعم السريع محمد حمدان دقلو “حميدتي” في قمة لرؤساء المنظمة عُقدت في العاصمة الأوغندية كمبالا. وقالت وزارة خارجية جيبوتي في بيان إنها “ترحب بعودة السودان إلى عضوية منظمة الإيقاد، والتي تمت عبر رسالة رسمية موجّهة من وزير الخارجية السوداني إلى الأمين التنفيذي للمنظمة”. ولم تصدر الحكومة السودانية بياناً حول العودة للمنظمة الاقليمية.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T19:38:49+00:00",
-      "source_url": "https://sudantribune.net/article/310424",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "توالي الإدانات الدولية لهجوم «الدعم السريع» على قافلة إغاثة في شمال كردفان",
-      "summary": "الخرطوم 8 فبراير 2026 – أدان الاتحاد الأوروبي وتركيا وقطر ودول أخرى ومنظمات، الأحد، الهجوم الذي شنته قوات الدعم السريع على قافلة إغاثة في شمال كردفان، وسط مطالبات بمحاسبة المسؤولين عن الجريمة. ونفذت الدعم السريع، الجمعة، هجومًا على قافلة تابعة لبرنامج الأغذية العالمي كانت في طريقها لتوصيل إغاثة إلى عائلات نازحة قرب مدينة الأبيض عاصمة شمال كردفان، كما شنت هجومًا على مركبة تُقلّ نازحين. وقال رئيس بعثة الاتحاد الأوروبي لدى السودان فولفرام فيتر، في منشور على فيسبوك إن “هجمات الدعم السريع على قافلة مساعدات برنامج الأغذية العالمي، وحافلة النازحين، ومستشفى الكويك، تُشكّل انتهاكات صارخة وجسيمة لجميع المعايير الإنسانية والقوانين الدولية”. وأضاف:...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T17:16:49+00:00",
-      "source_url": "https://sudantribune.net/article/310420",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "انخفاض أسعار السلع وانتعاش أسواق «كادقلي» بعد أيام من فك الحصار",
-      "summary": "كادقلي 8 فبراير 2026 – كشف تجار في سوق كادقلي بولاية جنوب كردفان، الأحد، عن انخفاض كبير في أسعار السلع إثر وصول قوافل تجارية إلى المدينة التي عانت طويلًا من نقص الغذاء جراء الحصار. واستطاع الجيش في 3 فبراير الحالي إنهاء حصار استمر أكثر من عامين على كادقلي، عبر عملية عسكرية انطلقت من مناطق شرق الولاية عبر هبيلا والدلنج وصولًا إلى عاصمة جنوب كردفان. وأدى الحصار إلى حدوث مجاعة في كادقلي التي نزح منها قرابة 147 ألف شخص، بما يعادل 80% من السكان وفقًا للأمم المتحدة، فيما كانت الدلنج تعيش ظروفًا مشابهة قبل ربطها بشمال كردفان في أواخر يناير المنصرم. وقال التاجر في سوق كادقلي محمد آدم لـ”سودان تربيون” إن “السوق شهد تحسنًا كبيرًا خلال ساعات قليلة...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T16:03:42+00:00",
-      "source_url": "https://sudantribune.net/article/310414",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "المقاومة الشعبية: وفاة (300) معتقل داخل سجن شالا في «الفاشر»",
-      "summary": "الفاشر 8 فبراير 2026 – كشفت المقاومة الشعبية بولاية شمال دارفور، الأحد، عن وفاة أكثر من 300 معتقل داخل سجن شالا في الفاشر بولاية شمال دارفور، خلال الشهرين الماضيين. وسيطرت قوات الدعم السريع على الفاشر في 26 أكتوبر الماضي، وسرعان ما ارتكبت جرائم قتل جماعي وعنف جنسي، مع تنفيذ حملة اعتقالات واسعة أبقت بعضهم في معتقلات داخل المدينة، فيما نُقل البعض الآخر إلى مدينة نيالا بجنوب دارفور. وقالت المقاومة الشعبية، في بيان، إنها “وثّقت أكثر من 300 حالة وفاة خلال الشهرين الماضيين في سجن شالا بسبب تدهور الأوضاع الصحية والإنسانية”. وأشارت إلى أن الدعم السريع تحتجز في سجن شالا الواقع جنوب غرب الفاشر ما يزيد على 9 آلاف مدني.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T15:07:40+00:00",
-      "source_url": "https://sudantribune.net/article/310406",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Ethiopia Demands Eritrea withdraw Troops from Ethiopian Territory",
-      "summary": "Ethiopia has ordered Eritrea to withdraw its forces from Ethiopian territory and demanded that Asmara cease providing support to various armed groups in the country. “Eritrean forces have occupied Ethiopian territory along our common border and the government of Eritrea has been providing direct material assistance and support for various militant groups in Ethiopia,” reads a statement issued by the Ethiopian Ministry of Foreign Affairs today. The statement emphasizes that repeated calls to end what the Ministry describes as a violation of sovereignty and territorial integrity, have gone unheeded by Asmara, which it accuses of “outright...",
-      "country_tags": [
-        "Ethiopia",
-        "Eritrea"
-      ],
-      "topic_tags": [
-        "Politics & Governance"
-      ],
-      "published_at": "2026-02-08T14:44:47+00:00",
-      "source_url": "https://www.thereporterethiopia.com/49021/",
-      "source_name": "The Reporter Ethiopia"
-    },
-    {
-      "title": "«الدعم السريع» تواصل استهداف القوافل التجارية في شمال وجنوب كردفان",
-      "summary": "الأبيض 8 فبراير 2026 – واصلت قوات الدعم السريع، الأحد، استهداف القوافل التجارية ومركبات النقل العام التي تتحرك على الطريق القومي الرابط بين ولايتي شمال وجنوب كردفان، لليوم الثالث على التوالي. وصعّدت الدعم السريع، منذ الأسبوع الماضي، هجمات الطائرات المسيّرة على قوافل الإمدادات والمساعدات الإنسانية في شمال وجنوب كردفان، فضلاً عن قصف المراكز الصحية والمستشفيات، ما أسفر عن سقوط أعداد كبيرة من الضحايا. ولقيت هذه الهجمات تنديدًا ورفضًا من الولايات المتحدة الأمريكية والمملكة العربية السعودية، فضلاً عن مصر والكويت وجامعة الدول العربية، كون هذه الهجمات تعيق إيصال المساعدات الإنسانية للمتضررين من النزاع العسكري في إقليم كردفان. وقالت مصادر محلية...",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T14:44:10+00:00",
-      "source_url": "https://sudantribune.net/article/310404",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "السودان ينتقد تجاهل المجتمع الدولي لتوريد السلاح إلى «دارفور»",
-      "summary": "الخرطوم، 8 فبراير 2026 – صعّدت وزارة الخارجية السودانية، الأحد، انتقاداتها إزاء صمت المجتمع الدولي على توريد الأسلحة إلى دارفور غربي البلاد. ويتهم السودان الإمارات بتقديم العتاد الحربي والأسلحة المتطورة إلى قوات الدعم السريع عبر مسارات تهريب تشمل شرق ليبيا ودولًا أفريقية أخرى ومطار نيالا جنوب دارفور. وقالت وزارة الخارجية في بيان إن “مخالفة قرار مجلس الأمن الداعي إلى حظر دخول السلاح إلى دارفور تضع مصداقيته على المحك”. وأوضحت أن التجاهل المتعمد لمصادر توريد هذه الأسلحة والجهات المموّلة والدول التي ترسلها وتسهّل إيصالها إلى أيدي ما وصفتهم بالمجرمين يضع المجتمع الدولي وآلياته المختصة في موضع الشك وعدم المصداقية.",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T14:34:13+00:00",
-      "source_url": "https://sudantribune.net/article/310401",
-      "source_name": "سودان تربيون"
-    },
-    {
-      "title": "Man named in South Africa's police corruption probe found dead",
-      "summary": "Reports say Wiandre Pretorius, who last week said he survived an assassination attempt, shot himself.",
-      "country_tags": [],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T11:31:24+00:00",
-      "source_url": "https://www.bbc.com/news/articles/c0j5pg0597po?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
-    },
-    {
-      "title": "Addis Abeba’s Land Auctions Shrinking",
-      "summary": "With supply shrinking, bidder confidence weakening, and most land transfers occurring outside competitive auctions, Addis Abeba’s land policy faces a credibility test. The question is no longer how much land the city releases, but who the system is ultimately designed to serve, and whether public auctions remain fit for that purpose. Feb 8 , 2026 By NAHOM AYELE ( FORTUNE STAFF WRITER ) Addis Abeba's public land lease system is quietly entering a phase of contraction. Fewer plots are being offered, fewer...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T03:00:58+00:00",
-      "source_url": "https://addisfortune.news/addis-abebas-land-auctions-shrinking",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
-    },
-    {
-      "title": "A Rental Law Meant to Protect Tenants Fuels Tension",
-      "summary": "It was an ordinary day for Ademu Yehulashet when her landlord told her to vacate the two-bedroom condominium she was ren...",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "published_at": "2026-02-08T02:59:26+00:00",
-      "source_url": "https://addisfortune.news/a-rental-law-meant-to-protect-tenants-fuels-tension",
-      "source_name": "(Addis) Fortune – The Largest English Weekly in Ethiopia!"
     }
   ]
 }
