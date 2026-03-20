@@ -63,11 +63,12 @@
       <nav class="nav-filters">
         <button class="filter-pill active" data-filter="all">All</button>
         <button class="filter-pill" data-filter="Politics">Politics</button>
-        <button class="filter-pill" data-filter="Business">Business</button>
-        <button class="filter-pill" data-filter="Society">Society</button>
         <button class="filter-pill" data-filter="Security">Security</button>
-        <button class="filter-pill" data-filter="Culture">Culture</button>
-        <button class="filter-pill" data-filter="Diaspora">Diaspora</button>
+        <button class="filter-pill" data-filter="Humanitarian">Humanitarian</button>
+        <button class="filter-pill" data-filter="Business">Business</button>
+        <button class="filter-pill" data-filter="Diplomacy">Diplomacy</button>
+        <button class="filter-pill" data-filter="Climate">Climate</button>
+        <button class="filter-pill" data-filter="Health">Health</button>
       </nav>
     </header>
 
@@ -156,7 +157,6 @@
   }
 
   function getCountries(article) {
-    // Support either `countries` or `country_tags`
     const raw = article.countries || article.country_tags || [];
     if (!raw) return [];
     if (Array.isArray(raw)) return raw;
@@ -164,8 +164,7 @@
   }
 
   function formatCountries(article) {
-    const countries = getCountries(article);
-    return countries.join(" • ");
+    return getCountries(article).join(" • ");
   }
 
   function clamp(text, max) {
@@ -173,16 +172,11 @@
     return text.length > max ? text.slice(0, max) + "…" : text;
   }
 
-  // Prefer topic_tags from Python (array), fall back to older fields
   function getTopicLabel(article) {
     if (Array.isArray(article.topic_tags) && article.topic_tags.length) {
       return String(article.topic_tags[0] || "").trim() || "General";
     }
-    return (
-      String(article.category || "").trim() ||
-      String(article.topic || "").trim() ||
-      "General"
-    );
+    return String(article.category || article.topic || "").trim() || "General";
   }
 
   function niceDate(iso) {
@@ -191,8 +185,59 @@
     return isNaN(d) ? String(iso) : d.toLocaleString();
   }
 
+  function langLabel(article) {
+    if ((article.language || "en") === "ar") {
+      return `<span class="lang-pill lang-ar" title="Arabic">AR</span>`;
+    }
+    return "";
+  }
+
+  // ---------- CONTEXT / BACKGROUND ----------
+  function simpleHash(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = (Math.imul(31, hash) + str.charCodeAt(i)) | 0;
+    }
+    return hash;
+  }
+
+  function getContextForArticle(article, templates) {
+    if (!templates || !templates.groups) return null;
+    const text = [
+      article.title || "",
+      article.summary || article.excerpt || "",
+      ...(Array.isArray(article.topic_tags) ? article.topic_tags : []),
+      ...(getCountries(article)),
+    ].join(" ").toLowerCase();
+
+    const sorted = [...templates.groups].sort((a, b) => (b.priority || 0) - (a.priority || 0));
+    for (const group of sorted) {
+      const { match, templates: tmplList } = group;
+      if (!match || !tmplList || !tmplList.length) continue;
+      const kwMatch = (match.any_keyword || []).some(kw => text.includes(kw.toLowerCase()));
+      const catMatch = (match.any_category || []).some(cat => text.includes(cat.toLowerCase()));
+      if (kwMatch || catMatch) {
+        const idx = Math.abs(simpleHash(article.title || "")) % tmplList.length;
+        return tmplList[idx].text;
+      }
+    }
+    return (templates.default && templates.default.text) || null;
+  }
+
+  function renderContextBlock(contextText) {
+    if (!contextText) return "";
+    return `
+      <details class="context-box">
+        <summary class="context-toggle">
+          <span class="context-icon">&#9432;</span> Background &amp; Context
+        </summary>
+        <p class="context-text">${contextText}</p>
+      </details>
+    `;
+  }
+
   // ---------- RENDER FUNCTIONS ----------
-  function renderStoryCard(article, isFeatured = false) {
+  function renderStoryCard(article, isFeatured = false, contextText = null) {
     const countriesArr = getCountries(article);
     const category = getTopicLabel(article);
     const published = article.published_at || "";
@@ -202,7 +247,7 @@
     const title = clamp(article.title || "Untitled story", isFeatured ? 160 : 120);
     const summary = clamp(
       article.summary || article.excerpt || "",
-      isFeatured ? 280 : 220
+      isFeatured ? 300 : 240
     );
 
     const cardClass = "story-card" + (isFeatured ? " story-card--featured" : "");
@@ -217,14 +262,14 @@
           <div class="story-tags">
             ${countryTags}
             <span class="tag-pill tag-category">${category}</span>
+            ${langLabel(article)}
           </div>
           <h3 class="story-title">
-            <a class="story-link" href="${href}">
-              ${title}
-            </a>
+            <a class="story-link" href="${href}">${title}</a>
           </h3>
         </header>
         ${summary ? `<p class="story-summary">${summary}</p>` : ""}
+        ${renderContextBlock(contextText)}
         <footer class="story-meta">
           ${sourceName ? `<span class="story-source">${sourceName}</span>` : ""}
           ${published ? `<span class="story-date">${niceDate(published)}</span>` : ""}
@@ -236,18 +281,16 @@
   function setBreakingBar(article) {
     const linkEl = document.getElementById("breaking-link");
     if (!linkEl || !article) return;
-
     const countriesStr = formatCountries(article);
     let label = article.title || "";
     if (countriesStr) label += " — " + countriesStr;
-    label = clamp(label, 140);
-
-    linkEl.textContent = label;
+    linkEl.textContent = clamp(label, 140);
     linkEl.href = buildReaderLink(article.source_url || article.link);
   }
 
   // ---------- STATE ----------
   let allArticles = [];
+  let contextTemplates = null;
   let currentFilter = "all";
 
   function matchesFilter(article, filter) {
@@ -255,12 +298,9 @@
     const needle = String(filter || "").toLowerCase();
 
     const countries = getCountries(article).join(" ").toLowerCase();
-
-    // Combine topic_tags + older fields into one searchable string
     const topics = (
       (Array.isArray(article.topic_tags) ? article.topic_tags.join(" ") : "") +
-      " " + (article.category || "") +
-      " " + (article.topic || "")
+      " " + (article.category || "") + " " + (article.topic || "")
     ).toLowerCase();
 
     const title = (article.title || "").toLowerCase();
@@ -289,8 +329,12 @@
     const featured = filteredList[0];
     const latest = filteredList.slice(1);
 
-    featuredContainer.innerHTML = renderStoryCard(featured, true);
-    latestContainer.innerHTML = latest.map(a => renderStoryCard(a, false)).join("");
+    const featuredCtx = getContextForArticle(featured, contextTemplates);
+    featuredContainer.innerHTML = renderStoryCard(featured, true, featuredCtx);
+    latestContainer.innerHTML = latest.map(a => {
+      const ctx = getContextForArticle(a, contextTemplates);
+      return renderStoryCard(a, false, ctx);
+    }).join("");
 
     setBreakingBar(featured);
   }
@@ -303,9 +347,7 @@
   function setupFilters() {
     document.querySelectorAll(".filter-pill").forEach(btn => {
       btn.addEventListener("click", () => {
-        document.querySelectorAll(".filter-pill").forEach(b =>
-          b.classList.remove("active")
-        );
+        document.querySelectorAll(".filter-pill").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         currentFilter = btn.dataset.filter || "all";
         applyFilter();
@@ -313,36 +355,33 @@
     });
   }
 
-  function loadArticles() {
-    // Cache-buster ensures you always see the newest articles.json
-    fetch(`articles.json?v=${Date.now()}`)
-      .then(res => res.json())
-      .then(data => {
-        let list = Array.isArray(data) ? data : (data.articles || []);
-        list = list.filter(a => a.title && (a.source_url || a.link));
+  async function loadArticles() {
+    try {
+      const [dataRes, tmplRes] = await Promise.all([
+        fetch(`articles.json?v=${Date.now()}`),
+        fetch("why_matters_templates.json").catch(() => null),
+      ]);
 
-        // Sort newest first
-        list.sort((a, b) => {
-          const da = new Date(a.published_at || 0);
-          const db = new Date(b.published_at || 0);
-          return db - da;
-        });
+      const data = await dataRes.json();
+      contextTemplates = tmplRes ? await tmplRes.json().catch(() => null) : null;
 
-        allArticles = list;
-        applyFilter();
-      })
-      .catch(err => {
-        console.error("Error loading articles.json:", err);
-        document.getElementById("featured-container").innerHTML =
-          "<p>Failed to load stories.</p>";
-      });
+      let list = Array.isArray(data) ? data : (data.articles || []);
+      list = list.filter(a => a.title && (a.source_url || a.link));
+      list.sort((a, b) => new Date(b.published_at || 0) - new Date(a.published_at || 0));
+
+      allArticles = list;
+      applyFilter();
+    } catch (err) {
+      console.error("Error loading articles.json:", err);
+      document.getElementById("featured-container").innerHTML = "<p>Failed to load stories.</p>";
+    }
   }
 
   window.addEventListener("DOMContentLoaded", () => {
     setupFilters();
     loadArticles();
   });
-</script>
+  </script>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <footer class="site-footer">
       <nav class="footer-nav">
