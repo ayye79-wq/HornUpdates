@@ -7,6 +7,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horn Updates • Reader</title>
+  <link rel="stylesheet" href="style.css" />
 
   <!-- ✅ AdSense loader (ONLY ONCE per page) -->
   <script async
@@ -97,6 +98,16 @@
         <span class="muted">Loading summary…</span>
       </div>
 
+      <div id="context-section" style="display:none;">
+        <div class="divider"></div>
+        <details class="reader-context-box" open>
+          <summary class="reader-context-toggle">
+            &#9432; Background &amp; Context
+          </summary>
+          <p id="context-text" class="reader-context-body"></p>
+        </details>
+      </div>
+
       <!-- ✅ AdSense: Reader Top Ad -->
       <div class="reader-ad reader-ad-top" style="margin:22px 0;">
         <ins class="adsbygoogle"
@@ -150,16 +161,51 @@
       } catch { return ""; }
     }
 
+    function simpleHash(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        hash = (Math.imul(31, hash) + str.charCodeAt(i)) | 0;
+      }
+      return hash;
+    }
+
+    function getContextForArticle(article, templates) {
+      if (!templates || !templates.groups) return null;
+      const text = [
+        article.title || "",
+        article.summary || "",
+        ...(article.topic_tags || []),
+        ...(article.country_tags || []),
+      ].join(" ").toLowerCase();
+
+      const sorted = [...templates.groups].sort((a, b) => (b.priority || 0) - (a.priority || 0));
+      for (const group of sorted) {
+        const { match, templates: tmplList } = group;
+        if (!match || !tmplList || !tmplList.length) continue;
+        const keywordsMatch = (match.any_keyword || []).some(kw => text.includes(kw.toLowerCase()));
+        const catMatch = (match.any_category || []).some(cat => text.includes(cat.toLowerCase()));
+        if (keywordsMatch || catMatch) {
+          const idx = Math.abs(simpleHash(article.title || "")) % tmplList.length;
+          return tmplList[idx].text;
+        }
+      }
+      return (templates.default && templates.default.text) || null;
+    }
+
     async function load() {
       const articleUrl = getParam("url");
       if (!articleUrl) { window.location.href = "index.html"; return; }
 
-     document.getElementById("readFull").href = articleUrl;
-
+      document.getElementById("readFull").href = articleUrl;
 
       try {
-        const res = await fetch("articles.json", { cache: "no-store" });
-        const data = await res.json();
+        const [dataRes, tmplRes] = await Promise.all([
+          fetch("articles.json", { cache: "no-store" }),
+          fetch("why_matters_templates.json").catch(() => null),
+        ]);
+        const data = await dataRes.json();
+        const templates = tmplRes ? await tmplRes.json().catch(() => null) : null;
+
         const articles = Array.isArray(data) ? data : (data.articles || []);
         const target = norm(articleUrl);
 
@@ -190,6 +236,15 @@
         if (rtl) {
           sumEl.classList.add("rtl");
           document.getElementById("title").classList.add("rtl");
+        }
+
+        // Show background & context section
+        if (templates) {
+          const ctx = getContextForArticle(match, templates);
+          if (ctx) {
+            document.getElementById("context-text").textContent = ctx;
+            document.getElementById("context-section").style.display = "";
+          }
         }
 
       } catch (e) {
