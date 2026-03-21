@@ -197,8 +197,8 @@ TOPIC_KEYWORDS: Dict[str, List[str]] = {
         "peace deal", "ceasefire", "mediation",
     ],
     "Health": [
-        "hospital", "disease", "outbreak", "who ", "vaccine", "cholera",
-        "covid", "malaria", "measles", "health ministry", "epidemic",
+        "hospital", "disease", "outbreak", "world health organization", "vaccine", "cholera",
+        "covid", "malaria", "measles", "health ministry", "epidemic", "w.h.o.",
     ],
     "Climate": [
         "drought", "flood", "rainfall", "climate", "temperature", "locusts",
