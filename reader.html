@@ -9,7 +9,6 @@
   <title>Horn Updates • Reader</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- ✅ AdSense loader (ONLY ONCE per page) -->
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
     crossorigin="anonymous"></script>
@@ -54,7 +53,7 @@
     .pill { background:#f3f4f6; padding:4px 10px; border-radius:999px; font-size:.85rem; }
     h1 { font-size:1.4rem; margin:10px 0; }
     .summary { font-size:1.02rem; white-space:pre-wrap; }
-    .divider { height:1px; background:#e5e7eb; margin:18px 0; }
+    .divider { height:1px; background:#e5e7eb; margin:14px 0; }
     .muted { color:#6b7280; }
 
     .rtl {
@@ -74,13 +73,10 @@
         <span class="muted">• Reader</span>
       </div>
 
-<div class="actions">
-  <a class="btn" href="#" id="readFull">Read full article ↗</a>
-  <a class="btn secondary" href="#" id="shareNative">Share</a>
-</div>
-
-
-
+      <div class="actions">
+        <a class="btn" href="#" id="readFull">Read full article ↗</a>
+        <a class="btn secondary" href="#" id="shareNative">Share</a>
+      </div>
     </div>
 
     <div class="card">
@@ -108,39 +104,26 @@
         </details>
       </div>
 
-      <!-- ✅ AdSense: Reader Top Ad -->
-      <div class="reader-ad reader-ad-top" style="margin:22px 0;">
+      <div class="divider"></div>
+
+      <div class="muted" style="font-size:.95rem;">
+        <strong>Attribution:</strong>
+        This summary is written by Horn Updates.
+        Full article remains on the publisher's website.
+      </div>
+
+      <!-- AdSense: Reader Ad (below attribution, after all content) -->
+      <div style="margin-top:16px;">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-7773342225754932"
              data-ad-slot="8296199432"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
       </div>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-
-      <div class="divider"></div>
-
-      <div class="muted" style="font-size:.95rem;">
-        <strong>Attribution:</strong>
-        This summary is written by Horn Updates.
-        Full article remains on the publisher’s website.
-      </div>
-
-      <!-- ✅ AdSense: Reader Bottom Ad (add near end of content) -->
-      <div class="reader-ad reader-ad-bottom" style="margin:22px 0;">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7773342225754932"
-             data-ad-slot="REPLACE_WITH_BOTTOM_SLOT"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-      </div>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
     </div>
   </div>
 
@@ -238,7 +221,6 @@
           document.getElementById("title").classList.add("rtl");
         }
 
-        // Show background & context section
         if (templates) {
           const ctx = getContextForArticle(match, templates);
           if (ctx) {
@@ -256,21 +238,19 @@
     load();
   </script>
   <script>
-  document.getElementById("shareNative")?.addEventListener("click", async (e) => {
-    e.preventDefault();
-    const url = window.location.href;
-
-    if (navigator.share) {
-      await navigator.share({
-        title: document.getElementById("title").textContent,
-        url
-      });
-    } else {
-      await navigator.clipboard.writeText(url);
-      alert("Link copied");
-    }
-  });
-</script>
-
+    document.getElementById("shareNative")?.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const url = window.location.href;
+      if (navigator.share) {
+        await navigator.share({
+          title: document.getElementById("title").textContent,
+          url
+        });
+      } else {
+        await navigator.clipboard.writeText(url);
+        alert("Link copied");
+      }
+    });
+  </script>
 </body>
 </html>
