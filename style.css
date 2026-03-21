@@ -270,6 +270,52 @@ body {
   }
 }
 
+@media (max-width: 640px) {
+  /* Category pills — single scrollable row */
+  .nav-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .nav-filters::-webkit-scrollbar { display: none; }
+  .filter-pill { white-space: nowrap; flex-shrink: 0; }
+
+  /* Tighten search bar top margin */
+  .search-country-bar {
+    margin-top: 6px;
+    gap: 6px;
+  }
+
+  /* Country chips row — chips scroll horizontally, toggle stays on right */
+  .country-chips-row {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .country-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+  }
+  .country-chips::-webkit-scrollbar { display: none; }
+  .country-chip { flex-shrink: 0; }
+
+  /* Language toggle always visible on the right */
+  .lang-toggle-wrap {
+    flex-shrink: 0;
+    align-self: center;
+  }
+}
+
 /* ========== X Follow Button ========== */
 .x-follow-btn {
   display: block;
