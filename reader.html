@@ -135,6 +135,15 @@
     </div>
   </div>
 
+  <!-- Related Stories -->
+  <section id="related-section" style="display:none; max-width:920px; margin:20px auto 0; padding:0 18px 32px;">
+    <h2 style="font-size:1.05rem; font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:.06em; margin:0 0 12px;">Related stories</h2>
+    <div id="related-container" style="display:flex; flex-direction:column; gap:12px;"></div>
+    <p style="margin-top:14px; font-size:.9rem;">
+      <a href="/index.html" style="color:#2563eb; font-weight:600;">← Back to all stories</a>
+    </p>
+  </section>
+
   <script>
     function getParam(name) {
       const url = new URL(window.location.href);
@@ -235,6 +244,44 @@
             document.getElementById("context-text").textContent = ctx;
             document.getElementById("context-section").style.display = "";
           }
+        }
+
+        // --- Related stories ---
+        const currentUrl = norm(articleUrl);
+        const matchCountries = new Set(match.country_tags || []);
+        const matchTopics = new Set(match.topic_tags || []);
+
+        const scored = articles
+          .filter(a => norm(a.source_url || a.link || "") !== currentUrl && (a.title || ""))
+          .map(a => {
+            const aC = new Set(a.country_tags || []);
+            const aT = new Set(a.topic_tags || []);
+            let score = 0;
+            for (const c of matchCountries) if (aC.has(c)) score += 3;
+            for (const t of matchTopics) if (aT.has(t)) score += 1;
+            return { a, score };
+          })
+          .sort((x, y) => y.score - x.score || new Date(y.a.published_at || 0) - new Date(x.a.published_at || 0))
+          .slice(0, 4)
+          .map(x => x.a);
+
+        if (scored.length) {
+          const container = document.getElementById("related-container");
+          container.innerHTML = scored.map(a => {
+            const href = `reader.html?url=${encodeURIComponent(a.source_url || a.link || "")}`;
+            const countries = (a.country_tags || []).map(c => `<span style="background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;padding:3px 9px;font-size:.78rem;margin-right:4px;">${c}</span>`).join("");
+            const snippet = (a.summary || "").slice(0, 220) + ((a.summary || "").length > 220 ? "…" : "");
+            const src = a.source_name || "";
+            const date = a.published_at ? new Date(a.published_at).toLocaleDateString("en-GB", {day:"numeric",month:"short"}) : "";
+            return `
+              <a href="${href}" style="display:block;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px 16px;text-decoration:none;color:#111827;box-shadow:0 2px 8px rgba(0,0,0,.04);">
+                <div style="margin-bottom:6px;">${countries}</div>
+                <div style="font-weight:700;font-size:1rem;line-height:1.35;margin-bottom:6px;">${a.title || ""}</div>
+                ${snippet ? `<div style="font-size:.9rem;color:#374151;line-height:1.55;margin-bottom:8px;">${snippet}</div>` : ""}
+                <div style="font-size:.82rem;color:#9ca3af;">${src}${src && date ? " · " : ""}${date}</div>
+              </a>`;
+          }).join("");
+          document.getElementById("related-section").style.display = "";
         }
 
       } catch (e) {
