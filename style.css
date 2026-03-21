@@ -191,7 +191,7 @@ body {
 .story-summary {
   font-size: 0.9rem;
   color: #374151;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .story-meta {
@@ -637,7 +637,7 @@ body {
 
 /* ========== CONTEXT / BACKGROUND BOX ========== */
 .context-box {
-  margin: 10px 0 6px;
+  margin: 4px 0 4px;
   border: 1px solid #e0e7ff;
   border-radius: 10px;
   background: #f5f7ff;
