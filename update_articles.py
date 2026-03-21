@@ -243,9 +243,13 @@ def tag_countries(text: str, default: List[str]) -> List[str]:
     return merged if merged else default
 
 
+def _word_match(text: str, phrase: str) -> bool:
+    return bool(re.search(r"(?<![a-z])" + re.escape(phrase) + r"(?![a-z])", text))
+
+
 def tag_topics(text: str) -> List[str]:
     lc = text.lower()
-    return [t for t, kws in TOPIC_KEYWORDS.items() if any(kw in lc for kw in kws)] or ["General"]
+    return [t for t, kws in TOPIC_KEYWORDS.items() if any(_word_match(lc, kw) for kw in kws)] or ["General"]
 
 
 def make_id(url: str) -> str:
