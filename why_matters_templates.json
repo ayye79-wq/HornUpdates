@@ -43,7 +43,7 @@
       "group_id": "aid_humanitarian",
       "priority": 100,
       "match": {
-        "any_category": ["Humanitarian", "Aid", "Relief", "Health"],
+        "any_category": ["Humanitarian", "Aid", "Relief"],
         "any_keyword": ["aid", "food aid", "humanitarian", "relief", "famine", "drought", "malnutrition", "wfp", "unicef", "usaid", "displaced", "refugees", "cholera", "ipc", "food insecurity", "hunger", "emergency"]
       },
       "templates": [
