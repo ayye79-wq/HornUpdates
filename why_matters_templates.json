@@ -129,7 +129,7 @@
       "group_id": "diplomacy_regional",
       "priority": 75,
       "match": {
-        "any_keyword": ["summit", "bilateral", "embassy", "ambassador", "foreign minister", "igad", "african union", "au", "un", "united nations", "regional", "cooperation", "memorandum", "mou", "treaty", "visit", "delegation", "relations", "diplomatic", "sea access", "red sea", "gerd", "nile"]
+        "any_keyword": ["summit", "bilateral", "embassy", "ambassador", "foreign minister", "igad", "african union", "united nations", "regional", "cooperation", "memorandum", "mou", "treaty", "visit", "delegation", "relations", "diplomatic", "sea access", "red sea", "gerd", "nile"]
       },
       "templates": [
         {

@@ -358,6 +358,11 @@
     return hash;
   }
 
+  function wordMatch(text, phrase) {
+    const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp("(?<![a-z])" + escaped + "(?![a-z])").test(text);
+  }
+
   function getContextForArticle(article, templates) {
     if (!templates || !templates.groups) return null;
     const text = [
@@ -371,8 +376,8 @@
     for (const group of sorted) {
       const { match, templates: tmplList } = group;
       if (!match || !tmplList || !tmplList.length) continue;
-      const kwMatch = (match.any_keyword || []).some(kw => text.includes(kw.toLowerCase()));
-      const catMatch = (match.any_category || []).some(cat => text.includes(cat.toLowerCase()));
+      const kwMatch = (match.any_keyword || []).some(kw => wordMatch(text, kw.toLowerCase()));
+      const catMatch = (match.any_category || []).some(cat => wordMatch(text, cat.toLowerCase()));
       if (kwMatch || catMatch) {
         const idx = Math.abs(simpleHash(article.title || "")) % tmplList.length;
         return tmplList[idx].text;
