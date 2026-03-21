@@ -631,6 +631,9 @@ body {
   color: #374151;
   white-space: nowrap;
   transition: background 0.12s, border-color 0.12s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .country-chip:hover {
@@ -641,6 +644,27 @@ body {
   background: #111827;
   color: #f9fafb;
   border-color: #111827;
+}
+
+.chip-flag {
+  width: 18px;
+  height: 13px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.tag-pill--country {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tag-pill--country .chip-flag {
+  width: 16px;
+  height: 11px;
 }
 
 /* ========== STORY COUNT ========== */
