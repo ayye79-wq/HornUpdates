@@ -2,18 +2,15 @@
 // Utility helpers
 // ============================
 
-// Build internal link (keeps user inside HornUpdates)
 function buildArticleLink(sourceUrl) {
   return `reader.html?url=${encodeURIComponent(sourceUrl || "#")}`;
 }
 
-// Countries formatting
 function formatCountries(countries) {
   if (!countries || (Array.isArray(countries) && countries.length === 0)) return "";
   return Array.isArray(countries) ? countries.join(" • ") : String(countries);
 }
 
-// Normalize backend article shape -> frontend expectations
 function normalizeArticle(raw) {
   const countries =
     Array.isArray(raw.country_tags) && raw.country_tags.length
@@ -21,39 +18,106 @@ function normalizeArticle(raw) {
       : (raw.countries || []);
 
   const topicTags = Array.isArray(raw.topic_tags) ? raw.topic_tags : [];
-  const primaryTopic =
-    topicTags[0] ||
-    raw.topic ||
-    raw.category ||
-    "News";
+  const primaryTopic = topicTags[0] || raw.topic || raw.category || "News";
 
-  return {
-    ...raw,
-    countries,
-    topic: primaryTopic,
-    category: primaryTopic,
-  };
+  return { ...raw, countries, topic: primaryTopic, category: primaryTopic };
 }
 
-// Format date as a nice short string (optional: you can tweak)
 function formatDate(iso) {
   if (!iso) return "";
   const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return iso; // fallback
+  if (Number.isNaN(d.getTime())) return iso;
   return d.toLocaleString("en-US", {
-    month: "short",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
+    month: "short", day: "numeric", hour: "2-digit", minute: "2-digit",
   });
+}
+
+// ============================
+// Context / Background matching
+// ============================
+
+let _contextTemplates = null;
+
+async function loadContextTemplates() {
+  if (_contextTemplates) return _contextTemplates;
+  try {
+    const res = await fetch("why_matters_templates.json");
+    _contextTemplates = await res.json();
+  } catch (e) {
+    _contextTemplates = { groups: [], default: null };
+  }
+  return _contextTemplates;
+}
+
+function getContextForArticle(article, templates) {
+  if (!templates || !templates.groups) return null;
+
+  const text = [
+    article.title || "",
+    article.summary || "",
+    ...(article.topic_tags || []),
+    ...(article.country_tags || []),
+  ].join(" ").toLowerCase();
+
+  // Sort groups by priority descending
+  const sorted = [...templates.groups].sort((a, b) => (b.priority || 0) - (a.priority || 0));
+
+  for (const group of sorted) {
+    const { match, templates: tmplList } = group;
+    if (!match || !tmplList || !tmplList.length) continue;
+
+    const keywordsMatch = (match.any_keyword || []).some(kw => text.includes(kw.toLowerCase()));
+    const catMatch = (match.any_category || []).some(cat =>
+      text.includes(cat.toLowerCase())
+    );
+
+    if (keywordsMatch || catMatch) {
+      // Pick template deterministically by title hash
+      const idx = Math.abs(simpleHash(article.title || "")) % tmplList.length;
+      return tmplList[idx].text;
+    }
+  }
+
+  return (templates.default && templates.default.text) || null;
+}
+
+function simpleHash(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = (Math.imul(31, hash) + str.charCodeAt(i)) | 0;
+  }
+  return hash;
+}
+
+// ============================
+// Language label
+// ============================
+
+function langLabel(article) {
+  const lang = article.language || "en";
+  if (lang === "ar") {
+    return `<span class="lang-pill lang-ar" title="Arabic">AR</span>`;
+  }
+  return "";
 }
 
 // ============================
 // Render functions
 // ============================
 
-// Render a standard story card (Latest section)
-function renderStoryCard(article) {
+function renderContextBlock(contextText) {
+  if (!contextText) return "";
+  return `
+    <details class="context-box">
+      <summary class="context-toggle">
+        <span class="context-icon">&#9432;</span> Background &amp; Context
+      </summary>
+      <p class="context-text">${contextText}</p>
+    </details>
+  `;
+}
+
+function renderStoryCard(article, contextText) {
   const countries = formatCountries(article.countries);
   const category = article.category || article.topic || "News";
   const published = formatDate(article.published_at || "");
@@ -61,6 +125,7 @@ function renderStoryCard(article) {
   const title = article.title || "Untitled story";
   const summary = article.summary || article.excerpt || "";
   const href = buildArticleLink(article.source_url || article.link);
+  const lang = langLabel(article);
 
   return `
     <article class="story-card">
@@ -68,14 +133,14 @@ function renderStoryCard(article) {
         <div class="story-tags">
           ${countries ? `<span class="story-countries">${countries}</span>` : ""}
           <span class="story-category">${category}</span>
+          ${lang}
         </div>
         <h3 class="story-title">
-          <a class="card-link" href="${href}">
-            ${title}
-          </a>
+          <a class="card-link" href="${href}">${title}</a>
         </h3>
       </header>
       ${summary ? `<p class="story-summary">${summary}</p>` : ""}
+      ${renderContextBlock(contextText)}
       <footer class="story-meta">
         ${sourceName ? `<span class="story-source">${sourceName}</span>` : ""}
         ${published ? `<span class="story-date">${published}</span>` : ""}
@@ -84,8 +149,7 @@ function renderStoryCard(article) {
   `;
 }
 
-// HERO MAIN STORY (big left side)
-function renderHeroMain(article) {
+function renderHeroMain(article, contextText) {
   if (!article) return "";
 
   const countries = formatCountries(article.countries);
@@ -95,6 +159,7 @@ function renderHeroMain(article) {
   const summary = article.summary || "";
   const sourceName = article.source_name || article.source || "";
   const href = buildArticleLink(article.source_url || article.link);
+  const lang = langLabel(article);
 
   return `
     <article class="hero-main">
@@ -102,11 +167,13 @@ function renderHeroMain(article) {
         <div class="hero-main-tags">
           ${countries ? `<span class="hero-main-countries">${countries}</span>` : ""}
           <span class="hero-main-label">${category}</span>
+          ${lang}
         </div>
         <h2 class="hero-main-title">
           <a class="card-link" href="${href}">${title}</a>
         </h2>
         ${summary ? `<p class="hero-main-summary">${summary}</p>` : ""}
+        ${renderContextBlock(contextText)}
       </div>
       <footer class="hero-main-meta">
         ${sourceName ? `<span class="hero-main-source">${sourceName}</span>` : ""}
@@ -116,7 +183,6 @@ function renderHeroMain(article) {
   `;
 }
 
-// HERO SIDE STORIES (right column small cards)
 function renderHeroSide(article) {
   if (!article) return "";
   const countries = formatCountries(article.countries);
@@ -145,7 +211,6 @@ function renderHeroSide(article) {
   `;
 }
 
-// Breaking bar text (top strip)
 function updateBreakingBar(article) {
   const bar = document.querySelector(".breaking-bar");
   if (!bar || !article) return;
@@ -167,17 +232,18 @@ function updateBreakingBar(article) {
 // ============================
 
 function filterArticles(allArticles, filterValue) {
-  if (!filterValue || filterValue === "all") {
-    return allArticles;
-  }
+  if (!filterValue || filterValue === "all") return allArticles;
 
   const fv = filterValue.toLowerCase();
 
-  // Map simple buttons to backend-style topics
   const topicMap = {
     politics: "politics & governance",
     business: "business & economy",
     security: "security & conflict",
+    humanitarian: "humanitarian",
+    diplomacy: "diplomacy",
+    climate: "climate & environment",
+    health: "health",
     culture: "culture",
     diaspora: "diaspora",
   };
@@ -191,33 +257,24 @@ function filterArticles(allArticles, filterValue) {
       ? a.topic_tags.join(" ").toLowerCase()
       : "";
 
-    // Match on topic/category
-    if (cat.includes(mapped) || topic.includes(mapped) || joinedTags.includes(mapped)) {
-      return true;
-    }
+    if (cat.includes(mapped) || topic.includes(mapped) || joinedTags.includes(mapped)) return true;
 
-    // Also allow filtering by country name
     const countries = Array.isArray(a.countries) ? a.countries : [];
-    if (countries.some((c) => c.toLowerCase().includes(mapped))) {
-      return true;
-    }
+    if (countries.some((c) => c.toLowerCase().includes(mapped))) return true;
 
     return false;
   });
 }
 
 function setupFilters(allArticles, renderLatestFn) {
-  const buttons = Array.from(document.querySelectorAll(".filter-btn"));
+  const buttons = Array.from(document.querySelectorAll(".filter-btn, .filter-pill"));
   if (!buttons.length) return;
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const filterVal = btn.getAttribute("data-filter") || "all";
-
-      // Toggle active state
       buttons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-
       const filtered = filterArticles(allArticles, filterVal.toLowerCase());
       renderLatestFn(filtered);
     });
@@ -228,7 +285,7 @@ function setupFilters(allArticles, renderLatestFn) {
 // Main load + render pipeline
 // ============================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const heroMainSlot =
     document.querySelector('[data-slot="hero-main"]') ||
     document.querySelector(".hero-main-slot") ||
@@ -243,53 +300,49 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#latest-list") ||
     document.querySelector(".latest-stories");
 
-  // Safety check
   if (!latestContainer && !heroMainSlot) {
     console.warn("HornUpdates: no target containers found in DOM.");
   }
 
-  fetch("articles.json?v=" + Date.now())
-    .then((res) => res.json())
-    .then((data) => {
-      const rawArticles = Array.isArray(data.articles) ? data.articles : data;
-      let articles = rawArticles.map(normalizeArticle);
+  // Load both data sources in parallel
+  const [data, templates] = await Promise.all([
+    fetch("articles.json?v=" + Date.now()).then(r => r.json()).catch(() => ({ articles: [] })),
+    loadContextTemplates(),
+  ]);
 
-      // Sort newest -> oldest
-      articles.sort((a, b) => {
-        const da = new Date(a.published_at || 0).getTime();
-        const db = new Date(b.published_at || 0).getTime();
-        return db - da;
-      });
+  const rawArticles = Array.isArray(data.articles) ? data.articles : data;
+  let articles = rawArticles.map(normalizeArticle);
 
-      // HERO main + side
-      const heroMainArticle = articles[0] || null;
-      const heroSideArticles = articles.slice(1, 4); // up to 3 side stories
+  articles.sort((a, b) => {
+    const da = new Date(a.published_at || 0).getTime();
+    const db = new Date(b.published_at || 0).getTime();
+    return db - da;
+  });
 
-      if (heroMainSlot && heroMainArticle) {
-        heroMainSlot.innerHTML = renderHeroMain(heroMainArticle);
-      }
+  const heroMainArticle = articles[0] || null;
+  const heroSideArticles = articles.slice(1, 4);
 
-      if (heroSideSlot && heroSideArticles.length) {
-        heroSideSlot.innerHTML = heroSideArticles.map(renderHeroSide).join("");
-      }
+  if (heroMainSlot && heroMainArticle) {
+    const ctx = getContextForArticle(heroMainArticle, templates);
+    heroMainSlot.innerHTML = renderHeroMain(heroMainArticle, ctx);
+  }
 
-      // Breaking bar (use heroMain or next best)
-      updateBreakingBar(heroMainArticle || articles[0]);
+  if (heroSideSlot && heroSideArticles.length) {
+    heroSideSlot.innerHTML = heroSideArticles.map(renderHeroSide).join("");
+  }
 
-      // Latest list renderer (used by filters too)
-      function renderLatestList(list) {
-        if (!latestContainer) return;
-        latestContainer.innerHTML = list.map(renderStoryCard).join("");
-      }
+  updateBreakingBar(heroMainArticle || articles[0]);
 
-      // Initial latest list (skip hero articles)
-      const latestArticles = articles.slice(1);
-      renderLatestList(latestArticles);
+  function renderLatestList(list) {
+    if (!latestContainer) return;
+    latestContainer.innerHTML = list.map(a => {
+      const ctx = getContextForArticle(a, templates);
+      return renderStoryCard(a, ctx);
+    }).join("");
+  }
 
-      // Setup filters
-      setupFilters(articles, renderLatestList);
-    })
-    .catch((err) => {
-      console.error("HornUpdates: error loading articles.json", err);
-    });
+  const latestArticles = articles.slice(1);
+  renderLatestList(latestArticles);
+
+  setupFilters(articles, renderLatestList);
 });
