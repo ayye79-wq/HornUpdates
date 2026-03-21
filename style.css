@@ -467,6 +467,116 @@ body {
   font-style: italic;
 }
 
+/* ========== SEARCH + COUNTRY BAR ========== */
+.search-country-bar {
+  margin: 10px 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 0.95rem;
+  pointer-events: none;
+  color: #9ca3af;
+}
+
+.search-input {
+  width: 100%;
+  padding: 9px 12px 9px 34px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  background: #fff;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+
+.country-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.country-chip {
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 4px 11px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #374151;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.country-chip:hover {
+  background: #f3f4f6;
+}
+
+.country-chip.active {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #111827;
+}
+
+/* ========== STORY COUNT ========== */
+.story-count {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+/* ========== NO RESULTS ========== */
+.no-results {
+  padding: 24px 16px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px dashed #d1d5db;
+  margin-bottom: 12px;
+}
+
+/* ========== COUNTRY STATS SIDEBAR ========== */
+.country-stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.country-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.country-stat-count {
+  background: #f3f4f6;
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
 /* ========== LANGUAGE PILL ========== */
 .lang-pill {
   border-radius: 999px;

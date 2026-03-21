@@ -12,7 +12,8 @@
       ],
       "published_at": "2026-03-20T14:57:22+00:00",
       "source_url": "https://sudantribune.net/article/311939",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "الجيش السوداني والحركة الإسلامية بين القطيعة والمناورة",
@@ -25,7 +26,8 @@
       ],
       "published_at": "2026-03-20T14:54:34+00:00",
       "source_url": "https://sudantribune.net/article/311937",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "السودان يستعد لاحتمالات شح وغلاء الأدوية مع استمرار الحرب على إيران",
@@ -38,7 +40,8 @@
       ],
       "published_at": "2026-03-20T14:52:09+00:00",
       "source_url": "https://sudantribune.net/article/311935",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "حميدتي يجدد القبول بهدنة إنسانية جادة ذات مصداقية",
@@ -51,18 +54,21 @@
       ],
       "published_at": "2026-03-20T14:48:07+00:00",
       "source_url": "https://sudantribune.net/article/311933",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Leading anti‑racism activist in Tunisia jailed for eight years",
       "summary": "Saadia Mosbah campaigned for migrants, particularly after President Kais Saied said they posed a demographic threat to the country.",
       "country_tags": [],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Humanitarian"
       ],
       "published_at": "2026-03-20T13:17:56+00:00",
       "source_url": "https://www.bbc.com/news/articles/clyjg1x7r43o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "مسيرات الدعم السريع تهاجم الدبة بشمال السودان فجر عيد الفطر",
@@ -75,7 +81,8 @@
       ],
       "published_at": "2026-03-20T05:07:34+00:00",
       "source_url": "https://sudantribune.net/article/311929",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Desperate for food, drought-stricken Kenyans turn to the gingerbread tree",
@@ -85,11 +92,14 @@
         "Somalia"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Humanitarian",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-20T00:06:24+00:00",
       "source_url": "https://www.bbc.com/news/articles/cvg521yj9lvo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "السلطات التشادية تبدأ حملة قمع أمنية واسعة في الحدود مع السودان",
@@ -102,7 +112,8 @@
       ],
       "published_at": "2026-03-19T21:56:09+00:00",
       "source_url": "https://sudantribune.net/article/311921",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "البرهان يجدد شروطه للقبول بأي مبادرة سلام مع «الدعم السريع»",
@@ -115,7 +126,8 @@
       ],
       "published_at": "2026-03-19T20:54:38+00:00",
       "source_url": "https://sudantribune.net/article/311916",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "مسيّرات الجيش تقطع «شريان» الإمداد وتغير قواعد المعارك في كردفان",
@@ -128,7 +140,8 @@
       ],
       "published_at": "2026-03-19T19:53:29+00:00",
       "source_url": "https://sudantribune.net/article/311914",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "UK agrees deal to ease migrant returns to Nigeria",
@@ -139,7 +152,8 @@
       ],
       "published_at": "2026-03-19T18:02:01+00:00",
       "source_url": "https://www.bbc.com/news/articles/crm1w24p8p7o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Denounce 'abject' Afcon decision - senior Caf member",
@@ -150,7 +164,8 @@
       ],
       "published_at": "2026-03-19T17:12:12+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/ckg1gg5pgl7o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Chad warns Sudan it will retaliate after drone strike on mourners kills 17",
@@ -164,29 +179,34 @@
       ],
       "published_at": "2026-03-19T14:57:22+00:00",
       "source_url": "https://www.bbc.com/news/articles/c0mjn0g708ro?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "DR Congo and Rwanda agree to ease tensions after talks in US",
       "summary": "The conflict has persisted despite a peace deal signed by DR Congo and Rwanda in December.",
       "country_tags": [],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Diplomacy"
       ],
       "published_at": "2026-03-19T11:14:02+00:00",
       "source_url": "https://www.bbc.com/news/articles/c15x5ejgyl3o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "South Africans say criminal gangs are exploiting the water crisis",
       "summary": "Residents of some areas have been without mains water for weeks.",
       "country_tags": [],
       "topic_tags": [
-        "General"
+        "Humanitarian",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-19T06:01:49+00:00",
       "source_url": "https://www.bbc.com/news/articles/cvg3gjx22j0o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "King praises 'living bridge' with Nigeria at glitzy banquet",
@@ -197,7 +217,8 @@
       ],
       "published_at": "2026-03-19T03:16:18+00:00",
       "source_url": "https://www.bbc.com/news/articles/cedzqqp9x2do?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "مبادرة تسعى لإجراء امتحانات الشهادة السودانية في مناطق خارج سيطرة الحكومة",
@@ -210,7 +231,8 @@
       ],
       "published_at": "2026-03-18T22:58:41+00:00",
       "source_url": "https://sudantribune.net/article/311903",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "«التعليم العالي» في السودان تنفي استيلاءها على أموال الجامعات",
@@ -223,7 +245,8 @@
       ],
       "published_at": "2026-03-18T22:46:27+00:00",
       "source_url": "https://sudantribune.net/article/311898",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "تشاد تتوعد بالرد بعد هجوم لمسيّرة سودانية على «الطينة»",
@@ -236,7 +259,8 @@
       ],
       "published_at": "2026-03-18T22:30:14+00:00",
       "source_url": "https://sudantribune.net/article/311895",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "«أدري».. من شريان حياة إلى بوابة مؤصدة: جحيم الحصار يطارد نازحي دارفور",
@@ -249,7 +273,8 @@
       ],
       "published_at": "2026-03-18T21:07:41+00:00",
       "source_url": "https://sudantribune.net/article/311887",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "أطفال السودان في رمضان.. طفولة سرقتها الحرب",
@@ -262,7 +287,8 @@
       ],
       "published_at": "2026-03-18T20:21:50+00:00",
       "source_url": "https://sudantribune.net/article/311884",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "ايصال أدوية لدعم (80) ألف طفل في «طويلة» غرب السودان",
@@ -275,7 +301,8 @@
       ],
       "published_at": "2026-03-18T19:05:00+00:00",
       "source_url": "https://sudantribune.net/article/311881",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Senegal government alleges corruption over Afcon",
@@ -286,7 +313,8 @@
       ],
       "published_at": "2026-03-18T18:50:11+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/cwygyq495j8o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "شبكة أطباء السودان تتهم «الدعم السريع »بتصفية مدنيين قرب بارا",
@@ -299,7 +327,8 @@
       ],
       "published_at": "2026-03-18T18:48:27+00:00",
       "source_url": "https://sudantribune.net/article/311879",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Forty years after the last one was poached, rhinos are back in the wild in Uganda",
@@ -310,7 +339,8 @@
       ],
       "published_at": "2026-03-18T17:36:05+00:00",
       "source_url": "https://www.bbc.com/news/articles/cn4g41n9j4lo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Celebrations in Morocco but devastation in Senegal after Afcon decision",
@@ -321,18 +351,20 @@
       ],
       "published_at": "2026-03-18T15:48:41+00:00",
       "source_url": "https://www.bbc.com/news/articles/crm8mem74mko?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "'The longest VAR check in history' - the fallout from shock Afcon decision",
       "summary": "BBC Sport journalists and pundits look at what happened at the chaotic Afcon final, and what comes next.",
       "country_tags": [],
       "topic_tags": [
-        "General"
+        "Business & Economy"
       ],
       "published_at": "2026-03-18T15:41:46+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/c89k911qkp5o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Afcon final chaos - key questions answered",
@@ -343,7 +375,8 @@
       ],
       "published_at": "2026-03-18T12:54:20+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/cd707yj9pgzo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "قيادي بالشعبي: الحكومة تتحمل مسؤولية تصنيف الإسلاميين كواجهة ارهابية",
@@ -356,7 +389,8 @@
       ],
       "published_at": "2026-03-17T23:10:09+00:00",
       "source_url": "https://sudantribune.net/article/311862",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "اتهامات للدعم السريع بإحراق قافلة محاصيل غرب النهود",
@@ -369,7 +403,8 @@
       ],
       "published_at": "2026-03-17T19:57:30+00:00",
       "source_url": "https://sudantribune.net/article/311853",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "السودان : معدل التضخم يواصل التراجع",
@@ -382,7 +417,8 @@
       ],
       "published_at": "2026-03-17T17:35:57+00:00",
       "source_url": "https://sudantribune.net/article/311851",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "International Schools Probe Alternatives to Ministry’s Foreign Student Threshold Rules",
@@ -391,11 +427,13 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "General"
+        "Diplomacy",
+        "Health"
       ],
       "published_at": "2026-03-17T14:55:55+00:00",
       "source_url": "https://www.thereporterethiopia.com/49742/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "NBE Pushes for Bank Consolidation, Spotlights Market Share Disparity",
@@ -408,7 +446,8 @@
       ],
       "published_at": "2026-03-17T14:33:03+00:00",
       "source_url": "https://www.thereporterethiopia.com/49735/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "'Fire came from the sky and burned them' - life on the brink of civil war in South Sudan",
@@ -422,18 +461,21 @@
       ],
       "published_at": "2026-03-17T00:08:56+00:00",
       "source_url": "https://www.bbc.com/news/articles/cx2g4v9mzxro?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Fifa sanctions Nigeria and DR Congo over World Cup play-off",
       "summary": "Fifa fines the Nigeria Football Federation and DR Congo Football Association for separate disciplinary breaches by supporters.",
       "country_tags": [],
       "topic_tags": [
-        "General"
+        "Business & Economy",
+        "Diplomacy"
       ],
       "published_at": "2026-03-16T18:13:30+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/cdxg10vzwp2o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Russia agrees to stop using Kenyan recruits in Ukraine conflict, Kenya says",
@@ -446,7 +488,8 @@
       ],
       "published_at": "2026-03-16T14:09:58+00:00",
       "source_url": "https://www.bbc.com/news/articles/cev7rdwmky9o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Whistleblower murder suspect is former elite officer, South African police say",
@@ -457,7 +500,8 @@
       ],
       "published_at": "2026-03-16T12:36:51+00:00",
       "source_url": "https://www.bbc.com/news/articles/czr05nz3dp8o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "«بنك السودان»: عجز الميزان التجاري في 2025 بلغ 3.8 مليار دولار",
@@ -470,7 +514,8 @@
       ],
       "published_at": "2026-03-16T11:30:33+00:00",
       "source_url": "https://sudantribune.net/article/311810",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "«الدعم السريع» تسيطر على بارا بشمال كردفان وكرنوي بشمال دارفور",
@@ -483,7 +528,8 @@
       ],
       "published_at": "2026-03-16T10:31:00+00:00",
       "source_url": "https://sudantribune.net/article/311808",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "رئيس الوزراء يلغي وكالة التخطيط الاقتصادي بوزارة المالية",
@@ -496,7 +542,8 @@
       ],
       "published_at": "2026-03-16T00:31:36+00:00",
       "source_url": "https://sudantribune.net/article/311796",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "السلطات السودانية تعتقل القيادي الإسلامي الناجي عبد الله",
@@ -509,7 +556,8 @@
       ],
       "published_at": "2026-03-16T00:27:22+00:00",
       "source_url": "https://sudantribune.net/article/311792",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "«كبر» يكذب صحة مقطع فيديو يتحدث عن «البرهان» أثار جدلًا واسعًا",
@@ -522,7 +570,8 @@
       ],
       "published_at": "2026-03-16T00:10:35+00:00",
       "source_url": "https://sudantribune.net/article/311789",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "'We will go wherever they hide': Rooting out IS in Somalia",
@@ -535,18 +584,20 @@
       ],
       "published_at": "2026-03-16T00:05:40+00:00",
       "source_url": "https://www.bbc.com/news/articles/cj32d8e2m5eo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Ugandan opposition leader tells BBC he fled abroad fearing for his life",
       "summary": "Bobi Wine says from an undisclosed location: \"It was clear that the regime wanted to eliminate me.\"",
       "country_tags": [],
       "topic_tags": [
-        "General"
+        "Politics & Governance"
       ],
       "published_at": "2026-03-15T21:56:34+00:00",
       "source_url": "https://www.bbc.com/news/articles/cwy8vk24wyvo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "الصين تعلن  الاستعداد لمساعدة السودان في إعادة الإعمار",
@@ -559,7 +610,8 @@
       ],
       "published_at": "2026-03-15T21:09:04+00:00",
       "source_url": "https://sudantribune.net/article/311778",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "الخلافات تشتعل وسط مجموعة «محامو الطوارئ»",
@@ -572,7 +624,8 @@
       ],
       "published_at": "2026-03-15T20:53:46+00:00",
       "source_url": "https://sudantribune.net/article/311776",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Severe flooding kills 66 in Kenya, as heavy rains continue",
@@ -581,11 +634,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-15T16:12:11+00:00",
       "source_url": "https://www.bbc.com/news/articles/cz6e5eng03yo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Will Trump help or hinder Zimbabwe's white farmers in their compensation battle?",
@@ -596,7 +651,8 @@
       ],
       "published_at": "2026-03-15T00:01:25+00:00",
       "source_url": "https://www.bbc.com/news/articles/c8jxd91y2ylo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "مجموعة “مأمون البرير” تستحوذ بالكامل على “صافولا – السودان”",
@@ -609,7 +665,8 @@
       ],
       "published_at": "2026-03-14T21:44:58+00:00",
       "source_url": "https://sudantribune.net/article/311765",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "«مناوي»: الدعم السريع ترغب في الاستحواذ على السودان",
@@ -622,7 +679,8 @@
       ],
       "published_at": "2026-03-14T18:53:35+00:00",
       "source_url": "https://sudantribune.net/article/311756",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "كيف تؤثر الحرب في الشرق الأوسط على ذهب السودان؟",
@@ -635,7 +693,8 @@
       ],
       "published_at": "2026-03-14T12:48:27+00:00",
       "source_url": "https://sudantribune.net/article/311753",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "National Mourning Declared as Landslide Death Toll Rises in South Ethiopia",
@@ -644,11 +703,16 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Security & Conflict",
+        "Business & Economy",
+        "Diplomacy",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-14T09:55:54+00:00",
       "source_url": "https://www.thereporterethiopia.com/49712/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Half-Billion Dollar Financing Gap Headlines New AfDB Assessment",
@@ -657,11 +721,13 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Business & Economy"
+        "Business & Economy",
+        "Diplomacy"
       ],
       "published_at": "2026-03-14T09:50:49+00:00",
       "source_url": "https://www.thereporterethiopia.com/49709/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Voter Registration off to Flying Start Despite Logistical Hurdles, Irregularities",
@@ -670,11 +736,13 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Business & Economy"
       ],
       "published_at": "2026-03-14T09:46:56+00:00",
       "source_url": "https://www.thereporterethiopia.com/49706/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Opposition Says Fed has “Disowned” Tigray Interim Admin, Warns TPLF Seeking to Reassert Control",
@@ -684,11 +752,14 @@
       ],
       "topic_tags": [
         "Politics & Governance",
-        "Security & Conflict"
+        "Security & Conflict",
+        "Business & Economy",
+        "Diplomacy"
       ],
       "published_at": "2026-03-14T09:43:04+00:00",
       "source_url": "https://www.thereporterethiopia.com/49703/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Navigating the Middle East Storm: Ethiopia’s Test of Neutrality and Resilience",
@@ -697,11 +768,15 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Business & Economy",
+        "Humanitarian",
+        "Diplomacy"
       ],
       "published_at": "2026-03-14T09:37:00+00:00",
       "source_url": "https://www.thereporterethiopia.com/49700/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Businesses Raise Concerns over Minimum Alternative Tax, Quarterly Tax Payments",
@@ -714,7 +789,8 @@
       ],
       "published_at": "2026-03-14T09:32:20+00:00",
       "source_url": "https://www.thereporterethiopia.com/49698/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Forty Refugee Schools Slated for National Integration amid Education Budget Constraints",
@@ -723,11 +799,15 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Business & Economy",
+        "Humanitarian",
+        "Diplomacy"
       ],
       "published_at": "2026-03-14T09:28:14+00:00",
       "source_url": "https://www.thereporterethiopia.com/49696/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Conflict, Climate, Cost of Living Heighten Food Security Concerns Ahead of Lean Season",
@@ -736,11 +816,15 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Business & Economy",
+        "Humanitarian",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-14T09:24:38+00:00",
       "source_url": "https://www.thereporterethiopia.com/49693/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Cabinet Approves New Investment Incentive Regulation",
@@ -750,11 +834,13 @@
       ],
       "topic_tags": [
         "Politics & Governance",
-        "Business & Economy"
+        "Business & Economy",
+        "Diplomacy"
       ],
       "published_at": "2026-03-14T09:22:37+00:00",
       "source_url": "https://www.thereporterethiopia.com/49691/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Businesses Face 2.6 Trillion Birr Financing Gap, Study Finds",
@@ -767,7 +853,8 @@
       ],
       "published_at": "2026-03-14T09:20:11+00:00",
       "source_url": "https://www.thereporterethiopia.com/49689/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Fears for press freedom as tycoon takes control of East Africa's largest media house",
@@ -778,7 +865,8 @@
       ],
       "published_at": "2026-03-14T00:39:24+00:00",
       "source_url": "https://www.bbc.com/news/articles/cy0d7k75l2go?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Ghana star to deny rape charges, UK court hears",
@@ -789,7 +877,8 @@
       ],
       "published_at": "2026-03-13T11:48:37+00:00",
       "source_url": "https://www.bbc.com/news/articles/c4gqv9x3p40o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Globetrotting Constantine back in charge of Rwanda",
@@ -800,18 +889,20 @@
       ],
       "published_at": "2026-03-12T19:06:52+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/cj0d6j6m2rno?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "One house, two faiths, one fasting season",
       "summary": "Ramadan and Lent haven't overlapped since 1993 and couples like Olanrewaju and Kaosara in Nigeria are observing them together.",
       "country_tags": [],
       "topic_tags": [
-        "General"
+        "Politics & Governance"
       ],
       "published_at": "2026-03-12T12:40:13+00:00",
       "source_url": "https://www.bbc.com/news/videos/cwygeypnevxo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Why Namibia's green energy dream could be a red flag for penguins",
@@ -822,7 +913,8 @@
       ],
       "published_at": "2026-03-12T00:04:52+00:00",
       "source_url": "https://www.bbc.com/news/articles/czj1lkvpzxyo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "The Mugabe family after losing power - arrests, accusations and arguments",
@@ -833,7 +925,8 @@
       ],
       "published_at": "2026-03-11T10:31:57+00:00",
       "source_url": "https://www.bbc.com/news/articles/cp32xx35lwwo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "السودان: رصد ألف إصابة بحمى الضنك خلال أسبوع",
@@ -846,7 +939,8 @@
       ],
       "published_at": "2026-03-10T20:54:06+00:00",
       "source_url": "https://sudantribune.net/article/311592",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "الجيش يحذر من مقذوفات غير متفجرة في النيل الأبيض بعد هجمات للدعم السريع",
@@ -859,7 +953,8 @@
       ],
       "published_at": "2026-03-10T20:37:41+00:00",
       "source_url": "https://sudantribune.net/article/311589",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "الحكومة السودانية تطالب بتصنيف «الدعم السريع» إرهابيًا",
@@ -872,7 +967,8 @@
       ],
       "published_at": "2026-03-10T16:49:11+00:00",
       "source_url": "https://sudantribune.net/article/311582",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "«الفاو» تطلق خطة طوارئ لمساعدة 12.4 مليون سوداني خلال عامين",
@@ -885,7 +981,8 @@
       ],
       "published_at": "2026-03-10T16:38:02+00:00",
       "source_url": "https://sudantribune.net/article/311580",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Aga Khan announces sale of its Nation Media Group shares",
@@ -898,7 +995,8 @@
       ],
       "published_at": "2026-03-10T16:15:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/aga-khan-announces-sale-of-nation-media-group-shares-5386712",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Kenyan court rejects AI-drafted filing, says applications must be human-written",
@@ -911,7 +1009,8 @@
       ],
       "published_at": "2026-03-10T14:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/kenyan-court-says-applications-must-be-human-written-not-ai-5386478",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Why Africa must resist the illusion of Western order",
@@ -924,7 +1023,8 @@
       ],
       "published_at": "2026-03-10T14:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/guest-blogs/why-africa-must-resist-the-illusion-of-western-order-5386450",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "US blacklists Sudan’s Muslim Brotherhood, puts Burhan junta on the spot",
@@ -933,11 +1033,12 @@
         "Sudan"
       ],
       "topic_tags": [
-        "General"
+        "Security & Conflict"
       ],
       "published_at": "2026-03-10T11:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/north-africa/us-blacklists-sudans-muslim-brotherhood-burhan-on-the-spot-5386170",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Congo Brazzaville's Sassou set to extend his four decade rule in Sunday polls",
@@ -950,7 +1051,8 @@
       ],
       "published_at": "2026-03-10T10:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/central-africa/congo-brazzaville-s-sassou-set-to-extend-his-four-decade-rule-5386134",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Madagascar military leader sacks cabinet in surprise move",
@@ -958,11 +1060,14 @@
       "country_tags": [],
       "topic_tags": [
         "Politics & Governance",
-        "Security & Conflict"
+        "Security & Conflict",
+        "Business & Economy",
+        "Health"
       ],
       "published_at": "2026-03-10T07:48:51+00:00",
       "source_url": "https://www.bbc.com/news/articles/c39wywm298lo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Stephen Mbundi: A quiet diplomat steps into EAC’s toughest job",
@@ -971,11 +1076,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy",
+        "Diplomacy"
       ],
       "published_at": "2026-03-10T04:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/stephen-mbundi-a-quiet-diplomat-steps-into-eac-s-toughest-job-5385808",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "How Addis and Nairobi hubs are driving Africa’s aviation growth",
@@ -985,11 +1092,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy"
       ],
       "published_at": "2026-03-10T03:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/how-addis-and-nairobi-hubs-are-driving-africa-s-aviation-growth-5385592",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "قوى سودانية ترحب بتصنيف الحركة الإسلامية جماعة إرهابية",
@@ -1002,7 +1110,8 @@
       ],
       "published_at": "2026-03-09T20:09:57+00:00",
       "source_url": "https://sudantribune.net/article/311559",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "اتهامات بفساد إداري ومحسوبية تلاحق معتمدية اللاجئين في السودان",
@@ -1015,7 +1124,8 @@
       ],
       "published_at": "2026-03-09T18:52:00+00:00",
       "source_url": "https://sudantribune.net/article/311551",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "أميركا تدرج الحركة الإسلامية في السودان على قائمة الإرهابيين العالميين",
@@ -1028,7 +1138,8 @@
       ],
       "published_at": "2026-03-09T18:18:53+00:00",
       "source_url": "https://sudantribune.net/article/311548",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Guinea opposition leader urges 'direct resistance' after 40 parties dissolved",
@@ -1039,7 +1150,8 @@
       ],
       "published_at": "2026-03-09T14:25:45+00:00",
       "source_url": "https://www.bbc.com/news/articles/cjrqg80y57po?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "مصادر: الجيش السوداني دمر مواقع لإمداد «الدعم السريع» على الحدود الغربية",
@@ -1052,7 +1164,8 @@
       ],
       "published_at": "2026-03-09T13:44:41+00:00",
       "source_url": "https://sudantribune.net/article/311542",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "أطباء: إصابة (7) طلاب في هجوم للدعم السريع على مجمع سكني بـ«كوستي»",
@@ -1065,7 +1178,8 @@
       ],
       "published_at": "2026-03-09T13:22:04+00:00",
       "source_url": "https://sudantribune.net/article/311536",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Museveni to EAC: Unite or face global irrelevance",
@@ -1078,7 +1192,8 @@
       ],
       "published_at": "2026-03-09T12:55:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/museveni-to-eac-unite-or-face-global-irrelevance-5385142",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "اتهامات للجيش بقتل(10) مدنيين في هجوم على بنيالا",
@@ -1091,7 +1206,8 @@
       ],
       "published_at": "2026-03-09T12:54:20+00:00",
       "source_url": "https://sudantribune.net/article/311530",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Ghana calls on Commonwealth to condemn attack on its peacekeepers in Lebanon",
@@ -1102,7 +1218,8 @@
       ],
       "published_at": "2026-03-09T12:13:42+00:00",
       "source_url": "https://www.bbc.com/news/articles/cwyg07vqdrdo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "The Iran war and global trade: Will the Cape route become the new normal?",
@@ -1116,7 +1233,8 @@
       ],
       "published_at": "2026-03-09T11:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/world/the-iran-war-and-global-trade-will-the-cape-route-new-normal-5384994",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Oil hits $119 a barrel, highest since 2022, on Middle East war",
@@ -1125,11 +1243,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Business & Economy"
       ],
       "published_at": "2026-03-09T10:20:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/oil-hits-119-a-barrel-highest-since-2022-on-middle-east-war-5384942",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Meet Mojtaba Khamenei, Iran’s new supreme leader",
@@ -1142,7 +1262,8 @@
       ],
       "published_at": "2026-03-09T09:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/world/meet-mojtaba-khamenei-iran-new-supreme-leader-5384904",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "For a country that owns Ethiopia Airlines, EAC is but a sick joke",
@@ -1151,11 +1272,12 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "General"
+        "Humanitarian"
       ],
       "published_at": "2026-03-09T09:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/for-a-country-that-owns-ethiopia-airlines-eac-is-a-sick-joke-5383484",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Pray tell, where is Kenya headed?",
@@ -1168,7 +1290,8 @@
       ],
       "published_at": "2026-03-09T05:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/pray-tell-where-is-kenya-headed-5383336",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Bitter times for cocoa farmers as chocolate market slumps",
@@ -1179,7 +1302,8 @@
       ],
       "published_at": "2026-03-09T00:40:56+00:00",
       "source_url": "https://www.bbc.com/news/articles/c93jdk1yy3zo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Kiplimo regains world half-marathon record in Lisbon",
@@ -1190,7 +1314,8 @@
       ],
       "published_at": "2026-03-08T19:49:46+00:00",
       "source_url": "https://www.bbc.com/sport/athletics/articles/c7vj9g4mp55o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Education Minister Cedes EZEMA Party Leadership",
@@ -1199,11 +1324,13 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Humanitarian"
       ],
       "published_at": "2026-03-08T15:00:21+00:00",
       "source_url": "https://www.thereporterethiopia.com/49630/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "East African citizens brace for hard times as Gulf war escalates",
@@ -1212,11 +1339,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Business & Economy"
       ],
       "published_at": "2026-03-08T10:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/east-african-citizens-brace-for-hard-times-as-war-escalates-5383572",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "How sanctions on Rwanda army affect Congo peace",
@@ -1225,11 +1354,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Diplomacy"
       ],
       "published_at": "2026-03-08T08:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/how-sanctions-on-rwanda-army-affect-congo-peace-5383532",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "How Iran-Israel war reshapes Sudan’s fragile frontlines",
@@ -1242,7 +1372,8 @@
       ],
       "published_at": "2026-03-08T07:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/world/how-iran-israel-war-reshapes-sudan-s-fragile-frontlines-5383510",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "The Melania move: What if Africa’s First Ladies chaired the UN Security Council?",
@@ -1255,7 +1386,8 @@
       ],
       "published_at": "2026-03-08T07:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/what-if-africas-first-ladies-chaired-the-un-security-council-5382416",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Could the source of this madness be Epstein, or it’s just a disease?",
@@ -1264,11 +1396,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Health"
       ],
       "published_at": "2026-03-08T07:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/could-the-source-of-this-madness-be-epstein-or-a-disease-5383370",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Private data leaks that most institutions ignore",
@@ -1281,7 +1414,8 @@
       ],
       "published_at": "2026-03-08T05:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/private-data-leaks-that-most-institutions-ignore-5381852",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Tale of women, politics, power and leadership in Tanzania",
@@ -1294,7 +1428,8 @@
       ],
       "published_at": "2026-03-08T05:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/tale-of-women-politics-power-and-leadership-in-tanzania-5381968",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Weight-loss treatments boom as Kenyan attitudes to beauty change",
@@ -1307,7 +1442,8 @@
       ],
       "published_at": "2026-03-08T02:57:15+00:00",
       "source_url": "https://www.bbc.com/news/articles/cq6qq6q2692o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Middle East conflict boosts Kenya Airways and Ethiopian Airlines fortune",
@@ -1321,7 +1457,8 @@
       ],
       "published_at": "2026-03-07T18:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/middle-east-conflict-boosts-kenya-airways-and-ethiopia-airlines-5383584",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Tanzanian bureaucrat Mbundi named new EAC Secretary General",
@@ -1330,11 +1467,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Politics & Governance",
+        "Business & Economy"
       ],
       "published_at": "2026-03-07T15:15:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/tanzanian-bureaucrat-mbundi-named-new-eac-secretary-general-5383372",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "DJ Joe Mfalme: I never leave money on the table",
@@ -1347,7 +1486,8 @@
       ],
       "published_at": "2026-03-07T14:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/magazine/dj-joe-mfalme-i-never-leave-money-on-the-table-5382574",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "EAC leadership must now restore full functionality",
@@ -1356,11 +1496,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Politics & Governance",
+        "Diplomacy"
       ],
       "published_at": "2026-03-07T13:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/editorials/eac-leadership-must-now-restore-full-functionality-5383312",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Somalia’s constitutional changes spark term limit debate and opposition fury",
@@ -1373,7 +1515,8 @@
       ],
       "published_at": "2026-03-07T13:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/somalias-constitutional-changes-spark-term-limit-debate-5383280",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Heavy rains and flooding kills at least 23 in Nairobi",
@@ -1382,11 +1525,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-07T12:21:40+00:00",
       "source_url": "https://www.bbc.com/news/articles/cn87pl8e2l5o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Bank Capture: The Troubling Phenomenon Festering Beneath the Industry’s Shiny Veneer",
@@ -1395,11 +1540,14 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy",
+        "Humanitarian",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-07T09:08:30+00:00",
       "source_url": "https://www.thereporterethiopia.com/49612/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Change of guard at EAC: A full in-tray awaits the new chair",
@@ -1412,7 +1560,8 @@
       ],
       "published_at": "2026-03-07T09:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/change-of-guard-at-eac-a-full-in-tray-awaits-the-new-chair-5382656",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Voter Registration Commences amidst Security Concerns",
@@ -1421,11 +1570,13 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Health"
       ],
       "published_at": "2026-03-07T08:25:35+00:00",
       "source_url": "https://www.thereporterethiopia.com/49609/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Rights Commission Accuses OLF of Attacks on Civilians in Arsi Zone",
@@ -1434,11 +1585,15 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Business & Economy",
+        "Humanitarian",
+        "Diplomacy"
       ],
       "published_at": "2026-03-07T08:21:59+00:00",
       "source_url": "https://www.thereporterethiopia.com/49607/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Tigray Issues Emergency Appeal as Health System Faces ‘Operational Collapse’",
@@ -1448,11 +1603,15 @@
       ],
       "topic_tags": [
         "Politics & Governance",
-        "Security & Conflict"
+        "Security & Conflict",
+        "Humanitarian",
+        "Diplomacy",
+        "Health"
       ],
       "published_at": "2026-03-07T08:20:14+00:00",
       "source_url": "https://www.thereporterethiopia.com/49605/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Justice or Instability: Ethiopia’s Choice",
@@ -1461,11 +1620,14 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "General"
+        "Security & Conflict",
+        "Business & Economy",
+        "Humanitarian"
       ],
       "published_at": "2026-03-07T08:18:30+00:00",
       "source_url": "https://www.thereporterethiopia.com/49602/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "EPSE Revenue Nears Half-Trillion Mark as Stabilization Fund Claims Top 40bln Birr",
@@ -1474,11 +1636,12 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy"
       ],
       "published_at": "2026-03-07T08:14:08+00:00",
       "source_url": "https://www.thereporterethiopia.com/49599/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Bishoftu Airport Project Requires Massive Workforce Supply: Report",
@@ -1487,11 +1650,14 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Business & Economy"
+        "Business & Economy",
+        "Diplomacy",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-07T07:49:26+00:00",
       "source_url": "https://www.thereporterethiopia.com/49594/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Ethiopia’s Climate Finance Challenge: Strong Policy Ambitions, But Billions Still Missing",
@@ -1500,11 +1666,15 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Business & Economy"
+        "Politics & Governance",
+        "Business & Economy",
+        "Diplomacy",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-07T07:46:13+00:00",
       "source_url": "https://www.thereporterethiopia.com/49590/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "As Climate Shocks Mount, East Africa Looks to Climate-Smart Farming",
@@ -1513,11 +1683,14 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Humanitarian",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-07T07:41:24+00:00",
       "source_url": "https://www.thereporterethiopia.com/49587/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Museveni and Ruto adopt divergent stands as Middle East crisis worsens",
@@ -1526,11 +1699,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Humanitarian"
       ],
       "published_at": "2026-03-07T07:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/museveni-and-ruto-adopt-divergent-stands-as-crisis-worsens-5382672",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Africa’s air traffic surge signals a growing cargo, connectivity muscle",
@@ -1543,7 +1717,8 @@
       ],
       "published_at": "2026-03-07T05:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/africas-air-traffic-surge-signals-a-growing-cargo-5381766",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Late Kenyan MP Johana Ng’eno’s cultural bridge with Uganda set to live on",
@@ -1552,11 +1727,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Business & Economy"
       ],
       "published_at": "2026-03-06T18:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/magazine/ngenos-cultural-bridge-with-uganda-set-to-live-on-5382466",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Kagame and Tshisekedi skip EAC summit in Arusha",
@@ -1565,11 +1742,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Diplomacy"
       ],
       "published_at": "2026-03-06T16:45:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/kagame-and-tshisekedi-skip-eac-summit-in-arusha-5382364",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "How Middle East tensions test Africa’s fragile airline recovery",
@@ -1582,7 +1760,8 @@
       ],
       "published_at": "2026-03-06T14:15:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/how-middle-east-tensions-test-africa-s-fragile-airline-recovery-5382074",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "شبكة أطباء السودان: «الدعم السريع» قتلت سبعة مدنيين قرب بارا",
@@ -1595,7 +1774,8 @@
       ],
       "published_at": "2026-03-06T13:51:24+00:00",
       "source_url": "https://sudantribune.net/article/311426",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "حرب الخليج ترشح موانئ السودان كبدائل رغم ضعف القدرات التشغيلية",
@@ -1608,7 +1788,8 @@
       ],
       "published_at": "2026-03-06T13:28:34+00:00",
       "source_url": "https://sudantribune.net/article/311424",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Winnie Byanyima: Why I live to fight injustice",
@@ -1621,7 +1802,8 @@
       ],
       "published_at": "2026-03-06T10:21:43+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/magazine/winnie-byanyima-why-i-live-to-fight-injustice--5381278",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "The young women who fought in Ethiopia's last civil war and don't want to see another one",
@@ -1630,11 +1812,13 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Health"
       ],
       "published_at": "2026-03-06T00:05:46+00:00",
       "source_url": "https://www.bbc.com/news/articles/cyv959eyjgjo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Regragui departs as Morocco appoint Ouahbi as new coach",
@@ -1645,7 +1829,8 @@
       ],
       "published_at": "2026-03-05T23:01:26+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/c62dnepz5g7o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "السودان: انخفاض النازحين بنسبة 21% مع تزايد حركة العودة",
@@ -1658,7 +1843,8 @@
       ],
       "published_at": "2026-03-05T22:35:32+00:00",
       "source_url": "https://sudantribune.net/article/311414",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "زلزال الشرق الأوسط الجديد: صراع الخليج وإيران.. وأين يقف السودان من حافة الانفجار؟",
@@ -1671,7 +1857,8 @@
       ],
       "published_at": "2026-03-05T20:34:17+00:00",
       "source_url": "https://sudantribune.net/article/311409",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "«أطباء بلا حدود» توقف دعمها لمرفق صحي جنوب الخرطوم",
@@ -1684,7 +1871,8 @@
       ],
       "published_at": "2026-03-05T20:17:59+00:00",
       "source_url": "https://sudantribune.net/article/311405",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "موسى هلال يصل الخرطوم ويقول إن المعركة مع الدعم السريع بدأت الآن",
@@ -1697,7 +1885,8 @@
       ],
       "published_at": "2026-03-05T20:00:44+00:00",
       "source_url": "https://sudantribune.net/article/311400",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "(60) قتيلاً وجريحاً في قصف لتحالف «الدعم السريع» والشعبية على الدلنج",
@@ -1710,7 +1899,8 @@
       ],
       "published_at": "2026-03-05T19:41:38+00:00",
       "source_url": "https://sudantribune.net/article/311395",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Caf postpones Wafcon 2026 just 12 days before kick-off",
@@ -1721,18 +1911,20 @@
       ],
       "published_at": "2026-03-05T18:02:40+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/c24dg1m1v27o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Conservative Anglicans pull back from electing rival to Archbishop of Canterbury",
       "summary": "The group had said it would choose a new leader with the same title as Sarah Mullally, the first female head of the Church.",
       "country_tags": [],
       "topic_tags": [
-        "General"
+        "Humanitarian"
       ],
       "published_at": "2026-03-05T17:58:58+00:00",
       "source_url": "https://www.bbc.com/news/articles/c62ddy7qwqzo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Africa steps up push for veto power at UN Security Council",
@@ -1741,11 +1933,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Politics & Governance",
+        "Diplomacy"
       ],
       "published_at": "2026-03-05T17:45:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/africa-steps-up-push-for-veto-power-at-un-security-council-5381330",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Ethio Telecom, Ericsson Extend Partnership with New Network Expansion Deal",
@@ -1754,11 +1948,13 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "Business & Economy"
+        "Business & Economy",
+        "Diplomacy"
       ],
       "published_at": "2026-03-05T15:42:57+00:00",
       "source_url": "https://www.thereporterethiopia.com/49551/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "Conservative Anglicans challenge Archbishop of Canterbury with rival leadership",
@@ -1771,7 +1967,8 @@
       ],
       "published_at": "2026-03-05T15:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/world/anglicans-challenge-archbishop-canterbury-leadership-5381094",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Lewis Hamilton pushes for Formula 1 return to Africa, hails Kenya and Rwanda",
@@ -1784,7 +1981,8 @@
       ],
       "published_at": "2026-03-05T15:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/magazine/hamilton-pushes-for-africa-grand-prix-praises-kenya-and-rwanda-5381086",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "الجيش يستعيد السيطرة على مدينة بارا الاستراتيجية بشمال كردفان",
@@ -1797,7 +1995,8 @@
       ],
       "published_at": "2026-03-05T14:21:05+00:00",
       "source_url": "https://sudantribune.net/article/311382",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Ethiopia experiments with 'smart' police stations that have no officers",
@@ -1810,7 +2009,8 @@
       ],
       "published_at": "2026-03-05T12:34:22+00:00",
       "source_url": "https://www.bbc.com/news/articles/cjd9jgnrdpko?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Inside Ethiopia's 'smart' police station",
@@ -1819,22 +2019,25 @@
         "Ethiopia"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy"
       ],
       "published_at": "2026-03-05T12:29:16+00:00",
       "source_url": "https://www.bbc.com/news/videos/cz9qqzqkk82o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "DR Congo government says 200 killed after landslide at rebel-held mine",
       "summary": "The M23, which controls the coltan-rich area, has not commented and the death toll is hard to verify.",
       "country_tags": [],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Security & Conflict"
       ],
       "published_at": "2026-03-05T12:03:29+00:00",
       "source_url": "https://www.bbc.com/news/articles/c7955g70jgjo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "البرهان: لن نسمح لأي جهة الحديث باسم الجيش أو الدولة السودانية",
@@ -1847,7 +2050,8 @@
       ],
       "published_at": "2026-03-05T11:27:07+00:00",
       "source_url": "https://sudantribune.net/article/311379",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Somalia new constitution to extend president’s term, delay election",
@@ -1860,7 +2064,8 @@
       ],
       "published_at": "2026-03-05T10:50:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/somalia-new-constitution-to-extend-presidents-term-5380586",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "More than 200 killed in Congo’s Rubaya coltan mine",
@@ -1869,11 +2074,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Security & Conflict",
+        "Health"
       ],
       "published_at": "2026-03-05T10:15:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/more-than-200-killed-in-congos-rubaya-coltan-mine-5380552",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "The devastating conflict where both sides have reasons to keep fighting",
@@ -1886,7 +2093,8 @@
       ],
       "published_at": "2026-03-05T00:05:23+00:00",
       "source_url": "https://www.bbc.com/news/articles/czx70y0l75wo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "كيف تؤثر الحرب في الشرق الأوسط على موقف الوقود في السودان؟",
@@ -1899,7 +2107,8 @@
       ],
       "published_at": "2026-03-04T20:48:53+00:00",
       "source_url": "https://sudantribune.net/article/311368",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "مسؤول سوداني يتعهد بإعادة (10) آلاف لاجئ من أوغندا",
@@ -1912,7 +2121,8 @@
       ],
       "published_at": "2026-03-04T19:40:57+00:00",
       "source_url": "https://sudantribune.net/article/311363",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "الخرطوم في رمضان.. طوابير الإفطار تطول مع توقف «التكايا»",
@@ -1925,7 +2135,8 @@
       ],
       "published_at": "2026-03-04T18:53:27+00:00",
       "source_url": "https://sudantribune.net/article/311360",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Allen century powers New Zealand to victory over South Africa in T20 World Cup semi-final",
@@ -1936,7 +2147,8 @@
       ],
       "published_at": "2026-03-04T18:27:59+00:00",
       "source_url": "https://www.bbc.com/sport/cricket/articles/cz9qqyg515do?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "أطباء السودان: مقتل وإصابة 38 مدنياً في قصف على الدلنج",
@@ -1949,7 +2161,8 @@
       ],
       "published_at": "2026-03-04T16:56:50+00:00",
       "source_url": "https://sudantribune.net/article/311356",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "الجيش السوداني يتبرأ من «مستنفرين» أعلنوا الاستعداد للقتال في إيران",
@@ -1962,7 +2175,8 @@
       ],
       "published_at": "2026-03-04T16:48:00+00:00",
       "source_url": "https://sudantribune.net/article/311352",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "الحرب في الخليج وايران …هل تجعل حرب السودان نسياً منسياً؟",
@@ -1975,7 +2189,8 @@
       ],
       "published_at": "2026-03-04T16:35:00+00:00",
       "source_url": "https://sudantribune.net/article/311348",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Nigeria halts Christian pilgrimages to Holy Land over Middle East conflict",
@@ -1986,7 +2201,8 @@
       ],
       "published_at": "2026-03-04T16:19:38+00:00",
       "source_url": "https://www.bbc.com/news/articles/cly11z77wxxo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Diplomats raise red flags over Tanzania’s business reforms",
@@ -1995,22 +2211,26 @@
         "Kenya"
       ],
       "topic_tags": [
-        "Business & Economy"
+        "Politics & Governance",
+        "Business & Economy",
+        "Diplomacy"
       ],
       "published_at": "2026-03-04T15:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/diplomats-raise-red-flags-over-tanzania-s-business-reforms-5379828",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Nigerian doctors suspended over death of Adichie's son",
       "summary": "The author's 21-month-old son died in January after complications during medical procedures at a private hospital in Lagos.",
       "country_tags": [],
       "topic_tags": [
-        "General"
+        "Health"
       ],
       "published_at": "2026-03-04T14:17:14+00:00",
       "source_url": "https://www.bbc.com/news/articles/cp8rrk5ngngo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "South Africa's long-serving former defence minister and former Robben Island prisoner dies",
@@ -2021,7 +2241,8 @@
       ],
       "published_at": "2026-03-04T12:45:24+00:00",
       "source_url": "https://www.bbc.com/news/articles/clyzzdgv2k0o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Inside Tanzania’s plan to raise oil reserve capacity",
@@ -2030,11 +2251,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy"
       ],
       "published_at": "2026-03-04T12:45:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/inside-tanzanias-plan-to-raise-oil-reserve-capacity-5379520",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "From ally to adversary: 70-year spiral in US-Iran relations",
@@ -2043,11 +2265,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Diplomacy"
       ],
       "published_at": "2026-03-04T12:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/world/from-ally-to-adversary-70-year-spiral-in-us-iran-relations-5379384",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "UK to stop study visas from Cameroon and Sudan due to 'abuse'",
@@ -2060,7 +2284,8 @@
       ],
       "published_at": "2026-03-04T11:33:30+00:00",
       "source_url": "https://www.bbc.com/news/articles/cx2jy74895eo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Uganda investors anchor KPC IPO as Kenya raises $820m",
@@ -2073,7 +2298,8 @@
       ],
       "published_at": "2026-03-04T11:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/uganda-investors-anchor-kpc-ipo-as-kenya-raises-820m-5379272",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Somali, AU troops drive Al Shabaab from two stronghold towns",
@@ -2082,11 +2308,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Security & Conflict"
       ],
       "published_at": "2026-03-04T11:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/somali-au-troops-drive-al-shabaab-from-two-stronghold-towns-5379314",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Sudan accuses Ethiopia for the first time of involvement in its civil war",
@@ -2100,7 +2327,8 @@
       ],
       "published_at": "2026-03-04T10:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/north-africa/sudan-accuses-ethiopia-of-involvement-in-its-civil-war-5379252",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Cost of evacuating Africans from war-torn Gulf",
@@ -2109,11 +2337,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Humanitarian"
       ],
       "published_at": "2026-03-04T10:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/cost-of-evacuating-africans-from-war-torn-gulf-5379194",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Congo celebrates US sanctions on RDF as Rwanda pushes back",
@@ -2122,11 +2352,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Diplomacy"
       ],
       "published_at": "2026-03-04T03:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/congo-celebrates-us-sanctions-on-rdf-as-rwanda-pushes-back-5378740",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "قلق أممي حيال تصاعد العنف في كردفان والنيل الأزرق",
@@ -2139,7 +2370,8 @@
       ],
       "published_at": "2026-03-03T20:35:47+00:00",
       "source_url": "https://sudantribune.net/article/311324",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "وزارة الصحة : ارتفاع معدلات الاصابة بالملاريا وحمى الضنك والحصبة",
@@ -2152,7 +2384,8 @@
       ],
       "published_at": "2026-03-03T20:06:40+00:00",
       "source_url": "https://sudantribune.net/article/311320",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "تقرير: 88% من المراهقين بشمال دارفور يرفضون الإبلاغ عن عنف النوع",
@@ -2165,7 +2398,8 @@
       ],
       "published_at": "2026-03-03T19:57:43+00:00",
       "source_url": "https://sudantribune.net/article/311317",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Why foreign wars hurt Horn of Africa",
@@ -2178,7 +2412,8 @@
       ],
       "published_at": "2026-03-03T17:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/why-foreign-wars-hurt-horn-of-africa-5378708",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Hijacked Chinese trawler released off Puntland",
@@ -2187,11 +2422,12 @@
         "Somalia"
       ],
       "topic_tags": [
-        "General"
+        "Security & Conflict"
       ],
       "published_at": "2026-03-03T17:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/hijacked-chinese-trawler-released-off-puntland-5378732",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "تقدير خسائر القطاع الصناعي في السودان جراء الحرب بقرابة الـ (60) مليار دولار",
@@ -2204,7 +2440,8 @@
       ],
       "published_at": "2026-03-03T16:40:19+00:00",
       "source_url": "https://sudantribune.net/article/311311",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "Global rights courts warn wars are testing legal order",
@@ -2213,11 +2450,13 @@
         "Kenya"
       ],
       "topic_tags": [
+        "Politics & Governance",
         "Security & Conflict"
       ],
       "published_at": "2026-03-03T16:15:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/global-rights-courts-warn-wars-are-testing-legal-order-5378602",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Renewed courtship as Tanzania warms up to African Rights Court",
@@ -2230,7 +2469,8 @@
       ],
       "published_at": "2026-03-03T15:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/tanzania-signals-return-to-african-rights-court-5378528",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Anglican divisions deepen as rebel clerics pick rival to first female leader",
@@ -2241,7 +2481,8 @@
       ],
       "published_at": "2026-03-03T15:28:49+00:00",
       "source_url": "https://www.bbc.com/news/articles/cgrz1rx0ejzo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "Here’s Africa’s lucky opening in a fragmenting world",
@@ -2255,7 +2496,8 @@
       ],
       "published_at": "2026-03-03T13:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/guest-blogs/here-s-africa-s-lucky-opening-in-a-fragmenting-world-5378252",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "East African exporters face losses as shippers ground vessels",
@@ -2264,11 +2506,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy"
       ],
       "published_at": "2026-03-03T12:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/business-tech/east-african-exporters-face-losses-as-shippers-ground-vessels-5378216",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Tax row crisis: Why Uganda firms are flooding the appeals tribunal",
@@ -2277,11 +2520,14 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy",
+        "Humanitarian",
+        "Climate & Environment"
       ],
       "published_at": "2026-03-03T04:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/southern-africa/why-uganda-firms-are-flooding-the-tax-appeals-tribunal-5377436",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Uganda’s $34bn debt surge threatens its credit profile",
@@ -2294,7 +2540,8 @@
       ],
       "published_at": "2026-03-03T03:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/southern-africa/uganda-usd-34bn-debt-surge-threatens-its-credit-profile-5377624",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "US sanctions Rwanda army, top military officials",
@@ -2303,11 +2550,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "Security & Conflict"
+        "Security & Conflict",
+        "Diplomacy"
       ],
       "published_at": "2026-03-02T18:30:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/us-sanctions-top-rwandan-military-officials-5377664",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Why some African states consider US health deals unhealthy",
@@ -2316,11 +2565,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "Politics & Governance"
+        "Politics & Governance",
+        "Health"
       ],
       "published_at": "2026-03-02T17:15:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/why-some-african-states-consider-us-health-deals-unhealthy-5377572",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Marco Rubio’s Colonialism 3.0 might just be Africa’s best hope. Get on with it, now!",
@@ -2333,7 +2584,8 @@
       ],
       "published_at": "2026-03-02T12:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/marco-rubio-s-colonialism-3-0-might-just-be-africas-best-hope-5374462",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Attack in South Sudan Ruweng area kills 122, official says",
@@ -2343,11 +2595,13 @@
         "South Sudan"
       ],
       "topic_tags": [
+        "Politics & Governance",
         "Security & Conflict"
       ],
       "published_at": "2026-03-02T11:45:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/news/east-africa/attack-in-south-sudan-ruweng-area-kills-122-official-says-5377000",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "For Uganda Airlines to soar, it must race with the bodabodas",
@@ -2356,11 +2610,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Business & Economy"
       ],
       "published_at": "2026-03-02T10:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/for-uganda-airlines-to-soar-it-must-race-with-the-bodabodas-5374382",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Ethio telecom launches teleStream: Brings the future of streaming to Ethiopia",
@@ -2373,7 +2628,8 @@
       ],
       "published_at": "2026-03-02T08:23:41+00:00",
       "source_url": "https://www.thereporterethiopia.com/49524/",
-      "source_name": "The Reporter Ethiopia"
+      "source_name": "The Reporter Ethiopia",
+      "language": "en"
     },
     {
       "title": "However smart you may be, try to not be too clever by half",
@@ -2382,11 +2638,13 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Politics & Governance",
+        "Business & Economy"
       ],
       "published_at": "2026-03-02T08:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/however-smart-you-may-be-try-to-not-be-too-clever-by-half-5375076",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "AU? Living in a fool’s paradise!",
@@ -2395,11 +2653,12 @@
         "Kenya"
       ],
       "topic_tags": [
-        "General"
+        "Diplomacy"
       ],
       "published_at": "2026-03-02T06:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/au-living-in-a-fools-paradise-5374316",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "We like having the youth; we also seem to treat them as a problem",
@@ -2412,7 +2671,8 @@
       ],
       "published_at": "2026-03-02T04:00:00+00:00",
       "source_url": "https://www.theeastafrican.co.ke/tea/opinion/columnists/we-like-the-youth-we-also-seem-to-treat-them-as-a-problem-5374264",
-      "source_name": "The EastAfrican"
+      "source_name": "The EastAfrican",
+      "language": "en"
     },
     {
       "title": "Kidnapping of foreigners soars in Africa's lawless Sahel region",
@@ -2423,7 +2683,8 @@
       ],
       "published_at": "2026-03-02T00:02:10+00:00",
       "source_url": "https://www.bbc.com/news/articles/c0lj18d5lx3o?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC News"
+      "source_name": "BBC News",
+      "language": "en"
     },
     {
       "title": "سوق العمل في السودان.. ثلاث سنوات من الانهيار تحت مقصلة الحرب",
@@ -2436,7 +2697,8 @@
       ],
       "published_at": "2026-03-01T23:13:10+00:00",
       "source_url": "https://sudantribune.net/article/311251",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "«البرهان» يجري اتصالات بقادة دول الخليج لإعلان دعم السودان",
@@ -2449,7 +2711,8 @@
       ],
       "published_at": "2026-03-01T21:57:17+00:00",
       "source_url": "https://sudantribune.net/article/311246",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "السودان يستنكر هجوم إيران على سلطة عمّان وسط استمرار الحرب في الخليج",
@@ -2462,7 +2725,8 @@
       ],
       "published_at": "2026-03-01T17:46:47+00:00",
       "source_url": "https://sudantribune.net/article/311233",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "الجيش يتصدى لهجوم واسع على الدلنج",
@@ -2475,7 +2739,8 @@
       ],
       "published_at": "2026-03-01T17:39:32+00:00",
       "source_url": "https://sudantribune.net/article/311231",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "حريق هائل يقضي على أكثر من ألف منزل بمعسكر «كلما» بجنوب دارفور",
@@ -2488,7 +2753,8 @@
       ],
       "published_at": "2026-03-01T17:33:37+00:00",
       "source_url": "https://sudantribune.net/article/311228",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "قوى سياسية سودانية تدين هجمات إيران على دول خليجية",
@@ -2501,7 +2767,8 @@
       ],
       "published_at": "2026-02-28T21:14:37+00:00",
       "source_url": "https://sudantribune.net/article/311219",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "قتلى ودمار واسع في هجوم بالمسيّرات على الأبيض",
@@ -2514,7 +2781,8 @@
       ],
       "published_at": "2026-02-28T16:56:51+00:00",
       "source_url": "https://sudantribune.net/article/311205",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "أفواج جديدة من نازحي الكرمك تصل إلى الدمازين إثر تزايد قصف المسيرات",
@@ -2527,7 +2795,8 @@
       ],
       "published_at": "2026-02-28T16:45:09+00:00",
       "source_url": "https://sudantribune.net/article/311198",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     },
     {
       "title": "السودان يندد بالهجمات الإيرانية على دول خليجية ويتجاهل الامارات",
@@ -2540,7 +2809,8 @@
       ],
       "published_at": "2026-02-28T16:41:13+00:00",
       "source_url": "https://sudantribune.net/article/311200",
-      "source_name": "سودان تربيون"
+      "source_name": "سودان تربيون",
+      "language": "ar"
     }
   ]
 }

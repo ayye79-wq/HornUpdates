@@ -26,3 +26,13 @@ HornUpdates is an automated news aggregation and summarization platform focused 
 ## Deployment
 - Deployed as a **static site** (publicDir: `.`)
 - No build step required
+
+## Recent Improvements (March 2026)
+- **Live search bar**: Real-time text filtering across titles, summaries, countries, topics
+- **Country filter chips**: One-click filtering by Ethiopia, Somalia, Sudan, S. Sudan, Kenya, Eritrea, Djibouti
+- **Relative timestamps**: Dates shown as "2h ago", "Yesterday", "3d ago" (full date on hover)
+- **Story count badge**: Shows "(X of Y)" count in Latest stories heading when filtered
+- **No-results state**: Friendly message when search/filter returns nothing
+- **Countries Covered sidebar**: Live count of stories per country
+- **Article re-tagging**: `articles.json` re-processed with improved topic keywords (Security & Conflict, Politics & Governance, Business & Economy, Humanitarian, Diplomacy, Climate & Environment, Health)
+- **Note**: `index.html` contains its own complete inline `<script>` block. `script.js` is used by reader.html and ethio/ only.

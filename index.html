@@ -72,11 +72,23 @@
       </nav>
     </header>
 
-    <!-- INTRO -->
-    <p class="intro">
-      HornUpdates scans trusted news sources like Reuters, BBC, and VOA, filters for the Horn of Africa,
-      and generates clean AI-powered summaries with links back to the original publishers.
-    </p>
+    <!-- SEARCH + COUNTRY FILTERS -->
+    <div class="search-country-bar">
+      <div class="search-wrap">
+        <span class="search-icon">&#128269;</span>
+        <input type="search" id="story-search" class="search-input" placeholder="Search stories, countries, topics…" autocomplete="off" />
+      </div>
+      <div class="country-chips" id="country-chips">
+        <button class="country-chip active" data-country="all">All countries</button>
+        <button class="country-chip" data-country="Ethiopia">🇪🇹 Ethiopia</button>
+        <button class="country-chip" data-country="Somalia">🇸🇴 Somalia</button>
+        <button class="country-chip" data-country="Sudan">🇸🇩 Sudan</button>
+        <button class="country-chip" data-country="South Sudan">🇸🇸 S. Sudan</button>
+        <button class="country-chip" data-country="Kenya">🇰🇪 Kenya</button>
+        <button class="country-chip" data-country="Eritrea">🇪🇷 Eritrea</button>
+        <button class="country-chip" data-country="Djibouti">🇩🇯 Djibouti</button>
+      </div>
+    </div>
 
     <!-- BREAKING BAR -->
     <section class="breaking-bar" id="breaking-bar">
@@ -95,7 +107,8 @@
 
         <!-- LATEST STORIES -->
         <section class="latest-section">
-          <h2>Latest stories</h2>
+          <h2>Latest stories <span id="story-count" class="story-count"></span></h2>
+          <div id="no-results" class="no-results" style="display:none;">No stories match your search. Try a different keyword or filter.</div>
           <div id="latest-container"></div>
         </section>
       </main>
@@ -116,6 +129,12 @@
       Scan key headlines, read short summaries,
       and click through only when you want more.
     </p>
+  </div>
+
+  <!-- Countries covered -->
+  <div class="sidebar-box">
+    <p class="sidebar-title">Countries Covered</p>
+    <div id="country-stats" class="country-stats-list"></div>
   </div>
 
   <!-- AdSense Sidebar Slot -->
@@ -179,10 +198,20 @@
     return String(article.category || article.topic || "").trim() || "General";
   }
 
-  function niceDate(iso) {
+  function relativeTime(iso) {
     if (!iso) return "";
     const d = new Date(iso);
-    return isNaN(d) ? String(iso) : d.toLocaleString();
+    if (isNaN(d)) return iso;
+    const diffMs = Date.now() - d.getTime();
+    const mins = Math.floor(diffMs / 60000);
+    const hours = Math.floor(diffMs / 3600000);
+    const days = Math.floor(diffMs / 86400000);
+    if (mins < 1) return "Just now";
+    if (mins < 60) return `${mins}m ago`;
+    if (hours < 24) return `${hours}h ago`;
+    if (days === 1) return "Yesterday";
+    if (days < 7) return `${days}d ago`;
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
   }
 
   function langLabel(article) {
@@ -245,16 +274,9 @@
     const href = buildReaderLink(article.source_url || article.link);
 
     const title = clamp(article.title || "Untitled story", isFeatured ? 160 : 120);
-    const summary = clamp(
-      article.summary || article.excerpt || "",
-      isFeatured ? 300 : 240
-    );
-
+    const summary = clamp(article.summary || article.excerpt || "", isFeatured ? 300 : 240);
     const cardClass = "story-card" + (isFeatured ? " story-card--featured" : "");
-
-    const countryTags = countriesArr
-      .map(c => `<span class="tag-pill">${c}</span>`)
-      .join("");
+    const countryTags = countriesArr.map(c => `<span class="tag-pill">${c}</span>`).join("");
 
     return `
       <article class="${cardClass}">
@@ -272,7 +294,7 @@
         ${renderContextBlock(contextText)}
         <footer class="story-meta">
           ${sourceName ? `<span class="story-source">${sourceName}</span>` : ""}
-          ${published ? `<span class="story-date">${niceDate(published)}</span>` : ""}
+          ${published ? `<span class="story-date" title="${new Date(published).toLocaleString()}">${relativeTime(published)}</span>` : ""}
         </footer>
       </article>
     `;
@@ -288,43 +310,80 @@
     linkEl.href = buildReaderLink(article.source_url || article.link);
   }
 
+  function updateStoryCount(total, showing) {
+    const el = document.getElementById("story-count");
+    if (!el) return;
+    el.textContent = showing < total ? `(${showing} of ${total})` : `(${total})`;
+  }
+
+  function buildCountrySidebar(articles) {
+    const statsEl = document.getElementById("country-stats");
+    if (!statsEl) return;
+    const counts = {};
+    const flags = { Ethiopia:"🇪🇹", Somalia:"🇸🇴", Sudan:"🇸🇩", "South Sudan":"🇸🇸", Kenya:"🇰🇪", Eritrea:"🇪🇷", Djibouti:"🇩🇯" };
+    articles.forEach(a => {
+      getCountries(a).forEach(c => { counts[c] = (counts[c] || 0) + 1; });
+    });
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+    statsEl.innerHTML = sorted.map(([country, n]) => `
+      <div class="country-stat-row">
+        <span class="country-stat-name">${flags[country] || ""} ${country}</span>
+        <span class="country-stat-count">${n}</span>
+      </div>
+    `).join("") || "<p style='color:#9ca3af;font-size:.85rem;'>No data yet.</p>";
+  }
+
   // ---------- STATE ----------
   let allArticles = [];
   let contextTemplates = null;
-  let currentFilter = "all";
+  let currentTopicFilter = "all";
+  let currentCountryFilter = "all";
+  let currentSearch = "";
 
-  function matchesFilter(article, filter) {
-    if (filter === "all") return true;
-    const needle = String(filter || "").toLowerCase();
-
-    const countries = getCountries(article).join(" ").toLowerCase();
-    const topics = (
-      (Array.isArray(article.topic_tags) ? article.topic_tags.join(" ") : "") +
-      " " + (article.category || "") + " " + (article.topic || "")
-    ).toLowerCase();
-
-    const title = (article.title || "").toLowerCase();
-    const summary = (article.summary || article.excerpt || "").toLowerCase();
-    const source = (article.source_name || article.source || "").toLowerCase();
-
-    return (
-      countries.includes(needle) ||
-      topics.includes(needle) ||
-      title.includes(needle) ||
-      summary.includes(needle) ||
-      source.includes(needle)
-    );
+  function articleMatchesAll(article) {
+    // Topic filter
+    if (currentTopicFilter !== "all") {
+      const needle = currentTopicFilter.toLowerCase();
+      const topics = (
+        (Array.isArray(article.topic_tags) ? article.topic_tags.join(" ") : "") +
+        " " + (article.category || "") + " " + (article.topic || "")
+      ).toLowerCase();
+      if (!topics.includes(needle)) return false;
+    }
+    // Country filter
+    if (currentCountryFilter !== "all") {
+      const countries = getCountries(article).map(c => c.toLowerCase());
+      if (!countries.some(c => c.includes(currentCountryFilter.toLowerCase()))) return false;
+    }
+    // Search query
+    if (currentSearch) {
+      const q = currentSearch.toLowerCase();
+      const searchable = [
+        article.title || "",
+        article.summary || article.excerpt || "",
+        ...(getCountries(article)),
+        ...(Array.isArray(article.topic_tags) ? article.topic_tags : []),
+        article.source_name || "",
+      ].join(" ").toLowerCase();
+      if (!searchable.includes(q)) return false;
+    }
+    return true;
   }
 
   function renderPage(filteredList) {
     const featuredContainer = document.getElementById("featured-container");
     const latestContainer = document.getElementById("latest-container");
+    const noResults = document.getElementById("no-results");
 
     if (!filteredList.length) {
-      featuredContainer.innerHTML = "<p>No stories available.</p>";
+      featuredContainer.innerHTML = "";
       latestContainer.innerHTML = "";
+      if (noResults) noResults.style.display = "";
+      updateStoryCount(allArticles.length, 0);
       return;
     }
+
+    if (noResults) noResults.style.display = "none";
 
     const featured = filteredList[0];
     const latest = filteredList.slice(1);
@@ -332,27 +391,51 @@
     const featuredCtx = getContextForArticle(featured, contextTemplates);
     featuredContainer.innerHTML = renderStoryCard(featured, true, featuredCtx);
     latestContainer.innerHTML = latest.map(a => {
-      const ctx = getContextForArticle(a, contextTemplates);
-      return renderStoryCard(a, false, ctx);
+      return renderStoryCard(a, false, getContextForArticle(a, contextTemplates));
     }).join("");
 
     setBreakingBar(featured);
+    updateStoryCount(allArticles.length, filteredList.length);
   }
 
-  function applyFilter() {
-    const filtered = allArticles.filter(a => matchesFilter(a, currentFilter));
-    renderPage(filtered.length ? filtered : allArticles);
+  function applyFilters() {
+    const filtered = allArticles.filter(articleMatchesAll);
+    renderPage(filtered);
   }
 
   function setupFilters() {
+    // Topic pills
     document.querySelectorAll(".filter-pill").forEach(btn => {
       btn.addEventListener("click", () => {
         document.querySelectorAll(".filter-pill").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
-        currentFilter = btn.dataset.filter || "all";
-        applyFilter();
+        currentTopicFilter = btn.dataset.filter || "all";
+        applyFilters();
       });
     });
+
+    // Country chips
+    document.querySelectorAll(".country-chip").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".country-chip").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentCountryFilter = btn.dataset.country || "all";
+        applyFilters();
+      });
+    });
+
+    // Search
+    const searchInput = document.getElementById("story-search");
+    if (searchInput) {
+      let debounceTimer;
+      searchInput.addEventListener("input", () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          currentSearch = searchInput.value.trim();
+          applyFilters();
+        }, 250);
+      });
+    }
   }
 
   async function loadArticles() {
@@ -370,7 +453,8 @@
       list.sort((a, b) => new Date(b.published_at || 0) - new Date(a.published_at || 0));
 
       allArticles = list;
-      applyFilter();
+      buildCountrySidebar(list);
+      applyFilters();
     } catch (err) {
       console.error("Error loading articles.json:", err);
       document.getElementById("featured-container").innerHTML = "<p>Failed to load stories.</p>";
