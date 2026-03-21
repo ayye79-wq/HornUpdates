@@ -506,10 +506,52 @@ body {
   box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
 }
 
+.country-chips-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .country-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  flex: 1;
+}
+
+/* Language toggle */
+.lang-toggle-wrap {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  padding: 2px;
+  background: #f9fafb;
+}
+
+.lang-toggle {
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #6b7280;
+  transition: background 0.12s, color 0.12s;
+}
+
+.lang-toggle:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.lang-toggle.active {
+  background: #111827;
+  color: #f9fafb;
 }
 
 .country-chip {

@@ -78,15 +78,22 @@
         <span class="search-icon">&#128269;</span>
         <input type="search" id="story-search" class="search-input" placeholder="Search stories, countries, topics…" autocomplete="off" />
       </div>
-      <div class="country-chips" id="country-chips">
-        <button class="country-chip active" data-country="all">All countries</button>
-        <button class="country-chip" data-country="Ethiopia">🇪🇹 Ethiopia</button>
-        <button class="country-chip" data-country="Somalia">🇸🇴 Somalia</button>
-        <button class="country-chip" data-country="Sudan">🇸🇩 Sudan</button>
-        <button class="country-chip" data-country="South Sudan">🇸🇸 S. Sudan</button>
-        <button class="country-chip" data-country="Kenya">🇰🇪 Kenya</button>
-        <button class="country-chip" data-country="Eritrea">🇪🇷 Eritrea</button>
-        <button class="country-chip" data-country="Djibouti">🇩🇯 Djibouti</button>
+      <div class="country-chips-row">
+        <div class="country-chips" id="country-chips">
+          <button class="country-chip active" data-country="all">All countries</button>
+          <button class="country-chip" data-country="Ethiopia">🇪🇹 Ethiopia</button>
+          <button class="country-chip" data-country="Somalia">🇸🇴 Somalia</button>
+          <button class="country-chip" data-country="Sudan">🇸🇩 Sudan</button>
+          <button class="country-chip" data-country="South Sudan">🇸🇸 S. Sudan</button>
+          <button class="country-chip" data-country="Kenya">🇰🇪 Kenya</button>
+          <button class="country-chip" data-country="Eritrea">🇪🇷 Eritrea</button>
+          <button class="country-chip" data-country="Djibouti">🇩🇯 Djibouti</button>
+        </div>
+        <div class="lang-toggle-wrap">
+          <button class="lang-toggle active" id="lang-en" data-lang="en" title="English stories only">EN</button>
+          <button class="lang-toggle" id="lang-ar" data-lang="ar" title="Arabic stories only">AR</button>
+          <button class="lang-toggle" id="lang-all" data-lang="all" title="All languages">All</button>
+        </div>
       </div>
     </div>
 
@@ -338,9 +345,15 @@
   let contextTemplates = null;
   let currentTopicFilter = "all";
   let currentCountryFilter = "all";
+  let currentLangFilter = "en";
   let currentSearch = "";
 
   function articleMatchesAll(article) {
+    // Language filter
+    if (currentLangFilter !== "all") {
+      const lang = (article.language || "en").toLowerCase();
+      if (lang !== currentLangFilter) return false;
+    }
     // Topic filter
     if (currentTopicFilter !== "all") {
       const needle = currentTopicFilter.toLowerCase();
@@ -420,6 +433,16 @@
         document.querySelectorAll(".country-chip").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
         currentCountryFilter = btn.dataset.country || "all";
+        applyFilters();
+      });
+    });
+
+    // Language toggle
+    document.querySelectorAll(".lang-toggle").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".lang-toggle").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentLangFilter = btn.dataset.lang || "all";
         applyFilters();
       });
     });
