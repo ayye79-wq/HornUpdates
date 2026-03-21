@@ -303,6 +303,8 @@ def fetch_feed(feed_def: Dict[str, Any]) -> List[Dict[str, Any]]:
     cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)
     results: List[Dict[str, Any]] = []
 
+    horn_only = feed_def.get("horn_only", not default_countries)
+
     for e in entries[:ENTRIES_PER_FEED]:
         title = clean_text(getattr(e, "title", ""))
         link = (getattr(e, "link", None) or "").strip()
@@ -316,13 +318,19 @@ def fetch_feed(feed_def: Dict[str, Any]) -> List[Dict[str, Any]]:
         if pub and pub < cutoff:
             continue
 
+        countries = tag_countries(combined, default_countries)
+
+        # For regional feeds with no default country, skip if no Horn country detected
+        if horn_only and not countries:
+            continue
+
         pub_iso = pub.isoformat() if pub else datetime.now(timezone.utc).isoformat()
         lang = detect_lang(combined) if default_lang == "en" else default_lang
 
         results.append({
             "title": title,
             "summary": summary[:SUMMARY_MAX],
-            "country_tags": tag_countries(combined, default_countries),
+            "country_tags": countries,
             "topic_tags": tag_topics(combined),
             "language": lang,
             "published_at": pub_iso,
