@@ -1,794 +1,433 @@
-#!/usr/bin/env python3
 """
-update_articles.py
+update_articles.py — Horn Updates RSS scraper
+Fetches articles from Horn of Africa news sources, tags them, and writes articles.json.
 
-Horn Updates scraper:
-- Fetches RSS feeds from multiple high-quality sources
-- Filters for Horn of Africa stories
-- Assigns enriched topic tags (Politics, Security, Humanitarian, Economy, Climate, Health, Diplomacy)
-- Detects article language (en/ar)
-- Deduplicates by URL and title similarity
-- Builds articles.json for the frontend
+Run locally:   python update_articles.py
+Run via CI:    github actions calls this daily, then commits articles.json back to the repo
 """
 
 import json
-import datetime as dt
-from pathlib import Path
-import urllib.request
-import urllib.error
 import re
-import html
-import unicodedata
-from typing import Optional, List, Dict, Any
+import html as _html
+import hashlib
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
+from typing import List, Dict, Any, Optional
 
-import ssl
-import feedparser
-from urllib.parse import urlparse
+try:
+    import feedparser
+except ImportError:
+    raise SystemExit("feedparser is required: pip install feedparser")
 
-# Replit's sandbox blocks the default SSL cert verification subprocess.
-# Use an unverified context for all outbound HTTPS requests in this environment.
-_SSL_CTX = ssl._create_unverified_context()
+# ── Config ─────────────────────────────────────────────────────────────────────
 
-# ----------------------------
-# 0. STRICT MODE STATE
-# ----------------------------
+OUTPUT_PATH = Path(__file__).resolve().parent / "articles.json"
+PER_SOURCE_CAP = 25        # max articles kept per source in the final output
+TOTAL_CAP = 350            # max total articles before pruning oldest
+MAX_AGE_DAYS = 45          # discard articles older than this
+SUMMARY_MAX = 600          # truncate summaries to this many characters
+ENTRIES_PER_FEED = 30      # how many entries to read from each feed
 
-LAST_RUN_FILE = Path(__file__).with_name("last_run_utc.txt")
+# ── RSS Feeds ──────────────────────────────────────────────────────────────────
+# Each dict: url, source_name, countries (default country tags), lang
 
-
-def utc_now():
-    return dt.datetime.now(dt.UTC)
-
-
-def load_last_run():
-    if LAST_RUN_FILE.exists():
-        try:
-            return dt.datetime.fromisoformat(LAST_RUN_FILE.read_text().strip())
-        except Exception:
-            pass
-    return utc_now() - dt.timedelta(days=1)
-
-
-def save_last_run(ts: dt.datetime):
-    LAST_RUN_FILE.write_text(ts.isoformat())
-
-
-# ----------------------------
-# 1. CONFIG
-# ----------------------------
-
-OUTPUT_PATH = Path("articles.json")
-
-# Max articles to keep per individual source (prevents any one source dominating)
-MAX_PER_SOURCE = 25
-
-RSS_FEEDS = [
-    # International / broad Africa
-    "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
-    "https://www.voanews.com/api/ztiykqivlp",                      # VOA Africa
-    "https://www.aljazeera.com/xml/rss/all.xml",                   # Al Jazeera (broad; filtered)
-    "https://feeds.reuters.com/reuters/AFRICANews",                 # Reuters Africa
-    # Horn-specific English — Ethiopia
-    "https://www.thereporterethiopia.com/feed/",
-    "https://addisfortune.news/feed/",
-    "https://addisstandard.com/feed/",
-    "https://www.capitalethiopia.com/feed/",                        # Capital Ethiopia
-    # Horn-specific English — Somalia
-    "https://www.hiiraan.com/rss/news.xml",
-    "https://www.garoweonline.com/en/news/feed",
-    "https://www.somalicurrent.com/feed/",                          # Somali Current
-    "https://shabelle.net/feed/",                                   # Shabelle Media Network
-    # Horn-specific English — South Sudan
-    "https://radiotamazuj.org/en/rss/article/all",                  # Radio Tamazuj
-    "https://www.thenilepost.com/feed/",                            # The Nile Post
-    # Kenya / East Africa
-    "https://www.theeastafrican.co.ke/rss.xml",
-    "https://www.standardmedia.co.ke/rss/kenya.php",
-    # Sudan (English + Arabic) — capped to avoid Arabic dominance
-    "https://sudantribune.net/feed/",
+FEEDS: List[Dict[str, Any]] = [
+    # ── Ethiopia ──────────────────────────────────────────────────────────────
+    {
+        "url": "https://www.thereporterethiopia.com/feed/",
+        "source_name": "The Reporter Ethiopia",
+        "countries": ["Ethiopia"],
+        "lang": "en",
+    },
+    {
+        "url": "https://capitalethiopia.com/feed/",
+        "source_name": "Capital Ethiopia",
+        "countries": ["Ethiopia"],
+        "lang": "en",
+    },
+    {
+        "url": "https://addisstandard.com/feed/",
+        "source_name": "Addis Standard",
+        "countries": ["Ethiopia"],
+        "lang": "en",
+    },
+    {
+        "url": "https://ethiopianmonitor.com/feed/",
+        "source_name": "Ethiopian Monitor",
+        "countries": ["Ethiopia"],
+        "lang": "en",
+    },
+    # ── Somalia ───────────────────────────────────────────────────────────────
+    {
+        "url": "https://www.garoweonline.com/en/rss",
+        "source_name": "Garowe Online",
+        "countries": ["Somalia"],
+        "lang": "en",
+    },
+    # ── South Sudan ───────────────────────────────────────────────────────────
+    {
+        "url": "https://thenilepost.com/feed/",
+        "source_name": "The Nile Post",
+        "countries": ["South Sudan"],
+        "lang": "en",
+    },
+    {
+        "url": "https://radiotamazuj.org/en/feed",
+        "source_name": "Radio Tamazuj",
+        "countries": ["South Sudan"],
+        "lang": "en",
+    },
+    {
+        "url": "https://eyeradio.org/feed/",
+        "source_name": "Eye Radio",
+        "countries": ["South Sudan"],
+        "lang": "en",
+    },
+    # ── Sudan ─────────────────────────────────────────────────────────────────
+    {
+        "url": "https://sudantribune.com/feed/",
+        "source_name": "Sudan Tribune",
+        "countries": ["Sudan"],
+        "lang": "en",
+    },
+    {
+        "url": "https://www.sudantribune.net/spip.php?page=backend",
+        "source_name": "سودان تربيون",
+        "countries": ["Sudan"],
+        "lang": "ar",
+    },
+    # ── Kenya ─────────────────────────────────────────────────────────────────
+    {
+        "url": "https://www.theeastafrican.co.ke/sitemap/rss",
+        "source_name": "The EastAfrican",
+        "countries": ["Kenya"],
+        "lang": "en",
+    },
+    {
+        "url": "https://nation.africa/kenya/rss.xml",
+        "source_name": "Nation Africa",
+        "countries": ["Kenya"],
+        "lang": "en",
+    },
+    # ── Eritrea ───────────────────────────────────────────────────────────────
+    {
+        "url": "https://www.tesfanews.net/feed/",
+        "source_name": "Tesfa News",
+        "countries": ["Eritrea"],
+        "lang": "en",
+    },
+    # ── Regional / Multi-country ──────────────────────────────────────────────
+    {
+        "url": "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
+        "source_name": "BBC News",
+        "countries": [],
+        "lang": "en",
+    },
+    {
+        "url": "https://www.aa.com.tr/en/rss/default?cat=africa",
+        "source_name": "Anadolu Agency",
+        "countries": [],
+        "lang": "en",
+    },
 ]
 
-ALWAYS_INCLUDE_FEEDS = [
-    "addisstandard.com",
-    "thereporterethiopia.com",
-    "addisfortune.news",
-    "capitalethiopia.com",
-    "hiiraan.com",
-    "garoweonline.com",
-    "somalicurrent.com",
-    "shabelle.net",
-    "radiotamazuj.org",
-    "thenilepost.com",
-    "theeastafrican.co.ke",
-    "sudantribune.net",
-    "standardmedia.co.ke",
-]
+# ── Country keyword map ────────────────────────────────────────────────────────
+# These phrases anywhere in title/summary trigger the country tag
 
-BLOCKED_SOURCES = [
-    "borkena.com",
-]
-
-HORN_KEYWORDS = [
-    "ethiopia", "addis ababa", "amhara", "oromia", "tigray",
-    "eritrea", "asmara", "oromo", "amhara", "amara", "tigray", "tegaru",
-    "somalia", "mogadishu", "puntland", "somaliland", "hargeisa",
-    "djibouti",
-    "sudan", "south sudan", "khartoum", "darfur", "juba",
-    "kenya", "nairobi",
-    "horn of africa",
-    "al-shabaab", "al shabaab", "igad", "intergovernmental authority",
-    # Arabic
-    "السودان", "إثيوبيا", "الصومال", "إريتريا", "كينيا",
-]
-
-COUNTRY_TAGS = {
-    "ethiopia": "Ethiopia",
-    "eritrea": "Eritrea",
-    "somalia": "Somalia",
-    "djibouti": "Djibouti",
-    "sudan": "Sudan",
-    "south sudan": "South Sudan",
-    "kenya": "Kenya",
+COUNTRY_KEYWORDS: Dict[str, List[str]] = {
+    "Ethiopia": [
+        "ethiopia", "ethiopian", "addis ababa", "abiy ahmed", "tigray",
+        "oromia", "amhara", "afar", "somali region", "dire dawa",
+    ],
+    "Somalia": [
+        "somalia", "somali", "mogadishu", "puntland", "jubaland",
+        "al-shabaab", "al shabaab", "alshabaab", "shabab",
+        "galmudug", "hirshabelle",
+    ],
+    "Somaliland": [
+        "somaliland", "hargeisa",
+    ],
+    "Sudan": [
+        "sudan", "khartoum", "darfur", "rsf", "rapid support forces",
+        "sudanese armed forces", "saf", "port sudan", "el fasher",
+        "omdurman", "kassala",
+    ],
+    "South Sudan": [
+        "south sudan", "juba", "salva kiir", "riek machar",
+        "upper nile", "jonglei", "unity state", "warrap",
+    ],
+    "Kenya": [
+        "kenya", "kenyan", "nairobi", "mombasa", "kisumu", "william ruto",
+        "ruto",
+    ],
+    "Eritrea": [
+        "eritrea", "eritrean", "asmara", "isaias afwerki", "assab", "massawa",
+    ],
+    "Djibouti": [
+        "djibouti", "djiboutian",
+    ],
 }
 
-MAX_ARTICLES = 300
+# ── Topic keyword map ──────────────────────────────────────────────────────────
 
-SUBSCRIPTION_JUNK = [
-    "subscribe",
-    "subscription",
-    "print edition",
-    "digital edition",
-    "call our office",
-    "bank detail",
-    "bonus in a form",
-    "to subscribe",
-    "birr",
-    "br for",
-    "weekly in ethiopia",
-    "our subscribers",
-    "early access",
-]
+TOPIC_KEYWORDS: Dict[str, List[str]] = {
+    "Politics": [
+        "election", "parliament", "president", "prime minister", "minister",
+        "government", "opposition", "vote", "constitution", "coup",
+        "cabinet", "political party", "senate",
+    ],
+    "Security": [
+        "attack", "killed", "military", "bomb", "gunmen", "troops",
+        "war", "armed group", "fighting", "airstrike", "militia",
+        "offensive", "ambush", "clashes", "insurgent",
+    ],
+    "Humanitarian": [
+        "aid", "refugee", "famine", "food insecurity", "displaced",
+        "humanitarian", "relief", "malnutrition", "shelter", "un agencies",
+        "wfp", "unhcr", "unicef",
+    ],
+    "Business & Economy": [
+        "gdp", "inflation", "investment", "trade", "economy", "economic",
+        "bank", "currency", "budget", "imf", "world bank", "revenue",
+        "export", "import", "growth",
+    ],
+    "Diplomacy": [
+        "agreement", "summit", "talks", "diplomat", "ambassador",
+        "bilateral", "foreign minister", "treaty", "negotiation",
+        "peace deal", "ceasefire", "mediation",
+    ],
+    "Health": [
+        "hospital", "disease", "outbreak", "who ", "vaccine", "cholera",
+        "covid", "malaria", "measles", "health ministry", "epidemic",
+    ],
+    "Climate": [
+        "drought", "flood", "rainfall", "climate", "temperature", "locusts",
+        "el nino", "la nina", "deforestation", "water shortage",
+    ],
+    "Justice & Rights": [
+        "human rights", "court", "justice", "trial", "arrest", "detained",
+        "prison", "accountability", "torture", "rights violation", "amnesty",
+    ],
+}
+
+# ── Helpers ────────────────────────────────────────────────────────────────────
+
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+_WS_RE = re.compile(r"\s+")
+_URL_RE = re.compile(r"https?://\S+")
 
 
-# ----------------------------
-# 2. HELPERS (GENERAL)
-# ----------------------------
-
-def is_horn_story(text: str) -> bool:
-    if not text:
-        return False
-    lower = text.lower()
-    return any(kw in lower for kw in HORN_KEYWORDS)
+def clean_text(s: str) -> str:
+    s = _html.unescape(s or "")
+    s = _HTML_TAG_RE.sub(" ", s)
+    s = _URL_RE.sub("", s)
+    s = _WS_RE.sub(" ", s).strip()
+    return s
 
 
-def detect_language(title: str, summary: str) -> str:
-    """Simple language detection: Arabic vs English."""
-    text = f"{title} {summary}"
-    arabic_chars = sum(1 for c in text if '\u0600' <= c <= '\u06FF')
-    total_alpha = sum(1 for c in text if c.isalpha())
-    if total_alpha > 0 and arabic_chars / total_alpha > 0.2:
+def detect_lang(text: str) -> str:
+    if re.search(r"[\u0600-\u06FF]", text or ""):
         return "ar"
     return "en"
 
 
-def extract_countries(text: str):
-    if not text:
-        return []
-    lower = text.lower()
-    found = []
-    for needle, country_name in COUNTRY_TAGS.items():
-        if needle in lower:
-            found.append(country_name)
-    seen = set()
-    unique = []
-    for c in found:
-        if c not in seen:
-            unique.append(c)
-            seen.add(c)
-    return unique
+def tag_countries(text: str, default: List[str]) -> List[str]:
+    lc = text.lower()
+    found = [c for c, kws in COUNTRY_KEYWORDS.items() if any(kw in lc for kw in kws)]
+    merged = list(dict.fromkeys(default + found))
+    return merged if merged else default
 
 
-def extract_published_dt(entry) -> Optional[dt.datetime]:
-    tm = getattr(entry, "published_parsed", None) or getattr(entry, "updated_parsed", None)
-    if tm:
-        return dt.datetime(*tm[:6], tzinfo=dt.UTC)
+def tag_topics(text: str) -> List[str]:
+    lc = text.lower()
+    return [t for t, kws in TOPIC_KEYWORDS.items() if any(kw in lc for kw in kws)] or ["General"]
+
+
+def make_id(url: str) -> str:
+    return hashlib.sha1((url or "").encode()).hexdigest()[:12]
+
+
+def parse_dt(entry) -> Optional[datetime]:
+    for attr in ("published_parsed", "updated_parsed"):
+        t = getattr(entry, attr, None)
+        if t:
+            try:
+                return datetime(*t[:6], tzinfo=timezone.utc)
+            except Exception:
+                pass
+    for attr in ("published", "updated"):
+        s = getattr(entry, attr, None)
+        if s:
+            try:
+                s = str(s).strip()
+                if s.endswith("Z"):
+                    s = s[:-1] + "+00:00"
+                return datetime.fromisoformat(s)
+            except Exception:
+                pass
     return None
 
 
-def should_always_include(feed_url: str) -> bool:
-    low = (feed_url or "").lower()
-    return any(snippet in low for snippet in ALWAYS_INCLUDE_FEEDS)
+def get_summary(entry) -> str:
+    for attr in ("summary", "content"):
+        val = getattr(entry, attr, None)
+        if not val:
+            continue
+        if isinstance(val, list):
+            val = val[0].get("value", "") if val else ""
+        return clean_text(str(val))
+    return ""
 
 
-def is_blocked(link: str) -> bool:
-    link = link or ""
+# ── Core fetch ─────────────────────────────────────────────────────────────────
+
+def fetch_feed(feed_def: Dict[str, Any]) -> List[Dict[str, Any]]:
+    url = feed_def["url"]
+    source_name = feed_def["source_name"]
+    default_countries = feed_def.get("countries", [])
+    default_lang = feed_def.get("lang", "en")
+
+    print(f"  Fetching {source_name} …", end=" ", flush=True)
     try:
-        host = urlparse(link).netloc.lower()
-    except Exception:
-        host = link.lower()
-    return any(bad in host for bad in BLOCKED_SOURCES)
+        d = feedparser.parse(url)
+    except Exception as e:
+        print(f"ERROR: {e}")
+        return []
+
+    entries = getattr(d, "entries", [])
+    if not entries:
+        status = getattr(d, "status", "?")
+        print(f"no entries (HTTP {status})")
+        return []
+
+    cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_AGE_DAYS)
+    results: List[Dict[str, Any]] = []
+
+    for e in entries[:ENTRIES_PER_FEED]:
+        title = clean_text(getattr(e, "title", ""))
+        link = (getattr(e, "link", None) or "").strip()
+        if not title or not link:
+            continue
+
+        summary = get_summary(e)
+        combined = f"{title} {summary}"
+
+        pub = parse_dt(e)
+        if pub and pub < cutoff:
+            continue
+
+        pub_iso = pub.isoformat() if pub else datetime.now(timezone.utc).isoformat()
+        lang = detect_lang(combined) if default_lang == "en" else default_lang
+
+        results.append({
+            "title": title,
+            "summary": summary[:SUMMARY_MAX],
+            "country_tags": tag_countries(combined, default_countries),
+            "topic_tags": tag_topics(combined),
+            "language": lang,
+            "published_at": pub_iso,
+            "source_url": link,
+            "source_name": source_name,
+        })
+
+    print(f"{len(results)} articles")
+    return results
 
 
-def load_existing_articles():
+# ── Dedup + merge ──────────────────────────────────────────────────────────────
+
+def load_existing() -> List[Dict[str, Any]]:
     if not OUTPUT_PATH.exists():
         return []
     try:
-        payload = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
-        if isinstance(payload, dict):
-            return payload.get("articles", []) or []
-        if isinstance(payload, list):
-            return payload
+        data = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+        return data if isinstance(data, list) else data.get("articles", [])
     except Exception:
-        pass
-    return []
-
-
-def parse_feed_no_cache(url: str):
-    req = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": "HornUpdatesBot/1.0 (+https://hornupdates.com)",
-            "Cache-Control": "no-cache",
-            "Pragma": "no-cache",
-        }
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=20, context=_SSL_CTX) as r:
-            data = r.read()
-    except urllib.error.HTTPError as e:
-        if e.code == 304:
-            print("[INFO] Feed returned 304 Not Modified → no new items.")
-            return None
-        raise
-    except urllib.error.URLError as e:
-        print(f"[WARN] Network error fetching feed: {e}")
-        return None
-    return feedparser.parse(data)
-
-
-def _norm_text(s: str) -> str:
-    s = s or ""
-    s = unicodedata.normalize("NFKC", s)
-    s = html.unescape(s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s.lower()
-
-
-def _title_similar(a: str, b: str) -> bool:
-    """Return True if two titles are similar enough to be duplicates."""
-    a = _norm_text(a)
-    b = _norm_text(b)
-    if not a or not b:
-        return False
-    if a == b:
-        return True
-    # One starts with the other within 25 chars
-    if a.startswith(b[:max(10, len(b)-25)]) or b.startswith(a[:max(10, len(a)-25)]):
-        return True
-    # Word overlap: if >75% of shorter title's words are in longer
-    wa = set(a.split())
-    wb = set(b.split())
-    shorter = wa if len(wa) <= len(wb) else wb
-    longer  = wb if len(wa) <= len(wb) else wa
-    if len(shorter) >= 5:
-        overlap = len(shorter & longer) / len(shorter)
-        if overlap >= 0.75:
-            return True
-    return False
-
-
-def _almost_same(a: str, b: str) -> bool:
-    a = _norm_text(a)
-    b = _norm_text(b)
-    if not a or not b:
-        return False
-    if a == b:
-        return True
-    if a.startswith(b) and len(a) - len(b) <= 30:
-        return True
-    if b.startswith(a) and len(b) - len(a) <= 30:
-        return True
-    return False
-
-
-def _clean_source_name(name: str) -> str:
-    name = (name or "").strip()
-    name = re.sub(r"^\s*-\s*", "", name)
-    return name.strip()
-
-
-def _strip_html(s: str) -> str:
-    if not s:
-        return ""
-    s = html.unescape(s)
-    s = re.sub(r"<img\b[^>]*>", " ", s, flags=re.IGNORECASE)
-    s = re.sub(r"<[^>]+>", " ", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
-
-
-def _sentences(text: str) -> List[str]:
-    if not text:
         return []
-    text = re.sub(r"\s+", " ", text).strip()
-    parts = re.split(r"(?<=[.!?])\s+", text)
-    return [p.strip() for p in parts if p and p.strip()]
 
 
-def looks_like_subscription_text(text: str) -> bool:
-    low = (text or "").lower()
-    return any(j in low for j in SUBSCRIPTION_JUNK)
+def dedupe(existing: List[Dict[str, Any]], incoming: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    seen_urls: set = set()
+    seen_titles: set = set()
+    merged: List[Dict[str, Any]] = []
 
-
-def merge_dedupe(old_list, new_list):
-    merged = []
-    seen_urls = set()
-    seen_titles = []  # list for title similarity check
-    source_counts: dict = {}
-
-    for a in new_list + old_list:
-        key = (a.get("source_url") or a.get("link") or "").strip()
-        if not key:
-            key = (a.get("title", "") + "|" + a.get("published_at", "")).strip()
-
-        if key in seen_urls:
+    for a in incoming + existing:
+        url = (a.get("source_url") or a.get("link") or "").strip().rstrip("/")
+        title_key = re.sub(r"\W+", " ", (a.get("title") or "").lower()).strip()
+        if url in seen_urls or (title_key and title_key in seen_titles):
             continue
-
-        title = _norm_text(a.get("title", ""))
-        if any(_title_similar(title, t) for t in seen_titles):
-            continue
-
-        # Per-source cap to avoid any single outlet dominating
-        src = (a.get("source_name") or "").strip()
-        if src:
-            if source_counts.get(src, 0) >= MAX_PER_SOURCE:
-                continue
-            source_counts[src] = source_counts.get(src, 0) + 1
-
-        seen_urls.add(key)
-        if title:
-            seen_titles.append(title)
+        if url:
+            seen_urls.add(url)
+        if title_key:
+            seen_titles.add(title_key)
         merged.append(a)
 
-    merged.sort(key=lambda x: x.get("published_at", ""), reverse=True)
-    return merged[:MAX_ARTICLES]
+    return merged
 
 
-# ----------------------------
-# 2a. SUMMARY BUILDING
-# ----------------------------
-
-def make_summary(entry) -> str:
-    candidates: List[str] = []
-
-    content = getattr(entry, "content", None)
-    if isinstance(content, list) and content:
-        for c in content:
-            val = (c.get("value") if isinstance(c, dict) else "") or ""
-            val = _strip_html(val)
-            if val:
-                candidates.append(val)
-
-    sd = getattr(entry, "summary_detail", None)
-    if isinstance(sd, dict):
-        val = _strip_html(sd.get("value", "") or "")
-        if val:
-            candidates.append(val)
-
-    for field in ("summary", "description", "subtitle"):
-        val = getattr(entry, field, "") or ""
-        val = _strip_html(val)
-        if val:
-            candidates.append(val)
-
-    candidates = [c for c in candidates if not looks_like_subscription_text(c)]
-    text = max(candidates, key=len) if candidates else ""
-    if not text:
-        return ""
-
-    sents = _sentences(text)
-    out = " ".join(sents[:4]).strip() if sents else text
-    if looks_like_subscription_text(out):
-        return ""
-    return out
-
-
-def _fetch_html(url: str, timeout: int = 12) -> str:
-    try:
-        req = urllib.request.Request(
-            url,
-            headers={"User-Agent": "Mozilla/5.0 (HornUpdatesBot/1.0; +https://hornupdates.com)"}
-        )
-        with urllib.request.urlopen(req, timeout=timeout, context=_SSL_CTX) as resp:
-            charset = resp.headers.get_content_charset() or "utf-8"
-            return resp.read().decode(charset, errors="replace")
-    except Exception:
-        return ""
-
-
-def _extract_text_from_html(html_text: str) -> str:
-    if not html_text:
-        return ""
-
-    jsonld_blocks = re.findall(
-        r'(?is)<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
-        html_text
-    )
-    for block in jsonld_blocks:
-        block = block.strip()
-        m = re.search(r'"articleBody"\s*:\s*"([^"]{80,})"', block)
-        if m:
-            return _strip_html(m.group(1))
-        m = re.search(r'"description"\s*:\s*"([^"]{80,})"', block)
-        if m:
-            return _strip_html(m.group(1))
-
-    m = re.search(
-        r'(?is)<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']',
-        html_text
-    )
-    if m:
-        meta_desc = _strip_html(m.group(1))
-        if len(meta_desc) > 100 and not looks_like_subscription_text(meta_desc):
-            return meta_desc
-
-    m = re.search(
-        r'(?is)<meta[^>]+property=["\']og:description["\'][^>]+content=["\'](.*?)["\']',
-        html_text
-    )
-    if m:
-        og_desc = _strip_html(m.group(1))
-        if len(og_desc) > 100 and not looks_like_subscription_text(og_desc):
-            return og_desc
-
-    cleaned = re.sub(r"(?is)<style.*?>.*?</style>", " ", html_text)
-    cleaned = re.sub(r"(?is)<script.*?>.*?</script>", " ", cleaned)
-    paras = re.findall(r"(?is)<p[^>]*>(.*?)</p>", cleaned)
-    paras = [_strip_html(p) for p in paras]
-    paras = [p for p in paras if len(p) > 50 and not looks_like_subscription_text(p)]
-    return " ".join(paras[:10]).strip()
-
-
-def maybe_upgrade_summary_from_page(link: str, current_summary: str) -> str:
-    if not link:
-        return current_summary
-
-    host = urlparse(link).netloc.lower()
-    allowed_hosts = {
-        "www.theeastafrican.co.ke", "theeastafrican.co.ke",
-        "www.addisfortune.news", "addisfortune.news",
-        "www.sudantribune.net", "sudantribune.net",
-    }
-    if host not in allowed_hosts:
-        return current_summary
-
-    s = (current_summary or "").strip()
-    if s and len(s) >= 160 and not s.endswith("...") and not looks_like_subscription_text(s):
-        return current_summary
-
-    page_html = _fetch_html(link, timeout=12)
-    page_text = _extract_text_from_html(page_html)
-    if not page_text or looks_like_subscription_text(page_text):
-        return current_summary
-
-    sents = _sentences(page_text)
-    if not sents:
-        return current_summary
-
-    upgraded = " ".join(sents[:4]).strip()
-    if looks_like_subscription_text(upgraded):
-        return current_summary
-    return upgraded
-
-
-# ----------------------------
-# 2b. SUMMARY CLEANING
-# ----------------------------
-
-def clean_summary(raw: str, title: str = "", source_name: str = "") -> str:
-    raw = raw or ""
-    title = title or ""
-    source_name = _clean_source_name(source_name or "")
-
-    s = html.unescape(raw)
-    s = re.sub(r"<img\b[^>]*>", " ", s, flags=re.IGNORECASE)
-    s = re.sub(
-        r"(?:<p>\s*)?The post .*? appeared first on .*?(?:</p>)?",
-        " ", s, flags=re.IGNORECASE | re.DOTALL
-    )
-    s = re.sub(r"<[^>]+>", " ", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    s = re.sub(r"The post .*? appeared first on .*?$", " ", s, flags=re.IGNORECASE).strip()
-
-    if looks_like_subscription_text(s):
-        s = ""
-    if _almost_same(s, title):
-        s = ""
-    if len(s) < 25:
-        s = f"Read the full story on {source_name}." if source_name else "Read the full story at the source."
-    if len(s) > 650:
-        s = s[:647].rsplit(" ", 1)[0] + "..."
-
-    return s
-
-
-# ----------------------------
-# 2c. COUNTRY INFERRING
-# ----------------------------
-
-COUNTRY_PATTERNS = [
-    ("Ethiopia", r"\b(ethiopia|addis(\s+ababa)?|tigray|oromia|amhara|gondar|bahir\s+dar|mekelle|abiy|oromo)\b"),
-    ("Somalia", r"\b(somalia|mogadishu|puntland|somaliland|hargeisa|kismayo|galmudug|al.?shabaab)\b"),
-    ("Sudan", r"\b(sudan|khartoum|darfur|rsf|saf|burhan|hemeti|omdurman|port\s*sudan|kassala|el\s*fasher)\b"),
-    ("South Sudan", r"\b(south\s+sudan|juba|upper\s+nile|bentiu|kiir|machar)\b"),
-    ("Kenya", r"\b(kenya|nairobi|mombasa|kisumu|ruto|raila|eldoret|nakuru)\b"),
-    ("Djibouti", r"\b(djibouti)\b"),
-    ("Eritrea", r"\b(eritrea|asmara|massawa|afwerki)\b"),
-]
-
-DOMAIN_DEFAULT_COUNTRY = {
-    "standardmedia.co.ke": "Kenya",
-    "www.standardmedia.co.ke": "Kenya",
-    "theeastafrican.co.ke": "Kenya",
-    "www.theeastafrican.co.ke": "Kenya",
-    "sudantribune.net": "Sudan",
-    "www.sudantribune.net": "Sudan",
-    "thereporterethiopia.com": "Ethiopia",
-    "www.thereporterethiopia.com": "Ethiopia",
-    "addisfortune.news": "Ethiopia",
-    "www.addisfortune.news": "Ethiopia",
-    "addisstandard.com": "Ethiopia",
-    "www.addisstandard.com": "Ethiopia",
-    "capitalethiopia.com": "Ethiopia",
-    "www.capitalethiopia.com": "Ethiopia",
-    "hiiraan.com": "Somalia",
-    "www.hiiraan.com": "Somalia",
-    "garoweonline.com": "Somalia",
-    "www.garoweonline.com": "Somalia",
-    "somalicurrent.com": "Somalia",
-    "www.somalicurrent.com": "Somalia",
-    "shabelle.net": "Somalia",
-    "www.shabelle.net": "Somalia",
-    "radiotamazuj.org": "South Sudan",
-    "www.radiotamazuj.org": "South Sudan",
-    "thenilepost.com": "South Sudan",
-    "www.thenilepost.com": "South Sudan",
-}
-
-
-def infer_country_tags(title: str, url: str, existing_tags=None, max_tags: int = 2):
-    existing_tags = existing_tags or []
-    existing_tags = [t.strip() for t in existing_tags if t and t.strip()]
-    if existing_tags:
-        return existing_tags[:max_tags]
-
-    text = f"{title or ''} {url or ''}".lower()
-    found = []
-    for country, pattern in COUNTRY_PATTERNS:
-        if re.search(pattern, text, flags=re.IGNORECASE):
-            found.append(country)
-
-    deduped = []
-    for c in found:
-        if c not in deduped:
-            deduped.append(c)
-
-    if deduped:
-        return deduped[:max_tags]
-
-    host = ""
-    try:
-        host = urlparse(url or "").netloc.lower()
-    except Exception:
-        host = ""
-
-    if host in DOMAIN_DEFAULT_COUNTRY:
-        return [DOMAIN_DEFAULT_COUNTRY[host]]
-
-    return []
-
-
-def assign_topic_tags(combined_text: str) -> List[str]:
-    """Assign one or more topic tags from an expanded set of categories."""
-    lower = combined_text.lower()
-    topic_tags = []
-
-    if any(w in lower for w in [
-        "election", "parliament", "government", "president", "prime minister",
-        "minister", "policy", "vote", "cabinet", "constitution", "ruling party",
-        "opposition", "coup", "protest", "demonstration", "reform"
-    ]):
-        topic_tags.append("Politics & Governance")
-
-    if any(w in lower for w in [
-        "attack", "clash", "conflict", "war", "military", "fighting", "strike",
-        "armed", "bomb", "troops", "militia", "ceasefire", "insurgent", "terror",
-        "al-shabaab", "al shabaab", "rsf", "rapid support", "airstrike", "offensive",
-        "hostage", "killed", "casualties", "siege"
-    ]):
-        topic_tags.append("Security & Conflict")
-
-    if any(w in lower for w in [
-        "investment", "economy", "business", "market", "trade", "company", "debt",
-        "inflation", "imf", "world bank", "currency", "gdp", "port", "export",
-        "import", "oil", "gas", "tax", "revenue", "budget", "growth"
-    ]):
-        topic_tags.append("Business & Economy")
-
-    if any(w in lower for w in [
-        "aid", "humanitarian", "food", "relief", "famine", "drought", "refugee",
-        "displaced", "unicef", "wfp", "usaid", "malnutrition", "cholera",
-        "shelter", "camp", "crisis", "emergency", "civilian"
-    ]):
-        topic_tags.append("Humanitarian")
-
-    if any(w in lower for w in [
-        "diplomat", "treaty", "agreement", "talks", "sanctions", "recognition",
-        "summit", "ambassador", "delegation", "foreign minister", "envoy",
-        "relations", "bilateral", "multilateral", "peace deal", "negotiation"
-    ]):
-        topic_tags.append("Diplomacy")
-
-    if any(w in lower for w in [
-        "climate", "flood", "rainfall", "locust", "heat", "environment",
-        "crop", "harvest", "water", "deforestation", "sea level", "carbon",
-        "drought", "weather", "cyclone"
-    ]):
-        topic_tags.append("Climate & Environment")
-
-    if any(w in lower for w in [
-        "health", "disease", "hospital", "medicine", "vaccine", "epidemic",
-        "outbreak", "who", "pandemic", "malaria", "tuberculosis", "hiv",
-        "surgery", "clinic", "mortality"
-    ]):
-        topic_tags.append("Health")
-
-    if not topic_tags:
-        topic_tags.append("General")
-
-    return topic_tags
-
-
-def normalize_article(article: dict) -> dict:
-    title = (article.get("title") or "").strip()
-    source_name = _clean_source_name(article.get("source_name") or "")
-    source_url = article.get("source_url") or article.get("link") or ""
-
-    raw_summary = (
-        article.get("summary")
-        or article.get("description")
-        or article.get("content")
-        or ""
-    )
-
-    article["source_name"] = source_name
-    article["summary"] = clean_summary(raw_summary, title=title, source_name=source_name)
-
-    existing = article.get("country_tags") or []
-    article["country_tags"] = infer_country_tags(title, source_url, existing_tags=existing, max_tags=2)
-
-    if "language" not in article:
-        article["language"] = detect_language(title, article["summary"])
-
-    return article
-
-
-# ----------------------------
-# 3. MAIN
-# ----------------------------
-
-def main():
-    new_articles = []
-    last_run = load_last_run()
-    now = utc_now()
-    print(f"[INFO] Strict mode enabled. Last run = {last_run.isoformat()}")
-
-    for feed_url in RSS_FEEDS:
-        print(f"\n=== Fetching: {feed_url} ===")
-
+def apply_caps(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def pub_dt(a):
+        s = a.get("published_at") or ""
         try:
-            parsed = feedparser.parse(
-                feed_url,
-                request_headers={"User-Agent": "HornUpdatesBot/1.0 (+https://hornupdates.com)"}
-            )
+            if s.endswith("Z"):
+                s = s[:-1] + "+00:00"
+            return datetime.fromisoformat(s)
+        except Exception:
+            return datetime.min.replace(tzinfo=timezone.utc)
+
+    articles.sort(key=pub_dt, reverse=True)
+
+    source_counts: Dict[str, int] = {}
+    result: List[Dict[str, Any]] = []
+    for a in articles:
+        src = a.get("source_name", "Unknown")
+        if source_counts.get(src, 0) >= PER_SOURCE_CAP:
+            continue
+        source_counts[src] = source_counts.get(src, 0) + 1
+        result.append(a)
+        if len(result) >= TOTAL_CAP:
+            break
+
+    return result
+
+
+# ── Main ───────────────────────────────────────────────────────────────────────
+
+def main() -> None:
+    print("=== Horn Updates Scraper ===")
+    print(f"Fetching {len(FEEDS)} feeds …\n")
+
+    incoming: List[Dict[str, Any]] = []
+    for feed_def in FEEDS:
+        try:
+            incoming.extend(fetch_feed(feed_def))
         except Exception as e:
-            print(f"[WARN] Failed to fetch {feed_url}: {e}")
-            continue
+            print(f"  [SKIP] {feed_def['source_name']}: {e}")
 
-        if parsed is None:
-            continue
+    print(f"\nFetched {len(incoming)} total new items")
 
-        entries = getattr(parsed, "entries", None) or []
-        if not entries:
-            print(f"[!] No entries returned for: {feed_url}")
-            continue
+    existing = load_existing()
+    print(f"Loaded {len(existing)} existing articles")
 
-        include_all = should_always_include(feed_url)
-        count_included = 0
-
-        source_name = _clean_source_name(
-            parsed.feed.get("title", "") if getattr(parsed, "feed", None) else ""
-        )
-
-        for entry in entries:
-            title = getattr(entry, "title", "") or ""
-            link = getattr(entry, "link", "") or ""
-
-            if is_blocked(link):
-                continue
-
-            published_dt = extract_published_dt(entry)
-            if not published_dt:
-                continue
-            if published_dt <= last_run:
-                continue
-            if published_dt > now + dt.timedelta(minutes=5):
-                continue
-
-            summary_raw = make_summary(entry)
-            if not summary_raw or looks_like_subscription_text(summary_raw) or \
-               summary_raw.endswith("...") or len(_strip_html(summary_raw)) < 140:
-                summary_raw = maybe_upgrade_summary_from_page(link, summary_raw)
-
-            summary = clean_summary(summary_raw, title=title, source_name=source_name)
-            combined_text = f"{title}\n{summary}"
-
-            is_broad_feed = any(d in (feed_url or "").lower() for d in [
-                "feeds.bbci.co.uk", "aljazeera.com", "reuters.com", "voanews.com"
-            ])
-
-            if not include_all and not is_broad_feed and not is_horn_story(combined_text):
-                continue
-            if is_broad_feed and not is_horn_story(combined_text):
-                continue
-
-            published_at = published_dt.isoformat()
-            language = detect_language(title, summary)
-
-            countries = infer_country_tags(
-                title, link,
-                existing_tags=extract_countries(combined_text),
-                max_tags=2
-            )
-
-            topic_tags = assign_topic_tags(combined_text)
-
-            article = {
-                "title": title,
-                "summary": summary,
-                "country_tags": countries,
-                "topic_tags": topic_tags,
-                "language": language,
-                "published_at": published_at,
-                "source_url": link,
-                "source_name": source_name,
-            }
-
-            new_articles.append(article)
-            count_included += 1
-
-        print(f"Included {count_included} items from this feed.")
-
-    existing = load_existing_articles()
-    merged_articles = merge_dedupe(existing, new_articles)
-    merged_articles = [normalize_article(a) for a in merged_articles]
-
-    if len(new_articles) == 0 and OUTPUT_PATH.exists():
-        print("[INFO] No new articles since last run. Keeping existing articles.json.")
-        save_last_run(now)
-        print(f"[INFO] Updated last_run_utc.txt → {now.isoformat()}")
-        return
+    merged = dedupe(existing, incoming)
+    final = apply_caps(merged)
 
     payload = {
-        "generated_at": now.isoformat(),
-        "articles": merged_articles,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "articles": final,
     }
 
-    print(f"\nWriting {len(merged_articles)} total articles to {OUTPUT_PATH} (new: {len(new_articles)})")
     OUTPUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    save_last_run(now)
-    print(f"[INFO] Updated last_run_utc.txt → {now.isoformat()}")
+    source_counts: Dict[str, int] = {}
+    for a in final:
+        s = a.get("source_name", "?")
+        source_counts[s] = source_counts.get(s, 0) + 1
+
+    print(f"\n✅ Wrote {len(final)} articles to {OUTPUT_PATH.name}")
+    print("\nBreakdown by source:")
+    for src, cnt in sorted(source_counts.items(), key=lambda x: -x[1]):
+        print(f"  {cnt:3d}  {src}")
 
 
 if __name__ == "__main__":
