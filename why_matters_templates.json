@@ -1,16 +1,50 @@
 {
-  "version": 1,
+  "version": 2,
   "default": {
     "id": "generic-01",
-    "text": "Developments like this can signal broader economic, political, or regional shifts affecting the Horn of Africa and neighboring markets. Tracking these changes helps explain longer-term trends beyond a single headline."
+    "text": "This story is part of a wider pattern of developments affecting the Horn of Africa and neighbouring states. Tracking events like this helps explain the longer-term political, economic, and humanitarian trends shaping the region."
   },
   "groups": [
+    {
+      "group_id": "justice_rights_reparations",
+      "priority": 120,
+      "match": {
+        "any_keyword": ["slavery", "reparation", "reparatory", "transatlantic", "human rights", "justice", "tribunal", "genocide", "crime against humanity", "accountability", "war crimes", "icc", "amnesty", "rights abuses", "torture", "executions", "disappearances", "civil rights"]
+      },
+      "templates": [
+        {
+          "id": "rights-01",
+          "text": "Calls for justice and accountability — whether for historical atrocities or contemporary abuses — reflect ongoing global debates about who bears responsibility and what redress looks like. In Africa, these discussions often intersect with questions of sovereignty, reparations, and the limits of international law."
+        },
+        {
+          "id": "rights-02",
+          "text": "Human rights issues and accountability processes rarely move quickly, but they can shift the legitimacy of governments, the trust of international partners, and the wellbeing of affected communities. Who raises these issues — and who responds — is often as significant as the substance of the claims."
+        }
+      ]
+    },
+    {
+      "group_id": "press_freedom_media",
+      "priority": 115,
+      "match": {
+        "any_keyword": ["journalist", "press freedom", "media", "reporter", "arrested journalist", "detained journalist", "censorship", "broadcasting", "newspaper", "media authority", "suspended", "tv channel", "radio station", "publication ban"]
+      },
+      "templates": [
+        {
+          "id": "media-01",
+          "text": "Press freedom is closely tied to political openness: restrictions on journalists often signal broader crackdowns on civil society and political dissent. The Horn of Africa has seen repeated cycles of media restriction, particularly during elections and conflicts."
+        },
+        {
+          "id": "media-02",
+          "text": "When journalists face arrest or outlets are shuttered, it limits the flow of information that communities, policymakers, and international observers rely on to understand what is happening. Tracking these patterns matters for accountability."
+        }
+      ]
+    },
     {
       "group_id": "aid_humanitarian",
       "priority": 100,
       "match": {
         "any_category": ["Humanitarian", "Aid", "Relief", "Health"],
-        "any_keyword": ["aid", "food aid", "humanitarian", "relief", "famine", "drought", "malnutrition", "wfp", "unicef", "usaid", "displaced", "refugees", "cholera"]
+        "any_keyword": ["aid", "food aid", "humanitarian", "relief", "famine", "drought", "malnutrition", "wfp", "unicef", "usaid", "displaced", "refugees", "cholera", "ipc", "food insecurity", "hunger", "emergency"]
       },
       "templates": [
         {
@@ -27,13 +61,16 @@
       "group_id": "security_conflict",
       "priority": 90,
       "match": {
-        "any_category": ["Security", "Conflict", "Defense"],
-        "any_keyword": ["attack", "bomb", "militants", "al-shabaab", "isis", "security", "troops", "insurgency", "airstrike", "clashes", "ceasefire", "armed", "terror", "violence"]
+        "any_keyword": ["attack", "bomb", "militants", "al-shabaab", "al shabaab", "isis", "troops", "insurgency", "airstrike", "clashes", "ceasefire", "armed groups", "terror", "violence", "offensive", "shelling", "military operation", "killed", "casualties", "rsf", "saf", "fano", "ola", "tdf"]
       },
       "templates": [
         {
           "id": "sec-01",
           "text": "Security developments in the Horn of Africa can carry cross-border spillover risks, shaping trade routes, displacement patterns, and diplomatic alignments. Small escalations can become wider regional pressures if not contained."
+        },
+        {
+          "id": "sec-02",
+          "text": "Armed group activity often reflects deeper grievances over land, resources, political exclusion, or ethnic tension. Understanding who is fighting, where, and why matters for assessing how a conflict might evolve."
         }
       ]
     },
@@ -41,13 +78,16 @@
       "group_id": "politics_governance",
       "priority": 80,
       "match": {
-        "any_category": ["Politics", "Governance", "Elections", "Diplomacy"],
-        "any_keyword": ["election", "parliament", "president", "prime minister", "cabinet", "protest", "constitution", "vote", "diplomatic", "talks", "sanctions", "recognition", "deal", "agreement"]
+        "any_keyword": ["election", "parliament", "president", "prime minister", "cabinet", "protest", "constitution", "vote", "diplomatic", "peace talks", "sanctions", "recognition", "deal", "agreement", "government", "minister", "coup", "transition", "interim", "federation", "federal"]
       },
       "templates": [
         {
           "id": "pol-01",
-          "text": "Political decisions often signal shifting alliances and internal power dynamics that can affect stability and policy direction. Watching who benefits—and how institutions respond—helps explain what may come next."
+          "text": "Political decisions often signal shifting alliances and internal power dynamics that can affect stability and policy direction. Watching who benefits — and how institutions respond — helps explain what may come next."
+        },
+        {
+          "id": "pol-02",
+          "text": "Governance changes — whether through elections, appointments, or constitutional amendments — shape who controls resources and institutions. In fragile states, these transitions can be pivotal moments for stability or conflict."
         }
       ]
     },
@@ -55,13 +95,16 @@
       "group_id": "economy_trade",
       "priority": 70,
       "match": {
-        "any_category": ["Business", "Economy", "Trade"],
-        "any_keyword": ["inflation", "currency", "debt", "imf", "world bank", "budget", "trade", "port", "shipping", "investment", "oil", "gas", "tax", "prices"]
+        "any_keyword": ["inflation", "currency", "debt", "imf", "world bank", "budget", "trade", "port", "shipping", "investment", "oil", "gas", "tax", "prices", "forex", "exchange rate", "gdp", "economic", "fiscal", "monetary", "exports", "imports", "tariff", "sanction"]
       },
       "templates": [
         {
           "id": "eco-01",
           "text": "Economic shifts can hint at deeper pressures on budgets, currencies, and household costs. In a trade-linked region like the Horn of Africa, policy changes can quickly affect cross-border commerce and investor confidence."
+        },
+        {
+          "id": "eco-02",
+          "text": "Fiscal and monetary decisions shape the daily lives of ordinary people through prices, employment, and access to credit. How governments manage these pressures — and whether international partners support or constrain them — matters for stability."
         }
       ]
     },
@@ -69,19 +112,39 @@
       "group_id": "climate_environment",
       "priority": 60,
       "match": {
-        "any_category": ["Climate", "Environment"],
-        "any_keyword": ["drought", "flood", "rainfall", "locust", "heat", "climate", "crop", "harvest", "water", "environment"]
+        "any_keyword": ["drought", "flood", "rainfall", "locust", "heat", "climate", "crop", "harvest", "water", "environment", "deforestation", "desertification", "flooding", "el nino", "la nina", "cyclone", "irrigation"]
       },
       "templates": [
         {
           "id": "cli-01",
-          "text": "Climate shocks in the Horn of Africa can amplify food insecurity, displacement, and economic strain. Tracking early indicators—rainfall, harvests, and water access—helps explain why crises escalate or ease."
+          "text": "Climate shocks in the Horn of Africa can amplify food insecurity, displacement, and economic strain. Tracking early indicators — rainfall, harvests, and water access — helps explain why crises escalate or ease."
+        },
+        {
+          "id": "cli-02",
+          "text": "Environmental stress rarely stays local. In the Horn, drought and flood cycles affect pastoral communities, agriculture, and migration patterns across borders, often setting the conditions for conflict or cooperation."
+        }
+      ]
+    },
+    {
+      "group_id": "diplomacy_regional",
+      "priority": 75,
+      "match": {
+        "any_keyword": ["summit", "bilateral", "embassy", "ambassador", "foreign minister", "igad", "african union", "au", "un", "united nations", "regional", "cooperation", "memorandum", "mou", "treaty", "visit", "delegation", "relations", "diplomatic", "sea access", "red sea", "gerd", "nile"]
+      },
+      "templates": [
+        {
+          "id": "dip-01",
+          "text": "Diplomatic moves in the Horn of Africa often reflect competing interests between regional powers, global actors, and smaller states navigating their options. Even symbolic gestures can signal shifts in alignment that matter for trade, security, and aid."
+        },
+        {
+          "id": "dip-02",
+          "text": "The Horn sits at the intersection of multiple geopolitical interests — the Red Sea, the Gulf states, China, the US, and regional blocs. Understanding who is talking to whom, and why now, adds important context to these developments."
         }
       ]
     }
   ],
   "rotation": {
-    "mode": "hash", 
+    "mode": "hash",
     "salt": "hornupdates",
     "hash_fields": ["title", "source", "published_at"]
   }
