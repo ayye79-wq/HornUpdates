@@ -165,22 +165,51 @@
         </section>
       </main>
 
-      <!-- RIGHT SIDEBAR (X FEED) -->
+      <!-- RIGHT SIDEBAR -->
 <aside class="sidebar">
 
-  <!-- Twitter / X link -->
-  <a href="https://x.com/HornUpdatesHQ" target="_blank" class="twitter-link">
-    Follow us on X
-  </a>
+  <!-- X / Twitter embedded feed -->
+  <div class="sidebar-box" style="padding:0;overflow:hidden;border-radius:14px;">
+    <div style="padding:12px 14px 8px;font-weight:700;font-size:.95rem;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;gap:8px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.252 5.626L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      Live from X
+    </div>
+    <a class="twitter-timeline"
+       data-height="480"
+       data-chrome="nofooter noborders transparent"
+       data-tweet-limit="6"
+       href="https://twitter.com/HornUpdatesHQ">
+      Loading tweets…
+    </a>
+  </div>
 
-  <!-- Quick Updates box -->
-  <div class="sidebar-box about-mini">
-    <h3>Quick Updates</h3>
-    <p>
-      Stay informed without information overload.
-      Scan key headlines, read short summaries,
-      and click through only when you want more.
-    </p>
+  <!-- Key sources on X -->
+  <div class="sidebar-box">
+    <p class="sidebar-title" style="margin-bottom:10px;">Horn sources on X</p>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:.88rem;">
+      <a href="https://x.com/AddisStandard" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <span style="font-size:1rem;">🇪🇹</span> @AddisStandard
+      </a>
+      <a href="https://x.com/VOASomali" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <span style="font-size:1rem;">🇸🇴</span> @VOASomali
+      </a>
+      <a href="https://x.com/SudanTribune" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <span style="font-size:1rem;">🇸🇩</span> @SudanTribune
+      </a>
+      <a href="https://x.com/RadioTamazuj" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <span style="font-size:1rem;">🇸🇸</span> @RadioTamazuj
+      </a>
+      <a href="https://x.com/garoweonline" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <span style="font-size:1rem;">🇸🇴</span> @garoweonline
+      </a>
+      <a href="https://x.com/NilePost" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <span style="font-size:1rem;">🇺🇬</span> @NilePost
+      </a>
+      <a href="https://x.com/HornUpdatesHQ" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;padding:6px 10px;border-radius:8px;background:#111827;font-weight:600;margin-top:4px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.252 5.626L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+        Follow @HornUpdatesHQ
+      </a>
+    </div>
   </div>
 
   <!-- Countries covered -->
@@ -190,7 +219,6 @@
   </div>
 
   <!-- AdSense Sidebar Slot -->
-   <!-- AdSense Sidebar Slot -->
   <div class="sidebar-box sidebar-ad">
     <ins class="adsbygoogle"
          style="display:block"
@@ -198,16 +226,10 @@
          data-ad-slot="REPLACE_WITH_REAL_SLOT_ID"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
-
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
   </div>
-
-
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
 
 </aside>
 
