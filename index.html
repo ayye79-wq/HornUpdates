@@ -81,13 +81,13 @@
       <div class="country-chips-row">
         <div class="country-chips" id="country-chips">
           <button class="country-chip active" data-country="all">All countries</button>
-          <button class="country-chip" data-country="Ethiopia">🇪🇹 Ethiopia</button>
-          <button class="country-chip" data-country="Somalia">🇸🇴 Somalia</button>
-          <button class="country-chip" data-country="Sudan">🇸🇩 Sudan</button>
-          <button class="country-chip" data-country="South Sudan">🇸🇸 S. Sudan</button>
-          <button class="country-chip" data-country="Kenya">🇰🇪 Kenya</button>
-          <button class="country-chip" data-country="Eritrea">🇪🇷 Eritrea</button>
-          <button class="country-chip" data-country="Djibouti">🇩🇯 Djibouti</button>
+          <button class="country-chip" data-country="Ethiopia"><img class="chip-flag" src="https://flagcdn.com/et.svg" alt="Ethiopia flag"> Ethiopia</button>
+          <button class="country-chip" data-country="Somalia"><img class="chip-flag" src="https://flagcdn.com/so.svg" alt="Somalia flag"> Somalia</button>
+          <button class="country-chip" data-country="Sudan"><img class="chip-flag" src="https://flagcdn.com/sd.svg" alt="Sudan flag"> Sudan</button>
+          <button class="country-chip" data-country="South Sudan"><img class="chip-flag" src="https://flagcdn.com/ss.svg" alt="South Sudan flag"> S. Sudan</button>
+          <button class="country-chip" data-country="Kenya"><img class="chip-flag" src="https://flagcdn.com/ke.svg" alt="Kenya flag"> Kenya</button>
+          <button class="country-chip" data-country="Eritrea"><img class="chip-flag" src="https://flagcdn.com/er.svg" alt="Eritrea flag"> Eritrea</button>
+          <button class="country-chip" data-country="Djibouti"><img class="chip-flag" src="https://flagcdn.com/dj.svg" alt="Djibouti flag"> Djibouti</button>
         </div>
         <div class="lang-toggle-wrap">
           <button class="lang-toggle active" id="lang-en" data-lang="en" title="English stories only">EN</button>
@@ -402,7 +402,20 @@
     const title = clamp(article.title || "Untitled story", isFeatured ? 160 : 120);
     const summary = clamp(article.summary || article.excerpt || "", isFeatured ? 420 : 340);
     const cardClass = "story-card" + (isFeatured ? " story-card--featured" : "");
-    const countryTags = countriesArr.map(c => `<span class="tag-pill">${c}</span>`).join("");
+    const FLAG_IMGS = {
+      Ethiopia:     'https://flagcdn.com/et.svg',
+      Somalia:      'https://flagcdn.com/so.svg',
+      Sudan:        'https://flagcdn.com/sd.svg',
+      "South Sudan":'https://flagcdn.com/ss.svg',
+      Kenya:        'https://flagcdn.com/ke.svg',
+      Eritrea:      'https://flagcdn.com/er.svg',
+      Djibouti:     'https://flagcdn.com/dj.svg',
+      Somaliland:   'https://flagcdn.com/so.svg',
+    };
+    const countryTags = countriesArr.map(c => {
+      const flagImg = FLAG_IMGS[c] ? `<img class="chip-flag" src="${FLAG_IMGS[c]}" alt="">` : "";
+      return `<span class="tag-pill tag-pill--country">${flagImg}${c}</span>`;
+    }).join("");
 
     return `
       <article class="${cardClass}">
@@ -447,7 +460,16 @@
     const statsEl = document.getElementById("country-stats");
     if (!statsEl) return;
     const counts = {};
-    const flags = { Ethiopia:"🇪🇹", Somalia:"🇸🇴", Sudan:"🇸🇩", "South Sudan":"🇸🇸", Kenya:"🇰🇪", Eritrea:"🇪🇷", Djibouti:"🇩🇯" };
+    const flags = {
+      Ethiopia:     '<img class="chip-flag" src="https://flagcdn.com/et.svg" alt="">',
+      Somalia:      '<img class="chip-flag" src="https://flagcdn.com/so.svg" alt="">',
+      Sudan:        '<img class="chip-flag" src="https://flagcdn.com/sd.svg" alt="">',
+      "South Sudan":'<img class="chip-flag" src="https://flagcdn.com/ss.svg" alt="">',
+      Kenya:        '<img class="chip-flag" src="https://flagcdn.com/ke.svg" alt="">',
+      Eritrea:      '<img class="chip-flag" src="https://flagcdn.com/er.svg" alt="">',
+      Djibouti:     '<img class="chip-flag" src="https://flagcdn.com/dj.svg" alt="">',
+      Somaliland:   '<img class="chip-flag" src="https://flagcdn.com/so.svg" alt="">',
+    };
     articles.forEach(a => {
       getCountries(a).forEach(c => { counts[c] = (counts[c] || 0) + 1; });
     });
