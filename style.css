@@ -146,7 +146,28 @@ body {
 }
 
 .story-card--featured {
-  border-left: 4px solid #111827;
+  background: linear-gradient(160deg, #f0f7ff 0%, #ffffff 55%);
+  border: 1px solid #bfdbfe;
+  border-left: 4px solid #2563eb;
+  padding: 18px 18px 14px;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
+}
+.story-card--featured .story-title {
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2563eb;
+  background: #dbeafe;
+  border-radius: 999px;
+  padding: 3px 9px;
 }
 
 .story-header {
