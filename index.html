@@ -365,19 +365,19 @@
 
   function getContextForArticle(article, templates) {
     if (!templates || !templates.groups) return null;
-    const text = [
+    const kwText = [
       article.title || "",
       article.summary || article.excerpt || "",
-      ...(Array.isArray(article.topic_tags) ? article.topic_tags : []),
-      ...(getCountries(article)),
     ].join(" ").toLowerCase();
+    const articleTags = (Array.isArray(article.topic_tags) ? article.topic_tags : [])
+      .map(t => t.toLowerCase());
 
     const sorted = [...templates.groups].sort((a, b) => (b.priority || 0) - (a.priority || 0));
     for (const group of sorted) {
       const { match, templates: tmplList } = group;
       if (!match || !tmplList || !tmplList.length) continue;
-      const kwMatch = (match.any_keyword || []).some(kw => wordMatch(text, kw.toLowerCase()));
-      const catMatch = (match.any_category || []).some(cat => wordMatch(text, cat.toLowerCase()));
+      const kwMatch = (match.any_keyword || []).some(kw => wordMatch(kwText, kw.toLowerCase()));
+      const catMatch = (match.any_category || []).some(cat => articleTags.includes(cat.toLowerCase()));
       if (kwMatch || catMatch) {
         const idx = Math.abs(simpleHash(article.title || "")) % tmplList.length;
         return tmplList[idx].text;
