@@ -3,23 +3,12 @@
 update_articles.py
 
 Horn Updates scraper:
-- Fetches RSS feeds
+- Fetches RSS feeds from multiple high-quality sources
 - Filters for Horn of Africa stories
-- ALWAYS includes Horn-focused feeds (Addis Standard, Reporter, Hiiraan, Garowe, EastAfrican, Sudan Tribune)
-- Blocks unwanted sources
+- Assigns enriched topic tags (Politics, Security, Humanitarian, Economy, Climate, Health, Diplomacy)
+- Detects article language (en/ar)
+- Deduplicates by URL and title similarity
 - Builds articles.json for the frontend
-
-STRICT MODE:
-- Only FETCHES entries newer than last_run_utc.txt
-- But OUTPUT keeps a rolling backlog by MERGING with existing articles.json
-
-FIXED / IMPROVED:
-1) SudanTribune HTML + “The post ... appeared first ...” footer removed reliably (even when HTML is messy)
-2) Title-as-summary duplicates detected strongly but safely; replaced with a clean fallback
-3) We clean/normalize BOTH new AND existing (merged backlog) right before writing.
-4) Country tags are forced whenever possible (keywords → patterns → domain defaults)
-5) Addis Fortune / paywall promo junk filtered (subscribe / print edition / bank detail etc.)
-6) Optional page-text fallback for teaser/junk summaries on select domains (safe extraction: meta/og/paragraphs)
 """
 
 import json
@@ -32,7 +21,7 @@ import html
 import unicodedata
 from typing import Optional, List, Dict, Any
 
-import feedparser  # pip install feedparser
+import feedparser
 from urllib.parse import urlparse
 
 # ----------------------------
@@ -52,7 +41,6 @@ def load_last_run():
             return dt.datetime.fromisoformat(LAST_RUN_FILE.read_text().strip())
         except Exception:
             pass
-    # First run default: last 1 day
     return utc_now() - dt.timedelta(days=1)
 
 
@@ -67,13 +55,22 @@ def save_last_run(ts: dt.datetime):
 OUTPUT_PATH = Path("articles.json")
 
 RSS_FEEDS = [
+    # International / broad Africa
     "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
+    "https://www.voanews.com/api/ztiykqivlp",                      # VOA Africa
+    "https://www.aljazeera.com/xml/rss/all.xml",                   # Al Jazeera (broad; filtered)
+    "https://feeds.reuters.com/reuters/AFRICANews",                 # Reuters Africa
+    # Horn-specific English
     "https://www.thereporterethiopia.com/feed/",
     "https://www.theeastafrican.co.ke/rss.xml",
-    "https://sudantribune.net/feed/",
     "https://addisfortune.news/feed/",
-    # If you re-add Addis Standard later, keep it in ALWAYS_INCLUDE_FEEDS
-    # "https://www.addisstandard.com/feed/",
+    "https://addisstandard.com/feed/",
+    "https://www.hiiraan.com/rss/news.xml",                        # Somalia / Hiiraan
+    "https://www.garoweonline.com/en/news/feed",                   # Somalia / Garowe
+    # Sudan (English + Arabic)
+    "https://sudantribune.net/feed/",
+    # Kenya / East Africa
+    "https://www.standardmedia.co.ke/rss/kenya.php",
 ]
 
 ALWAYS_INCLUDE_FEEDS = [
@@ -84,6 +81,7 @@ ALWAYS_INCLUDE_FEEDS = [
     "theeastafrican.co.ke",
     "sudantribune.net",
     "addisfortune.news",
+    "standardmedia.co.ke",
 ]
 
 BLOCKED_SOURCES = [
@@ -93,11 +91,14 @@ BLOCKED_SOURCES = [
 HORN_KEYWORDS = [
     "ethiopia", "addis ababa", "amhara", "oromia", "tigray",
     "eritrea", "asmara", "oromo", "amhara", "amara", "tigray", "tegaru",
-    "somalia", "mogadishu", "puntland", "somaliland",
+    "somalia", "mogadishu", "puntland", "somaliland", "hargeisa",
     "djibouti",
-    "sudan", "south sudan", "khartoum",
+    "sudan", "south sudan", "khartoum", "darfur", "juba",
     "kenya", "nairobi",
     "horn of africa",
+    "al-shabaab", "al shabaab", "igad", "intergovernmental authority",
+    # Arabic
+    "السودان", "إثيوبيا", "الصومال", "إريتريا", "كينيا",
 ]
 
 COUNTRY_TAGS = {
@@ -110,9 +111,8 @@ COUNTRY_TAGS = {
     "kenya": "Kenya",
 }
 
-MAX_ARTICLES = 200
+MAX_ARTICLES = 300
 
-# Addis Fortune / paywall promo junk patterns (lowercase matching)
 SUBSCRIPTION_JUNK = [
     "subscribe",
     "subscription",
@@ -141,6 +141,16 @@ def is_horn_story(text: str) -> bool:
     return any(kw in lower for kw in HORN_KEYWORDS)
 
 
+def detect_language(title: str, summary: str) -> str:
+    """Simple language detection: Arabic vs English."""
+    text = f"{title} {summary}"
+    arabic_chars = sum(1 for c in text if '\u0600' <= c <= '\u06FF')
+    total_alpha = sum(1 for c in text if c.isalpha())
+    if total_alpha > 0 and arabic_chars / total_alpha > 0.2:
+        return "ar"
+    return "en"
+
+
 def extract_countries(text: str):
     if not text:
         return []
@@ -149,8 +159,6 @@ def extract_countries(text: str):
     for needle, country_name in COUNTRY_TAGS.items():
         if needle in lower:
             found.append(country_name)
-
-    # de-duplicate preserving order
     seen = set()
     unique = []
     for c in found:
@@ -196,8 +204,6 @@ def load_existing_articles():
 
 
 def parse_feed_no_cache(url: str):
-    from urllib.error import HTTPError, URLError
-
     req = urllib.request.Request(
         url,
         headers={
@@ -206,42 +212,18 @@ def parse_feed_no_cache(url: str):
             "Pragma": "no-cache",
         }
     )
-
     try:
         with urllib.request.urlopen(req, timeout=20) as r:
             data = r.read()
-
-    except HTTPError as e:
-        # ✅ 304 = Not Modified (server says "nothing changed")
+    except urllib.error.HTTPError as e:
         if e.code == 304:
-            print("[INFO] Feed returned 304 Not Modified → treating as no new items.")
+            print("[INFO] Feed returned 304 Not Modified → no new items.")
             return None
-        raise  # other HTTP errors should still raise
-
-    except URLError as e:
+        raise
+    except urllib.error.URLError as e:
         print(f"[WARN] Network error fetching feed: {e}")
         return None
-
-    # ✅ Only runs if fetch succeeded
     return feedparser.parse(data)
-
-
-
-def merge_dedupe(old_list, new_list):
-    merged = []
-    seen = set()
-
-    for a in new_list + old_list:
-        key = (a.get("source_url") or a.get("link") or "").strip()
-        if not key:
-            key = (a.get("title", "") + "|" + a.get("published_at", "")).strip()
-        if key in seen:
-            continue
-        seen.add(key)
-        merged.append(a)
-
-    merged.sort(key=lambda x: x.get("published_at", ""), reverse=True)
-    return merged[:MAX_ARTICLES]
 
 
 def _norm_text(s: str) -> str:
@@ -250,6 +232,29 @@ def _norm_text(s: str) -> str:
     s = html.unescape(s)
     s = re.sub(r"\s+", " ", s).strip()
     return s.lower()
+
+
+def _title_similar(a: str, b: str) -> bool:
+    """Return True if two titles are similar enough to be duplicates."""
+    a = _norm_text(a)
+    b = _norm_text(b)
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    # One starts with the other within 25 chars
+    if a.startswith(b[:max(10, len(b)-25)]) or b.startswith(a[:max(10, len(a)-25)]):
+        return True
+    # Word overlap: if >75% of shorter title's words are in longer
+    wa = set(a.split())
+    wb = set(b.split())
+    shorter = wa if len(wa) <= len(wb) else wb
+    longer  = wb if len(wa) <= len(wb) else wa
+    if len(shorter) >= 5:
+        overlap = len(shorter & longer) / len(shorter)
+        if overlap >= 0.75:
+            return True
+    return False
 
 
 def _almost_same(a: str, b: str) -> bool:
@@ -295,21 +300,39 @@ def looks_like_subscription_text(text: str) -> bool:
     return any(j in low for j in SUBSCRIPTION_JUNK)
 
 
+def merge_dedupe(old_list, new_list):
+    merged = []
+    seen_urls = set()
+    seen_titles = []  # list for title similarity check
+
+    for a in new_list + old_list:
+        key = (a.get("source_url") or a.get("link") or "").strip()
+        if not key:
+            key = (a.get("title", "") + "|" + a.get("published_at", "")).strip()
+
+        if key in seen_urls:
+            continue
+
+        title = _norm_text(a.get("title", ""))
+        if any(_title_similar(title, t) for t in seen_titles):
+            continue
+
+        seen_urls.add(key)
+        if title:
+            seen_titles.append(title)
+        merged.append(a)
+
+    merged.sort(key=lambda x: x.get("published_at", ""), reverse=True)
+    return merged[:MAX_ARTICLES]
+
+
 # ----------------------------
-# 2a. SUMMARY BUILDING (RSS + SAFE FALLBACK)
+# 2a. SUMMARY BUILDING
 # ----------------------------
 
 def make_summary(entry) -> str:
-    """
-    Build a usable summary from RSS fields:
-    - Prefer richer fields (content, summary_detail) when present
-    - Strip HTML
-    - Drop subscription/promo junk
-    - Return up to 4 sentences
-    """
     candidates: List[str] = []
 
-    # 1) Rich 'content' list of dicts with 'value'
     content = getattr(entry, "content", None)
     if isinstance(content, list) and content:
         for c in content:
@@ -318,34 +341,27 @@ def make_summary(entry) -> str:
             if val:
                 candidates.append(val)
 
-    # 2) summary_detail
     sd = getattr(entry, "summary_detail", None)
     if isinstance(sd, dict):
         val = _strip_html(sd.get("value", "") or "")
         if val:
             candidates.append(val)
 
-    # 3) Common fields
     for field in ("summary", "description", "subtitle"):
         val = getattr(entry, field, "") or ""
         val = _strip_html(val)
         if val:
             candidates.append(val)
 
-    # Filter obvious subscription junk candidates
     candidates = [c for c in candidates if not looks_like_subscription_text(c)]
-
     text = max(candidates, key=len) if candidates else ""
     if not text:
         return ""
 
     sents = _sentences(text)
     out = " ".join(sents[:4]).strip() if sents else text
-
-    # Final check
     if looks_like_subscription_text(out):
         return ""
-
     return out
 
 
@@ -353,9 +369,7 @@ def _fetch_html(url: str, timeout: int = 12) -> str:
     try:
         req = urllib.request.Request(
             url,
-            headers={
-                "User-Agent": "Mozilla/5.0 (HornUpdatesBot/1.0; +https://hornupdates.com)"
-            }
+            headers={"User-Agent": "Mozilla/5.0 (HornUpdatesBot/1.0; +https://hornupdates.com)"}
         )
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             charset = resp.headers.get_content_charset() or "utf-8"
@@ -365,16 +379,9 @@ def _fetch_html(url: str, timeout: int = 12) -> str:
 
 
 def _extract_text_from_html(html_text: str) -> str:
-    """
-    Safe-ish extraction:
-    - Try meta description / og:description
-    - Try JSON-LD (articleBody/description) via regex
-    - Fallback to first paragraphs (after removing scripts/styles)
-    """
     if not html_text:
         return ""
 
-    # JSON-LD blocks
     jsonld_blocks = re.findall(
         r'(?is)<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
         html_text
@@ -388,7 +395,6 @@ def _extract_text_from_html(html_text: str) -> str:
         if m:
             return _strip_html(m.group(1))
 
-    # meta description
     m = re.search(
         r'(?is)<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']',
         html_text
@@ -398,7 +404,6 @@ def _extract_text_from_html(html_text: str) -> str:
         if len(meta_desc) > 100 and not looks_like_subscription_text(meta_desc):
             return meta_desc
 
-    # og:description
     m = re.search(
         r'(?is)<meta[^>]+property=["\']og:description["\'][^>]+content=["\'](.*?)["\']',
         html_text
@@ -408,27 +413,19 @@ def _extract_text_from_html(html_text: str) -> str:
         if len(og_desc) > 100 and not looks_like_subscription_text(og_desc):
             return og_desc
 
-    # Remove scripts/styles
     cleaned = re.sub(r"(?is)<style.*?>.*?</style>", " ", html_text)
     cleaned = re.sub(r"(?is)<script.*?>.*?</script>", " ", cleaned)
-
     paras = re.findall(r"(?is)<p[^>]*>(.*?)</p>", cleaned)
     paras = [_strip_html(p) for p in paras]
     paras = [p for p in paras if len(p) > 50 and not looks_like_subscription_text(p)]
-    text = " ".join(paras[:10]).strip()
-    return text
+    return " ".join(paras[:10]).strip()
 
 
 def maybe_upgrade_summary_from_page(link: str, current_summary: str) -> str:
-    """
-    Only try this when summary is empty/teaser/junk and domain is known to be teaser-heavy.
-    """
     if not link:
         return current_summary
 
     host = urlparse(link).netloc.lower()
-
-    # Only these domains get page fallback (to keep runs fast & safe)
     allowed_hosts = {
         "www.theeastafrican.co.ke", "theeastafrican.co.ke",
         "www.addisfortune.news", "addisfortune.news",
@@ -437,7 +434,6 @@ def maybe_upgrade_summary_from_page(link: str, current_summary: str) -> str:
     if host not in allowed_hosts:
         return current_summary
 
-    # Only if needed
     s = (current_summary or "").strip()
     if s and len(s) >= 160 and not s.endswith("...") and not looks_like_subscription_text(s):
         return current_summary
@@ -454,12 +450,11 @@ def maybe_upgrade_summary_from_page(link: str, current_summary: str) -> str:
     upgraded = " ".join(sents[:4]).strip()
     if looks_like_subscription_text(upgraded):
         return current_summary
-
     return upgraded
 
 
 # ----------------------------
-# 2b. SUMMARY CLEANING + NORMALIZATION
+# 2b. SUMMARY CLEANING
 # ----------------------------
 
 def clean_summary(raw: str, title: str = "", source_name: str = "") -> str:
@@ -468,40 +463,21 @@ def clean_summary(raw: str, title: str = "", source_name: str = "") -> str:
     source_name = _clean_source_name(source_name or "")
 
     s = html.unescape(raw)
-
-    # 1) Remove any <img ...> tags anywhere
     s = re.sub(r"<img\b[^>]*>", " ", s, flags=re.IGNORECASE)
-
-    # 2) Remove WP footer while still HTML
     s = re.sub(
         r"(?:<p>\s*)?The post .*? appeared first on .*?(?:</p>)?",
-        " ",
-        s,
-        flags=re.IGNORECASE | re.DOTALL
+        " ", s, flags=re.IGNORECASE | re.DOTALL
     )
-
-    # 3) Strip ALL HTML tags
     s = re.sub(r"<[^>]+>", " ", s)
-
-    # 4) Collapse whitespace
     s = re.sub(r"\s+", " ", s).strip()
-
-    # 5) Remove WP footer again (plain text)
     s = re.sub(r"The post .*? appeared first on .*?$", " ", s, flags=re.IGNORECASE).strip()
 
-    # 6) Drop subscription junk
     if looks_like_subscription_text(s):
         s = ""
-
-    # 7) Title duplication detection
     if _almost_same(s, title):
         s = ""
-
-    # 8) If still empty/too short, fallback
     if len(s) < 25:
         s = f"Read the full story on {source_name}." if source_name else "Read the full story at the source."
-
-    # 9) Soft cap (keeps reader clean)
     if len(s) > 650:
         s = s[:647].rsplit(" ", 1)[0] + "..."
 
@@ -509,17 +485,17 @@ def clean_summary(raw: str, title: str = "", source_name: str = "") -> str:
 
 
 # ----------------------------
-# 2c. COUNTRY FORCING
+# 2c. COUNTRY INFERRING
 # ----------------------------
 
 COUNTRY_PATTERNS = [
-    ("Ethiopia", r"\b(ethiopia|addis(\s+ababa)?|tigray|oromia|amhara|gondar|bahir\s+dar|mekelle)\b"),
-    ("Somalia", r"\b(somalia|mogadishu|puntland|somaliland|hargeisa|kismayo|galmudug)\b"),
+    ("Ethiopia", r"\b(ethiopia|addis(\s+ababa)?|tigray|oromia|amhara|gondar|bahir\s+dar|mekelle|abiy|oromo)\b"),
+    ("Somalia", r"\b(somalia|mogadishu|puntland|somaliland|hargeisa|kismayo|galmudug|al.?shabaab)\b"),
     ("Sudan", r"\b(sudan|khartoum|darfur|rsf|saf|burhan|hemeti|omdurman|port\s*sudan|kassala|el\s*fasher)\b"),
-    ("South Sudan", r"\b(south\s+sudan|juba|upper\s+nile|bentiu)\b"),
+    ("South Sudan", r"\b(south\s+sudan|juba|upper\s+nile|bentiu|kiir|machar)\b"),
     ("Kenya", r"\b(kenya|nairobi|mombasa|kisumu|ruto|raila|eldoret|nakuru)\b"),
     ("Djibouti", r"\b(djibouti)\b"),
-    ("Eritrea", r"\b(eritrea|asmara|massawa)\b"),
+    ("Eritrea", r"\b(eritrea|asmara|massawa|afwerki)\b"),
 ]
 
 DOMAIN_DEFAULT_COUNTRY = {
@@ -550,7 +526,6 @@ def infer_country_tags(title: str, url: str, existing_tags=None, max_tags: int =
 
     text = f"{title or ''} {url or ''}".lower()
     found = []
-
     for country, pattern in COUNTRY_PATTERNS:
         if re.search(pattern, text, flags=re.IGNORECASE):
             found.append(country)
@@ -575,6 +550,67 @@ def infer_country_tags(title: str, url: str, existing_tags=None, max_tags: int =
     return []
 
 
+def assign_topic_tags(combined_text: str) -> List[str]:
+    """Assign one or more topic tags from an expanded set of categories."""
+    lower = combined_text.lower()
+    topic_tags = []
+
+    if any(w in lower for w in [
+        "election", "parliament", "government", "president", "prime minister",
+        "minister", "policy", "vote", "cabinet", "constitution", "ruling party",
+        "opposition", "coup", "protest", "demonstration", "reform"
+    ]):
+        topic_tags.append("Politics & Governance")
+
+    if any(w in lower for w in [
+        "attack", "clash", "conflict", "war", "military", "fighting", "strike",
+        "armed", "bomb", "troops", "militia", "ceasefire", "insurgent", "terror",
+        "al-shabaab", "al shabaab", "rsf", "rapid support", "airstrike", "offensive",
+        "hostage", "killed", "casualties", "siege"
+    ]):
+        topic_tags.append("Security & Conflict")
+
+    if any(w in lower for w in [
+        "investment", "economy", "business", "market", "trade", "company", "debt",
+        "inflation", "imf", "world bank", "currency", "gdp", "port", "export",
+        "import", "oil", "gas", "tax", "revenue", "budget", "growth"
+    ]):
+        topic_tags.append("Business & Economy")
+
+    if any(w in lower for w in [
+        "aid", "humanitarian", "food", "relief", "famine", "drought", "refugee",
+        "displaced", "unicef", "wfp", "usaid", "malnutrition", "cholera",
+        "shelter", "camp", "crisis", "emergency", "civilian"
+    ]):
+        topic_tags.append("Humanitarian")
+
+    if any(w in lower for w in [
+        "diplomat", "treaty", "agreement", "talks", "sanctions", "recognition",
+        "summit", "ambassador", "delegation", "foreign minister", "envoy",
+        "relations", "bilateral", "multilateral", "peace deal", "negotiation"
+    ]):
+        topic_tags.append("Diplomacy")
+
+    if any(w in lower for w in [
+        "climate", "flood", "rainfall", "locust", "heat", "environment",
+        "crop", "harvest", "water", "deforestation", "sea level", "carbon",
+        "drought", "weather", "cyclone"
+    ]):
+        topic_tags.append("Climate & Environment")
+
+    if any(w in lower for w in [
+        "health", "disease", "hospital", "medicine", "vaccine", "epidemic",
+        "outbreak", "who", "pandemic", "malaria", "tuberculosis", "hiv",
+        "surgery", "clinic", "mortality"
+    ]):
+        topic_tags.append("Health")
+
+    if not topic_tags:
+        topic_tags.append("General")
+
+    return topic_tags
+
+
 def normalize_article(article: dict) -> dict:
     title = (article.get("title") or "").strip()
     source_name = _clean_source_name(article.get("source_name") or "")
@@ -593,6 +629,9 @@ def normalize_article(article: dict) -> dict:
     existing = article.get("country_tags") or []
     article["country_tags"] = infer_country_tags(title, source_url, existing_tags=existing, max_tags=2)
 
+    if "language" not in article:
+        article["language"] = detect_language(title, article["summary"])
+
     return article
 
 
@@ -609,14 +648,20 @@ def main():
     for feed_url in RSS_FEEDS:
         print(f"\n=== Fetching: {feed_url} ===")
 
-        # Reporter sometimes caches aggressively
-        if "thereporterethiopia.com" in feed_url:
-            parsed = parse_feed_no_cache(feed_url)
-        else:
-            parsed = feedparser.parse(
-                feed_url,
-                request_headers={"User-Agent": "HornUpdatesBot/1.0 (+https://hornupdates.com)"}
-            )
+        try:
+            if "thereporterethiopia.com" in feed_url:
+                parsed = parse_feed_no_cache(feed_url)
+            else:
+                parsed = feedparser.parse(
+                    feed_url,
+                    request_headers={"User-Agent": "HornUpdatesBot/1.0 (+https://hornupdates.com)"}
+                )
+        except Exception as e:
+            print(f"[WARN] Failed to fetch {feed_url}: {e}")
+            continue
+
+        if parsed is None:
+            continue
 
         entries = getattr(parsed, "entries", None) or []
         if not entries:
@@ -626,7 +671,9 @@ def main():
         include_all = should_always_include(feed_url)
         count_included = 0
 
-        source_name = _clean_source_name(parsed.feed.get("title", "") if getattr(parsed, "feed", None) else "")
+        source_name = _clean_source_name(
+            parsed.feed.get("title", "") if getattr(parsed, "feed", None) else ""
+        )
 
         for entry in entries:
             title = getattr(entry, "title", "") or ""
@@ -636,62 +683,47 @@ def main():
                 continue
 
             published_dt = extract_published_dt(entry)
-
-            # STRICT: skip entries with no publish date
             if not published_dt:
                 continue
-
-            # STRICT: only fetch stories newer than last run
             if published_dt <= last_run:
                 continue
-
-            # Safety: skip future-dated items
             if published_dt > now + dt.timedelta(minutes=5):
                 continue
 
-            # 1) RSS summary (clean build)
             summary_raw = make_summary(entry)
-
-            # 2) If teaser/junk, try safe page fallback for select domains
-            if not summary_raw or looks_like_subscription_text(summary_raw) or summary_raw.endswith("...") or len(_strip_html(summary_raw)) < 140:
+            if not summary_raw or looks_like_subscription_text(summary_raw) or \
+               summary_raw.endswith("...") or len(_strip_html(summary_raw)) < 140:
                 summary_raw = maybe_upgrade_summary_from_page(link, summary_raw)
 
-            # 3) Final cleaning (handles SudanTribune footer, title duplication, etc.)
             summary = clean_summary(summary_raw, title=title, source_name=source_name)
-
             combined_text = f"{title}\n{summary}"
 
-            # Keep BBC Africa feed from being too restrictive (BBC is broad; we still want Horn matches)
-            is_bbc_africa = "feeds.bbci.co.uk" in (feed_url or "").lower()
+            is_broad_feed = any(d in (feed_url or "").lower() for d in [
+                "feeds.bbci.co.uk", "aljazeera.com", "reuters.com", "voanews.com"
+            ])
 
-            if not include_all and not is_bbc_africa and not is_horn_story(combined_text):
+            if not include_all and not is_broad_feed and not is_horn_story(combined_text):
+                continue
+            if is_broad_feed and not is_horn_story(combined_text):
                 continue
 
             published_at = published_dt.isoformat()
+            language = detect_language(title, summary)
 
             countries = infer_country_tags(
-                title,
-                link,
+                title, link,
                 existing_tags=extract_countries(combined_text),
                 max_tags=2
             )
 
-            topic_tags = []
-            lower = combined_text.lower()
-            if any(w in lower for w in ["election", "parliament", "government", "president", "prime minister"]):
-                topic_tags.append("Politics & Governance")
-            if any(w in lower for w in ["attack", "clash", "conflict", "war", "military", "fighting", "strike"]):
-                topic_tags.append("Security & Conflict")
-            if any(w in lower for w in ["investment", "economy", "business", "market", "trade", "company", "debt"]):
-                topic_tags.append("Business & Economy")
-            if not topic_tags:
-                topic_tags.append("General")
+            topic_tags = assign_topic_tags(combined_text)
 
             article = {
                 "title": title,
                 "summary": summary,
                 "country_tags": countries,
                 "topic_tags": topic_tags,
+                "language": language,
                 "published_at": published_at,
                 "source_url": link,
                 "source_name": source_name,
@@ -704,11 +736,8 @@ def main():
 
     existing = load_existing_articles()
     merged_articles = merge_dedupe(existing, new_articles)
-
-    # ✅ Clean BOTH new + existing right before writing (includes forced country tags)
     merged_articles = [normalize_article(a) for a in merged_articles]
 
-    # If nothing new AND file exists, keep it (still update last_run)
     if len(new_articles) == 0 and OUTPUT_PATH.exists():
         print("[INFO] No new articles since last run. Keeping existing articles.json.")
         save_last_run(now)
@@ -720,7 +749,7 @@ def main():
         "articles": merged_articles,
     }
 
-    print(f"\nWriting {len(merged_articles)} total articles to {OUTPUT_PATH} (new fetched: {len(new_articles)})")
+    print(f"\nWriting {len(merged_articles)} total articles to {OUTPUT_PATH} (new: {len(new_articles)})")
     OUTPUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
     save_last_run(now)
