@@ -62,6 +62,14 @@
       line-height: 1.9;
       font-family: "Segoe UI", Tahoma, Arial, sans-serif;
     }
+
+    /* Collapse ad slot when AdSense doesn't fill it */
+    .reader-ad-slot { margin-top: 16px; overflow: hidden; }
+    .reader-ad-slot.empty { display: none; }
+    ins.adsbygoogle[data-ad-status="unfilled"] {
+      display: none !important;
+      height: 0 !important;
+    }
   </style>
 </head>
 
@@ -112,8 +120,8 @@
         Full article remains on the publisher's website.
       </div>
 
-      <!-- AdSense: Reader Ad (below attribution, after all content) -->
-      <div style="margin-top:16px;">
+      <!-- AdSense: Reader Ad (below attribution) -->
+      <div class="reader-ad-slot" id="reader-ad-wrap">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-7773342225754932"
@@ -251,6 +259,17 @@
         alert("Link copied");
       }
     });
+  </script>
+  <script>
+    /* Collapse the ad wrapper if no ad fills within 2.5 seconds */
+    setTimeout(() => {
+      const wrap = document.getElementById("reader-ad-wrap");
+      if (!wrap) return;
+      const ins = wrap.querySelector("ins.adsbygoogle");
+      if (ins && ins.dataset.adStatus !== "filled") {
+        wrap.classList.add("empty");
+      }
+    }, 2500);
   </script>
 </body>
 </html>
