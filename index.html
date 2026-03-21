@@ -118,6 +118,68 @@
           <div id="no-results" class="no-results" style="display:none;">No stories match your search. Try a different keyword or filter.</div>
           <div id="latest-container"></div>
         </section>
+
+        <!-- OPINION SECTION -->
+        <section class="latest-section" style="margin-top:28px;">
+          <h2>Opinion &amp; Analysis</h2>
+          <p style="color:#6b7280;font-size:.95rem;margin:0 0 14px;">Original commentary and analysis by Horn Updates on key issues shaping the Horn of Africa.</p>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+
+            <article class="story-card">
+              <header class="story-header">
+                <div class="story-tags">
+                  <span class="tag-pill">Eritrea</span>
+                  <span class="tag-pill">Ethiopia</span>
+                  <span class="tag-pill tag-category">Opinion</span>
+                </div>
+                <h3 class="story-title">
+                  <a class="story-link" href="/opinion-assab.html">The Fate of Assab: Annexation, Access, or the Status Quo?</a>
+                </h3>
+              </header>
+              <p class="story-summary">Assab has long occupied an outsized place in the political imagination of the Horn of Africa. Once Ethiopia's principal maritime outlet, the Red Sea port became Eritrean territory after independence in 1993, transforming a logistical asset into a symbol of loss, sovereignty, and unresolved regional tension. Any attempt to absorb Assab by force would violate international law — the more plausible path lies in long-term leasing arrangements and internationally guaranteed port-access agreements.</p>
+              <footer class="story-meta">
+                <span class="story-source">Horn Updates</span>
+                <span class="story-date">Jan 2026</span>
+              </footer>
+            </article>
+
+            <article class="story-card">
+              <header class="story-header">
+                <div class="story-tags">
+                  <span class="tag-pill">Somalia</span>
+                  <span class="tag-pill tag-category">Opinion</span>
+                </div>
+                <h3 class="story-title">
+                  <a class="story-link" href="/opinion-somaliland.html">Somaliland's Recognition Bid: Why the International Community Keeps Hesitating</a>
+                </h3>
+              </header>
+              <p class="story-summary">Somaliland has maintained peace, held democratic elections, and built functioning institutions for over three decades — yet remains unrecognised by any UN member state. The reasons are less about Somaliland's merit and more about the precedents recognition would set, the interests of neighbouring states, and the reluctance of the African Union to revisit colonial-era borders.</p>
+              <footer class="story-meta">
+                <span class="story-source">Horn Updates</span>
+                <span class="story-date">Feb 2026</span>
+              </footer>
+            </article>
+
+            <article class="story-card">
+              <header class="story-header">
+                <div class="story-tags">
+                  <span class="tag-pill">Sudan</span>
+                  <span class="tag-pill tag-category">Opinion</span>
+                </div>
+                <h3 class="story-title">
+                  <a class="story-link" href="/opinion-post-1.html">Sudan's Civil War: Why a Negotiated End Remains Elusive</a>
+                </h3>
+              </header>
+              <p class="story-summary">Since fighting broke out between the Sudanese Armed Forces and the Rapid Support Forces in April 2023, peace talks have repeatedly stalled. Both sides believe they can achieve a military victory, external actors have competing interests, and there is no neutral broker with sufficient leverage. Understanding why negotiations fail is as important as understanding the conflict itself.</p>
+              <footer class="story-meta">
+                <span class="story-source">Horn Updates</span>
+                <span class="story-date">Mar 2026</span>
+              </footer>
+            </article>
+
+            <p style="margin-top:8px;"><a href="/opinion.html" style="color:#2563eb;font-weight:600;">View all opinion &amp; analysis →</a></p>
+          </div>
+        </section>
       </main>
 
       <!-- RIGHT SIDEBAR (X FEED) -->
@@ -281,7 +343,7 @@
     const href = buildReaderLink(article.source_url || article.link);
 
     const title = clamp(article.title || "Untitled story", isFeatured ? 160 : 120);
-    const summary = clamp(article.summary || article.excerpt || "", isFeatured ? 300 : 240);
+    const summary = clamp(article.summary || article.excerpt || "", isFeatured ? 420 : 340);
     const cardClass = "story-card" + (isFeatured ? " story-card--featured" : "");
     const countryTags = countriesArr.map(c => `<span class="tag-pill">${c}</span>`).join("");
 
