@@ -2,79 +2,225 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About - Horn Updates</title>
+  <title>About Horn Updates — Horn of Africa News Aggregator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Horn Updates is an independent news aggregator covering Ethiopia, Somalia, Sudan, Eritrea, Djibouti, South Sudan and Kenya — bringing trusted reporting into one clean, readable place." />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="/favicon.ico" />
+  <style>
+    body {
+      background: #f5f6f8;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: #111827;
+      margin: 0;
+      line-height: 1.75;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 24px 18px; }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px 26px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.05);
+      margin-bottom: 20px;
+    }
+    h1 { font-size: 1.9rem; margin: 0 0 10px; }
+    h2 { font-size: 1.2rem; margin: 30px 0 10px; color: #1e3a5f; }
+    h3 { font-size: 1rem; margin: 20px 0 6px; }
+    p { margin: 10px 0; }
+    ul { padding-left: 20px; }
+    li { margin: 6px 0; }
+    a { color: #2563eb; }
+    .tagline { color: #6b7280; font-size: 1.05rem; margin: 0 0 20px; }
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .country-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .country-card .flag { font-size: 1.6rem; margin-bottom: 4px; }
+    .country-card strong { display: block; margin-bottom: 4px; }
+    .country-card p { font-size: 0.9rem; color: #374151; margin: 0; }
+    .divider { height: 1px; background: #e5e7eb; margin: 24px 0; }
+    .source-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .source-pill {
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
-
 <body>
-  <div class="page">
+  <div class="wrap">
 
-    <header class="site-header">
-      <div class="brand">
-        <img src="Horn1_logo.png" class="logo" alt="Horn Updates logo" />
-        <div>
-          <h1>Horn Updates</h1>
-          <p class="tagline">News from the Horn of Africa</p>
+    <div class="card">
+      <h1>About Horn Updates</h1>
+      <p class="tagline">Independent news aggregation for the Horn of Africa</p>
+
+      <p>
+        Horn Updates is an independent media monitoring project dedicated to covering one of the world's
+        most strategically important and underreported regions. Every day, major developments unfold
+        across Ethiopia, Somalia, Sudan, South Sudan, Eritrea, Djibouti, and Kenya — yet this reporting
+        is scattered across dozens of regional outlets, many of which are difficult to find or follow
+        individually. Horn Updates brings it all into one clean, readable place.
+      </p>
+
+      <p>
+        The Horn of Africa sits at the intersection of the Red Sea, the Gulf of Aden, and the Indian Ocean,
+        making it a critical crossroads for global trade, diplomacy, and security. It is home to over
+        300 million people across seven countries with deeply interconnected histories, economies,
+        and conflicts. Events in Addis Ababa ripple into Mogadishu; drought in the Sahel affects
+        food security across borders; political shifts in Khartoum reshape alliances from Cairo to Nairobi.
+        Understanding this region requires reading across sources — which is exactly what Horn Updates does.
+      </p>
+
+      <h2>Why We Built This</h2>
+      <p>
+        The impetus for Horn Updates came from a simple frustration: too much important news from this
+        region was slipping through the cracks of mainstream international coverage. Events that would
+        dominate headlines if they happened elsewhere — mass displacement, peace agreements, elections,
+        humanitarian emergencies — were being covered only by specialist outlets with limited reach.
+        Meanwhile, English-language readers with roots in or professional interest in the Horn of Africa
+        had no single trusted aggregator to turn to.
+      </p>
+      <p>
+        Horn Updates was built to fill that gap. It is not a publisher in the traditional sense —
+        we do not send reporters into the field. Instead, we monitor and curate reporting from
+        established regional and international news organizations, write concise original summaries
+        for each story, and link directly to the full article at its original source. The goal is
+        to surface what matters and help readers discover outlets they might never have found otherwise.
+      </p>
+
+      <h2>Countries We Cover</h2>
+      <p>
+        Our editorial focus spans seven countries in and around the Horn. Each has its own distinct
+        political landscape, yet they are bound by geography, shared histories, and overlapping crises.
+      </p>
+
+      <div class="country-grid">
+        <div class="country-card">
+          <div class="flag">🇪🇹</div>
+          <strong>Ethiopia</strong>
+          <p>Africa's second most populous country and the seat of the African Union. We cover its federal politics, post-Tigray reconstruction, economic reform, and its ongoing negotiations over Red Sea access and the Grand Ethiopian Renaissance Dam (GERD).</p>
+        </div>
+        <div class="country-card">
+          <div class="flag">🇸🇴</div>
+          <strong>Somalia</strong>
+          <p>A country navigating a fragile state-building process against the backdrop of the Al-Shabaab insurgency, international troop drawdowns, and a contested federal structure. We monitor political developments, security incidents, and humanitarian conditions.</p>
+        </div>
+        <div class="country-card">
+          <div class="flag">🇸🇩</div>
+          <strong>Sudan</strong>
+          <p>Since April 2023, Sudan has been engulfed in a devastating civil war between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF). We cover the conflict's frontlines, the humanitarian collapse, and international diplomatic efforts.</p>
+        </div>
+        <div class="country-card">
+          <div class="flag">🇸🇸</div>
+          <strong>South Sudan</strong>
+          <p>The world's youngest nation continues to face political fragility, ethnic conflict, and severe food insecurity. We track the peace process, displacement crises, and governance challenges.</p>
+        </div>
+        <div class="country-card">
+          <div class="flag">🇪🇷</div>
+          <strong>Eritrea</strong>
+          <p>One of the most closed states in the world, Eritrea rarely generates headlines — but its role in the Tigray war and its strategic Red Sea position make it vital to understand. We report on what limited coverage exists.</p>
+        </div>
+        <div class="country-card">
+          <div class="flag">🇩🇯</div>
+          <strong>Djibouti</strong>
+          <p>A small but strategically outsized nation hosting military bases from the US, France, China, Japan, and others. Djibouti's port is a lifeline for landlocked Ethiopia and a pivot point for Red Sea geopolitics.</p>
+        </div>
+        <div class="country-card">
+          <div class="flag">🇰🇪</div>
+          <strong>Kenya</strong>
+          <p>East Africa's economic hub and a key diplomatic broker in regional conflicts. We cover Kenya's domestic politics, its mediation role in South Sudan and Somalia, and its economic ties with the broader Horn.</p>
         </div>
       </div>
 
-      <nav class="nav-filters" aria-label="Primary navigation">
-        <a class="filter-pill" href="index.html">Home</a>
-        <a class="filter-pill active" href="about.html">About</a>
-        <a class="filter-pill" href="privacy.html">Privacy</a>
-        <a class="filter-pill" href="terms.html">Terms</a>
-        <a class="filter-pill" href="contact.html">Contact</a>
-      </nav>
-    </header>
+      <div class="divider"></div>
 
-    <main class="content">
-      <section class="featured-section">
-        <h2>About Horn Updates</h2>
+      <h2>How It Works</h2>
+      <ul>
+        <li>
+          <strong>Monitoring:</strong> Our system tracks RSS feeds and news sources from across the region
+          and internationally, scanning for stories relevant to the seven countries we cover.
+        </li>
+        <li>
+          <strong>Summarisation:</strong> For each story, we write a concise original summary — typically
+          two to four sentences — that captures the main point and key context. Summaries are written
+          by Horn Updates and are not reproduced from the original article.
+        </li>
+        <li>
+          <strong>Tagging:</strong> Each story is tagged by country and topic so readers can filter
+          by what matters most to them.
+        </li>
+        <li>
+          <strong>Linking:</strong> Every story links directly to the original publisher. We do not
+          reproduce full articles. Our goal is to help you find the right stories, then send you
+          to the original source for the full context.
+        </li>
+      </ul>
 
-        <p class="intro">
-          Horn Updates is an independent news aggregator focused on the Horn of Africa.
-          We curate stories across politics, security, business, society, and culture and present
-          concise summaries with direct links to original publishers.
-        </p>
+      <div class="divider"></div>
 
-        <h3>Our mission</h3>
-        <p>
-          Our mission is to make it easier to follow important developments in the Horn of Africa by
-          bringing trusted reporting into one clean, readable place. We aim to provide fast context,
-          reduce noise, and help readers discover original reporting from reputable sources.
-        </p>
+      <h2>Our Sources</h2>
+      <p>
+        We aggregate from a broad range of regional and international outlets. Sources include:
+      </p>
+      <div class="source-list">
+        <span class="source-pill">Addis Standard</span>
+        <span class="source-pill">Capital Ethiopia</span>
+        <span class="source-pill">Sudan Tribune</span>
+        <span class="source-pill">Radio Tamazuj</span>
+        <span class="source-pill">The Nile Post</span>
+        <span class="source-pill">Garowe Online</span>
+        <span class="source-pill">Hiiraan Online</span>
+        <span class="source-pill">Shabelle Media</span>
+        <span class="source-pill">Somali Current</span>
+        <span class="source-pill">Al-Shabaka</span>
+        <span class="source-pill">VOA Horn of Africa</span>
+        <span class="source-pill">Reuters Africa</span>
+        <span class="source-pill">AP Africa</span>
+        <span class="source-pill">BBC Africa</span>
+        <span class="source-pill">Al Jazeera</span>
+      </div>
+      <p>
+        We aim to represent a diverse range of perspectives and languages, including English and Arabic.
+        We are always looking to add trustworthy sources — if you know of a regional outlet we are missing,
+        please <a href="/contact.html">get in touch</a>.
+      </p>
 
-        <h3>How it works</h3>
-        <ul>
-          <li>We collect headlines and article metadata from publicly available feeds and sources.</li>
-          <li>We generate short summaries to help you understand the main point quickly.</li>
-          <li>We always link to the original publisher so you can read the full article at the source.</li>
-        </ul>
+      <div class="divider"></div>
 
-        <h3>Sources and editorial note</h3>
-        <p>
-          Horn Updates does not publish full copies of articles from other publishers.
-          Headlines, summaries, and links are provided for informational purposes.
-          All rights to original content belong to their respective owners.
-        </p>
+      <h2>Editorial Independence</h2>
+      <p>
+        Horn Updates does not take editorial positions on ongoing conflicts or political disputes.
+        Our job is to surface reporting from multiple perspectives and let readers draw their own
+        conclusions. Where we publish opinion pieces, they are clearly labelled and attributed.
+      </p>
+      <p>
+        Advertising on this site does not influence which stories we cover or how we summarise them.
+        See our <a href="/editorial-policy.html">Editorial Policy</a> for full details.
+      </p>
 
-        <h3>Advertising</h3>
-        <p>
-          To support the cost of running this website, Horn Updates may display advertising,
-          including ads served by Google AdSense. Ads help keep the site free for readers.
-        </p>
+      <h2>Contact & Feedback</h2>
+      <p>
+        We welcome corrections, source suggestions, and general feedback.
+        If you are a publisher and have concerns about how your content is presented,
+        please write to us — we will respond promptly.
+      </p>
+      <p>
+        Email: <strong>contact@hornupdates.com</strong> &nbsp;|&nbsp;
+        <a href="/contact.html">Contact page</a>
+      </p>
+    </div>
 
-        <h3>Contact</h3>
-        <p>
-          Questions, corrections, or partnership inquiries? Reach out via our
-          <a href="contact.html">Contact page</a>.
-        </p>
-      </section>
-    </main>
-
-   <footer class="site-footer">
+    <footer class="site-footer">
       <nav class="footer-nav">
         <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
@@ -83,12 +229,9 @@
         <a href="/terms.html">Terms</a>
         <a href="/contact.html">Contact</a>
       </nav>
-      <div class="footer-copy">
-        © 2026 Horn Updates. All rights reserved.
-      </div>
+      <div class="footer-copy">© 2026 Horn Updates. All rights reserved.</div>
     </footer>
+
   </div>
 </body>
 </html>
-
-
