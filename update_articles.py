@@ -1,4 +1,4 @@
-"""
+fix them """
 update_articles.py — Horn Updates RSS scraper
 Fetches articles from Horn of Africa news sources, tags them, and writes articles.json.
 
@@ -207,6 +207,11 @@ TOPIC_KEYWORDS: Dict[str, List[str]] = {
     "Justice & Rights": [
         "human rights", "court", "justice", "trial", "arrest", "detained",
         "prison", "accountability", "torture", "rights violation", "amnesty",
+    ],
+    "Sports": [
+        "afcon", "football", "soccer", "athletics", "olympic", "world cup",
+        "premier league", "tournament", "championship", "stadium", "fifa",
+        "caf ", "marathon", "athlete", "medal", "rugby", "cricket",
     ],
 }
 
