@@ -21,8 +21,13 @@ import html
 import unicodedata
 from typing import Optional, List, Dict, Any
 
+import ssl
 import feedparser
 from urllib.parse import urlparse
+
+# Replit's sandbox blocks the default SSL cert verification subprocess.
+# Use an unverified context for all outbound HTTPS requests in this environment.
+_SSL_CTX = ssl._create_unverified_context()
 
 # ----------------------------
 # 0. STRICT MODE STATE
@@ -54,33 +59,48 @@ def save_last_run(ts: dt.datetime):
 
 OUTPUT_PATH = Path("articles.json")
 
+# Max articles to keep per individual source (prevents any one source dominating)
+MAX_PER_SOURCE = 25
+
 RSS_FEEDS = [
     # International / broad Africa
     "https://feeds.bbci.co.uk/news/world/africa/rss.xml",
     "https://www.voanews.com/api/ztiykqivlp",                      # VOA Africa
     "https://www.aljazeera.com/xml/rss/all.xml",                   # Al Jazeera (broad; filtered)
     "https://feeds.reuters.com/reuters/AFRICANews",                 # Reuters Africa
-    # Horn-specific English
+    # Horn-specific English — Ethiopia
     "https://www.thereporterethiopia.com/feed/",
-    "https://www.theeastafrican.co.ke/rss.xml",
     "https://addisfortune.news/feed/",
     "https://addisstandard.com/feed/",
-    "https://www.hiiraan.com/rss/news.xml",                        # Somalia / Hiiraan
-    "https://www.garoweonline.com/en/news/feed",                   # Somalia / Garowe
-    # Sudan (English + Arabic)
-    "https://sudantribune.net/feed/",
+    "https://www.capitalethiopia.com/feed/",                        # Capital Ethiopia
+    # Horn-specific English — Somalia
+    "https://www.hiiraan.com/rss/news.xml",
+    "https://www.garoweonline.com/en/news/feed",
+    "https://www.somalicurrent.com/feed/",                          # Somali Current
+    "https://shabelle.net/feed/",                                   # Shabelle Media Network
+    # Horn-specific English — South Sudan
+    "https://radiotamazuj.org/en/rss/article/all",                  # Radio Tamazuj
+    "https://www.thenilepost.com/feed/",                            # The Nile Post
     # Kenya / East Africa
+    "https://www.theeastafrican.co.ke/rss.xml",
     "https://www.standardmedia.co.ke/rss/kenya.php",
+    # Sudan (English + Arabic) — capped to avoid Arabic dominance
+    "https://sudantribune.net/feed/",
 ]
 
 ALWAYS_INCLUDE_FEEDS = [
     "addisstandard.com",
     "thereporterethiopia.com",
+    "addisfortune.news",
+    "capitalethiopia.com",
     "hiiraan.com",
     "garoweonline.com",
+    "somalicurrent.com",
+    "shabelle.net",
+    "radiotamazuj.org",
+    "thenilepost.com",
     "theeastafrican.co.ke",
     "sudantribune.net",
-    "addisfortune.news",
     "standardmedia.co.ke",
 ]
 
@@ -213,7 +233,7 @@ def parse_feed_no_cache(url: str):
         }
     )
     try:
-        with urllib.request.urlopen(req, timeout=20) as r:
+        with urllib.request.urlopen(req, timeout=20, context=_SSL_CTX) as r:
             data = r.read()
     except urllib.error.HTTPError as e:
         if e.code == 304:
@@ -304,6 +324,7 @@ def merge_dedupe(old_list, new_list):
     merged = []
     seen_urls = set()
     seen_titles = []  # list for title similarity check
+    source_counts: dict = {}
 
     for a in new_list + old_list:
         key = (a.get("source_url") or a.get("link") or "").strip()
@@ -316,6 +337,13 @@ def merge_dedupe(old_list, new_list):
         title = _norm_text(a.get("title", ""))
         if any(_title_similar(title, t) for t in seen_titles):
             continue
+
+        # Per-source cap to avoid any single outlet dominating
+        src = (a.get("source_name") or "").strip()
+        if src:
+            if source_counts.get(src, 0) >= MAX_PER_SOURCE:
+                continue
+            source_counts[src] = source_counts.get(src, 0) + 1
 
         seen_urls.add(key)
         if title:
@@ -371,7 +399,7 @@ def _fetch_html(url: str, timeout: int = 12) -> str:
             url,
             headers={"User-Agent": "Mozilla/5.0 (HornUpdatesBot/1.0; +https://hornupdates.com)"}
         )
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+        with urllib.request.urlopen(req, timeout=timeout, context=_SSL_CTX) as resp:
             charset = resp.headers.get_content_charset() or "utf-8"
             return resp.read().decode(charset, errors="replace")
     except Exception:
@@ -511,10 +539,20 @@ DOMAIN_DEFAULT_COUNTRY = {
     "www.addisfortune.news": "Ethiopia",
     "addisstandard.com": "Ethiopia",
     "www.addisstandard.com": "Ethiopia",
+    "capitalethiopia.com": "Ethiopia",
+    "www.capitalethiopia.com": "Ethiopia",
     "hiiraan.com": "Somalia",
     "www.hiiraan.com": "Somalia",
     "garoweonline.com": "Somalia",
     "www.garoweonline.com": "Somalia",
+    "somalicurrent.com": "Somalia",
+    "www.somalicurrent.com": "Somalia",
+    "shabelle.net": "Somalia",
+    "www.shabelle.net": "Somalia",
+    "radiotamazuj.org": "South Sudan",
+    "www.radiotamazuj.org": "South Sudan",
+    "thenilepost.com": "South Sudan",
+    "www.thenilepost.com": "South Sudan",
 }
 
 
@@ -649,13 +687,10 @@ def main():
         print(f"\n=== Fetching: {feed_url} ===")
 
         try:
-            if "thereporterethiopia.com" in feed_url:
-                parsed = parse_feed_no_cache(feed_url)
-            else:
-                parsed = feedparser.parse(
-                    feed_url,
-                    request_headers={"User-Agent": "HornUpdatesBot/1.0 (+https://hornupdates.com)"}
-                )
+            parsed = feedparser.parse(
+                feed_url,
+                request_headers={"User-Agent": "HornUpdatesBot/1.0 (+https://hornupdates.com)"}
+            )
         except Exception as e:
             print(f"[WARN] Failed to fetch {feed_url}: {e}")
             continue
