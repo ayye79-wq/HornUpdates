@@ -408,6 +408,7 @@
       <article class="${cardClass}">
         <header class="story-header">
           <div class="story-tags">
+            ${isFeatured ? `<span class="featured-badge">&#9733; Top story</span>` : ""}
             ${countryTags}
             <span class="tag-pill tag-category">${category}</span>
             ${langLabel(article)}
@@ -526,7 +527,8 @@
       return renderStoryCard(a, false, getContextForArticle(a, contextTemplates));
     }).join("");
 
-    setBreakingBar(featured);
+    // Use the second article for breaking bar so it differs from featured
+    setBreakingBar(filteredList[1] || featured);
     updateStoryCount(allArticles.length, filteredList.length);
   }
 
