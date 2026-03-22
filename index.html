@@ -529,6 +529,7 @@
       const searchable = [
         article.title || "",
         article.summary || article.excerpt || "",
+        article.context || "",
         ...(getCountries(article)),
         ...(Array.isArray(article.topic_tags) ? article.topic_tags : []),
         article.source_name || "",
