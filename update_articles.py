@@ -14,10 +14,18 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
+import os
+
 try:
     import feedparser
 except ImportError:
     raise SystemExit("feedparser is required: pip install feedparser")
+
+try:
+    import openai as _openai
+    _OPENAI_AVAILABLE = True
+except ImportError:
+    _OPENAI_AVAILABLE = False
 
 # ── Config ─────────────────────────────────────────────────────────────────────
 
@@ -27,6 +35,42 @@ TOTAL_CAP = 350            # max total articles before pruning oldest
 MAX_AGE_DAYS = 45          # discard articles older than this
 SUMMARY_MAX = 600          # truncate summaries to this many characters
 ENTRIES_PER_FEED = 30      # how many entries to read from each feed
+
+# ── AI Context Generation ───────────────────────────────────────────────────────
+
+def generate_article_context(title: str, summary: str, countries: List[str], topics: List[str]) -> Optional[str]:
+    """Call OpenAI to write a specific 2-3 sentence background context for this article."""
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key or not _OPENAI_AVAILABLE:
+        return None
+    try:
+        client = _openai.OpenAI(api_key=api_key)
+        country_str = ", ".join(countries) if countries else "Horn of Africa"
+        topic_str = ", ".join(topics) if topics else ""
+        prompt = (
+            f"You are an editor at Horn Updates, a news site covering the Horn of Africa region.\n\n"
+            f"Article title: {title}\n"
+            f"Summary: {summary[:400]}\n"
+            f"Countries: {country_str}\n"
+            f"Topics: {topic_str}\n\n"
+            f"Write 2-3 sentences of SPECIFIC background context for this article. "
+            f"Explain the particular historical situation, ongoing conflict, political dynamic, "
+            f"or regional relationship that makes THIS specific story significant right now. "
+            f"Name specific actors, agreements, dates, or events where relevant. "
+            f"Do NOT write generic sentences that could apply to many articles on this topic. "
+            f"Maximum 75 words. Plain text only."
+        )
+        resp = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=130,
+            temperature=0.3,
+        )
+        return resp.choices[0].message.content.strip()
+    except Exception as e:
+        print(f"  [context] AI error for '{title[:50]}': {e}")
+        return None
+
 
 # ── RSS Feeds ──────────────────────────────────────────────────────────────────
 # Each dict: url, source_name, countries (default country tags), lang
@@ -345,16 +389,19 @@ def fetch_feed(feed_def: Dict[str, Any]) -> List[Dict[str, Any]]:
 
         pub_iso = pub.isoformat() if pub else datetime.now(timezone.utc).isoformat()
         lang = detect_lang(combined) if default_lang == "en" else default_lang
+        topics = tag_topics(combined)
+        context = generate_article_context(title, summary[:SUMMARY_MAX], countries, topics)
 
         results.append({
             "title": title,
             "summary": summary[:SUMMARY_MAX],
             "country_tags": countries,
-            "topic_tags": tag_topics(combined),
+            "topic_tags": topics,
             "language": lang,
             "published_at": pub_iso,
             "source_url": link,
             "source_name": source_name,
+            "context": context,
         })
 
     print(f"{len(results)} articles")
