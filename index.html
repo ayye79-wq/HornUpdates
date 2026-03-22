@@ -366,6 +366,10 @@
   }
 
   function getContextForArticle(article, templates) {
+    // Prefer AI-generated article-specific context if available
+    if (article.context) return article.context;
+
+    // Fall back to keyword-matched template
     if (!templates || !templates.groups) return null;
     const kwText = [
       article.title || "",
