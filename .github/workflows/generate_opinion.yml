@@ -1,0 +1,30 @@
+name: Generate Weekly Opinion
+
+on:
+  schedule:
+    - cron: "0 9 * * 0"   # Every Sunday at 9:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  write:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install openai
+      - name: Generate opinion article
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python generate_opinion.py
+      - run: |
+          git config user.name "Horn Updates Bot"
+          git config user.email "bot@hornupdates.com"
+          git add opinion-auto-*.html opinion.html
+          git diff --cached --quiet && echo "No changes" || git commit -m "Auto-generate weekly opinion $(date -u '+%Y-%m-%d') [skip ci]"
+          git push
