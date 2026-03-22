@@ -320,6 +320,16 @@ def fetch_feed(feed_def: Dict[str, Any]) -> List[Dict[str, Any]]:
         if not title or not link:
             continue
 
+        # Quality filter — skip lifestyle, entertainment, clickbait
+        _tl = title.lower()
+        if any(kw in _tl for kw in [
+            "horoscope", "recipe", "zodiac", "celebrity", "gossip",
+            "beauty tip", "fashion", "lifestyle", "relationship advice",
+            "quiz:", "poll:", "i have news for you", "here's to hoping",
+            "success lies in human connection",
+        ]):
+            continue
+
         summary = get_summary(e)
         combined = f"{title} {summary}"
 
