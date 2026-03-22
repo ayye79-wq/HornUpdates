@@ -20,10 +20,18 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install feedparser openai
-      - run: python update_articles.py
+
+      - name: Update articles
+        run: python update_articles.py
+
+      - name: Generate daily opinion article (6 AM run only)
+        if: github.event_name == 'workflow_dispatch' || contains(github.event.schedule, '0 6')
+        run: python generate_opinion.py
+        continue-on-error: true
+
       - run: |
           git config user.name "Horn Updates Bot"
           git config user.email "bot@hornupdates.com"
-          git add articles.json
-          git diff --cached --quiet && echo "No changes" || git commit -m "Auto-update articles $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
+          git add articles.json opinion.html opinion-auto-*.html
+          git diff --cached --quiet && echo "No changes" || git commit -m "Auto-update articles + opinion $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
           git push
