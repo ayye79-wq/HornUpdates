@@ -1,4 +1,4 @@
-fix them """
+"""
 update_articles.py — Horn Updates RSS scraper
 Fetches articles from Horn of Africa news sources, tags them, and writes articles.json.
 
