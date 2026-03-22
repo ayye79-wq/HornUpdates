@@ -588,9 +588,32 @@ body {
   color: #9ca3af;
 }
 
+.search-go-btn {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+}
+.search-go-btn:hover {
+  background: #1d4ed8;
+}
+
 .search-input {
   width: 100%;
-  padding: 9px 12px 9px 34px;
+  padding: 9px 42px 9px 34px;
   border: 1px solid #d1d5db;
   border-radius: 999px;
   font-size: 0.9rem;
