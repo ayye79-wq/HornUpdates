@@ -114,7 +114,7 @@
         </section>
 
         <!-- OPINION SECTION -->
-        <section class="latest-section" style="margin-top:28px;">
+        <section id="opinion-section" class="latest-section" style="margin-top:28px;">
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px;">
             <h2 style="margin:0;">Opinion &amp; Analysis</h2>
             <a href="/opinion.html" class="see-all-btn">All opinions →</a>
@@ -542,6 +542,11 @@
     const featuredContainer = document.getElementById("featured-container");
     const latestContainer = document.getElementById("latest-container");
     const noResults = document.getElementById("no-results");
+    const opinionSection = document.getElementById("opinion-section");
+
+    // Hide opinion section whenever a search query is active
+    const searchActive = currentSearch && currentSearch.length > 0;
+    if (opinionSection) opinionSection.style.display = searchActive ? "none" : "";
 
     if (!filteredList.length) {
       featuredContainer.innerHTML = "";
