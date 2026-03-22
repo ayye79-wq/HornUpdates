@@ -306,16 +306,27 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* Keep brand + dark-toggle on one row, nav-filters wraps below */
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-filters {
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     gap: 8px;
-    margin-top: 10px;
   }
+  .brand { flex: 1; min-width: 0; }
+  .nav-filters {
+    width: 100%;
+    order: 3;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .nav-filters::-webkit-scrollbar { display: none; }
+  .filter-pill { white-space: nowrap; flex-shrink: 0; }
 
   .story-card {
     padding: 14px;
@@ -324,43 +335,20 @@ body {
 }
 
 @media (max-width: 640px) {
-  /* Category pills — single scrollable row */
-  .nav-filters {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 2px;
-    gap: 6px;
-    margin-top: 8px;
-  }
-  .nav-filters::-webkit-scrollbar { display: none; }
-  .filter-pill { white-space: nowrap; flex-shrink: 0; }
-
   /* Tighten search bar top margin */
   .search-country-bar {
     margin-top: 6px;
     gap: 6px;
   }
 
-  /* Country chips row — chips scroll horizontally, toggle stays on right */
-  .country-chips-row {
-    flex-wrap: nowrap;
-    align-items: center;
+  /* Country filter: chips fill available space, lang-toggle always visible right */
+  .country-filter-section {
     gap: 8px;
   }
-
-  .country-chips {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 6px;
-    flex: 1;
-    min-width: 0;
+  .country-chip {
+    font-size: 0.78rem;
+    padding: 4px 9px;
   }
-  .country-chips::-webkit-scrollbar { display: none; }
-  .country-chip { flex-shrink: 0; }
 
   /* Language toggle always visible on the right */
   .lang-toggle-wrap {
@@ -628,19 +616,42 @@ body {
   box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
 }
 
-.country-chips-row {
+/* ---- Country filter section ---- */
+.country-filter-section {
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
 }
 
+/* Scroll wrapper clips overflow and shows fade hint on right */
+.country-chips-scroll-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+.country-chips-scroll-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #f3f4f6);
+  pointer-events: none;
+}
+
+/* Always a single scrollable row — never wraps */
 .country-chips {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   gap: 6px;
-  flex: 1;
+  padding-right: 30px; /* room for the fade */
 }
+.country-chips::-webkit-scrollbar { display: none; }
 
 /* Language toggle */
 .lang-toggle-wrap {
@@ -1041,6 +1052,9 @@ details[open] .reader-context-toggle::after {
   background: #2563eb;
   color: #fff;
   border-color: #2563eb;
+}
+[data-theme="dark"] .country-chips-scroll-wrap::after {
+  background: linear-gradient(to right, transparent, #0f172a);
 }
 [data-theme="dark"] .country-chip {
   background: #1e293b;
