@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Horn Updates</title>
+  <title>Horn Updates — Horn of Africa News</title>
+  <meta name="description" content="Horn Updates is an independent news aggregator covering Ethiopia, Somalia, Sudan, South Sudan, Eritrea, Djibouti, and Kenya. Curated, translated, and contextualised daily." />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
      crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -59,6 +60,9 @@
           <p class="update-schedule">&#8635; Updated twice daily &mdash; 6 AM &amp; 3 PM UTC</p>
         </div>
       </div>
+
+      <!-- DARK MODE TOGGLE -->
+      <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
 
       <!-- FILTER NAV -->
       <nav class="nav-filters">
@@ -503,6 +507,8 @@
   let currentCountryFilter = "all";
   let currentLangFilter = "en";
   let currentSearch = "";
+  let visibleLatestCount = 20;
+  let currentFilteredList = [];
 
   function articleMatchesAll(article) {
     // Language filter
@@ -611,9 +617,25 @@
 
     const featuredCtx = getContextForArticle(featured, contextTemplates);
     featuredContainer.innerHTML = renderStoryCard(featured, true, featuredCtx);
-    latestContainer.innerHTML = latest.map(a => {
+
+    const visible = latest.slice(0, visibleLatestCount);
+    const hasMore = latest.length > visibleLatestCount;
+    latestContainer.innerHTML = visible.map(a => {
       return renderStoryCard(a, false, getContextForArticle(a, contextTemplates));
-    }).join("");
+    }).join("") + (hasMore ? `
+      <div style="text-align:center;margin:24px 0 8px;">
+        <button id="load-more-btn" class="load-more-btn">
+          Load more stories (${latest.length - visibleLatestCount} remaining)
+        </button>
+      </div>` : "");
+
+    const loadMoreBtn = document.getElementById("load-more-btn");
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", () => {
+        visibleLatestCount += 20;
+        renderPage(currentFilteredList);
+      });
+    }
 
     // Use the second article for breaking bar so it differs from featured
     setBreakingBar(filteredList[1] || featured);
@@ -622,6 +644,8 @@
 
   function applyFilters() {
     const filtered = allArticles.filter(articleMatchesAll);
+    visibleLatestCount = 20;
+    currentFilteredList = filtered;
     renderPage(filtered);
   }
 
@@ -707,9 +731,35 @@
     }
   }
 
+  // Dark mode
+  (function() {
+    const saved = localStorage.getItem("hornTheme");
+    if (saved === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  })();
+
   window.addEventListener("DOMContentLoaded", () => {
     setupFilters();
     loadArticles();
+
+    const darkBtn = document.getElementById("dark-toggle");
+    if (darkBtn) {
+      const update = () => {
+        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        darkBtn.textContent = isDark ? "☀️" : "🌙";
+      };
+      update();
+      darkBtn.addEventListener("click", () => {
+        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        if (isDark) {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("hornTheme", "light");
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("hornTheme", "dark");
+        }
+        update();
+      });
+    }
   });
   </script>
   <footer class="site-footer">
