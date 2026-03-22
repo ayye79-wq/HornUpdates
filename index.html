@@ -540,6 +540,48 @@
     return true;
   }
 
+  // Reputable sources get a boost
+  const SOURCE_SCORES = {
+    "bbc": 12, "reuters": 12, "ap ": 12, "associated press": 12,
+    "voa": 10, "voice of america": 10, "al jazeera": 10,
+    "france 24": 8, "rfi": 8, "the guardian": 8,
+    "radio tamazuj": 6, "eye radio": 6, "addis standard": 6,
+    "sudan tribune": 6, "garowe online": 6, "shabelle": 4,
+  };
+
+  function scoreArticle(article) {
+    let score = 0;
+
+    // 1. Recency — still matters but not everything
+    const ageMs = Date.now() - new Date(article.published_at || 0).getTime();
+    const ageHrs = ageMs / 3600000;
+    if (ageHrs <= 3)       score += 30;
+    else if (ageHrs <= 12) score += 22;
+    else if (ageHrs <= 24) score += 14;
+    else if (ageHrs <= 48) score += 6;
+
+    // 2. Cross-border significance — more countries = bigger story
+    const countries = getCountries(article);
+    if (countries.length >= 3)      score += 18;
+    else if (countries.length === 2) score += 10;
+
+    // 3. Source reputation
+    const src = (article.source_name || "").toLowerCase();
+    for (const [key, pts] of Object.entries(SOURCE_SCORES)) {
+      if (src.includes(key)) { score += pts; break; }
+    }
+
+    // 4. AI context available — scraper flagged it as notable
+    if (article.context) score += 4;
+
+    // 5. Multi-topic depth
+    const topics = Array.isArray(article.topic_tags) ? article.topic_tags.length : 0;
+    if (topics >= 3) score += 5;
+    else if (topics >= 2) score += 2;
+
+    return score;
+  }
+
   function renderPage(filteredList) {
     const featuredContainer = document.getElementById("featured-container");
     const latestContainer = document.getElementById("latest-container");
@@ -560,8 +602,12 @@
 
     if (noResults) noResults.style.display = "none";
 
-    const featured = filteredList[0];
-    const latest = filteredList.slice(1);
+    // Pick the highest-scoring article as Top Story (not just newest)
+    const scored = filteredList.map(a => ({ article: a, score: scoreArticle(a) }));
+    scored.sort((a, b) => b.score - a.score);
+    const featured = scored[0].article;
+    // Remaining articles stay in date order
+    const latest = filteredList.filter(a => a !== featured);
 
     const featuredCtx = getContextForArticle(featured, contextTemplates);
     featuredContainer.innerHTML = renderStoryCard(featured, true, featuredCtx);
