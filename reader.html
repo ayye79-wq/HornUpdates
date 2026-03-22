@@ -170,6 +170,9 @@
     }
 
     function getContextForArticle(article, templates) {
+      // Prefer AI-generated article-specific context if available
+      if (article.context) return article.context;
+
       if (!templates || !templates.groups) return null;
       const text = [
         article.title || "",
