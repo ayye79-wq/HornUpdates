@@ -15,7 +15,11 @@ from collections import Counter
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-import openai
+try:
+    import openai
+except ImportError:
+    print("ERROR: openai package not installed. Run: pip install openai")
+    sys.exit(1)
 
 ARTICLES_JSON = Path("articles.json")
 OPINION_HTML = Path("opinion.html")
@@ -279,26 +283,51 @@ def update_opinion_index(slug, title, countries, excerpt, date_str):
 
 
 def main():
+    # Check API key first — gives a clear error if secret is missing
+    api_key = os.environ.get("OPENAI_API_KEY", "")
+    if not api_key:
+        print("ERROR: OPENAI_API_KEY environment variable is not set.")
+        print("Add it as a GitHub secret named OPENAI_API_KEY in your repo settings.")
+        sys.exit(1)
+    print(f"API key found (ends ...{api_key[-4:]})")
+
+    # Load articles
+    if not ARTICLES_JSON.exists():
+        print(f"ERROR: {ARTICLES_JSON} not found")
+        sys.exit(1)
     data = json.loads(ARTICLES_JSON.read_text())
     articles = data.get("articles", [])
     if not articles:
         print("No articles found in articles.json")
         sys.exit(1)
+    print(f"Loaded {len(articles)} articles")
 
     country, topic, headlines = find_trending_topic(articles)
     print(f"Trending this week: {country} / {topic} ({len(headlines)} matching headlines)")
 
-    print("Calling OpenAI...")
-    raw = generate_article(country, topic, headlines)
+    print("Calling OpenAI API...")
+    try:
+        raw = generate_article(country, topic, headlines)
+    except openai.AuthenticationError:
+        print("ERROR: OpenAI API key is invalid or expired. Check your OPENAI_API_KEY secret.")
+        sys.exit(1)
+    except openai.RateLimitError:
+        print("ERROR: OpenAI rate limit or quota exceeded. Check your account billing.")
+        sys.exit(1)
+    except Exception as e:
+        print(f"ERROR calling OpenAI: {type(e).__name__}: {e}")
+        sys.exit(1)
 
+    print("Response received. Parsing...")
     title, countries, excerpt, body = parse_response(raw)
     if not title or not body:
-        print("ERROR: Failed to parse AI response:")
+        print("ERROR: Failed to parse AI response. Raw output:")
         print(raw)
         sys.exit(1)
 
     print(f"Title: {title}")
     print(f"Countries: {countries}")
+    print(f"Excerpt: {excerpt[:80]}...")
 
     date_str = datetime.now(timezone.utc).strftime("%B %Y")
     date_slug = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -311,7 +340,7 @@ def main():
     update_opinion_index(slug, title, countries, excerpt, date_str)
     print("Updated: opinion.html")
 
-    print("Done.")
+    print("Done — new opinion article ready.")
 
 
 if __name__ == "__main__":
