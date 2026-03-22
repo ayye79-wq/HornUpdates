@@ -78,6 +78,7 @@
       <div class="search-wrap">
         <span class="search-icon">&#128269;</span>
         <input type="search" id="story-search" class="search-input" placeholder="Search stories, countries, topics…" autocomplete="off" />
+        <button id="search-go-btn" class="search-go-btn" aria-label="Search">&#8594;</button>
       </div>
       <div class="country-chips-row">
         <div class="country-chips" id="country-chips">
@@ -619,6 +620,20 @@
           currentSearch = searchInput.value.trim();
           applyFilters();
         }, 250);
+      });
+      searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          clearTimeout(debounceTimer);
+          currentSearch = searchInput.value.trim();
+          applyFilters();
+        }
+      });
+    }
+    const searchGoBtn = document.getElementById("search-go-btn");
+    if (searchGoBtn) {
+      searchGoBtn.addEventListener("click", () => {
+        currentSearch = (document.getElementById("story-search") || {}).value?.trim() || "";
+        applyFilters();
       });
     }
   }
