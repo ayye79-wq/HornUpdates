@@ -264,7 +264,13 @@ body {
   margin-top: 20px;
   font-size: 0.8rem;
   color: #6b7280;
-  text-align: left;
+  text-align: center;
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 16px;
 }
 
 .footer-meta {
