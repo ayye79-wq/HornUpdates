@@ -911,13 +911,16 @@ details[open] .reader-context-toggle::after {
 }
 
 .footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 16px;
   margin-bottom: 10px;
 }
 
 .footer-nav a {
   color: #e5e7eb;
   text-decoration: none;
-  margin: 0 8px;
   font-size: 14px;
 }
 
