@@ -283,8 +283,11 @@ def detect_lang(text: str) -> str:
 def tag_countries(text: str, default: List[str]) -> List[str]:
     lc = text.lower()
     found = [c for c, kws in COUNTRY_KEYWORDS.items() if any(kw in lc for kw in kws)]
-    merged = list(dict.fromkeys(default + found))
-    return merged if merged else default
+    if found:
+        # Only use keyword-detected countries; don't blindly inherit source country
+        # This prevents e.g. Kenyan outlets tagging Trump/Iran stories as Kenya
+        return list(dict.fromkeys(found))
+    return default if default else []
 
 
 def _word_match(text: str, phrase: str) -> bool:
@@ -502,6 +505,64 @@ def main() -> None:
     print("\nBreakdown by source:")
     for src, cnt in sorted(source_counts.items(), key=lambda x: -x[1]):
         print(f"  {cnt:3d}  {src}")
+
+    generate_sitemap()
+
+
+def generate_sitemap() -> None:
+    """Auto-generate sitemap.xml with all static pages and opinion articles."""
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    base = Path(__file__).resolve().parent
+
+    static_pages = [
+        ("https://hornupdates.com/", "daily", "1.0", today),
+        ("https://hornupdates.com/opinion.html", "daily", "0.9", today),
+        ("https://hornupdates.com/about.html", "monthly", "0.6", None),
+        ("https://hornupdates.com/editorial-policy.html", "monthly", "0.5", None),
+        ("https://hornupdates.com/privacy.html", "yearly", "0.5", None),
+        ("https://hornupdates.com/terms.html", "yearly", "0.5", None),
+        ("https://hornupdates.com/contact.html", "yearly", "0.5", None),
+    ]
+    static_opinions = [
+        "opinion-sudan-war.html",
+        "opinion-ethiopia-sea.html",
+        "opinion-kenya-mediator.html",
+        "opinion-somaliland.html",
+        "opinion-assab.html",
+    ]
+
+    entries: List[str] = []
+
+    for loc, freq, pri, lastmod in static_pages:
+        parts = [f"  <url>", f"    <loc>{loc}</loc>"]
+        if lastmod:
+            parts.append(f"    <lastmod>{lastmod}</lastmod>")
+        parts += [f"    <changefreq>{freq}</changefreq>", f"    <priority>{pri}</priority>", "  </url>"]
+        entries.append("\n".join(parts))
+
+    for fname in static_opinions:
+        entries.append(
+            f"  <url>\n    <loc>https://hornupdates.com/{fname}</loc>\n"
+            f"    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>"
+        )
+
+    for path in sorted(base.glob("opinion-auto-*.html"), reverse=True):
+        date_match = re.search(r"(\d{4}-\d{2}-\d{2})", path.name)
+        lastmod = date_match.group(1) if date_match else today
+        entries.append(
+            f"  <url>\n    <loc>https://hornupdates.com/{path.name}</loc>\n"
+            f"    <lastmod>{lastmod}</lastmod>\n"
+            f"    <changefreq>never</changefreq>\n    <priority>0.8</priority>\n  </url>"
+        )
+
+    sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n'
+    sitemap += "\n\n".join(entries)
+    sitemap += "\n\n</urlset>\n"
+
+    sitemap_path = base / "sitemap.xml"
+    sitemap_path.write_text(sitemap, encoding="utf-8")
+    print(f"✅ Sitemap updated: {len(entries)} URLs → {sitemap_path.name}")
 
 
 if __name__ == "__main__":
