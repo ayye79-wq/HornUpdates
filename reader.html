@@ -92,6 +92,7 @@
         <span class="pill" id="sourcePill">Source</span>
         <span class="pill" id="datePill">Date</span>
         <span class="pill" id="countryPill" style="display:none;"></span>
+        <span class="pill" id="readTimePill" style="display:none;"></span>
       </div>
 
       <h1 id="title">Loading…</h1>
@@ -233,6 +234,35 @@
           c.style.display = "inline-block";
           c.textContent = "Country: " + match.country_tags.join(", ");
         }
+
+        // Read time estimate
+        const wordCount = (match.summary || "").trim().split(/\s+/).filter(Boolean).length;
+        const mins = Math.max(1, Math.round(wordCount / 200));
+        const rt = document.getElementById("readTimePill");
+        rt.textContent = `~${mins} min read`;
+        rt.style.display = "inline-block";
+
+        // JSON-LD structured data
+        const ld = {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          "headline": match.title || "",
+          "description": (match.summary || "").slice(0, 300),
+          "datePublished": match.published_at || "",
+          "author": {"@type": "Organization", "name": match.source_name || "Horn Updates"},
+          "publisher": {
+            "@type": "Organization",
+            "name": "Horn Updates",
+            "url": "https://hornupdates.com",
+            "logo": {"@type": "ImageObject", "url": "https://hornupdates.com/Horn1_logo.png"}
+          },
+          "url": articleUrl,
+          "keywords": [...(match.country_tags || []), ...(match.topic_tags || [])].join(", ")
+        };
+        const ldScript = document.createElement("script");
+        ldScript.type = "application/ld+json";
+        ldScript.textContent = JSON.stringify(ld);
+        document.head.appendChild(ldScript);
 
         const sumEl = document.getElementById("summary");
         const rtl = isArabic(match.summary) || isArabic(match.title);
