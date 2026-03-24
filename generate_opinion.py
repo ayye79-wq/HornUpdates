@@ -47,6 +47,20 @@ EXISTING_OPINION_FILES = [
 ]
 
 
+def get_recently_used_countries(n=2):
+    """Return countries used in the last n auto-generated opinion articles."""
+    base = Path(".")
+    auto_files = sorted(base.glob("opinion-auto-*.html"), reverse=True)
+    used = []
+    for f in auto_files[:n]:
+        content = f.read_text(encoding="utf-8")
+        for country in HORN_COUNTRIES:
+            if f">{country}<" in content and country not in used:
+                used.append(country)
+                break
+    return used
+
+
 def find_trending_topic(articles):
     week_ago = datetime.now(timezone.utc) - timedelta(days=7)
     recent = []
@@ -72,7 +86,18 @@ def find_trending_topic(articles):
         for t in (a.get("topic_tags") or []):
             topic_counter[t] += 1
 
-    top_country = country_counter.most_common(1)[0][0] if country_counter else "Ethiopia"
+    # Pick top country, but avoid repeating the same country as the last 2 articles
+    recently_used = get_recently_used_countries(n=2)
+    ranked = country_counter.most_common()
+    top_country = ranked[0][0] if ranked else "Ethiopia"
+
+    if top_country in recently_used and len(ranked) > 1:
+        for country, _ in ranked:
+            if country not in recently_used:
+                print(f"[variety] Skipping {top_country} (used recently), using {country} instead")
+                top_country = country
+                break
+
     top_topic = topic_counter.most_common(1)[0][0] if topic_counter else "Politics & Governance"
 
     samples = [
@@ -161,6 +186,25 @@ def build_article_html(title, countries, excerpt, body, date_str, slug):
         for f, t in EXISTING_OPINION_FILES
     )
 
+    countries_json = json.dumps(countries)
+    ld_json = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": meta_desc,
+        "datePublished": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "author": {"@type": "Organization", "name": "Horn Updates"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Horn Updates",
+            "url": "https://hornupdates.com",
+            "logo": {"@type": "ImageObject", "url": "https://hornupdates.com/Horn1_logo.png"}
+        },
+        "url": canonical,
+        "keywords": ", ".join(countries),
+        "articleSection": "Opinion & Analysis"
+    }, indent=2)
+
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -170,6 +214,7 @@ def build_article_html(title, countries, excerpt, body, date_str, slug):
   <meta name="description" content="{meta_desc}" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="{canonical}" />
+  <script type="application/ld+json">{ld_json}</script>
   <style>
     *{{box-sizing:border-box}}
     body{{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.75;color:#111827;background:#f5f6f8}}
