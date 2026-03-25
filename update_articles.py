@@ -135,10 +135,23 @@ FEEDS: List[Dict[str, Any]] = [
         "lang": "en",
     },
     {
-        "url": "https://www.sudantribune.net/spip.php?page=backend",
-        "source_name": "سودان تربيون",
+        "url": "https://alrakoba.net/feed/",
+        "source_name": "الراكوبة",
         "countries": ["Sudan"],
         "lang": "ar",
+    },
+    {
+        "url": "https://www.alnilin.com/feed",
+        "source_name": "النيلين",
+        "countries": ["Sudan"],
+        "lang": "ar",
+    },
+    {
+        "url": "https://feeds.bbci.co.uk/arabic/rss.xml",
+        "source_name": "BBC عربي",
+        "countries": [],
+        "lang": "ar",
+        "horn_only": True,
     },
     # ── Kenya ─────────────────────────────────────────────────────────────────
     {
@@ -182,33 +195,50 @@ COUNTRY_KEYWORDS: Dict[str, List[str]] = {
     "Ethiopia": [
         "ethiopia", "ethiopian", "addis ababa", "abiy ahmed", "tigray",
         "oromia", "amhara", "afar", "somali region", "dire dawa",
+        # Arabic
+        "إثيوبيا", "أثيوبيا", "أديس أبابا", "تيغراي", "أبي أحمد",
     ],
     "Somalia": [
         "somalia", "somali", "mogadishu", "puntland", "jubaland",
         "al-shabaab", "al shabaab", "alshabaab", "shabab",
         "galmudug", "hirshabelle",
+        # Arabic
+        "الصومال", "مقديشو", "موقديشو", "الشباب",
     ],
     "Somaliland": [
         "somaliland", "hargeisa",
+        # Arabic
+        "صوماليلاند", "هرجيسا",
     ],
     "Sudan": [
         "sudan", "khartoum", "darfur", "rsf", "rapid support forces",
         "sudanese armed forces", "saf", "port sudan", "el fasher",
         "omdurman", "kassala",
+        # Arabic
+        "السودان", "الخرطوم", "دارفور", "الفاشر", "بورتسودان",
+        "أم درمان", "الدعم السريع", "القوات السودانية", "كسلا",
     ],
     "South Sudan": [
         "south sudan", "juba", "salva kiir", "riek machar",
         "upper nile", "jonglei", "unity state", "warrap",
+        # Arabic
+        "جنوب السودان", "جوبا", "سلفا كير", "رياك مشار",
     ],
     "Kenya": [
         "kenya", "kenyan", "nairobi", "mombasa", "kisumu", "william ruto",
         "ruto",
+        # Arabic
+        "كينيا", "نيروبي",
     ],
     "Eritrea": [
         "eritrea", "eritrean", "asmara", "isaias afwerki", "assab", "massawa",
+        # Arabic
+        "إريتريا", "أسمرة", "أسمارا",
     ],
     "Djibouti": [
         "djibouti", "djiboutian",
+        # Arabic
+        "جيبوتي",
     ],
 }
 
