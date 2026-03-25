@@ -32,6 +32,6 @@ jobs:
       - run: |
           git config user.name "Horn Updates Bot"
           git config user.email "bot@hornupdates.com"
-          git add articles.json opinion.html opinion-auto-*.html
+          git add articles.json opinion.html opinion-auto-*.html sitemap.xml robots.txt
           git diff --cached --quiet && echo "No changes" || git commit -m "Auto-update articles + opinion $(date -u '+%Y-%m-%d %H:%M UTC') [skip actions]"
           git push
