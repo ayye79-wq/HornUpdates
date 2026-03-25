@@ -3,14 +3,14 @@
 
   <url>
     <loc>https://hornupdates.com/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://hornupdates.com/opinion.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -73,6 +73,27 @@
     <loc>https://hornupdates.com/opinion-assab.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-auto-2026-03-25.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-auto-2026-03-24.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-auto-2026-03-23.html</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
