@@ -610,8 +610,14 @@
 
     if (noResults) noResults.style.display = "none";
 
-    // Pick the highest-scoring article as Top Story (not just newest)
-    const scored = filteredList.map(a => ({ article: a, score: scoreArticle(a) }));
+    // Pick the highest-scoring article as Top Story — max age 12 hours
+    const now = Date.now();
+    const fresh = filteredList.filter(a => {
+      const pub = new Date(a.published_at || a.date || 0).getTime();
+      return (now - pub) <= 12 * 60 * 60 * 1000;
+    });
+    const pool = fresh.length > 0 ? fresh : filteredList;
+    const scored = pool.map(a => ({ article: a, score: scoreArticle(a) }));
     scored.sort((a, b) => b.score - a.score);
     const featured = scored[0].article;
     // Remaining articles stay in date order
