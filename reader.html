@@ -115,10 +115,24 @@
 
       <div class="divider"></div>
 
-      <div class="muted" style="font-size:.95rem;">
-        <strong>Attribution:</strong>
-        This summary is written by Horn Updates.
-        Full article remains on the publisher's website.
+      <div id="attribution-box" style="
+        background: #f0f9ff;
+        border: 1px solid #bae6fd;
+        border-radius: 12px;
+        padding: 14px 16px;
+        font-size: .92rem;
+        color: #0c4a6e;
+        line-height: 1.6;
+      ">
+        <div style="margin-bottom:4px;">
+          <strong>AI-assisted summary</strong> by Horn Updates editors.
+        </div>
+        <div style="margin-bottom:4px;">
+          Full reporting credit goes to <strong id="attr-source">the original publisher</strong>.
+        </div>
+        <div>
+          Click <strong>Read full article</strong> above to access the complete story on the publisher's website.
+        </div>
       </div>
 
       <!-- AdSense: Reader Ad (below attribution) -->
@@ -222,7 +236,19 @@
         }
 
         document.getElementById("title").textContent = match.title || "Article";
-        document.getElementById("summary").textContent = match.summary || "";
+
+        // Strip common RSS footer artifacts before displaying summary
+        let cleanSummary = (match.summary || "")
+          .replace(/The post .{0,120}? (appeared first|first appeared) on .{0,80}?\.\s*$/i, "")
+          .replace(/This article .{0,80}? first appeared on .{0,80}?\.\s*$/i, "")
+          .replace(/Originally published (at|on|by) .{0,80}?\.\s*$/i, "")
+          .trim();
+        document.getElementById("summary").textContent = cleanSummary;
+
+        // Populate attribution source name
+        if (match.source_name) {
+          document.getElementById("attr-source").textContent = match.source_name;
+        }
 
         document.getElementById("sourcePill").textContent =
           "Source: " + (match.source_name || "Source");
@@ -265,7 +291,7 @@
         document.head.appendChild(ldScript);
 
         const sumEl = document.getElementById("summary");
-        const rtl = isArabic(match.summary) || isArabic(match.title);
+        const rtl = isArabic(cleanSummary) || isArabic(match.title);
         if (rtl) {
           sumEl.classList.add("rtl");
           document.getElementById("title").classList.add("rtl");
