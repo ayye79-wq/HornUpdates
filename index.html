@@ -421,7 +421,12 @@
     const href = buildReaderLink(article.source_url || article.link);
 
     const title = clamp(article.title || "Untitled story", isFeatured ? 160 : 120);
-    const summary = clamp(article.summary || article.excerpt || "", isFeatured ? 420 : 340);
+    const rawSummary = (article.summary || article.excerpt || "")
+      .replace(/The post .{0,120}? (appeared first|first appeared) on .{0,80}?\.\s*$/i, "")
+      .replace(/This article .{0,80}? first appeared on .{0,80}?\.\s*$/i, "")
+      .replace(/Originally published (at|on|by) .{0,80}?\.\s*$/i, "")
+      .trim();
+    const summary = clamp(rawSummary, isFeatured ? 420 : 340);
     const cardClass = "story-card" + (isFeatured ? " story-card--featured" : "");
     const FLAG_IMGS = {
       Ethiopia:     'https://flagcdn.com/et.svg',
