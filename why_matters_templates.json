@@ -1,8 +1,8 @@
 {
-  "version": 2,
+  "version": 3,
   "default": {
     "id": "generic-01",
-    "text": "This story is part of a wider pattern of developments affecting the Horn of Africa and neighbouring states. Tracking events like this helps explain the longer-term political, economic, and humanitarian trends shaping the region."
+    "text": "Every development in the Horn of Africa carries a regional chain reaction: conflict in one state reshapes displacement in another, port access shifts trade, and political fractures open space for armed groups. Tracking this story is not optional context — it is how the next crisis becomes legible before it arrives."
   },
   "groups": [
     {
@@ -14,11 +14,11 @@
       "templates": [
         {
           "id": "rights-01",
-          "text": "Calls for justice and accountability — whether for historical atrocities or contemporary abuses — reflect ongoing global debates about who bears responsibility and what redress looks like. In Africa, these discussions often intersect with questions of sovereignty, reparations, and the limits of international law."
+          "text": "Accountability processes are rarely just symbolic. When governments face credible pressure over atrocities — from the ICC, from civil society, or from foreign partners — it shifts their political calculus, their access to aid, and the legitimacy they hold domestically. Ignoring these processes does not make them go away; it makes the eventual reckoning more disruptive."
         },
         {
           "id": "rights-02",
-          "text": "Human rights issues and accountability processes rarely move quickly, but they can shift the legitimacy of governments, the trust of international partners, and the wellbeing of affected communities. Who raises these issues — and who responds — is often as significant as the substance of the claims."
+          "text": "Who raises accountability demands, and who responds, signals which power relationships are in play. In the Horn, rights proceedings have historically preceded — and sometimes triggered — major political transitions. The question is not whether justice will be addressed, but at what cost and on whose terms."
         }
       ]
     },
@@ -31,11 +31,11 @@
       "templates": [
         {
           "id": "media-01",
-          "text": "Press freedom is closely tied to political openness: restrictions on journalists often signal broader crackdowns on civil society and political dissent. The Horn of Africa has seen repeated cycles of media restriction, particularly during elections and conflicts."
+          "text": "When journalists are arrested or outlets shut down, it rarely stops there. Media crackdowns are early-warning signals of broader political closures — they precede election manipulation, accountability failures, and the suppression of communities whose stories go untold. What cannot be reported cannot be responded to."
         },
         {
           "id": "media-02",
-          "text": "When journalists face arrest or outlets are shuttered, it limits the flow of information that communities, policymakers, and international observers rely on to understand what is happening. Tracking these patterns matters for accountability."
+          "text": "Press restrictions cut the information supply that policymakers, aid agencies, and communities need to make real decisions. In a region where conflict flashpoints can escalate in days, losing credible local reporting is not just a freedom-of-speech issue — it is a structural risk to early warning and response."
         }
       ]
     },
@@ -49,11 +49,11 @@
       "templates": [
         {
           "id": "aid-01",
-          "text": "Aid decisions can reshape access to food, medicine, and basic services, and they often reflect shifting donor priorities and accountability pressures. In the Horn of Africa, even short pauses can ripple through vulnerable communities and local markets."
+          "text": "Aid pauses or cuts in the Horn are not abstract policy changes — they translate within weeks into rising malnutrition rates, overwhelmed health posts, and families making impossible trade-offs. The populations affected are already in the most fragile tier of global food insecurity. There is no safety buffer."
         },
         {
           "id": "aid-02",
-          "text": "Humanitarian moves like this may affect delivery routes, partner operations, and trust between donors and local institutions. Tracking the follow-up actions matters as much as the announcement."
+          "text": "Humanitarian decisions signal which crises the international community still prioritises and which it has quietly deprioritised. When funding shifts or corridors close, the gap is rarely filled by local capacity — it simply goes unfilled. The downstream cost in lives and displacement typically exceeds the cost of maintaining access."
         }
       ]
     },
@@ -66,11 +66,11 @@
       "templates": [
         {
           "id": "sec-01",
-          "text": "Security developments in the Horn of Africa can carry cross-border spillover risks, shaping trade routes, displacement patterns, and diplomatic alignments. Small escalations can become wider regional pressures if not contained."
+          "text": "Armed escalations in the Horn do not stay contained: they reshape displacement corridors, close trade routes, destabilise neighbouring governments, and give armed groups new recruitment pools. Even a localised clash can signal a fracture in a ceasefire framework that took years to build — and hours to unravel."
         },
         {
           "id": "sec-02",
-          "text": "Armed group activity often reflects deeper grievances over land, resources, political exclusion, or ethnic tension. Understanding who is fighting, where, and why matters for assessing how a conflict might evolve."
+          "text": "Military pressure alone has repeatedly failed to resolve conflicts in the Horn. What matters is whether the conditions that sustain armed groups — political exclusion, resource grievances, impunity — are being addressed. If they are not, tactical gains dissolve. The pattern repeats."
         }
       ]
     },
@@ -83,11 +83,11 @@
       "templates": [
         {
           "id": "pol-01",
-          "text": "Political decisions often signal shifting alliances and internal power dynamics that can affect stability and policy direction. Watching who benefits — and how institutions respond — helps explain what may come next."
+          "text": "Political decisions in the Horn compound quickly. A cabinet reshuffle, a delayed election, or a broken agreement does not just change one institution — it signals which factions have won influence, which have been sidelined, and where the next challenge to stability is likely to come from."
         },
         {
           "id": "pol-02",
-          "text": "Governance changes — whether through elections, appointments, or constitutional amendments — shape who controls resources and institutions. In fragile states, these transitions can be pivotal moments for stability or conflict."
+          "text": "In fragile states, governance transitions are the moments when violence is most likely and institutional capacity is most exposed. Who controls appointments, revenues, and security forces during a political shift often determines whether a transition holds or collapses. The first weeks are rarely the last test."
         }
       ]
     },
@@ -100,11 +100,11 @@
       "templates": [
         {
           "id": "eco-01",
-          "text": "Economic shifts can hint at deeper pressures on budgets, currencies, and household costs. In a trade-linked region like the Horn of Africa, policy changes can quickly affect cross-border commerce and investor confidence."
+          "text": "Economic pressure in the Horn translates directly into political instability. When currencies fall, fuel prices spike, or port access is disrupted, governments that cannot protect living standards lose legitimacy fast — and populations under economic stress are the primary recruitment base for armed movements."
         },
         {
           "id": "eco-02",
-          "text": "Fiscal and monetary decisions shape the daily lives of ordinary people through prices, employment, and access to credit. How governments manage these pressures — and whether international partners support or constrain them — matters for stability."
+          "text": "Trade and fiscal decisions determine who benefits from a state's economy and who is excluded. In resource-constrained environments, those exclusions are not passive — they become grievances that drive protests, paralleleconomies, and in some cases, organised violence. The numbers matter because they tell you who is being squeezed."
         }
       ]
     },
@@ -117,11 +117,11 @@
       "templates": [
         {
           "id": "cli-01",
-          "text": "Climate shocks in the Horn of Africa can amplify food insecurity, displacement, and economic strain. Tracking early indicators — rainfall, harvests, and water access — helps explain why crises escalate or ease."
+          "text": "Climate shocks in the Horn are not background noise — they are direct triggers of food insecurity, displacement, and conflict. When harvests fail or water access collapses, communities that were already close to the edge cross it. The political consequences follow the rainfall maps by six to eighteen months."
         },
         {
           "id": "cli-02",
-          "text": "Environmental stress rarely stays local. In the Horn, drought and flood cycles affect pastoral communities, agriculture, and migration patterns across borders, often setting the conditions for conflict or cooperation."
+          "text": "Environmental stress in the Horn does not respect borders. Drought cycles displace pastoral communities across three or four countries simultaneously, compress competition over water and grazing land, and overwhelm local governance capacity. The climate variable is now inseparable from the conflict variable."
         }
       ]
     },
@@ -134,11 +134,11 @@
       "templates": [
         {
           "id": "dip-01",
-          "text": "Diplomatic moves in the Horn of Africa often reflect competing interests between regional powers, global actors, and smaller states navigating their options. Even symbolic gestures can signal shifts in alignment that matter for trade, security, and aid."
+          "text": "Diplomatic moves in the Horn carry disproportionate weight because the region sits at the intersection of Gulf capital, Chinese infrastructure ambition, US counterterrorism priorities, and African Union legitimacy contests. When any of these relationships shift — even quietly — it changes who can access financing, who gets political cover, and who loses it."
         },
         {
           "id": "dip-02",
-          "text": "The Horn sits at the intersection of multiple geopolitical interests — the Red Sea, the Gulf states, China, the US, and regional blocs. Understanding who is talking to whom, and why now, adds important context to these developments."
+          "text": "The Horn's diplomatic choreography is rarely what it appears. Meetings that look ceremonial often precede port deals, security agreements, or political pressure that reshapes regional power. Understanding who is talking to whom — and why now — is the first step to understanding what will happen next."
         }
       ]
     }
