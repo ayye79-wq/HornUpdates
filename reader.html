@@ -105,7 +105,6 @@
       <!-- Interpretive headline (generated from summary) -->
       <div style="font-size:.7rem;font-weight:700;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Horn Updates · Signal Brief</div>
       <h1 id="signal-headline" style="font-size:1.35rem;font-weight:800;line-height:1.25;margin:0 0 10px;color:#111827;">Loading…</h1>
-      <div id="original-title" style="font-size:.82rem;color:#9ca3af;border-left:3px solid #e5e7eb;padding-left:10px;margin-bottom:4px;font-style:italic;"></div>
 
       <div class="divider"></div>
 
@@ -132,7 +131,7 @@
         <div id="brief-pattern-wrap" style="margin-bottom:18px;display:none;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:14px 16px;">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
             <span style="width:10px;height:10px;border-radius:2px;background:#7c3aed;flex-shrink:0;"></span>
-            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7c3aed;">Bigger picture</span>
+            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7c3aed;">🧠 Horn Updates Insight</span>
           </div>
           <p id="brief-pattern" style="margin:0;font-size:.92rem;line-height:1.7;color:#4c1d95;"></p>
         </div>
@@ -252,20 +251,27 @@
           .replace(/Originally published (at|on|by) .{0,80}?\.\s*$/i, "")
           .trim();
 
-        // — Interpretive headline from first sentence of summary —
+        // — Interpretive headline: strip passive/observational openers so it reads editorial —
         function makeHeadline(text) {
           const sentences = text.match(/[^.!?]+[.!?]+/g) || [];
-          const first = (sentences[0] || text).trim().replace(/[.!?]+$/, "");
-          return first.length <= 110 ? first : first.slice(0, 107) + "…";
+          let raw = (sentences[0] || text).trim().replace(/[.!?]+$/, "");
+          raw = raw
+            .replace(/^Widely\s+circulated\s+(videos?|footage|images?|clips?)\s+(?:appear(?:ing)?\s+to\s+show|show(?:ing)?)\s*/i, "Footage: ")
+            .replace(/^(Unverified|Unconfirmed)\s+(videos?|footage|images?|clips?)\s+(?:appear(?:ing)?\s+to\s+show|show(?:ing)?|suggest(?:ing)?|purport(?:ing)?\s+to\s+show)\s*/i, "Unverified: ")
+            .replace(/^(?:Reports?|Sources?|Officials?)\s+(?:suggest|indicate|say|claim|confirm|warn)\s+(?:that\s+)?/i, "")
+            .replace(/^According\s+to\s+[^,]{3,50},\s+/i, "")
+            .replace(/^In\s+(?:a|an)\s+(?:statement|report|announcement|interview|speech)[^,]{0,50},\s+/i, "")
+            .replace(/^(?:A|An)\s+(?:new\s+)?(?:report|statement|announcement|update)\s+(?:by|from)\s+[^,]{3,50}\s+(?:shows?|reveals?|confirms?|warns?)\s+(?:that\s+)?/i, "")
+            .trim();
+          return raw.length <= 115 ? raw : raw.slice(0, 112) + "…";
         }
         const headline = makeHeadline(cleanSummary) || (match.title || "Signal Brief");
         document.getElementById("signal-headline").textContent = headline;
-        if (match.title && match.title !== headline) {
-          document.getElementById("original-title").textContent = "Via " + (match.source_name || "source") + ": \u201c" + match.title + "\u201d";
-        }
 
-        // — What happened —
-        document.getElementById("brief-what").textContent = cleanSummary;
+        // — What happened: 2–3 sentences max, clean and editorial —
+        const allSentences = cleanSummary.match(/[^.!?]+[.!?]+/g) || [];
+        const briefWhat = allSentences.slice(0, 2).join(" ").trim() || cleanSummary.slice(0, 280);
+        document.getElementById("brief-what").textContent = briefWhat;
 
         // — What to watch (country-specific) —
         const watchMap = {
