@@ -343,7 +343,7 @@
         const rtl = isArabic(cleanSummary) || isArabic(match.title);
         if (rtl) {
           document.getElementById("brief-what").classList.add("rtl");
-          document.getElementById("title").classList.add("rtl");
+          document.getElementById("signal-headline").classList.add("rtl");
         }
 
         if (templates) {
@@ -368,7 +368,7 @@
       const url = window.location.href;
       if (navigator.share) {
         await navigator.share({
-          title: document.getElementById("title").textContent,
+          title: document.getElementById("signal-headline").textContent,
           url
         });
       } else {
