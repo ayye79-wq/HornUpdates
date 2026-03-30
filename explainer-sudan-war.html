@@ -288,7 +288,7 @@
             const text = ((a.title||"")+" "+(a.summary||"")).toLowerCase();
             return KEYWORDS.some(k => text.includes(k));
           })
-          .sort((a,b) => new Date(b.published_at||0) - new Date(a.published_at||0))
+          .sort((a,b) => new Date(b.published_at||0) — new Date(a.published_at||0))
           .slice(0, 5);
         const el = document.getElementById("related-articles");
         if (!articles.length) { el.innerHTML = "<p style='color:#9ca3af;font-size:.9rem;'>No recent updates found.</p>"; return; }
