@@ -1,20 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core pages -->
   <url>
     <loc>https://hornupdates.com/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
+    <loc>https://hornupdates.com/explainers.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
     <loc>https://hornupdates.com/opinion.html</loc>
-    <lastmod>2026-03-24</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Explainers (primary original content) -->
+  <url>
+    <loc>https://hornupdates.com/explainer-sudan-war.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/explainer-tigray.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/explainer-ethiopia-sea.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/explainer-sudan-ethiopia-border.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/explainer-iran-uae-ethiopia.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/explainer-somalia-al-shabaab.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Opinion pieces -->
+  <url>
+    <loc>https://hornupdates.com/opinion-sudan-war.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-ethiopia-sea.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-kenya-mediator.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-somaliland.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-assab.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-auto-2026-03-22.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Support pages -->
   <url>
     <loc>https://hornupdates.com/about.html</loc>
     <changefreq>monthly</changefreq>
@@ -24,19 +119,7 @@
   <url>
     <loc>https://hornupdates.com/editorial-policy.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://hornupdates.com/privacy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://hornupdates.com/terms.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
@@ -46,40 +129,15 @@
   </url>
 
   <url>
-    <loc>https://hornupdates.com/opinion-sudan-war.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://hornupdates.com/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://hornupdates.com/opinion-ethiopia-sea.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://hornupdates.com/opinion-kenya-mediator.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://hornupdates.com/opinion-somaliland.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://hornupdates.com/opinion-assab.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://hornupdates.com/opinion-auto-2026-03-22.html</loc>
-    <lastmod>2026-03-22</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.8</priority>
+    <loc>https://hornupdates.com/terms.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
 </urlset>
