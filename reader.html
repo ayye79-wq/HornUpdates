@@ -279,7 +279,10 @@
 
         // — What happened: 2–3 sentences max, clean and editorial —
         const allSentences = cleanSummary.match(/[^.!?]+[.!?]+/g) || [];
-        const briefWhat = allSentences.slice(0, 2).join(" ").trim() || cleanSummary.slice(0, 280);
+        const briefWhat = allSentences.slice(0, 2).join(" ").trim()
+          || cleanSummary.slice(0, 280)
+          || (match.title || "").trim()
+          || "See the full article for details.";
         document.getElementById("brief-what").textContent = briefWhat;
 
         // — What to watch (country-specific) —
