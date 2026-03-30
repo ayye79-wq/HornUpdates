@@ -259,7 +259,7 @@
         }
 
         document.getElementById("sourcePill").textContent =
-          "Source: " + (match.source_name || "Source");
+          "Reported by " + (match.source_name || "publisher");
         document.getElementById("datePill").textContent =
           "Date: " + (match.published_at ? new Date(match.published_at).toLocaleDateString() : "—");
 
