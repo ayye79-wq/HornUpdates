@@ -90,7 +90,6 @@
         <span class="muted">• Signal Brief</span>
       </div>
       <div class="actions">
-        <a class="btn" href="#" id="readFull">Read full article ↗</a>
         <a class="btn secondary" href="#" id="shareNative">Share</a>
       </div>
     </div>
@@ -223,8 +222,6 @@
     async function load() {
       const articleUrl = getParam("url");
       if (!articleUrl) { window.location.href = "index.html"; return; }
-
-      document.getElementById("readFull").href = articleUrl;
 
       try {
         const [dataRes, tmplRes] = await Promise.all([
