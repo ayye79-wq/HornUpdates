@@ -12,46 +12,27 @@
   <meta charset="UTF-8" />
   <title>Editorial Policy • Horn Updates</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <link rel="stylesheet" href="style.css" />
-
   <style>
-    body{
-      background:#f5f6f8;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:#111827;
-      margin:0;
-    }
+    body{background:#f5f6f8;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#111827;margin:0;line-height:1.75;}
     .wrap{max-width:760px;margin:0 auto;padding:24px 18px;}
-    .card{
-      background:#fff;
-      border:1px solid #e5e7eb;
-      border-radius:16px;
-      padding:22px;
-      box-shadow:0 10px 26px rgba(0,0,0,.05);
-    }
-    h1{font-size:1.6rem;margin:0 0 12px;}
-    h2{font-size:1.15rem;margin:22px 0 8px;}
-    p,li{line-height:1.65;}
-    ul{margin:10px 0 0 18px;}
-    .muted{color:#6b7280;font-size:.95rem;}
-    .pill{
-      display:inline-block;
-      background:#f3f4f6;
-      border:1px solid #e5e7eb;
-      border-radius:999px;
-      padding:4px 10px;
-      font-size:.85rem;
-      margin-right:8px;
-    }
-    footer{
-      margin-top:32px;
-      text-align:center;
-      font-size:.9rem;
-      color:#6b7280;
-    }
-    footer a{color:#374151;text-decoration:none;}
-    footer a:hover{text-decoration:underline;}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:28px 26px;box-shadow:0 10px 26px rgba(0,0,0,.05);margin-bottom:20px;}
+    h1{font-size:1.7rem;margin:0 0 10px;}
+    h2{font-size:1.15rem;margin:28px 0 8px;color:#1e3a5f;border-left:4px solid #2563eb;padding-left:10px;}
+    p{margin:10px 0;}
+    ul{margin:10px 0;padding-left:20px;}
+    li{margin:7px 0;}
+    a{color:#2563eb;}
+    .muted{color:#6b7280;font-size:.9rem;}
+    .pill{display:inline-block;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;padding:4px 10px;font-size:.82rem;margin-right:6px;margin-bottom:6px;}
+    .divider{height:1px;background:#e5e7eb;margin:24px 0;}
+    .content-type-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px;}
+    .ct-card{background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:14px;}
+    .ct-card strong{display:block;margin-bottom:4px;color:#1e3a5f;font-size:.95rem;}
+    .ct-card p{font-size:.85rem;color:#4b5563;margin:0;}
+    .author-box{display:flex;gap:16px;align-items:flex-start;background:#f9fafb;border:1px solid #e5e7eb;border-radius:14px;padding:18px 20px;margin-top:24px;}
+    .author-avatar{width:48px;height:48px;border-radius:50%;background:#1e3a5f;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;flex-shrink:0;}
+    .source-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
   </style>
 </head>
 
@@ -62,77 +43,88 @@
       <p class="muted">
         <span class="pill">Horn Updates</span>
         <span class="pill">Horn of Africa</span>
-        <span class="pill">AI-assisted summaries</span>
-        <br />
-        Last updated: <strong>December 2025</strong>
+        <span class="pill">Independent Analysis</span>
+        <br /><br />
+        Last updated: <strong>March 2026</strong>
       </p>
 
       <h2>Our Mission</h2>
-      <p>
-        Horn Updates helps readers stay informed about the Horn of Africa by publishing
-        concise, original summaries of reporting from reputable news organizations.
-        We aim to reduce information overload while encouraging readers to access full context
-        on the publisher’s website.
-      </p>
+      <p>Horn Updates is an independent platform dedicated to covering the Horn of Africa - a region of over 300 million people that is consistently underrepresented in international media. Our goal is to give readers accurate, accessible, and contextually rich coverage of events in Ethiopia, Somalia, Sudan, South Sudan, Eritrea, Kenya, and Djibouti.</p>
+      <p>We publish two types of content: curated news summaries drawn from regional and international sources, and original in-depth explainers written by our editorial team.</p>
 
       <h2>What We Publish</h2>
-      <ul>
-        <li><strong>Original summaries</strong> written by Horn Updates based on third-party reporting.</li>
-        <li><strong>Headlines and metadata</strong> (source, date, country/topic tags) to help navigation.</li>
-        <li><strong>Links to original publishers</strong> so readers can read the full article.</li>
-      </ul>
+      <div class="content-type-grid">
+        <div class="ct-card">
+          <strong>News Summaries</strong>
+          <p>Concise summaries of reporting from vetted regional and international sources. Each summary links directly to the original publisher. Full reporting credit is attributed to the source.</p>
+        </div>
+        <div class="ct-card">
+          <strong>In-Depth Explainers</strong>
+          <p>Original long-form analysis written and updated by the Horn Updates editorial team. These cover ongoing conflicts, geopolitical dynamics, and key questions shaping the region.</p>
+        </div>
+        <div class="ct-card">
+          <strong>Opinion and Analysis</strong>
+          <p>Original commentary on key issues facing the Horn of Africa. Opinion pieces represent the analytical views of Horn Updates editors and are clearly labelled as such.</p>
+        </div>
+        <div class="ct-card">
+          <strong>Contextual Backgrounds</strong>
+          <p>Brief context sections attached to news summaries, helping readers understand why a story matters and how it connects to broader regional trends.</p>
+        </div>
+      </div>
 
-      <h2>Attribution & Linking</h2>
-      <p>
-        We clearly attribute each story to its original publisher and provide a direct link to the
-        full article. Full articles remain the property of their respective publishers.
-      </p>
-
-      <h2>AI Use & Human Oversight</h2>
-      <p>
-        Horn Updates uses automated tools (including AI) to assist with summarization, tagging, and formatting.
-        We strive to ensure summaries are accurate, non-misleading, and add value beyond copying.
-      </p>
+      <h2>How We Select Sources</h2>
+      <p>We draw from a curated list of regional and international outlets with established track records of credible reporting on the Horn of Africa. Our source selection criteria include:</p>
       <ul>
-        <li>We avoid sensationalizing headlines.</li>
-        <li>We aim to keep summaries factual and grounded in the source report.</li>
-        <li>We label summaries as written by Horn Updates and link to the full source.</li>
+        <li>Demonstrated editorial standards and correction policies</li>
+        <li>Active on-the-ground reporting presence in the region</li>
+        <li>Consistency and transparency in sourcing</li>
+        <li>Coverage of underrepresented perspectives, including local-language and diaspora outlets</li>
       </ul>
+      <p>We include sources in Arabic, Amharic, and Somali alongside English-language outlets to reflect the diversity of the region. Sources are reviewed periodically and removed if they no longer meet our standards.</p>
+
+      <h2>How We Verify Information</h2>
+      <p>For news summaries, we rely on the editorial standards of the originating publication. We do not republish content from outlets without established editorial oversight. Where summaries reference facts or figures, those are drawn directly from the source article.</p>
+      <p>For our original explainers, our editorial team cross-references multiple sources before publishing. We identify where information is contested or uncertain, and we update explainers when significant new developments occur.</p>
+
+      <h2>Use of Automated Tools</h2>
+      <p>Horn Updates uses automated tools to assist with the collection and initial processing of news articles from our source list. News summaries are prepared with editorial oversight to ensure accuracy and fair representation of the original reporting.</p>
+      <p>Our in-depth explainers and opinion pieces are written directly by the Horn Updates editorial team and are not auto-generated. All published content - regardless of how it is prepared - is reviewed before publication.</p>
+      <p>Every article page carries a clear disclosure noting that summaries are AI-assisted and directing readers to the original publisher for complete coverage.</p>
+
+      <h2>Attribution and Linking</h2>
+      <p>Every news summary clearly attributes the originating source and links directly to the full article. We do not present third-party reporting as our own original journalism. Our role is to provide access and context, not to replace the original publisher.</p>
+      <p>We follow this attribution format on every article page:</p>
+      <blockquote style="border-left:3px solid #2563eb;padding-left:14px;margin:12px 0;color:#374151;font-style:italic;">"Full reporting credit goes to [Publisher Name]. Click Read full article to access the complete story."</blockquote>
 
       <h2>Corrections Policy</h2>
-      <p>
-        If you believe a summary contains an error or lacks important context, we want to fix it.
-        Please email us with the article link and the correction request.
-      </p>
-      <p>
-        Contact: <strong>admin@hornupdates.com</strong>
-      </p>
+      <p>We take accuracy seriously. If a summary or explainer contains an error, lacks important context, or misrepresents the original reporting, we want to know and will correct it promptly.</p>
+      <ul>
+        <li>To request a correction, email us at <strong>admin@hornupdates.com</strong> with the article URL and details of the issue.</li>
+        <li>Corrections to explainers are made directly in the page and the "Last updated" date is revised.</li>
+        <li>We do not delete corrections silently - if a significant error is identified, we note that a correction was made.</li>
+      </ul>
 
-      <h2>Publisher Requests / Takedown</h2>
-      <p>
-        If you are a publisher and would like a summary corrected, updated, or removed, contact us with the URL
-        and details of your request. We will review and respond as quickly as possible.
-      </p>
+      <h2>Publisher and Takedown Requests</h2>
+      <p>If you are a publisher and have concerns about how your content is referenced on Horn Updates, please contact us at <strong>admin@hornupdates.com</strong>. We will review your request and respond promptly. We respect the intellectual property of all publishers whose work we reference.</p>
 
       <h2>Editorial Independence</h2>
-      <p>
-        Horn Updates is an independent project. Our editorial choices (what to summarize, how to tag, and how to
-        present stories) are based on relevance to the Horn of Africa and reader usefulness.
-      </p>
+      <p>Horn Updates is an independent platform. Our editorial decisions - which sources to include, which stories to surface, how to frame context - are based solely on relevance to the Horn of Africa and value to our readers. We have no political affiliation and no financial relationship with any of the governments or organisations we cover.</p>
 
-      <h2>Advertising & Monetization</h2>
-      <p>
-        Advertising may appear on some pages. Ads do not influence our summaries or how we rank or tag stories.
-        We aim to keep ads from appearing on pages without sufficient publisher content.
-      </p>
+      <h2>Advertising</h2>
+      <p>Horn Updates may display advertising to support the cost of operating the platform. Advertising does not influence our editorial decisions, source selection, or the content of our summaries and explainers. Ads and editorial content are clearly separated.</p>
 
-      <h2>Updates to This Policy</h2>
-      <p>
-        We may update this Editorial Policy over time. Changes will be posted on this page with an updated date.
-      </p>
+      <div class="divider"></div>
+
+      <div class="author-box">
+        <div class="author-avatar">HU</div>
+        <div>
+          <div style="font-weight:700;font-size:1rem;color:#111827;margin-bottom:4px;">Horn Updates Editorial Team</div>
+          <div style="font-size:.9rem;color:#4b5563;line-height:1.6;">Questions about this policy can be directed to <a href="mailto:admin@hornupdates.com">admin@hornupdates.com</a>. We aim to respond within 48 hours.</div>
+        </div>
+      </div>
     </div>
 
-   <footer class="site-footer">
+    <footer class="site-footer">
       <nav class="footer-nav">
         <a href="/index.html">Home</a>
         <a href="/explainers.html">Explainers</a>
@@ -142,7 +134,8 @@
         <a href="/terms.html">Terms</a>
         <a href="/contact.html">Contact</a>
       </nav>
-      <div class="footer-copy">
-        © 2026 Horn Updates. All rights reserved.
-      </div>
+      <div class="footer-copy">© 2026 Horn Updates. All rights reserved.</div>
     </footer>
+  </div>
+</body>
+</html>
