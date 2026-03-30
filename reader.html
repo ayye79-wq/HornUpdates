@@ -14,7 +14,8 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Horn Updates • Reader</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Horn Updates • Signal Brief</title>
   <link rel="stylesheet" href="style.css" />
 
   <script async
@@ -86,9 +87,8 @@
     <div class="topbar">
       <div class="brand">
         <a href="index.html">Horn Updates</a>
-        <span class="muted">• Reader</span>
+        <span class="muted">• Signal Brief</span>
       </div>
-
       <div class="actions">
         <a class="btn" href="#" id="readFull">Read full article ↗</a>
         <a class="btn secondary" href="#" id="shareNative">Share</a>
@@ -100,47 +100,48 @@
         <span class="pill" id="sourcePill">Source</span>
         <span class="pill" id="datePill">Date</span>
         <span class="pill" id="countryPill" style="display:none;"></span>
-        <span class="pill" id="readTimePill" style="display:none;"></span>
       </div>
 
       <h1 id="title">Loading…</h1>
 
       <div class="divider"></div>
 
-      <div id="summary" class="summary">
-        <span class="muted">Loading summary…</span>
-      </div>
+      <!-- Signal Brief: three blocks -->
+      <div id="brief-loading" class="muted" style="font-size:.95rem;">Loading brief…</div>
 
-      <div id="context-section" style="display:none;">
-        <div class="divider"></div>
-        <details class="reader-context-box" open>
-          <summary class="reader-context-toggle">
-            &#9432; Context &amp; Why This Matters
-          </summary>
-          <p id="context-text" class="reader-context-body"></p>
-        </details>
+      <div id="brief-body" style="display:none;">
+
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="width:10px;height:10px;border-radius:2px;background:#2563eb;flex-shrink:0;"></span>
+            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2563eb;">What happened</span>
+          </div>
+          <p id="brief-what" style="margin:0;font-size:1rem;line-height:1.7;color:#111827;"></p>
+        </div>
+
+        <div id="brief-why-wrap" style="margin-bottom:14px;display:none;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="width:10px;height:10px;border-radius:2px;background:#d97706;flex-shrink:0;"></span>
+            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#d97706;">Why it matters</span>
+          </div>
+          <p id="brief-why" style="margin:0;font-size:.96rem;line-height:1.7;color:#374151;"></p>
+        </div>
+
+        <div id="brief-watch-wrap" style="margin-bottom:4px;display:none;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="width:10px;height:10px;border-radius:2px;background:#dc2626;flex-shrink:0;"></span>
+            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#dc2626;">What to watch</span>
+          </div>
+          <p id="brief-watch" style="margin:0;font-size:.96rem;line-height:1.7;color:#374151;"></p>
+        </div>
+
       </div>
 
       <div class="divider"></div>
 
-      <div id="attribution-box" style="
-        background: #f0f9ff;
-        border: 1px solid #bae6fd;
-        border-radius: 12px;
-        padding: 14px 16px;
-        font-size: .92rem;
-        color: #0c4a6e;
-        line-height: 1.6;
-      ">
-        <div style="margin-bottom:4px;">
-          <strong>AI-assisted summary</strong> by Horn Updates editors.
-        </div>
-        <div style="margin-bottom:4px;">
-          Full reporting credit goes to <strong id="attr-source">the original publisher</strong>.
-        </div>
-        <div>
-          Click <strong>Read full article</strong> above to access the complete story on the publisher's website.
-        </div>
+      <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:12px 16px;font-size:.85rem;color:#0c4a6e;line-height:1.6;">
+        Signal Brief by Horn Updates editors. Full reporting credit goes to <strong id="attr-source">the original publisher</strong>.
+        <a id="readFull2" href="#" style="color:#1d4ed8;font-weight:600;margin-left:4px;">Read full article ↗</a>
       </div>
 
       <!-- AdSense: Reader Ad (below attribution) -->
@@ -245,36 +246,50 @@
 
         document.getElementById("title").textContent = match.title || "Article";
 
-        // Strip common RSS footer artifacts before displaying summary
+        // Strip RSS footer artifacts
         let cleanSummary = (match.summary || "")
           .replace(/The post .{0,120}? (appeared first|first appeared) on .{0,80}?\.\s*$/i, "")
           .replace(/This article .{0,80}? first appeared on .{0,80}?\.\s*$/i, "")
           .replace(/Originally published (at|on|by) .{0,80}?\.\s*$/i, "")
           .trim();
-        document.getElementById("summary").textContent = cleanSummary;
 
-        // Populate attribution source name
-        if (match.source_name) {
-          document.getElementById("attr-source").textContent = match.source_name;
-        }
+        // — Signal Brief: What happened —
+        document.getElementById("brief-what").textContent = cleanSummary;
 
-        document.getElementById("sourcePill").textContent =
-          "Reported by " + (match.source_name || "publisher");
+        // — Signal Brief: Why it matters (from context) —
+        // (populated after template lookup below)
+
+        // — Signal Brief: What to watch —
+        const watchMap = {
+          "Sudan":       "Watch for any new ceasefire talks and RSF movements around El Fasher and Khartoum.",
+          "Ethiopia":    "Watch for federal policy announcements and updates on the Pretoria peace process.",
+          "Somalia":     "Watch for Al-Shabaab activity and progress on the African Union transition mission.",
+          "South Sudan": "Watch for delays or flashpoints ahead of the 2026 election timeline.",
+          "Eritrea":     "Watch for any diplomatic opening — Asmara's public silence often signals backroom moves.",
+          "Djibouti":    "Watch for shifts in the base agreements with major powers and port access politics.",
+          "Kenya":       "Watch for the government's economic reform progress and its regional mediation role.",
+        };
+        const countries = match.country_tags || [];
+        const watchText = countries.map(c => watchMap[c]).filter(Boolean)[0]
+          || "Watch for official responses and regional diplomatic reactions as this story develops.";
+        document.getElementById("brief-watch").textContent = watchText;
+        document.getElementById("brief-watch-wrap").style.display = "";
+
+        // Show brief body
+        document.getElementById("brief-loading").style.display = "none";
+        document.getElementById("brief-body").style.display = "";
+
+        // Pills
+        if (match.source_name) document.getElementById("attr-source").textContent = match.source_name;
+        document.getElementById("readFull2").href = articleUrl;
+        document.getElementById("sourcePill").textContent = "Reported by " + (match.source_name || "publisher");
         document.getElementById("datePill").textContent =
-          "Date: " + (match.published_at ? new Date(match.published_at).toLocaleDateString() : "—");
-
-        if (Array.isArray(match.country_tags) && match.country_tags.length) {
+          match.published_at ? new Date(match.published_at).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}) : "—";
+        if (countries.length) {
           const c = document.getElementById("countryPill");
           c.style.display = "inline-block";
-          c.textContent = "Country: " + match.country_tags.join(", ");
+          c.textContent = countries.join(" · ");
         }
-
-        // Read time estimate
-        const wordCount = (match.summary || "").trim().split(/\s+/).filter(Boolean).length;
-        const mins = Math.max(1, Math.round(wordCount / 200));
-        const rt = document.getElementById("readTimePill");
-        rt.textContent = `~${mins} min read`;
-        rt.style.display = "inline-block";
 
         // JSON-LD structured data
         const ld = {
@@ -298,18 +313,17 @@
         ldScript.textContent = JSON.stringify(ld);
         document.head.appendChild(ldScript);
 
-        const sumEl = document.getElementById("summary");
         const rtl = isArabic(cleanSummary) || isArabic(match.title);
         if (rtl) {
-          sumEl.classList.add("rtl");
+          document.getElementById("brief-what").classList.add("rtl");
           document.getElementById("title").classList.add("rtl");
         }
 
         if (templates) {
           const ctx = getContextForArticle(match, templates);
           if (ctx) {
-            document.getElementById("context-text").textContent = ctx;
-            document.getElementById("context-section").style.display = "";
+            document.getElementById("brief-why").textContent = ctx;
+            document.getElementById("brief-why-wrap").style.display = "";
           }
         }
 
