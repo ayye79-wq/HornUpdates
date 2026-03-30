@@ -64,9 +64,12 @@
         <img src="Horn1_logo.png" alt="Horn Updates logo" class="logo" />
         <div class="brand-text">
           <h1>Horn Updates</h1>
-          <p class="tagline">News from the Horn of Africa</p>
+          <p class="tagline">Understand the Horn of Africa</p>
           <p class="update-schedule">&#8635; Updated twice daily &mdash; 6 AM &amp; 3 PM UTC</p>
-          <p class="site-identity">HornUpdates is a curated news platform delivering AI-assisted summaries and original context on major stories from the Horn of Africa.</p>
+          <p class="site-identity">Independent analysis, explainers, and daily briefings on conflicts, power, and change.</p>
+          <div class="authority-badges">
+            <span>Independent</span><span class="badge-dot">·</span><span>Original analysis</span><span class="badge-dot">·</span><span>Based on regional reporting</span>
+          </div>
         </div>
       </div>
 
@@ -114,23 +117,23 @@
       </div>
     </div>
 
-    <!-- BREAKING BAR -->
+    <!-- LATEST SIGNAL BAR -->
     <section class="breaking-bar" id="breaking-bar">
-      <span class="breaking-label">BREAKING</span>
+      <span class="breaking-label">Latest Signal</span>
       <a id="breaking-link" class="breaking-link" href="#"></a>
     </section>
+
+    <!-- WHY THIS SITE EXISTS -->
+    <div class="why-strip">
+      Most coverage tells you <em>what happened</em>. We explain why it matters — and what comes next.
+    </div>
 
     <!-- MAIN LAYOUT: CONTENT + RIGHT SIDEBAR -->
     <div class="layout">
       <!-- FEATURED STORY + LATEST STORIES -->
       <main class="content">
-        <section class="featured-section">
-          <h2>Featured story</h2>
-          <div id="featured-container"></div>
-        </section>
-
         <!-- FEATURED ANALYSIS SECTION -->
-        <section style="margin-top:28px;">
+        <section>
           <div style="background:linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 100%);border-radius:14px 14px 0 0;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
             <div>
               <div style="font-size:.78rem;font-weight:600;color:#93c5fd;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;">Original Analysis</div>
@@ -170,6 +173,11 @@
             </a>
 
           </div>
+        </section>
+
+        <section class="featured-section" style="margin-top:28px;">
+          <h2>Featured story</h2>
+          <div id="featured-container"></div>
         </section>
 
         <!-- OPINION SECTION -->
