@@ -102,29 +102,39 @@
         <span class="pill" id="countryPill" style="display:none;"></span>
       </div>
 
-      <h1 id="title">Loading…</h1>
+      <!-- Interpretive headline (generated from summary) -->
+      <div style="font-size:.7rem;font-weight:700;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;">Horn Updates · Signal Brief</div>
+      <h1 id="signal-headline" style="font-size:1.35rem;font-weight:800;line-height:1.25;margin:0 0 10px;color:#111827;">Loading…</h1>
+      <div id="original-title" style="font-size:.82rem;color:#9ca3af;border-left:3px solid #e5e7eb;padding-left:10px;margin-bottom:4px;font-style:italic;"></div>
 
       <div class="divider"></div>
 
-      <!-- Signal Brief: three blocks -->
       <div id="brief-loading" class="muted" style="font-size:.95rem;">Loading brief…</div>
 
       <div id="brief-body" style="display:none;">
 
-        <div style="margin-bottom:14px;">
+        <div style="margin-bottom:18px;">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
             <span style="width:10px;height:10px;border-radius:2px;background:#2563eb;flex-shrink:0;"></span>
             <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2563eb;">What happened</span>
           </div>
-          <p id="brief-what" style="margin:0;font-size:1rem;line-height:1.7;color:#111827;"></p>
+          <p id="brief-what" style="margin:0;font-size:1rem;line-height:1.75;color:#111827;"></p>
         </div>
 
-        <div id="brief-why-wrap" style="margin-bottom:14px;display:none;">
+        <div id="brief-why-wrap" style="margin-bottom:18px;display:none;background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:14px 16px;">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
             <span style="width:10px;height:10px;border-radius:2px;background:#d97706;flex-shrink:0;"></span>
             <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#d97706;">Why it matters</span>
           </div>
-          <p id="brief-why" style="margin:0;font-size:.96rem;line-height:1.7;color:#374151;"></p>
+          <p id="brief-why" style="margin:0;font-size:.96rem;line-height:1.75;color:#374151;font-weight:500;"></p>
+        </div>
+
+        <div id="brief-pattern-wrap" style="margin-bottom:18px;display:none;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:14px 16px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+            <span style="width:10px;height:10px;border-radius:2px;background:#7c3aed;flex-shrink:0;"></span>
+            <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7c3aed;">Bigger picture</span>
+          </div>
+          <p id="brief-pattern" style="margin:0;font-size:.92rem;line-height:1.7;color:#4c1d95;"></p>
         </div>
 
         <div id="brief-watch-wrap" style="margin-bottom:4px;display:none;">
@@ -132,16 +142,16 @@
             <span style="width:10px;height:10px;border-radius:2px;background:#dc2626;flex-shrink:0;"></span>
             <span style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#dc2626;">What to watch</span>
           </div>
-          <p id="brief-watch" style="margin:0;font-size:.96rem;line-height:1.7;color:#374151;"></p>
+          <p id="brief-watch" style="margin:0;font-size:.96rem;line-height:1.75;color:#374151;"></p>
         </div>
 
       </div>
 
       <div class="divider"></div>
 
-      <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:12px 16px;font-size:.85rem;color:#0c4a6e;line-height:1.6;">
-        Signal Brief by Horn Updates editors. Full reporting credit goes to <strong id="attr-source">the original publisher</strong>.
-        <a id="readFull2" href="#" style="color:#1d4ed8;font-weight:600;margin-left:4px;">Read full article ↗</a>
+      <div style="font-size:.82rem;color:#6b7280;line-height:1.6;">
+        Source: <strong id="attr-source">publisher</strong> (original reporting) ·
+        <a id="readFull2" href="#" style="color:#2563eb;font-weight:600;">Read full article ↗</a>
       </div>
 
       <!-- AdSense: Reader Ad (below attribution) -->
@@ -159,14 +169,6 @@
     </div>
   </div>
 
-  <!-- Related Stories -->
-  <section id="related-section" style="display:none; max-width:920px; margin:20px auto 0; padding:0 18px 32px;">
-    <h2 style="font-size:1.05rem; font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:.06em; margin:0 0 12px;">Related stories</h2>
-    <div id="related-container" style="display:flex; flex-direction:column; gap:12px;"></div>
-    <p style="margin-top:14px; font-size:.9rem;">
-      <a href="/index.html" style="color:#2563eb; font-weight:600;">← Back to all stories</a>
-    </p>
-  </section>
 
   <script>
     function getParam(name) {
@@ -238,13 +240,10 @@
 
         const match = articles.find(a => norm(a.source_url || a.link || "") === target);
         if (!match) {
-          document.getElementById("title").textContent = "Article";
-          document.getElementById("summary").textContent =
-            "We could not match this article in articles.json yet. You can still read the full story.";
+          document.getElementById("signal-headline").textContent = "Article not found";
+          document.getElementById("brief-loading").textContent = "We could not match this article yet. You can still read the full story at the source.";
           return;
         }
-
-        document.getElementById("title").textContent = match.title || "Article";
 
         // Strip RSS footer artifacts
         let cleanSummary = (match.summary || "")
@@ -253,36 +252,64 @@
           .replace(/Originally published (at|on|by) .{0,80}?\.\s*$/i, "")
           .trim();
 
-        // — Signal Brief: What happened —
+        // — Interpretive headline from first sentence of summary —
+        function makeHeadline(text) {
+          const sentences = text.match(/[^.!?]+[.!?]+/g) || [];
+          const first = (sentences[0] || text).trim().replace(/[.!?]+$/, "");
+          return first.length <= 110 ? first : first.slice(0, 107) + "…";
+        }
+        const headline = makeHeadline(cleanSummary) || (match.title || "Signal Brief");
+        document.getElementById("signal-headline").textContent = headline;
+        if (match.title && match.title !== headline) {
+          document.getElementById("original-title").textContent = "Via " + (match.source_name || "source") + ": "" + match.title + """;
+        }
+
+        // — What happened —
         document.getElementById("brief-what").textContent = cleanSummary;
 
-        // — Signal Brief: Why it matters (from context) —
-        // (populated after template lookup below)
-
-        // — Signal Brief: What to watch —
+        // — What to watch (country-specific) —
         const watchMap = {
-          "Sudan":       "Watch for any new ceasefire talks and RSF movements around El Fasher and Khartoum.",
-          "Ethiopia":    "Watch for federal policy announcements and updates on the Pretoria peace process.",
-          "Somalia":     "Watch for Al-Shabaab activity and progress on the African Union transition mission.",
-          "South Sudan": "Watch for delays or flashpoints ahead of the 2026 election timeline.",
-          "Eritrea":     "Watch for any diplomatic opening — Asmara's public silence often signals backroom moves.",
-          "Djibouti":    "Watch for shifts in the base agreements with major powers and port access politics.",
-          "Kenya":       "Watch for the government's economic reform progress and its regional mediation role.",
+          "Sudan":       "Watch for RSF movements around El Fasher, humanitarian corridor talks, and any new ceasefire framework from AU or IGAD.",
+          "Ethiopia":    "Watch for federal government statements, Pretoria peace process updates, and any flashpoints in Amhara or Oromia regions.",
+          "Somalia":     "Watch for Al-Shabaab territorial activity, ATMIS transition progress, and federal-state political tensions in Mogadishu.",
+          "South Sudan": "Watch for delays or violence ahead of the 2026 election timeline, and food security conditions in Unity and Jonglei states.",
+          "Eritrea":     "Watch for rare diplomatic signals from Asmara — public silence from Eritrea often precedes quiet backroom moves.",
+          "Djibouti":    "Watch for shifts in base agreements with major powers and any changes to Ethiopia's port access arrangements.",
+          "Kenya":       "Watch for government economic policy announcements, security responses in northern Kenya, and regional mediation activity.",
         };
+
+        // — Bigger Picture (country-specific context) —
+        const bigPictureMap = {
+          "Sudan":       "Sudan's conflict has displaced over 12 million people — the largest displacement crisis on earth. Over 150,000 are estimated dead. No peace deal exists as of 2026. The war is not just military: it is the collapse of a decade-long transition from dictatorship.",
+          "Kenya":       "Kenya records over 3,000 road fatalities annually — among the highest per capita in sub-Saharan Africa. Enforcement corruption and aging transport fleets are recurring factors. Without structural reform of the NTSA and licensing systems, similar incidents will continue.",
+          "Ethiopia":    "Ethiopia is the Horn's economic and diplomatic anchor — home to 120M+ people and the African Union headquarters. Its internal conflicts since 2018 have cost an estimated $3B+ in output losses and tested the federalist framework on which the country's stability depends.",
+          "Somalia":     "Al-Shabaab has operated for 15+ years despite billions in international counterterrorism spending. The group controls 20–30% of Somali territory and generates over $100M annually through taxation. Military pressure alone has not broken its resilience.",
+          "South Sudan": "South Sudan has missed three consecutive election deadlines since independence in 2011. Over 2 million people remain internally displaced. The country's political elite has repeatedly chosen power-sharing deals that freeze conflict rather than resolve it.",
+          "Eritrea":     "Eritrea has no independent press, no elections, and enforces indefinite national service. It is ranked among the least free countries on earth — yet its Red Sea ports and military capability make it a pivotal regional actor that other governments cannot ignore.",
+          "Djibouti":    "Djibouti hosts military bases from the US, France, China, Japan and Italy — making it the world's most military-dense small state. Its port handles 95% of Ethiopia's trade. What happens in Djibouti directly affects 120 million Ethiopians.",
+        };
+
         const countries = match.country_tags || [];
+
         const watchText = countries.map(c => watchMap[c]).filter(Boolean)[0]
           || "Watch for official responses and regional diplomatic reactions as this story develops.";
         document.getElementById("brief-watch").textContent = watchText;
         document.getElementById("brief-watch-wrap").style.display = "";
 
-        // Show brief body
+        const patternText = countries.map(c => bigPictureMap[c]).filter(Boolean)[0];
+        if (patternText) {
+          document.getElementById("brief-pattern").textContent = patternText;
+          document.getElementById("brief-pattern-wrap").style.display = "";
+        }
+
+        // Show brief
         document.getElementById("brief-loading").style.display = "none";
         document.getElementById("brief-body").style.display = "";
 
-        // Pills
+        // Pills & attribution
         if (match.source_name) document.getElementById("attr-source").textContent = match.source_name;
         document.getElementById("readFull2").href = articleUrl;
-        document.getElementById("sourcePill").textContent = "Reported by " + (match.source_name || "publisher");
+        document.getElementById("sourcePill").textContent = match.source_name || "publisher";
         document.getElementById("datePill").textContent =
           match.published_at ? new Date(match.published_at).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}) : "—";
         if (countries.length) {
@@ -327,47 +354,9 @@
           }
         }
 
-        // --- Related stories ---
-        const currentUrl = norm(articleUrl);
-        const matchCountries = new Set(match.country_tags || []);
-        const matchTopics = new Set(match.topic_tags || []);
-
-        const scored = articles
-          .filter(a => norm(a.source_url || a.link || "") !== currentUrl && (a.title || ""))
-          .map(a => {
-            const aC = new Set(a.country_tags || []);
-            const aT = new Set(a.topic_tags || []);
-            let score = 0;
-            for (const c of matchCountries) if (aC.has(c)) score += 3;
-            for (const t of matchTopics) if (aT.has(t)) score += 1;
-            return { a, score };
-          })
-          .sort((x, y) => y.score - x.score || new Date(y.a.published_at || 0) - new Date(x.a.published_at || 0))
-          .slice(0, 4)
-          .map(x => x.a);
-
-        if (scored.length) {
-          const container = document.getElementById("related-container");
-          container.innerHTML = scored.map(a => {
-            const href = `reader.html?url=${encodeURIComponent(a.source_url || a.link || "")}`;
-            const countries = (a.country_tags || []).map(c => `<span style="background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;padding:3px 9px;font-size:.78rem;margin-right:4px;">${c}</span>`).join("");
-            const snippet = (a.summary || "").slice(0, 220) + ((a.summary || "").length > 220 ? "…" : "");
-            const src = a.source_name || "";
-            const date = a.published_at ? new Date(a.published_at).toLocaleDateString("en-GB", {day:"numeric",month:"short"}) : "";
-            return `
-              <a href="${href}" style="display:block;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px 16px;text-decoration:none;color:#111827;box-shadow:0 2px 8px rgba(0,0,0,.04);">
-                <div style="margin-bottom:6px;">${countries}</div>
-                <div style="font-weight:700;font-size:1rem;line-height:1.35;margin-bottom:6px;">${a.title || ""}</div>
-                ${snippet ? `<div style="font-size:.9rem;color:#374151;line-height:1.55;margin-bottom:8px;">${snippet}</div>` : ""}
-                <div style="font-size:.82rem;color:#9ca3af;">${src}${src && date ? " · " : ""}${date}</div>
-              </a>`;
-          }).join("");
-          document.getElementById("related-section").style.display = "";
-        }
-
       } catch (e) {
-        document.getElementById("title").textContent = "Error";
-        document.getElementById("summary").textContent = "Could not load articles.json.";
+        document.getElementById("signal-headline").textContent = "Error";
+        document.getElementById("brief-loading").textContent = "Could not load articles. Please try again.";
       }
     }
 
