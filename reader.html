@@ -261,7 +261,7 @@
         const headline = makeHeadline(cleanSummary) || (match.title || "Signal Brief");
         document.getElementById("signal-headline").textContent = headline;
         if (match.title && match.title !== headline) {
-          document.getElementById("original-title").textContent = "Via " + (match.source_name || "source") + ": "" + match.title + """;
+          document.getElementById("original-title").textContent = "Via " + (match.source_name || "source") + ": \u201c" + match.title + "\u201d";
         }
 
         // — What happened —
