@@ -242,6 +242,11 @@ def build_article_html(title, countries, excerpt, body, date_str, slug):
     .related h3{{margin:0 0 8px;font-size:.95rem;color:#6b7280;text-transform:uppercase;letter-spacing:.04em}}
     .related a{{display:block;margin:4px 0;font-size:.95rem}}
     footer{{margin-top:14px;font-size:14px;color:#6b7280}}
+    .site-footer{{background:#0f172a;color:#cbd5e1;text-align:center;padding:18px 12px;margin-top:0}}
+    .footer-nav{{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;margin-bottom:10px}}
+    .footer-nav a{{color:#e5e7eb;text-decoration:none;font-size:14px}}
+    .footer-nav a:hover{{text-decoration:underline}}
+    .footer-copy{{font-size:12px;color:#9ca3af}}
   </style>
 </head>
 <body>
