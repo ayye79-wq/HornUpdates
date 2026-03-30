@@ -26,12 +26,26 @@
       position: relative;
       overflow: hidden;
     }
-    .hero::before {
+    /* dot grid pattern */
+    .hero::after {
       content: "";
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(29,78,216,.35) 0%, transparent 70%);
+      background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);
+      background-size: 28px 28px;
       pointer-events: none;
     }
+    /* radial glow behind headline */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 30%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse at center, rgba(99,179,237,.22) 0%, rgba(29,78,216,.12) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero > * { position: relative; z-index: 1; }
     .hero-back { font-size:.88rem; color:#93c5fd; text-decoration:none; display:inline-block; margin-bottom:28px; letter-spacing:.01em; }
     .hero-back:hover { color:#bfdbfe; }
     .hero-eyebrow { font-size:.78rem; font-weight:700; color:#60a5fa; letter-spacing:.12em; text-transform:uppercase; margin-bottom:14px; }
