@@ -221,7 +221,7 @@ function updateBreakingBar(article) {
 
   const textEl = bar.querySelector(".breaking-text") || bar;
   textEl.innerHTML = `
-    <span class="breaking-label">Breaking</span>
+    <span class="breaking-label">Latest Signal</span>
     ${countries ? `<span class="breaking-countries">${countries}</span>` : ""}
     <a class="breaking-link" href="${href}">${title}</a>
   `;
