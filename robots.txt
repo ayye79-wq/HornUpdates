@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /reader.html
 
 Sitemap: https://hornupdates.com/sitemap.xml
