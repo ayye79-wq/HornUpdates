@@ -11,3 +11,9 @@ id = "F9z_JNnKwxALUeAAweD1G"
 uri = "file://attached_assets/horn_twitter_header.png"
 type = "image"
 title = "Horn Updates — X/Twitter Header (1500×500)"
+
+[[outputs]]
+id = "B7wl5LwVehzWgTU_vS651"
+uri = "file://attached_assets/horn_profile_pic.png"
+type = "image"
+title = "Horn Updates — X/Twitter Profile Picture (400×400)"
