@@ -1,0 +1,13 @@
+uploads = []
+
+[[generated]]
+id = "c5f5GPi_0NPGh3LZhJmet"
+uri = "file://attached_assets/horn_header_bg.png"
+type = "image"
+title = "generated_image"
+
+[[outputs]]
+id = "F9z_JNnKwxALUeAAweD1G"
+uri = "file://attached_assets/horn_twitter_header.png"
+type = "image"
+title = "Horn Updates — X/Twitter Header (1500×500)"
