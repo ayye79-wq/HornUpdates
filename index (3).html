@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7708VKPQSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7708VKPQSN');
+</script>
+  <meta charset="UTF-8" />
+  <title>Horn Updates — Horn of Africa News</title>
+  <meta name="description" content="Horn Updates is an independent news aggregator covering Ethiopia, Somalia, Sudan, South Sudan, Eritrea, Djibouti, and Kenya. Curated, translated, and contextualised daily." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932"
+     crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Sidebar layout + X feed styles (kept inline so you don't have to edit style.css) -->
+  <style>
+    /* Two-column layout (main + right sidebar) */
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 20px;
+      align-items: start;
+      margin-top: 12px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 16px;
+    }
+    .sidebar-box {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+    .sidebar-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+    }
+
+    /* Hide sidebar on mobile for better UX */
+   @media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .sidebar { display: none; }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="brand">
+        <img src="Horn1_logo.png" alt="Horn Updates logo" class="logo" />
+        <div class="brand-text">
+          <h1>Horn Updates</h1>
+          <p class="tagline">Understand the Horn of Africa</p>
+          <p class="update-schedule">&#8635; Updated twice daily &mdash; 6 AM &amp; 3 PM UTC</p>
+        </div>
+      </div>
+
+      <!-- DARK MODE TOGGLE -->
+      <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+
+      <!-- FILTER NAV -->
+      <nav class="nav-filters">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="Politics">Politics</button>
+        <button class="filter-pill" data-filter="Security">Security</button>
+        <button class="filter-pill" data-filter="Humanitarian">Humanitarian</button>
+        <button class="filter-pill" data-filter="Business">Business</button>
+        <button class="filter-pill" data-filter="Diplomacy">Diplomacy</button>
+        <button class="filter-pill" data-filter="Climate">Climate</button>
+        <button class="filter-pill" data-filter="Health">Health</button>
+      </nav>
+    </header>
+
+    <!-- SEARCH + COUNTRY FILTERS -->
+    <div class="search-country-bar">
+      <div class="search-wrap">
+        <span class="search-icon">&#128269;</span>
+        <input type="search" id="story-search" class="search-input" placeholder="Search stories, countries, topics…" autocomplete="off" />
+        <button id="search-go-btn" class="search-go-btn" aria-label="Search">&#8594;</button>
+      </div>
+      <div class="country-filter-section">
+        <div class="country-chips-scroll-wrap">
+          <div class="country-chips" id="country-chips">
+            <button class="country-chip active" data-country="all">All</button>
+            <button class="country-chip" data-country="Ethiopia"><img class="chip-flag" src="https://flagcdn.com/w20/et.png" alt=""> Ethiopia</button>
+            <button class="country-chip" data-country="Somalia"><img class="chip-flag" src="https://flagcdn.com/w20/so.png" alt=""> Somalia</button>
+            <button class="country-chip" data-country="Sudan"><img class="chip-flag" src="https://flagcdn.com/w20/sd.png" alt=""> Sudan</button>
+            <button class="country-chip" data-country="South Sudan"><img class="chip-flag" src="https://flagcdn.com/w20/ss.png" alt=""> S. Sudan</button>
+            <button class="country-chip" data-country="Kenya"><img class="chip-flag" src="https://flagcdn.com/w20/ke.png" alt=""> Kenya</button>
+            <button class="country-chip" data-country="Eritrea"><img class="chip-flag" src="https://flagcdn.com/w20/er.png" alt=""> Eritrea</button>
+            <button class="country-chip" data-country="Djibouti"><img class="chip-flag" src="https://flagcdn.com/w20/dj.png" alt=""> Djibouti</button>
+          </div>
+        </div>
+        <div class="lang-toggle-wrap">
+          <button class="lang-toggle active" id="lang-en" data-lang="en" title="English stories only">EN</button>
+          <button class="lang-toggle" id="lang-ar" data-lang="ar" title="Arabic stories only">AR</button>
+          <button class="lang-toggle" id="lang-all" data-lang="all" title="All languages">All</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LATEST SIGNAL BAR -->
+    <section class="breaking-bar" id="breaking-bar">
+      <span class="breaking-label">Latest Signal</span>
+      <a id="breaking-link" class="breaking-link" href="#"></a>
+    </section>
+
+    <!-- WHY THIS SITE EXISTS -->
+    <div class="why-strip">
+      Most coverage tells you <em>what happened</em>. We explain why it matters — and what comes next.
+    </div>
+
+    <!-- MAIN LAYOUT: CONTENT + RIGHT SIDEBAR -->
+    <div class="layout">
+      <!-- FEATURED STORY + LATEST STORIES -->
+      <main class="content">
+        <!-- FEATURED ANALYSIS SECTION -->
+        <section>
+          <div style="background:linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 100%);border-radius:14px 14px 0 0;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+            <div>
+              <div style="font-size:.78rem;font-weight:600;color:#93c5fd;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;">Original Analysis</div>
+              <div style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:4px;">Featured Analysis</div>
+              <div style="font-size:.88rem;color:#bfdbfe;">In-depth explainers on the conflicts, crises, and geopolitical questions shaping the Horn.</div>
+            </div>
+            <a href="/explainers.html" style="background:#fff;color:#1d4ed8;font-weight:700;font-size:.9rem;padding:10px 18px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0;">All explainers →</a>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 14px 14px;overflow:hidden;">
+
+            <a href="/explainer-sudan-war.html" style="text-decoration:none;color:inherit;border-right:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:18px;background:#fff;display:block;transition:background .15s;" onmouseover="this.style.background='#f8faff'" onmouseout="this.style.background='#fff'">
+              <span style="display:inline-block;background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:600;margin-bottom:10px;">Conflict</span>
+              <div style="font-weight:700;font-size:.98rem;color:#111827;margin-bottom:6px;line-height:1.35;">Why Is Sudan at War?</div>
+              <div style="font-size:.85rem;color:#6b7280;line-height:1.5;">What started the SAF vs RSF conflict, the human cost, and what comes next.</div>
+              <div style="font-size:.8rem;color:#2563eb;margin-top:10px;font-weight:600;">Read explainer →</div>
+            </a>
+
+            <a href="/explainer-tigray.html" style="text-decoration:none;color:inherit;border-right:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:18px;background:#fff;display:block;transition:background .15s;" onmouseover="this.style.background='#f8faff'" onmouseout="this.style.background='#fff'">
+              <span style="display:inline-block;background:#fffbeb;color:#d97706;border:1px solid #fde68a;border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:600;margin-bottom:10px;">Post-Conflict</span>
+              <div style="font-weight:700;font-size:.98rem;color:#111827;margin-bottom:6px;line-height:1.35;">What Was the Tigray Conflict?</div>
+              <div style="font-size:.85rem;color:#6b7280;line-height:1.5;">Ethiopia's two-year war, its catastrophic human cost, and the fragile peace that followed.</div>
+              <div style="font-size:.8rem;color:#2563eb;margin-top:10px;font-weight:600;">Read explainer →</div>
+            </a>
+
+            <a href="/explainer-iran-uae-ethiopia.html" style="text-decoration:none;color:inherit;border-right:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:18px;background:#fff;display:block;transition:background .15s;" onmouseover="this.style.background='#f8faff'" onmouseout="this.style.background='#fff'">
+              <span style="display:inline-block;background:#f5f3ff;color:#7c3aed;border:1px solid #ddd6fe;border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:600;margin-bottom:10px;">Geopolitics</span>
+              <div style="font-weight:700;font-size:.98rem;color:#111827;margin-bottom:6px;line-height:1.35;">How a War with Iran Would Hit Ethiopia</div>
+              <div style="font-size:.85rem;color:#6b7280;line-height:1.5;">Oil, the Red Sea, and UAE investment - tracing the impact chain into the Horn.</div>
+              <div style="font-size:.8rem;color:#2563eb;margin-top:10px;font-weight:600;">Read explainer →</div>
+            </a>
+
+            <a href="/explainer-sudan-ethiopia-border.html" style="text-decoration:none;color:inherit;border-right:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:18px;background:#fff;display:block;transition:background .15s;" onmouseover="this.style.background='#f8faff'" onmouseout="this.style.background='#fff'">
+              <span style="display:inline-block;background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:600;margin-bottom:10px;">Border Security</span>
+              <div style="font-weight:700;font-size:.98rem;color:#111827;margin-bottom:6px;line-height:1.35;">Is Sudan's War Spreading Into Ethiopia?</div>
+              <div style="font-size:.85rem;color:#6b7280;line-height:1.5;">Refugees, RSF proximity, and Africa's largest dam - the Benishangul-Gumuz question.</div>
+              <div style="font-size:.8rem;color:#2563eb;margin-top:10px;font-weight:600;">Read explainer →</div>
+            </a>
+
+          </div>
+        </section>
+
+        <section class="featured-section" style="margin-top:28px;">
+          <h2>Featured story</h2>
+          <div id="featured-container"></div>
+        </section>
+
+        <!-- OPINION SECTION -->
+        <section id="opinion-section" class="latest-section" style="margin-top:28px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px;">
+            <h2 style="margin:0;">Opinion &amp; Analysis</h2>
+            <a href="/opinion.html" class="see-all-btn">All opinions →</a>
+          </div>
+          <p style="color:#6b7280;font-size:.95rem;margin:0 0 14px;">Original commentary and analysis by Horn Updates on key issues shaping the Horn of Africa.</p>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+
+            <article class="story-card">
+              <header class="story-header">
+                <div class="story-tags">
+                  <span class="tag-pill">Ethiopia</span>
+                  <span class="tag-pill tag-category">Opinion</span>
+                </div>
+                <h3 class="story-title">
+                  <a class="story-link" href="/opinion-abiy-ahmed.html">Eight Years of Abiy Ahmed: What He Achieved, What He Did Not</a>
+                </h3>
+              </header>
+              <p class="story-summary">April 2026 marks eight years since Abiy Ahmed came to power. The record includes a Nobel Peace Prize, the end of the Eritrea stalemate, and a devastating civil war in Tigray — often produced by the same man. Horn Updates assesses the balance sheet honestly.</p>
+              <footer class="story-meta">
+                <span class="story-source">Horn Updates</span>
+                <span class="story-date">Apr 2026</span>
+              </footer>
+            </article>
+
+            <article class="story-card">
+              <header class="story-header">
+                <div class="story-tags">
+                  <span class="tag-pill">Ethiopia</span>
+                  <span class="tag-pill">Eritrea</span>
+                  <span class="tag-pill tag-category">Opinion</span>
+                </div>
+                <h3 class="story-title">
+                  <a class="story-link" href="/opinion-ethiopia-sea.html">Ethiopia's Sea Access Push: Strategy, Risks, and the Regional Calculus</a>
+                </h3>
+              </header>
+              <p class="story-summary">Ethiopia's drive to secure a Red Sea outlet reflects genuine economic vulnerability — as the world's most populous landlocked country, its entire trade depends on Djibouti. We trace the logic behind Addis Ababa's maritime agenda, why Eritrea is unlikely to cooperate, and what a realistic diplomatic solution might actually look like.</p>
+              <footer class="story-meta">
+                <span class="story-source">Horn Updates</span>
+                <span class="story-date">Mar 2026</span>
+              </footer>
+            </article>
+
+            <article class="story-card">
+              <header class="story-header">
+                <div class="story-tags">
+                  <span class="tag-pill">Kenya</span>
+                  <span class="tag-pill">South Sudan</span>
+                  <span class="tag-pill tag-category">Opinion</span>
+                </div>
+                <h3 class="story-title">
+                  <a class="story-link" href="/opinion-kenya-mediator.html">Kenya as Africa's Mediator: A Role With Growing Costs</a>
+                </h3>
+              </header>
+              <p class="story-summary">Nairobi has hosted peace talks on South Sudan, Somalia, DRC, and Sudan. Kenya keeps stepping forward because it has genuine economic stakes in regional stability — but a middle power's mediation capacity has real limits. We examine why Kenya is called on so often, what it gains, and where the model breaks down.</p>
+              <footer class="story-meta">
+                <span class="story-source">Horn Updates</span>
+                <span class="story-date">Mar 2026</span>
+              </footer>
+            </article>
+
+            <article class="story-card">
+              <header class="story-header">
+                <div class="story-tags">
+                  <span class="tag-pill">Somalia</span>
+                  <span class="tag-pill tag-category">Opinion</span>
+                </div>
+                <h3 class="story-title">
+                  <a class="story-link" href="/opinion-somaliland.html">Somaliland's Recognition Bid: Why the International Community Keeps Hesitating</a>
+                </h3>
+              </header>
+              <p class="story-summary">Somaliland has maintained peace, held democratic elections, and built functioning institutions for over three decades — yet remains unrecognised by any UN member state. The reasons are less about Somaliland's merit and more about the precedents recognition would set, the interests of neighbouring states, and the African Union's resistance to revisiting colonial-era borders.</p>
+              <footer class="story-meta">
+                <span class="story-source">Horn Updates</span>
+                <span class="story-date">Feb 2026</span>
+              </footer>
+            </article>
+
+            <article class="story-card">
+              <header class="story-header">
+                <div class="story-tags">
+                  <span class="tag-pill">Eritrea</span>
+                  <span class="tag-pill">Ethiopia</span>
+                  <span class="tag-pill tag-category">Opinion</span>
+                </div>
+                <h3 class="story-title">
+                  <a class="story-link" href="/opinion-assab.html">The Fate of Assab: Annexation, Access, or the Status Quo?</a>
+                </h3>
+              </header>
+              <p class="story-summary">Assab — once Ethiopia's principal maritime outlet — has become a symbol of unresolved regional tension. Any attempt to absorb it by force would violate international law and trigger immediate isolation. The more realistic path lies in long-term leasing arrangements and internationally guaranteed port-access deals — but Eritrea has no incentive to offer them.</p>
+              <footer class="story-meta">
+                <span class="story-source">Horn Updates</span>
+                <span class="story-date">Jan 2026</span>
+              </footer>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- LATEST STORIES -->
+        <section class="latest-section">
+          <h2>Latest stories <span id="story-count" class="story-count"></span></h2>
+          <p class="refresh-note">&#8635; Refreshed every 12 hours</p>
+          <div id="no-results" class="no-results" style="display:none;">No stories match your search. Try a different keyword or filter.</div>
+          <div id="latest-container"></div>
+        </section>
+      </main>
+
+      <!-- RIGHT SIDEBAR -->
+<aside class="sidebar">
+
+  <!-- X / Twitter follow card -->
+  <div class="sidebar-box">
+    <p class="sidebar-title" style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.252 5.626L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      Follow us on X
+    </p>
+    <p style="font-size:.88rem;color:#374151;margin:0 0 12px;line-height:1.55;">Breaking updates, analysis, and Horn of Africa news as it happens — follow <strong>@HornUpdatesHQ</strong> on X.</p>
+    <a href="https://x.com/HornUpdatesHQ" target="_blank" rel="noopener"
+       style="display:flex;align-items:center;justify-content:center;gap:8px;background:#000;color:#fff;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:600;font-size:.9rem;">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.252 5.626L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      @HornUpdatesHQ
+    </a>
+  </div>
+
+  <!-- Key sources on X -->
+  <div class="sidebar-box">
+    <p class="sidebar-title" style="margin-bottom:10px;">Horn sources on X</p>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:.88rem;">
+      <a href="https://x.com/AddisStandard" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <img class="chip-flag" src="https://flagcdn.com/w20/et.png" alt="Ethiopia"> @AddisStandard
+      </a>
+      <a href="https://x.com/VOASomali" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <img class="chip-flag" src="https://flagcdn.com/w20/so.png" alt="Somalia"> @VOASomali
+      </a>
+      <a href="https://x.com/SudanTribune" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <img class="chip-flag" src="https://flagcdn.com/w20/sd.png" alt="Sudan"> @SudanTribune
+      </a>
+      <a href="https://x.com/RadioTamazuj" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <img class="chip-flag" src="https://flagcdn.com/w20/ss.png" alt="South Sudan"> @RadioTamazuj
+      </a>
+      <a href="https://x.com/garoweonline" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <img class="chip-flag" src="https://flagcdn.com/w20/so.png" alt="Somalia"> @garoweonline
+      </a>
+      <a href="https://x.com/NilePost" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;padding:6px 8px;border-radius:8px;background:#f9fafb;border:1px solid #e5e7eb;">
+        <img class="chip-flag" src="https://flagcdn.com/w20/ug.png" alt="Uganda"> @NilePost
+      </a>
+      <a href="https://x.com/HornUpdatesHQ" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;padding:6px 10px;border-radius:8px;background:#111827;font-weight:600;margin-top:4px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.252 5.626L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+        Follow @HornUpdatesHQ
+      </a>
+    </div>
+  </div>
+
+  <!-- Countries covered -->
+  <div class="sidebar-box">
+    <p class="sidebar-title">Countries Covered</p>
+    <div id="country-stats" class="country-stats-list"></div>
+  </div>
+
+  <!-- About the Platform -->
+  <div class="sidebar-box">
+    <p class="sidebar-title" style="margin-bottom:10px;">About Horn Updates</p>
+    <p style="font-size:.88rem;color:#4b5563;line-height:1.6;margin:0 0 10px;">Horn Updates provides AI-assisted summaries and original analysis on news from Ethiopia, Somalia, Sudan, South Sudan, Eritrea, Djibouti, and Kenya.</p>
+    <p style="font-size:.88rem;color:#4b5563;line-height:1.6;margin:0 0 12px;">Our editorial team adds context, verification, and original explainers to every major story we cover.</p>
+    <a href="/about.html" style="font-size:.85rem;color:#2563eb;text-decoration:none;font-weight:600;">Learn more about us →</a>
+  </div>
+
+</aside>
+
+
+    </div>
+
+   
+  </div>
+
+
+
+
+  <!-- MAIN JS LOGIC -->
+  <script>
+  // ---------- HELPERS ----------
+  function buildReaderLink(sourceUrl) {
+    return "reader.html?url=" + encodeURIComponent(sourceUrl || "#");
+  }
+
+  function getCountries(article) {
+    const raw = article.countries || article.country_tags || [];
+    if (!raw) return [];
+    if (Array.isArray(raw)) return raw;
+    return [String(raw)];
+  }
+
+  function formatCountries(article) {
+    return getCountries(article).join(" • ");
+  }
+
+  function clamp(text, max) {
+    if (!text) return "";
+    return text.length > max ? text.slice(0, max) + "…" : text;
+  }
+
+  function getTopicLabel(article) {
+    if (Array.isArray(article.topic_tags) && article.topic_tags.length) {
+      return String(article.topic_tags[0] || "").trim() || "General";
+    }
+    return String(article.category || article.topic || "").trim() || "General";
+  }
+
+  function relativeTime(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return iso;
+    const diffMs = Date.now() - d.getTime();
+    const mins = Math.floor(diffMs / 60000);
+    const hours = Math.floor(diffMs / 3600000);
+    const days = Math.floor(diffMs / 86400000);
+    if (mins < 1) return "Just now";
+    if (mins < 60) return `${mins}m ago`;
+    if (hours < 24) return `${hours}h ago`;
+    if (days === 1) return "Yesterday";
+    if (days < 7) return `${days}d ago`;
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  }
+
+  function langLabel(article) {
+    if ((article.language || "en") === "ar") {
+      return `<span class="lang-pill lang-ar" title="Arabic">AR</span>`;
+    }
+    return "";
+  }
+
+  // ---------- CONTEXT / BACKGROUND ----------
+  function simpleHash(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = (Math.imul(31, hash) + str.charCodeAt(i)) | 0;
+    }
+    return hash;
+  }
+
+  function wordMatch(text, phrase) {
+    const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp("(?<![a-z])" + escaped + "(?![a-z])").test(text);
+  }
+
+  function getContextForArticle(article, templates) {
+    // Prefer AI-generated article-specific context if available
+    if (article.context) return article.context;
+
+    // Fall back to keyword-matched template
+    if (!templates || !templates.groups) return null;
+    const kwText = [
+      article.title || "",
+      article.summary || article.excerpt || "",
+    ].join(" ").toLowerCase();
+    const articleTags = (Array.isArray(article.topic_tags) ? article.topic_tags : [])
+      .map(t => t.toLowerCase());
+
+    const sorted = [...templates.groups].sort((a, b) => (b.priority || 0) - (a.priority || 0));
+    for (const group of sorted) {
+      const { match, templates: tmplList } = group;
+      if (!match || !tmplList || !tmplList.length) continue;
+      const kwMatch = (match.any_keyword || []).some(kw => wordMatch(kwText, kw.toLowerCase()));
+      const catMatch = (match.any_category || []).some(cat => articleTags.includes(cat.toLowerCase()));
+      if (kwMatch || catMatch) {
+        const idx = Math.abs(simpleHash(article.title || "")) % tmplList.length;
+        return tmplList[idx].text;
+      }
+    }
+    return (templates.default && templates.default.text) || null;
+  }
+
+  function renderContextBlock(contextText) {
+    if (!contextText) return "";
+    return `
+      <details class="context-box">
+        <summary class="context-toggle">
+          <span class="context-icon">&#9432;</span> Context &amp; Why This Matters
+        </summary>
+        <p class="context-text">${contextText}</p>
+      </details>
+    `;
+  }
+
+  // ---------- RENDER FUNCTIONS ----------
+  function renderStoryCard(article, isFeatured = false, contextText = null) {
+    const countriesArr = getCountries(article);
+    const category = getTopicLabel(article);
+    const published = article.published_at || "";
+    const sourceName = article.source_name || article.source || "";
+    const href = buildReaderLink(article.source_url || article.link);
+
+    const title = clamp(article.title || "Untitled story", isFeatured ? 160 : 120);
+    const rawSummary = (article.summary || article.excerpt || "")
+      .replace(/The post .{0,120}? (appeared first|first appeared) on .{0,80}?\.\s*$/i, "")
+      .replace(/This article .{0,80}? first appeared on .{0,80}?\.\s*$/i, "")
+      .replace(/Originally published (at|on|by) .{0,80}?\.\s*$/i, "")
+      .trim();
+    const summary = clamp(rawSummary, isFeatured ? 420 : 340);
+    const cardClass = "story-card" + (isFeatured ? " story-card--featured" : "");
+    const FLAG_IMGS = {
+      Ethiopia:     'https://flagcdn.com/w20/et.png',
+      Somalia:      'https://flagcdn.com/w20/so.png',
+      Sudan:        'https://flagcdn.com/w20/sd.png',
+      "South Sudan":'https://flagcdn.com/w20/ss.png',
+      Kenya:        'https://flagcdn.com/w20/ke.png',
+      Eritrea:      'https://flagcdn.com/w20/er.png',
+      Djibouti:     'https://flagcdn.com/w20/dj.png',
+      Somaliland:   'https://flagcdn.com/w20/so.png',
+    };
+    const countryTags = countriesArr.map(c => {
+      const flagImg = FLAG_IMGS[c] ? `<img class="chip-flag" src="${FLAG_IMGS[c]}" alt="">` : "";
+      return `<span class="tag-pill tag-pill--country">${flagImg}${c}</span>`;
+    }).join("");
+
+    return `
+      <article class="${cardClass}">
+        <header class="story-header">
+          <div class="story-tags">
+            ${isFeatured ? `<span class="featured-badge">&#9733; Top story</span>` : ""}
+            ${countryTags}
+            <span class="tag-pill tag-category">${category}</span>
+            ${langLabel(article)}
+          </div>
+          <h3 class="story-title">
+            <a class="story-link" href="${href}">${title}</a>
+          </h3>
+        </header>
+        ${summary ? `<p class="story-summary">${summary}</p>` : ""}
+        ${renderContextBlock(contextText)}
+        <footer class="story-meta">
+          ${sourceName ? `<span class="story-source">${sourceName}</span>` : ""}
+          ${published ? `<span class="story-date" title="${new Date(published).toLocaleString()}">${relativeTime(published)}</span>` : ""}
+        </footer>
+      </article>
+    `;
+  }
+
+  function setBreakingBar(article) {
+    const linkEl = document.getElementById("breaking-link");
+    if (!linkEl || !article) return;
+    const countriesStr = formatCountries(article);
+    let label = article.title || "";
+    if (countriesStr) label += " — " + countriesStr;
+    linkEl.textContent = clamp(label, 140);
+    linkEl.href = buildReaderLink(article.source_url || article.link);
+  }
+
+  function updateStoryCount(total, showing) {
+    const el = document.getElementById("story-count");
+    if (!el) return;
+    el.textContent = showing < total ? `(${showing} of ${total})` : `(${total})`;
+  }
+
+  function buildCountrySidebar(articles) {
+    const statsEl = document.getElementById("country-stats");
+    if (!statsEl) return;
+    const counts = {};
+    const flags = {
+      Ethiopia:     '<img class="chip-flag" src="https://flagcdn.com/w20/et.png" alt="">',
+      Somalia:      '<img class="chip-flag" src="https://flagcdn.com/w20/so.png" alt="">',
+      Sudan:        '<img class="chip-flag" src="https://flagcdn.com/w20/sd.png" alt="">',
+      "South Sudan":'<img class="chip-flag" src="https://flagcdn.com/w20/ss.png" alt="">',
+      Kenya:        '<img class="chip-flag" src="https://flagcdn.com/w20/ke.png" alt="">',
+      Eritrea:      '<img class="chip-flag" src="https://flagcdn.com/w20/er.png" alt="">',
+      Djibouti:     '<img class="chip-flag" src="https://flagcdn.com/w20/dj.png" alt="">',
+      Somaliland:   '<img class="chip-flag" src="https://flagcdn.com/w20/so.png" alt="">',
+    };
+    articles.forEach(a => {
+      getCountries(a).forEach(c => { counts[c] = (counts[c] || 0) + 1; });
+    });
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+    statsEl.innerHTML = sorted.map(([country, n]) => `
+      <div class="country-stat-row">
+        <span class="country-stat-name">${flags[country] || ""} ${country}</span>
+        <span class="country-stat-count">${n}</span>
+      </div>
+    `).join("") || "<p style='color:#9ca3af;font-size:.85rem;'>No data yet.</p>";
+  }
+
+  // ---------- STATE ----------
+  let allArticles = [];
+  let contextTemplates = null;
+  let currentTopicFilter = "all";
+  let currentCountryFilter = "all";
+  let currentLangFilter = "en";
+  let currentSearch = "";
+  let visibleLatestCount = 20;
+  let currentFilteredList = [];
+
+  function articleMatchesAll(article) {
+    // Language filter
+    if (currentLangFilter !== "all") {
+      const lang = (article.language || "en").toLowerCase();
+      if (lang !== currentLangFilter) return false;
+    }
+    // Topic filter
+    if (currentTopicFilter !== "all") {
+      const needle = currentTopicFilter.toLowerCase();
+      const topics = (
+        (Array.isArray(article.topic_tags) ? article.topic_tags.join(" ") : "") +
+        " " + (article.category || "") + " " + (article.topic || "")
+      ).toLowerCase();
+      if (!topics.includes(needle)) return false;
+    }
+    // Country filter
+    if (currentCountryFilter !== "all") {
+      const countries = getCountries(article).map(c => c.toLowerCase());
+      if (!countries.some(c => c.includes(currentCountryFilter.toLowerCase()))) return false;
+    }
+    // Search query
+    if (currentSearch) {
+      const q = currentSearch.toLowerCase();
+      const searchable = [
+        article.title || "",
+        article.summary || article.excerpt || "",
+        article.context || "",
+        ...(getCountries(article)),
+        ...(Array.isArray(article.topic_tags) ? article.topic_tags : []),
+        article.source_name || "",
+      ].join(" ").toLowerCase();
+      if (!searchable.includes(q)) return false;
+    }
+    return true;
+  }
+
+  // Reputable sources get a boost
+  const SOURCE_SCORES = {
+    "bbc": 12, "reuters": 12, "ap ": 12, "associated press": 12,
+    "voa": 10, "voice of america": 10, "al jazeera": 10,
+    "france 24": 8, "rfi": 8, "the guardian": 8,
+    "radio tamazuj": 6, "eye radio": 6, "addis standard": 6,
+    "sudan tribune": 6, "garowe online": 6, "shabelle": 4,
+  };
+
+  function scoreArticle(article) {
+    let score = 0;
+
+    // 1. Recency — still matters but not everything
+    const ageMs = Date.now() - new Date(article.published_at || 0).getTime();
+    const ageHrs = ageMs / 3600000;
+    if (ageHrs <= 3)       score += 30;
+    else if (ageHrs <= 12) score += 22;
+    else if (ageHrs <= 24) score += 14;
+    else if (ageHrs <= 48) score += 6;
+
+    // 2. Cross-border significance — more countries = bigger story
+    const countries = getCountries(article);
+    if (countries.length >= 3)      score += 18;
+    else if (countries.length === 2) score += 10;
+
+    // 3. Source reputation
+    const src = (article.source_name || "").toLowerCase();
+    for (const [key, pts] of Object.entries(SOURCE_SCORES)) {
+      if (src.includes(key)) { score += pts; break; }
+    }
+
+    // 4. AI context available — scraper flagged it as notable
+    if (article.context) score += 4;
+
+    // 5. Multi-topic depth
+    const topics = Array.isArray(article.topic_tags) ? article.topic_tags.length : 0;
+    if (topics >= 3) score += 5;
+    else if (topics >= 2) score += 2;
+
+    return score;
+  }
+
+  function renderPage(filteredList) {
+    const featuredContainer = document.getElementById("featured-container");
+    const latestContainer = document.getElementById("latest-container");
+    const noResults = document.getElementById("no-results");
+    const opinionSection = document.getElementById("opinion-section");
+
+    // Hide opinion section whenever a search query is active
+    const searchActive = currentSearch && currentSearch.length > 0;
+    if (opinionSection) opinionSection.style.display = searchActive ? "none" : "";
+
+    if (!filteredList.length) {
+      featuredContainer.innerHTML = "";
+      latestContainer.innerHTML = "";
+      if (noResults) noResults.style.display = "";
+      updateStoryCount(allArticles.length, 0);
+      return;
+    }
+
+    if (noResults) noResults.style.display = "none";
+
+    // Pick the highest-scoring article as Top Story — max age 12 hours
+    const now = Date.now();
+    const fresh = filteredList.filter(a => {
+      const pub = new Date(a.published_at || a.date || 0).getTime();
+      return (now - pub) <= 12 * 60 * 60 * 1000;
+    });
+    const pool = fresh.length > 0 ? fresh : filteredList;
+    const scored = pool.map(a => ({ article: a, score: scoreArticle(a) }));
+    scored.sort((a, b) => b.score - a.score);
+    const featured = scored[0].article;
+    // Remaining articles stay in date order
+    const latest = filteredList.filter(a => a !== featured);
+
+    const featuredCtx = getContextForArticle(featured, contextTemplates);
+    featuredContainer.innerHTML = renderStoryCard(featured, true, featuredCtx);
+
+    const visible = latest.slice(0, visibleLatestCount);
+    const hasMore = latest.length > visibleLatestCount;
+    latestContainer.innerHTML = visible.map(a => {
+      return renderStoryCard(a, false, getContextForArticle(a, contextTemplates));
+    }).join("") + (hasMore ? `
+      <div style="text-align:center;margin:24px 0 8px;">
+        <button id="load-more-btn" class="load-more-btn">
+          Load more stories (${latest.length - visibleLatestCount} remaining)
+        </button>
+      </div>` : "");
+
+    const loadMoreBtn = document.getElementById("load-more-btn");
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", () => {
+        visibleLatestCount += 20;
+        renderPage(currentFilteredList);
+      });
+    }
+
+    // Use the second article for breaking bar so it differs from featured
+    setBreakingBar(filteredList[1] || featured);
+    updateStoryCount(allArticles.length, filteredList.length);
+  }
+
+  function applyFilters() {
+    const filtered = allArticles.filter(articleMatchesAll);
+    visibleLatestCount = 20;
+    currentFilteredList = filtered;
+    renderPage(filtered);
+  }
+
+  function setupFilters() {
+    // Topic pills
+    document.querySelectorAll(".filter-pill").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-pill").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentTopicFilter = btn.dataset.filter || "all";
+        applyFilters();
+      });
+    });
+
+    // Country chips
+    document.querySelectorAll(".country-chip").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".country-chip").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentCountryFilter = btn.dataset.country || "all";
+        applyFilters();
+      });
+    });
+
+    // Language toggle
+    document.querySelectorAll(".lang-toggle").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".lang-toggle").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentLangFilter = btn.dataset.lang || "all";
+        applyFilters();
+      });
+    });
+
+    // Search
+    const searchInput = document.getElementById("story-search");
+    if (searchInput) {
+      let debounceTimer;
+      searchInput.addEventListener("input", () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          currentSearch = searchInput.value.trim();
+          applyFilters();
+        }, 250);
+      });
+      searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          clearTimeout(debounceTimer);
+          currentSearch = searchInput.value.trim();
+          applyFilters();
+        }
+      });
+    }
+    const searchGoBtn = document.getElementById("search-go-btn");
+    if (searchGoBtn) {
+      searchGoBtn.addEventListener("click", () => {
+        currentSearch = (document.getElementById("story-search") || {}).value?.trim() || "";
+        applyFilters();
+      });
+    }
+  }
+
+  async function loadArticles() {
+    try {
+      const [dataRes, tmplRes] = await Promise.all([
+        fetch(`articles.json?v=${Date.now()}`),
+        fetch("why_matters_templates.json").catch(() => null),
+      ]);
+
+      const data = await dataRes.json();
+      contextTemplates = tmplRes ? await tmplRes.json().catch(() => null) : null;
+
+      let list = Array.isArray(data) ? data : (data.articles || []);
+      list = list.filter(a => a.title && (a.source_url || a.link));
+      list.sort((a, b) => new Date(b.published_at || 0) - new Date(a.published_at || 0));
+
+      allArticles = list;
+      buildCountrySidebar(list);
+      applyFilters();
+    } catch (err) {
+      console.error("Error loading articles.json:", err);
+      document.getElementById("featured-container").innerHTML = "<p>Failed to load stories.</p>";
+    }
+  }
+
+  // Dark mode
+  (function() {
+    const saved = localStorage.getItem("hornTheme");
+    if (saved === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  })();
+
+  window.addEventListener("DOMContentLoaded", () => {
+    setupFilters();
+    loadArticles();
+
+    const darkBtn = document.getElementById("dark-toggle");
+    if (darkBtn) {
+      const update = () => {
+        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        darkBtn.textContent = isDark ? "☀️" : "🌙";
+      };
+      update();
+      darkBtn.addEventListener("click", () => {
+        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        if (isDark) {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("hornTheme", "light");
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("hornTheme", "dark");
+        }
+        update();
+      });
+    }
+  });
+  </script>
+  <footer class="site-footer">
+      <nav class="footer-nav">
+        <a href="/index.html">Home</a>
+        <a href="/explainers.html">Explainers</a>
+        <a href="/about.html">About</a>
+        <a href="/editorial-policy.html">Editorial Policy</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+      <div class="footer-copy">
+        © 2026 Horn Updates. All rights reserved.
+      </div>
+    </footer>
+</body>
+</html>
