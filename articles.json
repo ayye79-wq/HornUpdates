@@ -1,6 +1,581 @@
 {
-  "generated_at": "2026-04-02T15:56:59.736234+00:00",
+  "generated_at": "2026-04-03T07:09:05.947842+00:00",
   "articles": [
+    {
+      "title": "تعطل عبّارة نيلية شمال السودان ومحاولات انقاذ وسط أجواء عاصفة شديدة",
+      "summary": "قال شهود عيان إن عبّارة نيلية توقفت عن الحركة قرب منطقة جمي في مدينة وادي حلفا مساء الخميس بعد تعذر رسوّها بسبب تقلبات جوية شديدة. وذكر الشهود أن مجموعة من المتطوعين تمكنت من إنزال الأطفال والنساء من العبّارة، إضافة إلى سحب المركبات التي كانت على متنها إلى اليابسة. وأفادت مصادر محلية بأن رياحًا قوية وأتربة …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T06:55:54+00:00",
+      "source_url": "https://www.alnilin.com/13466644.htm",
+      "source_name": "النيلين",
+      "context": "تأتي هذه الحادثة في وقت حساس للسودان، حيث يعاني البلاد من أزمة سياسية وأمنية منذ الإطاحة بنظام عمر البشير في 2019. تتصاعد التوترات بين المكونات العسكرية والمدنية، مما يؤدي إلى تفاقم الأوضاع الإنسانية. كما أن الفيضانات والأحوال الجوية السيئة تضاف إلى التحديات التي تواجه السكان، خاصة في المناطق النائية مثل وادي حلفا، حيث يعتمد الكثيرون على النقل النهري."
+    },
+    {
+      "title": "مبعوث الأمم المتحدة يبحث في القاهرة تداعيات الحرب السودانية مع وفد تضامن",
+      "summary": "عقد مبعوث الأمين العام للأمم المتحدة بيكا هافيستو اجتماعًا في القاهرة مساء الأربعاء مع وفد من قيادات القوات النظامية المتقاعدين لبحث تطورات الحرب في السودان، وفق ما أفادت مصادر شاركت في اللقاء. وحضرت سفيرة فنلندا لدى مصر ريكا إللا الاجتماع الذي ضم ممثلين عن مجموعة “تضامن”، بينهم اللواء المتقاعد كمال إسماعيل وجمال الشافعي والطيار عبد …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T06:54:15+00:00",
+      "source_url": "https://www.alnilin.com/13466642.htm",
+      "source_name": "النيلين",
+      "context": "تأتي هذه الاجتماعات في وقت حساس حيث تتواصل الحرب في السودان منذ أبريل 2023 بين الجيش السوداني وقوات الدعم السريع، مما أدى إلى تفاقم الأوضاع الإنسانية والسياسية. تمثل مجموعة \"تضامن\" التي شاركت في الاجتماع، مجموعة من القيادات العسكرية المتقاعدة التي تسعى لإيجاد حلول سلمية للأزمة، في ظل غياب أي تقدم ملموس في المفاوضات التي رعتها الأمم المتحدة."
+    },
+    {
+      "title": "بين غربة أمريكا ووجع الخرطوم .. قصة طبيب سوداني يحارب من أجل شفاء وطن يحتضر",
+      "summary": "يواصل الطبيب أسامة محمد، المقيم في الولايات المتحدة، دراسته في مجال الصحة العامة بجامعة بينغهامتون، مؤكدًا رغبته في توظيف خبراته الأكاديمية والمهنية لدعم النظام الصحي في السودان الذي يشهد تدهورًا واسعًا بسبب الحرب. وحصل أسامة على درجة الماجستير في الصحة العامة لعام 2026، بعد مسار دراسي امتد لعدة سنوات في كلية ديكر للتمريض والعلوم الصحية. …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T06:52:58+00:00",
+      "source_url": "https://www.alnilin.com/13466640.htm",
+      "source_name": "النيلين",
+      "context": "تعيش السودان أزمة إنسانية حادة منذ اندلاع النزاع المسلح في أبريل 2023 بين الجيش السوداني وقوات الدعم السريع، مما أدى إلى تدهور النظام الصحي وارتفاع معدلات الوفيات. في هذا السياق، يسعى الطبيب أسامة محمد، الذي يدرس في الولايات المتحدة، إلى العودة لوطنه للمساهمة في إعادة بناء النظام الصحي المنهار، مما يعكس التحديات الكبيرة التي تواجه الأطباء السودانيين في ظل الظروف الراهنة."
+    },
+    {
+      "title": "تطور جديد في جلسة محاكمة منيب عبد العزيز شمال السودان",
+      "summary": "أجّل قاضي محكمة دنقلا جلسة محاكمة الناشط منيب عبدالعزيز إلى 12 أبريل بعد غياب المتحري عن الجلسة التي عُقدت في 31 مارس، وفق ما أفادت مصادر قضائية. وقالت المصادر إن المحكمة كانت مقررة لمواصلة النظر في القضية، إلا أن عدم حضور المتحري أدى إلى رفع الجلسة وتحديد موعد جديد. وتزامن ذلك مع تحديد 15 أبريل …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T06:51:11+00:00",
+      "source_url": "https://www.alnilin.com/13466636.htm",
+      "source_name": "النيلين",
+      "context": "تأتي جلسة محاكمة منيب عبد العزيز في سياق تصاعد التوترات السياسية في السودان بعد الإطاحة بنظام عمر البشير في 2019، حيث يواجه الناشطون ضغوطًا متزايدة من السلطات. عبد العزيز، الذي يعتبر من أبرز الأصوات في الحركة الاحتجاجية، يمثل جيلًا يسعى للتغيير في ظل حكومة انتقالية هشة. تأجيل الجلسة إلى 12 أبريل يعكس التحديات القانونية والسياسية التي تواجهها الحركة الديمقراطية في البلاد."
+    },
+    {
+      "title": "“تأسيس” و“صمود” يدينان استهداف أسامة حسن في غارة مسيّرة على نيالا",
+      "summary": "أدان رئيس وزراء حكومة تأسيس محمد حسن التعايشي مقتل القيادي أسامة حسن في هجوم وقع بمدينة نيالا، واعتبر الحادث استهدافًا ذا طابع سياسي يستدعي موقفًا دوليًا واضحًا. وقال التعايشي في تصريح مصوّر عقب اجتماع لمجلس الوزراء في نيالا إن الهجوم يمثل تهديدًا للأمن والاستقرار، ودعا إلى محاسبة الجهة المسؤولة عن استهداف القيادات المدنية. وأضاف أن …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T06:49:46+00:00",
+      "source_url": "https://www.alnilin.com/13466634.htm",
+      "source_name": "النيلين",
+      "context": "تأتي هذه الحادثة في سياق تصاعد التوترات السياسية في السودان بعد الإطاحة بنظام عمر البشير في 2019، حيث تواجه الحكومة الانتقالية تحديات كبيرة من الجماعات المسلحة والميليشيات. أسامة حسن كان شخصية بارزة في الحركة المدنية، واغتياله يعكس تصاعد العنف ضد القيادات المدنية، مما يهدد جهود السلام والاستقرار في البلاد. كما أن هذا الهجوم يأتي بعد اتفاق جوبا للسلام في 2020، الذي يسعى لإنهاء النزاعات المستمرة."
+    },
+    {
+      "title": "صمود يحذر من كارثة إنسانية مع استمرار العمليات العسكرية في النيل الأزرق",
+      "summary": "قال تحالف “صمود” الخميس إن العمليات العسكرية في إقليم النيل الأزرق تسببت في نزوح أكثر من 79 ألف شخص خلال الأيام الماضية، مع انتقال مجموعات كبيرة إلى مناطق تفتقر إلى مقومات الأمان والخدمات الأساسية. وذكرت لجنة العمل الإنساني التابعة للتحالف أن نحو 500 شخص وصلوا إلى قرية دندرو قادمين من الكرمك، بينما اتجه حوالي 1,000 …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T06:47:20+00:00",
+      "source_url": "https://www.alnilin.com/13466633.htm",
+      "source_name": "النيلين",
+      "context": "تتزامن هذه الأزمة الإنسانية مع تصاعد التوترات في إقليم النيل الأزرق، حيث شهدت المنطقة صراعًا طويل الأمد بين الحكومة السودانية وجماعات مسلحة مثل الحركة الشعبية لتحرير السودان. في 2021، تم توقيع اتفاق سلام بين الحكومة وبعض الفصائل، لكن النزاعات المستمرة والعمليات العسكرية أدت إلى تفاقم الوضع الإنساني، مما يهدد استقرار الإقليم ويزيد من معاناة المدنيين."
+    },
+    {
+      "title": "كيف يمكن لدول الخليج تفادي الآثار السلبية للحرب على اقتصادها؟",
+      "summary": "كيف يمكن لدول الخليج تفادي الآثار السلبية للحرب على اقتصادها؟ صدر الصورة، Getty Images التعليق على الصورة، تواجه اقتصادات دول الخليج مخاطر اقتصادية محتملة بسبب الحرب الأمريكية الإسرائيلية مع إيران Author, عاطف عبد الحميد Role, بي بي سي نيوز عربي 2 أبريل/ نيسان 2026 مدة القراءة: 6 دقائق تبقى اقتصادات دول مجلس التعاون الخليجي محاطة The post كيف يمكن لدول الخليج تفادي الآثار السلبية للحرب على اقتصادها؟ appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T06:47:15+00:00",
+      "source_url": "https://www.alrakoba.net/32156417/%d9%83%d9%8a%d9%81-%d9%8a%d9%85%d9%83%d9%86-%d9%84%d8%af%d9%88%d9%84-%d8%a7%d9%84%d8%ae%d9%84%d9%8a%d8%ac-%d8%aa%d9%81%d8%a7%d8%af%d9%8a-%d8%a7%d9%84%d8%a2%d8%ab%d8%a7%d8%b1-%d8%a7%d9%84%d8%b3%d9%84/",
+      "source_name": "الراكوبة",
+      "context": "تتزامن هذه المقالة مع تصاعد التوترات في الشرق الأوسط، خاصة بعد تصاعد الصراع بين الولايات المتحدة وإسرائيل من جهة وإيران من جهة أخرى منذ بداية عام 2026. تتأثر دول الخليج، مثل السعودية والإمارات، بشكل خاص بسبب اعتمادها على النفط والتجارة، مما يجعلها عرضة لتقلبات اقتصادية نتيجة للصراعات الإقليمية. كما أن اتفاقيات التعاون الاقتصادي بين دول الخليج وإيران قد تتعرض للخطر في ظل هذه الظروف المتوترة."
+    },
+    {
+      "title": "أرتيمس 2: انطلاق مهمة فضائية نحو القمر للتمهيد لإنشاء قاعدة دائمة هناك",
+      "summary": "صدر الصورة، Reuters التعليق على الصورة، الدخان يخرج من محركات الصاروخ البرتقالي اللون، الذي يحمل رواد الفضاء في مهمة أرتيمس 2 2 أبريل/ نيسان 2026 مدة القراءة: 2 دقائق انطلقت مهمة الفضاء أرتيمس 2، بنجاح من مركز كينيدي الفضائي، حاملة أربعة رواد فضاء في أول مهمة مأهولة حول القمر منذ ما يزيد عن 50 عاماً، The post أرتيمس 2: انطلاق مهمة فضائية نحو القمر للتمهيد لإنشاء قاعدة دائمة هناك appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T06:47:14+00:00",
+      "source_url": "https://www.alrakoba.net/32156420/%d8%a3%d8%b1%d8%aa%d9%8a%d9%85%d8%b3-2-%d8%a7%d9%86%d8%b7%d9%84%d8%a7%d9%82-%d9%85%d9%87%d9%85%d8%a9-%d9%81%d8%b6%d8%a7%d8%a6%d9%8a%d8%a9-%d9%86%d8%ad%d9%88-%d8%a7%d9%84%d9%82%d9%85%d8%b1-%d9%84/",
+      "source_name": "الراكوبة",
+      "context": "تأتي مهمة أرتيمس 2 في وقت حرج حيث تسعى الولايات المتحدة لتعزيز وجودها في الفضاء، وسط تزايد المنافسة مع الصين وروسيا. في 2023، أبرمت الصين اتفاقيات مع دول أفريقية، بما في ذلك السودان، لتعزيز التعاون في الفضاء. هذا السياق يجعل من مهمة أرتيمس 2 خطوة استراتيجية لتعزيز النفوذ الأمريكي في الفضاء، خاصة مع التوترات المتزايدة في منطقة القرن الأفريقي."
+    },
+    {
+      "title": "Five arrested over alleged gang rape of two teen girls in Wau",
+      "summary": "Police in Western Bahr el Ghazal State have arrested five suspects in connection with the alleged gang rape of two teenage girls in Wau early this week. According to police spokesperson, Lieutenant Colonel Santino Udhol, the incident occurred in the Aweil Jadid residential area, where two girls aged 14 and 15 were reportedly attacked by […] The post Five arrested over alleged gang rape of two teen girls in Wau first appeared on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-04-03T06:43:31+00:00",
+      "source_url": "https://www.eyeradio.org/five-arrested-over-alleged-gang-rape-of-two-teen-girls-in-wau/?utm_source=rss&utm_medium=rss&utm_campaign=five-arrested-over-alleged-gang-rape-of-two-teen-girls-in-wau",
+      "source_name": "Eye Radio",
+      "context": "The alleged gang rape in Wau occurs against a backdrop of ongoing instability in South Sudan, where violence against women has surged amid the civil conflict that began in 2013. The transitional government, formed after the Revitalized Agreement on the Resolution of the Conflict in South Sudan in 2018, has struggled to maintain law and order, particularly in rural areas like Western Bahr el Ghazal, where such incidents often go unpunished."
+    },
+    {
+      "title": "مركز حقوق المرأة يحذر من قرار حظر عمل المصريات في بعض المهن بالخارج",
+      "summary": "أثار قرار وزارة العمل المصرية الأخير بشأن حظر سفر العاملات المصريات للخارج في مهن محددة بدعوى حمايتهن من الاستغلال، موجة من الجدل الحقوقي. ودعا المركز المصري لحقوق المرأة في مصر خلال تصريحات لـRT إلى ضرورة استبدال سياسات التقييد بمنظومة حماية منهجية تضمن كرامة المرأة دون المساس بحقوقها الدستورية.وفي تعقيبها على هذا التوجه، أكدت نهاد أبو …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T04:30:10+00:00",
+      "source_url": "https://www.alnilin.com/13466552.htm",
+      "source_name": "النيلين",
+      "context": "تأتي هذه القضية في وقت تعاني فيه النساء المصريات من قيود متزايدة على حقوقهن، خاصة في ظل التحديات الاقتصادية والاجتماعية التي تواجه البلاد بعد ثورة 2011. كما أن قرار وزارة العمل يعكس التوترات بين الحكومة المصرية ومنظمات حقوق الإنسان، التي تسعى لتعزيز حقوق المرأة، بينما تسعى الحكومة إلى حماية النساء من الاستغلال في سوق العمل الخارجي، مما يثير جدلاً حول فعالية هذه السياسات."
+    },
+    {
+      "title": "مجلس الأمن الدولي يصوت الجمعة على مشروع قرار بشأن مضيق هرمز",
+      "summary": "مباشر , مجلس الأمن الدولي يصوت الجمعة على مشروع قرار بشأن مضيق هرمز حذّر الأمين العام للأمم المتحدة أنطونيو غوتيريش الخميس من تصاعُد الصراع في الشرق الأوسط إلى حرب أوسع، داعياً كافة الأطراف إلى وقف الهجمات، فيما قال رئيس البرلمان الإيراني محمد باقر قاليباف إن سبعة ملايين إيراني تطوعوا للخدمة العسكرية منذ اندلاع الحرب مع The post مجلس الأمن الدولي يصوت الجمعة على مشروع قرار بشأن مضيق هرمز appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T02:46:55+00:00",
+      "source_url": "https://www.alrakoba.net/32156410/%d9%85%d8%ac%d9%84%d8%b3-%d8%a7%d9%84%d8%a3%d9%85%d9%86-%d8%a7%d9%84%d8%af%d9%88%d9%84%d9%8a-%d9%8a%d8%b5%d9%88%d8%aa-%d8%a7%d9%84%d8%ac%d9%85%d8%b9%d8%a9-%d8%b9%d9%84%d9%89-%d9%85%d8%b4%d8%b1%d9%88/",
+      "source_name": "الراكوبة",
+      "context": "تأتي هذه التصويتات في مجلس الأمن الدولي في وقت حساس، حيث تصاعدت التوترات في منطقة مضيق هرمز بعد الهجمات المتكررة على ناقلات النفط، مما يهدد أمن الملاحة البحرية. في 6 أكتوبر 2023، أُعلن عن تصعيد النزاع بين إيران وإسرائيل، مما زاد من القلق الدولي بشأن استقرار المنطقة. كما أن التصريحات الأخيرة للأمين العام للأمم المتحدة تعكس المخاوف من اندلاع حرب شاملة قد تشمل دولاً أخرى في الشرق الأوسط."
+    },
+    {
+      "title": "حرب إيران: هل بات العالم بالفعل على شفا حرب عالمية ثالثة؟",
+      "summary": "حرب إيران: هل بات العالم بالفعل على شفا حرب عالمية ثالثة؟ صدر الصورة، Getty Images 2 أبريل/ نيسان 2026 مدة القراءة: 3 دقائق في صباح الثامن والعشرين من فبراير/ شباط الماضي، استيقظ العالم على وقع خبر صادم بدا للكثيرين وكأنه مشهد مقتطع من رواية تاريخية قاتمة: الرئيس الأمريكي دونالد ترامب ورئيس الوزراء الإسرائيلي بنيامين نتنياهو The post حرب إيران: هل بات العالم بالفعل على شفا حرب عالمية ثالثة؟ appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T02:46:54+00:00",
+      "source_url": "https://www.alrakoba.net/32156413/%d8%ad%d8%b1%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d9%87%d9%84-%d8%a8%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a8%d8%a7%d9%84%d9%81%d8%b9%d9%84-%d8%b9%d9%84%d9%89-%d8%b4%d9%81%d8%a7/",
+      "source_name": "الراكوبة",
+      "context": "تأتي هذه المقالة في سياق تصاعد التوترات بين إيران والولايات المتحدة وحلفائها، خاصة بعد الهجمات المتبادلة في المنطقة. في 15 يناير 2026، أُعلن عن اتفاقية سلام بين إيران والسعودية، لكن تصاعد الأنشطة العسكرية الإيرانية في العراق وسوريا أثار قلق واشنطن وتل أبيب. كما أن الانتخابات الأمريكية المقبلة في نوفمبر 2026 قد تؤثر على السياسات الخارجية، مما يزيد من حدة التوترات في الشرق الأوسط."
+    },
+    {
+      "title": "ضبط قائد سيارة أدى حركات استعراضية خطيرة أثناء حفل زفاف",
+      "summary": "تمكنت أجهزة الأمن بالجيزة من ضبط قائد سيارة ملاكى ظهر فى مقطع فيديو متداول على مواقع التواصل الاجتماعى أثناء قيامه بـ أداء حركات استعراضية خطيرة، والسماح لمستقلى السيارة بالجلوس خارج النوافذ أثناء سيره، ما عرّض حياتهم وحياة المواطنين للخطر. وكشفت التحريات أن السيارة سارية التراخيص، وأن قائدها سائق يقيم بدائرة قسم شرطة حلوان، وقد اعترف …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-03T00:30:38+00:00",
+      "source_url": "https://www.alnilin.com/13466370.htm",
+      "source_name": "النيلين",
+      "context": "The incident reflects ongoing concerns about public safety and law enforcement in Egypt, particularly in urban areas like Giza. Following the 2011 revolution, there has been a rise in reckless behavior among youth, often exacerbated by social media. This event highlights the challenges authorities face in regulating such activities, especially during celebrations, amidst a backdrop of political instability and economic difficulties that have heightened public frustration and unrest."
+    },
+    {
+      "title": "إسرائيل تعلن استئناف عمليات حقل ليفياثان الذي يزود الأردن ومصر بالغاز",
+      "summary": "مباشر , إسرائيل تعلن استئناف عمليات حقل ليفياثان الذي يزود الأردن ومصر بالغاز حذّر الأمين العام للأمم المتحدة أنطونيو غوتيريش الخميس من تصاعُد الصراع في الشرق الأوسط إلى حرب أوسع، داعياً كافة الأطراف إلى وقف الهجمات، فيما قال رئيس البرلمان الإيراني محمد باقر قاليباف إن سبعة ملايين إيراني تطوعوا للخدمة العسكرية منذ اندلاع الحرب مع The post إسرائيل تعلن استئناف عمليات حقل ليفياثان الذي يزود الأردن ومصر بالغاز appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T22:46:50+00:00",
+      "source_url": "https://www.alrakoba.net/32156404/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%aa%d8%b9%d9%84%d9%86-%d8%a7%d8%b3%d8%aa%d8%a6%d9%86%d8%a7%d9%81-%d8%b9%d9%85%d9%84%d9%8a%d8%a7%d8%aa-%d8%ad%d9%82%d9%84-%d9%84%d9%8a%d9%81%d9%8a%d8%a7/",
+      "source_name": "الراكوبة",
+      "context": "The resumption of operations at Israel's Leviathan gas field is significant amid escalating tensions following the October 2023 conflict between Israel and Hamas. This development comes as Jordan and Egypt rely on Israeli gas to meet their energy needs, highlighting the geopolitical stakes in the region. Additionally, the ongoing Iranian military mobilization, as indicated by the statement from Iranian Parliament Speaker Mohammad Baqer Qalibaf, underscores the broader implications for regional stability and energy security."
+    },
+    {
+      "title": "هل نتّجه نحو حرب عالمية ثالثة أم أن المخاوف مبالغ فيها؟",
+      "summary": "هل نتّجه نحو حرب عالمية ثالثة أم أن المخاوف مبالغ فيها؟ صدر الصورة، Getty Images Author, أحمن خواجة Role, بي بي سي نيوز، فريق الصحافة العالمية Author, بودكاست \"غلوبال ستوري\" Role, خدمة بي بي سي العالمية قبل 6 ساعة مدة القراءة: 6 دقائق بعد أكثر من شهر على اندلاع الحرب بين الولايات المتحدة وإسرائيل من The post هل نتّجه نحو حرب عالمية ثالثة أم أن المخاوف مبالغ فيها؟ appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T22:46:49+00:00",
+      "source_url": "https://www.alrakoba.net/32156407/%d9%87%d9%84-%d9%86%d8%aa%d9%91%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%ad%d8%b1%d8%a8-%d8%b9%d8%a7%d9%84%d9%85%d9%8a%d8%a9-%d8%ab%d8%a7%d9%84%d8%ab%d8%a9-%d8%a3%d9%85-%d8%a3%d9%86-%d8%a7%d9%84%d9%85%d8%ae/",
+      "source_name": "الراكوبة",
+      "context": "تأتي هذه المقالة في وقت حساس بعد تصاعد التوترات بين الولايات المتحدة وإسرائيل منذ بداية الحرب في أكتوبر 2023، والتي أدت إلى تفاقم الأزمات في منطقة الشرق الأوسط. كما أن النزاع المستمر في السودان، الذي بدأ في أبريل 2023 بين الجيش وقوات الدعم السريع، يساهم في زعزعة الاستقرار الإقليمي، مما يزيد من المخاوف من أن تؤدي هذه الصراعات إلى تصعيد عالمي."
+    },
+    {
+      "title": "لقاء الخميسى توجه رسالة تحذير شديدة اللهجة: محامى العائلة سيتعامل مع التجاوزات",
+      "summary": "حذرت الفنانة لقاء الخميسى من تداول أى معلومات غير صحيحة عنها عبر مواقع التواصل الاجتماعى، موضحة أنها ستتخذ كافة الإجراءات القانونية ضد أى تعليقات أو منشورات خارجة عن السياق. وكتبت لقاء الخميسى عبر حسابها الرسمى بـ«فيس بوك»: «إنذار! أى معلومات مغلوطة وأى تعليقات خارجة عن السياق فى صفحات الفيس بوك أو الانستجرام والتيك توك سيتم …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T22:30:15+00:00",
+      "source_url": "https://www.alnilin.com/13466369.htm",
+      "source_name": "النيلين",
+      "context": "In the context of Sudan's ongoing political turmoil following the 2019 ousting of President Omar al-Bashir, public figures like لقاء الخميسى are increasingly vulnerable to misinformation and online harassment. The rise of social media as a platform for both expression and defamation has intensified scrutiny on celebrities, particularly amid heightened tensions surrounding the transitional government and civil society's role in shaping the nation’s future. This situation underscores the urgent need for legal protections against defamation in a volatile environment."
+    },
+    {
+      "title": "MIDROC, TFG Hospitality Sign Master Agreement for 10 Properties in Ethiopia",
+      "summary": "MIDROC Investment Group and The First Group Hospitality, a Dubai-headquartered hospitality management firm, signed a master agreement to develop and operate 10 properties across Ethiopia. The portfolio includes",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Business & Economy",
+        "Diplomacy"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T20:42:03+00:00",
+      "source_url": "https://ethiopianmonitor.com/2026/04/02/midroc-tfg-hospitality-sign-master-agreement-for-10-properties-in-ethiopia/",
+      "source_name": "Ethiopian Monitor",
+      "context": "The signing of the master agreement comes amid Ethiopia's ongoing recovery from a two-year civil conflict that ended with a peace deal in November 2022. The Ethiopian government, led by Prime Minister Abiy Ahmed, is actively seeking foreign investment to revitalize its economy and promote stability. This partnership with MIDROC, owned by Ethiopian billionaire Mohammed Al-Amoudi, reflects a renewed focus on economic development and international collaboration in the region."
+    },
+    {
+      "title": "في تحذير جديد.. أدلة متزايدة على العلاقة بين التدخين الإلكتروني والسرطان",
+      "summary": "كشفت دراسة حديثة أن السجائر الإلكترونية التي تحتوي على النيكوتين قد تزيد من خطر الإصابة بسرطان الرئة وسرطان الفم، في وقت تتزايد فيه المخاوف بشأن آثارها الصحية، خاصة بين الشباب. وأُجريت الدراسة بقيادة باحثين من جامعة نيو ساوث ويلز في سيدني، حيث قدّمت تقييما نوعيا لمخاطر السجائر الإلكترونية، مستندة إلى تحليل واسع لنتائج أبحاث عالمية …",
+      "country_tags": [
+        "Somalia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T20:30:35+00:00",
+      "source_url": "https://www.alnilin.com/13466368.htm",
+      "source_name": "النيلين",
+      "context": "في ظل تصاعد استخدام السجائر الإلكترونية بين الشباب في الصومال، حيث يعاني البلد من نقص في التوعية الصحية بسبب عقود من الصراع وعدم الاستقرار، تأتي هذه الدراسة لتسلط الضوء على المخاطر الصحية المحتملة. كما أن الحكومة الصومالية، التي تسعى لتعزيز الصحة العامة، تواجه تحديات في تنظيم سوق السجائر الإلكترونية، مما يجعل هذه النتائج ذات أهمية خاصة في سياق الجهود المبذولة لحماية الشباب من المخاطر الصحية."
+    },
+    {
+      "title": "Gov’t raises fuel prices by 16.6% as subsidy burden reaches 272 billion birr",
+      "summary": "Ethiopia has implemented a fresh round of fuel price increases, citing mounting fiscal pressure from global oil market disruptions and a rapidly growing subsidy burden. The Ministry of Trade and Regional Integration announced that, effective April 1, 2026, the price of white diesel has risen by 16.6%, marking the second major adjustment within a single […]",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T20:17:26+00:00",
+      "source_url": "https://capitalethiopia.com/2026/04/02/govt-raises-fuel-prices-by-16-6-as-subsidy-burden-reaches-272-billion-birr/",
+      "source_name": "Capital Ethiopia",
+      "context": "Ethiopia's fuel price hike comes amid ongoing economic challenges exacerbated by the Tigray conflict, which has strained government resources since it erupted in November 2020. The federal government has struggled to balance rising subsidy costs, now totaling 272 billion birr, while managing inflation and public discontent. The recent escalation in global oil prices further complicates the situation, as Ethiopia seeks to stabilize its economy while navigating political tensions and recovery efforts post-conflict."
+    },
+    {
+      "title": "NBE, China’ Central Banks Discuss Advancing Monetary Cooperation",
+      "summary": "National Bank of Ethiopia (NBE) says its Governor Eyob Tekalign met with People’s Bank of China (PBOC) governor Pan Gongsheng on Thursday to advance a monetary cooperation aimed",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T19:22:09+00:00",
+      "source_url": "https://ethiopianmonitor.com/2026/04/02/nbe-china-central-banks-discuss-advancing-monetary-cooperation/",
+      "source_name": "Ethiopian Monitor",
+      "context": "The meeting between NBE Governor Eyob Tekalign and PBOC Governor Pan Gongsheng comes amid Ethiopia's efforts to stabilize its economy following the Tigray conflict, which ended with a peace agreement in November 2022. Strengthening ties with China is crucial for Ethiopia as it seeks foreign investment and financial support, particularly in light of ongoing challenges such as inflation and currency depreciation. This cooperation could enhance Ethiopia's economic resilience and development prospects."
+    },
+    {
+      "title": "President Salva Kiir reshuffles Unity State officials",
+      "summary": "President Salva Kiir Mayardit has issued decrees relieving and appointing a number of officials in Unity State, affecting key positions at both state and county levels. Ling Gatgach Nhial has been appointed Minister of Finance and Investment, taking over from John Gatluak Doar. At the county level, the newly appointed commissioners replace their predecessors as […] The post President Salva Kiir reshuffles Unity State officials first appeared on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Politics",
+        "Business & Economy"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T19:03:31+00:00",
+      "source_url": "https://www.eyeradio.org/president-salva-kiir-reshuffles-unity-state-officials/?utm_source=rss&utm_medium=rss&utm_campaign=president-salva-kiir-reshuffles-unity-state-officials",
+      "source_name": "Eye Radio",
+      "context": "The reshuffle comes amid ongoing tensions in South Sudan, particularly in Unity State, where local governance has been a focal point of conflict since the civil war began in 2013. President Kiir's decision to appoint Ling Gatgach Nhial as Minister of Finance follows the 2018 Revitalized Peace Agreement, which aimed to stabilize the region but has faced implementation challenges, particularly regarding power-sharing and local governance. This move may signal an attempt to consolidate control and address economic grievances."
+    },
+    {
+      "title": "“كنت أسمع أصواتهم وهم يحترقون”.. شهادات من سكان مدينة الدلنج السودانية",
+      "summary": "\"كنت أسمع أصواتهم وهم يحترقون\".. شهادات من سكان مدينة الدلنج السودانية Author, مصطفى سعيد Role, بي بي سي عربي قبل ساعة واحدة مدة القراءة: 4 دقائق بين سواد الحرائق وبقايا جدران منزلٍ مهدم في مدينة الدلنج، تجلس خديجة عبد الكريم بين ركام ما كان يوماً بيتاً يضج بحياة ساكنيه. تتحسس حروقاً شوهت يدها اليمنى وأجزاءً The post “كنت أسمع أصواتهم وهم يحترقون”.. شهادات من سكان مدينة الدلنج السودانية appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T18:47:35+00:00",
+      "source_url": "https://www.alrakoba.net/32156398/%d9%83%d9%86%d8%aa-%d8%a3%d8%b3%d9%85%d8%b9-%d8%a3%d8%b5%d9%88%d8%a7%d8%aa%d9%87%d9%85-%d9%88%d9%87%d9%85-%d9%8a%d8%ad%d8%aa%d8%b1%d9%82%d9%88%d9%86-%d8%b4%d9%87%d8%a7%d8%af%d8%a7%d8%aa-%d9%85/",
+      "source_name": "الراكوبة",
+      "context": "تأتي هذه الشهادات من مدينة الدلنج السودانية في ظل تصاعد النزاع بين القوات المسلحة السودانية وقوات الدعم السريع، الذي اندلع في أبريل 2023. هذا الصراع أدى إلى تدمير واسع النطاق للمنازل والبنية التحتية، مما زاد من معاناة المدنيين. في هذا السياق، تعكس تجارب خديجة عبد الكريم وغيرها من السكان الأثر المأساوي للصراع على حياة الناس في المناطق المتأثرة."
+    },
+    {
+      "title": "الأمم المتحدة تحذر من “حرب أوسع”، والبرلمان الإيراني يقول إن سبعة ملايين شخص تطوعوا للقتال",
+      "summary": "مباشر , الأمم المتحدة تحذر من \"حرب أوسع\"، والبرلمان الإيراني يقول إن سبعة ملايين شخص تطوعوا للقتال حذّر الأمين العام للأمم المتحدة أنطونيو غوتيريش الخميس من تصاعُد الصراع في الشرق الأوسط إلى حرب أوسع، داعياً كافة الأطراف إلى وقف الهجمات، فيما قال رئيس البرلمان الإيراني محمد باقر قاليباف إن سبعة ملايين إيراني تطوعوا للخدمة العسكرية The post الأمم المتحدة تحذر من “حرب أوسع”، والبرلمان الإيراني يقول إن سبعة ملايين شخص تطوعوا للقتال appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T18:47:34+00:00",
+      "source_url": "https://www.alrakoba.net/32156401/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%ad%d8%b1%d8%a8-%d8%a3%d9%88%d8%b3%d8%b9%d8%8c-%d9%88%d8%a7%d9%84%d8%a8%d8%b1%d9%84/",
+      "source_name": "الراكوبة",
+      "context": "تأتي تحذيرات الأمين العام للأمم المتحدة في وقت تتصاعد فيه التوترات في الشرق الأوسط، خاصة بعد اندلاع الصراع في غزة منذ أكتوبر 2023. في إيران، يعكس إعلان رئيس البرلمان عن تطوع سبعة ملايين شخص للخدمة العسكرية تصاعد القومية العسكرية في ظل التوترات الإقليمية، خاصة مع دعم إيران لحركات مثل حزب الله في لبنان. هذه الديناميات تعكس المخاطر المتزايدة من تصعيد النزاع إلى نطاق أوسع."
+    },
+    {
+      "title": "Sixteen Kenyans missing in Russia after army recruitment",
+      "summary": "More than 250 Kenyans have gone to fight for Russia in Ukraine, mostly willingly, Kenya's foreign minister says.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Politics",
+        "Diplomacy"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T18:35:09+00:00",
+      "source_url": "https://www.bbc.com/news/articles/cx2ell79v2wo?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC News",
+      "context": "The recruitment of Kenyans to fight for Russia in Ukraine is set against the backdrop of Kenya's complex diplomatic relations with both Russia and the West. Following Russia's invasion of Ukraine in February 2022, Kenya, a member of the United Nations Security Council, abstained from a vote condemning the invasion, reflecting its nuanced position. This recruitment trend raises concerns about the implications for Kenya's domestic stability and its international standing amid ongoing geopolitical tensions."
+    },
+    {
+      "title": "UNICEF: 540 children separated from families amid escalating violence in Jonglei",
+      "summary": "UNICEF reports that 540 children in Jonglei State have been separated from their families while fleeing violence across the state, some of whom are either missing or are believed to have been abducted amid the recent conflict. Speaking at a press briefing in Juba on Thursday following a field visit to affected areas, UNICEF Deputy […] The post UNICEF: 540 children separated from families amid escalating violence in Jonglei first appeared on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Humanitarian"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T18:19:14+00:00",
+      "source_url": "https://www.eyeradio.org/unicef-540-children-separated-from-families-amid-escalating-violence-in-jonglei/?utm_source=rss&utm_medium=rss&utm_campaign=unicef-540-children-separated-from-families-amid-escalating-violence-in-jonglei",
+      "source_name": "Eye Radio",
+      "context": "The ongoing conflict in South Sudan, particularly in Jonglei State, has roots in ethnic tensions and power struggles following the country’s independence in 2011. The 2018 Revitalized Peace Agreement aimed to end violence but has seen limited success, with clashes between rival factions, including the Sudan People's Liberation Army (SPLA) and various militia groups, escalating in recent months. This violence has led to increased displacement and vulnerability among children, highlighting the urgent humanitarian crisis."
+    },
+    {
+      "title": "UNICEF warns of worsening child crisis in South Sudan",
+      "summary": "Renewed violence in South Sudan has displaced hundreds of thousands of people and deepened an The post UNICEF warns of worsening child crisis in South Sudan appeared first on Radio Tamazuj .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Humanitarian"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T18:07:34+00:00",
+      "source_url": "https://www.radiotamazuj.org/en/news/article/unicef-warns-of-worsening-child-crisis-in-south-sudan",
+      "source_name": "Radio Tamazuj",
+      "context": "Since the signing of the Revitalized Peace Agreement in September 2018, South Sudan has experienced intermittent violence, undermining efforts for stability. The recent resurgence of clashes between government forces and opposition groups, particularly in Jonglei and Unity states, has exacerbated the humanitarian crisis, with over 1.4 million children facing acute malnutrition. This deterioration comes amid ongoing political tensions and economic instability, complicating UNICEF's efforts to provide essential aid."
+    },
+    {
+      "title": "أطباء بلا حدود: 38 وفاة وأكثر من 400 إصابة على الحدود السودانية التشادية",
+      "summary": "كشفت منظمة أطباء بلا حدود أن 457 مصابًا في الهجمات على الحدود السودانية التشادية تلقّوا العلاج من قبل المنظمة، بالتعاون مع كوادر وزارة الصحة التشادية في مدينة الطينة الحدودية منذ مطلع فبراير، توفي منهم 38 شخصًا. وأوضحت المنظمة، في بيان صحفي اطّلع عليه راديو دبنقا، أن الغارات بالطائرات المسيّرة التي تنفذها القوات المسلحة السودانية وقوات … The post أطباء بلا حدود: 38 وفاة وأكثر من 400 إصابة على الحدود السودانية التشادية appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T18:00:14+00:00",
+      "source_url": "https://www.alrakoba.net/32156394/%d8%a3%d8%b7%d8%a8%d8%a7%d8%a1-%d8%a8%d9%84%d8%a7-%d8%ad%d8%af%d9%88%d8%af-38-%d9%88%d9%81%d8%a7%d8%a9-%d9%88%d8%a3%d9%83%d8%ab%d8%b1-%d9%85%d9%86-400-%d8%a5%d8%b5%d8%a7%d8%a8%d8%a9-%d8%b9%d9%84/",
+      "source_name": "الراكوبة",
+      "context": "تشهد الحدود السودانية التشادية تصاعدًا في التوترات نتيجة النزاع المستمر في السودان منذ أبريل 2023، حيث اندلعت مواجهات عنيفة بين القوات المسلحة السودانية وقوات الدعم السريع. هذا النزاع أدى إلى تدفق اللاجئين إلى تشاد، مما زاد من الضغوط على الخدمات الصحية في المنطقة. الغارات بالطائرات المسيّرة التي تنفذها القوات السودانية تُعقد الوضع الإنساني، مما يستدعي تدخل منظمات مثل أطباء بلا حدود."
+    },
+    {
+      "title": "ضرب السلطة الموازية!!",
+      "summary": "طيف أول: كل رهانٍ ظن أنه يسابق الجميع، جمع سقوطه الآن وأصبح يصارع الاستسلام الأخير . وقد نوهنا من قبل أن الحرب ستدخل مرحلة التصفيات السياسية، لأن الميدان لم يعد مساحة صراع عسكري، بل تحوّل إلى ساحة فوضى تتحكم فيها مجموعات متفلتة وجماعات متطرفة لا غير. مقتل عضو الهيئة القيادية بتحالف “تأسيس”، أسامة حسن حسين، … The post ضرب السلطة الموازية!! appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T17:47:40+00:00",
+      "source_url": "https://www.alrakoba.net/32156392/%d8%b6%d8%b1%d8%a8-%d8%a7%d9%84%d8%b3%d9%84%d8%b7%d8%a9-%d8%a7%d9%84%d9%85%d9%88%d8%a7%d8%b2%d9%8a%d8%a9/",
+      "source_name": "الراكوبة",
+      "context": "The article addresses the escalating power struggle in Sudan following the ousting of President Omar al-Bashir in 2019, which led to a fragile transition towards democracy. The recent assassination of Osama Hassan Hussein, a key figure in the \"Tasees\" alliance, highlights the increasing violence and instability as rival factions, including the Sudanese Armed Forces and the Rapid Support Forces, vie for control amid a backdrop of political fragmentation and rising extremism."
+    },
+    {
+      "title": "صلاح الباشا ذكرياتي مع السر قدور بالقاهرة وكريمته زينبو تتصدر المشهد : ( ١ __ ٢ )",
+      "summary": "بمناسبة مرور اربع سنوات علي رحيل صديقنا الجميل واستاذنا النبيه والخفيف الظل والحكواتي الاكثر جذبا السر احمد قدور والذي غادر الدنيا بالقاهرة في ٣٠ مارس ٢٠٢٢م. جال بخاطري شريط جميل وحنين من الذكريات التي مضي عليها أكثر من ربع قرن من الزمان ولاتزال تلك الذكريات رطبة وتجول بخاطري من وقت لآخر. وتاريخ معرفتي بالمرحوم السر … The post صلاح الباشا ذكرياتي مع السر قدور بالقاهرة وكريمته زينبو تتصدر المشهد : ( ١ __ ٢ ) appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T17:42:08+00:00",
+      "source_url": "https://www.alrakoba.net/32156390/%d8%b5%d9%84%d8%a7%d8%ad-%d8%a7%d9%84%d8%a8%d8%a7%d8%b4%d8%a7-%d8%b0%d9%83%d8%b1%d9%8a%d8%a7%d8%aa%d9%8a-%d9%85%d8%b9-%d8%a7%d9%84%d8%b3%d8%b1-%d9%82%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d9%82%d8%a7/",
+      "source_name": "الراكوبة",
+      "context": "تأتي ذكرى رحيل السر أحمد قدور في وقت يشهد فيه السودان تحديات سياسية كبيرة، خاصة بعد اندلاع النزاع المسلح في أبريل 2023 بين الجيش السوداني وقوات الدعم السريع. هذا الصراع أدى إلى تفاقم الأزمات الإنسانية والاقتصادية، مما يجعل استذكار شخصيات ثقافية مثل قدور، الذي كان له تأثير كبير في الحياة الثقافية السودانية، أكثر أهمية في تعزيز الهوية الوطنية والتضامن في ظل الظروف الصعبة."
+    },
+    {
+      "title": "رسالة نيلية للسيدة نهاد نصر الدين عبيد",
+      "summary": "عثمان يوسف خليل عزيزتي نهاد طبتي وطابت لك الدنيا وبعد، نعود والعود احمد، لحديثنا عن درة انهار الدنيا ابونا النيل الذي لا ينفك ياسرنا.. اليوم سنعود لهذا النهر الخالد في معية شاعر الجمال إسحاق الحلنقي ابن كسلا وسواقيها ولكن لن نسرح معه هناك، لكن سوف نرافقه هو وصاحبه المبدع المرحوم وردي الذي لا يذكر النيل … The post رسالة نيلية للسيدة نهاد نصر الدين عبيد appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T17:35:17+00:00",
+      "source_url": "https://www.alrakoba.net/32156388/%d8%b1%d8%b3%d8%a7%d9%84%d8%a9-%d9%86%d9%8a%d9%84%d9%8a%d8%a9-%d9%84%d9%84%d8%b3%d9%8a%d8%af%d8%a9-%d9%86%d9%87%d8%a7%d8%af-%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%af%d9%8a%d9%86-%d8%b9%d8%a8%d9%8a%d8%af/",
+      "source_name": "الراكوبة",
+      "context": "The article reflects on the cultural and emotional significance of the Nile River in Sudan, particularly amidst ongoing tensions surrounding water rights and management among Nile Basin countries. The Grand Ethiopian Renaissance Dam (GERD), initiated in 2011, has escalated disputes between Sudan, Egypt, and Ethiopia, complicating regional relationships and raising concerns over water security. This context underscores the importance of the Nile not only as a physical resource but also as a symbol of Sudanese identity and heritage."
+    },
+    {
+      "title": "‘teleSign’: Ethio telecom Rolls out Digital Signature Platform",
+      "summary": "Ethio Telecom has launched a national digital signature platform, teleSign, in a move that amed at enabling secure online identity verification and expanding access to government services without",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Politics"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T17:34:55+00:00",
+      "source_url": "https://ethiopianmonitor.com/2026/04/02/telesign-ethio-telecom-rolls-out-digital-signature-platform/",
+      "source_name": "Ethiopian Monitor",
+      "context": "The launch of teleSign comes amid Ethiopia's ongoing efforts to modernize its digital infrastructure following the 2020 Tigray conflict, which highlighted vulnerabilities in identity verification and access to services. The government aims to enhance security and trust in online transactions as it navigates complex political dynamics, including tensions with the Tigray People's Liberation Front and the need for national reconciliation. This initiative aligns with Ethiopia's broader digital transformation strategy initiated in 2021."
+    },
+    {
+      "title": "حين يُعامل المعلّم كمتّهم: مأساة التعليم في ولاية الجزيرة",
+      "summary": "ليست كل المآسي تُرى بالعين، فبعضها يُسمع في ارتجاف الصوت، ويُقرأ بين سطور الشكوى، ويُحَسّ في انكسار الكلمات. وما قالته إحدى معلمات ولاية الجزيرة ليس مجرد إفادة عابرة، بل شهادة موجعة تختصر حال مهنةٍ كانت يومًا عنوان الكرامة، فأصبحت اليوم ساحةً للامتهان والإذلال. تقول المعلمة: “أصبحنا مثل المتهمين والمجرمين، محتاجين شهادة حسن سير وسلوك من … The post حين يُعامل المعلّم كمتّهم: مأساة التعليم في ولاية الجزيرة appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T17:26:59+00:00",
+      "source_url": "https://www.alrakoba.net/32156386/%d8%ad%d9%8a%d9%86-%d9%8a%d9%8f%d8%b9%d8%a7%d9%85%d9%84-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%91%d9%85-%d9%83%d9%85%d8%aa%d9%91%d9%87%d9%85-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%aa%d8%b9%d9%84/",
+      "source_name": "الراكوبة",
+      "context": "تعيش ولاية الجزيرة في السودان أزمة تعليمية متفاقمة نتيجة الصراعات السياسية والاقتصادية التي تعصف بالبلاد منذ اندلاع الثورة في 2019. تدهور الأوضاع الأمنية والاجتماعية، بالإضافة إلى نقص الموارد، أدى إلى تراجع مكانة المعلمين، الذين أصبحوا يُعاملون كمتهمين بدلاً من أن يُحترموا كرموز للمعرفة. هذه المأساة تعكس التحديات التي تواجه النظام التعليمي في ظل حكومة انتقالية غير مستقرة."
+    },
+    {
+      "title": "Ethiopia, China ink deal for RMB trade settlements",
+      "summary": "To strengthen Ethiopia’s financial resilience and further enhance economic ties with China—the country’s leading trade partner—the National Bank of Ethiopia (NBE) has unveiled a new initiative aimed at significantly increasing its foreign exchange reserves of the Chinese Yuan (RMB). This announcement was made at the conclusion of a high-level bilateral meeting between the Governor of […]",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Business & Economy",
+        "Diplomacy"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T17:25:43+00:00",
+      "source_url": "https://capitalethiopia.com/2026/04/02/ethiopia-china-ink-deal-for-rmb-trade-settlements/",
+      "source_name": "Capital Ethiopia",
+      "context": "Ethiopia has been navigating economic challenges exacerbated by the Tigray conflict, which began in November 2020, leading to significant disruptions in trade and investment. As China has emerged as Ethiopia's largest trading partner, this new RMB trade settlement initiative, announced on October 10, 2023, is crucial for bolstering Ethiopia's foreign exchange reserves and stabilizing its economy amidst ongoing inflation and currency devaluation pressures."
+    },
+    {
+      "title": "ظاهرة غريبة: الجنرالات السودانيين دائما تكون نهاياتهم الأليمة في شهر أبريل",
+      "summary": "بكري الصائغ الحقائق والمعلومات في العنوان أعلاه مستمدة من كتب التاريخ التي سجلت الأحداث السودانية بكل امانة ودقة، ودونت ظاهرة الجنرالات السودانيين الذين انتهوا نهايات اليمة ما بين مقتول في اعدامات او في معارك وقتال، وروايات عن كثيرين عن قادة عسكريين يعدون بعشرات الآلاف انتهت حياتهم العسكرية بالطرد المهين مع تنزيل رتبهم العسكرية، او الإحالة … The post ظاهرة غريبة: الجنرالات السودانيين دائما تكون نهاياتهم الأليمة في شهر أبريل appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T17:22:19+00:00",
+      "source_url": "https://www.alrakoba.net/32156384/%d8%b8%d8%a7%d9%87%d8%b1%d8%a9-%d8%ba%d8%b1%d9%8a%d8%a8%d8%a9-%d8%a7%d9%84%d8%ac%d9%86%d8%b1%d8%a7%d9%84%d8%a7%d8%aa-%d8%a7%d9%84%d8%b3%d9%88%d8%af%d8%a7%d9%86%d9%8a%d9%8a%d9%86-%d8%af%d8%a7%d8%a6-2/",
+      "source_name": "الراكوبة",
+      "context": "تتزامن هذه الظاهرة مع تصاعد التوترات السياسية في السودان منذ الإطاحة بنظام عمر البشير في 2019، حيث شهدت البلاد صراعات داخلية بين الجيش وقوات الدعم السريع. في أبريل 2023، اندلعت اشتباكات عنيفة بين الطرفين، مما أعاد إلى الأذهان مصير الجنرالات الذين واجهوا نهايات مأساوية في نفس الشهر عبر التاريخ، مثل الجنرال عبد الرحمن سوار الذهب في 1985. هذه الديناميكية تعكس استمرار عدم الاستقرار السياسي في السودان."
+    },
+    {
+      "title": "حرب السودان .. قصة دولة خلقت قوى عسكرية اقتصادية لم تسطع السيطرة عليها",
+      "summary": "بقلم سيرجي إيليدينوف في أبريل 2023، لم يكن السبب المباشر لحرب السودان أيديولوجية، ولا انتخابات، ولا نزاع حدودي. بل كان مطاراً. كانت قاعدة مروي الجوية ، الواقعة شمال السودان، بمثابة المركز اللوجستي الرئيسي لقوات الدعم السريع لتصدير الذهب. عندما قررت القوات المسلحة السودانية دمجها في هيكل قيادة مشترك مع مصر، أدرك قائد قوات الدعم السريع، … The post حرب السودان .. قصة دولة خلقت قوى عسكرية اقتصادية لم تسطع السيطرة عليها appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T16:09:16+00:00",
+      "source_url": "https://www.alrakoba.net/32156381/%d8%ad%d8%b1%d8%a8-%d8%a7%d9%84%d8%b3%d9%88%d8%af%d8%a7%d9%86-%d9%82%d8%b5%d8%a9-%d8%af%d9%88%d9%84%d8%a9-%d8%ae%d9%84%d9%82%d8%aa-%d9%82%d9%88%d9%89-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d8%a7/",
+      "source_name": "الراكوبة",
+      "context": "تعود جذور الصراع الحالي في السودان إلى التوترات بين القوات المسلحة السودانية وقوات الدعم السريع، التي تأسست في عام 2013. تصاعدت هذه التوترات بعد محاولة دمج قاعدة مروي الجوية في هيكل قيادة مشترك مع مصر في أبريل 2023، مما أدى إلى اندلاع النزاع. هذا الصراع يعكس أيضاً الصراعات الأوسع في المنطقة، حيث تتنافس القوى الإقليمية على النفوذ والموارد، خاصة في ظل الأزمات الاقتصادية والسياسية المستمرة."
+    },
+    {
+      "title": "“The money is there”: Finance Ministry to purge “ghost workers” to ensure timely salaries",
+      "summary": "There is money, but what we need is to clean the bloated payroll for civil servants to get their salaries, according to the Undersecretary for Planning at the Ministry of Finance and Planning, Benjamin Ayali. Speaking in Juba on Thursday, April 2, 2026, Ayali emphasized that the government’s inability to pay civil servants consistently is […] The post “The money is there”: Finance Ministry to purge “ghost workers” to ensure timely salaries first appeared on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Politics"
+      ],
+      "language": "en",
+      "published_at": "2026-04-02T16:06:19+00:00",
+      "source_url": "https://www.eyeradio.org/the-money-is-there-finance-ministry-to-purge-ghost-workers-to-ensure-timely-salaries/?utm_source=rss&utm_medium=rss&utm_campaign=the-money-is-there-finance-ministry-to-purge-ghost-workers-to-ensure-timely-salaries",
+      "source_name": "Eye Radio",
+      "context": "South Sudan has faced ongoing economic challenges and political instability since its independence in 2011, exacerbated by a civil war that lasted until 2018. The Revitalized Agreement on the Resolution of the Conflict in South Sudan, signed in September 2018, aimed to restore peace but has struggled to achieve stability. The issue of \"ghost workers\" on the payroll reflects broader governance challenges and financial mismanagement that hinder the government's ability to provide consistent salaries to civil servants."
+    },
+    {
+      "title": "وقفة احتجاجية لصحافيين في بورتسودان تندد بالانتهاكات والبلاغات الكيدية",
+      "summary": "نفذت مجموعة من الصحافيين السودانيين وقفة احتجاجية في مدينة بورتسودان بولاية البحر الأحمر أمام رئاسة النيابة العامة بالولاية للتعبير عن رفضهم للإجراءات غير القانونية المتبعة بحق الصحافيين، وذلك بعد تصاعد عمليات القبض والتنكيل بالصحافيين خلال الأيام الماضية. وطالب الصحافيون خلال الوقفة بالالتزام بالقوانين المنظمة للعمل الصحفي، ووقف المحاكمات والبلاغات الكيدية في مواجهة الصحافيين، كما سلموا … The post وقفة احتجاجية لصحافيين في بورتسودان تندد بالانتهاكات والبلاغات الكيدية appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T16:03:10+00:00",
+      "source_url": "https://www.alrakoba.net/32156378/%d9%88%d9%82%d9%81%d8%a9-%d8%a7%d8%ad%d8%aa%d8%ac%d8%a7%d8%ac%d9%8a%d8%a9-%d9%84%d8%b5%d8%ad%d8%a7%d9%81%d9%8a%d9%8a%d9%86-%d9%81%d9%8a-%d8%a8%d9%88%d8%b1%d8%aa%d8%b3%d9%88%d8%af%d8%a7%d9%86-%d8%aa/",
+      "source_name": "الراكوبة",
+      "context": "تأتي هذه الوقفة الاحتجاجية في ظل تصاعد الانتهاكات ضد الصحافيين في السودان، خاصة بعد الانقلاب العسكري في أكتوبر 2021 الذي أدى إلى تدهور حرية الصحافة. شهدت البلاد منذ ذلك الحين حملات قمعية ضد وسائل الإعلام، حيث تم اعتقال العديد من الصحافيين وتوجيه بلاغات كيدية ضدهم. هذه الاحتجاجات تعكس القلق المتزايد من قبل المجتمع الصحافي حول مستقبل حرية التعبير في ظل الأوضاع السياسية الحالية."
+    },
+    {
+      "title": "توزيع سلال غذائية للنازحين في مدينة الطينة بدارفور",
+      "summary": "قالت غرفة طوارئ مدينة الطينة السودانية الحدودية مع تشاد، إنها دشنت، الأربعاء، مشروع توزيع سلال غذائية في منطقة هامي، استهدفت نحو 178 أسرة، بدعم من مجلس غرف طوارئ شمال دارفور. وأوضحت الغرفة، في بيان موجز نشرته على صفحتها الرسمية في فيسبوك اطلعت عليه “دارفور24″، أنها قامت بتوزيع السلال الغذائية على الأسر في المنطقة. وقال أحد … The post توزيع سلال غذائية للنازحين في مدينة الطينة بدارفور appeared first on صحيفة الراكوبة .",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-04-02T15:58:46+00:00",
+      "source_url": "https://www.alrakoba.net/32156374/%d8%aa%d9%88%d8%b2%d9%8a%d8%b9-%d8%b3%d9%84%d8%a7%d9%84-%d8%ba%d8%b0%d8%a7%d8%a6%d9%8a%d8%a9-%d9%84%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%81%d9%8a-%d9%85%d8%af%d9%8a%d9%86%d8%a9-%d8%a7%d9%84/",
+      "source_name": "الراكوبة",
+      "context": "تأتي هذه المبادرة في سياق الأزمة الإنسانية المستمرة في دارفور، حيث يعاني النازحون من آثار النزاع المستمر منذ عام 2003. تزايدت التوترات في المنطقة بعد تصاعد العنف بين الجماعات المسلحة، مما أدى إلى نزوح آلاف الأسر. دعم مجلس غرف طوارئ شمال دارفور يعكس جهود الحكومة المحلية للتخفيف من معاناة النازحين وتعزيز الاستقرار في المناطق الحدودية مثل مدينة الطينة."
+    },
     {
       "title": "Supreme Court sets April 23 for govt response in AMB Ajing’s constitutional challenge",
       "summary": "The Supreme Court of South Sudan has scheduled April 23, 2026, as the date for the government to formally respond to a constitutional challenge questioning the legality of Ambassador Ajing Deng Ajing’s detention. The decision followed a Constitutional Court session presided over by the Chief Justice and attended by all members of the Supreme Court. […] The post Supreme Court sets April 23 for govt response in AMB Ajing’s constitutional challenge first appeared on Eye Radio .",
@@ -17,7 +592,7 @@
       "published_at": "2026-04-02T15:49:45+00:00",
       "source_url": "https://www.eyeradio.org/supreme-court-sets-april-23-for-govt-response-in-amb-ajings-constitutional-challenge/?utm_source=rss&utm_medium=rss&utm_campaign=supreme-court-sets-april-23-for-govt-response-in-amb-ajings-constitutional-challenge",
       "source_name": "Eye Radio",
-      "context": "Ambassador Ajing Deng Ajing's detention is part of a broader political struggle in South Sudan, where tensions have escalated since the 2018 Revitalized Peace Agreement aimed at ending years of civil war. His case highlights ongoing issues of governance and human rights, particularly as South Sudan grapples with internal divisions and power struggles among key figures, including President Salva Kiir and opposition leader Riek Machar, complicating the nation’s fragile peace."
+      "context": "Ambassador Ajing Deng Ajing's detention is part of a broader political struggle in South Sudan, where tensions have escalated since the 2018 Revitalized Peace Agreement aimed at ending years of civil conflict. The Supreme Court's involvement highlights ongoing concerns over the rule of law and human rights in a country still grappling with the aftermath of violence and political instability following its independence in 2011."
     },
     {
       "title": "شاهد بالفيديو.. علاء الدين نقد يدخل في حالة بكاء هستيري في سرادق عزاء القيادي بحكومة “تأسيس” أسامة حسن",
@@ -47,7 +622,7 @@
       "published_at": "2026-04-02T15:40:20+00:00",
       "source_url": "https://www.alrakoba.net/32156369/%d8%aa%d8%b9%d9%8a%d9%8a%d9%86-%d8%a7%d9%84%d9%81%d8%b1%d9%8a%d9%82-%d8%a3%d9%88%d9%84-%d8%b1%d9%83%d9%86-%d9%8a%d8%a7%d8%b3%d8%b1-%d8%a7%d9%84%d8%b9%d8%b7%d8%a7-%d8%b1%d8%a6%d9%8a%d8%b3%d8%a7%d9%8b/",
       "source_name": "الراكوبة",
-      "context": "تأتي تعيينات الفريق أول ياسر العطا والفريق الركن عبد الخير عبدالله ناصر في سياق التوترات المستمرة في السودان منذ اندلاع النزاع بين الجيش وقوات الدعم السريع في أبريل 2023. هذه التغييرات في القيادة العسكرية تشير إلى محاولات الجيش لتعزيز سلطته وسط الفوضى السياسية، خاصة بعد اتفاق الإطار الذي تم توقيعه في ديسمبر 2022 والذي يهدف إلى إنهاء الأزمة السياسية في البلاد."
+      "context": "تأتي تعيينات الفريق أول ياسر العطا والفريق الركن عبد الخير عبدالله ناصر درجام في سياق التوترات المستمرة في السودان بعد الانقلاب العسكري الذي قاده الفريق أول عبد الفتاح البرهان في أكتوبر 2021. تشهد البلاد صراعات داخلية بين القوات المسلحة وقوى الحرية والتغيير، مما يزيد من تعقيد المشهد السياسي. هذه التعيينات قد تؤثر على الاستقرار العسكري والسياسي في ظل محاولات استعادة الحكم المدني."
     },
     {
       "title": "Ministry of Finance and UNDP sign $5 million public financial reform pact",
@@ -63,7 +638,7 @@
       "published_at": "2026-04-02T15:37:53+00:00",
       "source_url": "https://www.eyeradio.org/ministry-of-finance-and-undp-sign-5-million-public-financial-reform-pact/?utm_source=rss&utm_medium=rss&utm_campaign=ministry-of-finance-and-undp-sign-5-million-public-financial-reform-pact",
       "source_name": "Eye Radio",
-      "context": "South Sudan has faced ongoing economic challenges and political instability since its independence in 2011, exacerbated by civil conflict that erupted in 2013. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to restore peace and stability, but the country still struggles with fiscal mismanagement and corruption. The partnership with UNDP is crucial for implementing reforms that could enhance transparency and accountability in public finances, vital for national recovery."
+      "context": "South Sudan has faced ongoing economic challenges and political instability since its independence in 2011, exacerbated by civil conflict from 2013 to 2018. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to restore peace and promote governance reforms. This partnership with UNDP is crucial as it aligns with the government's commitment to enhance fiscal responsibility and transparency, addressing longstanding issues in public financial management amid ongoing economic crises."
     },
     {
       "title": "ياسر العطا رئيساً لهيئة الأركان",
@@ -93,7 +668,7 @@
       "published_at": "2026-04-02T15:29:27+00:00",
       "source_url": "https://www.eyeradio.org/ces-women-leaders-adopt-strategic-resolution-for-peace-and-security/?utm_source=rss&utm_medium=rss&utm_campaign=ces-women-leaders-adopt-strategic-resolution-for-peace-and-security",
       "source_name": "Eye Radio",
-      "context": "Central Equatoria State has been a focal point of conflict in South Sudan, particularly since the outbreak of civil war in 2013, which exacerbated ethnic tensions and violence. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to establish peace, yet implementation has been slow. Women leaders' involvement in peacebuilding is crucial, especially given the historical marginalization of women in political processes and the ongoing instability in the region."
+      "context": "Central Equatoria State has been a focal point of conflict in South Sudan, particularly since the outbreak of civil war in 2013, which exacerbated ethnic tensions and violence. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to establish peace, yet implementation challenges persist. Women's involvement in peacebuilding is crucial, especially in a context where their voices have historically been marginalized, making this resolution a significant step towards inclusive governance and stability."
     },
     {
       "title": "إعفاء الفريق أول محمد عثمان الحسين من منصب رئيس هيئة أركان القوات المسلحة وإحالته للتقاعد",
@@ -108,7 +683,7 @@
       "published_at": "2026-04-02T15:28:38+00:00",
       "source_url": "https://www.alrakoba.net/32156366/%d8%a5%d8%b9%d9%81%d8%a7%d8%a1-%d8%a7%d9%84%d9%81%d8%b1%d9%8a%d9%82-%d8%a3%d9%88%d9%84-%d9%85%d8%ad%d9%85%d8%af-%d8%b9%d8%ab%d9%85%d8%a7%d9%86-%d8%a7%d9%84%d8%ad%d8%b3%d9%8a%d9%86-%d9%85%d9%86-%d9%85/",
       "source_name": "الراكوبة",
-      "context": "تأتي إقالة الفريق أول محمد عثمان الحسين في وقت حساس للسودان، حيث يعاني البلد من أزمة سياسية عميقة منذ الإطاحة بنظام عمر البشير في أبريل 2019. تزايدت التوترات بين المكونات العسكرية والمدنية، خاصة بعد اتفاق جوبا للسلام في 2020، مما أدى إلى صراعات داخلية مستمرة. كما أن هذه الخطوة قد تعكس محاولات الفريق أول عبدالفتاح البرهان لتعزيز سلطته في ظل التحديات الأمنية والسياسية الراهنة."
+      "context": "تأتي إقالة الفريق أول محمد عثمان الحسين في وقت حساس للسودان، حيث تشهد البلاد توترات سياسية وأمنية متزايدة بعد انقلاب 25 أكتوبر 2021 الذي قاده الفريق أول عبدالفتاح البرهان. هذه الخطوة قد تعكس صراعات داخلية في القيادة العسكرية، خاصة مع استمرار المفاوضات حول اتفاق سياسي شامل مع القوى المدنية، والتي تتضمن قضايا تتعلق بالانتقال الديمقراطي واستعادة الحكم المدني."
     },
     {
       "title": "ماكرون يرد على ترامب: تصريحاتك عن “صفعة زوجتي” غير لائقة (فيديو)",
@@ -139,7 +714,7 @@
       "published_at": "2026-04-02T14:58:44+00:00",
       "source_url": "https://www.eyeradio.org/china-pakistan-propose-five-point-initiative-for-middle-east-stability/?utm_source=rss&utm_medium=rss&utm_campaign=china-pakistan-propose-five-point-initiative-for-middle-east-stability",
       "source_name": "Eye Radio",
-      "context": "The Gulf and Middle East have faced escalating tensions due to conflicts involving Iran, Saudi Arabia, and various non-state actors, particularly following the U.S. withdrawal from the Iran nuclear deal in 2018. China's growing influence in the region, alongside Pakistan's strategic partnerships, positions this initiative as a potential counterbalance to U.S. and Western policies. The recent normalization of relations between Iran and Saudi Arabia in 2023 further underscores the urgency for diplomatic efforts to stabilize the region."
+      "context": "The Gulf and Middle East have been marked by escalating tensions, particularly following the Abraham Accords in 2020, which normalized relations between Israel and several Arab states, leading to a realignment of regional alliances. Additionally, the ongoing conflict in Yemen and the Syrian civil war have exacerbated instability. China's increasing involvement in Middle Eastern diplomacy, alongside Pakistan's historical ties with various Gulf states, highlights a shift in geopolitical dynamics as both nations seek to enhance their influence in the region."
     },
     {
       "title": "خمسة أسئلة عن الحرب في لبنان وتداعياتها بعد شهر على اندلاعها",
@@ -154,7 +729,7 @@
       "published_at": "2026-04-02T14:46:53+00:00",
       "source_url": "https://www.alrakoba.net/32156360/%d8%ae%d9%85%d8%b3%d8%a9-%d8%a3%d8%b3%d8%a6%d9%84%d8%a9-%d8%b9%d9%86-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%88%d8%aa%d8%af%d8%a7%d8%b9%d9%8a%d8%a7%d8%aa%d9%87/",
       "source_name": "الراكوبة",
-      "context": "تأتي الحرب في لبنان في سياق تصاعد التوترات الإقليمية بعد الهجوم العسكري الذي شنته إسرائيل والولايات المتحدة على إيران في 28 فبراير/شباط 2023، والذي استهدف شخصيات بارزة مثل المرشد الأعلى علي خامنئي. هذا التصعيد يعكس الديناميات المعقدة بين إيران وحلفائها، مثل حزب الله في لبنان، والولايات المتحدة وإسرائيل، مما يزيد من احتمالات تفجر الصراع في المنطقة ويؤثر على الاستقرار في دول مثل السودان."
+      "context": "تأتي الحرب في لبنان في سياق تصاعد التوترات الإقليمية بعد الهجوم العسكري الذي شنته إسرائيل والولايات المتحدة على إيران في 28 فبراير 2023، والذي استهدف قيادات بارزة مثل علي خامنئي. هذا التصعيد يعكس الصراع المستمر بين إيران وحلفائها في المنطقة، بما في ذلك حزب الله، والتهديدات المتزايدة للأمن الإقليمي، مما يزيد من تعقيد الأوضاع السياسية في لبنان ويؤثر على استقرار السودان ودول الجوار."
     },
     {
       "title": "كيف يخطط ترامب لإنهاء حرب إيران؟ مقال في الإندبندنت يحاول الإجابة",
@@ -184,7 +759,7 @@
       "published_at": "2026-04-02T14:20:22+00:00",
       "source_url": "https://capitalethiopia.com/2026/04/02/nebe-warns-of-election-cancellations-over-voter-registration-coercion/",
       "source_name": "Capital Ethiopia",
-      "context": "Ethiopia's political landscape has been tumultuous since the Tigray conflict erupted in November 2020, leading to widespread instability and a humanitarian crisis. The 2021 elections were marred by violence and allegations of voter suppression, prompting the NEBE to emphasize the importance of a credible electoral process. As the country approaches its next elections, the NEBE's warning highlights ongoing tensions between the federal government and regional authorities, particularly in areas with a history of political coercion."
+      "context": "Ethiopia's political landscape has been tumultuous since the 2018 reforms led by Prime Minister Abiy Ahmed, which aimed to democratize the country but also intensified ethnic tensions. The Tigray conflict, which erupted in November 2020, has further complicated the electoral process, leading to concerns over voter coercion and legitimacy. The upcoming 7th general elections, scheduled for June 2024, are crucial for stabilizing the nation amid ongoing violence and political unrest."
     },
     {
       "title": "إلى والي الشمالية هل تحرق المسؤولية كما احرق دقيق الجوعى؟",
@@ -260,7 +835,7 @@
       "published_at": "2026-04-02T13:49:59+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/new-parliament-speaker-expected-to-be-named",
       "source_name": "Radio Tamazuj",
-      "context": "The postponement of the TNLA's extraordinary sitting comes amid ongoing tensions following the 2018 Revitalized Peace Agreement, which aimed to end years of civil war in South Sudan. The appointment of a new parliament speaker is crucial for advancing legislative processes, especially as the country prepares for elections scheduled for 2024. Key political figures, including President Salva Kiir and opposition leader Riek Machar, are closely watching this development as it may impact their power dynamics."
+      "context": "The postponement of the TNLA's extraordinary sitting comes amid ongoing tensions following the 2018 Revitalized Peace Agreement, which aimed to end years of civil conflict in South Sudan. The selection of a new parliament speaker is critical as it reflects the fragile power-sharing arrangements among key factions, including President Salva Kiir's SPLM and opposition leader Riek Machar's SPLM-IO, which are essential for maintaining stability in the country."
     },
     {
       "title": "من الدراما لـ السينما.. محمد إمام والعوضى وياسمين عبد العزيز فى تحديات جديدة",
@@ -335,7 +910,7 @@
       "published_at": "2026-04-02T13:39:59+00:00",
       "source_url": "https://www.eyeradio.org/president-kiir-directs-unity-and-ruweng-leaders-to-restore-law-and-order/?utm_source=rss&utm_medium=rss&utm_campaign=president-kiir-directs-unity-and-ruweng-leaders-to-restore-law-and-order",
       "source_name": "Eye Radio",
-      "context": "The directive from President Kiir comes amid escalating tensions in Unity State and the Ruweng Administrative Area, where intercommunal violence has surged since the 2018 Revitalized Peace Agreement. The recent clashes, particularly between the Dinka and Nuer communities, have exacerbated instability, prompting urgent calls for intervention. This meeting follows a series of violent incidents in March 2026, highlighting the fragile security situation and the government's struggle to maintain order in the region."
+      "context": "The directive from President Kiir comes amid escalating tensions in Unity State and the Ruweng Administrative Area, exacerbated by ongoing disputes over resource allocation and ethnic rivalries. Following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, which aimed to establish peace, recent clashes have threatened stability. The meeting on April 2, 2026, underscores the urgency for local leaders to address these challenges to prevent further violence and unrest."
     },
     {
       "title": "اليوم العالمى لكتاب الطفل.. ليه لازم تعود ابنك على القراءة؟",
@@ -383,36 +958,6 @@
       "context": "تأتي هذه التطورات في سياق تصاعد التوترات السياسية في السودان، حيث تواجه الحكومة الانتقالية تحديات كبيرة منذ الإطاحة بالرئيس عمر البشير في أبريل 2019. يعكس إعلان النيابة العامة عن مجاهد بشري، الذي يُعتقد أنه مرتبط بجماعات معارضة، القلق المتزايد من تصاعد العنف والإرهاب في البلاد، خاصة بعد أحداث العنف التي شهدتها مناطق مثل دارفور في السنوات الأخيرة."
     },
     {
-      "title": "حميدتي يشكّل مجلسًا عدليًا لترشيح رئيس القضاء والنائب العام",
-      "summary": "أصدر رئيس المجلس الرئاسي، الفريق أول محمد حمدان دقلو، “الأحد”، قرارًا بتعيين وتشكيل أعضاء المجلس العدلي المؤقت، المكوّن من 12 عضوًا، برئاسة عمر جادو حامد جمعة، وديفيد كوكو توتو عبد الله نائبًا للرئيس. وحدّد القرار، الذي اطّلع عليه راديو دبنقا، اختصاصات المجلس العدلي المؤقت، والتي تشمل ترشيح رئيس القضاء ونوابه، والنائب العام ومساعديه، إلى جانب … The post حميدتي يشكّل مجلسًا عدليًا لترشيح رئيس القضاء والنائب العام appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T13:34:14+00:00",
-      "source_url": "https://www.alrakoba.net/32156346/%d8%ad%d9%85%d9%8a%d8%af%d8%aa%d9%8a-%d9%8a%d8%b4%d9%83%d9%91%d9%84-%d9%85%d8%ac%d9%84%d8%b3%d9%8b%d8%a7-%d8%b9%d8%af%d9%84%d9%8a%d9%8b%d8%a7-%d9%84%d8%aa%d8%b1%d8%b4%d9%8a%d8%ad-%d8%b1%d8%a6%d9%8a/",
-      "source_name": "الراكوبة",
-      "context": "تأتي هذه الخطوة في سياق التوترات السياسية المستمرة في السودان بعد الإطاحة بنظام الرئيس عمر البشير في 2019. يعكس تشكيل المجلس العدلي المؤقت، برئاسة حميدتي، الصراع على السلطة بين المكونات العسكرية والمدنية، خاصة بعد الاتفاق الإطاري الذي تم توقيعه في ديسمبر 2022. كما أن هذه الخطوة تأتي في وقت يواجه فيه السودان تحديات اقتصادية وأمنية كبيرة، مما يزيد من أهمية استقرار النظام القضائي."
-    },
-    {
-      "title": "مسيرات تضرب مستشفى الجبلين وتخلف ضحايا بين الأطفال والكوادر الطبية",
-      "summary": "النيل الأبيض: الراكوبة أكدت مصادر محلية لـ”الراكوبة” أن طائرات مسيرة استهدفت مستشفى مدنية الجبلين بولاية النيل الأبيض أثناء حملة تطعيم باستخدام صاروخين ما أسفر عن استشهاد طبيبة وممرضة و(12) طفلًا إلى جانب إصابة عدد كبير من الجرحى . وفي السياق، أدانت اللجنة العليا للاستنفار والمقاومة الشعبية في بيان حول استهداف مستشفى محلية الجبلين ما وصفته … The post مسيرات تضرب مستشفى الجبلين وتخلف ضحايا بين الأطفال والكوادر الطبية appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T13:23:07+00:00",
-      "source_url": "https://www.alrakoba.net/32156344/%d9%85%d8%b3%d9%8a%d8%b1%d8%a7%d8%aa-%d8%aa%d8%b6%d8%b1%d8%a8-%d9%85%d8%b3%d8%aa%d8%b4%d9%81%d9%89-%d8%a7%d9%84%d8%ac%d8%a8%d9%84%d9%8a%d9%86-%d9%88%d8%aa%d8%ae%d9%84%d9%81-%d8%b6%d8%ad%d8%a7%d9%8a/",
-      "source_name": "الراكوبة",
-      "context": "تأتي هذه الحادثة في سياق تصاعد التوترات في السودان منذ اندلاع النزاع المسلح في أبريل 2023 بين القوات المسلحة السودانية وقوات الدعم السريع. وقد أدت هذه الصراعات إلى تدهور الأوضاع الإنسانية، بما في ذلك استهداف المنشآت الصحية. كما أن الهجمات على المستشفيات تثير القلق الدولي بشأن انتهاكات حقوق الإنسان، خاصة مع تزايد عدد الضحايا بين المدنيين، بما في ذلك الأطفال والكوادر الطبية."
-    },
-    {
       "title": "NPA urges community radios to counter hate speech",
       "summary": "Norwegian People’s Aid (NPA) on Wednesday urged community radio stations in South Sudan to play The post NPA urges community radios to counter hate speech appeared first on Radio Tamazuj .",
       "country_tags": [
@@ -426,22 +971,7 @@
       "published_at": "2026-04-02T13:10:03+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/npa-urges-community-radios-to-counter-hate-speech",
       "source_name": "Radio Tamazuj",
-      "context": "South Sudan has faced ongoing conflict since its independence in 2011, marked by a civil war that officially ended in 2018 with the Revitalized Agreement on the Resolution of the Conflict in South Sudan. Despite the peace agreement, ethnic tensions and hate speech remain prevalent, exacerbating divisions. The Norwegian People’s Aid's call for community radios to counteract hate speech is crucial in fostering dialogue and reconciliation among diverse communities in a fragile political landscape."
-    },
-    {
-      "title": "الصدق في عصر الكذب؟!",
-      "summary": "الجميل الفاضل ليس ثمة كسوف أعظم من هذا الذي إعتري روح الإنسانية أمس، حين إرتقي ترامب بالعالم الي ذروة الهذيان، وبالكذب الي مرتبة الطرب. وكأنه أراد أن يقول للدنيا: لقد آن لابستين كذلك أن يمدد رجليه. للحقيقة فالعالم لم يعد يعاني مجرد أزمةً سياسيةً طارئة أو عارضة. في وقت باتت فيه المشانق تُنصبُ للحقيقة علي … The post الصدق في عصر الكذب؟! appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:54:52+00:00",
-      "source_url": "https://www.alrakoba.net/32156340/%d8%a7%d9%84%d8%b5%d8%af%d9%82-%d9%81%d9%8a-%d8%b9%d8%b5%d8%b1-%d8%a7%d9%84%d9%83%d8%b0%d8%a8%d8%9f/",
-      "source_name": "الراكوبة",
-      "context": "تأتي هذه المقالة في سياق التوترات السياسية المتزايدة في السودان، حيث يواجه البلد أزمة سياسية منذ الإطاحة بالرئيس عمر البشير في أبريل 2019. تتصاعد المخاوف من تصاعد العنف بين المجموعات المسلحة، خاصة بعد اتفاق جوبا للسلام في أكتوبر 2020، والذي لم يُنفذ بالكامل. في هذا المناخ، تبرز أهمية الصدق والشفافية في الخطاب السياسي، خصوصاً مع تأثيرات الكذب على الثقة العامة والمشاركة السياسية."
+      "context": "South Sudan has faced ongoing ethnic tensions and violence since its independence from Sudan in 2011, exacerbated by a civil war that lasted from 2013 to 2018. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to foster peace, yet hate speech remains prevalent, often inflaming divisions. The call from Norwegian People’s Aid highlights the critical role community radios can play in promoting dialogue and reconciliation in this fragile political landscape."
     },
     {
       "title": "South Sudan sends 25 young professionals to Brazil for specialized farming training",
@@ -457,37 +987,7 @@
       "published_at": "2026-04-02T12:46:48+00:00",
       "source_url": "https://www.eyeradio.org/south-sudan-sends-25-young-professionals-to-brazil-for-specialized-farming-training/?utm_source=rss&utm_medium=rss&utm_campaign=south-sudan-sends-25-young-professionals-to-brazil-for-specialized-farming-training",
       "source_name": "Eye Radio",
-      "context": "South Sudan, the world's youngest nation, has faced ongoing conflict since its independence from Sudan in 2011, leading to a humanitarian crisis and food insecurity. The revitalized peace agreement signed in September 2018 aimed to stabilize the country, making agricultural development crucial for economic recovery. The training initiative in Brazil reflects South Sudan's commitment to enhancing agricultural practices and addressing food shortages, particularly as the nation grapples with the impacts of climate change and internal displacement."
-    },
-    {
-      "title": "من يوقف الحرب؟! .. هل من نفر صالح يخلص البلاد",
-      "summary": "تاج السر محمد بدوي زين العابدين في كل عيد يردد السودانيون “عيد يأية حال عدت يا عيد” سخرية من الأحوال المتردية التي تعودوا عليها طوال عقود مستمرة لم تشهد ابداً الاجيال المتعاقبة خلالها تحسناً للأوضاع المعيشية، وشيئاً فشيئاً اصبحت الاحوال تسوء الاحوال في مختلف النواحي حتى انفجرت الحرب القائمة وتعقدت مشاكل البلد. الآن لا يجوز … The post من يوقف الحرب؟! .. هل من نفر صالح يخلص البلاد appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:36:16+00:00",
-      "source_url": "https://www.alrakoba.net/32156320/%d9%85%d9%86-%d9%8a%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8%d8%9f-%d9%87%d9%84-%d9%85%d9%86-%d9%86%d9%81%d8%b1-%d8%b5%d8%a7%d9%84%d8%ad-%d9%8a%d8%ae%d9%84%d8%b5-%d8%a7%d9%84%d8%a8%d9%84/",
-      "source_name": "الراكوبة",
-      "context": "تعيش السودان حالة من الفوضى منذ اندلاع النزاع المسلح في أبريل 2023 بين الجيش السوداني وقوات الدعم السريع، مما أدى إلى تفاقم الأزمات الإنسانية والاقتصادية. تدهورت الأوضاع المعيشية بشكل كبير، حيث شهدت البلاد نزوح الملايين وارتفاع معدلات الفقر. في ظل غياب أي اتفاق سياسي فعّال، يتساءل الكثيرون عن إمكانية ظهور قادة صالحين قادرين على إنهاء هذه الحرب وإعادة بناء البلاد."
-    },
-    {
-      "title": "بركة المبروك برك فى وحل الحرب",
-      "summary": "إبراهيم بخيت كنت والله أتمنى ان يكون الروائي الكبير بركة ساكن قد افلحت عبقريته السردية الروائية ان تحصنه من الاندفاع المشوش في قراءة حادثات السودان وتبصر مراحلها ومخرجاتها و فعائلها وفاعلها والمفعول بهم بعين الأمين الحريص على سلامة الوطن المترنح. وتعديل مساره دون العوائق التي لازمت مساره تاريخا، وحتى في المدى القريب والحالي. الروائى الباذخ … The post بركة المبروك برك فى وحل الحرب appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:35:37+00:00",
-      "source_url": "https://www.alrakoba.net/32156319/%d8%a8%d8%b1%d9%83%d8%a9-%d8%a7%d9%84%d9%85%d8%a8%d8%b1%d9%88%d9%83-%d8%a8%d8%b1%d9%83-%d9%81%d9%89-%d9%88%d8%ad%d9%84-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8/",
-      "source_name": "الراكوبة",
-      "context": "The article reflects on the ongoing conflict in Sudan, particularly following the outbreak of violence in April 2023 between the Sudanese Armed Forces and the Rapid Support Forces. This power struggle has led to widespread humanitarian crises, displacing millions and exacerbating existing tensions. The significance of the narrative lies in the need for a deeper understanding of Sudan's tumultuous history and the urgent call for peace amidst the chaos, particularly as international actors seek to mediate a resolution."
+      "context": "South Sudan, which gained independence from Sudan in 2011, has faced ongoing conflict and economic challenges, particularly in the agricultural sector. The revitalized peace agreement signed in September 2018 aimed to stabilize the country and promote development. This training initiative aligns with the government's efforts to enhance food security and agricultural productivity, crucial for rebuilding the nation and addressing the impacts of civil strife and climate change on local farming practices."
     },
     {
       "title": "Why 80% of lawyers are based in Juba while states lack judges",
@@ -507,111 +1007,6 @@
       "context": "The concentration of lawyers in Juba reflects the broader challenges in South Sudan's legal system, exacerbated by the civil war that erupted in December 2013, which has led to widespread displacement and a lack of infrastructure. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to establish peace and governance structures, but the persistent lack of judges in states hampers access to justice, undermining the rule of law in the country."
     },
     {
-      "title": "اغتيال أسامة حسن حسين وتكريس نهج “الإرهاب المسير”",
-      "summary": "محمد صالح محمد بينما يغرق السودان في أتون حرب وجودية تتكشف يوماً بعد يوم ملامح استراتيجية ممنهجة لتيار “الإسلامويين” (الكيزان) تهدف إلى تجريف الفضاء المدني وتصفية الكوادر السياسية التي تشكل حائط الصد الأخير أمام عودة الشمولية. لم يكن اغتيال أسامة حسن حسين عضو الهيئة القيادية لتحالف السودان التأسيسي مجرد “خطأ تقني” أو “نيران صديقة” بل … The post اغتيال أسامة حسن حسين وتكريس نهج “الإرهاب المسير” appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:35:24+00:00",
-      "source_url": "https://www.alrakoba.net/32156332/%d8%a7%d8%ba%d8%aa%d9%8a%d8%a7%d9%84-%d8%a3%d8%b3%d8%a7%d9%85%d8%a9-%d8%ad%d8%b3%d9%86-%d8%ad%d8%b3%d9%8a%d9%86-%d9%88%d8%aa%d9%83%d8%b1%d9%8a%d8%b3-%d9%86%d9%87%d8%ac-%d8%a7%d9%84%d8%a5%d8%b1%d9%87/",
-      "source_name": "الراكوبة",
-      "context": "يأتي اغتيال أسامة حسن حسين في وقت تتصاعد فيه حدة الصراع في السودان منذ اندلاع الحرب في أبريل 2023 بين الجيش وقوات الدعم السريع. يمثل حسين أحد القادة الرئيسيين في تحالف السودان التأسيسي، الذي يسعى إلى تعزيز الحكم المدني في مواجهة القوى الإسلامية المتطرفة. هذا الاغتيال يعكس استراتيجية ممنهجة لتصفية الكوادر السياسية المناهضة للعودة إلى الشمولية، مما يزيد من تعقيد الوضع الأمني والسياسي في البلاد."
-    },
-    {
-      "title": "إصابة (3) أشخاص في هجوم بمسيرة استهدف مستودعاً للأدوية بكوستي",
-      "summary": "أصيب ثلاثة أشخاص على الأقل، بينهم صيدلي، إثر استهداف طائرة مسيرة ـ يُرجح تبعيتها لقوات الدعم السريع ـ مستودعاً للأدوية بمدينة كوستي في ولاية النيل الأبيض، أواسط السودان، اليوم الأربعاء.تغطية إعلامية وشهدت ولاية النيل الأبيض مؤخراً تصاعداً في الهجمات المنفذة بواسطة الطائرات المسيرة التابعة للدعم السريع، حيث استهدفت هذه الضربات مواقع عسكرية ومدنية. ويُعد قصف … The post إصابة (3) أشخاص في هجوم بمسيرة استهدف مستودعاً للأدوية بكوستي appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:30:50+00:00",
-      "source_url": "https://www.alrakoba.net/32156333/%d8%a5%d8%b5%d8%a7%d8%a8%d8%a9-3-%d8%a3%d8%b4%d8%ae%d8%a7%d8%b5-%d9%81%d9%8a-%d9%87%d8%ac%d9%88%d9%85-%d8%a8%d9%85%d8%b3%d9%8a%d8%b1%d8%a9-%d8%a7%d8%b3%d8%aa%d9%87%d8%af%d9%81-%d9%85%d8%b3%d8%aa/",
-      "source_name": "الراكوبة",
-      "context": "تأتي هذه الهجمات في سياق تصاعد النزاع بين الجيش السوداني وقوات الدعم السريع منذ اندلاع الصراع في أبريل 2023، والذي أدى إلى تدهور الأوضاع الإنسانية في البلاد. تزايد استخدام الطائرات المسيرة من قبل قوات الدعم السريع يعكس تكتيكاتها المتطورة في الصراع، مما يزيد من المخاوف بشأن استهداف المنشآت المدنية، خاصة مع استمرار غياب أي اتفاق سياسي لإنهاء النزاع."
-    },
-    {
-      "title": "حين يُراد لك أن تيأس: قراءة في صناعة السرديات المُحبِطة",
-      "summary": "الريح عبد القادر محمد عثمان ليست أخطر الحروب تلك التي تُشن بالقنابل والقذائف، بل تلك التي تُدار برصاص الكلمات لتصيبَ وعيَك في مقتل. وحين يُهزَم الإنسان في وعيه، تصبح كل المآسي السابقة واللاحقة مجرد تفاصيل. وفي خضم ما يمر به السودان الآن، لا يقتصر التحدي على ما نراه من دمار مادي أو انقسام سياسي، بل … The post حين يُراد لك أن تيأس: قراءة في صناعة السرديات المُحبِطة appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:21:36+00:00",
-      "source_url": "https://www.alrakoba.net/32156317/%d8%ad%d9%8a%d9%86-%d9%8a%d9%8f%d8%b1%d8%a7%d8%af-%d9%84%d9%83-%d8%a3%d9%86-%d8%aa%d9%8a%d8%a3%d8%b3-%d9%82%d8%b1%d8%a7%d8%a1%d8%a9-%d9%81%d9%8a-%d8%b5%d9%86%d8%a7%d8%b9%d8%a9-%d8%a7%d9%84%d8%b3/",
-      "source_name": "الراكوبة",
-      "context": "تعيش السودان حالة من الفوضى منذ اندلاع النزاع المسلح في أبريل 2023 بين الجيش السوداني وقوات الدعم السريع، مما أدى إلى تدهور الأوضاع الإنسانية والسياسية. تتزايد السرديات المحبطة التي تُستخدم لتشكيل وعي الشعب، حيث تسعى القوى المختلفة، بما في ذلك الجماعات السياسية والعسكرية، إلى السيطرة على الرواية العامة. هذه الديناميات تعكس تأثير الصراع على الهوية الوطنية وتحديات بناء مستقبل مستقر."
-    },
-    {
-      "title": "السودان إلى أين.. عنف متصاعد وأفق مسدود وفرص تلوح",
-      "summary": "تدخل الحرب في السودان مرحلة هي الأخطر منذ اندلاعها، مع تصاعد متسارع في وتيرة العنف وتحول نوعي في طبيعة الصراع من مواجهات تقليدية إلى أنماط أكثر تعقيدا واستهدافا، في ظل غياب شبه كامل لأي أفق سياسي قادر على احتواء الأزمة. ومع اتساع رقعة القتال وتفاقم الكارثة الإنسانية، تبدو البلاد عالقة في مسار تصعيد مفتوح ينذر … The post السودان إلى أين.. عنف متصاعد وأفق مسدود وفرص تلوح appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:20:14+00:00",
-      "source_url": "https://www.alrakoba.net/32156322/%d8%a7%d9%84%d8%b3%d9%88%d8%af%d8%a7%d9%86-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d8%b9%d9%86%d9%81-%d9%85%d8%aa%d8%b5%d8%a7%d8%b9%d8%af-%d9%88%d8%a3%d9%81%d9%82-%d9%85%d8%b3%d8%af%d9%88%d8%af-3/",
-      "source_name": "الراكوبة",
-      "context": "تعود جذور الصراع الحالي في السودان إلى النزاع بين الجيش السوداني وقوات الدعم السريع، والذي تصاعد بشكل كبير منذ اندلاع القتال في أبريل 2023. يأتي هذا التصعيد بعد فترة من التوترات السياسية عقب الإطاحة بالرئيس عمر البشير في 2019، ومحاولات الانتقال إلى الحكم المدني. الاتفاق الإطاري الذي تم توقيعه في ديسمبر 2022 بين القوى السياسية المختلفة لم ينجح في تحقيق الاستقرار، مما زاد من تعقيد الوضع الحالي."
-    },
-    {
-      "title": "تحرش وأوضاع إنسانية غير ملائمة للنساء في معسكرات نزوح النيل الأزرق",
-      "summary": "اكدت عضو غرف طوارئ النيل الأزرق ، هويدا من الله ، حدوث حالات تحرش بالنازحات في المعسكرات ، ووجود عدد كبير من النساء في أوضاع إنسانية غير ملائمة . وقالت من الله لراديو(دبنقا) ” في ظل التكدس الذي تشهده معسكرات النازحين عقب الاشتباكات بين الجيش السوداني وقوات الدعم السريع ظهرت حالات تحرش كثيرة بالنساء في … The post تحرش وأوضاع إنسانية غير ملائمة للنساء في معسكرات نزوح النيل الأزرق appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:17:28+00:00",
-      "source_url": "https://www.alrakoba.net/32156314/%d8%aa%d8%ad%d8%b1%d8%b4-%d9%88%d8%a3%d9%88%d8%b6%d8%a7%d8%b9-%d8%a5%d9%86%d8%b3%d8%a7%d9%86%d9%8a%d8%a9-%d8%ba%d9%8a%d8%b1-%d9%85%d9%84%d8%a7%d8%a6%d9%85%d8%a9-%d9%84%d9%84%d9%86%d8%b3%d8%a7%d8%a1/",
-      "source_name": "الراكوبة",
-      "context": "تأتي هذه التقارير في سياق النزاع المستمر في السودان بين الجيش السوداني وقوات الدعم السريع، الذي تصاعد منذ أبريل 2023. أدى هذا الصراع إلى نزوح جماعي للسكان، خاصة في مناطق مثل النيل الأزرق، حيث تدهورت الأوضاع الإنسانية بشكل كبير. الاتفاقات السابقة مثل اتفاق جوبا للسلام في 2020 لم تنجح في تحقيق الاستقرار، مما زاد من معاناة النساء في معسكرات النزوح."
-    },
-    {
-      "title": "الإخوان وداعش.. عودة من بوابة حرب السودان",
-      "summary": "أظهرت دراسة حديثة أن الحرب في السودان لم تعد مواجهة بين الجيش وقوات الدعم السريع فقط، بل تحولت إلى ساحة تتقاطع فيها جماعات إسلامية مسلحة وتنظيمات متشددة، من بينها نحو 400 عنصر مرتبط بتنظيم داعش، يشاركون في القتال إلى جانب الجيش. ومع انهيار مؤسسات الدولة واتساع الفراغ الأمني، برزت هذه القوى كفاعل رئيس يسعى لإعادة … The post الإخوان وداعش.. عودة من بوابة حرب السودان appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:08:57+00:00",
-      "source_url": "https://www.alrakoba.net/32156311/%d8%a7%d9%84%d8%a5%d8%ae%d9%88%d8%a7%d9%86-%d9%88%d8%af%d8%a7%d8%b9%d8%b4-%d8%b9%d9%88%d8%af%d8%a9-%d9%85%d9%86-%d8%a8%d9%88%d8%a7%d8%a8%d8%a9-%d8%ad%d8%b1%d8%a8-%d8%a7%d9%84%d8%b3%d9%88%d8%af%d8%a7/",
-      "source_name": "الراكوبة",
-      "context": "تتزامن هذه التطورات مع تصاعد الصراع في السودان منذ أبريل 2023 بين الجيش السوداني وقوات الدعم السريع، مما أدى إلى تفكك مؤسسات الدولة وخلق فراغ أمني. في هذا السياق، تتزايد الأنشطة العسكرية للجماعات الإسلامية المتطرفة، بما في ذلك عناصر داعش، مما يهدد الاستقرار الإقليمي ويعكس تداخل الصراعات المحلية مع الديناميات الجهادية العالمية."
-    },
-    {
-      "title": "التعايشي يدعو المجتمع الدولي لمحاسبة مستهدفي القيادات المدنية",
-      "summary": "أدان محمد حسن التعايشي، رئيس وزراء حكومة تأسيس، اغتيال عضو الهيئة القيادية لتحالف تأسيس، أسامة حسن، في نيالا. وقال، في تصريح مصوّر اطّلع عليه “راديو دبنقا” عقب اجتماع لمجلس وزراء تأسيس في نيالا، إن استهداف أسامة يُعد اغتيالًا سياسيًا، وهي ثقافة أدخلتها الحركة الإسلامية إلى القاموس السياسي في السودان. واعتبر هذا الاستهداف تهديدًا للأمن والسلم … The post التعايشي يدعو المجتمع الدولي لمحاسبة مستهدفي القيادات المدنية appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T12:05:38+00:00",
-      "source_url": "https://www.alrakoba.net/32156308/%d8%a7%d9%84%d8%aa%d8%b9%d8%a7%d9%8a%d8%b4%d9%8a-%d9%8a%d8%af%d8%b9%d9%88-%d8%a7%d9%84%d9%85%d8%ac%d8%aa%d9%85%d8%b9-%d8%a7%d9%84%d8%af%d9%88%d9%84%d9%8a-%d9%84%d9%85%d8%ad%d8%a7%d8%b3%d8%a8%d8%a9/",
-      "source_name": "الراكوبة",
-      "context": "تأتي دعوة محمد حسن التعايشي لمحاسبة مستهدفي القيادات المدنية في سياق تصاعد التوترات السياسية في السودان بعد الإطاحة بنظام عمر البشير في 2019. اغتيال أسامة حسن، الذي وقع في 15 أكتوبر 2023، يعكس استمرار العنف السياسي الذي يهدد الانتقال الديمقراطي. كما أن الحركة الإسلامية، التي كانت في السلطة سابقًا، تُعتبر مسؤولة عن خلق بيئة من العنف السياسي، مما يزيد من تعقيد الوضع الأمني في البلاد."
-    },
-    {
       "title": "South Sudan launches $5m public finance reform project",
       "summary": "South Sudan on Thursday launched a $5 million public finance reform project in partnership with The post South Sudan launches $5m public finance reform project appeared first on Radio Tamazuj .",
       "country_tags": [
@@ -625,7 +1020,7 @@
       "published_at": "2026-04-02T11:29:38+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/south-sudan-launches-5m-public-finance-reform-project",
       "source_name": "Radio Tamazuj",
-      "context": "South Sudan has faced ongoing economic challenges and political instability since its independence from Sudan in 2011, exacerbated by a civil war that lasted from 2013 to 2018. The 2018 Revitalized Agreement on the Resolution of the Conflict aimed to establish a power-sharing government, but implementation has been slow. The launch of this $5 million public finance reform project is significant as it seeks to enhance transparency and accountability in a country struggling with corruption and mismanagement of resources."
+      "context": "South Sudan has faced ongoing economic challenges and political instability since its independence from Sudan in 2011, exacerbated by a civil war that lasted from 2013 to 2018. The 2018 Revitalized Agreement on the Resolution of the Conflict aimed to establish a power-sharing government, but implementation has been slow. The launch of this $5 million public finance reform project is significant as it seeks to enhance transparency and accountability in a country struggling with corruption and fiscal mismanagement."
     },
     {
       "title": "'I am 24 with one child, earning Sh18,000. Should I move out of my parents’ home?'",
@@ -748,7 +1143,7 @@
       "published_at": "2026-04-02T09:28:12+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/kiir-reshuffles-splm-io-officials-in-jonglei-state",
       "source_name": "Radio Tamazuj",
-      "context": "The reshuffle comes amid ongoing tensions between President Salva Kiir's Sudan People's Liberation Movement (SPLM) and the opposition Sudan People's Liberation Movement-in-Opposition (SPLM-IO), led by Riek Machar. This political maneuvering follows the 2018 Revitalized Peace Agreement, which aimed to stabilize South Sudan after years of civil war. The recent changes in Jonglei State are significant as they reflect Kiir's efforts to consolidate power and address internal divisions within the SPLM-IO."
+      "context": "The reshuffle comes amid ongoing tensions within the South Sudanese government, particularly between President Kiir's Sudan People's Liberation Movement (SPLM) and the opposition faction, SPLM-IO, led by Riek Machar. This political maneuvering follows the 2018 Revitalized Peace Agreement, which aimed to end years of civil conflict but has faced implementation challenges, particularly in Jonglei State, a region marked by ethnic violence and political instability."
     },
     {
       "title": "In our culture, that of the Bachwezi, men never say they love you. If they are happy with you they give you a cow. If they are not they beat you up- Says Gen Muhoozi",
@@ -793,7 +1188,7 @@
       "published_at": "2026-04-02T09:14:13+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/man-kills-brother-over-cattle-for-bride-price-in-leer",
       "source_name": "Radio Tamazuj",
-      "context": "In South Sudan, cattle are a central aspect of cultural identity and economic livelihood, often serving as a form of currency in bride price negotiations. The ongoing conflict since the civil war began in 2013 has exacerbated tensions over resources, leading to increased violence within communities. The recent peace agreement in 2018 has not fully stabilized intercommunal relations, making incidents like this one in Leer County emblematic of the underlying struggles for power and resources in a fragile state."
+      "context": "The incident in Leer County reflects the ongoing tensions in South Sudan, where cattle remain a central element of wealth and social status, particularly in marriage customs. The country has faced persistent violence and instability since its independence in 2011, exacerbated by the civil war that erupted in 2013. This conflict has intensified competition over resources, including cattle, leading to tragic outcomes such as fratricide over bride price disputes."
     },
     {
       "title": "“I can make a hit song anytime I want.” – A Pass Brags",
@@ -853,7 +1248,7 @@
       "published_at": "2026-04-02T08:31:57+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/npa-concludes-peacebuilding-training-for-youth-in-rumbek",
       "source_name": "Radio Tamazuj",
-      "context": "South Sudan has faced ongoing conflict since its independence in 2011, particularly following the civil war that erupted in December 2013, leading to widespread violence and displacement. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to establish peace, yet challenges remain, especially among youth who are often caught in cycles of violence. The NPA's training in Rumbek is crucial for fostering non-violent conflict resolution in a region still grappling with instability."
+      "context": "Rumbek, the capital of Lakes State in South Sudan, has been a hotspot for intercommunal violence and conflict exacerbated by political instability since the country’s independence in 2011. The recent peace agreement signed in 2018 aimed to end the civil war but has struggled to achieve lasting peace. The NPA's training for youth is significant as it seeks to empower a generation to engage in non-violent conflict resolution amid ongoing tensions and societal divisions."
     },
     {
       "title": "Was Jesus really nailed to the cross?",
@@ -928,7 +1323,7 @@
       "published_at": "2026-04-02T07:48:11+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/opinion-global-transition-fatigue-public-trust-and-disillusionment-with-political-leadership",
       "source_name": "Radio Tamazuj",
-      "context": "South Sudan has experienced ongoing instability since its independence in 2011, marked by a civil war that erupted in 2013 and a fragile peace agreement signed in 2018. The transitional government, formed in February 2020, faces challenges in implementing key provisions, such as security sector reforms and the establishment of a unified army. Disillusionment with political leadership is growing as citizens grapple with economic hardship and unmet expectations for peace and governance."
+      "context": "South Sudan has faced persistent instability since its independence in 2011, marked by a brutal civil war from 2013 to 2018 that left hundreds of thousands dead and millions displaced. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to establish a power-sharing government, yet ongoing violence and economic hardship have eroded public trust in leaders like President Salva Kiir and opposition leader Riek Machar, fueling disillusionment with political transitions."
     },
     {
       "title": "Somalia registers ship under national flag after over 3 decades",
@@ -943,7 +1338,7 @@
       "published_at": "2026-04-02T07:46:32+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/somalia-registers-ship-under-national-flag-after-over-3-decades/3888956",
       "source_name": "Anadolu Agency",
-      "context": "Somalia's maritime authority has been largely dormant since the civil war erupted in 1991, leading to a collapse of governance and rampant piracy along its coast. The recent registration of a ship under the Somali flag marks a significant step towards rebuilding national institutions and restoring international confidence in Somalia's governance. This move aligns with the 2017 Somali Maritime Strategy, which aims to enhance maritime security and economic development amid ongoing efforts to stabilize the country."
+      "context": "Somalia's maritime authority has been largely dormant since the collapse of the central government in 1991, leading to rampant piracy and illegal fishing in its waters. The recent registration of a ship under the Somali flag marks a significant step towards rebuilding the country's maritime governance, following the establishment of a federal government in 2012 and ongoing efforts to stabilize the region amidst threats from militant groups like Al-Shabaab."
     },
     {
       "title": "Why Easter is called Easter?",
@@ -959,21 +1354,6 @@
       "source_url": "https://nation.africa/kenya/life-and-style/why-easter-is-called-easter--5410788",
       "source_name": "Nation Africa",
       "context": "The significance of Easter in Kenya is intertwined with the country's diverse cultural and religious landscape, where Christianity coexists with indigenous beliefs. As Kenya grapples with rising ethnic tensions and political divisions, particularly in the wake of the 2022 elections and ongoing debates over land rights and resource allocation, the celebration of Easter serves as a moment for unity and reflection amidst these challenges. The historical roots of the holiday provide a lens to explore Kenya's complex identity."
-    },
-    {
-      "title": "انضمام القائد الثاني في حركة عقار الى تحالف “تأسيس” بالنيل الأزرق",
-      "summary": "انضم اللواء الحسن آدم الحسن، القائد الثاني في الجيش الشعبي–جناح عقار، إلى تحالف «تأسيس»، وفق ما أكدته مصادر محلية الخميس، في خطوة تأتي وسط تصاعد العمليات العسكرية في ولاية النيل الأزرق. وقالت المصادر إن التحالف حقق خلال الأسابيع الماضية تقدّمًا ميدانيًا في عدة محاور داخل الولاية، بدعم من قوات الدعم السريع والحركة الشعبية–شمال المنضوية ضمن … The post انضمام القائد الثاني في حركة عقار الى تحالف “تأسيس” بالنيل الأزرق appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T07:02:46+00:00",
-      "source_url": "https://www.alrakoba.net/32156281/%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%a7%d9%84%d9%82%d8%a7%d8%a6%d8%af-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a-%d9%81%d9%8a-%d8%ad%d8%b1%d9%83%d8%a9-%d8%b9%d9%82%d8%a7%d8%b1-%d8%a7%d9%84%d9%89-%d8%aa/",
-      "source_name": "الراكوبة",
-      "context": "تأتي هذه التطورات في سياق الصراع المستمر في ولاية النيل الأزرق، حيث تتنافس حركة تحرير السودان وحركة العدل والمساواة مع الجيش السوداني وقوات الدعم السريع. بعد اتفاق جوبا للسلام في 2020، شهدت المنطقة تصاعدًا في التوترات العسكرية، مما أدى إلى انقسامات داخل الحركات المسلحة. انضمام اللواء الحسن آدم الحسن إلى تحالف \"تأسيس\" يعكس تغييرات استراتيجية في التحالفات العسكرية والسياسية في ظل هذه الظروف المتقلبة."
     },
     {
       "title": "2026 Fifa World Cup: 48-team line-up complete",
@@ -1006,21 +1386,6 @@
       "context": "Gikomba Market, a vital trading hub in Nairobi, has faced multiple demolitions over the years, often linked to urban renewal efforts and land disputes. The latest demolition on October 24, 2023, comes amid ongoing tensions between traders and the Nairobi County government, which has been accused of prioritizing development projects over the livelihoods of thousands of small-scale vendors. This incident highlights the broader struggles for economic survival and land rights in Kenya's capital."
     },
     {
-      "title": "«القوى المدنية» في السودان تحذر من فخ الإخوان لتجييش المدنيين",
-      "summary": "حذرت “القوى المدنية المتحدة في السودان” (قمم)، من دعوات الإخوان، لـ”تجييش المدنيين”، معتبرة أنها تفتح الباب أمام مزيد من الفوضى والتطرف. وقال المتحدث الرسمي باسم “قمم”، عثمان عبدالرحمن سليمان، في حديث لـ”العين الإخبارية”، إن القوى المدنية “تتابع بقلق شديد تطورات الأوضاع الميدانية في السودان، وما يصاحبها من حملات تعبئة تقودها جماعة الإخوان، تهدف إلى الزج … The post «القوى المدنية» في السودان تحذر من فخ الإخوان لتجييش المدنيين appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T06:55:53+00:00",
-      "source_url": "https://www.alrakoba.net/32156276/%d8%a7%d9%84%d9%82%d9%88%d9%89-%d8%a7%d9%84%d9%85%d8%af%d9%86%d9%8a%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%88%d8%af%d8%a7%d9%86-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d9%81%d8%ae-%d8%a7/",
-      "source_name": "الراكوبة",
-      "context": "تأتي تحذيرات \"القوى المدنية المتحدة في السودان\" في وقت حساس بعد اندلاع الصراع المسلح في أبريل 2023 بين الجيش السوداني وقوات الدعم السريع. هذا الصراع أدى إلى تفاقم الأوضاع الإنسانية والسياسية، حيث تسعى جماعة الإخوان المسلمين لاستغلال الفوضى لتعزيز نفوذها. في 5 أكتوبر 2023، أُعلن عن اتفاق لوقف إطلاق النار، لكن التوترات لا تزال مرتفعة، مما يجعل دعوات الإخوان لتجييش المدنيين أكثر خطورة."
-    },
-    {
       "title": "Hopes dim for swift end to Iran war after Trump speech, oil prices surge anew",
       "summary": "Trump vowed more aggressive strikes on Iran.",
       "country_tags": [
@@ -1036,37 +1401,6 @@
       "context": "The U.S.-Iran tensions have escalated since the assassination of Iranian General Qassem Soleimani in January 2020, which prompted Iran to retaliate with missile strikes on U.S. bases in Iraq. Trump's recent speech, emphasizing a more aggressive stance, comes amid ongoing regional instability and concerns over Iran's nuclear program, particularly following the collapse of the 2015 Joint Comprehensive Plan of Action (JCPOA) in 2018. This dynamic could further impact security and oil markets in East Africa."
     },
     {
-      "title": "ترامب يهدد إيران “بإعادتها إلى العصر الحجري”، وإسرائيل تستيقظ على قصف إيراني",
-      "summary": "مباشر , ترامب يهدد إيران \"بإعادتها إلى العصر الحجري\"، وإسرائيل تستيقظ على قصف إيراني أستراليا تشكك في أهداف الحرب على إيران، وسط هجمات بصواريخ متشظية على حيفا؛ فيما أعلن ترامب اقتراب حسم المعركة وتدمير قدرات طهران الاستراتيجية، متوعداً بضربات حاسمة خلال أسابيع. تغطية مباشرة قبل دقيقة واحدة ترامب : سنضرب إيران لمدة أسبوعين إلى ثلاثة The post ترامب يهدد إيران “بإعادتها إلى العصر الحجري”، وإسرائيل تستيقظ على قصف إيراني appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T06:46:58+00:00",
-      "source_url": "https://www.alrakoba.net/32156277/%d8%aa%d8%b1%d8%a7%d9%85%d8%a8-%d9%8a%d9%87%d8%af%d8%af-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%a8%d8%a5%d8%b9%d8%a7%d8%af%d8%aa%d9%87%d8%a7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%b9%d8%b5%d8%b1-%d8%a7%d9%84/",
-      "source_name": "الراكوبة",
-      "context": "تأتي تهديدات ترامب لإيران في سياق تصاعد التوترات الإقليمية بعد انسحاب الولايات المتحدة من الاتفاق النووي الإيراني في مايو 2018، مما أدى إلى إعادة فرض العقوبات. كما أن الهجمات الصاروخية على حيفا تشير إلى تصاعد التوتر بين إسرائيل وإيران، خاصة بعد تصاعد الأنشطة العسكرية الإيرانية في سوريا. هذه الديناميكية تعكس الصراع المستمر بين القوى الإقليمية وتأثيره على الأمن في منطقة الشرق الأوسط."
-    },
-    {
-      "title": "نداء للرئيس سلفاكير للتوسط لنقل طلاب دارفور لأداء الامتحانات في هجليج",
-      "summary": "لبنى احمد حسين فخامة الرئيس سلفاكير ميارديت رئيس جمهورية جنوب السودان لقد أسهمتم بجهد كبير ومقدّر في إخماد شرارة الحرب قبل اشتعالها في منطقة هجليج، وهو موقف لن ينساه شعب السودان، لما كان له من أثر في حفظ الأرواح وصون الثروات وحماية منشآت النفط وأنابيبه. واليوم، تعود الحاجة إليكم مجدداً في موقف إنساني لا يقل … The post نداء للرئيس سلفاكير للتوسط لنقل طلاب دارفور لأداء الامتحانات في هجليج appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T06:42:29+00:00",
-      "source_url": "https://www.alrakoba.net/32156271/%d9%86%d8%af%d8%a7%d8%a1-%d9%84%d9%84%d8%b1%d8%a6%d9%8a%d8%b3-%d8%b3%d9%84%d9%81%d8%a7%d9%83%d9%8a%d8%b1-%d9%84%d9%84%d8%aa%d9%88%d8%b3%d8%b7-%d9%84%d9%86%d9%82%d9%84-%d8%b7%d9%84%d8%a7%d8%a8-%d8%af/",
-      "source_name": "الراكوبة",
-      "context": "تأتي هذه المناشدة في ظل تصاعد التوترات في دارفور، حيث تتواصل النزاعات المسلحة منذ عام 2003، مما أدى إلى تفاقم الأوضاع الإنسانية. في 2012، شهدت منطقة هجليج صراعاً بين السودان وجنوب السودان حول حقول النفط، مما جعلها منطقة حساسة. الآن، يواجه طلاب دارفور صعوبة في الوصول إلى امتحاناتهم بسبب الأوضاع الأمنية، مما يستدعي تدخل الرئيس سلفاكير كوسيط لضمان نقلهم بأمان."
-    },
-    {
       "title": "Kenya tea exports hit by Iran conflict as stocks pile up",
       "summary": "The war has led to widespread disruption to global shipping.",
       "country_tags": [
@@ -1080,21 +1414,6 @@
       "source_url": "https://nation.africa/kenya/business/kenya-tea-exports-hit-by-iran-conflict-as-stocks-pile-up-5410766",
       "source_name": "Nation Africa",
       "context": "The ongoing conflict between Iran and Israel, which escalated in October 2023, has significantly disrupted global shipping routes, particularly in the Red Sea. This disruption affects Kenya's tea exports, a vital sector for the country's economy, as the nation relies heavily on maritime transport to reach key markets, including Iran. The situation is exacerbated by the recent increase in shipping costs and delays, impacting trade agreements established under the African Continental Free Trade Area (AfCFTA)."
-    },
-    {
-      "title": "تحالف أبناء الجزيرة والمناقل يرفض عسكرة الولاية ويدعو لإغلاق مكاتب حركة العدل ومليشيا البراء",
-      "summary": "أعلن تحالف أبناء الجزيرة والمناقل رفضه القاطع لعسكرة الولاية، ووجود مكاتب لحركة العدل والمساواة ودرع السودان وكتائب البراء التابعة للحركة الإسلامية. ورأى التحالف في بيان له، أن الولاية تقف اليوم أمام منعطف تاريخي خطير في ظل تكالب قوى “العسكرة” و”الارتزاق” التي تسعى لتمزيق النسيج الاجتماعي وتحويل “أرض المحنة” إلى ساحة لتصفية الحسابات الدموية. كما أعلن … The post تحالف أبناء الجزيرة والمناقل يرفض عسكرة الولاية ويدعو لإغلاق مكاتب حركة العدل ومليشيا البراء appeared first on صحيفة الراكوبة .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T06:30:11+00:00",
-      "source_url": "https://www.alrakoba.net/32156269/%d8%aa%d8%ad%d8%a7%d9%84%d9%81-%d8%a3%d8%a8%d9%86%d8%a7%d8%a1-%d8%a7%d9%84%d8%ac%d8%b2%d9%8a%d8%b1%d8%a9-%d9%88%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%82%d9%84-%d9%8a%d8%b1%d9%81%d8%b6-%d8%b9%d8%b3%d9%83/",
-      "source_name": "الراكوبة",
-      "context": "تحالف أبناء الجزيرة والمناقل يأتي في سياق تصاعد التوترات في السودان بعد الإطاحة بنظام البشير في 2019، حيث تسعى جماعات مسلحة مثل حركة العدل والمساواة وكتائب البراء لتعزيز نفوذها في مناطق مثل الجزيرة والمناقل. في ظل الصراع المستمر بين القوات المسلحة السودانية وقوات الدعم السريع، يعكس بيان التحالف القلق من عسكرة الولاية وتأثيرها على الاستقرار الاجتماعي والسياسي."
     },
     {
       "title": "الدهون الخفية خطر صامت يهدد صحتك.. طرق عملية للتخلص منها",
@@ -1311,66 +1630,6 @@
       "context": "تأتي تحذيرات الدكتور عباس شراقي في وقت حساس بعد تصاعد التوترات بين إثيوبيا ومصر بشأن سد النهضة، الذي بدأ بناؤه في 2011. في يوليو 2021، أعلنت إثيوبيا عن ملء السد للمرة الثانية دون اتفاق مع مصر والسودان، مما أثار مخاوف من تأثيره على تدفق مياه النيل. كما أن الفيضانات التي شهدتها السودان ومصر في عام 2022 زادت من القلق بشأن إدارة المياه في المنطقة."
     },
     {
-      "title": "5 تصرفات تتسبب فى تدمير العلاقة العاطفية.. أخطرها سؤال أنت فين دلوقتى؟",
-      "summary": "في بدايات أي علاقة، يبدو كل شيء بسيطًا ومليئًا بالمشاعر الجميلة، لكن مع مرور الوقت، قد تتسلل بعض التصرفات الصغيرة التي تبدو عادية أو حتى بدافع الحب، لتتحول تدريجيًا إلى عوامل ضغط تهدد استقرار العلاقة من الأساس المشكلة أن هذه السلوكيات لا تظهر دائمًا بشكل واضح أو صادم، بل تأتي في صورة غيرة زائدة، مزاح …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T04:17:13+00:00",
-      "source_url": "https://www.alnilin.com/13466492.htm",
-      "source_name": "النيلين",
-      "context": "في ظل الأوضاع المتوترة في السودان، حيث يشهد البلد صراعات سياسية واجتماعية منذ اندلاع النزاع المسلح في أبريل 2023 بين الجيش وقوات الدعم السريع، تتأثر العلاقات الشخصية بشكل كبير. يعاني الكثيرون من ضغوط نفسية تؤثر على تفاعلاتهم اليومية، مما يجعل فهم الديناميات العاطفية أكثر أهمية من أي وقت مضى. هذه الظروف تجعل من الضروري تسليط الضوء على كيفية تأثير السلوكيات الصغيرة على العلاقات في وقت الأزمات."
-    },
-    {
-      "title": "5 نصائح للوقاية من جرثومة المعدة",
-      "summary": "أصدرت مدينة الملك عبدالله الطبية مجموعة من الإرشادات الوقائية للحد من الإصابة بجرثومة المعدة، مؤكدة أهمية الالتزام بالممارسات الصحية اليومية. وشددت التوجيهات على ضرورة شرب مياه نظيفة وآمنة، وغسل الخضروات والفواكه جيدًا قبل تناولها، إضافة إلى غسل اليدين قبل الأكل وبعد استخدام دورات المياه. كما دعت المدينة إلى تجنب تناول الأطعمة المكشوفة أو غير الموثوقة …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T04:13:50+00:00",
-      "source_url": "https://www.alnilin.com/13466490.htm",
-      "source_name": "النيلين",
-      "context": "تواجه السودان تحديات صحية كبيرة بسبب النزاعات المستمرة والأزمات الإنسانية، مما يزيد من خطر انتشار الأمراض مثل جرثومة المعدة. في ظل الصراع المستمر منذ عام 2019، يعاني الكثير من السكان من نقص في المياه النظيفة والخدمات الصحية الأساسية. كما أن الوضع الاقتصادي المتدهور يعوق قدرة المواطنين على الحصول على الغذاء الآمن، مما يجعل التوعية الصحية والإرشادات الوقائية ضرورية أكثر من أي وقت مضى."
-    },
-    {
-      "title": "الدولار يتراجع مع تصاعد توقعات التهدئة في الشرق الأوسط",
-      "summary": "تراجع الدولار الأميركي لليوم الثاني على التوالي أمام عدد من العملات الرئيسية، مع تزايد التوقعات بقرب وقف إطلاق النار في الشرق الأوسط بعد تصريحات للرئيس الأميركي دونالد ترامب حول اقتراب انتهاء الحرب على إيران. وخفض هذا التحول الإقبال على الدولار كملاذ آمن، ما دفع اليورو والين والجنيه الإسترليني إلى الارتفاع، فيما انخفض مؤشر الدولار إلى …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T04:11:08+00:00",
-      "source_url": "https://www.alnilin.com/13466489.htm",
-      "source_name": "النيلين",
-      "context": "تأتي هذه التطورات في سياق تصاعد التوترات في الشرق الأوسط، خاصة بعد تصاعد النزاع بين إيران وإسرائيل في عام 2023، والذي أدى إلى تداعيات اقتصادية واسعة. تصريحات الرئيس الأميركي دونالد ترامب في أكتوبر 2023 حول إمكانية التوصل إلى اتفاق لوقف إطلاق النار تعكس جهود الإدارة الأميركية للحد من التصعيد، مما يؤثر بشكل مباشر على الأسواق المالية العالمية ويعزز من قيمة العملات الأخرى مقابل الدولار."
-    },
-    {
-      "title": "نوع نادر من السرطان.. ما هو التليف النخاعى؟",
-      "summary": "التليف النخاعي هو نوع نادر من سرطان نخاع العظم، يسبب حدوث تندب واسع النطاق (تليف) في نخاع العظم ، مما يمنعه من إنتاج العدد الكافي من خلايا الدم ووفقا لموقع “Very well health”، يقوم نخاع العظم السليم الذي يعمل بشكل صحيح بإنتاج خلايا الدم البيضاء المقاومة للعدوى، وخلايا الدم الحمراء الحاملة للأكسجين، والصفائح الدموية المخثرة …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T04:09:02+00:00",
-      "source_url": "https://www.alnilin.com/13466487.htm",
-      "source_name": "النيلين",
-      "context": "في ظل الأزمات الصحية المتزايدة في السودان، يعاني الكثير من المواطنين من نقص الرعاية الطبية بسبب النزاعات المستمرة منذ عام 2019. تدهور الوضع الصحي يعكس التحديات التي تواجه النظام الصحي، مما يجعل الوعي بالسرطانات النادرة مثل التليف النخاعي أمرًا حيويًا. كما أن عدم الاستقرار السياسي يعيق جهود البحث والعلاج، مما يفاقم من معاناة المرضى."
-    },
-    {
       "title": "Teachers’ pension delays spark fresh scrutiny over processing system",
       "summary": "According to TSC, only 227 cases remain unresolved.",
       "country_tags": [
@@ -1461,21 +1720,6 @@
       "context": "The Kenya Open Boxing Championships, scheduled for March 2024, come at a pivotal time as the country seeks to revitalize its boxing scene following a decline in international performance. The recent establishment of the Boxing Federation of Kenya's new leadership in late 2023 aims to address issues of governance and funding, making this championship a critical platform for emerging talent and a potential turning point for the sport's future in Kenya."
     },
     {
-      "title": "إيران تُخفي الذهب: لماذا انخفض سعر المعدن النفيس؟",
-      "summary": "عن الأضرار التي لحقت بالذهب من الحرب ضد إيران، كتب دميتري ميغونوف، في “إزفيستيا”: ارتفع سعر الذهب بأكثر من ثلاثة أضعاف خلال السنوات القليلة الماضية على خلفية الاضطرابات الجيوسياسية. مع ذلك، في حالة الحرب الإيرانية، لم تنطبق قاعدة “إذا كانت الأوضاع السياسية العالمية مضطربة، فاشترِ الذهب”. كان الذهب من بين الأصول الأكثر تضررًا في مارس/آذار. …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-02T00:30:54+00:00",
-      "source_url": "https://www.alnilin.com/13465947.htm",
-      "source_name": "النيلين",
-      "context": "تأتي هذه المقالة في سياق تصاعد التوترات بين إيران والغرب، خاصة بعد انسحاب الولايات المتحدة من الاتفاق النووي في 2018. كما أن النزاع المستمر في السودان، الذي تفاقم منذ بداية الحرب الأهلية في 2019، قد أثر على الأسواق المالية، مما أدى إلى تقلبات في أسعار الذهب. هذه الديناميكيات تجعل من انخفاض سعر الذهب في ظل الحرب الإيرانية موضوعًا ذا أهمية خاصة في المنطقة."
-    },
-    {
       "title": "Ethiopian Airlines Resumes Flights to Middle East Destinations",
       "summary": "Ethiopian Airlines, Africa’s largest flight carrier, has resumed flights to some destinations in the Middle East after weeks of disruption caused by the conflict in the region. Mesfin",
       "country_tags": [
@@ -1488,7 +1732,7 @@
       "published_at": "2026-04-01T22:43:18+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/04/01/ethiopian-airlines-resumes-flights-to-middle-east-destinations/",
       "source_name": "Ethiopian Monitor",
-      "context": "The resumption of Ethiopian Airlines flights to the Middle East comes in the wake of escalating tensions following the outbreak of conflict in Ethiopia's Tigray region in November 2020, which has strained regional relations. The airline had previously suspended flights due to safety concerns amid ongoing hostilities and political instability, particularly involving the Ethiopian government and Tigray People's Liberation Front (TPLF). The recent peace agreement signed in November 2022 has allowed for a gradual return to normalcy in air travel."
+      "context": "Ethiopian Airlines suspended flights to the Middle East in early September 2023 due to escalating tensions following the outbreak of conflict in Sudan and the ongoing civil unrest in Ethiopia's Tigray region. The resumption of flights comes as peace talks between the Ethiopian government and Tigrayan forces have shown signs of progress, particularly after the Pretoria Agreement in November 2022, which aimed to end the two-year conflict. This development is crucial for regional stability and economic recovery."
     },
     {
       "title": "DR Congo Book First World Cup Spot in 52-year with Victory over Jamaica",
@@ -1503,7 +1747,7 @@
       "published_at": "2026-04-01T22:23:06+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/04/01/dr-congo-book-first-world-cup-spot-in-52-year-with-victory-over-jamaica/",
       "source_name": "Ethiopian Monitor",
-      "context": "The Democratic Republic of Congo's qualification for the 2026 FIFA World Cup is particularly significant given the country's turbulent history marked by decades of conflict and political instability, notably the Second Congo War (1998-2003). This achievement comes amid ongoing efforts to stabilize the nation, with President Félix Tshisekedi promoting unity and national pride. The victory also serves as a beacon of hope for Congolese citizens, who have faced numerous challenges, including economic hardship and violence in eastern regions."
+      "context": "The Democratic Republic of Congo's qualification for the World Cup comes amid ongoing political instability and conflict in the eastern regions, where armed groups, including the M23, have been active. This victory is significant as it represents a unifying moment for a nation grappling with economic challenges and social unrest, particularly following the 2021 elections that were marred by allegations of fraud and violence. The win could foster national pride and hope for a brighter future."
     },
     {
       "title": "Ethiopia Advances to AfCON 2027 Qualifying Round",
@@ -1518,7 +1762,7 @@
       "published_at": "2026-04-01T22:22:27+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/04/01/ethiopia-advances-to-afcon-2027-qualifying-round/",
       "source_name": "Ethiopian Monitor",
-      "context": "Ethiopia's advancement in the AfCON 2027 qualifiers comes amid a backdrop of internal strife, particularly following the Tigray conflict that escalated in November 2020 and officially ended with a peace agreement in November 2022. The Ethiopian Football Federation has been striving to unify the nation through sports, leveraging football as a means to foster national pride and cohesion in a time of recovery and rebuilding."
+      "context": "Ethiopia's advancement in the AfCON 2027 qualifiers comes amid ongoing political tensions and ethnic conflicts within the country, particularly following the Tigray War that officially ended in November 2022. The national team's success is seen as a unifying force, fostering national pride and stability in a time of uncertainty. Additionally, the Ethiopian Football Federation's efforts to revitalize the sport reflect a broader strategy to promote national cohesion and international representation."
     },
     {
       "title": "Kiir reshuffles positions in Jonglei state government",
@@ -1567,7 +1811,7 @@
       "published_at": "2026-04-01T17:24:00+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/sspdf-revises-khor-kaltan-attack-death-toll-to-36",
       "source_name": "Radio Tamazuj",
-      "context": "The Khor Kaltan attack occurred amid ongoing tensions between the SSPDF and various armed groups, particularly in the context of South Sudan's fragile peace agreement signed in September 2018. The conflict has roots in ethnic rivalries and power struggles, notably involving the Sudan People's Liberation Movement-in-Opposition (SPLM-IO) led by Riek Machar. The revised death toll reflects the challenges of accurate reporting in conflict zones and the ongoing instability in the region."
+      "context": "The Khor Kaltan attack occurred amid ongoing tensions between the South Sudan People’s Defence Forces (SSPDF) and various armed groups, particularly in the context of the 2018 Revitalized Peace Agreement aimed at ending years of civil war. The fluctuating death toll reflects the challenges in establishing security and stability in South Sudan, where violence has persisted despite peace efforts, particularly in regions like Upper Nile and Jonglei states."
     },
     {
       "title": "Western envoys press Juba to restart political dialogue",
@@ -1583,7 +1827,7 @@
       "published_at": "2026-04-01T16:17:17+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/western-envoys-press-juba-to-restart-political-dialogue",
       "source_name": "Radio Tamazuj",
-      "context": "South Sudan has faced ongoing political instability since its independence from Sudan in 2011, exacerbated by a civil war that erupted in 2013. The 2018 Revitalized Peace Agreement aimed to unify rival factions, but implementation has stalled, leading to continued violence and humanitarian crises. The recent call from Western envoys underscores the urgency for renewed dialogue among South Sudanese leaders, particularly amid rising tensions and the approaching 2024 elections, which could further complicate the political landscape."
+      "context": "South Sudan has faced ongoing political instability since its independence from Sudan in 2011, exacerbated by a civil war that erupted in 2013. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to establish a power-sharing government, but implementation has stalled. Recent tensions between President Salva Kiir and opposition leader Riek Machar highlight the urgent need for renewed dialogue to address governance and security issues in the country."
     },
     {
       "title": "President Kiir orders resumption of J1 project, sets 2027 completion target",
@@ -1601,51 +1845,6 @@
       "context": "The J1 project, aimed at constructing a modern administrative complex in Juba, has faced delays due to ongoing political instability and conflict stemming from South Sudan's civil war, which erupted in 2013. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan (R-ARCSS) aimed to foster peace and stability, yet implementation challenges persist. President Kiir's directive to resume the project signals a potential shift towards rebuilding national infrastructure amidst ongoing economic struggles."
     },
     {
-      "title": "السوداني يعلن تعطيل الدوام في العراق يومي الأربعاء والخميس بمناسبة تأهل المنتخب الوطني لكأس العالم",
-      "summary": "أعلن رئيس الوزراء العراقي محمد شياع السوداني تعطيل الدوام الرسمي في البلاد يومي الأربعاء والخميس بمناسبة تأهل المنتخب الوطني إلى نهائيات كأس العالم 2026.وطافت شوارع العراق صباح اليوم الأربعاء كرنفالات فرح بعد إطلاق حكم المباراة صافرة نهاية مباريات الملحق العالمي بتفوق العراق علي بوليفيا بهدفين مقابل هدف واحد.وحمل العراقيون أعلام العراق وطافوا الشوارع وهم يهتفون …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-01T15:14:56+00:00",
-      "source_url": "https://www.alnilin.com/13466362.htm",
-      "source_name": "النيلين",
-      "context": "تأتي هذه الاحتفالات في سياق تاريخي حيث عانى العراق من صراعات سياسية وأمنية مستمرة منذ عام 2003، مما أثر على الرياضة والثقافة الوطنية. تأهل المنتخب الوطني لكأس العالم 2026 يمثل إنجازًا مهمًا يعكس استقرارًا نسبيًا في البلاد، ويعزز الروح الوطنية في ظل التحديات الاقتصادية والاجتماعية. كما أن هذا التأهل يأتي بعد سنوات من الفشل في الوصول إلى البطولات الكبرى، مما يزيد من أهمية هذه اللحظة للعراقيين."
-    },
-    {
-      "title": "بتغسلى شعرك كام مرة؟ اعرفى الصح حسب نوعه ونمط حياتك",
-      "summary": "في يوم يبدو شعرك ناعمًا ولامعًا، وفي اليوم التالي قد يتحول إلى دهني أو جاف، ما يثير التساؤل حول السبب والطريقة المثلى للعناية به، الحقيقة أن عدد مرات غسل الشعر ليس قاعدة ثابتة تنطبق على الجميع، بل يعتمد على عوامل متعددة، مثل طبيعة فروة الرأس، وملمس الشعر، ونمط الحياة اليومي. ووفقًا لما ذكره موقع shinesheets …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-01T14:19:41+00:00",
-      "source_url": "https://www.alnilin.com/13466352.htm",
-      "source_name": "النيلين",
-      "context": "In Sudan, ongoing political instability following the 2019 ousting of President Omar al-Bashir has led to economic challenges and a decline in public services, including access to personal care products. The recent conflict between military factions has further exacerbated living conditions, making personal grooming a luxury for many. Amid these challenges, understanding basic self-care practices, such as hair washing frequency, becomes increasingly relevant for maintaining well-being in a turbulent environment."
-    },
-    {
-      "title": "كاف يخطر الزمالك بطاقم حكام لقاء شباب بلوزداد..الجنوب أفريقي أبونجيل حكم ساحة",
-      "summary": "أخطر الاتحاد الأفريقي لكرة القدم “كاف” مسؤولي نادي الزمالك بتعيين الجنوب أفريقي توم أبونجيل حكمًا لإدارة مباراة الفريق الأول لكرة القدم بالنادي أمام شباب بلوزداد الجزائري، المقرر لها يوم 10 أبريل الجاري على ستاد نيلسون مانديلا، في ذهاب نصف نهائي بطولة كأس الكونفدرالية الأفريقية. ويعاونه الجنوب أفريقي زاخيلي ثوسي جرانفيل مساعدًا أول، وسوريو فاتسواني من …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-01T14:11:23+00:00",
-      "source_url": "https://www.alnilin.com/13466350.htm",
-      "source_name": "النيلين",
-      "context": "تأتي مباراة الزمالك أمام شباب بلوزداد في سياق تنافس قوي في كرة القدم الأفريقية، حيث يسعى الزمالك لاستعادة مكانته بعد تراجع أدائه في السنوات الأخيرة. كما أن البطولة تعكس التوترات السياسية والرياضية بين الأندية العربية، خاصة بعد تصاعد المنافسة بين الأندية المصرية والجزائرية. تاريخ 10 أبريل 2023 يمثل نقطة حاسمة في مشوار الزمالك نحو تحقيق لقب كأس الكونفدرالية الأفريقية، مما يزيد من أهمية المباراة."
-    },
-    {
       "title": "CES secretariat expresses condolences over death of former Kajo-Keji commissioner",
       "summary": "The Central Equatoria State Secretariat has issued a statement of condolence following the passing of Erasto Kenyi Gale, who served as Commissioner of Kajo-Keji County for five years. Detail surrounding the death remains unclear, local FM, Jambita reported that the former Commissioner passed on on the night of 30th March, 2026 in Uganda. In a […] The post CES secretariat expresses condolences over death of former Kajo-Keji commissioner first appeared on Eye Radio .",
       "country_tags": [
@@ -1661,36 +1860,6 @@
       "context": "The death of Erasto Kenyi Gale comes amid ongoing tensions in South Sudan, particularly in Central Equatoria State, where local governance and security issues remain critical. Gale's tenure as Commissioner of Kajo-Keji County was marked by efforts to stabilize the region following the 2018 Revitalized Peace Agreement, which aimed to end years of civil war. His passing raises concerns about the continuity of leadership and governance in a region still grappling with political fragmentation and ethnic conflict."
     },
     {
-      "title": "إزاى تحمى نفسك من نزلات البرد فى الجو الممطر؟",
-      "summary": "يُصاب الكثير من الناس بنزلات البرد مع تساقط الأمطار نتيجةً للتقلبات المفاجئة في درجات الحرارة، ولأن الوقاية خير من العلاج نقدم مجموعة من النصائح لحماية نفسك من نزلات البرد في الجو الممطر، وفقاً لموقع chula. إزاى تحمى نفسك من نزلات البرد في الجو الممطر؟ 1. جهز ملابس المطر الطريقة الأكثر فعالية لتجنب الإصابة بالمرض خلال …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-01T14:06:54+00:00",
-      "source_url": "https://www.alnilin.com/13466348.htm",
-      "source_name": "النيلين",
-      "context": "في السودان، يعاني السكان من تأثيرات التغيرات المناخية التي تزيد من حدة الأمطار الغزيرة، مما يؤدي إلى تفشي الأمراض مثل نزلات البرد. بعد النزاع المستمر منذ عام 2019، تدهورت البنية التحتية الصحية، مما يجعل الوقاية من الأمراض أكثر أهمية. مع اقتراب موسم الأمطار، يصبح من الضروري توعية الناس حول كيفية حماية أنفسهم من الأمراض المرتبطة بالطقس."
-    },
-    {
-      "title": "لجنة استضافة طلّاب دارفور الجالسين للامتحانات بنهر النيل تبحث مع منظمة اليونيسف",
-      "summary": "عقدت اللّجنة المكلّفة باستقبال واستضافة طلّاب وطالبات ولايات دارفورالجالسين لامتحانات الشهادة الثانوية 2026 بولاية نهرالنيل اجتماعاً تفاكرياً اليوم مع منظّمة اليونسيف، برئاسة الأستاذ أحمد حامد يس، المدير العام لوزارة التربية والتوجيه بولاية نهر النّيل، الوزير المُكَلّف . وبحث الاجتماع نوع الخدمة والدّعم الذي يمكن أن تقدّمه منظّمة اليونسيف لتهيئة الأوضاع بمقار السّكن ودعم مراكز الامتحانات …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-04-01T13:58:52+00:00",
-      "source_url": "https://www.alnilin.com/13466346.htm",
-      "source_name": "النيلين",
-      "context": "The ongoing conflict in Darfur, which began in 2003, has led to significant displacement and disruption of education for many students. As a result, the Sudanese government has initiated measures to support displaced students, particularly those from Darfur, in accessing their secondary school examinations. The collaboration with UNICEF is crucial in providing necessary resources and support, especially as the country navigates a fragile political landscape following the 2021 military coup and ongoing humanitarian challenges."
-    },
-    {
       "title": "Over 1,000 displaced households relocated to new settlement in Wau",
       "summary": "More than 1,000 internally displaced households have moved into a newly built residential settlement in The post Over 1,000 displaced households relocated to new settlement in Wau appeared first on Radio Tamazuj .",
       "country_tags": [
@@ -1703,7 +1872,7 @@
       "published_at": "2026-04-01T13:36:14+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/over-1000-displaced-households-relocated-to-new-settlement-in-wau",
       "source_name": "Radio Tamazuj",
-      "context": "The relocation of over 1,000 internally displaced households in Wau comes amid ongoing conflict in South Sudan, particularly following the 2013 civil war that has left millions displaced. The peace agreement signed in 2018 aimed to stabilize the region, yet violence and intercommunal tensions persist, complicating humanitarian efforts. This new settlement reflects ongoing efforts by the South Sudanese government and international organizations to address the urgent needs of displaced populations in a fragile political landscape."
+      "context": "The relocation of over 1,000 displaced households in Wau comes amid ongoing instability in South Sudan, exacerbated by the civil war that began in 2013. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to foster peace, but violence and displacement persist, particularly in regions like Wau, where ethnic tensions and clashes between government forces and armed groups continue to disrupt civilian life."
     },
     {
       "title": "Governance cluster proposes unified police force, national academy",
@@ -1735,7 +1904,7 @@
       "published_at": "2026-04-01T13:17:36+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/forensic-expert-accused-of-using-old-photos-in-machar-case",
       "source_name": "Radio Tamazuj",
-      "context": "The case involving South Sudanese opposition leader Riek Machar is set against the backdrop of ongoing tensions following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan. Allegations of human rights abuses and political manipulation continue to plague the peace process, with Machar's faction often at odds with President Salva Kiir's government. The scrutiny of forensic evidence is crucial as it may impact accountability for violence during the civil war that erupted in 2013."
+      "context": "The case involves Riek Machar, the former First Vice President of South Sudan, who has been a central figure in the country’s ongoing civil conflict since 2013. The allegations against the forensic expert arise amidst heightened tensions following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, which aimed to establish lasting peace but has faced numerous setbacks, including accusations of political manipulation and ongoing violence in various regions."
     },
     {
       "title": "38 Lakes State students selected for Adut Kiir Scholarship Program",
@@ -1890,7 +2059,7 @@
       "published_at": "2026-04-01T09:17:15+00:00",
       "source_url": "https://capitalethiopia.com/2026/04/01/bank-of-china-afdb-review-financing-framework-for-bishoftu-airport/",
       "source_name": "Capital Ethiopia",
-      "context": "The Bishoftu International Airport project is part of Ethiopia's broader Vision 2025 initiative aimed at transforming the country into a regional economic hub. The Ethiopian government is actively seeking foreign investment amid ongoing challenges, including internal ethnic conflicts and a strained economy exacerbated by the COVID-19 pandemic. The Bank of China's involvement is crucial, given its previous financing of Ethiopian infrastructure projects, including the Addis Ababa-Djibouti Railway, which opened in 2018."
+      "context": "Ethiopia's ambition to develop Bishoftu International Airport aligns with its broader vision to enhance regional connectivity and economic growth amid ongoing challenges, including the Tigray conflict and political tensions. The Ethiopian government has prioritized infrastructure development to stimulate investment and tourism, particularly following the 2020 peace agreement with the Tigray People's Liberation Front. This financing discussion with the Bank of China is crucial as Ethiopia seeks to overcome funding gaps exacerbated by the pandemic and internal strife."
     },
     {
       "title": "UN welcomes opening of Andre crossing on Sudan-Chad border till June",
@@ -1908,40 +2077,6 @@
       "context": "The Andre crossing on the Sudan-Chad border has been a critical transit point amid ongoing conflict in Sudan, particularly following the outbreak of violence in April 2023 between rival military factions. This conflict has exacerbated humanitarian crises, leading to increased refugee flows into Chad. The UN's endorsement of the crossing's opening until June 2024 aims to facilitate aid delivery and support displaced populations, reflecting the urgent need for international cooperation in addressing the regional fallout from Sudan's instability."
     },
     {
-      "title": "Russia targets investment in South Sudan agriculture, mining",
-      "summary": "The Ambassador of the Russian Federation to South Sudan, Alexsandr V. Kosmodemiyanskiy, says his country is targeting investments in South Sudan’s agriculture and mining sectors to deepen bilateral economic cooperation. Speaking after a meeting with Minister of Finance and Planning Salvatore Garang Mabiordit on 31 March, the ambassador said a draft intergovernmental agreement between the […] The post Russia targets investment in South Sudan agriculture, mining first appeared on Eye Radio .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Politics",
-        "Business & Economy",
-        "Diplomacy"
-      ],
-      "language": "en",
-      "published_at": "2026-04-01T08:09:36+00:00",
-      "source_url": "https://www.eyeradio.org/russia-targets-investment-in-south-sudan-agriculture-mining/?utm_source=rss&utm_medium=rss&utm_campaign=russia-targets-investment-in-south-sudan-agriculture-mining",
-      "source_name": "Eye Radio",
-      "context": "South Sudan has faced ongoing instability since its independence from Sudan in 2011, exacerbated by civil conflict that erupted in 2013. The country is rich in natural resources, yet struggles with economic development and food insecurity. Russia's renewed interest in South Sudan's agriculture and mining sectors, particularly following the 2020 Juba Peace Agreement, reflects its broader strategy to expand influence in Africa amidst increasing competition from Western nations and China."
-    },
-    {
-      "title": "CTSAMVM warns of “serious threat” to peace deal as security situation deteriorates",
-      "summary": "The ceasefire monitoring body, CTSAMVM, issued a stern warning this morning, stating that South Sudan’s security situation has worsened since February due to persistent attacks by signatories to the 2018 revitalized peace agreement. During a board meeting in Juba, Chairperson Maj. Gen. Teshome Anagawe Ayana declared that the Revitalized Agreement on the Resolution of the […] The post CTSAMVM warns of “serious threat” to peace deal as security situation deteriorates first appeared on Eye Radio .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Diplomacy"
-      ],
-      "language": "en",
-      "published_at": "2026-04-01T07:04:50+00:00",
-      "source_url": "https://www.eyeradio.org/ctsamvm-warns-of-serious-threat-to-peace-deal-as-security-situation-deteriorates/?utm_source=rss&utm_medium=rss&utm_campaign=ctsamvm-warns-of-serious-threat-to-peace-deal-as-security-situation-deteriorates",
-      "source_name": "Eye Radio",
-      "context": "The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to end a civil war that erupted in 2013, primarily between forces loyal to President Salva Kiir and those aligned with former Vice President Riek Machar. Despite the agreement, violence has persisted, with various factions, including the SPLA-IO and government forces, frequently clashing, undermining stability and the peace process. The recent uptick in violence poses a direct threat to the fragile peace."
-    },
-    {
       "title": "Eritrea advance after 19-year absence from Afcon qualifying",
       "summary": "Eritrea are one of six nations to reach the group stage of qualification for Afcon 2027, having played their first games in the competition since 2007.",
       "country_tags": [
@@ -1954,23 +2089,7 @@
       "published_at": "2026-03-31T20:15:42+00:00",
       "source_url": "https://www.bbc.com/sport/football/articles/c203n5y7723o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "Eritrea's return to the Africa Cup of Nations (Afcon) qualifying stage comes after a prolonged absence due to internal political strife and the impact of the 1998-2000 border war with Ethiopia. The 2007 withdrawal from the tournament reflected the country's isolation, exacerbated by ongoing tensions with Ethiopia until the 2018 peace agreement. This revival in football signifies a potential thaw in Eritrea's international relations and a renewed focus on national unity through sports."
-    },
-    {
-      "title": "GIZ launches seed & tool distribution to kick off farming season in Yei River, Magwi",
-      "summary": "As the first rains approach and fields begin to stir back to life, smallholder farmers in Yei River and Magwi counties are receiving a timely boost to start the planting season. Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) South Sudan, on behalf of the German Development Cooperation, has begun distributing seeds and basic farming tools to […] The post GIZ launches seed & tool distribution to kick off farming season in Yei River, Magwi first appeared on Eye Radio .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-03-31T18:59:20+00:00",
-      "source_url": "https://www.eyeradio.org/giz-launches-seed-tool-distribution-to-kick-off-farming-season-in-yei-river-magwi/?utm_source=rss&utm_medium=rss&utm_campaign=giz-launches-seed-tool-distribution-to-kick-off-farming-season-in-yei-river-magwi",
-      "source_name": "Eye Radio",
-      "context": "The ongoing conflict in South Sudan, which escalated in 2013, has severely disrupted agricultural production, leading to widespread food insecurity. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to stabilize the region, yet challenges remain. GIZ's distribution of seeds and tools is crucial as the country faces a looming famine, with over 7 million people in need of assistance, highlighting the urgent need for agricultural support in Yei River and Magwi counties."
+      "context": "Eritrea's return to the Africa Cup of Nations (AFCON) qualifying rounds comes after a prolonged absence due to internal political turmoil and a lack of investment in sports, exacerbated by the country's isolation following its 1998-2000 border war with Ethiopia. The recent peace agreement between Eritrea and Ethiopia in 2018 has fostered a renewed sense of national pride, making Eritrea's qualification for AFCON 2027 particularly significant as it symbolizes a potential revival in the nation's international engagement."
     },
     {
       "title": "Container Shortage Reported Due to Maritime Transport Disruptions",
@@ -2016,21 +2135,6 @@
       "source_url": "https://www.radiotamazuj.org/en/news/article/splm-moves-to-oust-parliament-speaker-jemma-nunu",
       "source_name": "Radio Tamazuj",
       "context": "The move to oust Jemma Nunu comes amid ongoing tensions within the SPLM, exacerbated by the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, which aimed to establish a power-sharing government. This internal strife reflects broader challenges in implementing the peace agreement, as factions vie for influence in a fragile political landscape following years of civil war and instability in Sudan."
-    },
-    {
-      "title": "“Honor the late Bishop by supporting unity” — US Ambassador Michael J. Adler",
-      "summary": "U.S. Ambassador Michael J. Adler called on the nation to transform its grief into a collective movement for national reconciliation during a solemn prayer service for the late Bishop Nathaniel Garang Anyieth. Addressing mourners at the church on Monday, March 30, Ambassador Adler highlighted the global reach of the Bishop’s legacy, noting the many tributes […] The post “Honor the late Bishop by supporting unity” — US Ambassador Michael J. Adler first appeared on Eye Radio .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Diplomacy"
-      ],
-      "language": "en",
-      "published_at": "2026-03-31T15:10:51+00:00",
-      "source_url": "https://www.eyeradio.org/honor-the-late-bishop-by-supporting-unity-us-ambassador-michael-j-adler/?utm_source=rss&utm_medium=rss&utm_campaign=honor-the-late-bishop-by-supporting-unity-us-ambassador-michael-j-adler",
-      "source_name": "Eye Radio",
-      "context": "Bishop Nathaniel Garang Anyieth, a prominent religious leader in South Sudan, played a crucial role in advocating for peace and reconciliation amid the country’s ongoing civil conflict, which erupted in 2013. His death on March 22, 2023, has intensified calls for unity in a nation still grappling with ethnic divisions and political instability, particularly following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, which aimed to foster lasting peace."
     },
     {
       "title": "Body of late Bishop Nathaniel Garang arrives in Bor",
@@ -2159,7 +2263,7 @@
       "published_at": "2026-03-31T10:37:33+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/commercial-flights-resume-to-somalias-south-west-state-after-nearly-2-week-halt/3886417",
       "source_name": "Anadolu Agency",
-      "context": "The suspension of flights to Somalia's South West state stemmed from a political dispute between the state president, Abdiaziz Laftagareen, and the federal government in Mogadishu regarding the legitimacy of his mandate, which has been contested since his election in 2020. This conflict reflects ongoing tensions between regional leaders and the central government, particularly following the 2021 electoral impasse that has exacerbated divisions and power struggles within the country."
+      "context": "The suspension of flights to Somalia's South West state stemmed from a political dispute between the regional government, led by President Abdiaziz Laftagareen, and the federal government in Mogadishu, particularly regarding Laftagareen's mandate, which was contested following the 2021 elections. The resumption of flights on October 15, 2023, marks a critical step in easing tensions and restoring communication, as ongoing disputes over federal authority and regional autonomy continue to shape Somalia's political landscape."
     },
     {
       "title": "Good News!! Museveni’s Gov’t To Increase Salaries Of Arts Teachers",
@@ -2342,7 +2446,7 @@
       "published_at": "2026-03-30T19:38:22+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/03/30/au-extends-condolence-after-passing-of-former-algerian-president-zeroual/",
       "source_name": "Ethiopian Monitor",
-      "context": "Liamine Zeroual served as Algeria's president from 1994 to 1999 during a tumultuous period marked by civil conflict and political instability following the cancellation of the 1992 elections. His leadership was pivotal in initiating the \"Civil Concord\" policy in 1999, aimed at reconciling the nation post-civil war. Zeroual's passing comes at a time when Algeria is navigating complex regional dynamics, including its role in the Sahel security situation and relations with neighboring countries like Morocco."
+      "context": "Liamine Zeroual served as Algeria's President from 1994 to 1999 during a tumultuous period marked by civil conflict and political instability following the cancellation of the 1992 elections. His leadership was pivotal in initiating the peace process that led to the 1999 Charter for Peace and National Reconciliation, aimed at healing the wounds of the decade-long civil war. His passing comes at a time when Algeria is navigating complex regional dynamics, particularly concerning its relations with neighboring Mali and Libya."
     },
     {
       "title": "Ethiopia,China Reach Final Stage of Strategic Debt Restructuring Negotiations in Beijing",
@@ -2378,21 +2482,6 @@
       "context": "The ongoing conflict in Sudan, particularly since the outbreak of civil war in April 2023, has led to widespread looting and illegal mining activities. Reports indicate that gold from conflict zones is being smuggled into Kenya, raising concerns about the involvement of Kenyan officials in facilitating these transactions. The recent accusations against Kalonzo Musyoka highlight the complex interplay between regional politics and illicit trade, particularly as Sudan grapples with instability and power struggles among rival factions."
     },
     {
-      "title": "Chinese machines boost rice output in Northern Bahr el Ghazal",
-      "summary": "The livelihoods of more than 2,500 people across 500 households in Northern Bahr el Ghazal The post Chinese machines boost rice output in Northern Bahr el Ghazal appeared first on Radio Tamazuj .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-03-30T15:35:11+00:00",
-      "source_url": "https://www.radiotamazuj.org/en/news/article/chinese-machines-boost-rice-output-in-northern-bahr-el-ghazal",
-      "source_name": "Radio Tamazuj",
-      "context": "Northern Bahr el Ghazal has faced significant challenges due to ongoing conflict and economic instability since South Sudan's independence in 2011. The region has struggled with food insecurity exacerbated by climate change and limited agricultural technology. The introduction of Chinese agricultural machinery aligns with the South Sudanese government's efforts to enhance food production and improve livelihoods, particularly following the 2018 Revitalized Peace Agreement aimed at stabilizing the country and fostering economic development."
-    },
-    {
       "title": "NBE Caps External Auditor Tenure for Insurers at Six Years",
       "summary": "The National Bank of Ethiopia (NBE) has limited the amount of time an external auditor can work with an insurer to a maximum of six years as the latest measure in a barrage of new regulations for the insurance industry. The new Licensing and Supervision of Insurance Business Directive No. SIB/64/2026 on External Auditors requires insurers to appoint […]",
       "country_tags": [
@@ -2420,7 +2509,7 @@
       "published_at": "2026-03-30T13:04:43+00:00",
       "source_url": "https://www.bbc.com/sport/athletics/articles/c77mndp6erpo?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "Albert Korir's five-year ban comes amid heightened scrutiny of doping in athletics, particularly following Kenya's struggles with performance-enhancing drug scandals. In 2021, the World Anti-Doping Agency reported a significant increase in doping cases among Kenyan athletes, prompting the government to implement stricter regulations. This ban not only impacts Korir's career but also reflects ongoing efforts to restore integrity in a country known for its long-distance running prowess, particularly after the 2020 Tokyo Olympics controversies."
+      "context": "Albert Korir's five-year ban comes amid heightened scrutiny of doping in athletics, particularly in Kenya, which has faced numerous scandals involving elite runners. This follows the World Athletics' 2021 decision to impose stricter regulations and penalties for doping violations, aiming to restore the integrity of the sport. The situation is compounded by Kenya's ongoing efforts to combat corruption and improve its international reputation in athletics, particularly after multiple athletes were implicated in doping cases in recent years."
     },
     {
       "title": "African Union urges peaceful dialogue in Somalia amid federal government, South West state tensions",
@@ -2435,7 +2524,7 @@
       "published_at": "2026-03-29T13:03:38+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/african-union-urges-peaceful-dialogue-in-somalia-amid-federal-government-south-west-state-tensions/3883985",
       "source_name": "Anadolu Agency",
-      "context": "Tensions between Somalia's federal government and the South West state have escalated following the controversial election of the South West president in 2021, which was marred by allegations of irregularities and political manipulation. The African Union's call for dialogue comes amid ongoing violence and instability, particularly in the context of the federal government's struggle to assert authority over regional states while combating the resurgence of Al-Shabaab militants, complicating the political landscape further."
+      "context": "Tensions between Somalia's federal government and the South West state have escalated since the controversial election of South West President Abdiaziz Laftagaren in 2020, which was marred by allegations of irregularities. The African Union's call for dialogue comes amid ongoing disputes over resource allocation and political representation, exacerbated by the broader instability linked to the Al-Shabaab insurgency and the delayed national elections initially scheduled for 2021."
     },
     {
       "title": "One ant for $220: The new frontier of wildlife trafficking",
@@ -2450,7 +2539,7 @@
       "published_at": "2026-03-29T00:01:15+00:00",
       "source_url": "https://www.bbc.com/news/articles/cg4g44zv37qo?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "In recent years, Kenya has seen a surge in wildlife trafficking, exacerbated by the 2019 ban on the export of live animals, which has driven smugglers to exploit niche markets. The rise of social media has further fueled demand for exotic species, including rare ants, as collectors seek unique additions to their collections. This trend highlights the challenges Kenya faces in enforcing wildlife protection laws amid ongoing corruption and limited resources for conservation efforts."
+      "context": "In recent years, Kenya has seen a surge in wildlife trafficking, exacerbated by the 2019 ban on plastic bags, which has led to increased interest in alternative collectibles. The rise of social media platforms has facilitated the illegal trade, with smugglers exploiting the demand for rare species, including exotic ants. This trend highlights the ongoing challenges of wildlife conservation in Kenya, where enforcement efforts are often hampered by corruption and limited resources."
     },
     {
       "title": "TAXI QUOTES",
@@ -2556,7 +2645,7 @@
       "published_at": "2026-03-28T10:45:19+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/03/28/abel-scores-twice-as-ethiopia-beat-sao-tome-e-principe-in-afcon-2027-qualifying-opener/",
       "source_name": "Ethiopian Monitor",
-      "context": "Ethiopia's victory over Sao Tome e Principe comes amid a challenging period for the nation, marked by internal conflicts, including the Tigray War, which officially ended with a peace agreement in November 2022. The win in the AfCON 2027 qualifiers not only boosts national morale but also reflects the government's efforts to unify the country through sports, fostering a sense of national pride and stability as it seeks to recover from recent turmoil."
+      "context": "Ethiopia's victory over Sao Tome e Principe comes amid ongoing efforts to rebuild the national football team following years of political instability and conflict, particularly the Tigray War that began in November 2020. The recent peace agreement signed in November 2022 has allowed for a renewed focus on national unity and development, making success in international competitions like the Africa Cup of Nations vital for national morale and international standing."
     },
     {
       "title": "Breaking News!! Top UPDF Generals Nabasa, Namanya Arrested",
@@ -2586,7 +2675,7 @@
       "published_at": "2026-03-28T10:30:28+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/03/28/nbe-launchs-hunts-for-consulting-firms-to-design-new-headquarters/",
       "source_name": "Ethiopian Monitor",
-      "context": "The National Bank of Ethiopia (NBE) is seeking a consulting firm for its new headquarters amid ongoing economic challenges exacerbated by the Tigray conflict, which began in November 2020. The conflict has strained Ethiopia's financial systems and international relations, prompting the NBE to modernize its infrastructure to restore investor confidence. This initiative aligns with the government's broader economic reform agenda, which aims to stabilize the economy and attract foreign investment post-conflict."
+      "context": "The National Bank of Ethiopia's initiative to design a new headquarters comes amid ongoing economic challenges and a push for modernization in the wake of the 2020 Tigray conflict, which severely impacted the country's financial stability. This project reflects the government's efforts to restore investor confidence and signal a commitment to economic reform, particularly following the signing of the Pretoria Agreement in November 2022, aimed at fostering peace and rebuilding the nation’s infrastructure."
     },
     {
       "title": "Shock As Armed boda gang robs bank client in broad daylight Kampala attack",
@@ -2848,7 +2937,7 @@
       "published_at": "2026-03-27T07:20:18+00:00",
       "source_url": "https://www.bbc.com/news/articles/cy5141zyllno?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "In recent years, Kenya and Ghana have seen a rise in online exploitation and harassment, exacerbated by the proliferation of social media. The 2020 UN report on cyber violence highlighted the vulnerability of women in these regions, where patriarchal norms often silence victims. Additionally, the ongoing geopolitical tensions involving Russia, particularly since the Ukraine invasion in 2022, have raised concerns about foreign actors exploiting local populations for malicious purposes."
+      "context": "In recent years, the rise of digital technology in Kenya and Ghana has facilitated both empowerment and exploitation, particularly for women. The 2020 \"Digital Economy Strategy\" in Kenya aimed to harness technology for growth but has also led to increased online harassment. Additionally, the ongoing global scrutiny of Russia's influence in Africa, particularly since the Ukraine conflict began in 2022, highlights the vulnerabilities of women in these regions to predatory behaviors by foreign actors."
     },
     {
       "title": "Somali forces kill over 42 al-Shabaab terrorists, including 2 ringleaders, in military operations",
@@ -2864,7 +2953,7 @@
       "published_at": "2026-03-26T19:50:23+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/somali-forces-kill-over-42-al-shabaab-terrorists-including-2-ringleaders-in-military-operations/3880892",
       "source_name": "Anadolu Agency",
-      "context": "The recent military operations come amid intensified efforts by Somali forces to combat al-Shabaab, particularly following the 2020 agreement between Somalia and the African Union to bolster security measures against the group. The killing of key figures like Abdihamid Ali Abdullahi Macalin and Suleyman Omar Fidow is significant as it disrupts al-Shabaab's leadership structure, which has been a persistent threat since the group's emergence in the mid-2000s, exacerbating regional instability in the Horn of Africa."
+      "context": "The recent military operations in Somalia come amid heightened efforts to combat al-Shabaab, particularly following the group's resurgence after the U.S. withdrawal in 2021. The Somali National Army, supported by African Union forces, has intensified its campaign against the group, which has been responsible for numerous attacks, including the 2022 bombing in Mogadishu. The deaths of key ringleaders Abdihamid Ali Abdullahi Macalin and Suleyman Omar Fidow could significantly disrupt al-Shabaab's operations in the region."
     },
     {
       "title": "Libya says drifting Russian tanker moved to international waters off coast",
@@ -2879,7 +2968,7 @@
       "published_at": "2026-03-25T23:35:10+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/libya-says-drifting-russian-tanker-moved-to-international-waters-off-coast/3879499",
       "source_name": "Anadolu Agency",
-      "context": "The drifting Russian tanker off the Libyan coast highlights ongoing tensions in the region, particularly following the 2011 NATO intervention that led to the collapse of Muammar Gaddafi's regime. The National Oil Corporation's involvement underscores Libya's struggle to stabilize its oil sector amid ongoing conflicts between rival factions, including the Libyan National Army and the Government of National Unity, which have been vying for control since the 2014 civil war."
+      "context": "The drifting Russian tanker incident comes amid heightened tensions in the Eastern Mediterranean, particularly following the 2020 maritime boundary agreement between Turkey and Libya, which has drawn criticism from neighboring countries. Additionally, the ongoing civil conflict in Libya, exacerbated by foreign interventions, complicates maritime security and oil operations. The National Oil Corporation's involvement underscores the fragile state of Libya's oil sector, crucial for its economy, amidst ongoing power struggles between rival factions."
     },
     {
       "title": "UNGA Adopts Resolution Declaring Slave Trade as “Gravest Crime against Humanity”",
@@ -2894,7 +2983,7 @@
       "published_at": "2026-03-25T22:59:43+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/03/25/unga-adopts-resolution-declaring-trafficking-enslavement-of-africans-as-gravest-crime-against-humanity/",
       "source_name": "Ethiopian Monitor",
-      "context": "The UNGA's resolution comes amid ongoing discussions about reparations for the transatlantic slave trade, particularly in the context of Ethiopia's historical ties to the African diaspora. Ethiopia, as one of the few African nations never colonized, has been vocal in advocating for recognition of historical injustices. The resolution aligns with the 2021 African Union's Agenda 2063, which emphasizes unity and the need to address the legacies of slavery and colonialism across the continent."
+      "context": "The adoption of the UNGA resolution comes amid ongoing discussions about reparations for the transatlantic slave trade, particularly in the context of the 2021 UN International Decade for People of African Descent. Ethiopia, as a nation with a rich history of resisting colonialism, plays a significant role in advocating for the rights of African descendants. The resolution aligns with Ethiopia's commitment to addressing historical injustices and promoting human rights in the Horn of Africa."
     },
     {
       "title": "Tanzania’s Former President Named AU Envoy for the Horn of Africa, Red Sea",
@@ -2940,7 +3029,7 @@
       "published_at": "2026-03-25T14:15:16+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/medical-group-accuses-rsf-of-killing-16-civilians-in-sudan-s-darfur/3878947",
       "source_name": "Anadolu Agency",
-      "context": "The recent accusations against the Rapid Support Forces (RSF) come amid escalating violence in Darfur, a region historically plagued by conflict since the Darfur War began in 2003. The RSF, originally formed from Janjaweed militias, has been implicated in numerous human rights abuses, particularly following the ousting of President Omar al-Bashir in 2019. The ongoing power struggle between military factions, including the RSF and the Sudanese Armed Forces, exacerbates the humanitarian crisis in the region."
+      "context": "The recent accusations against the Rapid Support Forces (RSF) come amid escalating violence in Darfur, a region long plagued by conflict since the Darfur War began in 2003. Following the ousting of former President Omar al-Bashir in 2019, power struggles between military factions, including the RSF and the Sudanese Armed Forces, have intensified, leading to widespread human rights abuses. The ongoing instability has raised concerns about the potential for renewed ethnic violence and humanitarian crises."
     },
     {
       "title": "UN chief 'strongly' condemns deadly drone strike on hospital in Sudan, calls for ceasefire",
@@ -2957,7 +3046,7 @@
       "published_at": "2026-03-24T17:20:54+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/un-chief-strongly-condemns-deadly-drone-strike-on-hospital-in-sudan-calls-for-ceasefire/3877727",
       "source_name": "Anadolu Agency",
-      "context": "The recent drone strike on a hospital in Sudan occurs amid escalating violence between the Sudanese Armed Forces and the Rapid Support Forces, which began in April 2023. This conflict has led to a humanitarian crisis, with over 4 million people displaced and widespread health service disruptions. The UN's call for a ceasefire highlights the urgent need for peace amid ongoing negotiations and international efforts, including the Jeddah talks, to stabilize the region."
+      "context": "The recent drone strike on a hospital in Sudan occurred amidst escalating violence between the Sudanese Armed Forces and the Rapid Support Forces, which began in April 2023. This conflict has roots in a power struggle following the ousting of former President Omar al-Bashir in 2019 and the subsequent fragile transition to civilian rule. The ongoing fighting has exacerbated humanitarian crises, with over 5 million people displaced and critical health services severely impacted."
     },
     {
       "title": "‘Dine for Generations’: PM Abiy Inaugurates Niin Lee Palm Lodge in Afar Region",
@@ -3412,7 +3501,7 @@
       "published_at": "2026-03-20T00:06:24+00:00",
       "source_url": "https://www.bbc.com/news/articles/cvg521yj9lvo?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "The ongoing drought in the Horn of Africa, exacerbated by climate change and the 2020 locust invasion, has severely impacted food security across Kenya, Ethiopia, and Somalia. The conflict in Tigray, which began in November 2020, has further strained resources and humanitarian access, complicating relief efforts. As of October 2023, Oxfam reports that 26 million people are facing extreme hunger, highlighting the urgent need for international assistance and sustainable solutions."
+      "context": "The ongoing drought in the Horn of Africa, exacerbated by climate change and the conflict in Ethiopia's Tigray region, has left millions vulnerable. The 2021 ceasefire in Tigray has not fully stabilized the region, and humanitarian access remains limited. With the UN reporting that 26 million people face extreme hunger, the urgent need for alternative food sources, like the gingerbread tree, highlights the dire situation in Kenya, Ethiopia, and Somalia."
     },
     {
       "title": "السلطات التشادية تبدأ حملة قمع أمنية واسعة في الحدود مع السودان",
@@ -4391,7 +4480,7 @@
       "published_at": "2026-03-05T12:29:16+00:00",
       "source_url": "https://www.bbc.com/news/videos/cz9qqzqkk82o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "Ethiopia's introduction of its first unmanned 'smart' police station comes amid ongoing political tensions following the Tigray conflict, which lasted from November 2020 to November 2022. As the government seeks to modernize its security infrastructure and improve public trust, this initiative reflects broader efforts to enhance governance and address rising crime rates in urban areas, particularly in the wake of civil unrest and ethnic violence that have plagued the nation."
+      "context": "Ethiopia's introduction of its first unmanned 'smart' police station comes amid ongoing political tensions following the Tigray conflict, which erupted in November 2020 and has strained trust in law enforcement. The Ethiopian government, led by Prime Minister Abiy Ahmed, aims to modernize policing and improve public safety in a country grappling with ethnic violence and security challenges. This initiative reflects broader efforts to enhance governance and technology in the wake of the conflict."
     }
   ]
 }
