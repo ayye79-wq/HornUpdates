@@ -826,6 +826,21 @@
     }
   });
   </script>
+  <section style="background:#1e3a5f;padding:40px 20px;text-align:center;">
+    <div style="max-width:500px;margin:0 auto;">
+      <p style="color:#93c5fd;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;">Weekly Briefing</p>
+      <h2 style="color:#fff;font-size:1.4rem;margin:0 0 10px;font-weight:800;">Understand the Horn of Africa</h2>
+      <p style="color:#bfdbfe;font-size:.95rem;margin:0 0 20px;line-height:1.6;">One email per week. No news overload — just the key analysis on Ethiopia, Sudan, Somalia, Kenya, and the wider region.</p>
+      <form name="newsletter" netlify netlify-honeypot="bot-field" action="/thank-you.html" method="POST" style="display:flex;gap:8px;max-width:420px;margin:0 auto;" onsubmit="this.querySelector('button').textContent='Subscribing…'">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <input type="text" name="bot-field" style="display:none" aria-hidden="true" />
+        <input type="email" name="email" required placeholder="Your email address" style="flex:1;padding:11px 14px;border-radius:10px;border:none;font-size:.95rem;outline:none;" />
+        <button type="submit" style="background:#f59e0b;color:#111;font-weight:700;padding:11px 18px;border:none;border-radius:10px;cursor:pointer;font-size:.95rem;white-space:nowrap;">Subscribe →</button>
+      </form>
+      <p style="color:#6b9bce;font-size:.78rem;margin:10px 0 0;">No spam. Unsubscribe at any time.</p>
+    </div>
+  </section>
+
   <footer class="site-footer">
       <nav class="footer-nav">
         <a href="/index.html">Home</a>
