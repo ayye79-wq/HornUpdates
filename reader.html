@@ -234,10 +234,31 @@
         const articles = Array.isArray(data) ? data : (data.articles || []);
         const target = norm(articleUrl);
 
-        const match = articles.find(a => norm(a.source_url || a.link || "") === target);
+        // Primary match: exact normalised URL
+        let match = articles.find(a => norm(a.source_url || a.link || "") === target);
+
+        // Fallback: one URL contains the other (handles trailing-slash and minor variant differences)
+        if (!match && target) {
+          match = articles.find(a => {
+            const n = norm(a.source_url || a.link || "");
+            return n && (n.startsWith(target) || target.startsWith(n));
+          });
+        }
+
         if (!match) {
-          document.getElementById("signal-headline").textContent = "Article not found";
-          document.getElementById("brief-loading").textContent = "We could not match this article yet. You can still read the full story at the source.";
+          // Extract a readable source name from the URL
+          let sourceDomain = "the original publisher";
+          try {
+            const parsed = new URL(articleUrl);
+            sourceDomain = parsed.hostname.replace(/^www\./, "");
+          } catch (_) {}
+
+          document.getElementById("signal-headline").textContent = "Article not in our archive";
+          document.getElementById("brief-loading").innerHTML =
+            `We don\u2019t have a Signal Brief for this article yet \u2014 it may be very recent or from a source we haven\u2019t indexed. You can read the full story directly at the source.`;
+          document.getElementById("attr-source").textContent = sourceDomain;
+          document.getElementById("readFull2").href = articleUrl;
+          document.getElementById("readFull2").textContent = "Read full article at " + sourceDomain + " \u2197";
           return;
         }
 
