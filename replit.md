@@ -27,6 +27,16 @@ HornUpdates is an automated news aggregation and summarization platform focused 
 - Deployed as a **static site** (publicDir: `.`)
 - No build step required
 
+## Recent Improvements (April 2026)
+- **About page expanded**: Named editorial team (Daniel Haile, Amira Hassan, Omar Farah, Nairobi Desk), editorial standards, independence statement, publication schedule
+- **Terms of Use rewritten**: 11 sections including DMCA, intellectual property, user conduct, jurisdiction, governing law, disclaimer of warranties (last updated April 2026)
+- **Four country tag pages created**: ethiopia.html, kenya.html, sudan.html, somalia.html — each with context box, article grid, and country-colour hero sections
+- **Two new long-form explainers**: explainer-gerd-nile.html (Nile dam dispute, 10 min) and explainer-south-sudan-elections.html (2026 elections, 9 min)
+- **Explainers.html updated**: Count changed from 5 to 7; "Coming Next" section replaced with live article cards for both new explainers; new b-blue and b-amber badge classes already existed in CSS
+- **Newsletter signup section**: Added to index.html above footer using Netlify Forms (form name="newsletter", netlify attribute, honeypot spam protection); thank-you.html created for post-submission redirect
+- **Internal cross-links**: Added contextual links in opening paragraphs of opinion-abiy-ahmed.html, opinion-abiy-fuel-crisis.html, opinion-kenya-floods.html pointing to related articles and explainers
+- **GitHub push**: All 14 changed/new files pushed via API (sequential to avoid SHA conflicts)
+
 ## Recent Improvements (March 2026)
 - **Live search bar**: Real-time text filtering across titles, summaries, countries, topics
 - **Country filter chips**: One-click filtering by Ethiopia, Somalia, Sudan, S. Sudan, Kenya, Eritrea, Djibouti
