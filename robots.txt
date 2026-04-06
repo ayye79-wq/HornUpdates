@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /reader.html
+Disallow: /opinion-auto-2026-03-22.html
 
 Sitemap: https://hornupdates.com/sitemap.xml
