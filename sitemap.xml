@@ -112,13 +112,26 @@
   </url>
 
   <url>
-    <loc>https://hornupdates.com/opinion-somaliland.html</loc>
+    <loc>https://hornupdates.com/opinion-abiy-ahmed.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://hornupdates.com/opinion-abiy-ahmed.html</loc>
+    <loc>https://hornupdates.com/opinion-abiy-fuel-crisis.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-kenya-floods.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-somaliland.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
