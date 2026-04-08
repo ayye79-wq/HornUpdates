@@ -53,6 +53,20 @@
   .sidebar { display: none; }
 }
 
+    /* Start-here section responsive grid */
+    .start-here-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 760px) {
+      .start-here-grid { grid-template-columns: 1fr 1fr; }
+      .start-here-grid > a:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .start-here-grid { grid-template-columns: 1fr; }
+      .start-here-grid > a:first-child { grid-column: auto; }
+    }
   </style>
 </head>
 
@@ -119,9 +133,39 @@
       <a id="breaking-link" class="breaking-link" href="#"></a>
     </section>
 
-    <!-- WHY THIS SITE EXISTS -->
-    <div class="why-strip">
-      Most coverage tells you <em>what happened</em>. We explain why it matters — and what comes next.
+    <!-- START HERE FEATURE -->
+    <div style="background:#fff;border-bottom:1px solid #e5e7eb;padding:18px 20px 20px;">
+      <div style="max-width:1100px;margin:0 auto;">
+        <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:12px;">New here? Start with these</div>
+        <div class="start-here-grid">
+
+          <a href="/opinion-ethiopia-israel-un.html" style="text-decoration:none;background:linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 100%);border-radius:12px;padding:18px 20px;display:block;color:#fff;position:relative;overflow:hidden;">
+            <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#93c5fd;margin-bottom:8px;">Latest Analysis</div>
+            <div style="font-size:1.05rem;font-weight:800;line-height:1.3;margin-bottom:8px;color:#fff;">Why Ethiopia Voted With Israel at the UN</div>
+            <div style="font-size:.85rem;color:#bfdbfe;line-height:1.5;margin-bottom:12px;">A security relationship built on drones and intelligence, and what it costs Ethiopia diplomatically.</div>
+            <div style="font-size:.82rem;font-weight:700;color:#93c5fd;">Read analysis →</div>
+          </a>
+
+          <a href="/explainer-sudan-war.html" style="text-decoration:none;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;display:block;">
+            <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#dc2626;margin-bottom:8px;">Explainer</div>
+            <div style="font-size:.97rem;font-weight:700;color:#111827;line-height:1.3;margin-bottom:8px;">Why Is Sudan at War?</div>
+            <div style="font-size:.83rem;color:#6b7280;line-height:1.5;margin-bottom:12px;">The conflict that shattered Africa's third-largest country: causes, actors, and human cost.</div>
+            <div style="font-size:.82rem;font-weight:700;color:#2563eb;">10 min read →</div>
+          </a>
+
+          <a href="/opinion-kenya-mob-justice.html" style="text-decoration:none;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;display:block;">
+            <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7c3aed;margin-bottom:8px;">Opinion</div>
+            <div style="font-size:.97rem;font-weight:700;color:#111827;line-height:1.3;margin-bottom:8px;">Kenya's Mob Justice Problem</div>
+            <div style="font-size:.83rem;color:#6b7280;line-height:1.5;margin-bottom:12px;">Crowds burning suspects alive, hundreds of times a year. What it reveals about trust in institutions.</div>
+            <div style="font-size:.82rem;font-weight:700;color:#2563eb;">Read →</div>
+          </a>
+
+        </div>
+        <div style="display:flex;gap:16px;margin-top:10px;flex-wrap:wrap;">
+          <a href="/opinion.html" style="font-size:.82rem;font-weight:600;color:#2563eb;text-decoration:none;">All analysis &amp; opinion →</a>
+          <a href="/explainers.html" style="font-size:.82rem;font-weight:600;color:#2563eb;text-decoration:none;">All explainers →</a>
+        </div>
+      </div>
     </div>
 
     <!-- MAIN LAYOUT: CONTENT + RIGHT SIDEBAR -->
@@ -132,9 +176,9 @@
         <section>
           <div style="background:linear-gradient(135deg,#1e3a5f 0%,#1d4ed8 100%);border-radius:14px 14px 0 0;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
             <div>
-              <div style="font-size:.78rem;font-weight:600;color:#93c5fd;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;">Original Analysis</div>
-              <div style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:4px;">Featured Analysis</div>
-              <div style="font-size:.88rem;color:#bfdbfe;">In-depth explainers on the conflicts, crises, and geopolitical questions shaping the Horn.</div>
+              <div style="font-size:.78rem;font-weight:600;color:#93c5fd;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;">8 Deep Reads</div>
+              <div style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:4px;">Questions worth understanding</div>
+              <div style="font-size:.88rem;color:#bfdbfe;">Why is Sudan at war? Can South Sudan hold elections? What does Ethiopia actually want? We answer these properly.</div>
             </div>
             <a href="/explainers.html" style="background:#fff;color:#1d4ed8;font-weight:700;font-size:.9rem;padding:10px 18px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0;">All explainers →</a>
           </div>
