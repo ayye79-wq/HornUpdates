@@ -58,14 +58,14 @@
   .start-links a { font-size: .82rem; font-weight: 600; color: #2563eb; }
 
   /* Section headings */
-  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-  .section-head h2 { margin: 0; font-size: 1.1rem; font-weight: 800; color: #111827; }
+  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; border-left: 4px solid #1e3a5f; padding-left: 12px; }
+  .section-head h2 { margin: 0; font-size: 1.1rem; font-weight: 800; color: #111827; letter-spacing: -.01em; }
   .see-all { font-size: .85rem; font-weight: 600; color: #2563eb; }
 
   /* Analysis cards */
   .analysis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-bottom: 28px; }
-  .acard { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px; display: block; text-decoration: none; transition: box-shadow .15s; }
-  .acard:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); text-decoration: none; }
+  .acard { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px; display: block; text-decoration: none; transition: box-shadow .15s, transform .15s; }
+  .acard:hover { box-shadow: 0 8px 24px rgba(0,0,0,.09); transform: translateY(-2px); text-decoration: none; }
   .acard-type { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
   .t-opinion { color: #7c3aed; }
   .t-analysis { color: #1d4ed8; }
@@ -124,6 +124,9 @@
 </head>
 <body>
 
+  <div style="background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);padding:10px 20px;text-align:center;">
+    <p style="margin:0;color:#93c5fd;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Ethiopia &nbsp;·&nbsp; Somalia &nbsp;·&nbsp; Sudan &nbsp;·&nbsp; South Sudan &nbsp;·&nbsp; Eritrea &nbsp;·&nbsp; Djibouti &nbsp;·&nbsp; Kenya</p>
+  </div>
   <header class="site-header">
     <div class="header-inner">
       <div class="brand">
