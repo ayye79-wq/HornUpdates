@@ -18,104 +18,138 @@
 <link rel="stylesheet" href="style.css" />
 <style>
   *, *::before, *::after { box-sizing: border-box; }
-  body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: #f5f6f8; color: #111827; line-height: 1.7; }
+  body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: #f0f2f5; color: #111827; line-height: 1.7; }
   a { color: #2563eb; text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  .site-header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 14px 20px; }
-  .header-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .brand { display: flex; align-items: center; gap: 12px; }
-  .logo { width: 38px; height: 38px; border-radius: 8px; }
-  .brand-text h1 { margin: 0; font-size: 1.25rem; font-weight: 800; color: #111827; }
-  .brand-text p { margin: 0; font-size: .82rem; color: #6b7280; }
+  /* ── DARK HERO HEADER ── */
+  .site-hero { background: linear-gradient(160deg, #0b1628 0%, #0f2044 60%, #1a3a6e 100%); padding: 0; }
+  .hero-top { max-width: 1140px; margin: 0 auto; padding: 16px 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand:hover { text-decoration: none; }
+  .logo { width: 40px; height: 40px; border-radius: 8px; }
+  .brand-text h1 { margin: 0; font-size: 1.3rem; font-weight: 800; color: #fff; }
+  .brand-text p { margin: 0; font-size: .75rem; color: #93c5fd; }
   .site-nav { display: flex; gap: 6px; flex-wrap: wrap; }
-  .site-nav a { font-size: .88rem; font-weight: 600; color: #374151; padding: 6px 12px; border-radius: 8px; background: #f3f4f6; }
-  .site-nav a:hover { background: #e5e7eb; text-decoration: none; }
+  .site-nav a { font-size: .85rem; font-weight: 600; color: #bfdbfe; padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.15); }
+  .site-nav a:hover { background: rgba(255,255,255,.1); text-decoration: none; color: #fff; }
 
-  .page-wrap { max-width: 1140px; margin: 0 auto; padding: 20px 18px; }
-  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; align-items: start; }
+  .hero-body { max-width: 1140px; margin: 0 auto; padding: 28px 20px 32px; }
+  .hero-tagline { font-size: 1.55rem; font-weight: 800; color: #fff; line-height: 1.3; margin: 0 0 10px; max-width: 640px; }
+  .hero-tagline em { font-style: normal; color: #60a5fa; }
+  .hero-sub { color: #93c5fd; font-size: .92rem; margin: 0 0 16px; }
+  .hero-sub span { display: inline-block; margin-right: 18px; }
+  .hero-sub span::before { content: "·"; margin-right: 6px; color: #3b82f6; font-weight: 700; }
+  .hero-sub span:first-child::before { display: none; }
+  .hero-trust { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .trust-avatars { display: flex; }
+  .trust-avatars .av { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #0f2044; font-size: .65rem; font-weight: 800; color: #fff; display: flex; align-items: center; justify-content: center; margin-left: -6px; }
+  .trust-avatars .av:first-child { margin-left: 0; }
+  .trust-label { font-size: .82rem; color: #93c5fd; }
+  .trust-label strong { color: #fff; }
+  .hero-countries { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.1); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #475fa8; }
+
+  /* ── PAGE WRAP ── */
+  .page-wrap { max-width: 1140px; margin: 0 auto; padding: 22px 18px; }
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 22px; align-items: start; }
   @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
 
-  /* Start Here */
-  .start-here { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px 20px 20px; margin-bottom: 24px; }
-  .section-eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #6b7280; margin-bottom: 12px; }
-  .start-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; }
-  @media (max-width: 760px) { .start-grid { grid-template-columns: 1fr 1fr; } .start-grid > a:first-child { grid-column: 1 / -1; } }
-  @media (max-width: 480px) { .start-grid { grid-template-columns: 1fr; } .start-grid > a:first-child { grid-column: auto; } }
-  .start-card-hero { text-decoration: none; background: linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%); border-radius: 12px; padding: 20px; display: block; }
-  .start-card-hero:hover { text-decoration: none; opacity: .92; }
-  .start-eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #93c5fd; margin-bottom: 8px; }
-  .start-card-hero h3 { margin: 0 0 8px; font-size: 1.05rem; font-weight: 800; color: #fff; line-height: 1.3; }
-  .start-card-hero p { margin: 0 0 12px; font-size: .85rem; color: #bfdbfe; line-height: 1.5; }
-  .start-cta { font-size: .82rem; font-weight: 700; color: #93c5fd; }
-  .start-card { text-decoration: none; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; display: block; }
-  .start-card:hover { background: #f1f5f9; text-decoration: none; }
-  .start-card-type { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
-  .start-card h3 { margin: 0 0 8px; font-size: .97rem; font-weight: 700; color: #111827; line-height: 1.3; }
-  .start-card p { margin: 0 0 12px; font-size: .83rem; color: #6b7280; line-height: 1.5; }
-  .start-card .read-link { font-size: .82rem; font-weight: 700; color: #2563eb; }
-  .start-links { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
-  .start-links a { font-size: .82rem; font-weight: 600; color: #2563eb; }
+  /* ── FEATURED STORY ── */
+  .featured-wrap { margin-bottom: 22px; }
+  .featured-card { display: block; text-decoration: none; background: linear-gradient(145deg, #0f2044 0%, #1d4ed8 100%); border-radius: 14px; padding: 28px 28px 24px; position: relative; overflow: hidden; transition: opacity .15s; }
+  .featured-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(96,165,250,.18) 0%, transparent 60%); pointer-events: none; }
+  .featured-card:hover { opacity: .93; text-decoration: none; }
+  .fc-badge { display: inline-flex; align-items: center; gap: 6px; background: #ef4444; color: #fff; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
+  .fc-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #fff; display: block; animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+  .fc-region { font-size: .78rem; font-weight: 700; color: #93c5fd; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
+  .featured-card h2 { margin: 0 0 12px; font-size: 1.45rem; font-weight: 800; color: #fff; line-height: 1.25; max-width: 580px; }
+  .featured-card p { margin: 0 0 20px; font-size: .95rem; color: #bfdbfe; line-height: 1.6; max-width: 520px; }
+  .fc-cta { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #0f2044; font-weight: 800; font-size: .9rem; padding: 11px 20px; border-radius: 10px; }
+  .fc-cta:hover { background: #e0eaff; text-decoration: none; }
+  .fc-meta { margin-top: 18px; font-size: .78rem; color: #60a5fa; }
 
-  /* Section headings */
-  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; border-left: 4px solid #1e3a5f; padding-left: 12px; }
-  .section-head h2 { margin: 0; font-size: 1.1rem; font-weight: 800; color: #111827; letter-spacing: -.01em; }
+  /* ── WHAT'S HAPPENING NOW ── */
+  .now-strip { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; margin-bottom: 22px; overflow: hidden; }
+  .now-header { background: #111827; padding: 10px 18px; display: flex; align-items: center; gap: 10px; }
+  .now-dot { width: 8px; height: 8px; border-radius: 50%; background: #ef4444; animation: pulse 1.6s infinite; flex-shrink: 0; }
+  .now-header span { font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #f9fafb; }
+  .now-list { list-style: none; margin: 0; padding: 0; }
+  .now-list li { border-bottom: 1px solid #f3f4f6; }
+  .now-list li:last-child { border-bottom: none; }
+  .now-list li a { display: flex; align-items: baseline; gap: 12px; padding: 12px 18px; text-decoration: none; transition: background .12s; }
+  .now-list li a:hover { background: #f8faff; text-decoration: none; }
+  .now-tag { font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; flex-shrink: 0; }
+  .now-tag.t-somalia { background: #eff6ff; color: #1d4ed8; }
+  .now-tag.t-ethiopia { background: #fef9ec; color: #92400e; }
+  .now-tag.t-sudan { background: #fef2f2; color: #b91c1c; }
+  .now-tag.t-kenya { background: #f0fdf4; color: #15803d; }
+  .now-tag.t-horn { background: #f5f3ff; color: #7c3aed; }
+  .now-headline { font-size: .92rem; font-weight: 700; color: #111827; line-height: 1.35; }
+
+  /* ── SECTION HEADS ── */
+  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; border-left: 4px solid #1d4ed8; padding-left: 12px; }
+  .section-head h2 { margin: 0; font-size: 1.05rem; font-weight: 800; color: #111827; letter-spacing: -.01em; text-transform: uppercase; letter-spacing: .04em; font-size: .88rem; }
   .see-all { font-size: .85rem; font-weight: 600; color: #2563eb; }
 
-  /* Analysis cards */
-  .analysis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  /* ── ANALYSIS LEAD + GRID ── */
+  .analysis-lead { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  @media (max-width: 640px) { .analysis-lead { grid-template-columns: 1fr; } }
+  .analysis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; margin-bottom: 26px; }
   .acard { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px; display: block; text-decoration: none; transition: box-shadow .15s, transform .15s; }
   .acard:hover { box-shadow: 0 8px 24px rgba(0,0,0,.09); transform: translateY(-2px); text-decoration: none; }
-  .acard-type { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+  .acard.lead { border-left: 3px solid #1d4ed8; }
+  .acard-type { font-size: .68rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; margin-bottom: 8px; }
   .t-opinion { color: #7c3aed; }
   .t-analysis { color: #1d4ed8; }
   .t-explainer { color: #b91c1c; }
   .acard h3 { margin: 0 0 8px; font-size: .97rem; font-weight: 700; color: #111827; line-height: 1.35; }
+  .acard.lead h3 { font-size: 1.05rem; }
   .acard p { margin: 0 0 10px; font-size: .87rem; color: #6b7280; line-height: 1.55; }
-  .acard-meta { font-size: .78rem; color: #9ca3af; }
+  .acard-meta { font-size: .75rem; color: #9ca3af; }
 
-  /* Explainer grid */
-  .explainer-banner { background: linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%); border-radius: 14px 14px 0 0; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 0; }
-  .explainer-banner-text h2 { margin: 0 0 3px; font-size: 1rem; font-weight: 700; color: #fff; }
-  .explainer-banner-text p { margin: 0; font-size: .85rem; color: #bfdbfe; }
-  .explainer-banner a { background: #fff; color: #1d4ed8; font-weight: 700; font-size: .88rem; padding: 9px 16px; border-radius: 8px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
-  .explainer-cells { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 14px 14px; overflow: hidden; margin-bottom: 28px; }
-  .ecell { padding: 18px; background: #fff; border-right: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; text-decoration: none; display: block; transition: background .15s; }
+  /* ── EXPLAINER GRID ── */
+  .explainer-banner { background: linear-gradient(135deg, #0f2044 0%, #1d4ed8 100%); border-radius: 14px 14px 0 0; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .explainer-banner-text h2 { margin: 0 0 3px; font-size: .95rem; font-weight: 700; color: #fff; }
+  .explainer-banner-text p { margin: 0; font-size: .82rem; color: #bfdbfe; }
+  .explainer-banner a { background: #fff; color: #1d4ed8; font-weight: 700; font-size: .85rem; padding: 8px 16px; border-radius: 8px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+  .explainer-cells { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 14px 14px; overflow: hidden; margin-bottom: 26px; }
+  .ecell { padding: 16px; background: #fff; border-right: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; text-decoration: none; display: block; transition: background .15s; }
   .ecell:hover { background: #f8faff; text-decoration: none; }
-  .ecell-tag { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: .75rem; font-weight: 600; margin-bottom: 10px; }
-  .ecell h3 { margin: 0 0 6px; font-weight: 700; font-size: .97rem; color: #111827; line-height: 1.35; }
-  .ecell p { margin: 0 0 10px; font-size: .85rem; color: #6b7280; line-height: 1.5; }
-  .ecell-read { font-size: .8rem; color: #2563eb; font-weight: 600; }
+  .ecell-tag { display: inline-block; border-radius: 999px; padding: 2px 9px; font-size: .72rem; font-weight: 600; margin-bottom: 8px; }
+  .ecell h3 { margin: 0 0 5px; font-weight: 700; font-size: .93rem; color: #111827; line-height: 1.35; }
+  .ecell p { margin: 0 0 8px; font-size: .83rem; color: #6b7280; line-height: 1.5; }
+  .ecell-read { font-size: .78rem; color: #2563eb; font-weight: 600; }
 
-  /* Country grid */
-  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-bottom: 28px; }
-  .ccard { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 12px; text-align: center; text-decoration: none; display: block; transition: box-shadow .15s; }
+  /* ── COUNTRY GRID ── */
+  .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 26px; }
+  .ccard { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 10px; text-align: center; text-decoration: none; display: block; transition: box-shadow .15s; }
   .ccard:hover { box-shadow: 0 4px 14px rgba(0,0,0,.07); text-decoration: none; }
-  .ccard .flag { font-size: 1.6rem; display: block; margin-bottom: 6px; }
-  .ccard strong { display: block; font-size: .88rem; color: #111827; font-weight: 700; }
+  .ccard .flag { font-size: 1.5rem; display: block; margin-bottom: 5px; }
+  .ccard strong { display: block; font-size: .85rem; color: #111827; font-weight: 700; }
 
-  /* Sidebar */
-  .sidebar-box { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
-  .sb-title { font-size: .92rem; font-weight: 700; color: #111827; margin: 0 0 10px; }
+  /* ── SIDEBAR ── */
+  .sidebar-box { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 14px; }
+  .sb-title { font-size: .9rem; font-weight: 800; color: #111827; margin: 0 0 10px; letter-spacing: -.01em; }
   .contributor-list { display: flex; flex-direction: column; gap: 10px; }
   .contributor { display: flex; align-items: flex-start; gap: 10px; text-decoration: none; }
   .contributor:hover .c-name { text-decoration: underline; }
-  .c-avatar { width: 36px; height: 36px; border-radius: 50%; background: #1e3a5f; color: #fff; font-weight: 700; font-size: .88rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .c-avatar { width: 34px; height: 34px; border-radius: 50%; background: #1e3a5f; color: #fff; font-weight: 800; font-size: .8rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .c-name { font-size: .88rem; font-weight: 700; color: #111827; }
-  .c-beat { font-size: .78rem; color: #6b7280; }
+  .c-beat { font-size: .76rem; color: #6b7280; }
 
-  /* Newsletter */
-  .newsletter-section { background: #1e3a5f; padding: 40px 20px; text-align: center; }
+  /* ── NEWSLETTER ── */
+  .newsletter-section { background: #0f2044; padding: 40px 20px; text-align: center; }
   .newsletter-inner { max-width: 500px; margin: 0 auto; }
-  .newsletter-section h2 { color: #fff; font-size: 1.4rem; margin: 0 0 10px; font-weight: 800; }
-  .newsletter-section p { color: #bfdbfe; font-size: .95rem; margin: 0 0 20px; line-height: 1.6; }
+  .newsletter-section h2 { color: #fff; font-size: 1.35rem; margin: 0 0 10px; font-weight: 800; }
+  .newsletter-section p { color: #bfdbfe; font-size: .93rem; margin: 0 0 20px; line-height: 1.6; }
   .nl-form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; }
-  .nl-form input[type=email] { flex: 1; padding: 11px 14px; border-radius: 10px; border: none; font-size: .95rem; outline: none; }
-  .nl-form button { background: #f59e0b; color: #111; font-weight: 700; padding: 11px 18px; border: none; border-radius: 10px; cursor: pointer; font-size: .95rem; white-space: nowrap; }
-  .nl-note { color: #6b9bce; font-size: .78rem; margin: 10px 0 0; }
+  .nl-form input[type=email] { flex: 1; padding: 11px 14px; border-radius: 10px; border: none; font-size: .93rem; outline: none; }
+  .nl-form button { background: #f59e0b; color: #111; font-weight: 700; padding: 11px 18px; border: none; border-radius: 10px; cursor: pointer; font-size: .93rem; white-space: nowrap; }
+  .nl-note { color: #6b9bce; font-size: .76rem; margin: 10px 0 0; }
 
-  /* Footer */
-  .site-footer { background: #0f172a; color: #cbd5e1; text-align: center; padding: 20px 12px; }
+  /* ── FOOTER ── */
+  .site-footer { background: #0b1628; color: #cbd5e1; text-align: center; padding: 20px 12px; }
   .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; margin-bottom: 10px; }
   .footer-nav a { color: #e5e7eb; text-decoration: none; font-size: 14px; }
   .footer-nav a:hover { text-decoration: underline; }
@@ -124,18 +158,16 @@
 </head>
 <body>
 
-  <div style="background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);padding:10px 20px;text-align:center;">
-    <p style="margin:0;color:#93c5fd;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Ethiopia &nbsp;·&nbsp; Somalia &nbsp;·&nbsp; Sudan &nbsp;·&nbsp; South Sudan &nbsp;·&nbsp; Eritrea &nbsp;·&nbsp; Djibouti &nbsp;·&nbsp; Kenya</p>
-  </div>
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
+  <!-- ── DARK HERO HEADER ── -->
+  <div class="site-hero">
+    <div class="hero-top">
+      <a href="/index.html" class="brand">
         <img src="Horn1_logo.png" alt="Horn Updates" class="logo" />
         <div class="brand-text">
           <h1>Horn Updates</h1>
           <p>Understand the Horn of Africa</p>
         </div>
-      </div>
+      </a>
       <nav class="site-nav">
         <a href="/explainers.html">Explainers</a>
         <a href="/opinion.html">Opinion</a>
@@ -145,97 +177,126 @@
         <a href="/about.html">About</a>
       </nav>
     </div>
-  </header>
+    <div class="hero-body">
+      <h2 class="hero-tagline">Original analysis of the Horn of Africa — <em>clear, fast, and contextual.</em></h2>
+      <p class="hero-sub">
+        <span>Updated regularly</span>
+        <span>No noise</span>
+        <span>Just what matters</span>
+      </p>
+      <div class="hero-trust">
+        <div class="trust-avatars">
+          <div class="av" style="background:#1e3a5f;">DH</div>
+          <div class="av" style="background:#0f766e;">AH</div>
+          <div class="av" style="background:#1d4ed8;">OF</div>
+          <div class="av" style="background:#7c3aed;">KK</div>
+          <div class="av" style="background:#b91c1c;">YK</div>
+        </div>
+        <p class="trust-label"><strong>Written by regional analysts</strong> — not wires, not aggregators</p>
+      </div>
+      <p class="hero-countries">Ethiopia &nbsp;·&nbsp; Somalia &nbsp;·&nbsp; Sudan &nbsp;·&nbsp; South Sudan &nbsp;·&nbsp; Eritrea &nbsp;·&nbsp; Djibouti &nbsp;·&nbsp; Kenya</p>
+    </div>
+  </div>
 
   <div class="page-wrap">
     <div class="layout">
       <main>
 
-        <!-- START HERE -->
-        <div class="start-here">
-          <div class="section-eyebrow">New here? Start with these</div>
-          <div class="start-grid">
-
-            <a href="/opinion-somalia-turkey-oil.html" class="start-card-hero">
-              <div class="start-eyebrow">Latest Analysis</div>
-              <h3>Somalia's Flag Carrier and Turkish Oil</h3>
-              <p>A national ship, an offshore oil deal, and what both mean for Somalia's sovereignty and the Horn's balance of power.</p>
-              <div class="start-cta">Read analysis →</div>
-            </a>
-
-            <a href="/explainer-sudan-war.html" class="start-card">
-              <div class="start-card-type" style="color:#dc2626;">Explainer</div>
-              <h3>Why Is Sudan at War?</h3>
-              <p>The conflict that shattered Africa's third-largest country: causes, actors, and human cost.</p>
-              <div class="read-link">10 min read →</div>
-            </a>
-
-            <a href="/opinion-kenya-mob-justice.html" class="start-card">
-              <div class="start-card-type" style="color:#7c3aed;">Opinion</div>
-              <h3>Kenya's Mob Justice Problem</h3>
-              <p>Crowds burning suspects alive, hundreds of times a year. What it reveals about institutions.</p>
-              <div class="read-link">Read →</div>
-            </a>
-
-          </div>
-          <div class="start-links">
-            <a href="/opinion.html">All analysis &amp; opinion →</a>
-            <a href="/explainers.html">All explainers →</a>
-          </div>
+        <!-- ── FEATURED STORY ── -->
+        <div class="featured-wrap">
+          <a href="/opinion-somalia-turkey-oil.html" class="featured-card">
+            <div class="fc-badge">New Analysis</div>
+            <div class="fc-region">Somalia &nbsp;·&nbsp; Geopolitics</div>
+            <h2>Somalia's Flag Carrier and Turkish Oil: What Two Maritime Milestones Say About a Country Trying to Own Its Future</h2>
+            <p>A national flag carrier ship and an offshore oil deal with Turkey. Neither is simple. Both are consequential. Omar Farah breaks down what they mean for Somali sovereignty and the Horn's balance of power.</p>
+            <div class="fc-cta">Read today's key story &nbsp;→</div>
+            <div class="fc-meta">By Omar Farah &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; ~1,700 words</div>
+          </a>
         </div>
 
-        <!-- LATEST ANALYSIS -->
+        <!-- ── WHAT'S HAPPENING NOW ── -->
+        <div class="now-strip">
+          <div class="now-header">
+            <div class="now-dot"></div>
+            <span>What's happening now</span>
+          </div>
+          <ul class="now-list">
+            <li>
+              <a href="/opinion-ethiopia-israel-un.html">
+                <span class="now-tag t-ethiopia">Ethiopia</span>
+                <span class="now-headline">Ethiopia votes with Israel at the UN — breaking with Africa and Arab partners, and revealing a transactional foreign policy under Abiy Ahmed</span>
+              </a>
+            </li>
+            <li>
+              <a href="/opinion-elsisi-gerd.html">
+                <span class="now-tag t-ethiopia">Nile</span>
+                <span class="now-headline">Egypt's El-Sisi appeals to Washington over Ethiopia's Grand Renaissance Dam as the Egypt-Eritrea-Somalia axis against Addis deepens</span>
+              </a>
+            </li>
+            <li>
+              <a href="/opinion-resource-conflicts-horn.html">
+                <span class="now-tag t-sudan">South Sudan</span>
+                <span class="now-headline">A gold mine attack near Juba kills over 70 — part of a pattern of resource-linked violence Horn Updates has tracked across the region</span>
+              </a>
+            </li>
+            <li>
+              <a href="/opinion-kenya-mob-justice.html">
+                <span class="now-tag t-kenya">Kenya</span>
+                <span class="now-headline">Crowds burning suspects alive — hundreds of times a year. What Kenya's mob justice problem reveals about the state of its institutions</span>
+              </a>
+            </li>
+            <li>
+              <a href="/opinion-somaliland.html">
+                <span class="now-tag t-horn">Horn</span>
+                <span class="now-headline">Somaliland has governed itself for 30 years, held democratic elections, and built a functioning economy — and still no country recognises it</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ── LATEST ANALYSIS ── -->
         <div class="section-head">
           <h2>Latest Analysis &amp; Opinion</h2>
           <a class="see-all" href="/opinion.html">See all →</a>
         </div>
-        <div class="analysis-grid">
 
-          <a class="acard" href="/opinion-somalia-turkey-oil.html">
-            <div class="acard-type t-analysis">Analysis · Somalia</div>
-            <h3>Somalia's Flag Carrier and Turkish Oil: Two Maritime Milestones</h3>
-            <p>What a national ship and an offshore oil deal with Turkey mean for Somali sovereignty and the region.</p>
-            <div class="acard-meta">Omar Farah · April 2026</div>
-          </a>
-
-          <a class="acard" href="/opinion-ethiopia-israel-un.html">
+        <div class="analysis-lead">
+          <a class="acard lead" href="/opinion-ethiopia-israel-un.html">
             <div class="acard-type t-analysis">Analysis · Ethiopia</div>
             <h3>Why Ethiopia Voted With Israel at the UN</h3>
-            <p>The security logic behind the decision, the diplomatic cost with Arab partners, and what it signals about Abiy Ahmed's foreign policy.</p>
+            <p>The security logic behind the decision, the diplomatic cost with Arab partners, and what it signals about Abiy Ahmed's increasingly transactional foreign policy.</p>
             <div class="acard-meta">Daniel Haile · April 2026</div>
           </a>
-
-          <a class="acard" href="/opinion-resource-conflicts-horn.html">
+          <a class="acard lead" href="/opinion-resource-conflicts-horn.html">
             <div class="acard-type t-analysis">Analysis · South Sudan</div>
             <h3>Blood Over Gold: Resource Conflicts Killing Thousands</h3>
-            <p>A gold mine attack near Juba killed over 70 people. Horn Updates analyses the pattern of resource-linked violence across the Horn.</p>
+            <p>A gold mine attack near Juba killed over 70 people. The pattern of resource-linked violence across the Horn — and why it keeps escalating.</p>
             <div class="acard-meta">Amira Hassan · April 2026</div>
           </a>
+        </div>
 
+        <div class="analysis-grid">
           <a class="acard" href="/opinion-kenya-mob-justice.html">
             <div class="acard-type t-analysis">Analysis · Kenya</div>
             <h3>Kenya's Mob Justice Problem: When the Crowd Becomes the Court</h3>
-            <p>Suspected criminals beaten and burned by crowds — hundreds of times a year. What it reveals about the failure of police and courts.</p>
+            <p>Suspects beaten and burned by crowds, hundreds of times a year. What it reveals about police failure and institutional collapse.</p>
             <div class="acard-meta">Nairobi Desk · April 2026</div>
           </a>
-
           <a class="acard" href="/opinion-elsisi-gerd.html">
             <div class="acard-type t-analysis">Analysis · Egypt · Ethiopia</div>
             <h3>El-Sisi Appeals to Washington Over Ethiopia's Nile Dam</h3>
             <p>Egypt's president calls on the US to restrain Ethiopia. The Egypt-Eritrea-Somalia axis against Addis Ababa is deepening.</p>
             <div class="acard-meta">Horn Updates · April 2026</div>
           </a>
-
           <a class="acard" href="/opinion-somaliland.html">
             <div class="acard-type t-opinion">Opinion · Somalia</div>
             <h3>Somaliland's Recognition Bid: Why the World Keeps Hesitating</h3>
             <p>Self-governing for over 30 years, with democratic elections and a functioning economy. Why does no country recognise it?</p>
             <div class="acard-meta">Horn Updates · 2026</div>
           </a>
-
         </div>
 
-        <!-- EXPLAINERS -->
+        <!-- ── EXPLAINERS ── -->
         <div class="explainer-banner">
           <div class="explainer-banner-text">
             <h2>Deep Reads — 8 Explainers</h2>
@@ -262,48 +323,48 @@
           <a class="ecell" href="/explainer-ethiopia-sea.html">
             <span class="ecell-tag" style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;">Geopolitics</span>
             <h3>Why Does Ethiopia Want Red Sea Access?</h3>
-            <p>A landlocked nation of 130 million people and a coastline it lost 30 years ago. What Addis Ababa actually wants.</p>
+            <p>A landlocked nation of 130 million and a coastline it lost 30 years ago. What Addis Ababa actually wants.</p>
             <span class="ecell-read">Read explainer →</span>
           </a>
 
           <a class="ecell" href="/explainer-gerd-nile.html">
             <span class="ecell-tag" style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;">Water</span>
             <h3>The Nile Dam Dispute Explained</h3>
-            <p>Ethiopia's mega-dam, Egypt's existential fear, and Sudan caught between them. What the GERD crisis is really about.</p>
+            <p>Ethiopia's mega-dam, Egypt's existential fear, and Sudan caught between them.</p>
             <span class="ecell-read">Read explainer →</span>
           </a>
 
           <a class="ecell" href="/explainer-somalia-al-shabaab.html">
             <span class="ecell-tag" style="background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;">Security</span>
             <h3>Why Has Al-Shabaab Survived 15 Years of War?</h3>
-            <p>Drone strikes and AU troops have not ended it. Al-Shabaab's resilience, revenue model, and what the ATMIS withdrawal means.</p>
+            <p>Drone strikes and AU troops have not ended it. Al-Shabaab's resilience and revenue model.</p>
             <span class="ecell-read">Read explainer →</span>
           </a>
 
           <a class="ecell" href="/explainer-south-sudan-elections.html">
             <span class="ecell-tag" style="background:#fef9ec;color:#92400e;border:1px solid #fde68a;">Politics</span>
             <h3>Can South Sudan Actually Hold Elections?</h3>
-            <p>A peace deal, repeated delays, and a political class with no incentive to cede power. The honest answer.</p>
+            <p>A peace deal, repeated delays, and a political class with no incentive to cede power.</p>
             <span class="ecell-read">Read explainer →</span>
           </a>
 
           <a class="ecell" href="/explainer-south-sudan-crisis.html">
             <span class="ecell-tag" style="background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;">Crisis</span>
             <h3>South Sudan's Polycrisis: Oil, War, and Famine</h3>
-            <p>The world's newest nation is collapsing in slow motion. What went wrong and what a path out might look like.</p>
+            <p>The world's newest nation is collapsing in slow motion. What went wrong.</p>
             <span class="ecell-read">Read explainer →</span>
           </a>
 
           <a class="ecell" href="/explainer-iran-uae-ethiopia.html">
             <span class="ecell-tag" style="background:#f5f3ff;color:#7c3aed;border:1px solid #ddd6fe;">Geopolitics</span>
             <h3>How a War with Iran Would Hit Ethiopia</h3>
-            <p>Oil, the Red Sea, and UAE investment — tracing the impact chain into the Horn of Africa.</p>
+            <p>Oil, the Red Sea, and UAE investment — tracing the impact chain into the Horn.</p>
             <span class="ecell-read">Read explainer →</span>
           </a>
 
         </div>
 
-        <!-- COUNTRY PAGES -->
+        <!-- ── COUNTRY PAGES ── -->
         <div class="section-head">
           <h2>Countries We Cover</h2>
         </div>
@@ -319,17 +380,13 @@
 
       </main>
 
-      <!-- SIDEBAR -->
+      <!-- ── SIDEBAR ── -->
       <aside>
 
-        <div class="sidebar-box">
-          <p class="sb-title">About Horn Updates</p>
-          <p style="font-size:.88rem;color:#4b5563;line-height:1.6;margin:0 0 10px;">An independent platform for original analysis, explainers, and editorial commentary on the Horn of Africa — written by a named team with deep regional expertise.</p>
-          <a href="/about.html" style="font-size:.85rem;font-weight:600;">Learn more →</a>
-        </div>
-
-        <div class="sidebar-box">
-          <p class="sb-title">Our Contributors</p>
+        <!-- Contributors first — trust signal moved up -->
+        <div class="sidebar-box" style="border-left: 3px solid #1d4ed8;">
+          <p class="sb-title">Written by Regional Analysts</p>
+          <p style="font-size:.82rem;color:#4b5563;line-height:1.55;margin:0 0 12px;">Every piece is by a named expert with deep Horn of Africa knowledge — not wire copy, not AI summaries.</p>
           <div class="contributor-list">
             <a class="contributor" href="/author-daniel-haile.html">
               <div class="c-avatar">DH</div>
@@ -352,6 +409,13 @@
               <div><div class="c-name">Yared Kumbi</div><div class="c-beat">Explainers Editor</div></div>
             </a>
           </div>
+          <a href="/about.html" style="font-size:.82rem;font-weight:600;display:inline-block;margin-top:12px;">About our team →</a>
+        </div>
+
+        <div class="sidebar-box">
+          <p class="sb-title">About Horn Updates</p>
+          <p style="font-size:.86rem;color:#4b5563;line-height:1.6;margin:0 0 10px;">An independent platform for original analysis, explainers, and editorial commentary on the Horn of Africa.</p>
+          <a href="/about.html" style="font-size:.84rem;font-weight:600;">Learn more →</a>
         </div>
 
         <div class="sidebar-box">
@@ -359,8 +423,8 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.252 5.626L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
             Follow on X
           </p>
-          <p style="font-size:.88rem;color:#374151;margin:0 0 12px;line-height:1.55;">Breaking updates and analysis as it happens — <strong>@HornUpdatesHQ</strong></p>
-          <a href="https://x.com/HornUpdatesHQ" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#000;color:#fff;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:600;font-size:.9rem;">
+          <p style="font-size:.86rem;color:#374151;margin:0 0 12px;line-height:1.55;">Breaking updates and analysis — <strong>@HornUpdatesHQ</strong></p>
+          <a href="https://x.com/HornUpdatesHQ" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;background:#000;color:#fff;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:700;font-size:.88rem;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.252 5.626L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
             @HornUpdatesHQ
           </a>
@@ -368,13 +432,13 @@
 
         <div class="sidebar-box">
           <p class="sb-title">Editorial Standards</p>
-          <ul style="margin:0;padding-left:18px;font-size:.85rem;color:#4b5563;line-height:1.7;">
+          <ul style="margin:0;padding-left:18px;font-size:.84rem;color:#4b5563;line-height:1.7;">
             <li>Named authors on every piece</li>
             <li>Analysis clearly labelled</li>
             <li>Sources cited throughout</li>
             <li>Corrections noted publicly</li>
           </ul>
-          <a href="/editorial-policy.html" style="font-size:.83rem;font-weight:600;display:inline-block;margin-top:8px;">Editorial policy →</a>
+          <a href="/editorial-policy.html" style="font-size:.82rem;font-weight:600;display:inline-block;margin-top:8px;">Editorial policy →</a>
         </div>
 
       </aside>
@@ -383,16 +447,14 @@
 
   <section class="newsletter-section">
     <div class="newsletter-inner">
-      <p style="color:#93c5fd;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;">Weekly Briefing</p>
+      <p style="color:#93c5fd;font-size:.73rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;">Weekly Briefing</p>
       <h2>Understand the Horn of Africa</h2>
-      <p>One email per week. The key analysis on Ethiopia, Sudan, Somalia, Kenya, and the wider region — no noise.</p>
-      <form name="newsletter" netlify netlify-honeypot="bot-field" action="/thank-you.html" method="POST" class="nl-form" onsubmit="this.querySelector('button').textContent='Subscribing…'">
-        <input type="hidden" name="form-name" value="newsletter" />
-        <input type="text" name="bot-field" style="display:none" aria-hidden="true" />
-        <input type="email" name="email" required placeholder="Your email address" />
-        <button type="submit">Subscribe →</button>
+      <p>One email, once a week. The most important Horn of Africa developments — analysed, not just summarised.</p>
+      <form class="nl-form" onsubmit="return false;">
+        <input type="email" placeholder="your@email.com" aria-label="Email address" />
+        <button type="submit">Subscribe</button>
       </form>
-      <p class="nl-note">No spam. Unsubscribe at any time.</p>
+      <p class="nl-note">No spam. Unsubscribe any time.</p>
     </div>
   </section>
 
@@ -401,13 +463,15 @@
       <a href="/index.html">Home</a>
       <a href="/explainers.html">Explainers</a>
       <a href="/opinion.html">Opinion</a>
+      <a href="/ethiopia.html">Ethiopia</a>
+      <a href="/somalia.html">Somalia</a>
+      <a href="/sudan.html">Sudan</a>
       <a href="/about.html">About</a>
       <a href="/editorial-policy.html">Editorial Policy</a>
       <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
       <a href="/contact.html">Contact</a>
     </nav>
-    <div class="footer-copy">© 2026 Horn Updates. All rights reserved.</div>
+    <p class="footer-copy">&copy; 2026 Horn Updates. All rights reserved.</p>
   </footer>
 
 </body>
