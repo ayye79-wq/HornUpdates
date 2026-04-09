@@ -69,7 +69,21 @@
   .fc-cta:hover { background: #e0eaff; text-decoration: none; }
   .fc-meta { margin-top: 18px; font-size: .78rem; color: #60a5fa; }
 
-  /* ── WHAT'S HAPPENING NOW ── */
+  /* ── MORE ANALYSIS ── */
+  .more-analysis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 22px; }
+  @media (max-width: 620px) { .more-analysis { grid-template-columns: 1fr; } }
+  .more-card { display: block; text-decoration: none; border-radius: 13px; padding: 22px 22px 18px; position: relative; overflow: hidden; transition: opacity .15s; }
+  .more-card:hover { opacity: .9; text-decoration: none; }
+  .more-card.mc-a { background: linear-gradient(145deg, #0f2044 0%, #1e40af 100%); }
+  .more-card.mc-b { background: linear-gradient(145deg, #134e4a 0%, #0f766e 100%); }
+  .more-card.mc-c { background: linear-gradient(145deg, #3b0764 0%, #7c3aed 100%); }
+  .mc-region { font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 8px; }
+  .more-card h3 { margin: 0 0 8px; font-size: 1rem; font-weight: 800; color: #fff; line-height: 1.3; }
+  .more-card p { margin: 0 0 14px; font-size: .85rem; color: rgba(255,255,255,.75); line-height: 1.55; }
+  .mc-link { font-size: .82rem; font-weight: 700; color: rgba(255,255,255,.9); border-bottom: 1px solid rgba(255,255,255,.3); padding-bottom: 1px; }
+  .mc-meta { font-size: .72rem; color: rgba(255,255,255,.45); margin-top: 12px; }
+
+  /* ── BREAKING & KEY DEVELOPMENTS ── */
   .now-strip { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; margin-bottom: 22px; overflow: hidden; }
   .now-header { background: #111827; padding: 10px 18px; display: flex; align-items: center; gap: 10px; }
   .now-dot { width: 8px; height: 8px; border-radius: 50%; background: #ef4444; animation: pulse 1.6s infinite; flex-shrink: 0; }
@@ -77,15 +91,18 @@
   .now-list { list-style: none; margin: 0; padding: 0; }
   .now-list li { border-bottom: 1px solid #f3f4f6; }
   .now-list li:last-child { border-bottom: none; }
-  .now-list li a { display: flex; align-items: baseline; gap: 12px; padding: 12px 18px; text-decoration: none; transition: background .12s; }
+  .now-list li a { display: flex; align-items: flex-start; gap: 12px; padding: 14px 18px; text-decoration: none; transition: background .12s; }
   .now-list li a:hover { background: #f8faff; text-decoration: none; }
-  .now-tag { font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; white-space: nowrap; flex-shrink: 0; }
+  .now-tag { font-size: .66rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
   .now-tag.t-somalia { background: #eff6ff; color: #1d4ed8; }
   .now-tag.t-ethiopia { background: #fef9ec; color: #92400e; }
   .now-tag.t-sudan { background: #fef2f2; color: #b91c1c; }
   .now-tag.t-kenya { background: #f0fdf4; color: #15803d; }
   .now-tag.t-horn { background: #f5f3ff; color: #7c3aed; }
-  .now-headline { font-size: .92rem; font-weight: 700; color: #111827; line-height: 1.35; }
+  .now-content { display: flex; flex-direction: column; gap: 3px; }
+  .now-headline { font-size: .95rem; font-weight: 700; color: #111827; line-height: 1.35; }
+  .now-why { font-size: .82rem; color: #6b7280; line-height: 1.4; }
+  .now-why strong { color: #374151; }
 
   /* ── SECTION HEADS ── */
   .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; border-left: 4px solid #1d4ed8; padding-left: 12px; }
@@ -192,7 +209,7 @@
           <div class="av" style="background:#7c3aed;">KK</div>
           <div class="av" style="background:#b91c1c;">YK</div>
         </div>
-        <p class="trust-label"><strong>Written by regional analysts</strong> — not wires, not aggregators</p>
+        <p class="trust-label"><strong>Original reporting and analysis by named regional experts</strong> — no wire copy, no AI summaries.</p>
       </div>
       <p class="hero-countries">Ethiopia &nbsp;·&nbsp; Somalia &nbsp;·&nbsp; Sudan &nbsp;·&nbsp; South Sudan &nbsp;·&nbsp; Eritrea &nbsp;·&nbsp; Djibouti &nbsp;·&nbsp; Kenya</p>
     </div>
@@ -214,41 +231,65 @@
           </a>
         </div>
 
-        <!-- ── WHAT'S HAPPENING NOW ── -->
+        <!-- ── MORE ANALYSIS ── -->
+        <div class="more-analysis">
+          <a href="/opinion-ethiopia-israel-un.html" class="more-card mc-a">
+            <div class="mc-region">Analysis · Ethiopia · Diplomacy</div>
+            <h3>Why Ethiopia Voted With Israel at the UN</h3>
+            <p>Breaking with Africa and Arab partners — the security logic behind the decision and what it signals about Abiy Ahmed's foreign policy.</p>
+            <span class="mc-link">Read analysis →</span>
+            <div class="mc-meta">Daniel Haile · April 2026</div>
+          </a>
+          <a href="/opinion-resource-conflicts-horn.html" class="more-card mc-b">
+            <div class="mc-region">Analysis · South Sudan · Security</div>
+            <h3>Blood Over Gold: Resource Conflicts Killing Thousands</h3>
+            <p>A gold mine attack near Juba kills over 70. Horn Updates analyses the escalating pattern of resource-linked violence across the Horn.</p>
+            <span class="mc-link">Read analysis →</span>
+            <div class="mc-meta">Amira Hassan · April 2026</div>
+          </a>
+        </div>
+
+        <!-- ── BREAKING & KEY DEVELOPMENTS ── -->
         <div class="now-strip">
           <div class="now-header">
             <div class="now-dot"></div>
-            <span>What's happening now</span>
+            <span>Breaking &amp; Key Developments</span>
           </div>
           <ul class="now-list">
             <li>
-              <a href="/opinion-ethiopia-israel-un.html">
-                <span class="now-tag t-ethiopia">Ethiopia</span>
-                <span class="now-headline">Ethiopia votes with Israel at the UN — breaking with Africa and Arab partners, and revealing a transactional foreign policy under Abiy Ahmed</span>
-              </a>
-            </li>
-            <li>
               <a href="/opinion-elsisi-gerd.html">
                 <span class="now-tag t-ethiopia">Nile</span>
-                <span class="now-headline">Egypt's El-Sisi appeals to Washington over Ethiopia's Grand Renaissance Dam as the Egypt-Eritrea-Somalia axis against Addis deepens</span>
-              </a>
-            </li>
-            <li>
-              <a href="/opinion-resource-conflicts-horn.html">
-                <span class="now-tag t-sudan">South Sudan</span>
-                <span class="now-headline">A gold mine attack near Juba kills over 70 — part of a pattern of resource-linked violence Horn Updates has tracked across the region</span>
+                <div class="now-content">
+                  <span class="now-headline">El-Sisi appeals to Washington over Ethiopia's Nile Dam</span>
+                  <span class="now-why"><strong>Why it matters:</strong> The Egypt-Eritrea-Somalia axis against Addis Ababa is hardening into a formal regional bloc.</span>
+                </div>
               </a>
             </li>
             <li>
               <a href="/opinion-kenya-mob-justice.html">
                 <span class="now-tag t-kenya">Kenya</span>
-                <span class="now-headline">Crowds burning suspects alive — hundreds of times a year. What Kenya's mob justice problem reveals about the state of its institutions</span>
+                <div class="now-content">
+                  <span class="now-headline">Mob justice kills hundreds of Kenyans every year</span>
+                  <span class="now-why"><strong>Why it matters:</strong> It signals a collapse in trust between citizens and law enforcement that goes beyond crime statistics.</span>
+                </div>
               </a>
             </li>
             <li>
               <a href="/opinion-somaliland.html">
                 <span class="now-tag t-horn">Horn</span>
-                <span class="now-headline">Somaliland has governed itself for 30 years, held democratic elections, and built a functioning economy — and still no country recognises it</span>
+                <div class="now-content">
+                  <span class="now-headline">Somaliland: 30 years of self-rule, zero international recognition</span>
+                  <span class="now-why"><strong>Why it matters:</strong> The question of recognition is now entangled with Ethiopia's Red Sea access bid and Gulf state competition.</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/opinion-somalia-turkey-oil.html">
+                <span class="now-tag t-somalia">Somalia</span>
+                <div class="now-content">
+                  <span class="now-headline">Somalia signs offshore oil deal with Turkey, launches flag carrier</span>
+                  <span class="now-why"><strong>Why it matters:</strong> Two moves in a week signal Mogadishu is trying to assert sovereignty it has not exercised since 1991.</span>
+                </div>
               </a>
             </li>
           </ul>
