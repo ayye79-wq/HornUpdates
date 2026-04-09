@@ -92,17 +92,20 @@
   .now-list li { border-bottom: 1px solid #f3f4f6; }
   .now-list li:last-child { border-bottom: none; }
   .now-list li a { display: flex; align-items: flex-start; gap: 12px; padding: 14px 18px; text-decoration: none; transition: background .12s; }
-  .now-list li a:hover { background: #f8faff; text-decoration: none; }
+  .now-list li a:hover { background: #eff6ff; text-decoration: none; }
   .now-tag { font-size: .66rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
   .now-tag.t-somalia { background: #eff6ff; color: #1d4ed8; }
   .now-tag.t-ethiopia { background: #fef9ec; color: #92400e; }
   .now-tag.t-sudan { background: #fef2f2; color: #b91c1c; }
   .now-tag.t-kenya { background: #f0fdf4; color: #15803d; }
   .now-tag.t-horn { background: #f5f3ff; color: #7c3aed; }
-  .now-content { display: flex; flex-direction: column; gap: 3px; }
+  .now-content { display: flex; flex-direction: column; gap: 3px; flex: 1; }
   .now-headline { font-size: .95rem; font-weight: 700; color: #111827; line-height: 1.35; }
-  .now-why { font-size: .82rem; color: #6b7280; line-height: 1.4; }
-  .now-why strong { color: #374151; }
+  .now-list li a:hover .now-headline { color: #1d4ed8; }
+  .now-why { font-size: .83rem; color: #374151; line-height: 1.5; margin-top: 7px; padding-top: 7px; border-top: 1px solid #f0f0f0; font-weight: 500; }
+  .now-why strong { color: #b91c1c; font-weight: 700; }
+  .now-arrow { margin-left: auto; padding-left: 10px; color: #d1d5db; font-size: 1.05rem; flex-shrink: 0; align-self: center; transition: color .12s, transform .12s; }
+  .now-list li a:hover .now-arrow { color: #1d4ed8; transform: translateX(3px); }
 
   /* ── SECTION HEADS ── */
   .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; border-left: 4px solid #1d4ed8; padding-left: 12px; }
@@ -196,11 +199,7 @@
     </div>
     <div class="hero-body">
       <h2 class="hero-tagline">Original analysis of the Horn of Africa — <em>clear, fast, and contextual.</em></h2>
-      <p class="hero-sub">
-        <span>Updated regularly</span>
-        <span>No noise</span>
-        <span>Just what matters</span>
-      </p>
+      <p class="hero-sub" style="font-size:.95rem;font-weight:500;letter-spacing:0;color:#93c5fd;">Independent analysis. No wire copy. No AI summaries. Built for clarity on the Horn of Africa.</p>
       <div class="hero-trust">
         <div class="trust-avatars">
           <div class="av" style="background:#1e3a5f;">DH</div>
@@ -238,14 +237,14 @@
             <h3>Why Ethiopia Voted With Israel at the UN</h3>
             <p>Breaking with Africa and Arab partners — the security logic behind the decision and what it signals about Abiy Ahmed's foreign policy.</p>
             <span class="mc-link">Read analysis →</span>
-            <div class="mc-meta">Daniel Haile · April 2026</div>
+            <div class="mc-meta">Daniel Haile · April 2026 · ~2,400 words</div>
           </a>
           <a href="/opinion-resource-conflicts-horn.html" class="more-card mc-b">
             <div class="mc-region">Analysis · South Sudan · Security</div>
             <h3>Blood Over Gold: Resource Conflicts Killing Thousands</h3>
             <p>A gold mine attack near Juba kills over 70. Horn Updates analyses the escalating pattern of resource-linked violence across the Horn.</p>
             <span class="mc-link">Read analysis →</span>
-            <div class="mc-meta">Amira Hassan · April 2026</div>
+            <div class="mc-meta">Amira Hassan · April 2026 · ~1,800 words</div>
           </a>
         </div>
 
@@ -263,6 +262,7 @@
                   <span class="now-headline">El-Sisi appeals to Washington over Ethiopia's Nile Dam</span>
                   <span class="now-why"><strong>Why it matters:</strong> The Egypt-Eritrea-Somalia axis against Addis Ababa is hardening into a formal regional bloc.</span>
                 </div>
+                <span class="now-arrow">→</span>
               </a>
             </li>
             <li>
@@ -272,6 +272,7 @@
                   <span class="now-headline">Mob justice kills hundreds of Kenyans every year</span>
                   <span class="now-why"><strong>Why it matters:</strong> It signals a collapse in trust between citizens and law enforcement that goes beyond crime statistics.</span>
                 </div>
+                <span class="now-arrow">→</span>
               </a>
             </li>
             <li>
@@ -281,6 +282,7 @@
                   <span class="now-headline">Somaliland: 30 years of self-rule, zero international recognition</span>
                   <span class="now-why"><strong>Why it matters:</strong> The question of recognition is now entangled with Ethiopia's Red Sea access bid and Gulf state competition.</span>
                 </div>
+                <span class="now-arrow">→</span>
               </a>
             </li>
             <li>
@@ -290,6 +292,7 @@
                   <span class="now-headline">Somalia signs offshore oil deal with Turkey, launches flag carrier</span>
                   <span class="now-why"><strong>Why it matters:</strong> Two moves in a week signal Mogadishu is trying to assert sovereignty it has not exercised since 1991.</span>
                 </div>
+                <span class="now-arrow">→</span>
               </a>
             </li>
           </ul>
@@ -306,13 +309,13 @@
             <div class="acard-type t-analysis">Analysis · Ethiopia</div>
             <h3>Why Ethiopia Voted With Israel at the UN</h3>
             <p>The security logic behind the decision, the diplomatic cost with Arab partners, and what it signals about Abiy Ahmed's increasingly transactional foreign policy.</p>
-            <div class="acard-meta">Daniel Haile · April 2026</div>
+            <div class="acard-meta">Daniel Haile · April 2026 · ~2,400 words</div>
           </a>
           <a class="acard lead" href="/opinion-resource-conflicts-horn.html">
             <div class="acard-type t-analysis">Analysis · South Sudan</div>
             <h3>Blood Over Gold: Resource Conflicts Killing Thousands</h3>
             <p>A gold mine attack near Juba killed over 70 people. The pattern of resource-linked violence across the Horn — and why it keeps escalating.</p>
-            <div class="acard-meta">Amira Hassan · April 2026</div>
+            <div class="acard-meta">Amira Hassan · April 2026 · ~1,800 words</div>
           </a>
         </div>
 
@@ -321,19 +324,19 @@
             <div class="acard-type t-analysis">Analysis · Kenya</div>
             <h3>Kenya's Mob Justice Problem: When the Crowd Becomes the Court</h3>
             <p>Suspects beaten and burned by crowds, hundreds of times a year. What it reveals about police failure and institutional collapse.</p>
-            <div class="acard-meta">Nairobi Desk · April 2026</div>
+            <div class="acard-meta">Nairobi Desk · April 2026 · ~1,600 words</div>
           </a>
           <a class="acard" href="/opinion-elsisi-gerd.html">
             <div class="acard-type t-analysis">Analysis · Egypt · Ethiopia</div>
             <h3>El-Sisi Appeals to Washington Over Ethiopia's Nile Dam</h3>
             <p>Egypt's president calls on the US to restrain Ethiopia. The Egypt-Eritrea-Somalia axis against Addis Ababa is deepening.</p>
-            <div class="acard-meta">Horn Updates · April 2026</div>
+            <div class="acard-meta">Horn Updates · April 2026 · ~1,900 words</div>
           </a>
           <a class="acard" href="/opinion-somaliland.html">
             <div class="acard-type t-opinion">Opinion · Somalia</div>
             <h3>Somaliland's Recognition Bid: Why the World Keeps Hesitating</h3>
             <p>Self-governing for over 30 years, with democratic elections and a functioning economy. Why does no country recognise it?</p>
-            <div class="acard-meta">Horn Updates · 2026</div>
+            <div class="acard-meta">Omar Farah · 2026 · ~2,100 words</div>
           </a>
         </div>
 
@@ -451,6 +454,15 @@
             </a>
           </div>
           <a href="/about.html" style="font-size:.82rem;font-weight:600;display:inline-block;margin-top:12px;">About our team →</a>
+        </div>
+
+        <div class="sidebar-box">
+          <p class="sb-title">Most Read</p>
+          <div style="display:flex;flex-direction:column;">
+            <a href="/explainer-sudan-war.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Why Is Sudan at War? The Conflict That Shattered Africa's Third-Largest Country →</a>
+            <a href="/opinion-somalia-turkey-oil.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Somalia's Flag Carrier and Turkish Oil: Two Maritime Milestones →</a>
+            <a href="/explainer-south-sudan-crisis.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;">South Sudan's Polycrisis: Oil, War, and Famine →</a>
+          </div>
         </div>
 
         <div class="sidebar-box">
