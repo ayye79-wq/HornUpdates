@@ -47,7 +47,10 @@
   .trust-avatars .av:first-child { margin-left: 0; }
   .trust-label { font-size: .82rem; color: #93c5fd; }
   .trust-label strong { color: #fff; }
-  .hero-countries { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.1); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #475fa8; }
+  .hero-countries { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.1); font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; display: flex; flex-wrap: wrap; gap: 4px 0; }
+  .hero-countries a { color: #93c5fd; text-decoration: none; padding: 2px 6px; border-radius: 4px; transition: color .12s, background .12s; }
+  .hero-countries a:hover { color: #fff; background: rgba(255,255,255,.12); text-decoration: none; }
+  .hero-countries span { color: #3b82f6; padding: 0 4px; }
 
   /* ── PAGE WRAP ── */
   .page-wrap { max-width: 1140px; margin: 0 auto; padding: 22px 18px; }
@@ -56,18 +59,18 @@
 
   /* ── FEATURED STORY ── */
   .featured-wrap { margin-bottom: 22px; }
-  .featured-card { display: block; text-decoration: none; background: linear-gradient(145deg, #0f2044 0%, #1d4ed8 100%); border-radius: 14px; padding: 28px 28px 24px; position: relative; overflow: hidden; transition: opacity .15s; }
+  .featured-card { display: block; text-decoration: none; background: linear-gradient(145deg, #064e3b 0%, #065f46 50%, #0d7a5f 100%); border-radius: 14px; padding: 28px 28px 24px; position: relative; overflow: hidden; transition: opacity .15s; }
   .featured-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(96,165,250,.18) 0%, transparent 60%); pointer-events: none; }
   .featured-card:hover { opacity: .93; text-decoration: none; }
   .fc-badge { display: inline-flex; align-items: center; gap: 6px; background: #ef4444; color: #fff; font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
   .fc-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #fff; display: block; animation: pulse 1.6s ease-in-out infinite; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
-  .fc-region { font-size: .72rem; font-weight: 600; color: #7db8f7; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
+  .fc-region { font-size: .72rem; font-weight: 600; color: #6ee7b7; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
   .featured-card h2 { margin: 0 0 12px; font-size: 1.45rem; font-weight: 800; color: #fff; line-height: 1.25; max-width: 580px; }
-  .featured-card p { margin: 0 0 20px; font-size: .95rem; color: #bfdbfe; line-height: 1.6; max-width: 520px; }
-  .fc-cta { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #0f2044; font-weight: 800; font-size: .9rem; padding: 11px 20px; border-radius: 10px; }
-  .fc-cta:hover { background: #e0eaff; text-decoration: none; }
-  .fc-meta { margin-top: 18px; font-size: .78rem; color: #60a5fa; }
+  .featured-card p { margin: 0 0 20px; font-size: .95rem; color: #a7f3d0; line-height: 1.6; max-width: 520px; }
+  .fc-cta { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #065f46; font-weight: 800; font-size: .9rem; padding: 11px 20px; border-radius: 10px; }
+  .fc-cta:hover { background: #ecfdf5; text-decoration: none; }
+  .fc-meta { margin-top: 18px; font-size: .78rem; color: #6ee7b7; }
 
   /* ── MORE ANALYSIS ── */
   .more-analysis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 22px; }
@@ -100,17 +103,22 @@
   .now-tag.t-kenya { background: #f0fdf4; color: #15803d; }
   .now-tag.t-horn { background: #f5f3ff; color: #7c3aed; }
   .now-content { display: flex; flex-direction: column; gap: 3px; flex: 1; }
-  .now-headline { font-size: .95rem; font-weight: 700; color: #111827; line-height: 1.35; }
+  .now-headline { font-size: 1rem; font-weight: 700; color: #111827; line-height: 1.35; }
   .now-list li a:hover .now-headline { color: #1d4ed8; }
+  .now-time { font-size: .68rem; font-weight: 600; color: #9ca3af; margin-top: 3px; letter-spacing: .02em; }
   .now-why { font-size: .83rem; color: #1f2937; line-height: 1.5; margin-top: 8px; padding-top: 8px; border-top: 2px solid #e5e7eb; font-weight: 600; }
   .now-why strong { color: #b91c1c; font-weight: 800; letter-spacing: -.01em; }
   .now-arrow { margin-left: auto; padding-left: 10px; color: #d1d5db; font-size: 1.05rem; flex-shrink: 0; align-self: center; transition: color .12s, transform .12s; }
   .now-list li a:hover .now-arrow { color: #1d4ed8; transform: translateX(3px); }
 
   /* ── SECTION HEADS ── */
-  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; border-left: 4px solid #1d4ed8; padding-left: 12px; }
+  .section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; border-left: 4px solid #1d4ed8; padding-left: 12px; margin-top: 32px; }
   .section-head h2 { margin: 0; font-size: 1.05rem; font-weight: 800; color: #111827; letter-spacing: -.01em; text-transform: uppercase; letter-spacing: .04em; font-size: .88rem; }
   .see-all { font-size: .85rem; font-weight: 600; color: #2563eb; }
+
+  /* ── SECTION SEPARATORS ── */
+  .section-block { padding-top: 28px; margin-top: 8px; }
+  .section-block-alt { padding: 28px 22px 24px; background: #fff; border-radius: 14px; margin-bottom: 22px; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
 
   /* ── ANALYSIS LEAD + GRID ── */
   .analysis-lead { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
@@ -214,7 +222,15 @@
         </div>
         <p class="trust-label"><strong>Original reporting and analysis by named regional experts</strong> — no wire copy, no AI summaries.</p>
       </div>
-      <p class="hero-countries">Ethiopia &nbsp;·&nbsp; Somalia &nbsp;·&nbsp; Sudan &nbsp;·&nbsp; South Sudan &nbsp;·&nbsp; Eritrea &nbsp;·&nbsp; Djibouti &nbsp;·&nbsp; Kenya</p>
+      <div class="hero-countries">
+        <a href="/ethiopia.html">Ethiopia</a><span>·</span>
+        <a href="/somalia.html">Somalia</a><span>·</span>
+        <a href="/sudan.html">Sudan</a><span>·</span>
+        <a href="/about.html#south-sudan">South Sudan</a><span>·</span>
+        <a href="/about.html#eritrea">Eritrea</a><span>·</span>
+        <a href="/about.html#djibouti">Djibouti</a><span>·</span>
+        <a href="/kenya.html">Kenya</a>
+      </div>
     </div>
   </div>
 
@@ -260,10 +276,33 @@
           </div>
           <ul class="now-list">
             <li>
+              <a href="/opinion-sudan-humanitarian.html">
+                <span class="now-tag t-sudan">Sudan</span>
+                <div class="now-content">
+                  <span class="now-headline">Sudan's humanitarian crisis: 11 million displaced, famine declared in Darfur</span>
+                  <span class="now-time">Apr 10, 2026</span>
+                  <span class="now-why"><strong>Why it matters:</strong> The world's largest displacement crisis is generating almost no international response — and the access situation is getting worse.</span>
+                </div>
+                <span class="now-arrow">→</span>
+              </a>
+            </li>
+            <li>
+              <a href="/opinion-kenya-ruto-economy.html">
+                <span class="now-tag t-kenya">Kenya</span>
+                <div class="now-content">
+                  <span class="now-headline">Kenya's economy in 2026: what actually changed after the Gen Z protests</span>
+                  <span class="now-time">Apr 10, 2026</span>
+                  <span class="now-why"><strong>Why it matters:</strong> Ruto withdrew the Finance Bill but the debt service burden, youth unemployment, and cost of living remain structurally unresolved.</span>
+                </div>
+                <span class="now-arrow">→</span>
+              </a>
+            </li>
+            <li>
               <a href="/opinion-elsisi-gerd.html">
                 <span class="now-tag t-ethiopia">Nile</span>
                 <div class="now-content">
                   <span class="now-headline">El-Sisi appeals to Washington over Ethiopia's Nile Dam</span>
+                  <span class="now-time">Apr 10, 2026</span>
                   <span class="now-why"><strong>Why it matters:</strong> The Egypt-Eritrea-Somalia axis against Addis Ababa is hardening into a formal regional bloc.</span>
                 </div>
                 <span class="now-arrow">→</span>
@@ -273,8 +312,9 @@
               <a href="/opinion-kenya-osotsi-attack.html">
                 <span class="now-tag t-kenya">Kenya</span>
                 <div class="now-content">
-                  <span class="now-headline">Senator Osotsi attacked in Kisumu, opposition demands Interior Ministry accountability</span>
-                  <span class="now-why"><strong>Why it matters:</strong> The incident sharpens a long-running political confrontation over security impunity and whether Kenya's rules apply equally to opposition figures.</span>
+                  <span class="now-headline">Senator Osotsi attacked in Kisumu — opposition demands Interior Ministry accountability</span>
+                  <span class="now-time">Apr 10, 2026</span>
+                  <span class="now-why"><strong>Why it matters:</strong> The incident sharpens a long-running confrontation over security impunity and whether Kenya's rules apply equally to opposition figures.</span>
                 </div>
                 <span class="now-arrow">→</span>
               </a>
@@ -284,6 +324,7 @@
                 <span class="now-tag t-horn">Horn</span>
                 <div class="now-content">
                   <span class="now-headline">Somaliland: 30 years of self-rule, zero international recognition</span>
+                  <span class="now-time">Apr 9, 2026</span>
                   <span class="now-why"><strong>Why it matters:</strong> The question of recognition is now entangled with Ethiopia's Red Sea access bid and Gulf state competition.</span>
                 </div>
                 <span class="now-arrow">→</span>
@@ -294,6 +335,7 @@
                 <span class="now-tag t-somalia">Somalia</span>
                 <div class="now-content">
                   <span class="now-headline">Somalia signs offshore oil deal with Turkey, launches flag carrier</span>
+                  <span class="now-time">Apr 8, 2026</span>
                   <span class="now-why"><strong>Why it matters:</strong> Two moves in a week signal Mogadishu is trying to assert sovereignty it has not exercised since 1991.</span>
                 </div>
                 <span class="now-arrow">→</span>
@@ -470,10 +512,21 @@
         <div class="sidebar-box">
           <p class="sb-title">Most Read</p>
           <div style="display:flex;flex-direction:column;">
-            <a href="/explainer-sudan-war.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Why Is Sudan at War? The Conflict That Shattered Africa's Third-Largest Country →</a>
-            <a href="/opinion-somalia-turkey-oil.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Somalia's Flag Carrier and Turkish Oil: Two Maritime Milestones →</a>
-            <a href="/explainer-south-sudan-crisis.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;">South Sudan's Polycrisis: Oil, War, and Famine →</a>
+            <a href="/explainer-sudan-war.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Sudan War Explained: Causes, Key Players, and What Comes Next →</a>
+            <a href="/opinion-kenya-mob-justice.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Kenya Mob Justice 2026: Why Vigilante Violence Persists →</a>
+            <a href="/opinion-ethiopia-inflation.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Ethiopia Inflation 2026: How the Economic Crisis Is Reshaping Life →</a>
+            <a href="/opinion-sudan-humanitarian.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Sudan Humanitarian Crisis: The World's Largest Displacement Crisis →</a>
+            <a href="/explainer-ethiopia-sea.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;border-bottom:1px solid #f3f4f6;">Why Does Ethiopia Want Red Sea Access? Full Explainer →</a>
+            <a href="/opinion-kenya-ruto-economy.html" style="display:block;font-size:.86rem;font-weight:600;color:#111827;text-decoration:none;line-height:1.4;padding:9px 0;">Kenya Economy 2026: What Changed After the Gen Z Protests →</a>
           </div>
+        </div>
+
+        <div class="sidebar-box" style="background:#0f2044;border-color:#0f2044;">
+          <p class="sb-title" style="color:#93c5fd;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;">Weekly Briefing</p>
+          <p style="font-size:.95rem;font-weight:800;color:#fff;margin:0 0 6px;line-height:1.3;">Get daily Horn analysis</p>
+          <p style="font-size:.82rem;color:#bfdbfe;margin:0 0 12px;line-height:1.5;">Join readers tracking the Horn of Africa — one weekly email, clearly written.</p>
+          <a href="#newsletter" onclick="document.querySelector('.nl-form input').focus();return false;" style="display:block;text-align:center;background:#f59e0b;color:#111;font-weight:800;padding:10px 14px;border-radius:10px;font-size:.9rem;text-decoration:none;">Get the weekly briefing →</a>
+          <p style="font-size:.72rem;color:#6b9bce;margin:8px 0 0;text-align:center;">No spam. Unsubscribe any time.</p>
         </div>
 
         <div class="sidebar-box">
@@ -509,7 +562,7 @@
     </div>
   </div>
 
-  <section class="newsletter-section">
+  <section class="newsletter-section" id="newsletter">
     <div class="newsletter-inner">
       <p style="color:#93c5fd;font-size:.73rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;">Weekly Briefing</p>
       <h2>Understand the Horn of Africa</h2>
