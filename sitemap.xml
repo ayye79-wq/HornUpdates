@@ -253,4 +253,25 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://hornupdates.com/opinion-ethiopia-inflation.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-sudan-humanitarian.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hornupdates.com/opinion-kenya-ruto-economy.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
