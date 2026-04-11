@@ -56,7 +56,9 @@
   /* ── PAGE WRAP ── */
   .page-wrap { max-width: 1140px; margin: 0 auto; padding: 22px 18px; }
   .layout { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 22px; align-items: start; }
-  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+  .layout > aside { position: sticky; top: 18px; max-height: calc(100vh - 36px); overflow-y: auto; scrollbar-width: none; }
+  .layout > aside::-webkit-scrollbar { display: none; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .layout > aside { position: static; max-height: none; overflow-y: visible; } }
 
   /* ── FEATURED STORY ── */
   .featured-wrap { margin-bottom: 22px; }
@@ -583,7 +585,28 @@
         })();
         </script>
 
-        <!-- Contributors first — trust signal moved up -->
+        <!-- ── QUICK BRIEF + WHAT TO WATCH ── -->
+        <div class="sidebar-box" style="background:#fafaf9;border:1px solid #e7e5e4;border-left:3px solid #1e3a5f;">
+          <p class="sb-title" style="color:#1e3a5f;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:6px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Quick Brief
+          </p>
+          <p style="font-size:.86rem;color:#1c1917;line-height:1.65;margin:0 0 12px;font-style:italic;">"Ethiopia's Red Sea strategy is less about securing a port and more about long-term geopolitical leverage — access is the surface argument, sovereignty is the real one."</p>
+          <a href="/explainer-ethiopia-sea.html" style="font-size:.78rem;font-weight:700;color:#1e3a5f;">Full explainer: Why Ethiopia wants Red Sea access →</a>
+          <div style="height:1px;background:#e7e5e4;margin:12px 0;"></div>
+          <p class="sb-title" style="color:#1e3a5f;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:6px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            What to Watch
+          </p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;">
+            <li style="display:flex;align-items:flex-start;gap:7px;font-size:.82rem;color:#374151;line-height:1.45;"><span style="margin-top:3px;width:6px;height:6px;border-radius:50%;background:#b91c1c;flex-shrink:0;"></span><span><strong>Sudan</strong> — ceasefire talks stalled; RSF advances in Darfur</span></li>
+            <li style="display:flex;align-items:flex-start;gap:7px;font-size:.82rem;color:#374151;line-height:1.45;"><span style="margin-top:3px;width:6px;height:6px;border-radius:50%;background:#d97706;flex-shrink:0;"></span><span><strong>Red Sea</strong> — Houthi disruptions; Gulf states recalibrating</span></li>
+            <li style="display:flex;align-items:flex-start;gap:7px;font-size:.82rem;color:#374151;line-height:1.45;"><span style="margin-top:3px;width:6px;height:6px;border-radius:50%;background:#1d4ed8;flex-shrink:0;"></span><span><strong>Djibouti</strong> — Guelleh 6th term raises succession question</span></li>
+            <li style="display:flex;align-items:flex-start;gap:7px;font-size:.82rem;color:#374151;line-height:1.45;"><span style="margin-top:3px;width:6px;height:6px;border-radius:50%;background:#0f766e;flex-shrink:0;"></span><span><strong>Ethiopia–Somalia</strong> — MOU tensions unresolved</span></li>
+          </ul>
+        </div>
+
+        <!-- Contributors — trust signal -->
         <div class="sidebar-box" style="border-left: 3px solid #1d4ed8;">
           <p class="sb-title">Written by Regional Analysts</p>
           <p style="font-size:.82rem;color:#4b5563;line-height:1.55;margin:0 0 12px;">Original reporting and analysis by named regional experts — no wire copy, no AI summaries.</p>
@@ -661,41 +684,6 @@
           <a href="/editorial-policy.html" style="font-size:.82rem;font-weight:600;display:inline-block;margin-top:8px;">Editorial policy →</a>
         </div>
 
-        <!-- ── QUICK BRIEF + WHAT TO WATCH ── -->
-        <div class="sidebar-box" style="background:#fafaf9;border:1px solid #e7e5e4;border-left:3px solid #1e3a5f;">
-
-          <p class="sb-title" style="color:#1e3a5f;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:6px;">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Quick Brief
-          </p>
-          <p style="font-size:.86rem;color:#1c1917;line-height:1.65;margin:0 0 16px;font-style:italic;">"Ethiopia's Red Sea strategy is less about securing a port and more about long-term geopolitical leverage — access is the surface argument, sovereignty is the real one."</p>
-          <a href="/explainer-ethiopia-sea.html" style="font-size:.78rem;font-weight:700;color:#1e3a5f;">Full explainer: Why Ethiopia wants Red Sea access →</a>
-
-          <div style="height:1px;background:#e7e5e4;margin:14px 0;"></div>
-
-          <p class="sb-title" style="color:#1e3a5f;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:6px;">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1e3a5f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            What to Watch
-          </p>
-          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;">
-            <li style="display:flex;align-items:flex-start;gap:7px;font-size:.82rem;color:#374151;line-height:1.45;">
-              <span style="margin-top:3px;width:6px;height:6px;border-radius:50%;background:#b91c1c;flex-shrink:0;"></span>
-              <span><strong>Sudan</strong> — ceasefire talks stalled; RSF advances continue in Darfur</span>
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:7px;font-size:.82rem;color:#374151;line-height:1.45;">
-              <span style="margin-top:3px;width:6px;height:6px;border-radius:50%;background:#d97706;flex-shrink:0;"></span>
-              <span><strong>Red Sea</strong> — Houthi shipping disruptions; Gulf states recalibrating</span>
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:7px;font-size:.82rem;color:#374151;line-height:1.45;">
-              <span style="margin-top:3px;width:6px;height:6px;border-radius:50%;background:#1d4ed8;flex-shrink:0;"></span>
-              <span><strong>Djibouti</strong> — Guelleh's 6th term raises succession question</span>
-            </li>
-            <li style="display:flex;align-items:flex-start;gap:7px;font-size:.82rem;color:#374151;line-height:1.45;">
-              <span style="margin-top:3px;width:6px;height:6px;border-radius:50%;background:#0f766e;flex-shrink:0;"></span>
-              <span><strong>Ethiopia–Somalia</strong> — MOU tensions structurally unresolved</span>
-            </li>
-          </ul>
-        </div>
 
       </aside>
     </div>
