@@ -1,0 +1,152 @@
+🧠 Overall: You’re already at very high level (like 85–90%)
+
+This is NOT a beginner site anymore.
+This is close to a legit media product.
+
+But…
+
+👉 You’re now facing a “pro-level problem”:
+
+The layout is good, but the right column feels slightly disconnected + uneven in flow
+
+⚠️ What’s ACTUALLY wrong (not obvious, but important)
+1. Sidebar feels like “stacked boxes,” not a story
+
+You have:
+
+Snapshot
+Quick Brief
+What to Watch
+Authors
+Most Read
+Newsletter
+About
+Follow
+Editorial
+
+👉 Good content
+❌ But no narrative flow
+
+It feels like:
+
+random widgets stacked
+
+2. Density inconsistency
+
+Some blocks:
+
+Dense (Snapshot, Most Read)
+
+Some:
+
+Light (Quick Brief, About)
+
+👉 That creates visual imbalance → feels like empty space even when filled
+
+3. The bottom gap problem (your main complaint)
+
+Even after filling:
+
+👉 The left side keeps growing faster than right
+
+So visually:
+
+right column always looks “short”
+
+🔥 The REAL solution (not more blocks)
+
+You don’t need more content.
+
+👉 You need STRUCTURE + HIERARCHY
+
+💥 Upgrade your sidebar into 3 sections
+🟢 SECTION 1 — LIVE (top)
+
+Keep:
+
+Horn Snapshot ✅
+FX + Time ✅
+
+👉 Label it:
+“Live Overview”
+
+🔵 SECTION 2 — INTELLIGENCE (middle)
+
+Group together:
+
+Quick Brief
+What to Watch
+
+👉 Turn into ONE block:
+
+New block:
+
+“Today’s Signals”
+
+Example:
+
+Key Insight
+Ethiopia’s Red Sea strategy is about leverage, not ports.
+
+What to Watch
+
+Sudan — ceasefire talks stalled
+Red Sea — disruptions rising
+Djibouti — succession questions
+
+💥 This instantly fixes:
+
+spacing
+cohesion
+professionalism
+🟣 SECTION 3 — TRUST & ENGAGEMENT (bottom)
+
+Keep:
+
+Authors
+Most Read
+Newsletter
+About
+
+👉 BUT:
+
+Reorder to:
+
+Most Read (social proof first)
+Newsletter (conversion)
+Authors (credibility)
+About / Standards (last)
+🚨 One more important fix (VERY important)
+👉 Your “Quick Brief” block is TOO wide visually
+
+In your screenshot:
+
+It looks like a big blue rectangle
+Text is long
+Feels heavy
+Fix:
+
+Make it:
+
+smaller font
+max 2 lines
+tighter padding
+
+👉 Think:
+
+“headline insight”, not paragraph
+
+🔥 Final pro move (THIS will fix everything)
+Add this CSS behavior:
+
+👉 Sidebar becomes sticky after hero
+
+So:
+
+Scroll → left moves
+Right stays visible
+
+💥 Result:
+
+No more “empty feeling”
+Feels like Bloomberg / Economist style
