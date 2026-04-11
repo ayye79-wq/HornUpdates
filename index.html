@@ -492,6 +492,96 @@
       <!-- ── SIDEBAR ── -->
       <aside>
 
+        <!-- ── HORN SNAPSHOT WIDGET ── -->
+        <div class="sidebar-box" id="horn-snapshot-box" style="border-left:3px solid #0f766e;padding-bottom:14px;">
+          <p class="sb-title" style="color:#0f766e;display:flex;align-items:center;gap:6px;">
+            <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#0f766e;"></span>
+            Horn Snapshot
+          </p>
+
+          <!-- Today in the Horn -->
+          <div style="background:#f0fdf4;border-radius:8px;padding:9px 11px;margin-bottom:12px;font-size:.8rem;color:#374151;line-height:1.7;">
+            <span id="hs-story-count" style="font-weight:800;color:#0f766e;font-size:1rem;">—</span>
+            <span> stories tracked today</span>
+            <br>
+            <span style="color:#6b7280;font-size:.73rem;">Data as of <span id="hs-time">—</span> UTC</span>
+          </div>
+
+          <!-- FX Rates -->
+          <p style="font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#6b7280;margin:0 0 7px;">FX vs USD</p>
+          <div id="hs-rates" style="display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;margin-bottom:12px;">
+            <div class="hs-rate-cell"><span class="hs-flag">🇪🇹</span><span class="hs-cur">ETB</span><strong class="hs-val" id="r-ETB">—</strong></div>
+            <div class="hs-rate-cell"><span class="hs-flag">🇰🇪</span><span class="hs-cur">KES</span><strong class="hs-val" id="r-KES">—</strong></div>
+            <div class="hs-rate-cell"><span class="hs-flag">🇸🇴</span><span class="hs-cur">SOS</span><strong class="hs-val" id="r-SOS">—</strong></div>
+            <div class="hs-rate-cell"><span class="hs-flag">🇸🇩</span><span class="hs-cur">SDG</span><strong class="hs-val" id="r-SDG">—</strong></div>
+            <div class="hs-rate-cell"><span class="hs-flag">🇩🇯</span><span class="hs-cur">DJF</span><strong class="hs-val" id="r-DJF">—</strong></div>
+            <div class="hs-rate-cell"><span class="hs-flag">🇪🇷</span><span class="hs-cur">ERN</span><strong class="hs-val" id="r-ERN">—</strong></div>
+          </div>
+
+          <!-- Diaspora Clock -->
+          <p style="font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#6b7280;margin:0 0 7px;">Time Now</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;" id="hs-clocks"></div>
+
+          <p style="font-size:.67rem;color:#9ca3af;margin:10px 0 0;text-align:right;">Refreshes on load · FX: open.er-api.com</p>
+        </div>
+
+        <style>
+          .hs-rate-cell{display:flex;flex-direction:column;background:#f9fafb;border-radius:6px;padding:5px 8px;font-size:.78rem}
+          .hs-flag{font-size:.9rem;line-height:1}
+          .hs-cur{color:#6b7280;font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+          .hs-val{color:#111827;font-size:.85rem;font-weight:800;line-height:1.2}
+        </style>
+
+        <script>
+        (async function hornSnapshot() {
+          // 1. Current UTC time
+          const now = new Date();
+          document.getElementById('hs-time').textContent =
+            now.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit', timeZone:'UTC' });
+
+          // 2. Story count from articles.json
+          try {
+            const data = await fetch('/articles.json').then(r => r.json());
+            const arts = data.articles || data;
+            const todayStr = new Date().toISOString().slice(0, 10);
+            const cnt = arts.filter(a => (a.published_at || '').startsWith(todayStr)).length;
+            document.getElementById('hs-story-count').textContent = cnt > 0 ? cnt : arts.length;
+          } catch(e) {
+            document.getElementById('hs-story-count').textContent = '—';
+          }
+
+          // 3. Exchange rates vs USD (open.er-api.com — free, no key, CORS-safe)
+          try {
+            const fx = await fetch('https://open.er-api.com/v6/latest/USD').then(r => r.json());
+            const codes = ['ETB','KES','SOS','SDG','DJF','ERN'];
+            for (const code of codes) {
+              const el = document.getElementById('r-' + code);
+              if (!el) continue;
+              const rate = fx.rates?.[code];
+              el.textContent = rate ? rate.toFixed(2) : '—';
+            }
+          } catch(e) {}
+
+          // 4. Diaspora clock — no external API needed
+          const cities = [
+            { label: 'Addis Ababa', tz: 'Africa/Addis_Ababa',  flag: '🇪🇹' },
+            { label: 'Nairobi',     tz: 'Africa/Nairobi',      flag: '🇰🇪' },
+            { label: 'Mogadishu',   tz: 'Africa/Mogadishu',    flag: '🇸🇴' },
+            { label: 'Khartoum',    tz: 'Africa/Khartoum',     flag: '🇸🇩' },
+            { label: 'London',      tz: 'Europe/London',       flag: '🇬🇧' },
+            { label: 'Washington',  tz: 'America/New_York',    flag: '🇺🇸' },
+          ];
+          const clockEl = document.getElementById('hs-clocks');
+          for (const c of cities) {
+            const t = new Date().toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit', timeZone: c.tz });
+            const div = document.createElement('div');
+            div.className = 'hs-rate-cell';
+            div.innerHTML = '<span class="hs-flag">' + c.flag + '</span><span class="hs-cur">' + c.label + '</span><strong class="hs-val">' + t + '</strong>';
+            clockEl.appendChild(div);
+          }
+        })();
+        </script>
+
         <!-- Contributors first — trust signal moved up -->
         <div class="sidebar-box" style="border-left: 3px solid #1d4ed8;">
           <p class="sb-title">Written by Regional Analysts</p>

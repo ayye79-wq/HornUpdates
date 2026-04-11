@@ -1,0 +1,160 @@
+Here are the best ideas for small automated widgets for HornUpdates:
+
+1. USD exchange rates for Horn countries
+
+Show:
+
+ETB / USD
+SOS / USD
+SDG / USD
+KES / USD
+DJF / USD
+ERN / USD
+
+Why it works:
+
+very useful
+region-specific
+easy to understand
+makes HornUpdates feel current
+
+Label idea:
+Markets & Rates
+
+2. “Horn Snapshot” numbers box
+
+A tiny live stats strip with 3–5 rotating figures:
+
+Brent crude oil
+Gold
+USD Index
+Suez / Red Sea shipping headline status
+Food price indicator
+
+Why it works:
+
+fits geopolitics
+gives instant context
+looks premium
+
+Label idea:
+Horn Snapshot
+
+3. Today in the Horn
+
+A tiny auto-updating line:
+
+number of new stories today
+latest country updated
+last refresh time
+
+Example:
+12 new updates today • Last updated 3:00 PM UTC
+
+Why it works:
+
+builds trust
+tells people the site is active
+4. Country pulse ticker
+
+Small rotating ticker:
+
+Ethiopia: 4 new stories
+Sudan: 3 new stories
+Somalia: 2 new stories
+
+Why it works:
+
+encourages clicks
+easy to automate from your own content
+no outside API needed
+5. Breaking signal box
+
+A very small box with one live flag:
+
+Stable
+Elevated tension
+Developing
+Breaking
+
+For a selected issue:
+
+Sudan conflict
+Red Sea
+Ethiopia-Somalia tensions
+
+Why it works:
+
+unique
+brandable
+fits your analysis style
+
+Label idea:
+Signal Watch
+
+6. Diaspora clock strip
+
+Tiny dual time bar:
+
+Addis Ababa
+Nairobi
+Mogadishu
+Khartoum
+Washington DC
+London
+
+Why it works:
+
+helpful for diaspora audience
+small and elegant
+easy to automate
+7. Weekly trend block
+
+A mini box:
+Most read this week
+
+1 top explainer
+1 top opinion
+1 top signal brief
+
+Why it works:
+
+keeps users on site
+no external dependency
+boosts retention
+Best 3 for HornUpdates
+
+If I were choosing for you, I’d start with:
+
+1. Horn Snapshot
+Best overall small premium feature.
+
+2. USD exchange rates
+Very practical and always relevant.
+
+3. Today in the Horn
+Easy to automate from your own system.
+
+My strongest recommendation
+
+Build a small block called:
+
+Horn Snapshot
+
+USD/ETB
+Brent Oil
+Gold
+Last Updated
+
+That would look serious, compact, and useful.
+
+Even better
+
+Combine your own data + outside data:
+
+Horn Snapshot
+
+12 new stories today
+USD/ETB: 132.4
+Brent: $84.10
+Last updated: 3:00 PM UTC
