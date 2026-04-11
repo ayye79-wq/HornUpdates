@@ -518,14 +518,11 @@
             <div class="hs-rate-cell"><span class="hs-flag">🇪🇷</span><span class="hs-cur">ERN</span><strong class="hs-val" id="r-ERN">—</strong></div>
           </div>
 
-          <!-- Commodities -->
-          <p style="font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#6b7280;margin:0 0 7px;">Commodities</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;">
-            <div class="hs-rate-cell"><span class="hs-cur">Brent</span><strong class="hs-val" id="c-brent">—</strong></div>
-            <div class="hs-rate-cell"><span class="hs-cur">Gold</span><strong class="hs-val" id="c-gold">—</strong></div>
-          </div>
+          <!-- Diaspora Clock -->
+          <p style="font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#6b7280;margin:0 0 7px;">Time Now</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;" id="hs-clocks"></div>
 
-          <p style="font-size:.67rem;color:#9ca3af;margin:10px 0 0;text-align:right;">Refreshes on load · Exchange rates: open.er-api.com</p>
+          <p style="font-size:.67rem;color:#9ca3af;margin:10px 0 0;text-align:right;">Refreshes on load · FX: open.er-api.com</p>
         </div>
 
         <style>
@@ -565,17 +562,23 @@
             }
           } catch(e) {}
 
-          // 4. Commodity prices — Yahoo Finance (attempt, silent fallback)
-          async function tryYahoo(sym, elId, prefix, decimals) {
-            try {
-              const url = 'https://query2.finance.yahoo.com/v8/finance/chart/' + sym + '?interval=1d&range=1d';
-              const d = await fetch(url).then(r => r.json());
-              const price = d?.chart?.result?.[0]?.meta?.regularMarketPrice;
-              if (price) document.getElementById(elId).textContent = prefix + price.toFixed(decimals);
-            } catch(e) {}
+          // 4. Diaspora clock — no external API needed
+          const cities = [
+            { label: 'Addis Ababa', tz: 'Africa/Addis_Ababa',  flag: '🇪🇹' },
+            { label: 'Nairobi',     tz: 'Africa/Nairobi',      flag: '🇰🇪' },
+            { label: 'Mogadishu',   tz: 'Africa/Mogadishu',    flag: '🇸🇴' },
+            { label: 'Khartoum',    tz: 'Africa/Khartoum',     flag: '🇸🇩' },
+            { label: 'London',      tz: 'Europe/London',       flag: '🇬🇧' },
+            { label: 'Washington',  tz: 'America/New_York',    flag: '🇺🇸' },
+          ];
+          const clockEl = document.getElementById('hs-clocks');
+          for (const c of cities) {
+            const t = new Date().toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit', timeZone: c.tz });
+            const div = document.createElement('div');
+            div.className = 'hs-rate-cell';
+            div.innerHTML = '<span class="hs-flag">' + c.flag + '</span><span class="hs-cur">' + c.label + '</span><strong class="hs-val">' + t + '</strong>';
+            clockEl.appendChild(div);
           }
-          tryYahoo('BZ=F',  'c-brent', '$', 2);
-          tryYahoo('GC=F',  'c-gold',  '$', 0);
         })();
         </script>
 
