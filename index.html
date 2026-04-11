@@ -56,9 +56,9 @@
   /* ── PAGE WRAP ── */
   .page-wrap { max-width: 1140px; margin: 0 auto; padding: 22px 18px; }
   .layout { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 22px; align-items: start; }
-  .layout > aside { position: sticky; top: 18px; max-height: calc(100vh - 36px); overflow-y: auto; scrollbar-width: none; }
-  .layout > aside::-webkit-scrollbar { display: none; }
-  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .layout > aside { position: static; max-height: none; overflow-y: visible; } }
+  .layout > aside { align-self: stretch; background: #eef0f3; border-radius: 12px; padding: 10px 10px 0; }
+  .sidebar-inner { position: sticky; top: 18px; }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .layout > aside { align-self: auto; background: none; padding: 0; } .sidebar-inner { position: static; } }
 
   /* ── FEATURED STORY ── */
   .featured-wrap { margin-bottom: 22px; }
@@ -493,6 +493,7 @@
 
       <!-- ── SIDEBAR ── -->
       <aside>
+        <div class="sidebar-inner">
 
         <!-- ── HORN SNAPSHOT WIDGET ── -->
         <div class="sidebar-box" id="horn-snapshot-box" style="border-left:3px solid #0f766e;padding-bottom:14px;">
@@ -685,6 +686,7 @@
         </div>
 
 
+        </div><!-- /sidebar-inner -->
       </aside>
     </div>
   </div>
