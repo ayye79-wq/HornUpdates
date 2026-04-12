@@ -226,7 +226,7 @@
         el.innerHTML = articles.map(a => {
           const url = a.source_url || a.link || "#";
           const date = a.published_at ? new Date(a.published_at).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}) : "";
-          return `<a class="related-card" href="/reader.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(a.title||'')}">
+          return `<a class="related-card" href="${url}" target="_blank" rel="nofollow noopener noreferrer">
             <div class="rc-title">${a.title||"Untitled"}</div>
             <div class="rc-source">${a.source_name||""} · ${date}</div>
           </a>`;

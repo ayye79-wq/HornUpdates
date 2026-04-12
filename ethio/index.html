@@ -138,7 +138,7 @@
   <script>
   // ---------- HELPERS ----------
   function buildReaderLink(sourceUrl) {
-    return "../reader.html?url=" + encodeURIComponent(sourceUrl || "#");
+    return sourceUrl || "#";
   }
   function getCountries(article) {
   const raw =
@@ -205,7 +205,7 @@
             <span class="tag-pill tag-category">${category}</span>
           </div>
           <h3 class="story-title">
-            <a class="story-link" href="${href}">
+            <a class="story-link" href="${href}" target="_blank" rel="nofollow noopener noreferrer">
               ${title}
             </a>
           </h3>
@@ -306,7 +306,7 @@
       .then(res => res.json())
       .then(data => {
         let list = Array.isArray(data) ? data : (data.articles || []);
-		const updatedEl = document.getElementById("last-updated");
+                const updatedEl = document.getElementById("last-updated");
        if (updatedEl && data.generated_at) {
      updatedEl.textContent = "Last updated: " + niceDate(data.generated_at);
     }
