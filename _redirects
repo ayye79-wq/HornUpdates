@@ -1,7 +1,9 @@
-# Force HTTPS + non-www
-http://hornupdates.com/*  https://hornupdates.com/:splat  301!
+# Force non-www
+http://hornupdates.com/*   https://hornupdates.com/:splat  301!
 http://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
-/ads.txt   /ads.txt             200
-/ethio/*   /ethio/index.html   200
-/*         /index.html         200
+
+# Prevent /index.html being indexed separately from /
+/index.html  /  301!
+
+/ads.txt  /ads.txt  200
