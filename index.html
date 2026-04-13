@@ -268,6 +268,36 @@
           </a>
         </div>
 
+        <!-- ── INLINE SUBSCRIBE PROMPT ── -->
+        <div id="inline-sub" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 22px;margin-bottom:22px;display:flex;align-items:center;flex-wrap:wrap;gap:14px;">
+          <div style="flex:1;min-width:200px;">
+            <div style="font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:3px;">Weekly Briefing</div>
+            <div style="font-weight:700;font-size:.97rem;color:#111827;">The Horn, analysed. One email a week.</div>
+          </div>
+          <form id="inline-sub-form" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <input type="email" id="inline-sub-email" placeholder="your@email.com" required style="border:1px solid #d1d5db;border-radius:8px;padding:9px 14px;font-size:.9rem;outline:none;min-width:200px;flex:1;" />
+            <button type="submit" style="background:#111827;color:#fff;border:none;border-radius:8px;padding:9px 18px;font-size:.88rem;font-weight:700;cursor:pointer;white-space:nowrap;">Subscribe</button>
+          </form>
+          <div id="inline-sub-success" style="display:none;font-weight:700;color:#065f46;font-size:.93rem;">You are in. Welcome.</div>
+        </div>
+        <script>
+        document.getElementById('inline-sub-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var email = document.getElementById('inline-sub-email').value.trim();
+          if (!email) return;
+          fetch('https://formspree.io/f/mojpgkjw', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({ email: email })
+          }).then(function(r) {
+            if (r.ok) {
+              document.getElementById('inline-sub-form').style.display = 'none';
+              document.getElementById('inline-sub-success').style.display = 'block';
+            }
+          });
+        });
+        </script>
+
         <!-- ── BREAKING & KEY DEVELOPMENTS ── -->
         <div class="now-strip">
           <div class="now-header">
