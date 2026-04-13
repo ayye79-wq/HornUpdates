@@ -76,8 +76,8 @@
   .fc-meta { margin-top: 18px; font-size: .78rem; color: #6ee7b7; }
 
   /* ── MORE ANALYSIS ── */
-  .more-analysis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 22px; }
-  @media (max-width: 620px) { .more-analysis { grid-template-columns: 1fr; } }
+  .more-analysis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 22px; align-items: start; }
+  @media (max-width: 620px) { .more-analysis { grid-template-columns: 1fr; } .mc-span { grid-column: span 1 !important; } }
   .more-card { display: block; text-decoration: none; border-radius: 13px; padding: 22px 22px 18px; position: relative; overflow: hidden; transition: opacity .15s; }
   .more-card:hover { opacity: .9; text-decoration: none; }
   .more-card.mc-a { background: linear-gradient(145deg, #0f2044 0%, #1e40af 100%); }
@@ -266,7 +266,7 @@
             <span class="mc-link">Read analysis →</span>
             <div class="mc-meta">Amira Hassan · April 2026 · ~1,800 words</div>
           </a>
-          <a href="/opinion-ethiopia-internal-tensions.html" class="more-card mc-c" style="grid-column:span 2;">
+          <a href="/opinion-ethiopia-internal-tensions.html" class="more-card mc-c mc-span" style="grid-column:span 2;">
             <div class="mc-region">Analysis · Ethiopia · Geopolitics</div>
             <h3>Abiy Ahmed's Dual Gamble: Internal Fragmentation and External Ambition</h3>
             <p>Ethiopia is fighting the Fano in Amhara, the OLA in Oromia, and managing Tigray's fragile peace, while Abiy simultaneously pushes for Red Sea access and regional dominance. Daniel Haile on whether the two tracks are sustainable.</p>
