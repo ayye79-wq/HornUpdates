@@ -6,4 +6,3 @@ https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 # Prevent /index.html being indexed separately from /
 /index.html  /  301!
 
-/ads.txt  /ads.txt  200
