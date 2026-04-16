@@ -540,50 +540,67 @@ def main() -> None:
 
 
 def generate_sitemap() -> None:
-    """Auto-generate sitemap.xml with all static pages and opinion articles."""
+    """Auto-generate sitemap.xml discovering all content pages."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     base = Path(__file__).resolve().parent
 
-    static_pages = [
-        ("https://hornupdates.com/", "daily", "1.0", today),
-        ("https://hornupdates.com/opinion.html", "daily", "0.9", today),
-        ("https://hornupdates.com/about.html", "monthly", "0.6", None),
-        ("https://hornupdates.com/editorial-policy.html", "monthly", "0.5", None),
-        ("https://hornupdates.com/privacy.html", "yearly", "0.5", None),
-        ("https://hornupdates.com/terms.html", "yearly", "0.5", None),
-        ("https://hornupdates.com/contact.html", "yearly", "0.5", None),
-    ]
-    static_opinions = [
-        "opinion-sudan-war.html",
-        "opinion-ethiopia-sea.html",
-        "opinion-kenya-mediator.html",
-        "opinion-somaliland.html",
-        "opinion-assab.html",
-    ]
+    # Pages to never include in sitemap
+    exclude = {
+        "reader.html", "disclaimer.html", "thank-you.html",
+    }
+    # Pages handled explicitly below — skip in glob pass
+    handled_explicitly = {
+        "index.html", "opinion.html", "explainers.html", "signal-brief.html",
+        "about.html", "editorial-policy.html", "privacy.html", "terms.html", "contact.html",
+    }
 
     entries: List[str] = []
 
-    for loc, freq, pri, lastmod in static_pages:
+    def add(loc, freq, pri, lastmod=None):
         parts = [f"  <url>", f"    <loc>{loc}</loc>"]
         if lastmod:
             parts.append(f"    <lastmod>{lastmod}</lastmod>")
         parts += [f"    <changefreq>{freq}</changefreq>", f"    <priority>{pri}</priority>", "  </url>"]
         entries.append("\n".join(parts))
 
-    for fname in static_opinions:
-        entries.append(
-            f"  <url>\n    <loc>https://hornupdates.com/{fname}</loc>\n"
-            f"    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>"
-        )
+    def mtime(path):
+        return datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).strftime("%Y-%m-%d")
 
+    # Core navigation pages
+    add("https://hornupdates.com/", "daily", "1.0", today)
+    add("https://hornupdates.com/opinion.html", "daily", "0.9", today)
+    add("https://hornupdates.com/explainers.html", "weekly", "0.8", today)
+    add("https://hornupdates.com/signal-brief.html", "weekly", "0.9", today)
+    add("https://hornupdates.com/about.html", "monthly", "0.6")
+    add("https://hornupdates.com/editorial-policy.html", "monthly", "0.5")
+    add("https://hornupdates.com/privacy.html", "yearly", "0.4")
+    add("https://hornupdates.com/terms.html", "yearly", "0.4")
+    add("https://hornupdates.com/contact.html", "yearly", "0.4")
+
+    # Country landing pages
+    for fname in ["ethiopia.html", "somalia.html", "sudan.html", "south-sudan.html",
+                  "eritrea.html", "kenya.html", "djibouti.html"]:
+        p = base / fname
+        if p.exists():
+            add(f"https://hornupdates.com/{fname}", "weekly", "0.8", mtime(p))
+
+    # All manually written opinion articles (excluding auto-generated)
+    for path in sorted(base.glob("opinion-*.html"), reverse=True):
+        if "auto" in path.name or path.name in exclude or path.name in handled_explicitly:
+            continue
+        add(f"https://hornupdates.com/{path.name}", "monthly", "0.9", mtime(path))
+
+    # All explainer articles
+    for path in sorted(base.glob("explainer-*.html"), reverse=True):
+        if path.name in exclude or path.name in handled_explicitly:
+            continue
+        add(f"https://hornupdates.com/{path.name}", "monthly", "0.8", mtime(path))
+
+    # Auto-generated articles (blocked in robots.txt, very low priority)
     for path in sorted(base.glob("opinion-auto-*.html"), reverse=True):
         date_match = re.search(r"(\d{4}-\d{2}-\d{2})", path.name)
         lastmod = date_match.group(1) if date_match else today
-        entries.append(
-            f"  <url>\n    <loc>https://hornupdates.com/{path.name}</loc>\n"
-            f"    <lastmod>{lastmod}</lastmod>\n"
-            f"    <changefreq>never</changefreq>\n    <priority>0.8</priority>\n  </url>"
-        )
+        add(f"https://hornupdates.com/{path.name}", "never", "0.2", lastmod)
 
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n'
