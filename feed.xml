@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Horn Updates</title>
+    <link>https://hornupdates.com</link>
+    <description>Original analysis and commentary on the Horn of Africa: Ethiopia, Somalia, Sudan, South Sudan, Eritrea, Djibouti, and Kenya.</description>
+    <language>en-us</language>
+    <copyright>2026 Horn Updates</copyright>
+    <managingEditor>editors@hornupdates.com (Horn Updates)</managingEditor>
+    <webMaster>editors@hornupdates.com (Horn Updates)</webMaster>
+    <image>
+      <url>https://hornupdates.com/Horn1_logo.png</url>
+      <title>Horn Updates</title>
+      <link>https://hornupdates.com</link>
+    </image>
+    <atom:link href="https://hornupdates.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Ethiopia Rejects Djibouti's Port Offer: What Abiy's Red Sea Strategy Actually Wants</title>
+      <link>https://hornupdates.com/opinion-ethiopia-djibouti-port-rejection.html</link>
+      <description>Djibouti offered Ethiopia a dedicated port arrangement. Ethiopia said no. Daniel Haile on what the rejection reveals about Abiy's Red Sea ambitions, why a commercial access deal was never going to be enough, and where the next Horn crisis is most likely to originate.</description>
+      <pubDate>Thu, 16 Apr 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-ethiopia-djibouti-port-rejection.html</guid>
+      <dc:creator>Daniel Haile</dc:creator>
+      <category>Ethiopia</category>
+      <category>Red Sea</category>
+      <category>Djibouti</category>
+    </item>
+
+    <item>
+      <title>Eritrea After Isaias: The Horn's Most Dangerous Succession Question</title>
+      <link>https://hornupdates.com/opinion-eritrea-succession.html</link>
+      <description>Isaias Afwerki is 80, has no constitution, no political parties, and no designated successor. Yared Senbeto on what Eritrea's transition looks like, who holds power when it comes, and why the region has no plan for the most consequential unplanned event in Horn politics.</description>
+      <pubDate>Wed, 15 Apr 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-eritrea-succession.html</guid>
+      <dc:creator>Yared Senbeto</dc:creator>
+      <category>Eritrea</category>
+      <category>Governance</category>
+    </item>
+
+    <item>
+      <title>China's Quiet Expansion in the Horn of Africa: Bases, Debt, and Strategic Patience</title>
+      <link>https://hornupdates.com/opinion-china-horn-africa.html</link>
+      <description>China has the only overseas military base in Djibouti, is the largest creditor across Ethiopia and Kenya, and is quietly deepening ties with Eritrea and Sudan. Yared Senbeto on what Beijing is actually building and why regional analysis barely covers it.</description>
+      <pubDate>Tue, 14 Apr 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-china-horn-africa.html</guid>
+      <dc:creator>Yared Senbeto</dc:creator>
+      <category>Geopolitics</category>
+      <category>China</category>
+    </item>
+
+    <item>
+      <title>After ATMIS: Can Somalia's Security Forces Hold What the AU Leaves Behind?</title>
+      <link>https://hornupdates.com/opinion-somalia-atmis-handover.html</link>
+      <description>The African Union mission is withdrawing on a fixed diplomatic timeline while Al-Shabaab regroups and Somali forces remain short on logistics, pay, and institutional capacity. Omar Farah on the gap between what is being handed over and what can actually be held.</description>
+      <pubDate>Tue, 14 Apr 2026 07:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-somalia-atmis-handover.html</guid>
+      <dc:creator>Omar Farah</dc:creator>
+      <category>Somalia</category>
+      <category>Security</category>
+    </item>
+
+    <item>
+      <title>Abiy Ahmed's Dual Gamble: Managing Internal Fragmentation While Pursuing External Ambition</title>
+      <link>https://hornupdates.com/opinion-ethiopia-internal-tensions.html</link>
+      <description>Ethiopia is fighting the Fano in Amhara, the OLA in Oromia, and managing Tigray's fragile peace, while simultaneously pushing for Red Sea access and regional dominance. Daniel Haile examines whether those two tracks are sustainable together.</description>
+      <pubDate>Mon, 07 Apr 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-ethiopia-internal-tensions.html</guid>
+      <dc:creator>Daniel Haile</dc:creator>
+      <category>Ethiopia</category>
+      <category>Conflict</category>
+    </item>
+
+    <item>
+      <title>The UAE's War in Sudan: Gold, the RSF, and the Silence of Its Partners</title>
+      <link>https://hornupdates.com/opinion-uae-sudan-rsf.html</link>
+      <description>The UAE has been the RSF's most consequential external backer throughout Sudan's civil war. Amira Hassan on the gold networks, the smuggling routes, and why Abu Dhabi's partners in Washington and Brussels keep avoiding the subject.</description>
+      <pubDate>Fri, 03 Apr 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-uae-sudan-rsf.html</guid>
+      <dc:creator>Amira Hassan</dc:creator>
+      <category>Sudan</category>
+      <category>Geopolitics</category>
+    </item>
+
+    <item>
+      <title>Horn Signal Brief: Week of April 7 to 13, 2026</title>
+      <link>https://hornupdates.com/signal-brief.html</link>
+      <description>Weekly intelligence-style assessment of the Horn of Africa. Seven-country signal ratings, critical developments in Sudan and South Sudan, and what to watch in the week ahead.</description>
+      <pubDate>Mon, 13 Apr 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/signal-brief.html</guid>
+      <dc:creator>Horn Updates Editorial Team</dc:creator>
+      <category>Signal Brief</category>
+    </item>
+
+    <item>
+      <title>South Sudan's Peace Is Fraying: What Comes Next</title>
+      <link>https://hornupdates.com/opinion-south-sudan-peace-fraying.html</link>
+      <description>The 2018 peace agreement is behind on every benchmark. Elections will not happen in December. Sudan's war is cutting oil revenues. Amira Hassan on what the failure of the Revitalized Agreement means and what comes after it.</description>
+      <pubDate>Mon, 30 Mar 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-south-sudan-peace-fraying.html</guid>
+      <dc:creator>Amira Hassan</dc:creator>
+      <category>South Sudan</category>
+    </item>
+
+    <item>
+      <title>Sudan at Three Years: Why the War Has No End in Sight</title>
+      <link>https://hornupdates.com/opinion-sudan-three-years.html</link>
+      <description>Three years since the SAF-RSF war began. Neither side can win outright. Neither side has incentive to stop. Amira Hassan on the structural reasons this war continues and what would have to change for it to end.</description>
+      <pubDate>Thu, 13 Mar 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-sudan-three-years.html</guid>
+      <dc:creator>Amira Hassan</dc:creator>
+      <category>Sudan</category>
+      <category>Conflict</category>
+    </item>
+
+    <item>
+      <title>The Trafficking Route: What Ethiopia's Kingpin Arrest Reveals About the Horn's Migration Crisis</title>
+      <link>https://hornupdates.com/opinion-ethiopia-somalia-trafficking.html</link>
+      <description>A major trafficking operator arrested in Ethiopia was moving thousands of Somali migrants toward the Gulf. Omar Farah examines the corridor, the organized crime networks, and why the regional response keeps failing.</description>
+      <pubDate>Mon, 09 Mar 2026 06:00:00 +0000</pubDate>
+      <guid isPermaLink="true">https://hornupdates.com/opinion-ethiopia-somalia-trafficking.html</guid>
+      <dc:creator>Omar Farah</dc:creator>
+      <category>Somalia</category>
+      <category>Ethiopia</category>
+    </item>
+
+  </channel>
+</rss>
