@@ -80,7 +80,34 @@
 
       <div class="divider"></div>
 
-      <p style="font-size:.88rem;color:#6b7280;">Horn Updates is an independent platform. We do not have a comments section — email is the best way to reach us.</p>
+      <h2>Send us a message</h2>
+      <form action="https://formspree.io/f/mojpgkjw" method="POST" style="display:flex;flex-direction:column;gap:14px;">
+        <div>
+          <label style="display:block;font-size:.85rem;font-weight:600;color:#374151;margin-bottom:4px;">Your name</label>
+          <input type="text" name="name" required placeholder="Full name" style="width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:.95rem;outline:none;box-sizing:border-box;" />
+        </div>
+        <div>
+          <label style="display:block;font-size:.85rem;font-weight:600;color:#374151;margin-bottom:4px;">Email address</label>
+          <input type="email" name="email" required placeholder="you@example.com" style="width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:.95rem;outline:none;box-sizing:border-box;" />
+        </div>
+        <div>
+          <label style="display:block;font-size:.85rem;font-weight:600;color:#374151;margin-bottom:4px;">Subject</label>
+          <select name="subject" style="width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:.95rem;background:#fff;outline:none;box-sizing:border-box;">
+            <option value="Correction">Correction request</option>
+            <option value="Source suggestion">Source suggestion</option>
+            <option value="Publisher inquiry">Publisher inquiry</option>
+            <option value="General feedback">General feedback</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:.85rem;font-weight:600;color:#374151;margin-bottom:4px;">Message</label>
+          <textarea name="message" required rows="5" placeholder="Your message..." style="width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:.95rem;outline:none;resize:vertical;box-sizing:border-box;font-family:inherit;"></textarea>
+        </div>
+        <button type="submit" style="background:#1e3a5f;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:.95rem;font-weight:700;cursor:pointer;align-self:flex-start;">Send message</button>
+      </form>
+
+      <p style="font-size:.85rem;color:#6b7280;margin-top:16px;">Or email us directly at <strong>admin@hornupdates.com</strong>. We aim to respond within 2 to 3 business days.</p>
     </div>
   </div>
 
