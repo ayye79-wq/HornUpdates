@@ -8,3 +8,7 @@ https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 
 # Fix /about (no extension) to canonical /about.html
 /about  /about.html  301!
+
+# Redirect reader proxy (including all ?url=... variants) to Signal Brief
+# This eliminates the external-content proxy entirely
+/reader.html  /signal-brief.html  301!
