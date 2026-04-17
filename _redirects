@@ -1,14 +1,30 @@
-# Force non-www
+# ── Force non-www to canonical https ──────────────────────────
 http://hornupdates.com/*   https://hornupdates.com/:splat  301!
 http://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 
-# Prevent /index.html being indexed separately from /
+# ── index.html → / ────────────────────────────────────────────
 /index.html  /  301!
 
-# Fix /about (no extension) to canonical /about.html
-/about  /about.html  301!
-
-# Redirect reader proxy (including all ?url=... variants) to Signal Brief
-# This eliminates the external-content proxy entirely
+# ── Reader proxy → Signal Brief ───────────────────────────────
 /reader.html  /signal-brief.html  301!
+
+# ── Extensionless → .html  (fixes "Alternate page with proper canonical tag") ──
+# Netlify Pretty URLs serves both /slug and /slug.html.
+# These 301s tell Google there is only one canonical URL (the .html one).
+# Non-force: rule only fires when no exact file exists at the path,
+# so /opinion-foo.html is served directly and is never double-redirected.
+
+/opinion-*        /opinion-:splat.html        301
+/explainer-*      /explainer-:splat.html      301
+/author-*         /author-:splat.html         301
+
+/about            /about.html                 301
+/contact          /contact.html               301
+/disclaimer       /disclaimer.html            301
+/editorial-policy /editorial-policy.html      301
+/explainers       /explainers.html            301
+/opinion          /opinion.html               301
+/privacy          /privacy.html               301
+/signal-brief     /signal-brief.html          301
+/terms            /terms.html                 301
