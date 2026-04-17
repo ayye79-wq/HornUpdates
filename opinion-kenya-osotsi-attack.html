@@ -210,7 +210,33 @@
 
       <div class="hr"></div>
 
-      <div class="related">
+    
+  <div class="hr"></div>
+
+  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+    <span style="font-size:.82rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;">Share</span>
+    <button onclick="shareArticle()" style="display:inline-flex;align-items:center;gap:6px;background:#1e3a5f;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:.88rem;font-weight:700;cursor:pointer;">&#8599; Share this article</button>
+    <a href="https://twitter.com/intent/tweet?url=https%3A//hornupdates.com/opinion-kenya-osotsi-attack.html&text=Senator%20Osotsi%20Attacked%20in%20Kisumu%20%282026%29%3A%20Kenya%27s%20Political%20Violence%20Crisis%20Explained" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;border-radius:8px;padding:8px 14px;font-size:.88rem;font-weight:700;text-decoration:none;">X / Twitter</a>
+    <a href="https://wa.me/?text=https%3A//hornupdates.com/opinion-kenya-osotsi-attack.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#25d366;color:#fff;border-radius:8px;padding:8px 14px;font-size:.88rem;font-weight:700;text-decoration:none;">WhatsApp</a>
+    <span id="copy-confirm" style="font-size:.82rem;color:#16a34a;display:none;">Link copied.</span>
+  </div>
+  <script>
+    function shareArticle() {
+      var url = 'https://hornupdates.com/opinion-kenya-osotsi-attack.html';
+      var title = 'Senator Osotsi Attacked in Kisumu (2026): Kenya\'s Political Violence Crisis Explained';
+      if (navigator.share) {
+        navigator.share({ title: title, url: url }).catch(function(){});
+      } else {
+        navigator.clipboard.writeText(url).then(function() {
+          var c = document.getElementById('copy-confirm');
+          c.style.display = 'inline';
+          setTimeout(function(){ c.style.display = 'none'; }, 2500);
+        });
+      }
+    }
+  </script>
+
+  <div class="related">
         <h3>Related analysis</h3>
         <a href="/opinion-kenya-mob-justice.html">Kenya's Mob Justice Problem: When the Crowd Becomes the Court</a>
         <a href="/opinion-kenya-mediator.html">Can Kenya Actually Mediate the Horn's Conflicts?</a>
