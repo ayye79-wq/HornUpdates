@@ -186,7 +186,33 @@
 
     <div class="hr"></div>
 
-    <div class="author-card">
+  
+  <div class="hr"></div>
+
+  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+    <span style="font-size:.82rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;">Share</span>
+    <button onclick="shareArticle()" style="display:inline-flex;align-items:center;gap:6px;background:#1e3a5f;color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:.88rem;font-weight:700;cursor:pointer;">&#8599; Share this article</button>
+    <a href="https://twitter.com/intent/tweet?url=https%3A//hornupdates.com/opinion-eritrea-succession.html&text=Eritrea%20After%20Isaias%3A%20The%20Horn%27s%20Most%20Dangerous%20Succession%20Question" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;border-radius:8px;padding:8px 14px;font-size:.88rem;font-weight:700;text-decoration:none;">X / Twitter</a>
+    <a href="https://wa.me/?text=https%3A//hornupdates.com/opinion-eritrea-succession.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#25d366;color:#fff;border-radius:8px;padding:8px 14px;font-size:.88rem;font-weight:700;text-decoration:none;">WhatsApp</a>
+    <span id="copy-confirm" style="font-size:.82rem;color:#16a34a;display:none;">Link copied.</span>
+  </div>
+  <script>
+    function shareArticle() {
+      var url = 'https://hornupdates.com/opinion-eritrea-succession.html';
+      var title = 'Eritrea After Isaias: The Horn\'s Most Dangerous Succession Question';
+      if (navigator.share) {
+        navigator.share({ title: title, url: url }).catch(function(){});
+      } else {
+        navigator.clipboard.writeText(url).then(function() {
+          var c = document.getElementById('copy-confirm');
+          c.style.display = 'inline';
+          setTimeout(function(){ c.style.display = 'none'; }, 2500);
+        });
+      }
+    }
+  </script>
+
+  <div class="author-card">
       <div class="author-avatar">YS</div>
       <div>
         <div class="author-name">Yared Senbeto</div>
