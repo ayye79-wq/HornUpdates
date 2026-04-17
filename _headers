@@ -1,0 +1,10 @@
+# Prevent reader.html and its query-string variants from being indexed
+# This is belt-and-suspenders alongside the meta noindex tag
+
+/reader.html
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/reader.html?*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
