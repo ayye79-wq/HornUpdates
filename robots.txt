@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /reader.html
-Disallow: /reader.html?*
 Disallow: /opinion-auto-
 
 Sitemap: https://hornupdates.com/sitemap.xml
