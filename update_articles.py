@@ -596,11 +596,6 @@ def generate_sitemap() -> None:
             continue
         add(f"https://hornupdates.com/{path.name}", "monthly", "0.8", mtime(path))
 
-    # Auto-generated articles (blocked in robots.txt, very low priority)
-    for path in sorted(base.glob("opinion-auto-*.html"), reverse=True):
-        date_match = re.search(r"(\d{4}-\d{2}-\d{2})", path.name)
-        lastmod = date_match.group(1) if date_match else today
-        add(f"https://hornupdates.com/{path.name}", "never", "0.2", lastmod)
 
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n'
