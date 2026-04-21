@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.session
+*.pyc
+.pythonlibs/
+
+# Node
+node_modules/
+
+# Replit internals
+.cache/
+.upm/
+.config/
+.local/
+.agents/
+.canvas/
+
+# Large / private files
+hf_token.txt
+attached_assets/
+screenshots/
+*.session
+ethio_pulse_session.session
+
+# Build artifacts
+*.gz
+sitemap-reader.xml.gz
+
+# Misc
+*.bat
+cd
+python
+'how -1 --name-only'
