@@ -2,9 +2,9 @@ name: Update Articles
 
 on:
   schedule:
-    - cron: "0 6 * * *"    # 6:00 AM UTC every day
-    - cron: "0 15 * * *"   # 3:00 PM UTC every day (twice daily)
-  workflow_dispatch:         # allow manual trigger from GitHub UI
+    - cron: "0 6 * * *"
+    - cron: "0 15 * * *"
+  workflow_dispatch:
 
 jobs:
   scrape:
@@ -12,22 +12,22 @@ jobs:
     permissions:
       contents: write
     env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - run: pip install feedparser openai
 
-      - name: Install dependencies
-        run: pip install feedparser
-
-      - name: Run scraper
+      - name: Update articles
         run: python update_articles.py
+
+      - name: Generate daily opinion article (6 AM run only)
+        if: github.event_name == 'workflow_dispatch' || contains(github.event.schedule, '0 6')
+        run: python generate_opinion.py
+        continue-on-error: true
 
       - name: Commit and push
         run: |
