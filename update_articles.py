@@ -519,19 +519,33 @@ def main() -> None:
     merged = dedupe(existing, incoming)
     final = apply_caps(merged)
 
-    payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "articles": final,
-    }
+    # Only write (and update generated_at) when the articles list itself changed.
+    # Comparing canonical JSON avoids spurious commits caused by the timestamp alone.
+    final_json = json.dumps(final, indent=2, ensure_ascii=False)
+    existing_json: str = ""
+    if OUTPUT_PATH.exists():
+        try:
+            existing_data = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
+            existing_articles = existing_data if isinstance(existing_data, list) else existing_data.get("articles", [])
+            existing_json = json.dumps(existing_articles, indent=2, ensure_ascii=False)
+        except Exception as e:
+            print(f"  [WARN] Could not read existing {OUTPUT_PATH.name} for comparison: {e} — will overwrite")
 
-    OUTPUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    if final_json == existing_json:
+        print(f"\n✅ Articles unchanged — skipping write ({len(final)} articles)")
+    else:
+        payload = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "articles": final,
+        }
+        OUTPUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"\n✅ Wrote {len(final)} articles to {OUTPUT_PATH.name}")
 
     source_counts: Dict[str, int] = {}
     for a in final:
         s = a.get("source_name", "?")
         source_counts[s] = source_counts.get(s, 0) + 1
 
-    print(f"\n✅ Wrote {len(final)} articles to {OUTPUT_PATH.name}")
     print("\nBreakdown by source:")
     for src, cnt in sorted(source_counts.items(), key=lambda x: -x[1]):
         print(f"  {cnt:3d}  {src}")

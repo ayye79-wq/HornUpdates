@@ -33,7 +33,8 @@ jobs:
         run: |
           git config user.name "Horn Updates Bot"
           git config user.email "bot@hornupdates.com"
-          git add articles.json opinion.html opinion-auto-*.html
+          git diff --quiet HEAD -- articles.json || git add articles.json
+          git add opinion.html opinion-auto-*.html
           git diff --quiet HEAD -- sitemap.xml || git add sitemap.xml
           git diff --quiet HEAD -- robots.txt || git add robots.txt
           if git diff --cached --quiet; then
