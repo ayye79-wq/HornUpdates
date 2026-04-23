@@ -541,7 +541,6 @@ def main() -> None:
 
 def generate_sitemap() -> None:
     """Auto-generate sitemap.xml discovering all content pages."""
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     base = Path(__file__).resolve().parent
 
     # Pages to never include in sitemap
@@ -566,11 +565,15 @@ def generate_sitemap() -> None:
     def mtime(path):
         return datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).strftime("%Y-%m-%d")
 
-    # Core navigation pages
-    add("https://hornupdates.com/", "daily", "1.0", today)
-    add("https://hornupdates.com/opinion.html", "daily", "0.9", today)
-    add("https://hornupdates.com/explainers.html", "weekly", "0.8", today)
-    add("https://hornupdates.com/signal-brief.html", "weekly", "0.9", today)
+    def page_mtime(fname):
+        p = base / fname
+        return mtime(p) if p.exists() else None
+
+    # Core navigation pages — use file mtime so lastmod only changes when the file itself changes
+    add("https://hornupdates.com/", "daily", "1.0", page_mtime("index.html"))
+    add("https://hornupdates.com/opinion.html", "daily", "0.9", page_mtime("opinion.html"))
+    add("https://hornupdates.com/explainers.html", "weekly", "0.8", page_mtime("explainers.html"))
+    add("https://hornupdates.com/signal-brief.html", "weekly", "0.9", page_mtime("signal-brief.html"))
     add("https://hornupdates.com/about.html", "monthly", "0.6")
     add("https://hornupdates.com/editorial-policy.html", "monthly", "0.5")
     add("https://hornupdates.com/privacy.html", "yearly", "0.4")
@@ -596,13 +599,18 @@ def generate_sitemap() -> None:
             continue
         add(f"https://hornupdates.com/{path.name}", "monthly", "0.8", mtime(path))
 
-
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n'
     sitemap += "\n\n".join(entries)
     sitemap += "\n\n</urlset>\n"
 
     sitemap_path = base / "sitemap.xml"
+
+    existing = sitemap_path.read_text(encoding="utf-8") if sitemap_path.exists() else ""
+    if sitemap == existing:
+        print(f"✅ Sitemap unchanged — skipping write ({len(entries)} URLs)")
+        return
+
     sitemap_path.write_text(sitemap, encoding="utf-8")
     print(f"✅ Sitemap updated: {len(entries)} URLs → {sitemap_path.name}")
 
