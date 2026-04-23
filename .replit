@@ -42,3 +42,7 @@ publicDir = "."
 
 [userenv.shared]
 GITHUB_PUSH_DONE = "false"
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 30000
