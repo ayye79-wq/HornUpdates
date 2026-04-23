@@ -24,5 +24,10 @@ jobs:
           git config user.name "Horn Updates Bot"
           git config user.email "bot@hornupdates.com"
           git add signal-brief.html
-          git diff --staged --quiet && echo "No changes to commit" || git commit -m "Auto: Signal Brief Issue update $(date -u '+%Y-%m-%d') [skip ci]"
-          git push || echo "Nothing to push"
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto: Signal Brief Issue update $(date -u '+%Y-%m-%d') [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi

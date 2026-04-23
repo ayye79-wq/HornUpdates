@@ -27,6 +27,48 @@ HornUpdates is an automated news aggregation and summarization platform focused 
 - Deployed as a **static site** (publicDir: `.`)
 - No build step required
 
+## GitHub Sync — How to Push Without Conflicts
+
+GitHub Actions runs automatically (twice daily for articles, weekly for opinions and signal brief) and commits directly to `main` on GitHub. Replit accumulates checkpoint commits on its own `main`. This causes divergence that must be resolved before pushing.
+
+### Standard Push Process (Replit Git Panel or Shell)
+
+1. **Pull first** — fetch GitHub's latest commits and rebase Replit commits on top:
+   ```
+   git pull --rebase origin main
+   ```
+2. **Push** — now Replit is strictly ahead of GitHub with no conflicts:
+   ```
+   git push origin main
+   ```
+   Or use the helper script: `bash push_to_github.sh`
+
+3. **If push is rejected** — GitHub likely committed new articles since step 1. Repeat step 1 and push again.
+
+### If the rebase halts mid-way (content conflict)
+
+This rarely happens (GitHub Actions and Replit edit different files) but if it does:
+```
+git rebase --abort        # cancel the failed rebase
+git fetch origin          # re-fetch
+git pull --rebase origin main   # try again (often resolves after a fresh fetch)
+```
+If it still fails, ask the Replit agent to resolve the conflict.
+
+### Workflow Files and the `workflow` Scope Limitation
+
+The Replit GitHub OAuth token does **not** have the `workflow` scope, so pushing changes to `.github/workflows/` will be rejected by GitHub with a permission error. Options:
+
+- **Edit workflows directly on github.com** (simplest — no token needed)
+- **Use the Replit agent** to push workflow files via the GitHub API (file-by-file), which bypasses this restriction
+- **Use a PAT stored via git credential helper** — generate a Fine-grained PAT at GitHub → Settings → Developer Settings with Contents (write) + Workflows (write) permissions, then store it with `git credential approve` (never embed it in a URL, as that leaks into shell history and logs)
+
+### Why This Happens
+
+GitHub Actions writes to these files on `main`: `articles.json`, `opinion.html`, `opinion-auto-*.html`, `sitemap.xml`, `robots.txt`, `signal-brief.html`. All three workflow files now use `git pull --rebase origin main` before pushing, so GitHub Actions commits no longer fail when Replit has pushed first.
+
+---
+
 ## Recent Improvements (April 2026)
 - **About page expanded**: Named editorial team (Daniel Haile, Amira Hassan, Omar Farah, Nairobi Desk), editorial standards, independence statement, publication schedule
 - **Terms of Use rewritten**: 11 sections including DMCA, intellectual property, user conduct, jurisdiction, governing law, disclaimer of warranties (last updated April 2026)
