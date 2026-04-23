@@ -63,6 +63,25 @@ The Replit GitHub OAuth token does **not** have the `workflow` scope, so pushing
 - **Use the Replit agent** to push workflow files via the GitHub API (file-by-file), which bypasses this restriction
 - **Use a PAT stored via git credential helper** — generate a Fine-grained PAT at GitHub → Settings → Developer Settings with Contents (write) + Workflows (write) permissions, then store it with `git credential approve` (never embed it in a URL, as that leaks into shell history and logs)
 
+### GitHub PAT Renewal Reminder
+
+The `GITHUB_PAT` Replit secret is a Fine-grained Personal Access Token used by `push_to_github.sh` to push changes to `.github/workflows/` files (the default Replit OAuth token lacks the `workflow` scope needed for that). **PATs expire** — when the token expires, workflow-file pushes will silently fail with an authentication error.
+
+**Check when your PAT expires:**
+1. Go to [github.com → Settings → Developer Settings → Fine-grained tokens](https://github.com/settings/tokens?type=beta)
+2. Find the token used for this project and note its expiration date
+3. **Set a calendar reminder 1–2 weeks before that date**
+
+**How to renew:**
+1. On the same page, click the token → **Regenerate token** (keep the same permissions: Contents write + Workflows write)
+2. Copy the new token value
+3. Go to Replit → Secrets → find `GITHUB_PAT` → update its value with the new token
+4. Verify by running `bash push_to_github.sh` — it should succeed without auth errors
+
+**Recommended PAT lifetime:** 90 days is a reasonable balance between security and convenience. Avoid "No expiration" tokens.
+
+---
+
 ### Why This Happens
 
 GitHub Actions writes to these files on `main`: `articles.json`, `opinion.html`, `opinion-auto-*.html`, `sitemap.xml`, `robots.txt`, `signal-brief.html`. All three workflow files now use `git pull --rebase origin main` before pushing, so GitHub Actions commits no longer fail when Replit has pushed first.
