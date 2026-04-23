@@ -9,9 +9,36 @@
 #
 # Requirements:
 #   - Git remote "origin" must point to the GitHub repo
-#   - The Replit GitHub integration must be connected (handles auth)
+#   - Either GITHUB_PAT secret (preferred) or the Replit GitHub integration must be connected
 
 set -e
+
+# If a Personal Access Token is available, configure git to use it for this push.
+# The PAT must have "Contents" (write) and "Workflows" (write) permissions.
+# This allows pushing changes to .github/workflows/ files, which the Replit
+# OAuth token cannot do (it lacks the "workflow" scope).
+CLEAN_URL=""
+if [ -n "$GITHUB_PAT" ]; then
+  REPO_URL=$(git remote get-url origin)
+
+  # Only apply PAT rewrite for HTTPS remotes
+  if [[ "$REPO_URL" == https://* ]]; then
+    # Strip any existing credentials from the URL
+    CLEAN_URL=$(echo "$REPO_URL" | sed 's|https://[^@]*@|https://|')
+    HOST=$(echo "$CLEAN_URL" | sed 's|https://||' | cut -d'/' -f1)
+    REPO_PATH=$(echo "$CLEAN_URL" | sed "s|https://$HOST/||")
+    AUTH_URL="https://x-access-token:${GITHUB_PAT}@${HOST}/${REPO_PATH}"
+    git remote set-url origin "$AUTH_URL"
+    echo "==> Using GitHub PAT for authentication (workflow scope enabled)."
+
+    # Guarantee the clean URL is restored on exit, error, or interrupt
+    trap 'git remote set-url origin "$CLEAN_URL"' EXIT
+  else
+    echo "==> Warning: remote is not HTTPS; PAT rewrite skipped. Falling back to default auth."
+  fi
+else
+  echo "==> No GITHUB_PAT found; using default Replit GitHub auth."
+fi
 
 echo "==> Fetching latest changes from GitHub..."
 git fetch origin
@@ -29,28 +56,18 @@ echo "==> Pushing to GitHub..."
 git push origin main
 
 echo "==> Done. Replit and GitHub are now in sync."
+# The EXIT trap above restores the clean remote URL automatically.
 
 # -----------------------------------------------------------------------
 # NOTE: The Replit GitHub OAuth token does NOT have the "workflow" scope.
-# Pushes that include changes to .github/workflows/ files will be rejected.
+# Pushes that include changes to .github/workflows/ files will be rejected
+# unless GITHUB_PAT is set (see above).
 #
-# Options for updating workflow files:
-#
-#   Option A (simplest): Edit them directly on github.com in the browser.
-#
-#   Option B: Use the Replit agent to push via the GitHub API (file-by-file),
-#             which bypasses the workflow scope restriction.
-#
-#   Option C: Use a Personal Access Token (PAT) stored via git credential helper:
-#             1. Generate a PAT at: github.com → Settings → Developer Settings
-#                → Personal Access Tokens → Fine-grained tokens
-#                → Permissions: Contents (write) + Workflows (write)
-#             2. Store it safely (never in plain URL):
-#                git credential approve <<EOF
-#                protocol=https
-#                host=github.com
-#                username=ayye79-wq
-#                password=<YOUR_PAT>
-#                EOF
-#             3. Now regular "git push origin main" will use the PAT.
+# To set up the PAT:
+#   1. Go to: github.com → Settings → Developer Settings
+#      → Personal Access Tokens → Fine-grained tokens
+#      → Permissions: Contents (write) + Workflows (write)
+#   2. Copy the token value
+#   3. Add it as a Replit secret named GITHUB_PAT
+#      (Replit sidebar → Secrets → + Add a secret)
 # -----------------------------------------------------------------------
