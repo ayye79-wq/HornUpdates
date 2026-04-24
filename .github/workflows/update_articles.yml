@@ -33,17 +33,11 @@ jobs:
         run: |
           git config user.name "Horn Updates Bot"
           git config user.email "bot@hornupdates.com"
-          git add articles.json sitemap.xml robots.txt
-          if git status --porcelain opinion.html opinion-auto-*.html 2>/dev/null | grep -q .; then
-            git add opinion.html opinion-auto-*.html
-            COMMIT_MSG="Auto-update articles + opinion $(date -u '+%Y-%m-%d %H:%M UTC') [skip actions]"
-          else
-            COMMIT_MSG="Auto-update articles $(date -u '+%Y-%m-%d %H:%M UTC') [skip actions]"
-          fi
+          git add articles.json opinion.html opinion-auto-*.html sitemap.xml robots.txt
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "$COMMIT_MSG"
+            git commit -m "Auto-update articles + opinion $(date -u '+%Y-%m-%d %H:%M UTC') [skip actions]"
             git pull --rebase origin main
             git push
           fi
