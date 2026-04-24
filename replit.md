@@ -63,6 +63,12 @@ The Replit GitHub OAuth token does **not** have the `workflow` scope, so pushing
 - **Use the Replit agent** to push workflow files via the GitHub API (file-by-file), which bypasses this restriction
 - **Use a PAT stored via git credential helper** — generate a Fine-grained PAT at GitHub → Settings → Developer Settings with Contents (write) + Workflows (write) permissions, then store it with `git credential approve` (never embed it in a URL, as that leaks into shell history and logs)
 
+### Automated PAT Expiry Alert
+
+The workflow `.github/workflows/check-token-expiry.yml` runs every Monday at 9:00 AM UTC. It uses the stored `GITHUB_PAT` secret to call the GitHub API, reads the token's expiration date from the response header, and automatically creates a GitHub Issue (labelled `token-expiry`) if the token will expire within 14 days. The issue includes step-by-step renewal instructions. The workflow can also be triggered manually from the GitHub Actions tab.
+
+> **First-time setup:** This workflow file must be pushed to GitHub with a PAT that has the *Workflows: write* permission. Use `bash push_to_github.sh` (once the PAT has that permission), or copy-paste the file content manually at `github.com → your repo → .github/workflows/check-token-expiry.yml → edit`. The `token-expiry` issue label has already been created on the repo.
+
 ### GitHub PAT Renewal Reminder
 
 The `GITHUB_PAT` Replit secret is a Fine-grained Personal Access Token used by `push_to_github.sh` to push changes to `.github/workflows/` files (the default Replit OAuth token lacks the `workflow` scope needed for that). **PATs expire** — when the token expires, workflow-file pushes will silently fail with an authentication error.
@@ -70,7 +76,7 @@ The `GITHUB_PAT` Replit secret is a Fine-grained Personal Access Token used by `
 **Check when your PAT expires:**
 1. Go to [github.com → Settings → Developer Settings → Fine-grained tokens](https://github.com/settings/tokens?type=beta)
 2. Find the token used for this project and note its expiration date
-3. **Set a calendar reminder 1–2 weeks before that date**
+3. The automated weekly check (above) will create a GitHub Issue 14 days before expiry
 
 **How to renew:**
 1. On the same page, click the token → **Regenerate token** (keep the same permissions: Contents write + Workflows write)
