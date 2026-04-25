@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -25,9 +26,46 @@ jobs:
         run: python update_articles.py
 
       - name: Generate daily opinion article (6 AM run only)
+        id: generate_opinion
         if: github.event_name == 'workflow_dispatch' || contains(github.event.schedule, '0 6')
         run: python generate_opinion.py
         continue-on-error: true
+
+      - name: Notify on opinion generation failure
+        if: steps.generate_opinion.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `Opinion article generation failed — ${new Date().toISOString().slice(0, 10)}`;
+            const body = [
+              '## Daily opinion article generation failed',
+              '',
+              `**Workflow run:** [${context.runId}](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`,
+              '',
+              'The `generate_opinion.py` step failed (likely an OpenAI API error or quota issue). ' +
+              'Regular article updates were **not affected** — only today\'s opinion article is missing.',
+              '',
+              'Check the workflow run logs linked above for the full error details.',
+            ].join('\n');
+
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'opinion-failure',
+            });
+
+            const alreadyOpen = issues.some(i => i.title === title);
+            if (!alreadyOpen) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['opinion-failure'],
+              });
+            }
 
       - name: Commit and push
         run: |
