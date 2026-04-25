@@ -57,17 +57,17 @@ If it still fails, ask the Replit agent to resolve the conflict.
 
 ### Workflow Files and the `workflow` Scope Limitation
 
-The Replit GitHub OAuth token does **not** have the `workflow` scope, so pushing changes to `.github/workflows/` will be rejected by GitHub with a permission error. Options:
+The Replit GitHub OAuth token does **not** have the `workflow` scope, so pushing changes to `.github/workflows/` will be rejected by GitHub with a permission error. The `GITHUB_PAT` secret solves this — `push_to_github.sh` uses it with a custom askpass helper to bypass Replit's credential interceptor (`GIT_ASKPASS=replit-git-askpass`).
 
-- **Edit workflows directly on github.com** (simplest — no token needed)
-- **Use the Replit agent** to push workflow files via the GitHub API (file-by-file), which bypasses this restriction
-- **Use a PAT stored via git credential helper** — generate a Fine-grained PAT at GitHub → Settings → Developer Settings with Contents (write) + Workflows (write) permissions, then store it with `git credential approve` (never embed it in a URL, as that leaks into shell history and logs)
+**PAT requirements (Fine-grained token):**
+- Repository access: Only select repositories → **HornUpdates**
+- Repository permissions: **Contents: Read and write** + **Workflows: Read and write**
 
 ### Automated PAT Expiry Alert
 
 The workflow `.github/workflows/check-token-expiry.yml` runs every Monday at 9:00 AM UTC. It uses the stored `GITHUB_PAT` secret to call the GitHub API, reads the token's expiration date from the response header, and automatically creates a GitHub Issue (labelled `token-expiry`) if the token will expire within 14 days. The issue includes step-by-step renewal instructions. The workflow can also be triggered manually from the GitHub Actions tab.
 
-> **First-time setup:** This workflow file must be pushed to GitHub with a PAT that has the *Workflows: write* permission. Use `bash push_to_github.sh` (once the PAT has that permission), or copy-paste the file content manually at `github.com → your repo → .github/workflows/check-token-expiry.yml → edit`. The `token-expiry` issue label has already been created on the repo.
+> **Setup complete:** `check-token-expiry.yml` is live in GitHub Actions. The `token-expiry` issue label has already been created on the repo.
 
 ### GitHub PAT Renewal Reminder
 
