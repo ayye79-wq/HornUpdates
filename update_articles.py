@@ -700,6 +700,7 @@ def main() -> None:
         print(f"  {cnt:3d}  {src}")
 
     generate_sitemap()
+    update_homepage_deep_dive()
 
 
 def generate_sitemap() -> None:
