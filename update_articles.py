@@ -500,6 +500,155 @@ def apply_caps(articles: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 
+
+  def update_homepage_deep_dive() -> None:
+      """Rebuild the Deep Dive section in index.html with the 6 most recent opinion articles."""
+      base = Path(__file__).resolve().parent
+      index_path = base / "index.html"
+
+      if not index_path.exists():
+          print("[deep_dive] index.html not found — skipping")
+          return
+
+      SKIP = {"opinion.html", "opinion-post-1.html", "opinion-health.html"}
+
+      articles = []
+      for path in base.glob("opinion-*.html"):
+          if path.name in SKIP or "health" in path.name:
+              continue
+          try:
+              html = path.read_text(encoding="utf-8")
+
+              # Title
+              title_m = re.search(r"<title>([^<]+)</title>", html)
+              if not title_m:
+                  continue
+              title = re.sub(r"\s*\|.*$", "", title_m.group(1)).strip()
+
+              # Description
+              desc_m = re.search(r'<meta name="description" content="([^"]+)"', html)
+              if not desc_m:
+                  continue
+              desc = desc_m.group(1).strip()
+
+              # datePublished from JSON-LD
+              date_m = re.search(r'"datePublished"\s*:\s*"([^"]+)"', html)
+              pub_date = None
+              if date_m:
+                  raw_date = date_m.group(1)[:10]  # keep YYYY-MM-DD
+                  try:
+                      pub_date = datetime.strptime(raw_date, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                  except Exception:
+                      pass
+              if not pub_date:
+                  pub_date = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+
+              # Author — find Person type in JSON-LD
+              author = "Horn Updates"
+              person_m = re.search(
+                  r'"@type"\s*:\s*"Person"[^}]{0,200}"name"\s*:\s*"([^"]+)"',
+                  html, re.DOTALL
+              )
+              if not person_m:
+                  person_m = re.search(
+                      r'"name"\s*:\s*"([^"]+)"[^}]{0,200}"@type"\s*:\s*"Person"',
+                      html, re.DOTALL
+                  )
+              if person_m:
+                  author = person_m.group(1)
+
+              # Country tags from JSON-LD keywords
+              kw_m = re.search(r'"keywords"\s*:\s*"([^"]+)"', html)
+              countries = kw_m.group(1).split(", ")[:2] if kw_m else []
+
+              # Word count from byline
+              wc_m = re.search(r"~([\d,]+)\s*words", html)
+              wc = f"~{wc_m.group(1)} words" if wc_m else ""
+
+              articles.append({
+                  "slug": path.name,
+                  "title": title,
+                  "desc": desc,
+                  "date": pub_date,
+                  "author": author,
+                  "countries": countries,
+                  "wc": wc,
+              })
+          except Exception as e:
+              print(f"[deep_dive] Skipped {path.name}: {e}")
+
+      articles.sort(key=lambda a: a["date"], reverse=True)
+      top = articles[:6]
+
+      if len(top) < 3:
+          print("[deep_dive] Not enough articles — skipping")
+          return
+
+      def tag_html(a):
+          label = "Analysis · " + " · ".join(a["countries"]) if a["countries"] else "Analysis · Horn of Africa"
+          return f'<div class="acard-type t-analysis">{label}</div>'
+
+      def meta_html(a):
+          date_fmt = a["date"].strftime("%B %-d, %Y")
+          parts = [a["author"], date_fmt]
+          if a["wc"]:
+              parts.append(a["wc"])
+          return f'<div class="acard-meta">{" · ".join(parts)}</div>'
+
+      def lead_card(a):
+          return (
+              f'          <a class="acard lead" href="/{a[\"slug\"]}">'
+              f'\n            {tag_html(a)}'
+              f'\n            <h3>{a[\"title\"]}</h3>'
+              f'\n            <p>{a[\"desc\"]}</p>'
+              f'\n            {meta_html(a)}'
+              f'\n          </a>'
+          )
+
+      def grid_card(a):
+          return (
+              f'          <a class="acard" href="/{a[\"slug\"]}">'
+              f'\n            {tag_html(a)}'
+              f'\n            <h3>{a[\"title\"]}</h3>'
+              f'\n            <p>{a[\"desc\"]}</p>'
+              f'\n            {meta_html(a)}'
+              f'\n          </a>'
+          )
+
+      lead_html = "\n".join(lead_card(a) for a in top[:2])
+      grid_html = "\n".join(grid_card(a) for a in top[2:6])
+
+      new_block = (
+          "        <!-- ── LATEST ANALYSIS ── -->\n"
+          "        <div class=\"section-head\">\n"
+          "          <h2>Deep Dive</h2>\n"
+          "          <a class=\"see-all\" href=\"/opinion.html\">See all →</a>\n"
+          "        </div>\n\n"
+          "        <div class=\"analysis-lead\">\n"
+          + lead_html + "\n"
+          "        </div>\n\n"
+          "        <div class=\"analysis-grid\">\n"
+          + grid_html + "\n"
+          "        </div>\n\n"
+          "        <!-- ── EXPLAINERS ── -->"
+      )
+
+      index_html = index_path.read_text(encoding="utf-8")
+      pattern = r"        <!-- ── LATEST ANALYSIS ── -->.*?        <!-- ── EXPLAINERS ── -->"
+      new_html, n = re.subn(pattern, new_block, index_html, flags=re.DOTALL)
+
+      if n == 0:
+          print("[deep_dive] Could not find Deep Dive markers in index.html — skipping")
+          return
+
+      if new_html == index_html:
+          print("[deep_dive] Deep Dive unchanged — skipping write")
+          return
+
+      index_path.write_text(new_html, encoding="utf-8")
+      print(f"[deep_dive] ✅ Updated Deep Dive: {top[0]['title'][:55]}… (+{len(top)-1} more)")
+
+  
 def main() -> None:
     print("=== Horn Updates Scraper ===")
     print(f"Fetching {len(FEEDS)} feeds …\n")
