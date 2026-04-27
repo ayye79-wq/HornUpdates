@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 import os
+import subprocess
 
 try:
     import feedparser
@@ -640,6 +641,10 @@ def update_homepage_deep_dive() -> None:
         return
 
     index_path.write_text(new_html, encoding="utf-8")
+    try:
+        subprocess.run(["git", "add", str(index_path)], check=False, capture_output=True)
+    except Exception:
+        pass  # git not available locally — fine
     newest = top[0]["title"][:55]
     print(f"[deep_dive] ✅ Updated Deep Dive: {newest}… (+{len(top) - 1} more)")
 
