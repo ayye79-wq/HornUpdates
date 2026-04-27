@@ -531,7 +531,7 @@ def update_homepage_deep_dive() -> None:
                 continue
             desc = desc_m.group(1).strip()
 
-            date_m = re.search(r'"datePublished"\\s*:\\s*"([^"]+)"', src)
+            date_m = re.search(r'"datePublished":\s*"([^"]+)"', src)
             pub_date: Optional[datetime] = None
             if date_m:
                 try:
@@ -544,21 +544,21 @@ def update_homepage_deep_dive() -> None:
             # Author: find Person @type in JSON-LD
             author = "Horn Updates"
             person_m = re.search(
-                r'"@type"\\s*:\\s*"Person"[^}]{0,300}"name"\\s*:\\s*"([^"]+)"',
+                r'"@type":\s*"Person"[^}]{0,300}"name":\s*"([^"]+)"',
                 src, re.DOTALL,
             )
             if not person_m:
                 person_m = re.search(
-                    r'"name"\\s*:\\s*"([^"]+)"[^}]{0,300}"@type"\\s*:\\s*"Person"',
+                    r'"name":\s*"([^"]+)"[^}]{0,300}"@type":\s*"Person"',
                     src, re.DOTALL,
                 )
             if person_m:
                 author = person_m.group(1)
 
-            kw_m = re.search(r'"keywords"\\s*:\\s*"([^"]+)"', src)
+            kw_m = re.search(r'"keywords":\s*"([^"]+)"', src)
             countries = kw_m.group(1).split(", ")[:2] if kw_m else []
 
-            wc_m = re.search(r"~([\\d,]+)\\s*words", src)
+            wc_m = re.search(r"~([d,]+) words", src)
             wc = f"~{wc_m.group(1)} words" if wc_m else ""
 
             articles.append({
