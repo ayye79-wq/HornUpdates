@@ -3,7 +3,7 @@
 generate_opinion.py
 Daily AI-generated opinion article for Horn Updates.
 - Reads articles.json to find the most discussed topic this week
-- Calls OpenAI to write a ~900-word analytical opinion piece
+- Calls OpenAI to write a ~1,200-word analytical opinion piece
 - Saves the article as HTML and prepends it to opinion.html
 """
 
@@ -145,7 +145,7 @@ def generate_article(country, topic, headlines):
 
     prompt = f"""You are a senior analyst writing for Horn Updates, a regional news site covering the Horn of Africa (Ethiopia, Somalia, Sudan, South Sudan, Eritrea, Kenya, Djibouti, Somaliland).
 
-Write a ~900-word opinion/analysis piece. The most covered country this week is {country} and the dominant theme is {topic}.
+Write a ~1,200-word opinion/analysis piece. The most covered country this week is {country} and the dominant theme is {topic}.
 
 This week's relevant headlines from our newsroom:
 {headline_list}
@@ -171,7 +171,7 @@ BODY:
         model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.7,
-        max_tokens=1800,
+        max_tokens=2800,
     )
     return response.choices[0].message.content
 
@@ -353,9 +353,9 @@ def update_opinion_index(slug, title, countries, excerpt, date_str, author_name,
     tags = country_tags_html(countries)
 
     if author_url:
-        byline = f'By <a href="{author_url}">{author_name}</a> &nbsp;&middot;&nbsp; {date_str} &nbsp;&middot;&nbsp; ~900 words'
+        byline = f'By <a href="{author_url}">{author_name}</a> &nbsp;&middot;&nbsp; {date_str} &nbsp;&middot;&nbsp; ~1,200 words'
     else:
-        byline = f'By {author_name} &nbsp;&middot;&nbsp; {date_str} &nbsp;&middot;&nbsp; ~900 words'
+        byline = f'By {author_name} &nbsp;&middot;&nbsp; {date_str} &nbsp;&middot;&nbsp; ~1,200 words'
 
     new_post = f"""
           <div class="post">
