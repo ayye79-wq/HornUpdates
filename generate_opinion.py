@@ -167,13 +167,18 @@ EXCERPT: [2-sentence teaser for the article card, ~55 words, punchy]
 BODY:
 [Full article using <p> and <h2> tags only. No other HTML.]"""
 
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.7,
-        max_tokens=2800,
-    )
-    return response.choices[0].message.content
+    for attempt in range(2):
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7,
+            max_tokens=2800,
+        )
+        raw = response.choices[0].message.content
+        if len(raw.split()) >= 700 or attempt == 1:
+            return raw
+        print(f"[generate_opinion] Too short ({len(raw.split())} words), retrying...")
+    return raw
 
 
 def parse_response(text):
