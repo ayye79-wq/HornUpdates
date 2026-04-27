@@ -539,7 +539,26 @@ def update_homepage_deep_dive() -> None:
                 except Exception:
                     pass
             if not pub_date:
-                pub_date = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
+                # Try byline: "By Author · April 20, 2026" or "By Author · April 2026"
+                bl_m = re.search(r"(?:By [^\xb7]+\xb7\s*)([A-Z][a-z]+ \d{1,2},?\s*\d{4}|[A-Z][a-z]+ \d{4})", src)
+                if bl_m:
+                    raw = bl_m.group(1).replace(",", "").strip()
+                    for fmt in ("%B %d %Y", "%B %Y"):
+                        try:
+                            pub_date = datetime.strptime(raw, fmt).replace(tzinfo=timezone.utc)
+                            break
+                        except Exception:
+                            pass
+            if not pub_date:
+                # Try filename date: opinion-name-2026-04-21.html
+                fn_m = re.search(r"(\d{4})-(\d{2})-(\d{2})\.html$", path.name)
+                if fn_m:
+                    try:
+                        pub_date = datetime(int(fn_m.group(1)), int(fn_m.group(2)), int(fn_m.group(3)), tzinfo=timezone.utc)
+                    except Exception:
+                        pass
+            if not pub_date:
+                pub_date = datetime(2020, 1, 1, tzinfo=timezone.utc)  # undated → sort last
 
             # Author: find Person @type in JSON-LD
             author = "Horn Updates"
