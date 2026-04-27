@@ -558,7 +558,7 @@ def update_homepage_deep_dive() -> None:
             kw_m = re.search(r'"keywords":\s*"([^"]+)"', src)
             countries = kw_m.group(1).split(", ")[:2] if kw_m else []
 
-            wc_m = re.search(r"~([d,]+) words", src)
+            wc_m = re.search(r"~([\d,]+) words", src)
             wc = f"~{wc_m.group(1)} words" if wc_m else ""
 
             articles.append({
