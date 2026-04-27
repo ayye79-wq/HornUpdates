@@ -3,6 +3,5 @@ Allow: /
 
 User-agent: *
 Allow: /
-Disallow: /opinion-auto-
 
 Sitemap: https://hornupdates.com/sitemap.xml
