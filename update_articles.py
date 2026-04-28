@@ -647,26 +647,87 @@ def update_homepage_deep_dive() -> None:
         "        <!-- ── EXPLAINERS ── -->"
     )
 
+    # ── Featured Story (top article) ──────────────────────────────────────
+    feat = top[0]
+    feat_date_iso = feat["date"].strftime("%Y-%m-%d")
+    feat_regions = " · ".join(feat["countries"]) if feat["countries"] else "Horn of Africa"
+    feat_meta_parts = [feat["author"], feat["date"].strftime("%B %-d, %Y")]
+    if feat["wc"]:
+        feat_meta_parts.append(feat["wc"])
+    feat_meta = " &nbsp;·&nbsp; ".join(feat_meta_parts)
+    featured_block = (
+        "        <!-- ── FEATURED STORY ── -->\n"
+        "        <div class=\"featured-wrap\">\n"
+        "          <a href=\"/" + feat["slug"] + "\" class=\"featured-card\" data-published=\"" + feat_date_iso + "\">\n"
+        "            <div class=\"fc-badge\">Breaking</div>\n"
+        "            <div class=\"fc-region\">" + feat_regions + "</div>\n"
+        "            <h2>" + feat["title"] + "</h2>\n"
+        "            <p>" + feat["desc"] + "</p>\n"
+        "            <div class=\"fc-cta\">Read the full analysis &nbsp;→</div>\n"
+        "            <div class=\"fc-meta\">" + feat_meta + "</div>\n"
+        "          </a>\n"
+        "        </div>\n\n"
+        "        <!-- ── MORE ANALYSIS ── -->"
+    )
+
+    # ── More Analysis (next 3 articles) ──────────────────────────────────
+    def _mc_region(a: Dict[str, Any]) -> str:
+        parts = ["Analysis"] + (a["countries"] or ["Horn of Africa"])
+        return " · ".join(parts[:3])
+
+    def _mc_meta(a: Dict[str, Any]) -> str:
+        parts = [a["author"], a["date"].strftime("%B %-d, %Y")]
+        if a["wc"]:
+            parts.append(a["wc"])
+        return " · ".join(parts)
+
+    mc_specs = [("mc-a", ""), ("mc-b", ""), ("mc-c mc-span", ' style="grid-column:span 2;"')]
+    mc_cards = []
+    for i, (cls, style) in enumerate(mc_specs):
+        if i + 1 >= len(top):
+            break
+        a = top[i + 1]
+        mc_cards.append(
+            "          <a href=\"/" + a["slug"] + "\" class=\"more-card " + cls + "\"" + style + ">\n"
+            "            <div class=\"mc-region\">" + _mc_region(a) + "</div>\n"
+            "            <h3>" + a["title"] + "</h3>\n"
+            "            <p>" + a["desc"] + "</p>\n"
+            "            <span class=\"mc-link\">Read analysis →</span>\n"
+            "            <div class=\"mc-meta\">" + _mc_meta(a) + "</div>\n"
+            "          </a>"
+        )
+    more_block = (
+        "        <!-- ── MORE ANALYSIS ── -->\n"
+        "        <div class=\"more-analysis\">\n"
+        + "\n".join(mc_cards) + "\n"
+        "        </div>\n\n"
+        "        <!-- ── INLINE SUBSCRIBE PROMPT ── -->"
+    )
+
+    # ── Apply all three replacements ────────────────────────────────────
     index_html_src = index_path.read_text(encoding="utf-8")
-    pattern = r"        <!-- ── LATEST ANALYSIS ── -->.*?        <!-- ── EXPLAINERS ── -->"
-    new_html, n = re.subn(pattern, new_block, index_html_src, flags=re.DOTALL)
+    working = index_html_src
 
-    if n == 0:
-        print("[deep_dive] Markers not found in index.html — skipping")
+    feat_pat = r"        <!-- ── FEATURED STORY ── -->.*?        <!-- ── MORE ANALYSIS ── -->"
+    working = re.sub(feat_pat, featured_block, working, flags=re.DOTALL)
+
+    more_pat = r"        <!-- ── MORE ANALYSIS ── -->.*?        <!-- ── INLINE SUBSCRIBE PROMPT ── -->"
+    working = re.sub(more_pat, more_block, working, flags=re.DOTALL)
+
+    dd_pat = r"        <!-- ── LATEST ANALYSIS ── -->.*?        <!-- ── EXPLAINERS ── -->"
+    working = re.sub(dd_pat, new_block, working, flags=re.DOTALL)
+
+    if working == index_html_src:
+        print("[deep_dive] All sections unchanged — skipping write")
         return
 
-    if new_html == index_html_src:
-        print("[deep_dive] Deep Dive unchanged — skipping write")
-        return
-
-    index_path.write_text(new_html, encoding="utf-8")
+    index_path.write_text(working, encoding="utf-8")
     try:
         subprocess.run(["git", "add", str(index_path)], check=False, capture_output=True)
     except Exception:
         pass  # git not available locally — fine
     newest = top[0]["title"][:55]
-    print(f"[deep_dive] ✅ Updated Deep Dive: {newest}… (+{len(top) - 1} more)")
-
+    print(f"[deep_dive] ✅ Updated homepage sections: {newest}… (+{len(top) - 1} more)")
 
 def main() -> None:
     print("=== Horn Updates Scraper ===")
