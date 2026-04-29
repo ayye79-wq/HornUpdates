@@ -278,9 +278,17 @@ def build_article_html(title, countries, excerpt, body, date_str, slug, author_n
     .content h2{{font-size:1.1rem;margin:24px 0 8px;color:#1e3a5f}}
     .hr{{height:1px;background:#e5e7eb;margin:20px 0}}
     .back{{display:inline-block;margin-top:6px;font-weight:600}}
-    .related{{margin-top:20px;padding:14px;border-radius:12px;background:#f9fafb;border:1px solid #e5e7eb}}
-    .related h3{{margin:0 0 8px;font-size:.95rem;color:#6b7280;text-transform:uppercase;letter-spacing:.04em}}
-    .related a{{display:block;margin:4px 0;font-size:.95rem}}
+    .related{{margin-top:20px;padding:16px;border-radius:12px;background:#f9fafb;border:1px solid #e5e7eb}}
+      .related h3{{margin:0 0 10px;font-size:.8rem;font-weight:800;color:#6b7280;text-transform:uppercase;letter-spacing:.08em}}
+      .related a{{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:.95rem;font-weight:600;color:#1e3a5f;text-decoration:none;padding:8px 10px;border-radius:8px;background:#fff;border:1px solid #e5e7eb;transition:background .12s}}
+      .related a:hover{{background:#eef2ff;text-decoration:none}}
+      .sb-nudge{{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#0b1628 0%,#1e3a5f 100%);border-radius:12px;padding:16px 20px;margin:20px 0;flex-wrap:wrap}}
+      .sb-nudge-pulse{{width:8px;height:8px;border-radius:50%;background:#ef4444;animation:pulse 1.6s infinite;flex-shrink:0}}
+      @keyframes pulse{{0%,100%{{opacity:1}}50%{{opacity:.3}}}}
+      .sb-nudge-body{{flex:1;min-width:160px}}
+      .sb-nudge-title{{font-size:.9rem;font-weight:800;color:#fff;margin-bottom:3px}}
+      .sb-nudge-desc{{font-size:.78rem;color:#93c5fd;line-height:1.4}}
+      .sb-nudge-cta{{display:inline-block;background:#f59e0b;color:#111;font-size:.82rem;font-weight:800;padding:9px 16px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0}}
     footer{{margin-top:14px;font-size:14px;color:#6b7280}}
     .site-footer{{background:#0f172a;color:#cbd5e1;text-align:center;padding:18px 12px;margin-top:0}}
     .footer-nav{{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;margin-bottom:10px}}
@@ -329,13 +337,21 @@ def build_article_html(title, countries, excerpt, body, date_str, slug, author_n
       <div class="hr"></div>
 
       <div class="related">
-        <h3>Related analysis</h3>
-{related_links}
-      </div>
+          <h3>Keep reading</h3>
+  {related_links}
+        </div>
 
-      <a class="back" href="/opinion.html">&#8592; Back to Opinion</a>
-      <footer>&copy; 2026 Horn Updates. All rights reserved.</footer>
+        <div class="sb-nudge">
+          <div class="sb-nudge-pulse"></div>
+          <div class="sb-nudge-body">
+            <div class="sb-nudge-title">Don't miss the Signal Brief</div>
+            <div class="sb-nudge-desc">Weekly intelligence briefing on Ethiopia, Sudan, Somalia and the wider Horn.</div>
+          </div>
+          <a href="/signal-brief.html" class="sb-nudge-cta">Read the Signal Brief →</a>
+        </div>
 
+        <a class="back" href="/opinion.html">&#8592; More analysis</a>
+        <footer>&copy; 2026 Horn Updates. All rights reserved.</footer>
     </div>
   </div>
   <footer class="site-footer">
