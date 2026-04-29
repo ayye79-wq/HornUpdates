@@ -75,7 +75,15 @@
   .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;margin-bottom:10px}
   .footer-nav a{color:#e5e7eb;font-size:14px}
   .footer-copy{font-size:12px;color:#9ca3af}
-</style>
+  .read-next-section { margin:28px 0 20px; }
+    .read-next-cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; margin-top:12px; }
+    .rnc { display:block; background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; text-decoration:none; transition:box-shadow .15s; }
+    .rnc:hover { box-shadow:0 4px 16px rgba(0,0,0,.1); text-decoration:none; }
+    .rnc-tag { font-size:.65rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#6b7280; margin-bottom:6px; }
+    .rnc-title { font-size:.92rem; font-weight:700; color:#0f172a; line-height:1.35; margin-bottom:6px; }
+    .rnc-desc { font-size:.8rem; color:#6b7280; line-height:1.5; margin-bottom:10px; }
+    .rnc-cta { font-size:.8rem; font-weight:700; color:#2563eb; }
+  </style>
 </head>
 <body>
 
@@ -292,7 +300,32 @@
     <a class="archive-link" href="/signal-brief.html">Issue 9: March 17 to 23, 2026 <span>→</span></a>
   </div>
 
-  <a class="back" href="/">&larr; Back to home</a>
+    <!-- ── WHAT TO READ NEXT ── -->
+    <div class="read-next-section">
+      <p class="section-label">What to read next</p>
+      <div class="read-next-cards">
+        <a href="/opinion-tigray-tadesse-werede.html" class="rnc">
+          <div class="rnc-tag">Ethiopia · Tigray</div>
+          <div class="rnc-title">If Ethiopia's fragmentation worries you → start here</div>
+          <div class="rnc-desc">The TPLF has moved to retake Tigray's government, collapsing the Pretoria peace framework. What this means for the federal order.</div>
+          <div class="rnc-cta">Read the analysis →</div>
+        </a>
+        <a href="/explainer-tigray.html" class="rnc">
+          <div class="rnc-tag">Explainer · Background</div>
+          <div class="rnc-title">To understand the Tigray conflict → read this first</div>
+          <div class="rnc-desc">The full context: what happened, who fought, and what the Pretoria Agreement left unresolved in Tigray.</div>
+          <div class="rnc-cta">Read the explainer →</div>
+        </a>
+        <a href="/opinion-the-humanitarian-crisis-unfolding-in-sudan-a-tipping-po-2026-04-29.html" class="rnc">
+          <div class="rnc-tag">Sudan · Humanitarian</div>
+          <div class="rnc-title">If Sudan's collapse worries you → read this next</div>
+          <div class="rnc-desc">The refugee crisis at a tipping point. What escalating violence in Sudan means for the entire region.</div>
+          <div class="rnc-cta">Read the analysis →</div>
+        </a>
+      </div>
+    </div>
+
+    <a class="back" href="/">&larr; Back to home</a>
 
 </div>
 
