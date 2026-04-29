@@ -164,6 +164,7 @@ Strictly follow this output format — no extra text outside it:
 TITLE: [your title]
 COUNTRIES: [comma-separated from: Ethiopia, Somalia, Sudan, South Sudan, Eritrea, Kenya, Djibouti, Somaliland]
 EXCERPT: [2-sentence teaser for the article card, ~55 words, punchy]
+KEY_SIGNALS: [exactly 3 implications — separated by " | " — each 6-10 words, e.g. "Sudan: humanitarian pressure escalating | Regional spillover risk growing | Diplomatic track under pressure"]
 BODY:
 [Full article using <p> and <h2> tags only. No other HTML.]"""
 
@@ -183,6 +184,7 @@ BODY:
 
 def parse_response(text):
     title = excerpt = body = ""
+    key_signals = []
     countries = []
     body_lines = []
     in_body = False
@@ -194,13 +196,16 @@ def parse_response(text):
             countries = [c.strip() for c in line[10:].strip().split(",")]
         elif line.startswith("EXCERPT:"):
             excerpt = line[8:].strip()
+        elif line.startswith("KEY_SIGNALS:"):
+            raw_sigs = line[12:].strip()
+            key_signals = [s.strip() for s in raw_sigs.split("|") if s.strip()][:3]
         elif line.startswith("BODY:"):
             in_body = True
         elif in_body:
             body_lines.append(line)
 
     body = "\n".join(body_lines).strip()
-    return title, countries, excerpt, body
+    return title, countries, excerpt, body, key_signals
 
 
 def country_tags_html(countries, include_opinion_tag=True):
@@ -211,8 +216,12 @@ def country_tags_html(countries, include_opinion_tag=True):
     return "".join(parts)
 
 
-def build_article_html(title, countries, excerpt, body, date_str, slug, author_name, author_url):
-    tags = country_tags_html(countries)
+def build_article_html(title, countries, excerpt, body, date_str, slug, author_name, author_url, key_signals=None):
+      tags = country_tags_html(countries)
+      key_signals_html = ""
+      if key_signals:
+          li_items = "".join(f"<li>{s}</li>" for s in key_signals)
+          key_signals_html = f'      <div class="key-signals-box"><div class="key-signals-label">What this means</div><ul class="key-signals-list">{li_items}</ul></div>'
     canonical = f"{SITE_URL}/{slug}.html"
     meta_desc = re.sub(r"<[^>]+>", "", excerpt)[:155]
 
@@ -278,7 +287,12 @@ def build_article_html(title, countries, excerpt, body, date_str, slug, author_n
     .content h2{{font-size:1.1rem;margin:24px 0 8px;color:#1e3a5f}}
     .hr{{height:1px;background:#e5e7eb;margin:20px 0}}
     .back{{display:inline-block;margin-top:6px;font-weight:600}}
-    .related{{margin-top:20px;padding:16px;border-radius:12px;background:#f9fafb;border:1px solid #e5e7eb}}
+    .key-signals-box{{background:#fef3c7;border:1px solid #fde68a;border-radius:12px;padding:14px 18px;margin:18px 0}}
+      .key-signals-label{{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#92400e;margin-bottom:8px}}
+      .key-signals-list{{margin:0;padding:0;list-style:none}}
+      .key-signals-list li{{font-size:.92rem;color:#111827;font-weight:600;padding:3px 0;display:flex;align-items:flex-start;gap:8px}}
+      .key-signals-list li::before{{content:"→";color:#d97706;font-weight:800;flex-shrink:0}}
+      .related{{margin-top:20px;padding:16px;border-radius:12px;background:#f9fafb;border:1px solid #e5e7eb}}
       .related h3{{margin:0 0 10px;font-size:.8rem;font-weight:800;color:#6b7280;text-transform:uppercase;letter-spacing:.08em}}
       .related a{{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:.95rem;font-weight:600;color:#1e3a5f;text-decoration:none;padding:8px 10px;border-radius:8px;background:#fff;border:1px solid #e5e7eb;transition:background .12s}}
       .related a:hover{{background:#eef2ff;text-decoration:none}}
@@ -330,6 +344,7 @@ def build_article_html(title, countries, excerpt, body, date_str, slug, author_n
         <strong>Opinion notice:</strong> This is analysis and commentary by Horn Updates editors. It does not represent the position of any government, institution, or external party.
       </div>
 
+{key_signals_html}
       <div class="content">
         {body}
       </div>
@@ -344,11 +359,19 @@ def build_article_html(title, countries, excerpt, body, date_str, slug, author_n
         <div class="sb-nudge">
           <div class="sb-nudge-pulse"></div>
           <div class="sb-nudge-body">
-            <div class="sb-nudge-title">Don't miss the Signal Brief</div>
-            <div class="sb-nudge-desc">Weekly intelligence briefing on Ethiopia, Sudan, Somalia and the wider Horn.</div>
+            <div class="sb-nudge-title">Follow the Horn — Weekly Brief</div>
+            <div class="sb-nudge-desc">Intelligence-style briefing on Ethiopia, Sudan, Somalia and the wider Horn. Free, every week.</div>
           </div>
-          <a href="/signal-brief.html" class="sb-nudge-cta">Read the Signal Brief →</a>
+          <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;">
+            <form id="art-sb-form" style="display:flex;gap:6px;flex-wrap:wrap;">
+              <input id="art-sb-email" type="email" placeholder="your@email.com" style="border:none;border-radius:7px;padding:8px 12px;font-size:.85rem;min-width:160px;flex:1;outline:none;"/>
+              <button type="submit" style="background:#ef4444;color:#fff;border:none;border-radius:7px;padding:8px 14px;font-size:.85rem;font-weight:800;cursor:pointer;white-space:nowrap;">Subscribe</button>
+            </form>
+            <div id="art-sb-ok" style="display:none;font-size:.82rem;color:#6ee7b7;font-weight:700;">You're in. Signal Brief comes every week.</div>
+            <a href="/signal-brief.html" style="font-size:.78rem;color:#93c5fd;text-align:center;">or read this week's brief first →</a>
+          </div>
         </div>
+        <script>document.getElementById('art-sb-form').addEventListener('submit',function(e){{e.preventDefault();var em=document.getElementById('art-sb-email').value.trim();if(!em)return;fetch('https://formspree.io/f/mojpgkjw',{{method:'POST',headers:{{'Content-Type':'application/json',Accept:'application/json'}},body:JSON.stringify({{email:em}})}}).then(function(r){{if(r.ok){{document.getElementById('art-sb-form').style.display='none';document.getElementById('art-sb-ok').style.display='block';}}}});}});</script>
 
         <a class="back" href="/opinion.html">&#8592; More analysis</a>
         <footer>&copy; 2026 Horn Updates. All rights reserved.</footer>
@@ -435,7 +458,7 @@ def main():
         sys.exit(1)
 
     print("Response received. Parsing...")
-    title, countries, excerpt, body = parse_response(raw)
+    title, countries, excerpt, body, key_signals = parse_response(raw)
     if not title or not body:
         print("ERROR: Failed to parse AI response. Raw output:")
         print(raw)
@@ -449,7 +472,7 @@ def main():
     date_str  = datetime.now(timezone.utc).strftime("%B %-d, %Y")
     slug = title_to_slug(title, date_slug)
 
-    article_html = build_article_html(title, countries, excerpt, body, date_str, slug, author_name, author_url)
+    article_html = build_article_html(title, countries, excerpt, body, date_str, slug, author_name, author_url, key_signals)
     Path(f"{slug}.html").write_text(article_html, encoding="utf-8")
     print(f"Written: {slug}.html")
 
