@@ -191,7 +191,22 @@
   .footer-nav a { color: #e5e7eb; text-decoration: none; font-size: 14px; }
   .footer-nav a:hover { text-decoration: underline; }
   .footer-copy { font-size: 12px; color: #9ca3af; }
-</style>
+
+    /* ── HERO CTA ── */
+    .hero-cta-group { display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 6px; }
+    .hero-cta-primary { display:inline-block; background:#f59e0b; color:#111 !important; font-weight:800; font-size:.92rem; padding:11px 22px; border-radius:10px; text-decoration:none !important; transition:background .15s; }
+    .hero-cta-primary:hover { background:#fbbf24; text-decoration:none !important; }
+    .hero-cta-sec { display:inline-block; background:rgba(255,255,255,.1); color:#fff !important; font-weight:600; font-size:.88rem; padding:11px 18px; border-radius:10px; text-decoration:none !important; border:1px solid rgba(255,255,255,.2); transition:background .15s; }
+    .hero-cta-sec:hover { background:rgba(255,255,255,.2); text-decoration:none !important; }
+
+    /* ── SIGNAL BRIEF STRIP ── */
+    .sb-strip { display:flex; align-items:center; gap:12px; background:linear-gradient(135deg,#0b1628 0%,#1e3a5f 100%); border-radius:12px; padding:14px 20px; margin-bottom:22px; text-decoration:none !important; transition:opacity .15s; flex-wrap:wrap; }
+    .sb-strip:hover { opacity:.9; text-decoration:none !important; }
+    .sb-strip-pulse { width:8px; height:8px; border-radius:50%; background:#ef4444; animation:pulse 1.6s infinite; flex-shrink:0; }
+    .sb-strip-eyebrow { font-size:.65rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:#f59e0b; white-space:nowrap; flex-shrink:0; padding:3px 8px; background:rgba(245,158,11,.15); border-radius:4px; }
+    .sb-strip-text { flex:1; font-size:.9rem; font-weight:600; color:#e2e8f0; line-height:1.4; min-width:180px; }
+    .sb-strip-cta { display:inline-block; background:#fff; color:#0b1628 !important; font-size:.8rem; font-weight:800; padding:7px 14px; border-radius:7px; white-space:nowrap; flex-shrink:0; }
+  </style>
 </head>
 <body>
 
@@ -214,7 +229,11 @@
     <div class="hero-body">
       <h2 class="hero-tagline">Original analysis of the Horn of Africa<br><em>Clear. Fast. Contextual.</em></h2>
       <p class="hero-sub" style="font-size:1.02rem;font-weight:500;letter-spacing:0;color:#93c5fd;">Independent analysis. Built for clarity on the Horn of Africa.</p>
-      <div class="hero-trust">
+      <div class="hero-cta-group">
+          <a href="/signal-brief.html" class="hero-cta-primary">Read this week's Signal Brief →</a>
+          <a href="/opinion.html" class="hero-cta-sec">Browse all analysis</a>
+        </div>
+        <div class="hero-trust">
         <div class="trust-avatars">
           <div class="av" style="background:#1e3a5f;">DH</div>
           <div class="av" style="background:#0f766e;">AH</div>
@@ -237,7 +256,16 @@
   </div>
 
   <div class="page-wrap">
-    <div class="layout">
+
+    <!-- ── SIGNAL BRIEF STRIP ── -->
+    <a href="/signal-brief.html" class="sb-strip">
+      <div class="sb-strip-pulse"></div>
+      <span class="sb-strip-eyebrow">Signal Brief</span>
+      <span class="sb-strip-text">The week's key signals from Ethiopia, Sudan, Somalia and the wider Horn — before they become headlines.</span>
+      <span class="sb-strip-cta">Read now →</span>
+    </a>
+
+      <div class="layout">
       <main>
 
         <!-- ── TODAY STRIP ── -->
