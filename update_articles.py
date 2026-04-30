@@ -656,37 +656,37 @@ def update_homepage_deep_dive() -> None:
         feat_meta_parts.append(feat["wc"])
     feat_meta = " &nbsp;·&nbsp; ".join(feat_meta_parts)
 
-  def _feat_signals(feat):
-      countries = feat.get("countries") or []
-      title_l = feat.get("title", "").lower()
-      sigs = []
-      primary = countries[0] if countries else "Horn of Africa"
-      if any(w in title_l for w in ["crisis", "collapse", "famine", "flood", "disaster"]):
-          sigs.append(primary + ": humanitarian pressure escalating")
-      elif any(w in title_l for w in ["election", "political", "government", "coup"]):
-          sigs.append(primary + ": political stability at risk")
-      elif any(w in title_l for w in ["economy", "currency", "birr", "trade", "inflation"]):
-          sigs.append(primary + ": economic pressure building")
-      elif any(w in title_l for w in ["military", "attack", "offensive", "battle", "war"]):
-          sigs.append(primary + ": military situation shifting")
-      else:
-          sigs.append(primary + ": structural tensions developing")
-      if len(countries) > 1:
-          sigs.append("Regional spillover risk — multiple states affected")
-      else:
-          sigs.append("Watch for cross-border implications")
-      if any(w in title_l for w in ["refugee", "displacement", "civilian"]):
-          sigs.append("Civilian populations bearing the cost")
-      elif any(w in title_l for w in ["peace", "deal", "agreement", "negotiation"]):
-          sigs.append("Diplomatic track under pressure")
-      elif any(w in title_l for w in ["tipping", "escalat", "intensif"]):
-          sigs.append("Escalation trajectory — de-escalation path unclear")
-      else:
-          sigs.append("Long-term trajectory uncertain")
-      return sigs[:3]
+    def _feat_signals(feat):
+        countries = feat.get("countries") or []
+        title_l = feat.get("title", "").lower()
+        sigs = []
+        primary = countries[0] if countries else "Horn of Africa"
+        if any(w in title_l for w in ["crisis", "collapse", "famine", "flood", "disaster"]):
+            sigs.append(primary + ": humanitarian pressure escalating")
+        elif any(w in title_l for w in ["election", "political", "government", "coup"]):
+            sigs.append(primary + ": political stability at risk")
+        elif any(w in title_l for w in ["economy", "currency", "birr", "trade", "inflation"]):
+            sigs.append(primary + ": economic pressure building")
+        elif any(w in title_l for w in ["military", "attack", "offensive", "battle", "war"]):
+            sigs.append(primary + ": military situation shifting")
+        else:
+            sigs.append(primary + ": structural tensions developing")
+        if len(countries) > 1:
+            sigs.append("Regional spillover risk — multiple states affected")
+        else:
+            sigs.append("Watch for cross-border implications")
+        if any(w in title_l for w in ["refugee", "displacement", "civilian"]):
+            sigs.append("Civilian populations bearing the cost")
+        elif any(w in title_l for w in ["peace", "deal", "agreement", "negotiation"]):
+            sigs.append("Diplomatic track under pressure")
+        elif any(w in title_l for w in ["tipping", "escalat", "intensif"]):
+            sigs.append("Escalation trajectory — de-escalation path unclear")
+        else:
+            sigs.append("Long-term trajectory uncertain")
+        return sigs[:3]
 
 
-      feat_sigs = _feat_signals(feat)
+    feat_sigs = _feat_signals(feat)
     sigs_li = "".join("<li>" + s + "</li>" for s in feat_sigs)
     featured_block = (
         "        <!-- ── FEATURED STORY ── -->\n"
