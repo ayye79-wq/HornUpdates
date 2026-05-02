@@ -388,6 +388,7 @@ def build_article_html(title, countries, excerpt, body, date_str, slug, author_n
     </nav>
     <div class="footer-copy">&copy; 2026 Horn Updates. All rights reserved.</div>
   </footer>
+<script src="/cookie-consent.js"></script>
 </body>
 </html>"""
 
