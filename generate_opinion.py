@@ -217,11 +217,11 @@ def country_tags_html(countries, include_opinion_tag=True):
 
 
 def build_article_html(title, countries, excerpt, body, date_str, slug, author_name, author_url, key_signals=None):
-      tags = country_tags_html(countries)
-      key_signals_html = ""
-      if key_signals:
-          li_items = "".join(f"<li>{s}</li>" for s in key_signals)
-          key_signals_html = f'      <div class="key-signals-box"><div class="key-signals-label">What this means</div><ul class="key-signals-list">{li_items}</ul></div>'
+    tags = country_tags_html(countries)
+    key_signals_html = ""
+    if key_signals:
+        li_items = "".join(f"<li>{s}</li>" for s in key_signals)
+        key_signals_html = f'      <div class="key-signals-box"><div class="key-signals-label">What this means</div><ul class="key-signals-list">{li_items}</ul></div>'
     canonical = f"{SITE_URL}/{slug}.html"
     meta_desc = re.sub(r"<[^>]+>", "", excerpt)[:155]
 
