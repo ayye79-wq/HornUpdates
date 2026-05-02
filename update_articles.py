@@ -893,5 +893,22 @@ def generate_sitemap() -> None:
     print(f"✅ Sitemap updated: {len(entries)} URLs → {sitemap_path.name}")
 
 
-if __name__ == "__main__":
+
+
+  def patch_cookie_consent() -> None:
+      """Add cookie-consent.js to any HTML file missing it."""
+      base = Path(__file__).resolve().parent
+      script_tag = '<script src="/cookie-consent.js"></script>'
+      for html_file in base.glob("*.html"):
+          try:
+              content = html_file.read_text(encoding="utf-8")
+              if script_tag not in content and "</body>" in content:
+                  content = content.replace("</body>", f"{script_tag}\n</body>")
+                  html_file.write_text(content, encoding="utf-8")
+                  print(f"[cookie] patched {html_file.name}")
+          except Exception as e:
+              print(f"[cookie] error patching {html_file.name}: {e}")
+
+  if __name__ == "__main__":
+    patch_cookie_consent()
     main()
