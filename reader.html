@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7708VKPQSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7708VKPQSN');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7773342225754932" crossorigin="anonymous"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,follow" />
+<title>Reading article | Horn Updates</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0f172a;color:#f8fafc}
+  #toolbar{
+    display:flex;align-items:center;gap:10px;padding:10px 14px;
+    background:#1e293b;border-bottom:1px solid #334155;
+    position:sticky;top:0;z-index:100;flex-wrap:wrap;
+  }
+  #toolbar a.home{display:flex;align-items:center;gap:7px;text-decoration:none;flex-shrink:0}
+  #toolbar a.home img{width:28px;height:28px;border-radius:6px}
+  #toolbar a.home span{font-weight:800;font-size:.9rem;color:#f8fafc}
+  #url-display{flex:1;min-width:0;font-size:.78rem;color:#94a3b8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tb-btn{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;border-radius:8px;font-size:.82rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;flex-shrink:0}
+  .btn-open{background:#2563eb;color:#fff}
+  .btn-back{background:#334155;color:#e2e8f0}
+  #reader-frame{display:block;width:100%;border:none;height:calc(100vh - 53px)}
+  #no-url{display:flex;flex-direction:column;align-items:center;justify-content:center;height:calc(100vh - 53px);text-align:center;padding:24px}
+  #no-url h2{font-size:1.3rem;margin-bottom:10px}
+  #no-url p{color:#94a3b8;margin-bottom:20px}
+  #no-url a{background:#2563eb;color:#fff;padding:10px 22px;border-radius:10px;font-weight:700;text-decoration:none}
+</style>
+</head>
+<body>
+<div id="toolbar">
+  <a href="/" class="home">
+    <img src="/Horn1_logo.png" alt="Horn Updates" />
+    <span>Horn Updates</span>
+  </a>
+  <span id="url-display"></span>
+  <button class="tb-btn btn-back" onclick="history.back()">&#8592; Back</button>
+  <a id="open-btn" class="tb-btn btn-open" href="#" target="_blank" rel="noopener">Open in new tab &#8599;</a>
+</div>
+<div id="no-url" style="display:none">
+  <h2>No article URL provided</h2>
+  <p>This reader opens external articles linked from Horn Updates.</p>
+  <a href="/">Go to Horn Updates</a>
+</div>
+<iframe id="reader-frame" title="Article reader" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var url = params.get('url');
+  var frame = document.getElementById('reader-frame');
+  var openBtn = document.getElementById('open-btn');
+  var urlDisplay = document.getElementById('url-display');
+  var noUrl = document.getElementById('no-url');
+  if (url && url !== '#') {
+    urlDisplay.textContent = decodeURIComponent(url);
+    openBtn.href = url;
+    frame.src = url;
+  } else {
+    frame.style.display = 'none';
+    noUrl.style.display = 'flex';
+  }
+})();
+</script>
+<script src="/cookie-consent.js"></script>
+</body>
+</html>
