@@ -6,8 +6,6 @@ https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 # ── index.html → / ────────────────────────────────────────────
 /index.html  /  301!
 
-# ── Reader proxy → Signal Brief ───────────────────────────────
-/reader.html  /signal-brief.html  301!
 
 # ── Extensionless → .html  (fixes "Alternate page with proper canonical tag") ──
 # Netlify Pretty URLs serves both /slug and /slug.html.
