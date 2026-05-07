@@ -22,9 +22,6 @@ jobs:
           python-version: "3.11"
       - run: pip install feedparser openai
 
-      - name: Syntax check
-        run: python -m py_compile update_articles.py generate_opinion.py && echo "✓ Syntax OK"
-
       - name: Update articles
         run: python update_articles.py
 
@@ -34,11 +31,78 @@ jobs:
         run: python generate_opinion.py
         continue-on-error: true
 
+      - name: Close resolved opinion failure alerts
+        id: close_alerts
+        if: steps.generate_opinion.outcome == 'success'
+        continue-on-error: true
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'opinion-failure',
+              per_page: 100,
+            });
+
+            let closedCount = 0;
+            for (const issue of issues) {
+              if (issue.pull_request) continue;
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `Opinion article generation succeeded on workflow run [${context.runId}](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}). Closing this alert automatically.`,
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                state: 'closed',
+              });
+              closedCount++;
+            }
+            core.setOutput('closed_count', closedCount);
+
+      - name: Notify on opinion alert closure
+        if: steps.close_alerts.outputs.closed_count > 0
+        continue-on-error: true
+        uses: actions/github-script@v7
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const closedCount = parseInt('${{ steps.close_alerts.outputs.closed_count }}', 10);
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const issueWord = closedCount === 1 ? 'alert' : 'alerts';
+
+            const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
+            if (slackWebhookUrl) {
+              const response = await fetch(slackWebhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  text: `:white_check_mark: *Opinion failure ${issueWord} auto-closed* — ${closedCount} open ${issueWord} resolved after a successful generation run.\n<${runUrl}|View workflow run>`,
+                }),
+              });
+              if (!response.ok) {
+                core.warning(`Slack notification failed: HTTP ${response.status} ${response.statusText}`);
+              }
+            } else {
+              core.warning(`SLACK_WEBHOOK_URL secret is not set — Slack notification skipped. ${closedCount} opinion-failure ${issueWord} were closed. Workflow run: ${runUrl}`);
+            }
+
       - name: Notify on opinion generation failure
         if: steps.generate_opinion.outcome == 'failure'
         continue-on-error: true
         uses: actions/github-script@v7
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const title = `Opinion article generation failed — ${new Date().toISOString().slice(0, 10)}`;
             const body = [
@@ -69,14 +133,131 @@ jobs:
                 labels: ['opinion-failure'],
               });
             }
+
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const issueNote = alreadyOpen
+              ? 'A GitHub issue is already open for today\'s failure.'
+              : 'A new GitHub issue has been opened.';
+            const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
+            if (slackWebhookUrl) {
+              const response = await fetch(slackWebhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  text: `:x: *Opinion article generation failed* — today's opinion article could not be generated (OpenAI API error or quota issue). ${issueNote}\n<${runUrl}|View workflow run>`,
+                }),
+              });
+              if (!response.ok) {
+                core.warning(`Slack notification failed: HTTP ${response.status} ${response.statusText}`);
+              }
+            } else {
+              core.warning(`SLACK_WEBHOOK_URL secret is not set — Slack notification skipped. Opinion article generation failed. Workflow run: ${runUrl}`);
+            }
+
+      - name: Sync author pages
+        run: python sync_author_pages.py
+
+      - name: Alert on missing author pages
+        continue-on-error: true
+        uses: actions/github-script@v7
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const unmappedFile = 'unmapped_authors.json';
+
+            if (!fs.existsSync(unmappedFile)) {
+              core.info('No unmapped authors — skipping alert.');
+              return;
+            }
+
+            const unmapped = JSON.parse(fs.readFileSync(unmappedFile, 'utf8'));
+            if (!unmapped.length) {
+              core.info('unmapped_authors.json is empty — skipping alert.');
+              return;
+            }
+
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const today = new Date().toISOString().slice(0, 10);
+            const bylineList = unmapped
+              .map(u => `- **${u.byline}** — ${u.articles.join(', ')}`)
+              .join('\n');
+
+            const title = `Missing author page — ${today}`;
+            const body = [
+              '## New opinion byline(s) without an author page',
+              '',
+              'The `sync_author_pages.py` script found one or more bylines that are not',
+              'mapped in `AUTHOR_PAGE` and not listed in `SKIP_AUTHORS`.',
+              '',
+              '### Unmapped bylines',
+              bylineList,
+              '',
+              '### What to do',
+              '1. Create an author page (e.g. `author-firstname-lastname.html`) if this is a new contributor.',
+              '2. Add the normalised byline → filename mapping to `AUTHOR_PAGE` in `sync_author_pages.py`.',
+              '3. If this is an editorial desk (not an individual), add the name to `SKIP_AUTHORS` instead.',
+              '',
+              `**Workflow run:** [${context.runId}](${runUrl})`,
+            ].join('\n');
+
+            // Avoid duplicate issues for the same day (paginate to handle large backlogs)
+            const existing = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'missing-author-page',
+              per_page: 100,
+            });
+            const alreadyOpen = existing.some(i => i.title === title);
+
+            let issueUrl = '';
+            if (!alreadyOpen) {
+              const { data: created } = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['missing-author-page'],
+              });
+              issueUrl = created.html_url;
+              core.warning(`Missing author page(s) detected. GitHub issue opened: ${issueUrl}`);
+            } else {
+              issueUrl = existing.find(i => i.title === title).html_url;
+              core.warning(`Missing author page(s) detected. Issue already open: ${issueUrl}`);
+            }
+
+            const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
+            if (slackWebhookUrl && !alreadyOpen) {
+              const bylineNames = unmapped.map(u => `\`${u.byline}\``).join(', ');
+              const response = await fetch(slackWebhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  text: `:warning: *Missing author page* — ${unmapped.length} byline(s) have no author page: ${bylineNames}. An author page should be created or the name added to \`SKIP_AUTHORS\`.\n<${issueUrl}|View GitHub issue> · <${runUrl}|View workflow run>`,
+                }),
+              });
+              if (!response.ok) {
+                core.warning(`Slack notification failed: HTTP ${response.status} ${response.statusText}`);
+              }
+            } else if (!slackWebhookUrl) {
+              core.warning(`SLACK_WEBHOOK_URL not set — Slack notification skipped. Missing bylines: ${unmapped.map(u => u.byline).join(', ')}`);
+            }
+
+      - name: Regenerate _redirects
+        run: python update_redirects.py
+
       - name: Commit and push
         run: |
           git config user.name "Horn Updates Bot"
           git config user.email "bot@hornupdates.com"
-          git add articles.json opinion.html opinion-*.html sitemap.xml robots.txt
+          git add articles.json opinion.html opinion-*.html explainer-*.html author-*.html sitemap.xml robots.txt _redirects
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Auto-update articles + opinion $(date -u '+%Y-%m-%d %H:%M UTC') [skip actions]"
-            git push origin main || (git pull --no-rebase origin main && git push origin main)
+            git commit -m "Auto-update articles + opinion + author pages + redirects $(date -u '+%Y-%m-%d %H:%M UTC') [skip actions]"
+            git pull --rebase origin main
+            git push
           fi
