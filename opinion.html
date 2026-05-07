@@ -17,7 +17,22 @@
   <link rel="canonical" href="https://hornupdates.com/opinion.html" />
   <style>
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65;color:#111827;background:#f5f6f8}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65;color:#111827;background:#f1f5f9}
+    /* ── HERO (matches explainers.html) ── */
+    .hero{background:linear-gradient(160deg,#0f172a 0%,#1e3a5f 60%,#1d4ed8 100%);padding:16px 24px 20px;text-align:center;position:relative;overflow:hidden;}
+    .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+    .hero::before{content:"";position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse at center,rgba(99,179,237,.22) 0%,rgba(29,78,216,.12) 40%,transparent 70%);pointer-events:none;z-index:0;}
+    .hero>*{position:relative;z-index:1;}
+    .hero-back{font-size:.88rem;color:#93c5fd;text-decoration:none;display:inline-block;margin-bottom:8px;letter-spacing:.01em;}
+    .hero-back:hover{color:#bfdbfe;}
+    .hero-eyebrow{font-size:.78rem;font-weight:700;color:#60a5fa;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;}
+    .hero h1{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;color:#fff;margin:0 0 10px;line-height:1.15;letter-spacing:-.02em;}
+    .hero-sub{font-size:clamp(.88rem,1.8vw,1rem);color:#bfdbfe;max-width:560px;margin:0 auto 14px;line-height:1.5;}
+    .hero-stats{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;}
+    .hero-stat{text-align:center;}
+    .hero-stat .n{font-size:1.3rem;font-weight:800;color:#fff;display:block;line-height:1;}
+    .hero-stat .l{font-size:.78rem;color:#93c5fd;margin-top:4px;text-transform:uppercase;letter-spacing:.06em;}
+    /* ── CONTENT ── */
     .wrap{max-width:980px;margin:0 auto;padding:18px}
     .card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 6px 22px rgba(0,0,0,.08)}
     a{color:#2563eb;text-decoration:none}
@@ -58,180 +73,22 @@
        crossorigin="anonymous"></script>
 </head>
 <body>
-<header style="background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 20px;">
-  <div style="max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
-    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <img src="/Horn1_logo.png" alt="Horn Updates" style="width:32px;height:32px;border-radius:6px;">
-      <div>
-        <div style="font-weight:800;font-size:1rem;color:#111827;line-height:1.2;">Horn Updates</div>
-        <div style="font-size:.72rem;color:#6b7280;">Understand the Horn of Africa</div>
-      </div>
-    </a>
-    <nav style="display:flex;gap:6px;flex-wrap:wrap;">
-      <a href="/explainers.html" style="font-size:.82rem;font-weight:600;color:#374151;padding:5px 10px;border-radius:6px;background:#f3f4f6;text-decoration:none;">Explainers</a>
-      <a href="/opinion.html" style="font-size:.82rem;font-weight:600;color:#374151;padding:5px 10px;border-radius:6px;background:#f3f4f6;text-decoration:none;">Opinion</a>
-      <a href="/about.html" style="font-size:.82rem;font-weight:600;color:#374151;padding:5px 10px;border-radius:6px;background:#f3f4f6;text-decoration:none;">About</a>
-    </nav>
+<div class="hero">
+  <a href="/index.html" class="hero-back">← Back to Horn Updates</a>
+  <div class="hero-eyebrow">Horn Updates &middot; Opinion</div>
+  <h1>Opinion &amp; Analysis</h1>
+  <p class="hero-sub">Original commentary and in-depth analysis on the key issues shaping the Horn of Africa. Authors identified, sources cited.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="n">50+</span><span class="l">Pieces published</span></div>
+    <div class="hero-stat"><span class="n">7</span><span class="l">Countries covered</span></div>
+    <div class="hero-stat"><span class="n">6</span><span class="l">Analysts</span></div>
   </div>
-</header>
+</div>
   <div class="wrap">
     <div class="card">
-
-      <h1>Opinion &amp; Analysis</h1>
-      <p class="intro">Original commentary and in-depth analysis on the key issues shaping the Horn of Africa. Opinion pieces are clearly labelled and separated from news reporting. Authors are identified and sources cited where available.</p>
-
       <div class="grid">
         <!-- MAIN COLUMN -->
         <div style="display:flex;flex-direction:column;gap:14px;">
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag-green">Ethiopia</span><span class="tag tag2">Sudan</span>
-            <h2><a href="/opinion-ethiopias-rising-tensions-the-threat-of-conflict-re-eme-2026-05-07.html">Ethiopia's Rising Tensions: The Threat of Conflict Re-emerges in Tigray</a></h2>
-            <p>As Ethiopia grapples with its complex political landscape, rising tensions in Tigray threaten to unravel the fragile peace achieved after the brutal civil war. With accusations flying between Sudan and Ethiopia and a leadership crisis brewing in Tigray, the prospect of renewed conflict looms ominously over the region.</p>
-            <div class="meta">By <a href="/author-daniel-haile.html">Daniel Haile</a> &nbsp;&middot;&nbsp; May 7, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span><span class="tag tag-green">Ethiopia</span><span class="tag">Eritrea</span><span class="tag">Somalia</span>
-            <h2><a href="/opinion-the-fuel-war-how-turmoil-in-the-red-sea-is-reshaping-su-2026-05-06.html">The Fuel War: How Turmoil in the Red Sea is Reshaping Sudan's Conflict</a></h2>
-            <p>As the conflict in Sudan escalates, the control of fuel supplies has emerged as a pivotal battleground. This analysis explores how disruptions in the Red Sea are intensifying the struggle for power within Sudan, affecting regional dynamics and humanitarian conditions.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; May 6, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Analysis</span><span class="tag tag-red">Eritrea</span>
-            <h2><a href="/opinion-eritrea-us-sanctions-red-sea-2026-05-05.html">Washington Moves to Lift Eritrea Sanctions: Red Sea Strategy Rewrites the Rules</a></h2>
-            <p>A leaked U.S. document shows Washington preparing to lift sanctions on Eritrea, citing Red Sea strategy after the Iran war and Strait of Hormuz closure. Kalid Kayo examines what Washington gets, what Isaias gains, and what the people of Eritrea do not.</p>
-            <div class="meta">By <a href="/author-khalid-kayo.html">Kalid Kayo</a> &nbsp;&middot;&nbsp; May 5, 2026 &nbsp;&middot;&nbsp; ~2,300 words</div>
-          </div>
-
-
-          <div class="post">
-            <span class="tag">Analysis</span><span class="tag tag-red">Tigray</span>
-            <h2><a href="/opinion-tigray-council-debretsion-2026-05-05.html">Tigray's Legislature Returns: What Debretsion's Election Means — and What It Doesn't</a></h2>
-            <p>The Tigray State Council elected Debretsion Gebremichael as regional president on 5 May &mdash; its first session in three and a half years. Horn Updates examines what institutional revival means in a region where Pretoria's provisions remain unresolved and legitimacy questions persist.</p>
-            <div class="meta">By <a href="/author-yared-kumbi.html">Yared K Senbeto</a> &nbsp;&middot;&nbsp; May 5, 2026 &nbsp;&middot;&nbsp; ~2,200 words</div>
-          </div>
-
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span>
-            <h2><a href="/opinion-the-unraveling-of-sudan-a-call-for-urgent-international-2026-05-05.html">The Unraveling of Sudan: A Call for Urgent International Engagement</a></h2>
-            <p>As Sudan faces unprecedented turmoil amid escalating violence and humanitarian crises, the international community's response has been alarmingly tepid. Without a robust intervention strategy, the prospect of stabilization diminishes, threatening broader regional security.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; May 5, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">South Sudan</span>
-            <h2><a href="/opinion-the-dual-challenge-of-public-health-and-governance-in-s-2026-05-04.html">The Dual Challenge of Public Health and Governance in South Sudan</a></h2>
-            <p>South Sudan's recent initiatives to combat dangerous substances highlight a critical intersection of public health and governance. As the nation grapples with numerous socio-economic challenges, these efforts may be pivotal for a more stable future.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; May 4, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span>
-            <h2><a href="/opinion-the-education-crisis-in-sudan-silent-protests-and-a-loo-2026-05-03.html">The Education Crisis in Sudan: Silent Protests and a Looming Collapse</a></h2>
-            <p>As protests against inadequate teacher salaries escalate, Sudan's education system faces an imminent collapse. With teachers demanding better pay amid worsening economic conditions, the future of millions of students hangs in the balance.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; May 3, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span>
-            <h2><a href="/opinion-the-education-crisis-in-sudan-a-tipping-point-for-natio-2026-05-03.html">The Education Crisis in Sudan: A Tipping Point for National Stability</a></h2>
-            <p>As protests against low teacher salaries intensify, Sudan's education system faces a critical juncture. With the ongoing conflict and economic turmoil, the future of Sudan's youth hangs in the balance, threatening long-term stability.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; May 3, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag-yellow">Kenya</span>
-            <h2><a href="/opinion-the-unraveling-of-trust-political-jealousy-and-the-keny-2026-05-02.html">The Unraveling of Trust: Political Jealousy and the Kenyan Landscape</a></h2>
-            <p>As Kenya navigates a turbulent political landscape, the recent remarks by Kalonzo Musyoka highlight underlying tensions in alliances. The interplay of jealousy and ambition within political ranks could shape the upcoming elections and redefine party loyalties.</p>
-            <div class="meta">By Horn Updates Nairobi Desk &nbsp;&middot;&nbsp; May 2, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span>
-            <h2><a href="/opinion-the-unseen-casualties-of-conflict-civilian-suffering-in-2026-05-02.html">The Unseen Casualties of Conflict: Civilian Suffering in Sudan's Darfur Region</a></h2>
-            <p>Recent airstrikes in North Darfur have resulted in civilian casualties, highlighting the dire humanitarian crisis unfolding amidst ongoing conflict. As violence escalates, the international community faces urgent questions about intervention and support for affected populations.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; May 2, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-              <span class="tag">Opinion</span><span class="tag tag2">Eritrea</span><span class="tag tag2">Cold War</span>
-              <h2><a href="/opinion-eritrea-isaias-cia.html">Isaias Afwerki, the CIA, and Eritrea's Foundation: Why the Questions Still Matter</a></h2>
-              <p>New disclosures and converging testimonies reopen long-suppressed questions about Isaias Afwerki's early ties to the CIA and Ethiopian imperial authorities. What the evidence actually shows — and why it matters as Eritrea approaches transition.</p>
-              <div class="meta">By Yared K Senbeto &nbsp;&middot;&nbsp; May 2, 2026 &nbsp;&middot;&nbsp; ~2,600 words</div>
-            </div>
-
-            <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span><span class="tag tag2">South Sudan</span>
-            <h2><a href="/opinion-the-humanitarian-crisis-unfolding-in-sudan-a-tipping-po-2026-04-29.html">The Humanitarian Crisis Unfolding in Sudan: A Tipping Point for Refugees</a></h2>
-            <p>As the conflict in Sudan intensifies, the registration of refugees in Rumbek marks a critical moment for humanitarian efforts. With escalating violence and a worsening food crisis, the international community must confront the realities of this rapidly deteriorating situation before it spirals further out of control.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 29, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span>
-            <h2><a href="/opinion-the-battle-for-sudans-soul-who-will-control-the-future-2026-04-28.html">The Battle for Sudan's Soul: Who Will Control the Future?</a></h2>
-            <p>As Sudan grapples with a power vacuum amid ongoing conflict, the stakes have never been higher. With the potential for regional destabilization, the question remains: who will emerge as the legitimate leader and what will it mean for the Sudanese people?</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 28, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">South Sudan</span>
-            <h2><a href="/opinion-navigating-turbulence-south-sudans-struggle-for-stabili-2026-04-28.html">Navigating Turbulence: South Sudan’s Struggle for Stability in the Face of Crisis</a></h2>
-            <p>South Sudan faces a multifaceted crisis following a tragic plane crash and rising violence in Tonj. As the nation grapples with these challenges, the government must prioritize transparency and accountability to restore public trust and attract foreign investment amid a fragile peace process.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 28, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span>
-            <h2><a href="/opinion-the-mirage-of-stability-sudans-perpetual-crisis-and-the-2026-04-27.html">The Mirage of Stability: Sudan's Perpetual Crisis and the Quest for Power</a></h2>
-            <p>As Sudan grapples with ongoing conflict, the struggle for power among military factions reveals a pattern of instability that threatens the nation’s future. This analysis delves into the machinations of Sudan's generals and the implications of their actions for the country’s fragile peace.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 27, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">South Sudan</span>
-            <h2><a href="/opinion-tragedy-in-the-skies-the-luri-plane-crash-and-its-broad-2026-04-27.html">Tragedy in the Skies: The Luri Plane Crash and Its Broader Implications for South Sudan</a></h2>
-            <p>The recent plane crash near Juba, which killed all 14 aboard, underscores South Sudan's ongoing transportation challenges and governance issues. As the country grapples with its precarious infrastructure, the tragedy raises pressing questions about safety regulation and accountability in a nation still healing from conflict.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 27, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">Sudan</span><span class="tag tag-green">Ethiopia</span><span class="tag">Somalia</span><span class="tag tag2">South Sudan</span><span class="tag">Eritrea</span><span class="tag tag-yellow">Kenya</span><span class="tag">Djibouti</span><span class="tag">Somaliland</span>
-            <h2><a href="/opinion-the-unraveling-of-sudans-military-alliance-implications-2026-04-27.html">The Unraveling of Sudan's Military Alliance: Implications for the Region</a></h2>
-            <p>As Sudan's military factions increasingly fracture, the implications stretch beyond its borders, threatening regional stability. This analysis delves into the evolving power dynamics within Sudan and their potential impact on the Horn of Africa.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 27, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">South Sudan</span>
-            <h2><a href="/opinion-the-luri-plane-crash-a-tragic-reminder-of-south-sudans-2026-04-27.html">The Luri Plane Crash: A Tragic Reminder of South Sudan's Aviation Woes</a></h2>
-            <p>The recent plane crash in South Sudan that killed 15 underscores the dire state of the country's aviation sector. As the government grapples with infrastructure challenges, urgent reforms are needed to prevent further tragedies.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 27, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">South Sudan</span><span class="tag tag2">Sudan</span>
-            <h2><a href="/opinion-the-unraveling-of-peace-south-sudans-move-to-amend-the-2026-04-27.html">The Unraveling of Peace: South Sudan's Move to Amend the Peace Deal</a></h2>
-            <p>South Sudan's recent initiative to amend its peace agreement signals a troubling shift away from stability and accountability. As the government seeks to bypass established mechanisms, the implications for the fragile peace process could be dire, threatening both internal cohesion and regional relations.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 27, 2026 &nbsp;&middot;&nbsp; ~1,200 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">South Sudan</span>
-            <h2><a href="/opinion-the-mosquito-nets-initiative-a-test-of-south-sudans-com-2026-04-27.html">The Mosquito Nets Initiative: A Test of South Sudan's Commitment to Public Health</a></h2>
-            <p>South Sudan's launch of a campaign to distribute 9.5 million mosquito nets highlights a critical intersection of public health and political stability. As the nation grapples with ongoing crises, the success of this initiative could serve as a litmus test for the government's resolve to prioritize citizens' health amidst broader challenges.</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 27, 2026 &nbsp;&middot;&nbsp; ~900 words</div>
-          </div>
-
-          <div class="post">
-            <span class="tag">Opinion</span><span class="tag tag2">South Sudan</span><span class="tag tag-green">Ethiopia</span><span class="tag tag-yellow">Kenya</span>
-            <h2><a href="/opinion-a-fragile-peace-the-implications-of-kiirs-return-from-e-2026-04-26.html">A Fragile Peace: The Implications of Kiir's Return from Ethiopia</a></h2>
-            <p>President Salva Kiir's recent trip to Ethiopia raises critical questions about South Sudan's fragile peace process. As regional dynamics shift, will Kiir leverage this diplomatic engagement to solidify stability, or will internal pressures derail progress?</p>
-            <div class="meta">By <a href="/author-amira-hassan.html">Amira Hassan</a> &nbsp;&middot;&nbsp; April 26, 2026 &nbsp;&middot;&nbsp; ~900 words</div>
-          </div>
-
           <div class="post">
             <span class="tag">Opinion</span><span class="tag tag-yellow">Kenya</span>
             <h2><a href="/opinion-kenya-governance-budget.html">The Cost of Governance: Kenya's Budgetary Priorities Under Scrutiny</a></h2>
@@ -579,16 +436,16 @@
   </div>
   <footer class="site-footer">
     <nav class="footer-nav">
-      <a href="/">Home</a>
+      <a href="/index.html">Home</a>
         <a href="/explainers.html">Explainers</a>
       <a href="/about.html">About</a>
       <a href="/editorial-policy.html">Editorial Policy</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
       <a href="/contact.html">Contact</a>
+      <a href="/opinion-health.html">Pipeline status</a>
     </nav>
     <div class="footer-copy">© 2026 Horn Updates. All rights reserved.</div>
   </footer>
-<script src="/cookie-consent.js"></script>
 </body>
 </html>
