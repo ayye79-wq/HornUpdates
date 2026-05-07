@@ -7,29 +7,29 @@ https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 /index.html  /  301!
 
 # ── Extensionless → .html ─────────────────────────────────────
-# Root cause: Netlify serves /slug and /slug.html both as 200 regardless
-# of pretty_urls = false. Non-force 301 rules are ignored when a file
-# exists at the path. Fix: 200-rewrite protects direct .html requests
-# (first-match wins), then 301! force-redirects the extensionless form.
+# Netlify serves /slug and /slug.html both as 200 (pretty_urls = false has
+# no effect on serving). Non-force 301 is silently ignored when a file exists.
+# Fix: named-param 200-rewrite catches direct .html requests first (no redirect)
+# so they are never caught by the 301! wildcard rule below.
 
-# Wildcards — .html passthrough MUST come first to avoid double-redirect
-# (/opinion-foo.html would otherwise splat to /opinion-foo.html.html)
-/opinion-*.html       /opinion-:splat.html       200
-/opinion-*            /opinion-:splat.html        301!
+# Named-param passthrough — :slug matches [a-z0-9_-]+ (single path segment)
+# This catches /opinion-foo.html before /opinion-* grabs it with wrong splat.
+/opinion-:slug.html   /opinion-:slug.html   200
+/opinion-*            /opinion-:splat.html  301!
 
-/explainer-*.html     /explainer-:splat.html      200
-/explainer-*          /explainer-:splat.html      301!
+/explainer-:slug.html /explainer-:slug.html 200
+/explainer-*          /explainer-:splat.html 301!
 
-/author-*.html        /author-:splat.html         200
-/author-*             /author-:splat.html         301!
+/author-:slug.html    /author-:slug.html    200
+/author-*             /author-:splat.html   301!
 
 # Static pages — no wildcard, /contact never matches /contact.html
-/about                /about.html                 301!
-/contact              /contact.html               301!
-/disclaimer           /disclaimer.html            301!
-/editorial-policy     /editorial-policy.html      301!
-/explainers           /explainers.html            301!
-/opinion              /opinion.html               301!
-/privacy              /privacy.html               301!
-/signal-brief         /signal-brief.html          301!
-/terms                /terms.html                 301!
+/about                /about.html            301!
+/contact              /contact.html          301!
+/disclaimer           /disclaimer.html       301!
+/editorial-policy     /editorial-policy.html 301!
+/explainers           /explainers.html       301!
+/opinion              /opinion.html          301!
+/privacy              /privacy.html          301!
+/signal-brief         /signal-brief.html     301!
+/terms                /terms.html            301!
