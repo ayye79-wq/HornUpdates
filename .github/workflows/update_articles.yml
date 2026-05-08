@@ -253,11 +253,13 @@ jobs:
         run: |
           git config user.name "Horn Updates Bot"
           git config user.email "bot@hornupdates.com"
-          git add articles.json opinion.html opinion-*.html explainer-*.html author-*.html sitemap.xml robots.txt _redirects
+          git add articles.json opinion.html opinion-*.html explainer-*.html author-*.html sitemap.xml robots.txt _redirects unmapped_authors.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Auto-update articles + opinion + author pages + redirects $(date -u '+%Y-%m-%d %H:%M UTC') [skip actions]"
+            git stash --include-untracked 2>/dev/null || true
             git pull --rebase origin main
+            git stash pop 2>/dev/null || true
             git push
           fi
