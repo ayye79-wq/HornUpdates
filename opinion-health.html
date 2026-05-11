@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Opinion Pipeline Health | Horn Updates</title>
+  <meta name="description" content="Status dashboard tracking the daily opinion article generation pipeline for Horn Updates." />
+  <meta name="robots" content="noindex,follow" />
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;color:#111827;background:#f5f6f8}
+    a{color:#2563eb;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:960px;margin:0 auto;padding:18px}
+    .card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 6px 22px rgba(0,0,0,.08);margin-bottom:16px}
+
+    /* Header */
+    header{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 20px;}
+    .header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+    .site-name{font-weight:800;font-size:1rem;color:#111827;line-height:1.2;}
+    .site-sub{font-size:.72rem;color:#6b7280;}
+    nav{display:flex;gap:6px;flex-wrap:wrap;}
+    nav a{font-size:.82rem;font-weight:600;color:#374151;padding:5px 10px;border-radius:6px;background:#f3f4f6;text-decoration:none;}
+    nav a:hover{background:#e5e7eb;}
+
+    h1{margin:0 0 4px;font-size:1.5rem;}
+    .page-sub{color:#6b7280;font-size:.9rem;margin:0 0 20px;}
+
+    /* Stats row */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px;}
+    .stat{border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;text-align:center;}
+    .stat-value{font-size:2rem;font-weight:800;line-height:1;}
+    .stat-label{font-size:.8rem;color:#6b7280;margin-top:4px;}
+    .stat.green .stat-value{color:#059669;}
+    .stat.red .stat-value{color:#dc2626;}
+    .stat.yellow .stat-value{color:#d97706;}
+    .stat.blue .stat-value{color:#2563eb;}
+    .stat.purple .stat-value{color:#7c3aed;}
+    .stat.trend-warn{border-color:#f59e0b;background:#fffbeb;}
+    .stat.trend-warn .stat-value{color:#d97706;}
+    .stat.trend-alert{border-color:#ef4444;background:#fef2f2;}
+    .stat.trend-alert .stat-value{color:#dc2626;}
+    .trend-icon{font-size:1rem;margin-left:3px;vertical-align:middle;cursor:default;}
+
+    /* Calendar grid */
+    h2{font-size:1.05rem;margin:0 0 12px;color:#1e3a5f;}
+    .legend{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:12px;font-size:.8rem;color:#6b7280;}
+    .legend-dot{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:4px;vertical-align:middle;}
+    .dot-success{background:#34d399;}
+    .dot-fail-open{background:#f87171;}
+    .dot-fail-closed{background:#fbbf24;}
+    .dot-unknown{background:#e5e7eb;}
+
+    .calendar{display:flex;flex-wrap:wrap;gap:5px;}
+    .day{width:28px;height:28px;border-radius:5px;cursor:default;position:relative;flex-shrink:0;}
+    .day:hover .tooltip{display:block;}
+    .day.success{background:#34d399;}
+    .day.fail-open{background:#f87171;}
+    .day.fail-closed{background:#fbbf24;}
+    .day.unknown{background:#e5e7eb;}
+    .day.today{outline:2px solid #2563eb;outline-offset:1px;}
+
+    .tooltip{display:none;position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:#111827;color:#fff;font-size:11px;padding:5px 8px;border-radius:6px;white-space:nowrap;z-index:10;pointer-events:none;}
+    .tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#111827;}
+
+    /* Issue list */
+    .issue-list{display:flex;flex-direction:column;gap:10px;}
+    .issue-item{border:1px solid #e5e7eb;border-radius:10px;padding:12px 16px;display:flex;align-items:flex-start;gap:12px;}
+    .issue-item.open{border-left:4px solid #f87171;}
+    .issue-item.closed{border-left:4px solid #34d399;}
+    .issue-badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap;flex-shrink:0;}
+    .badge-open{background:#fef2f2;color:#991b1b;}
+    .badge-closed{background:#ecfdf5;color:#065f46;}
+    .issue-title{font-size:.9rem;font-weight:600;margin:0 0 2px;}
+    .issue-meta{font-size:.78rem;color:#9ca3af;}
+
+    /* Footer */
+    .site-footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:18px 12px;margin-top:0;}
+    .footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;margin-bottom:10px;}
+    .footer-nav a{color:#e5e7eb;text-decoration:none;font-size:14px;}
+    .footer-nav a:hover{text-decoration:underline;}
+    .footer-copy{font-size:12px;color:#9ca3af;}
+
+    .loading{color:#9ca3af;font-size:.9rem;padding:20px 0;}
+    .error-msg{color:#dc2626;font-size:.9rem;padding:10px;background:#fef2f2;border-radius:8px;}
+    .empty-msg{color:#9ca3af;font-size:.9rem;padding:10px 0;}
+    .refresh-note{font-size:.78rem;color:#9ca3af;margin-top:12px;}
+
+    @media(max-width:480px){
+      .day{width:22px;height:22px;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <img src="/Horn1_logo.png" alt="Horn Updates" style="width:32px;height:32px;border-radius:6px;">
+      <div>
+        <div class="site-name">Horn Updates</div>
+        <div class="site-sub">Understand the Horn of Africa</div>
+      </div>
+    </a>
+    <nav>
+      <a href="/explainers.html">Explainers</a>
+      <a href="/opinion.html">Opinion</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="card">
+    <h1>Opinion Pipeline Health</h1>
+    <p class="page-sub">Tracks daily opinion article generation — successes and failures — sourced from GitHub issue history. A day with no failure issue is counted as a success, based on the workflow's guarantee to open an issue on every failure.</p>
+
+    <div id="stats" class="stats">
+      <div class="stat blue"><div class="stat-value" id="stat-total">—</div><div class="stat-label">Days tracked</div></div>
+      <div class="stat green"><div class="stat-value" id="stat-success">—</div><div class="stat-label">Successes</div></div>
+      <div class="stat red"><div class="stat-value" id="stat-failures">—</div><div class="stat-label">Total failures</div></div>
+      <div class="stat yellow"><div class="stat-value" id="stat-open">—</div><div class="stat-label">Open alerts</div></div>
+      <div class="stat purple" id="stat-7day-card"><div class="stat-value" id="stat-7day">—</div><div class="stat-label">7-day success rate</div></div>
+      <div class="stat purple"><div class="stat-value" id="stat-30day">—</div><div class="stat-label">30-day success rate</div></div>
+    </div>
+
+    <h2>Last 60 Days</h2>
+    <div class="legend">
+      <span><span class="legend-dot dot-success"></span>Success</span>
+      <span><span class="legend-dot dot-fail-open"></span>Failure (open)</span>
+      <span><span class="legend-dot dot-fail-closed"></span>Failure (resolved)</span>
+      <span><span class="legend-dot dot-unknown"></span>No data</span>
+    </div>
+    <div id="calendar" class="calendar"><div class="loading">Loading…</div></div>
+  </div>
+
+  <div class="card">
+    <h2>Open Failure Alerts</h2>
+    <div id="open-issues"><div class="loading">Loading…</div></div>
+  </div>
+
+  <div class="card">
+    <h2>Recently Resolved</h2>
+    <div id="closed-issues"><div class="loading">Loading…</div></div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/editorial-policy.html">Editorial Policy</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/contact.html">Contact</a>
+  
+      <a href="/opinion-health.html">Pipeline status</a>
+    </nav>
+  <div class="footer-copy">&copy; 2026 Horn Updates. All rights reserved.</div>
+</footer>
+
+<script>
+(async function () {
+  const REPO = 'ayye79-wq/HornUpdates';
+  const API_BASE = `https://api.github.com/repos/${REPO}`;
+  const LABEL = 'opinion-failure';
+
+  // Configurable thresholds (percentage points below the 30-day rate)
+  const TREND_WARN_THRESHOLD = 10;   // yellow warning
+  const TREND_ALERT_THRESHOLD = 20;  // red alert
+
+  // Fetch all opinion-failure issues (open + closed), paginate if needed
+  async function fetchAllIssues() {
+    const results = [];
+    let page = 1;
+    while (true) {
+      const url = `${API_BASE}/issues?labels=${encodeURIComponent(LABEL)}&state=all&per_page=100&page=${page}`;
+      const res = await fetch(url, { headers: { Accept: 'application/vnd.github.v3+json' } });
+      if (!res.ok) throw new Error(`GitHub API error: ${res.status} ${res.statusText}`);
+      const data = await res.json();
+      if (!data.length) break;
+      for (const issue of data) {
+        if (!issue.pull_request) results.push(issue);
+      }
+      if (data.length < 100) break;
+      page++;
+    }
+    return results;
+  }
+
+  // Extract YYYY-MM-DD from issue title like "Opinion article generation failed — 2026-04-25"
+  function dateFromTitle(title) {
+    const m = title.match(/(\d{4}-\d{2}-\d{2})/);
+    return m ? m[1] : null;
+  }
+
+  // Format a Date as YYYY-MM-DD in UTC
+  function toISODate(d) {
+    return d.toISOString().slice(0, 10);
+  }
+
+  // Format date for display
+  function fmtDate(iso) {
+    const [y, m, d] = iso.split('-');
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${months[parseInt(m,10)-1]} ${parseInt(d,10)}, ${y}`;
+  }
+
+  function renderIssueList(issues, containerId) {
+    const el = document.getElementById(containerId);
+    if (!issues.length) {
+      el.innerHTML = '<div class="empty-msg">None.</div>';
+      return;
+    }
+    el.innerHTML = issues.map(issue => {
+      const dateStr = dateFromTitle(issue.title);
+      const displayDate = dateStr ? fmtDate(dateStr) : (issue.created_at ? fmtDate(issue.created_at.slice(0,10)) : '');
+      const closedDate = issue.closed_at ? fmtDate(issue.closed_at.slice(0,10)) : '';
+      const isOpen = issue.state === 'open';
+      const resolvedText = !isOpen && closedDate ? ` · Resolved ${closedDate}` : '';
+      return `
+        <div class="issue-item ${isOpen ? 'open' : 'closed'}">
+          <span class="issue-badge ${isOpen ? 'badge-open' : 'badge-closed'}">${isOpen ? 'OPEN' : 'RESOLVED'}</span>
+          <div>
+            <div class="issue-title"><a href="${issue.html_url}" target="_blank" rel="noopener">${escHtml(issue.title)}</a></div>
+            <div class="issue-meta">${displayDate}${resolvedText} · <a href="${issue.html_url}" target="_blank" rel="noopener">#${issue.number}</a></div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  try {
+    const issues = await fetchAllIssues();
+
+    // Build lookup: date -> {open issues, closed issues}
+    const dateMap = {}; // date -> {open: bool, closed: bool}
+    for (const issue of issues) {
+      const date = dateFromTitle(issue.title);
+      if (!date) continue;
+      if (!dateMap[date]) dateMap[date] = { open: false, closed: false, issues: [] };
+      if (issue.state === 'open') dateMap[date].open = true;
+      else dateMap[date].closed = true;
+      dateMap[date].issues.push(issue);
+    }
+
+    // Build 60-day calendar
+    const today = new Date();
+    const todayStr = toISODate(today);
+    const DAYS = 60;
+    // Pipeline started around 2026-03-22 based on earliest auto file
+    const PIPELINE_START = '2026-03-22';
+
+    const calEl = document.getElementById('calendar');
+    calEl.innerHTML = '';
+
+    let successCount = 0;
+    let failureCount = 0;
+    let openCount = 0;
+    let trackedCount = 0;
+    let week7Success = 0;
+    let week7Total = 0;
+    let day30Success = 0;
+    let day30Total = 0;
+
+    for (let i = DAYS - 1; i >= 0; i--) {
+      const d = new Date(today);
+      d.setUTCDate(d.getUTCDate() - i);
+      const dateStr = toISODate(d);
+
+      // Only count days since pipeline started
+      if (dateStr < PIPELINE_START) continue;
+
+      trackedCount++;
+      const inLast7 = i < 7;
+      const inLast30 = i < 30;
+
+      const info = dateMap[dateStr];
+      let cls, tooltipText;
+
+      if (!info) {
+        // No failure issue → assume success (pipeline ran OK)
+        cls = 'success';
+        successCount++;
+        if (inLast7) { week7Total++; week7Success++; }
+        if (inLast30) { day30Total++; day30Success++; }
+        tooltipText = `${fmtDate(dateStr)} — Success`;
+      } else if (info.open) {
+        cls = 'fail-open';
+        failureCount++;
+        openCount++;
+        if (inLast7) { week7Total++; }
+        if (inLast30) { day30Total++; }
+        tooltipText = `${fmtDate(dateStr)} — Failed (alert open)`;
+      } else if (info.closed) {
+        cls = 'fail-closed';
+        failureCount++;
+        if (inLast7) { week7Total++; }
+        if (inLast30) { day30Total++; }
+        tooltipText = `${fmtDate(dateStr)} — Failed (resolved)`;
+      } else {
+        cls = 'unknown';
+        tooltipText = `${fmtDate(dateStr)} — Unknown`;
+      }
+
+      const div = document.createElement('div');
+      div.className = `day ${cls}${dateStr === todayStr ? ' today' : ''}`;
+      div.title = tooltipText; // fallback for mobile
+      div.innerHTML = `<div class="tooltip">${tooltipText}</div>`;
+      calEl.appendChild(div);
+    }
+
+    // Update stats
+    document.getElementById('stat-total').textContent = trackedCount;
+    document.getElementById('stat-success').textContent = successCount;
+    document.getElementById('stat-failures').textContent = failureCount;
+    document.getElementById('stat-open').textContent = openCount;
+    const rate7 = week7Total > 0 ? Math.round((week7Success / week7Total) * 100) : null;
+    const rate30 = day30Total > 0 ? Math.round((day30Success / day30Total) * 100) : null;
+    document.getElementById('stat-30day').textContent = rate30 !== null ? `${rate30}%` : '—';
+
+    // Trend indicator: flag when 7-day rate is notably below the 30-day rate
+    const card7 = document.getElementById('stat-7day-card');
+    const val7El = document.getElementById('stat-7day');
+    if (rate7 !== null && rate30 !== null) {
+      const dip = rate30 - rate7;
+      if (dip >= TREND_ALERT_THRESHOLD) {
+        card7.className = 'stat trend-alert';
+        val7El.innerHTML = `${rate7}% <span class="trend-icon" title="${dip} percentage points below 30-day rate — significant reliability dip">⚠️</span>`;
+      } else if (dip >= TREND_WARN_THRESHOLD) {
+        card7.className = 'stat trend-warn';
+        val7El.innerHTML = `${rate7}% <span class="trend-icon" title="${dip} percentage points below 30-day rate — recent dip detected">⚠️</span>`;
+      } else {
+        card7.className = 'stat purple';
+        val7El.textContent = `${rate7}%`;
+      }
+    } else {
+      card7.className = 'stat purple';
+      val7El.textContent = rate7 !== null ? `${rate7}%` : '—';
+    }
+
+    // Render open issues (most recent first)
+    const openIssues = issues
+      .filter(i => i.state === 'open')
+      .sort((a, b) => b.created_at.localeCompare(a.created_at));
+    renderIssueList(openIssues, 'open-issues');
+
+    // Render last 20 closed issues (most recently closed first)
+    const closedIssues = issues
+      .filter(i => i.state === 'closed')
+      .sort((a, b) => (b.closed_at || '').localeCompare(a.closed_at || ''))
+      .slice(0, 20);
+    renderIssueList(closedIssues, 'closed-issues');
+
+    // Add refresh note
+    document.getElementById('calendar').insertAdjacentHTML('afterend',
+      '<p class="refresh-note">Data sourced from GitHub issue tracker. Reload the page to refresh. Failure = a GitHub issue was opened; success = no issue opened for that date.</p>'
+    );
+
+  } catch (err) {
+    const msg = `<div class="error-msg">Could not load data from GitHub: ${escHtml(err.message)}. Check your network or GitHub API rate limits and try again.</div>`;
+    document.getElementById('calendar').innerHTML = msg;
+    document.getElementById('open-issues').innerHTML = msg;
+    document.getElementById('closed-issues').innerHTML = msg;
+
+    function escHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
