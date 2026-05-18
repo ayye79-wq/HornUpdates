@@ -1,0 +1,29 @@
+name: Check Signal Brief Placeholders
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check-placeholders:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for unfilled 'What to Watch' placeholders
+        run: |
+          if grep -q '\[WATCH —' signal-brief.html; then
+            echo ""
+            echo "::error file=signal-brief.html::signal-brief.html still contains unfilled 'What to Watch' placeholder bullets."
+            echo ""
+            echo "The following lines contain placeholder text that must be replaced before publishing:"
+            echo ""
+            grep -n '\[WATCH —' signal-brief.html
+            echo ""
+            echo "Please open signal-brief.html, replace every '[WATCH —' bullet with the real watch language, then push again."
+            exit 1
+          else
+            echo "No placeholder bullets found in signal-brief.html. Good to publish."
+          fi
