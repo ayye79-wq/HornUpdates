@@ -1,0 +1,61 @@
+name: Midweek Placeholder Reminder
+
+on:
+  schedule:
+    - cron: '0 9 * * 3'
+  workflow_dispatch:
+
+jobs:
+  remind-placeholders:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for unfilled 'What to Watch' placeholders and notify Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          python3 - <<'PYEOF'
+          import re, json, sys, urllib.request, os
+
+          SIGNAL_FILE = "signal-brief.html"
+          PATTERN = re.compile(r'\[WATCH\s*\u2014[^\]]*\]')
+
+          with open(SIGNAL_FILE, encoding="utf-8") as f:
+              html = f.read()
+
+          matches = PATTERN.findall(html)
+
+          if not matches:
+              print("No unfilled placeholders found in signal-brief.html. Nothing to do.")
+              sys.exit(0)
+
+          bullet_lines = "\n".join(f"• {m}" for m in matches)
+          message = (
+              ":warning: *Signal Brief \u2014 unfilled \u2018What to Watch\u2019 placeholders detected*\n\n"
+              f"The following placeholder bullets in `signal-brief.html` have not been filled in yet:\n\n"
+              f"{bullet_lines}\n\n"
+              "Please open `signal-brief.html`, replace each `[WATCH \u2014 ...]` bullet with "
+              "specific, forward-looking language, and push before the brief publishes on Sunday."
+          )
+
+          payload = json.dumps({"text": message}).encode("utf-8")
+
+          webhook_url = os.environ.get("SLACK_WEBHOOK_URL", "")
+          if not webhook_url:
+              print("ERROR: SLACK_WEBHOOK_URL secret is not set. Cannot send Slack notification.")
+              sys.exit(1)
+
+          req = urllib.request.Request(
+              webhook_url,
+              data=payload,
+              headers={"Content-Type": "application/json"},
+              method="POST",
+          )
+          with urllib.request.urlopen(req) as resp:
+              print(f"Slack response: {resp.status} {resp.read().decode()}")
+
+          print(f"Slack reminder sent for {len(matches)} unfilled placeholder(s).")
+          PYEOF
