@@ -3,7 +3,7 @@ async function loadArticles() {
   const listEl = document.getElementById("stories-list");
 
   try {
-    const res = await fetch("articles.json");
+    const res = await fetch("articles.json?v=" + Date.now());
     if (!res.ok) throw new Error("Could not load articles.json");
 
     const articles = await res.json();
