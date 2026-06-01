@@ -17,6 +17,8 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_GITHUB }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -123,8 +125,8 @@ jobs:
               labels: 'opinion-failure',
             });
 
-            const alreadyOpen = issues.some(i => i.title === title);
-            if (!alreadyOpen) {
+            const existingIssue = issues.find(i => i.title === title);
+            if (!existingIssue) {
               await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -135,8 +137,8 @@ jobs:
             }
 
             const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            const issueNote = alreadyOpen
-              ? 'A GitHub issue is already open for today\'s failure.'
+            const issueNote = existingIssue
+              ? `A GitHub issue is already open for today's failure. <${existingIssue.html_url}|View issue>`
               : 'A new GitHub issue has been opened.';
             const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL;
             if (slackWebhookUrl) {
