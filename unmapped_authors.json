@@ -1,9 +1,18 @@
 [
   {
+    "byline": "Fan K Toli",
+    "articles": [
+      "/opinion-lencho-leta.html"
+    ]
+  },
+  {
     "byline": "Horn Updates Nairobi Desk",
     "articles": [
-      "/opinion-the-rising-tide-of-youth-unemployment-kenyas-pressing-c-2026-06-13.html",
-      "/opinion-protests-erupt-in-kenya-over-us-ebola-facility-a-critic-2026-06-02.html"
+      "/opinion-kenya-fuel-crisis.html",
+      "/opinion-kenya-hustler-fund.html",
+      "/opinion-kenya-job-scams.html",
+      "/opinion-kenya-odm-leadership.html",
+      "/opinion-kenya-pension-crisis.html"
     ]
   }
 ]
