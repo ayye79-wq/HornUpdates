@@ -1,6 +1,394 @@
 {
-  "generated_at": "2026-07-17T08:09:30.423404+00:00",
+  "generated_at": "2026-07-17T16:10:49.982284+00:00",
   "articles": [
+    {
+      "title": "Uganda suspends school trips after bus crash kills 20 pupil",
+      "summary": "Uganda’s Ministry of Education has suspended all school trips following a bus crash that killed at least 20 pupils and one adult in Kapchorwa District on Thursday evening. Several other pupils and school staff were injured in the accident, which happened as the group returned from an educational tour. According to preliminary investigations, the bus […] The post Uganda suspends school trips after bus crash kills 20 pupil appeared first on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Security"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T16:08:23+00:00",
+      "source_url": "https://www.eyeradio.org/uganda-suspends-school-trips-after-bus-crash-kills-20-pupil/?utm_source=rss&utm_medium=rss&utm_campaign=uganda-suspends-school-trips-after-bus-crash-kills-20-pupil",
+      "source_name": "Eye Radio",
+      "context": "The suspension of school trips in Uganda comes amid heightened concerns over road safety and the ongoing challenges faced by the education sector, particularly following the 2021 Education Act aimed at improving safety standards. The incident reflects broader issues of inadequate infrastructure and regulatory enforcement in the region, which are exacerbated by Uganda's strained resources due to the influx of South Sudanese refugees since the civil war escalated in 2013."
+    },
+    {
+      "title": "هل تستعد إسرائيل لإنشاء قاعدة عسكرية في أرض الصومال؟",
+      "summary": "أثارت تصريحات رئيس أرض الصومال بشأن احتمال إقامة قاعدة عسكرية إسرائيلية جدلاً واسعاً، وسلطت الضوء على أعمال تطوير تجري في موقعين استراتيجيين بمطار بربرة المطل على خليج عدن.",
+      "country_tags": [
+        "Somalia"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-07-17T15:49:20+00:00",
+      "source_url": "https://www.bbc.com/arabic/articles/c62xmz53ep5o?at_medium=RSS&at_campaign=rss",
+      "source_name": "BBC عربي",
+      "context": "تسعى أرض الصومال، التي أعلنت استقلالها عن الصومال منذ عام 1991 لكنها لم تُعترف دوليًا، إلى تعزيز علاقاتها مع القوى الإقليمية مثل إسرائيل. يأتي هذا في وقت تتزايد فيه التوترات في منطقة القرن الإفريقي، حيث تسعى دول مثل إثيوبيا وجيبوتي لتعزيز نفوذها. تصريحات رئيس أرض الصومال، موسى بيحي، حول قاعدة عسكرية إسرائيلية تعكس هذه الديناميكيات، خاصة بعد اتفاقات التطبيع بين إسرائيل ودول عربية في 2020."
+    },
+    {
+      "title": "Two security personnel killed in cattle camp attack in Jur River",
+      "summary": "Two security personnel have been killed after armed youth attacked a cattle camp in Jur River County of Western Bahr el Ghazal State, according to authorities. Lieutenant Colonel Santino Udhol, the police spokesperson for Western Bahr el Ghazal State, said the attack happened at around 6:30 p.m. on Tuesday near a police station in the […] The post Two security personnel killed in cattle camp attack in Jur River appeared first on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Security"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T15:24:29+00:00",
+      "source_url": "https://www.eyeradio.org/two-security-personnel-killed-in-cattle-camp-attack-in-jur-river/?utm_source=rss&utm_medium=rss&utm_campaign=two-security-personnel-killed-in-cattle-camp-attack-in-jur-river",
+      "source_name": "Eye Radio",
+      "context": "The attack in Jur River County highlights the ongoing tensions in South Sudan, particularly among armed youth groups vying for control over cattle, a vital resource. This incident follows the 2018 Revitalized Peace Agreement aimed at ending years of civil war, which has yet to fully stabilize the region. The persistent violence underscores the challenges faced by the South Sudanese government in enforcing security and maintaining peace in rural areas."
+    },
+    {
+      "title": "Kiir directs SPLM leaders to promote peace ahead of 2026 elections",
+      "summary": "President Salva Kiir has directed senior leaders of the Sudan People’s Liberation Movement (SPLM) to intensify efforts to preserve peace and security ahead of the general elections scheduled for December. Kiir issued the directive on Friday during a meeting with SPLM chairpersons from the states and administrative areas, attended by the party’s Secretary-General, Dr. Akol […] The post Kiir directs SPLM leaders to promote peace ahead of 2026 elections appeared first on Eye Radio .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Politics"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T14:54:17+00:00",
+      "source_url": "https://www.eyeradio.org/kiir-directs-splm-leaders-to-promote-peace-ahead-of-2026-elections/?utm_source=rss&utm_medium=rss&utm_campaign=kiir-directs-splm-leaders-to-promote-peace-ahead-of-2026-elections",
+      "source_name": "Eye Radio",
+      "context": "The directive from President Salva Kiir comes in the wake of the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, which aimed to end years of civil war. With general elections set for December 2026, the SPLM faces pressure to ensure stability amid ongoing tensions with opposition factions, particularly the Sudan People's Liberation Movement-In Opposition (SPLM-IO) led by Riek Machar, as well as rising ethnic divisions and economic challenges."
+    },
+    {
+      "title": "NBE Account Number Issuance Service for New Importers, Exporters Goes Digital",
+      "summary": "ADDIS ABABA – The National Bank of Ethiopia (NBE) has introduced a new digital service that streamlines issuance of NBE account numbers for newly licensed importers and exporters.",
+      "country_tags": [
+        "Ethiopia"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T14:38:42+00:00",
+      "source_url": "https://ethiopianmonitor.com/2026/07/17/nbe-account-number-issuance-service-for-new-importers-exporters-goes-digital/",
+      "source_name": "Ethiopian Monitor",
+      "context": "The introduction of the digital NBE account number issuance service comes amid Ethiopia's efforts to revitalize its economy following the Tigray conflict, which officially ended with a peace agreement in November 2022. As the government seeks to attract foreign investment and boost trade, this initiative aims to simplify processes for new importers and exporters, enhancing economic recovery and integration into the global market."
+    },
+    {
+      "title": "South Sudan begins developing national 5G Strategy",
+      "summary": "South Sudan has started developing a National Spectrum Management and 5G Strategy aimed at preparing the country for next-generation mobile technology and improved digital connectivity. The National Communication Authority (NCA) announced the initiative on Thursday following a two-day inception workshop in Juba. The workshop brought together representatives from the Ministry of ICT and Postal Services, […] The post South Sudan begins developing national 5G Strategy appeared first on Eye Radio .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T14:36:28+00:00",
+      "source_url": "https://www.eyeradio.org/south-sudan-begins-developing-national-5g-strategy/?utm_source=rss&utm_medium=rss&utm_campaign=south-sudan-begins-developing-national-5g-strategy",
+      "source_name": "Eye Radio",
+      "context": "South Sudan, which gained independence from Sudan in 2011, has faced years of civil conflict that have hindered its infrastructure development. The peace agreement signed in 2018 aimed to stabilize the country, but challenges remain. The recent push for a 5G strategy reflects the government's efforts to enhance digital connectivity and economic growth, particularly as it seeks to attract foreign investment and improve communication in a region still recovering from years of instability."
+    },
+    {
+      "title": "Catholic bishops: South Sudan faces looming constitutional crisis over elections",
+      "summary": "Catholic bishops from South Sudan’s Ecclesiastical Province of Juba have warned that the country faces The post Catholic bishops: South Sudan faces looming constitutional crisis over elections appeared first on Radio Tamazuj .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T14:32:21+00:00",
+      "source_url": "https://www.radiotamazuj.org/en/news/article/catholic-bishops-south-sudan-faces-looming-constitutional-crisis-over-elections",
+      "source_name": "Radio Tamazuj",
+      "context": "South Sudan has been grappling with political instability since its independence in 2011, exacerbated by a civil war that erupted in 2013. The Revitalized Agreement on the Resolution of the Conflict in South Sudan, signed in September 2018, aimed to establish a transitional government and conduct elections, but delays and disputes over the electoral process have raised concerns. The bishops' warning highlights the urgency of addressing these issues before the elections scheduled for 2024."
+    },
+    {
+      "title": "Ministry confirms South Sudan remains Ebola-free after 10 cases test negative",
+      "summary": "The Ministry of Health says all 10 suspected Ebola cases have tested negative, confirming that the country remains free of the deadly disease. According to the ministry, samples from the suspected cases were collected from Juba, Yambio, and Nimule. Speaking to the media in Juba this morning, the Undersecretary in the Ministry of Health, Dr. […] The post Ministry confirms South Sudan remains Ebola-free after 10 cases test negative appeared first on Eye Radio .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Health"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T14:17:30+00:00",
+      "source_url": "https://www.eyeradio.org/ministry-confirms-south-sudan-remains-ebola-free-after-10-cases-test-negative/?utm_source=rss&utm_medium=rss&utm_campaign=ministry-confirms-south-sudan-remains-ebola-free-after-10-cases-test-negative",
+      "source_name": "Eye Radio",
+      "context": "South Sudan has faced significant health challenges since its independence in 2011, including outbreaks of diseases like Ebola and cholera amid ongoing conflict and instability. The recent Ebola scare follows a resurgence of the virus in neighboring countries, raising concerns about cross-border transmission. The government's swift response to test suspected cases reflects its commitment to public health, especially in light of the 2014 Ebola outbreak in West Africa that highlighted the region's vulnerability to infectious diseases."
+    },
+    {
+      "title": "AfCFTA urges South Sudan to fast-track trade agreement ratification",
+      "summary": "The African Continental Free Trade Area (AfCFTA) Secretariat has urged South Sudan to accelerate ratification of the AfCFTA Agreement, saying the move would open the country’s businesses to a continental market of more than 50 African countries and create new opportunities for trade, investment, and industrialization. Speaking at a press conference in Juba on Thursday […] The post AfCFTA urges South Sudan to fast-track trade agreement ratification appeared first on Eye Radio .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Business & Economy",
+        "Diplomacy"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T13:12:13+00:00",
+      "source_url": "https://www.eyeradio.org/afcfta-urges-south-sudan-to-fast-track-trade-agreement-ratification/?utm_source=rss&utm_medium=rss&utm_campaign=afcfta-urges-south-sudan-to-fast-track-trade-agreement-ratification",
+      "source_name": "Eye Radio",
+      "context": "South Sudan, which gained independence from Sudan in 2011, has faced ongoing internal conflict and economic challenges, hindering its integration into regional trade frameworks. The AfCFTA, launched in 2021, aims to boost intra-African trade, but South Sudan's ratification has been delayed due to political instability and governance issues. The urgency for ratification is heightened as the country seeks to stabilize its economy and attract foreign investment amidst ongoing peace negotiations and efforts to rebuild post-conflict."
+    },
+    {
+      "title": "Court dismisses prosecution’s bid for accused’s written statements as premature",
+      "summary": "The Special Court trying suspended First Vice President Dr. Riek Machar and his co-accused on The post Court dismisses prosecution’s bid for accused’s written statements as premature appeared first on Radio Tamazuj .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Politics",
+        "Justice & Rights"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T13:11:09+00:00",
+      "source_url": "https://www.radiotamazuj.org/en/news/article/court-dismisses-prosecutions-bid-for-accuseds-written-statements-as-premature",
+      "source_name": "Radio Tamazuj",
+      "context": "The dismissal of the prosecution's request comes amid ongoing tensions in South Sudan, where Dr. Riek Machar, a key figure in the civil war that erupted in 2013, has faced multiple legal challenges since his suspension in 2020. This case is significant as it reflects the fragile peace established by the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, which aimed to stabilize the country after years of violence and power struggles."
+    },
+    {
+      "title": "Court allows Machar, co-accused to continue oral defence",
+      "summary": "The Special Court trying suspended First Vice President Dr. Riek Machar and seven co-accused has rejected a prosecution request to require the remaining defendants to submit written statements, allowing the accused to continue presenting their defence orally. The prosecution had asked the court to require the remaining five defendants to submit prepared and typed written […] The post Court allows Machar, co-accused to continue oral defence appeared first on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Politics",
+        "Justice & Rights"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T12:39:23+00:00",
+      "source_url": "https://www.eyeradio.org/court-allows-machar-co-accused-to-continue-oral-defence/?utm_source=rss&utm_medium=rss&utm_campaign=court-allows-machar-co-accused-to-continue-oral-defence",
+      "source_name": "Eye Radio",
+      "context": "The trial of Dr. Riek Machar, a key figure in South Sudan's civil war, stems from ongoing tensions following the 2013 conflict that pitted his faction against President Salva Kiir's government. The 2018 Revitalized Peace Agreement aimed to stabilize the country, but political rivalries and accusations of corruption persist, making this court ruling significant as it reflects the fragile state of justice and governance in South Sudan amidst ongoing power struggles."
+    },
+    {
+      "title": "Journalists urged to learn human rights laws to protect freedoms",
+      "summary": "The Union of Journalists of South Sudan (UJoSS), in partnership with the South Sudan Human The post Journalists urged to learn human rights laws to protect freedoms appeared first on Radio Tamazuj .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Justice & Rights"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T12:36:34+00:00",
+      "source_url": "https://www.radiotamazuj.org/en/news/article/journalists-urged-to-learn-human-rights-laws-to-protect-freedoms",
+      "source_name": "Radio Tamazuj",
+      "context": "The call for journalists in South Sudan to learn human rights laws comes amid ongoing tensions following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, which aimed to end years of civil war. Despite the peace agreement, violence and repression of press freedoms persist, with the government often targeting journalists for reporting on human rights abuses. This context underscores the urgent need for media professionals to understand and advocate for their rights."
+    },
+    {
+      "title": "السجن المؤبد لـ”دكتور فود” وشركائه بتهمة وضع المخدرات في البسكويت",
+      "summary": "حكمت محكمة جنايات جبل لبنان غيابيا على جورج حنّا ديب الملقب بـ”دكتور فود” وعدد من أعوانه بالأشغال الشاقة المؤبدة بعد إدانتهم بتصنيع وتهريب المخدرات. وشمل الحكم كلا من: كمال عباس رمضان (سوري، موقوف وجاهيا)، وأحمد دولف اليوسف (سوري، موقوف غيابيا)، وعبد الكريم زاهر السالم (سوري، موقوف وجاهيا)، وحسن عطية دياب (موقوف غيابيا)، إضافة إلى محمد …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-07-17T12:30:17+00:00",
+      "source_url": "https://www.alnilin.com/13478596.htm",
+      "source_name": "النيلين",
+      "context": "تأتي هذه القضية في وقت تتصاعد فيه المخاوف من انتشار المخدرات في منطقة الشرق الأوسط، خاصة في ظل الأزمات الاقتصادية والسياسية التي تعاني منها دول مثل لبنان وسوريا. كما أن تصاعد نشاط شبكات تهريب المخدرات يعكس ضعف السيطرة الأمنية في هذه الدول، مما يزيد من تعقيد الوضع الأمني في المنطقة. تزامن الحكم مع جهود الحكومة اللبنانية لمكافحة المخدرات، خاصة بعد اتفاقيات التعاون مع الدول المجاورة في عام 2022."
+    },
+    {
+      "title": "Court defers police officer’s assault case verdict",
+      "summary": "The Emergency Special Court for Organised Forces in Juba on Friday postponed the delivery of The post Court defers police officer’s assault case verdict appeared first on Radio Tamazuj .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Justice & Rights"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T11:57:56+00:00",
+      "source_url": "https://www.radiotamazuj.org/en/news/article/court-defers-police-officers-assault-case-verdict-over-administrative-issues",
+      "source_name": "Radio Tamazuj",
+      "context": "The postponement of the verdict in the police officer’s assault case comes amid ongoing tensions in South Sudan, where issues of law enforcement accountability have been exacerbated by the 2018 Revitalized Peace Agreement. This agreement aimed to end years of civil conflict but has faced challenges, including persistent violence and human rights abuses, undermining public trust in the justice system. The case highlights the broader struggle for rule of law in a country still grappling with its tumultuous past."
+    },
+    {
+      "title": "Gov’t urges candlelight celebrations, says no money for Martyrs’ Day",
+      "summary": "South Sudan’s Ministry of Culture, Museums, and National Heritage on Friday announced that there will The post Gov’t urges candlelight celebrations, says no money for Martyrs’ Day appeared first on Radio Tamazuj .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T11:43:01+00:00",
+      "source_url": "https://www.radiotamazuj.org/en/news/article/govt-urges-candlelight-celebrations-says-no-money-for-martyrs-day",
+      "source_name": "Radio Tamazuj",
+      "context": "South Sudan has faced ongoing instability since its independence from Sudan in 2011, marked by a civil war that erupted in 2013 and lasted until a peace agreement was signed in 2018. The government's decision to forego traditional Martyrs' Day celebrations, urging instead for candlelight observances, reflects the country's economic struggles and the need for reconciliation amidst lingering tensions among various factions, particularly between President Salva Kiir's government and opposition groups."
+    },
+    {
+      "title": "Juba City Council passes property tax bylaw 2026",
+      "summary": "The Juba City Council has passed the Property Tax Bylaw 2026 in a move authorities say will strengthen the legal framework for collecting property taxes and improve the delivery of municipal services in the capital. The council said the bylaw provides a clearer legal basis for administering property taxes to increase local revenue and support […] The post Juba City Council passes property tax bylaw 2026 appeared first on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Business & Economy"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T11:09:09+00:00",
+      "source_url": "https://www.eyeradio.org/juba-city-council-passes-property-tax-bylaw-2026/?utm_source=rss&utm_medium=rss&utm_campaign=juba-city-council-passes-property-tax-bylaw-2026",
+      "source_name": "Eye Radio",
+      "context": "The passage of the Property Tax Bylaw 2026 comes amid South Sudan's ongoing efforts to stabilize its economy following years of civil conflict that began in 2013. With the Revitalized Agreement on the Resolution of the Conflict in South Sudan (R-ARCSS) signed in 2018, the Juba City Council aims to enhance local governance and revenue generation, addressing the urgent need for improved public services in a city grappling with infrastructure deficits and economic challenges."
+    },
+    {
+      "title": "Government pledges support for voluntary return of South Sudanese from Egypt",
+      "summary": "The Minister of Humanitarian Affairs, Albino Akol Atak, has pledged to work with humanitarian and development partners to mobilize resources for the safe, voluntary, and dignified return of South Sudanese nationals. Minister Akol made the pledge on Wednesday following a meeting with South Sudan’s Ambassador to Egypt, Kuol Nyok Kuol. The meeting discussed the challenges […] The post Government pledges support for voluntary return of South Sudanese from Egypt appeared first on Eye Radio .",
+      "country_tags": [
+        "Sudan",
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "Politics",
+        "Humanitarian",
+        "Diplomacy"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T10:54:40+00:00",
+      "source_url": "https://www.eyeradio.org/government-pledges-support-for-voluntary-return-of-south-sudanese-from-egypt/?utm_source=rss&utm_medium=rss&utm_campaign=government-pledges-support-for-voluntary-return-of-south-sudanese-from-egypt",
+      "source_name": "Eye Radio",
+      "context": "The ongoing conflict in South Sudan, which erupted in December 2013, has led to a significant refugee crisis, with many South Sudanese seeking asylum in neighboring countries, including Egypt. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to restore peace, but instability persists, prompting the need for organized repatriation efforts. The recent meeting between Minister Akol and Ambassador Kuol highlights the government's commitment to addressing the plight of its citizens abroad amid these challenges."
+    },
+    {
+      "title": "Western Equatoria orders return of 30 recovered cattle to Mundari community",
+      "summary": "The Governor of Western Equatoria State, Daniel Badagbu Rimbasa, has ordered the return of 30 recovered cattle belonging to the Mundari community of Central Equatoria State as part of efforts to promote peace and reconciliation. Governor Badagbu issued the directive during a meeting with the commissioners of Mundri East and Mundri West counties in Yambio. […] The post Western Equatoria orders return of 30 recovered cattle to Mundari community appeared first on Eye Radio .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T10:39:56+00:00",
+      "source_url": "https://www.eyeradio.org/western-equatoria-orders-return-of-30-recovered-cattle-to-mundari-community/?utm_source=rss&utm_medium=rss&utm_campaign=western-equatoria-orders-return-of-30-recovered-cattle-to-mundari-community",
+      "source_name": "Eye Radio",
+      "context": "The return of the 30 recovered cattle is significant in the context of ongoing tensions between the Mundari community of Central Equatoria State and various ethnic groups in Western Equatoria. Historically, cattle raiding has fueled conflict in South Sudan, particularly following the 2018 Revitalized Peace Agreement, which aimed to address such issues. Governor Daniel Badagbu's directive reflects efforts to foster reconciliation and stability in a region still grappling with the legacies of civil war and ethnic strife."
+    },
+    {
+      "title": "Governor Monytuil launches rehabilitation of Mayom-Ajakuach Road",
+      "summary": "Unity State Governor Dr. Joseph Monytuil on Thursday officially launched the construction of the vital The post Governor Monytuil launches rehabilitation of Mayom-Ajakuach Road appeared first on Radio Tamazuj .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T10:21:59+00:00",
+      "source_url": "https://www.radiotamazuj.org/en/news/article/governor-monytuil-launches-rehabilitation-of-mayom-ajakuach-road",
+      "source_name": "Radio Tamazuj",
+      "context": "The rehabilitation of the Mayom-Ajakuach Road is significant as it connects key areas in Unity State, which has been affected by ongoing conflicts since South Sudan's independence in 2011. The road's improvement is part of broader efforts to enhance infrastructure and promote stability following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, aimed at fostering peace and economic development in the region."
+    },
+    {
+      "title": "Governor Badagbu directs commissioners to prioritize security, elections",
+      "summary": "Western Equatoria State Governor Daniel Badagbu Rimbasa has instructed the state’s 10 county commissioners to The post Governor Badagbu directs commissioners to prioritize security, elections appeared first on Radio Tamazuj .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T09:50:20+00:00",
+      "source_url": "https://www.radiotamazuj.org/en/news/article/governor-badagbu-directs-commissioners-to-prioritize-security-election-preparations",
+      "source_name": "Radio Tamazuj",
+      "context": "Western Equatoria State has faced ongoing instability due to intercommunal violence and clashes between armed groups, particularly since the signing of the Revitalized Agreement on the Resolution of the Conflict in South Sudan in 2018. Governor Badagbu's directive comes amid heightened tensions as the country prepares for the delayed elections originally scheduled for 2023, emphasizing the need for security to ensure a peaceful electoral process and stability in the region."
+    },
+    {
+      "title": "Thomas Nkono, Tony Sylva and Vozinha: The making of Africa’s goalkeeping greats",
+      "summary": "Vozinha pulled off eight incredible saves against Argentina.",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T09:37:11+00:00",
+      "source_url": "https://nation.africa/kenya/sports/football/thomas-nkono-tony-sylva-vozinha-goalkeeping-greats-5529706",
+      "source_name": "Nation Africa",
+      "context": "The Horn of Africa has seen a surge in sports diplomacy, with football serving as a unifying force amid ongoing conflicts. The recent performance of African goalkeepers, like Vozinha's standout saves against Argentina, highlights the region's growing talent on the international stage. This comes at a time when nations like Ethiopia and Somalia are seeking to bolster national pride through sports, particularly following the 2022 African Cup of Nations qualifiers that reignited interest in regional football."
+    },
+    {
+      "title": "Ebola: Disputed Kenyan isolation centre in operation, US charity reveals",
+      "summary": "Authorities are not allowing the group to leave the facility to travel anywhere else in the...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T09:12:53+00:00",
+      "source_url": "https://nation.africa/kenya/news/ebola-us-aid-workers-forced-quarantine-at-kenyan-facility-5529716",
+      "source_name": "Nation Africa",
+      "context": "The establishment of the isolation center in Kenya comes amid heightened concerns over Ebola outbreaks in neighboring countries, particularly the Democratic Republic of Congo, where the last outbreak was declared in April 2023. The Kenyan government has faced criticism for its handling of health crises, particularly following the 2014-2016 Ebola outbreak in West Africa. The U.S. charity's involvement highlights ongoing tensions between local authorities and international organizations regarding public health management and transparency."
+    },
+    {
+      "title": "What women sacrifice to become leaders",
+      "summary": "Women don't stop being daughters, wives, or mothers the day they take a senior role. The job is...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T09:00:00+00:00",
+      "source_url": "https://nation.africa/kenya/news/gender/what-women-sacrifice-to-become-leaders-5529128",
+      "source_name": "Nation Africa",
+      "context": "In Kenya, the 2010 Constitution aimed to promote gender equality, mandating that at least one-third of elected positions be held by women. Despite this legal framework, cultural norms and political resistance persist, exemplified by the recent 2022 elections where only 22% of parliamentary seats were won by women. As women like Governor Anne Waiguru and MP Sabina Chege navigate these challenges, their experiences highlight the sacrifices required to break through entrenched barriers in leadership."
+    },
+    {
+      "title": "هل تشاجر مع ميسي؟.. بيلينغهام يضع حدا للشائعات",
+      "summary": "حسم الإنجليزي جود بيلينغهام الجدل حول اللقطة التي جمعته بقائد الأرجنتين ليونيل ميسي خلال مواجهة المنتخبين في نصف نهائي مونديال 2026، مؤكدا أن ما حدث نقاش عادي. وكانت عدسات الكاميرات رصدت تبادلا للكلمات والنظرات بين اللاعبين عقب إحدى الكرات المشتركة، ما دفع البعض إلى التكهن بوجود توتر بينهما. وأوضح بيلينغهام أن الحديث دار حول قرار …",
+      "country_tags": [
+        "Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "ar",
+      "published_at": "2026-07-17T08:30:15+00:00",
+      "source_url": "https://www.alnilin.com/13478594.htm",
+      "source_name": "النيلين",
+      "context": "تأتي هذه التصريحات في وقت يشهد فيه العالم الرياضي توترات متزايدة بين اللاعبين الدوليين، خاصة بعد الأحداث السياسية الأخيرة في منطقة الشرق الأوسط. كما أن كأس العالم 2026، الذي سيقام في الولايات المتحدة وكندا والمكسيك، يمثل فرصة كبيرة للفرق لتعزيز مكانتها، مما يزيد من أهمية الأداء والتفاعلات بين اللاعبين. بيلينغهام، الذي يعتبر من أبرز المواهب الشابة، يسعى لتأكيد روح التعاون في ظل هذه الضغوط."
+    },
+    {
+      "title": "Gen Muhoozi Warns Ugandans Not to Ignore His Jokes, Says “I’m Always Serious About What I Say”",
+      "summary": "Uganda’s Chief of Defence Forces, Gen Muhoozi Kainerugaba, has sparked debate online after warning that his humorous social The post Gen Muhoozi Warns Ugandans Not to Ignore His Jokes, Says “I’m Always Serious About What I Say” appeared first on The Nile Post .",
+      "country_tags": [
+        "South Sudan"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T08:07:40+00:00",
+      "source_url": "https://thenilepost.com/en/news/story/gen-muhoozi-warns-ugandans-not-to-ignore-his-jokes-says-im-always-serious-about-what-i-say/",
+      "source_name": "The Nile Post",
+      "context": "Gen Muhoozi Kainerugaba, son of Ugandan President Yoweri Museveni, has been a controversial figure in Uganda's political landscape, especially following his 2021 social media comments hinting at presidential ambitions. His recent remarks come amid heightened tensions in the region, particularly with South Sudan, where instability continues to affect bilateral relations. The dynamics of military leadership and political succession in Uganda are critical as the country approaches the 2026 elections, making his statements particularly significant."
+    },
     {
       "title": "Court Rejects State’s Bid to Summon Missing NUP Deputy President Muwanga Kivumbi",
       "summary": "Former Butambala County MP and National Unity Platform (NUP) Deputy President for Buganda, Muhammad Muwanga Kivumbi, failed to The post Court Rejects State’s Bid to Summon Missing NUP Deputy President Muwanga Kivumbi appeared first on The Nile Post .",
@@ -15,7 +403,7 @@
       "published_at": "2026-07-17T08:06:16+00:00",
       "source_url": "https://thenilepost.com/en/politics/story/court-rejects-states-bid-to-summon-missing-nup-deputy-president-muwanga-kivumbi/",
       "source_name": "The Nile Post",
-      "context": "The case of Muhammad Muwanga Kivumbi is significant amid ongoing political tensions in Uganda, particularly following the 2021 elections, which were marred by allegations of electoral fraud and violence. Kivumbi, a prominent figure in the National Unity Platform (NUP), has been missing since June 2023, raising concerns about state repression against opposition leaders. His disappearance highlights the broader struggle for political rights and justice in a climate of increasing authoritarianism under President Yoweri Museveni's regime."
+      "context": "The case of Muhammad Muwanga Kivumbi is significant amid ongoing tensions in Uganda, particularly following the controversial 2021 elections that saw the National Unity Platform (NUP) emerge as a key opposition force against President Yoweri Museveni's long-standing regime. Kivumbi's disappearance is emblematic of the broader crackdown on dissent, with numerous opposition figures facing intimidation and abduction, raising concerns about human rights violations and the integrity of Uganda's political landscape."
     },
     {
       "title": "Uganda discharges last Ebola patient as outbreak continues in DR Congo",
@@ -31,6 +419,51 @@
       "source_url": "https://www.eyeradio.org/uganda-discharges-last-ebola-patient-as-outbreak-continues-in-dr-congo/?utm_source=rss&utm_medium=rss&utm_campaign=uganda-discharges-last-ebola-patient-as-outbreak-continues-in-dr-congo",
       "source_name": "Eye Radio",
       "context": "The recent Ebola outbreak in Uganda, which began in September 2022, highlighted the region's vulnerability to infectious diseases amid ongoing health challenges. The Democratic Republic of Congo has faced recurrent Ebola outbreaks since 1976, with the most recent one declared in April 2023, exacerbated by political instability and inadequate healthcare infrastructure. The close proximity of these two countries, along with their shared borders, raises concerns about cross-border transmission and regional health security."
+    },
+    {
+      "title": "Daniel Miringa: How 'People's IEBC' tracked Ol Kalou by-election",
+      "summary": "",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Politics"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T08:02:12+00:00",
+      "source_url": "https://nation.africa/kenya/videos/daniel-miringa-how-people-s-iebc-tracked-ol-kalou-by-election-5529700",
+      "source_name": "Nation Africa",
+      "context": "The Ol Kalou by-election, held on August 29, 2023, was significant amid ongoing tensions following the controversial 2022 general elections in Kenya, which saw widespread allegations of electoral malpractice. The emergence of the 'People's IEBC,' a grassroots initiative, reflects growing public disillusionment with the official Independent Electoral and Boundaries Commission (IEBC) and its handling of electoral processes. This dynamic highlights the increasing demand for transparency and accountability in Kenya's political landscape."
+    },
+    {
+      "title": "Study finds 2024 Gen Z grievances still persist today",
+      "summary": "'What we wanted in 2024 has not been achieved...the problems remain.' — Adrian Oluoch, Civic...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "General"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T08:00:00+00:00",
+      "source_url": "https://nation.africa/kenya/news/study-finds-2024-gen-z-grievances-still-persist-today--5529640",
+      "source_name": "Nation Africa",
+      "context": "In Kenya, the grievances of Gen Z have roots in the 2010 Constitution, which aimed to address youth unemployment and political disenfranchisement. Despite promises of reform, the 2022 elections revealed persistent issues, including corruption and economic instability, exacerbated by the COVID-19 pandemic. The ongoing political tensions between President William Ruto's administration and opposition figures like Raila Odinga further complicate the situation, leaving many young Kenyans feeling disillusioned and unheard."
+    },
+    {
+      "title": "Kericho-born engineer targets smart farming systems",
+      "summary": "Taita Ngetich is working to help farmers navigate climate uncertainty by establishing precision...",
+      "country_tags": [
+        "Kenya"
+      ],
+      "topic_tags": [
+        "Climate"
+      ],
+      "language": "en",
+      "published_at": "2026-07-17T07:54:27+00:00",
+      "source_url": "https://nation.africa/kenya/business/seeds-of-gold/kericho-born-engineer-targets-smart-farming-systems--5529678",
+      "source_name": "Nation Africa",
+      "context": "Kenya's agricultural sector faces increasing challenges due to climate change, with erratic weather patterns impacting crop yields. In 2021, the government launched the National Climate Change Action Plan, emphasizing the need for innovative agricultural technologies. Taita Ngetich's initiative aligns with this national effort, aiming to enhance food security and resilience among farmers, particularly in regions like Kericho that are vulnerable to climate variability."
     },
     {
       "title": "Central Equatoria calls for calm after border clashes with Uganda",
@@ -76,7 +509,7 @@
       "published_at": "2026-07-17T07:05:56+00:00",
       "source_url": "https://thenilepost.com/en/uncategorized/story/i-pay-3-6-billion-yearly-frank-gashumba-laments-corruption-says-losing-taxpayers-money-causes-him-so-much-pain/",
       "source_name": "The Nile Post",
-      "context": "Frank Gashumba's comments come amid ongoing concerns about corruption in Uganda, particularly following the 2021 presidential elections, which were marred by allegations of electoral fraud and repression. The Ugandan government, led by President Yoweri Museveni, has faced increasing scrutiny from civil society and international observers regarding its handling of public funds. This context highlights the broader issues of governance and accountability in East Africa, where similar challenges persist in neighboring countries like South Sudan."
+      "context": "Frank Gashumba's comments come amid increasing public discontent over corruption in Uganda, particularly following the 2021 elections, which were marred by allegations of electoral fraud and suppression of dissent. The Ugandan government's ongoing struggles with transparency and accountability have exacerbated tensions, especially as citizens grapple with economic hardships exacerbated by the COVID-19 pandemic. This context highlights the broader implications of corruption on governance and public trust in the region."
     },
     {
       "title": "Tragedy on Mbale–Iganga Highway! School Bus Carrying Students Crashes Into Trailer, Driver Killed and Several Injured",
@@ -91,7 +524,7 @@
       "published_at": "2026-07-17T07:03:37+00:00",
       "source_url": "https://thenilepost.com/en/news/story/tragedy-on-mbale-iganga-highway-school-bus-carrying-students-crashes-into-trailer-driver-killed-and-several-injured/",
       "source_name": "The Nile Post",
-      "context": "The Mbale–Iganga Highway has been a critical route for transportation in Uganda, often plagued by accidents due to poor road conditions and inadequate safety measures. This incident comes amid ongoing discussions about road safety reforms following the 2020 National Road Safety Action Plan, which aimed to reduce traffic-related fatalities. The tragic crash highlights the urgent need for improved infrastructure and enforcement of traffic regulations in a region still recovering from the impacts of civil unrest and economic challenges."
+      "context": "The Mbale–Iganga Highway is a critical transport route in Uganda, often used by school buses and commercial vehicles. The region has faced increasing road safety concerns amid ongoing infrastructure challenges and a rise in traffic accidents. This incident highlights the urgent need for improved road safety measures, particularly as the Ugandan government has been under pressure since the 2020 National Road Safety Strategy was introduced to reduce fatalities on the roads."
     },
     {
       "title": "Kiir officially opens Juba International Airport’s Terminal 3",
@@ -107,7 +540,7 @@
       "published_at": "2026-07-17T06:47:03+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/kiir-officially-opens-juba-international-airports-terminal-3",
       "source_name": "Radio Tamazuj",
-      "context": "The opening of Terminal 3 at Juba International Airport comes amid ongoing efforts to stabilize South Sudan following years of civil conflict that erupted in 2013. The peace agreement signed in 2018 between President Salva Kiir and opposition leader Riek Machar aimed to end hostilities and promote development. This infrastructure investment is seen as a crucial step towards rebuilding the nation and enhancing regional connectivity, especially as South Sudan seeks to attract foreign investment."
+      "context": "The opening of Terminal 3 at Juba International Airport comes amid ongoing efforts to stabilize South Sudan following years of civil conflict that erupted in 2013. This development aligns with the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan, which aims to foster peace and economic growth. Enhanced airport facilities are crucial for improving connectivity and attracting investment, particularly as the country seeks to recover from its protracted humanitarian crisis."
     },
     {
       "title": "China's audacious bid to hijack global AI governance",
@@ -122,7 +555,7 @@
       "published_at": "2026-07-17T06:45:00+00:00",
       "source_url": "https://nation.africa/kenya/news/world/china-s-audacious-bid-to-hijack-global-ai-governance-5529608",
       "source_name": "Nation Africa",
-      "context": "China's increasing influence in Africa, particularly through the Belt and Road Initiative launched in 2013, has raised concerns among local governments about dependency on Chinese technology and investment. In Kenya, the 2021 agreement to establish a digital economy framework with China highlights the growing ties, while Xi's recent warnings about AI governance resonate amid ongoing debates about data privacy and security in the region, especially following the 2022 elections that emphasized digital surveillance issues."
+      "context": "China's growing influence in Africa, particularly through initiatives like the Belt and Road Initiative launched in 2013, has positioned it as a key player in the region's technological landscape. In Kenya, the government's partnership with Chinese firms for infrastructure and technology projects has raised concerns about dependency and sovereignty. As President Xi Jinping emphasizes AI governance, Kenya's political dynamics, especially ahead of the 2027 elections, make this a critical moment for evaluating foreign influence in national policy."
     },
     {
       "title": "Trump renews war on US voting systems",
@@ -138,7 +571,7 @@
       "published_at": "2026-07-17T05:56:39+00:00",
       "source_url": "https://nation.africa/kenya/news/world/trump-renews-war-on-us-voting-systems--5529610",
       "source_name": "Nation Africa",
-      "context": "President Trump's renewed focus on questioning the integrity of US voting systems comes amid heightened political polarization in the United States, particularly following the contentious 2020 election. This situation resonates in Kenya, where the aftermath of the 2022 presidential elections saw widespread allegations of electoral fraud and violence, highlighting the fragile nature of democratic processes in both nations. The ongoing debate over electoral integrity in the US may influence political discourse and election strategies in Kenya as well."
+      "context": "President Trump's renewed focus on U.S. voting systems comes amid a backdrop of heightened political polarization following the 2020 presidential election, where he falsely claimed widespread voter fraud. This situation resonates in Kenya, where electoral integrity remains a contentious issue, particularly after the 2022 elections marred by allegations of rigging and violence. The ongoing debate over electoral reforms in Kenya, particularly with the Independent Electoral and Boundaries Commission, underscores the global implications of Trump's rhetoric on democratic processes."
     },
     {
       "title": "Yei youth trained in combating misinformation and digital literacy",
@@ -153,7 +586,7 @@
       "published_at": "2026-07-17T05:41:27+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/yei-youth-trained-in-combating-misinformation-and-digital-literacy",
       "source_name": "Radio Tamazuj",
-      "context": "Yei River County has faced significant instability due to the ongoing conflict in South Sudan, particularly following the outbreak of civil war in 2013. The region has seen a rise in misinformation, exacerbated by political tensions and ethnic divisions. The recent peace agreement signed in 2018 aimed to foster stability, making initiatives like digital literacy training crucial for empowering youth and promoting informed civic engagement in a post-conflict society."
+      "context": "Yei River County has been a focal point of conflict in South Sudan since the civil war erupted in 2013, leading to widespread misinformation and distrust among communities. The recent peace agreement signed in 2018 aimed to stabilize the region, yet challenges remain, particularly in fostering informed youth engagement. Training programs like this one are crucial for empowering young people to navigate the digital landscape and counteract the pervasive misinformation that exacerbates local tensions."
     },
     {
       "title": "Yei River County launches women’s rights coalition",
@@ -168,7 +601,7 @@
       "published_at": "2026-07-17T05:37:25+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/yei-river-county-launches-womens-rights-coalition",
       "source_name": "Radio Tamazuj",
-      "context": "Yei River County, part of South Sudan's Central Equatoria State, has faced significant challenges due to ongoing conflict and instability since the civil war erupted in 2013. The recent revitalization of the peace agreement in 2018, which aimed to address gender inequality and empower marginalized groups, has created a conducive environment for initiatives like the Women’s Rights Coalition. This coalition seeks to advocate for women's rights amidst the backdrop of a fragile political landscape and ongoing socio-economic struggles."
+      "context": "The launch of the Women’s Rights Coalition in Yei River County comes amid ongoing efforts to promote gender equality in South Sudan, particularly following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan (R-ARCSS). This agreement aimed to address the marginalization of women in political processes, yet challenges remain due to persistent violence and instability in the region, making the coalition's establishment a crucial step toward empowering women in a historically patriarchal society."
     },
     {
       "title": "Sammy Waweru of DCP beats UDA to claim MP seat",
@@ -183,7 +616,7 @@
       "published_at": "2026-07-17T05:07:56+00:00",
       "source_url": "https://nation.africa/kenya/news/live-blog-the-high-stakes-battle-for-ol-kalou-5527306",
       "source_name": "Nation Africa",
-      "context": "The recent parliamentary elections in Kenya, held on August 9, 2022, were marked by heightened political tensions, particularly between the United Democratic Alliance (UDA) and the Democratic Congress Party (DCP). The violence against journalists in Ol Kalou during the campaign period reflects ongoing concerns about press freedom and political intolerance in the country, exacerbated by the contentious political landscape following the 2022 elections and the legacy of past electoral violence."
+      "context": "Sammy Waweru's victory in the Ol Kalou constituency comes amid heightened political tensions following the 2022 general elections in Kenya, where the United Democratic Alliance (UDA) emerged as a dominant force. The recent spate of violence against journalists, particularly during political rallies, has raised concerns about press freedom and accountability. Waweru's condemnation of this violence highlights the ongoing struggle for democratic norms in a region still grappling with the aftermath of electoral disputes and political polarization."
     },
     {
       "title": "Ol Kalou by-election: Waweru hands Gachagua DCP huge win, condemns 'police goonism'",
@@ -198,7 +631,7 @@
       "published_at": "2026-07-17T04:48:48+00:00",
       "source_url": "https://nation.africa/kenya/counties/nyandarua/ol-kalou-by-election-waweru-hands-gachagua-dcp-huge-win-condemns-police-goonism--5529590",
       "source_name": "Nation Africa",
-      "context": "The Ol Kalou by-election, held on October 7, 2023, follows a series of politically charged contests in Kenya, marked by tensions between rival factions. The election comes in the wake of the controversial 2022 general elections, where violence and allegations of electoral malpractice were rampant. The recent clashes have reignited concerns over police conduct, particularly amid accusations of \"goonism,\" highlighting the fragile state of Kenya's democracy and the urgent need for electoral reforms."
+      "context": "The Ol Kalou by-election, held on October 7, 2023, follows a contentious political climate in Kenya, marked by heightened tensions between rival parties and allegations of electoral misconduct. The recent violence, which resulted in a fatality, underscores the ongoing struggles within the Jubilee Party and its splinter factions, particularly as Deputy President Rigathi Gachagua seeks to consolidate power in the region amid calls for electoral reforms and accountability from opposition leaders."
     },
     {
       "title": "Save the Children responds to images of branded vehicle used by armed actors",
@@ -228,7 +661,7 @@
       "published_at": "2026-07-17T04:30:32+00:00",
       "source_url": "https://www.alnilin.com/13478595.htm",
       "source_name": "النيلين",
-      "context": "تأتي تهديدات إيران في سياق تصاعد التوترات الإقليمية بعد الهجمات على منشآتها في الأهواز وإيرانشهر، التي يُعتقد أنها مرتبطة بالصراع المستمر مع الجماعات الانفصالية. كما أن هذه التصريحات تتزامن مع التوترات المتزايدة بين إيران والدول الغربية بشأن برنامجها النووي، خاصة بعد انسحاب الولايات المتحدة من الاتفاق النووي في 2018. هذه الديناميكيات تعكس القلق الإيراني من أي تهديدات لأمنها القومي وتأثيرها على استقرار شبكة الطاقة في المنطقة."
+      "context": "تأتي تهديدات إيران في سياق تصاعد التوترات الإقليمية بعد الهجمات على منشآتها في الأهواز وإيرانشهر، والتي تُعتبر جزءًا من الصراع المستمر مع الجماعات الانفصالية. كما أن هذه التصريحات تتزامن مع التوترات المتزايدة بين إيران والدول الخليجية، خاصة بعد اتفاقيات التطبيع بين بعض هذه الدول وإسرائيل في عام 2020، مما يزيد من المخاوف الإيرانية بشأن أمنها الإقليمي."
     },
     {
       "title": "Village club two season ago, Chema on brink of Kenyan volleyball glory",
@@ -243,7 +676,7 @@
       "published_at": "2026-07-17T03:15:00+00:00",
       "source_url": "https://nation.africa/kenya/sports/village-club-two-season-ago-chema-brink-kenyan-volleyball-glory-5529548",
       "source_name": "Nation Africa",
-      "context": "Chema Volleyball Club, formed just two seasons ago, has rapidly ascended to the finals of the Kenyan men's volleyball league, reflecting the growing competitiveness of the sport in Kenya. This clash with the Kenya Ports Authority (KPA) is particularly significant as it highlights the shift in power dynamics within Kenyan volleyball, where traditionally dominant teams are facing challenges from emerging clubs. The match, set for October 2023, could mark a turning point in the league's history."
+      "context": "Chema's rise to the finals of the Kenyan men's volleyball league comes amid a resurgence in the sport following the establishment of the Kenya Volleyball Federation's new league format in 2021. This shift aimed to enhance competition and visibility for emerging teams. The match against the Kenya Ports Authority (KPA) is particularly significant as it showcases the growing talent in Kenyan volleyball, reflecting the sport's potential to unite communities and foster national pride."
     },
     {
       "title": "Registrar’s dossier on fraud in Sh1bn Nyeri land adds twist",
@@ -258,7 +691,7 @@
       "published_at": "2026-07-17T03:00:00+00:00",
       "source_url": "https://nation.africa/kenya/counties/nyeri/registrar-s-dossier-on-fraud-in-sh1bn-nyeri-land-adds-twist-5529524",
       "source_name": "Nation Africa",
-      "context": "The land in question was part of the former White Highlands, historically owned by colonial settlers and later returned to the Kenyan government. In 2003, the government initiated the resettlement of landless Kenyans, including former farm workers, but disputes over ownership and compensation have persisted. The recent revelations from the registrar’s dossier add urgency to the ongoing conflict, highlighting the complexities of land reform in Kenya, particularly in light of the 2010 Constitution's provisions on land rights."
+      "context": "The land in question was part of the 1960s land redistribution efforts in Kenya, which aimed to address colonial injustices but often left many ex-workers without rightful ownership. The ongoing conflict centers around the 2020 court ruling that recognized the ex-workers' claims to the land, leading to a contentious sale to private developers. This situation has intensified scrutiny on land transactions and governance in Kenya, particularly in light of the 2022 elections that highlighted land reform issues."
     },
     {
       "title": "Productivity is Kenya’s real edge, we must build on it",
@@ -273,7 +706,7 @@
       "published_at": "2026-07-17T03:00:00+00:00",
       "source_url": "https://nation.africa/kenya/blogs-opinion/opinion/productivity-is-kenya-s-real-edge-we-must-build-on-it--5529228",
       "source_name": "Nation Africa",
-      "context": "Kenya's economy has faced significant challenges, including the impacts of the COVID-19 pandemic and ongoing political tensions following the contentious 2022 elections. The government's push for economic recovery emphasizes the need for enhanced productivity, particularly in light of the Vision 2030 development blueprint. As regional competition intensifies, particularly with Ethiopia's growing manufacturing sector, establishing a national productivity board could position Kenya to leverage its human capital effectively and sustain economic growth."
+      "context": "Kenya's economy has faced challenges due to political instability and the COVID-19 pandemic, which disrupted productivity across various sectors. The recent push for economic recovery, highlighted by the 2021 Economic Recovery Strategy, emphasizes the need for a structured approach to enhance human capital. Additionally, the ongoing competition with neighboring countries like Ethiopia and Uganda for investment and talent underscores the urgency for Kenya to establish a national productivity board to maintain its competitive edge."
     },
     {
       "title": "Curse of want - Poverty undoes man",
@@ -288,7 +721,7 @@
       "published_at": "2026-07-17T03:00:00+00:00",
       "source_url": "https://nation.africa/kenya/blogs-opinion/opinion/curse-of-want-poverty-undoes-man--5529176",
       "source_name": "Nation Africa",
-      "context": "In Kenya, the legacy of colonial land policies and the subsequent failure to implement equitable land reforms have entrenched poverty among marginalized communities. The 2010 Constitution aimed to address these disparities, yet ongoing political corruption and the recent fallout from the 2022 general elections have exacerbated economic inequalities. As the government grapples with rising inflation and unemployment, the plight of the impoverished is increasingly viewed as a direct consequence of these political failures."
+      "context": "Kenya has faced persistent poverty exacerbated by political corruption and mismanagement since its independence in 1963. The 2010 Constitution aimed to decentralize power and improve resource distribution, yet ongoing ethnic tensions and political rivalries, particularly between the Jubilee and Azimio coalitions, have hindered effective governance. The COVID-19 pandemic further strained the economy, revealing deep inequalities and prompting widespread protests against the government's failure to address the needs of marginalized communities."
     },
     {
       "title": "Betting industry investors face tougher permit requirements",
@@ -303,7 +736,7 @@
       "published_at": "2026-07-17T03:00:00+00:00",
       "source_url": "https://nation.africa/kenya/business/betting-industry-investors-face-tougher-permit-requirements--5529460",
       "source_name": "Nation Africa",
-      "context": "In recent years, Kenya's betting industry has faced increased scrutiny due to concerns over gambling addiction and its impact on youth. The government's move to tighten licensing requirements follows a 2019 directive aimed at regulating the sector more stringently, which resulted in the closure of several betting firms. This shift reflects ongoing tensions between the government and betting companies, as well as broader societal debates about gambling's role in Kenyan culture and economy."
+      "context": "In recent years, Kenya's betting industry has faced increasing scrutiny due to concerns over gambling addiction and its impact on youth. In 2019, the government imposed a 20% tax on betting revenues, leading to the closure of several major operators. The new licensing requirements, introduced in late 2023, aim to regulate the industry more stringently, reflecting ongoing debates about the balance between economic growth and social responsibility amid rising public discontent over gambling practices."
     },
     {
       "title": "Nation Golf Classic’s triumphant return",
@@ -318,7 +751,7 @@
       "published_at": "2026-07-17T03:00:00+00:00",
       "source_url": "https://nation.africa/kenya/sports/golf/nation-golf-classic-triumphant-return-5529556",
       "source_name": "Nation Africa",
-      "context": "The Nation Golf Classic's return comes at a time when Kenya is seeking to revitalize its sports tourism sector post-COVID-19, following a significant decline in international events. The tournament, which was last held in 2019, aims to foster unity and promote local talent amidst ongoing challenges such as political tensions surrounding the 2022 elections and the economic impact of the pandemic. The event also aligns with Kenya's broader strategy to enhance its global sporting profile."
+      "context": "The Nation Golf Classic, which resumed in 2023 after a two-year hiatus due to the COVID-19 pandemic, reflects Kenya's efforts to revitalize its sports tourism sector amid ongoing economic challenges. The tournament has gained prominence as a unifying event, fostering camaraderie among diverse communities and promoting local businesses. With the government emphasizing sports as a catalyst for national development, the Classic's return underscores a broader push for recovery and growth in the post-pandemic era."
     },
     {
       "title": "New UoN VC admits deep rifts within, vows to make varsity great again",
@@ -333,7 +766,7 @@
       "published_at": "2026-07-17T03:00:00+00:00",
       "source_url": "https://nation.africa/kenya/news/education/new-uon-vc-deep-rifts-within-make-varsity-great-again-5529494",
       "source_name": "Nation Africa",
-      "context": "The University of Nairobi (UoN), established in 1956, has faced significant challenges in recent years, including leadership crises and student unrest. The recent appointment of Prof. Gitau as vice-chancellor comes after a tumultuous period marked by protests over governance issues and academic standards. His commitment to address internal divisions is crucial, especially following the controversial tenure of former VC Prof. Stephen Kiama, who faced backlash over management decisions and student relations in 2020."
+      "context": "The University of Nairobi (UoN), established in 1956, has faced significant challenges in recent years, including governance issues and student unrest. The appointment of Prof. Gitau as vice-chancellor in October 2023 comes amid ongoing debates about university funding and academic freedom, particularly following the controversial 2021 decision to suspend student leaders advocating for reforms. His commitment to healing internal divisions is crucial for restoring the institution's reputation and academic excellence."
     },
     {
       "title": "Parliament to grill school principals for first time",
@@ -348,7 +781,7 @@
       "published_at": "2026-07-17T03:00:00+00:00",
       "source_url": "https://nation.africa/kenya/news/education/parliament-to-grill-school-principals-for-first-time--5529562",
       "source_name": "Nation Africa",
-      "context": "In recent years, Kenya has faced increasing scrutiny over the management of public funds in education, particularly following the 2020 Auditor General's report highlighting misappropriations totaling over 1 billion shillings in school funds. The push for accountability comes amid ongoing debates about the effectiveness of the 2018 Basic Education Act, which aimed to enhance transparency and governance in schools. This parliamentary inquiry marks a significant shift in oversight, reflecting broader concerns about corruption in the education sector."
+      "context": "In recent years, Kenya has faced increasing scrutiny over the management of public funds in education, particularly following the 2018 Auditor General's report highlighting misappropriations amounting to billions of shillings. The push for accountability has intensified amid ongoing debates about the quality of education and resource allocation, especially with the implementation of the Competency-Based Curriculum in 2020. This parliamentary inquiry marks a significant shift in oversight, reflecting growing public demand for transparency in government spending."
     },
     {
       "title": "Kenyan football beyond the boys’ club: A game growing against the odds",
@@ -363,7 +796,7 @@
       "published_at": "2026-07-17T03:00:00+00:00",
       "source_url": "https://nation.africa/kenya/news/gender/kenyan-football-beyond-the-boys-club-a-game-growing-against-the-odds-5528546",
       "source_name": "Nation Africa",
-      "context": "Kenya's football landscape has been shaped by a history of mismanagement and corruption, particularly under the Kenya Football Federation, which has faced multiple leadership crises since 2004. The recent establishment of the Football Kenya Federation Transition Committee in 2021 aimed to reform the sport, but ongoing financial struggles and the impact of the COVID-19 pandemic continue to hinder growth. This context highlights the challenges and resilience of women's football as it seeks recognition and support amid these systemic issues."
+      "context": "Kenya's football landscape has been historically dominated by male players and institutions, but recent efforts by organizations like the Kenya Women's Premier League, established in 2019, are challenging this norm. Amidst ongoing financial struggles and governance issues within the Football Kenya Federation, the rise of women's football is gaining momentum, especially following the national team's qualification for the 2022 Africa Women Cup of Nations. This shift reflects broader societal changes and the push for gender equality in sports."
     },
     {
       "title": "CS Ruku says Mt Kenya East leaders are not concerned by the outcome of Ol Kalou by-election",
@@ -378,7 +811,7 @@
       "published_at": "2026-07-17T02:55:30+00:00",
       "source_url": "https://nation.africa/kenya/videos/cs-ruku-says-mt-kenya-east-leaders-are-not-concerned-by-the-outcome-of-ol-kalou-by-election-5529586",
       "source_name": "Nation Africa",
-      "context": "The Ol Kalou by-election, held on March 4, 2023, follows a period of political realignment in Kenya, particularly after the 2022 general elections, which saw a shift in power dynamics within the Mt. Kenya region. Leaders from Mt. Kenya East, including CS Ruku, have expressed a growing detachment from the outcomes of such elections, reflecting broader tensions within the region as they navigate alliances and influence in the wake of President William Ruto's administration."
+      "context": "The Ol Kalou by-election, held on October 7, 2023, is significant as it reflects the shifting political landscape in Kenya's Mt. Kenya region, particularly following the 2022 general elections that saw a decline in support for traditional political alliances. CS Ruku's comments highlight the growing discontent among local leaders with the national political narrative, especially as they navigate the aftermath of President William Ruto's administration and its impact on regional governance and representation."
     },
     {
       "title": "كيف باعت كوريا «البشرة الزجاجية» للعالم؟",
@@ -393,7 +826,7 @@
       "published_at": "2026-07-17T00:30:28+00:00",
       "source_url": "https://www.alnilin.com/13478502.htm",
       "source_name": "النيلين",
-      "context": "تأتي هذه الظاهرة في سياق تزايد الاهتمام العالمي بالثقافة الكورية، خاصة بعد نجاح مسلسل \"لعبة الحبار\" في عام 2021، الذي ساهم في تعزيز مكانة كوريا الجنوبية كقوة ثقافية. في الوقت نفسه، تشهد دول مثل السودان تحديات اقتصادية وسياسية، مما يدفع الشباب للبحث عن فرص جديدة في الخارج، بما في ذلك السياحة إلى سيول، حيث يأملون في الاستفادة من التجارب الثقافية والاقتصادية."
+      "context": "تزامنًا مع تصاعد التوترات في منطقة القرن الأفريقي، خاصة في السودان نتيجة النزاع المستمر بين الجيش وقوات الدعم السريع منذ أبريل 2023، تبرز كوريا الجنوبية كوجهة سياحية جديدة. هذا التوجه يأتي في وقت يسعى فيه الشباب السوداني للهروب من الأوضاع الصعبة، مما يعكس تأثير الثقافة الكورية على الأجيال الجديدة في المنطقة، ويعزز من مكانة سيول كمركز ثقافي عالمي."
     },
     {
       "title": "خبير اقتصادي: من يملك “مضيق هرمز” يملك العالم في القرن الحادي والعشرين",
@@ -408,7 +841,7 @@
       "published_at": "2026-07-16T22:30:53+00:00",
       "source_url": "https://www.alnilin.com/13478492.htm",
       "source_name": "النيلين",
-      "context": "مضيق هرمز، الذي يمر عبره حوالي 20% من النفط العالمي، يعد نقطة توتر رئيسية بين إيران والولايات المتحدة. في 2019، تعرضت ناقلات نفط لهجمات في المنطقة، مما زاد من حدة التوترات. كما أن العقوبات الأمريكية على إيران، التي بدأت في 2018، أدت إلى تصعيد الصراع، مما يجعل تصريحات الجيش الإيراني حول عدم التراجع عن موقفه بشأن المضيق ذات أهمية خاصة في ظل هذه الظروف المتقلبة."
+      "context": "تعتبر مضيق هرمز شريانًا حيويًا لنقل النفط، حيث يمر عبره حوالي 20% من إمدادات النفط العالمية. في السنوات الأخيرة، تصاعدت التوترات بين إيران والولايات المتحدة، خاصة بعد انسحاب واشنطن من الاتفاق النووي الإيراني في مايو 2018، مما زاد من المخاوف بشأن استقرار المنطقة. كما أن التصعيد العسكري الإيراني في المنطقة، بما في ذلك تهديدات بإغلاق المضيق، يثير قلق الدول المجاورة مثل السعودية والإمارات."
     },
     {
       "title": "Boost child vaccinations to prevent killer diseases",
@@ -423,7 +856,7 @@
       "published_at": "2026-07-16T21:02:00+00:00",
       "source_url": "https://nation.africa/kenya/blogs-opinion/editorials/boost-child-vaccinations-to-prevent-killer-diseases--5529518",
       "source_name": "Nation Africa",
-      "context": "In Kenya, the COVID-19 pandemic disrupted routine immunization services, leading to a significant drop in child vaccination rates. The Ministry of Health reported a 20% decrease in vaccinations in 2021 compared to pre-pandemic levels. With ongoing challenges such as political instability and resource allocation issues, particularly in regions affected by drought and insecurity, there is an urgent need to bolster vaccination efforts to prevent outbreaks of preventable diseases like measles and polio."
+      "context": "In Kenya, the COVID-19 pandemic disrupted routine immunization services, leading to a significant drop in child vaccination rates. The Ministry of Health reported a 20% decline in vaccinations for preventable diseases like measles and polio in 2021. With ongoing challenges from political instability and resource allocation, particularly in marginalized regions like Northeastern Kenya, urgent efforts are needed to restore and enhance vaccination programs to prevent outbreaks of these killer diseases."
     },
     {
       "title": "Sudan’s army says it destroyed 205 RSF combat vehicles, downed 4 drones this month",
@@ -438,7 +871,7 @@
       "published_at": "2026-07-16T21:01:40+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/sudan-s-army-says-it-destroyed-205-rsf-combat-vehicles-downed-4-drones-this-month/4000839",
       "source_name": "Anadolu Agency",
-      "context": "The ongoing conflict in Sudan intensified following the outbreak of violence between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) in April 2023. This power struggle has roots in the 2019 ousting of former President Omar al-Bashir, with both factions vying for control over the country. The recapture of Kurmuk in Blue Nile state is significant as it reflects the SAF's efforts to regain territory and assert dominance amid a deteriorating humanitarian situation."
+      "context": "The ongoing conflict in Sudan intensified after the power struggle between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) erupted in April 2023. The RSF, originally formed from Janjaweed militias, has been engaged in violent clashes with the SAF, leading to widespread instability. The recapture of Kurmuk in Blue Nile state is significant as it reflects the SAF's efforts to regain control amid a backdrop of humanitarian crises and international calls for a ceasefire."
     },
     {
       "title": "Uphold media rights",
@@ -453,7 +886,7 @@
       "published_at": "2026-07-16T21:01:00+00:00",
       "source_url": "https://nation.africa/kenya/blogs-opinion/editorials/uphold-media-rights--5529522",
       "source_name": "Nation Africa",
-      "context": "In Kenya, the media has faced increasing hostility, particularly following the controversial 2022 presidential elections, which saw widespread allegations of electoral fraud and violence. The government's crackdown on dissenting voices, including the arrest of journalists and the shutdown of media outlets, has raised alarms about press freedom. This situation is exacerbated by the ongoing political tensions between President William Ruto's administration and opposition figures, notably Raila Odinga, who have accused the government of stifling free expression."
+      "context": "In recent months, Kenya has witnessed a surge in attacks against journalists, particularly during the heightened political tensions surrounding the 2022 general elections and ongoing protests led by opposition leader Raila Odinga. The government's crackdown on dissent, including the arrest of journalists covering these events, has raised alarms about press freedom. This situation is exacerbated by the 2010 Constitution's provisions for media rights, which are increasingly being undermined by state actions."
     },
     {
       "title": "ضبط قائد توك توك بعد سيره داخل مطار القاهرة.. والمتهم: اختصرت الطريق",
@@ -468,7 +901,7 @@
       "published_at": "2026-07-16T20:30:25+00:00",
       "source_url": "https://www.alnilin.com/13478501.htm",
       "source_name": "النيلين",
-      "context": "The incident of a tuk-tuk driver entering Cairo International Airport highlights ongoing security challenges in Egypt, particularly in light of the country's efforts to bolster tourism and ensure safety following the 2011 revolution. The driver’s criminal background raises concerns about law enforcement efficacy, especially as Egypt navigates its complex relationship with Sudan, where instability has led to increased migration and cross-border issues, further complicating security dynamics in the region."
+      "context": "The incident involving the tuk-tuk driver at Cairo International Airport highlights ongoing security challenges in Egypt, particularly in the context of heightened vigilance following the 2011 Arab Spring and subsequent political instability. With the rise of informal transportation methods in urban areas, authorities have been increasingly concerned about safety and regulation, especially as Egypt seeks to bolster its tourism sector amidst regional tensions, including the ongoing conflict in Sudan that affects cross-border dynamics."
     },
     {
       "title": "Abyei residents protest being barred from South Sudan elections by Sudan",
@@ -484,7 +917,7 @@
       "published_at": "2026-07-16T18:08:58+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/abyei-residents-protest-being-barred-from-south-sudan-elections-by-sudan",
       "source_name": "Radio Tamazuj",
-      "context": "Abyei is a contested region between Sudan and South Sudan, with its status unresolved since the 2005 Comprehensive Peace Agreement, which ended the Second Sudanese Civil War. The region's residents, primarily from the Ngok Dinka ethnic group, have long sought inclusion in South Sudan's political processes, especially following the country's independence in 2011. The recent protests highlight ongoing tensions, as Sudan continues to assert control over Abyei, denying its residents participation in South Sudan's elections."
+      "context": "Abyei is a contested region between Sudan and South Sudan, with its status unresolved since the 2005 Comprehensive Peace Agreement, which ended decades of civil war. The region's residents, primarily from the Ngok Dinka ethnic group, have been excluded from South Sudan's elections, leading to protests against Sudan's perceived annexation. The ongoing tensions highlight the fragile political dynamics in the region, especially following South Sudan's independence in 2011 and the subsequent border disputes."
     },
     {
       "title": "NMG journalists attacked by armed masked men in SUVs, staff tased and camera seized",
@@ -499,7 +932,7 @@
       "published_at": "2026-07-16T17:21:23+00:00",
       "source_url": "https://nation.africa/kenya/counties/nyandarua/nmg-journalists-attacked-by-armed-masked-men-in-suvs-staff-tased-and-camera-seized-5528916",
       "source_name": "Nation Africa",
-      "context": "The attack on NMG journalists comes amid escalating tensions in Kenya, particularly following the controversial August 2022 elections that saw William Ruto assume the presidency. The media has faced increasing hostility, with incidents of violence against journalists rising as political factions, including opposition leaders like Raila Odinga, challenge the government's narrative. This incident highlights the precarious environment for press freedom in a country grappling with political polarization and unrest."
+      "context": "The attack on NMG journalists comes amid rising tensions in Kenya following the contentious 2022 presidential elections, which saw William Ruto assume power amid allegations of electoral malpractices. The media landscape has faced increasing threats, particularly from political actors and armed groups, as seen in the crackdown on dissent during protests against the government's economic policies in 2023. This incident underscores the precarious situation for press freedom in a politically charged environment."
     },
     {
       "title": "Church appeals for aid as 10,000 flee UPDF attack in Kajo-Keji",
@@ -515,7 +948,7 @@
       "published_at": "2026-07-16T17:10:59+00:00",
       "source_url": "https://www.radiotamazuj.org/en/news/article/church-appeals-for-aid-as-10000-flee-updf-attack-in-kajo-keji",
       "source_name": "Radio Tamazuj",
-      "context": "The recent UPDF attack in Kajo-Keji is part of ongoing tensions between South Sudan and Uganda, particularly following the 2016 peace agreement aimed at stabilizing the region. The area has seen increased violence as various armed groups, including those aligned with the SPLA-IO, clash with government forces. The Episcopal Diocese of Liwolo's appeal highlights the urgent humanitarian crisis exacerbated by these conflicts, which have displaced thousands and strained local resources."
+      "context": "The recent UPDF (Ugandan People's Defence Forces) attack in Kajo-Keji, South Sudan, is part of ongoing tensions between Uganda and South Sudan, particularly following the 2016 peace agreement aimed at stabilizing the region. The area has seen increased violence due to clashes between armed groups and government forces, exacerbating the humanitarian crisis. The Episcopal Diocese of Liwolo's appeal highlights the urgent need for aid amidst the escalating conflict and displacement of civilians."
     },
     {
       "title": "2024 Gen Z grievances still persist, Linda Mwananchi their preferred outfit - study",
@@ -530,7 +963,7 @@
       "published_at": "2026-07-16T17:08:44+00:00",
       "source_url": "https://nation.africa/kenya/news/2024-gen-z-grievances-still-persist-linda-mwananchi-their-preferred-outfit-study-5529394",
       "source_name": "Nation Africa",
-      "context": "As Kenya approaches the 2024 elections, the grievances of Gen Z voters, particularly regarding unemployment and climate change, have become increasingly pronounced. The recent 2022 elections saw a significant youth turnout, with candidates like Linda Mwananchi gaining traction by addressing these issues. Her rising popularity reflects a broader discontent with traditional political parties, which have struggled to engage younger voters effectively in the wake of the 2010 Constitution's devolution promises."
+      "context": "As Kenya approaches the 2024 elections, the youth, particularly Gen Z, are increasingly vocal about their grievances, stemming from high unemployment rates and political disenfranchisement. The recent 2022 elections highlighted a generational divide, with younger voters favoring fresh leadership, as seen in the rise of figures like Linda Mwananchi. Her appeal reflects a broader desire for change amidst ongoing economic challenges and political instability following the contentious 2020 Building Bridges Initiative referendum."
     },
     {
       "title": "The last call: Search for missing Murang'a Bodaboda rider ends in horror",
@@ -545,7 +978,7 @@
       "published_at": "2026-07-16T16:37:19+00:00",
       "source_url": "https://nation.africa/kenya/counties/muranga/the-last-call-search-for-missing-murang-a-bodaboda-rider-ends-in-horror-5529202",
       "source_name": "Nation Africa",
-      "context": "The disappearance of the 32-year-old bodaboda rider from Murang'a highlights ongoing safety concerns for motorcycle taxi operators in Kenya, where incidents of violence and crime against them have surged in recent years. The government’s failure to implement effective regulations and safety measures, particularly after the 2021 Bodaboda Safety Association of Kenya initiative aimed at improving rider security, has left many operators vulnerable. This tragedy underscores the urgent need for systemic reforms in the transport sector."
+      "context": "The disappearance of the 32-year-old bodaboda rider from Murang'a highlights ongoing safety concerns for motorcycle taxi operators in Kenya, particularly amid rising incidents of violence and crime. The bodaboda sector, which has been a vital source of income for many Kenyans, has faced increased scrutiny and regulation since the 2018 National Transport and Safety Authority guidelines aimed at curbing accidents and crime, making this case emblematic of broader societal challenges."
     },
     {
       "title": "أرنب يربك الملاحة الجوية ويغلق مدرج مطار ألماني",
@@ -560,7 +993,7 @@
       "published_at": "2026-07-16T16:30:01+00:00",
       "source_url": "https://www.alnilin.com/13478487.htm",
       "source_name": "النيلين",
-      "context": "تأتي هذه الحادثة في وقت حساس بالنسبة لألمانيا، حيث تواجه البلاد تحديات متزايدة في مجال الأمن والسلامة الجوية بعد سلسلة من الحوادث المتعلقة بالحيوانات البرية. كما أن مطار دريسدن، الذي يخدم منطقة شرق ألمانيا، يشهد زيادة في حركة الطيران منذ تخفيف قيود كورونا، مما يزيد من أهمية الحفاظ على سلامة الملاحة الجوية."
+      "context": "تأتي حادثة الأرنب في مطار دريسدن في وقت يشهد فيه قطاع الطيران في أوروبا انتعاشًا بعد جائحة كورونا، حيث تسعى المطارات لتعويض خسائرها. كما أن الحادث يسلط الضوء على التحديات البيئية التي تواجهها المطارات، خاصة مع تزايد الوعي حول تأثير الحياة البرية على البنية التحتية. في هذا السياق، يعتبر التعاون بين سلطات الطيران والبيئة أمرًا حيويًا لضمان سلامة الرحلات الجوية."
     },
     {
       "title": "SIHA Network pushes for greater political inclusion of young women ahead of elections",
@@ -578,36 +1011,6 @@
       "context": "South Sudan has faced ongoing political instability since its independence in 2011, exacerbated by civil conflict from 2013 to 2018, which has hindered inclusive governance. The 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to establish a power-sharing government, yet young women remain underrepresented in political processes. As the country approaches elections, the SIHA Network's advocacy highlights the urgent need for systemic changes to empower youth and women in leadership roles."
     },
     {
-      "title": "Gachagua alleges plot to rig Ol Kalou by-election",
-      "summary": "'They are carrying rifles and wearing masks, yet the IEBC is silent.'",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics"
-      ],
-      "language": "en",
-      "published_at": "2026-07-16T16:07:57+00:00",
-      "source_url": "https://nation.africa/kenya/counties/nyandarua/gachagua-alleges-plot-to-rig-ol-kalou-by-election-5529294",
-      "source_name": "Nation Africa",
-      "context": "The Ol Kalou by-election is significant in the context of Kenya's turbulent political landscape, particularly following the controversial 2022 general elections, which were marred by allegations of electoral fraud and violence. Deputy President Rigathi Gachagua's claims of a rigging plot come amid heightened tensions between the Kenya Kwanza coalition and opposition figures, especially after the recent Supreme Court ruling on the election of governors, which has intensified scrutiny on the Independent Electoral and Boundaries Commission (IEBC)."
-    },
-    {
-      "title": "Court orders disclosure of KPC privatisation records",
-      "summary": "Justice Patricia Nyaundi orders govt to produce valuation reports and other transaction papers...",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Justice & Rights"
-      ],
-      "language": "en",
-      "published_at": "2026-07-16T15:49:03+00:00",
-      "source_url": "https://nation.africa/kenya/news/court-orders-disclosure-of-kpc-privatisation-records-5529348",
-      "source_name": "Nation Africa",
-      "context": "The Kenya Pipeline Company (KPC) has been at the center of a contentious privatization debate since the government announced plans to sell a stake in the state-owned entity in 2021. This move has faced opposition from various stakeholders, including labor unions and civil society, who argue it could undermine national interests. The court's order for disclosure of valuation reports comes amid heightened scrutiny over transparency and accountability in public asset management, particularly in light of ongoing corruption allegations."
-    },
-    {
       "title": "Former Trump adviser suggests recruiting volunteers from South Sudan, Uganda and other regions to defend Israel",
       "summary": "Former U.S. President Donald Trump’s foreign policy adviser, Dr. Walid Phares, has suggested recruiting volunteers from South Sudan, Uganda and several other African countries and regions to help defend Israel amid ongoing tensions in the Middle East. In a message posted on the social media platform X on Tuesday, Phares stated that individuals from South […] The post Former Trump adviser suggests recruiting volunteers from South Sudan, Uganda and other regions to defend Israel appeared first on Eye Radio .",
       "country_tags": [
@@ -622,21 +1025,6 @@
       "source_url": "https://www.eyeradio.org/former-trump-adviser-suggests-recruiting-volunteers-from-south-sudan-uganda-and-other-regions-to-defend-israel/?utm_source=rss&utm_medium=rss&utm_campaign=former-trump-adviser-suggests-recruiting-volunteers-from-south-sudan-uganda-and-other-regions-to-defend-israel",
       "source_name": "Eye Radio",
       "context": "The suggestion by Dr. Walid Phares comes amid heightened tensions in the Middle East, particularly following the October 2023 Hamas attack on Israel, which has escalated military responses and international discourse on security. South Sudan and Uganda, both grappling with their own internal conflicts and regional instability, have historically been involved in broader geopolitical dynamics, including alliances with Western nations and responses to Middle Eastern conflicts, making this recruitment proposal particularly controversial and significant."
-    },
-    {
-      "title": "Gachagua urges Ol Kalou residents to return to polling stations, protect their votes",
-      "summary": "",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-07-16T14:43:38+00:00",
-      "source_url": "https://nation.africa/kenya/videos/gachagua-urges-ol-kalou-residents-to-return-to-polling-stations-protect-their-votes-5529296",
-      "source_name": "Nation Africa",
-      "context": "The call by Deputy President Rigathi Gachagua for Ol Kalou residents to return to polling stations comes amid heightened tensions following the controversial August 2022 general elections in Kenya, where allegations of electoral fraud led to protests and unrest. The political landscape remains polarized, particularly between President William Ruto's Kenya Kwanza Alliance and the opposition led by Raila Odinga, complicating the electoral process and raising concerns about voter safety and integrity."
     },
     {
       "title": "Religious leader appeals for aid after UPDF displaces thousands in Kajo-Keji",
@@ -668,7 +1056,7 @@
       "published_at": "2026-07-16T14:42:01+00:00",
       "source_url": "https://www.thereporterethiopia.com/51861/",
       "source_name": "The Reporter Ethiopia",
-      "context": "The visit comes amid ongoing tensions in Ethiopia, particularly following the November 2020 conflict in Tigray, which has left deep scars on regional stability. The U.S. has been actively involved in peace negotiations, notably the Pretoria Agreement signed in November 2022, aimed at ending hostilities. Ambassador Massinga's focus on trade and healthcare in Gondar is crucial as the Amhara region grapples with the aftermath of conflict and seeks to rebuild its economy and social services."
+      "context": "The visit comes amid ongoing tensions in Ethiopia, particularly following the November 2020 peace agreement between the Ethiopian government and Tigray People's Liberation Front (TPLF), which aimed to end a brutal civil war. The Amhara region has been significantly affected by the conflict, with local militias involved in territorial disputes. Ambassador Massinga's focus on trade and healthcare reflects the U.S. commitment to stabilizing the region while addressing humanitarian needs exacerbated by the conflict."
     },
     {
       "title": "Yakani urges South Sudanese to reject hate speech ahead of 2026 elections",
@@ -704,21 +1092,6 @@
       "context": "South Sudan has faced ongoing conflict since its independence in 2011, with civil war erupting in 2013 and lasting until a peace agreement was signed in 2018. The music industry has become a vital platform for cultural expression and unity amidst the turmoil. Single Dee's nomination at the AFRIMMA highlights the resilience of South Sudanese artists and their ability to gain recognition on an international stage, fostering a sense of national pride and hope for the future."
     },
     {
-      "title": "Inside intrigues as Sifuna dropped from Senate whip seat",
-      "summary": "Chaos, claims of a State House plot and a disputed vote.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics"
-      ],
-      "language": "en",
-      "published_at": "2026-07-16T13:57:34+00:00",
-      "source_url": "https://nation.africa/kenya/news/politics/inside-intrigues-as-sifuna-dropped-from-senate-whip-seat-5529160",
-      "source_name": "Nation Africa",
-      "context": "The recent removal of Edwin Sifuna from the Senate whip position comes amid heightened political tensions following the 2022 general elections, where the opposition coalition, Azimio la Umoja, has struggled to maintain unity against President William Ruto's Kenya Kwanza administration. Allegations of State House interference echo the historical power struggles between the presidency and opposition parties, particularly after the contentious 2018 handshake between President Uhuru Kenyatta and opposition leader Raila Odinga, which reshaped political alliances."
-    },
-    {
       "title": "Govt delegation leaves for Qatar with Kiir’s condolences over former Emir’s death",
       "summary": "A high-level government delegation has travelled to Doha to deliver President Salva Kiir’s message of condolence following the death of Qatar’s former Emir, Sheikh Hamad bin Khalifa Al Thani. The delegation, led by Presidential Adviser on National Security Affairs Tut Gatluak Manime and accompanied by Minister of Foreign Affairs and International Cooperation Dr. James Pitia […] The post Govt delegation leaves for Qatar with Kiir’s condolences over former Emir’s death appeared first on Eye Radio .",
       "country_tags": [
@@ -732,21 +1105,6 @@
       "source_url": "https://www.eyeradio.org/govt-delegation-leaves-for-qatar-with-kiirs-condolences-over-former-emirs-death/?utm_source=rss&utm_medium=rss&utm_campaign=govt-delegation-leaves-for-qatar-with-kiirs-condolences-over-former-emirs-death",
       "source_name": "Eye Radio",
       "context": "The death of Sheikh Hamad bin Khalifa Al Thani on September 23, 2023, marks a significant moment for Qatar, a key player in the Horn of Africa's political landscape. South Sudan has historically sought Qatari support for peacebuilding efforts, particularly following the 2018 revitalized peace agreement aimed at ending the civil war. President Salva Kiir's condolences reflect ongoing diplomatic ties and South Sudan's reliance on Qatari mediation in regional conflicts."
-    },
-    {
-      "title": "Build businesses instead of waiting for jobs, youth urged",
-      "summary": "Young Kenyans urged to embrace entrepreneurship by building small enterprises.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-07-16T13:30:00+00:00",
-      "source_url": "https://nation.africa/kenya/news/build-businesses-instead-of-waiting-for-jobs-youth-urged-5529156",
-      "source_name": "Nation Africa",
-      "context": "In Kenya, youth unemployment has reached alarming levels, with the World Bank reporting a rate of over 20% among young people as of 2022. This economic strain is exacerbated by political instability following the contentious 2022 presidential elections, which have left many disillusioned with traditional job markets. In response, initiatives like the Kenya Youth Employment and Opportunities Project aim to foster entrepreneurship, making this call for youth-led business creation particularly urgent and relevant."
     },
     {
       "title": "Kiir inaugurates JIA Terminal 3, cites ‘positive signal to the world’",
@@ -792,7 +1150,7 @@
       "published_at": "2026-07-16T13:09:42+00:00",
       "source_url": "https://www.alnilin.com/13478580.htm",
       "source_name": "النيلين",
-      "context": "تأتي هذه اللقاءات في وقت حساس حيث تواجه ولايات الشرق السوداني، بما في ذلك كسلا والقضارف والبحر الأحمر، تحديات إنسانية متزايدة نتيجة النزاعات المستمرة والأزمات الاقتصادية. منذ اندلاع النزاع في 2021، تفاقمت الأوضاع الإنسانية، مما يستدعي تعزيز التنسيق بين المفوضيات. كما أن حكومة كسلا تسعى لتعزيز التعاون مع المفوضيات الأخرى لتلبية احتياجات السكان المتضررين وتحسين الاستجابة الإنسانية."
+      "context": "تأتي هذه اللقاءات في وقت حساس حيث تواجه ولايات الشرق السوداني، بما في ذلك كسلا والقضارف والبحر الأحمر، تحديات إنسانية كبيرة نتيجة النزاعات المستمرة والأزمات الاقتصادية. بعد اتفاق جوبا للسلام في 2020، يسعى المسؤولون لتعزيز التنسيق بين الولايات لتحسين الاستجابة الإنسانية، خاصة مع تصاعد الاحتياجات بسبب النزوح والتهجير الناتج عن النزاعات."
     },
     {
       "title": "وزير الموارد البشرية يبحث مع المركز الإفريقي للتدريب والبحث الإداري (كافراد) تعزيز التعاون في الإصلاح الإداري وبناء القدرات",
@@ -807,22 +1165,7 @@
       "published_at": "2026-07-16T13:08:14+00:00",
       "source_url": "https://www.alnilin.com/13478578.htm",
       "source_name": "النيلين",
-      "context": "The meeting between Sudan's Minister of Human Resources, Mutasim Ahmed Saleh, and Dr. Kofi Didoné Asoufi of the African Training and Research Centre in Administration for Development (CAFRAD) comes amid Sudan's ongoing political turmoil following the 2019 ousting of President Omar al-Bashir. The focus on administrative reform and capacity building is crucial as the transitional government seeks to stabilize and modernize governance structures while navigating internal conflicts and international pressures for democratic reforms."
-    },
-    {
-      "title": "Punda wangu: How innovation is bringing Turkana's stolen donkeys home",
-      "summary": "Hub allows residents to report donkey thefts, disease outbreaks and animal welfare concerns.",
-      "country_tags": [
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Health"
-      ],
-      "language": "en",
-      "published_at": "2026-07-16T13:06:42+00:00",
-      "source_url": "https://nation.africa/kenya/counties/turkana/punda-wangu-how-innovation-is-bringing-turkana-s-stolen-donkeys-home-5529126",
-      "source_name": "Nation Africa",
-      "context": "In recent years, Turkana County has faced escalating conflicts over livestock, particularly donkeys, due to resource scarcity exacerbated by climate change and inter-communal tensions. The 2019 National Drought Management Authority report highlighted a surge in livestock theft, prompting local leaders to seek innovative solutions. The establishment of a reporting hub in 2023 aims to empower communities to combat these issues, fostering collaboration among residents, local authorities, and NGOs to enhance animal welfare and security."
+      "context": "The meeting between Sudan's Minister of Human Resources and the director of the African Training and Research Centre in Administration for Development (CARTAD) comes at a critical time as Sudan navigates a complex political landscape following the 2019 ousting of President Omar al-Bashir. The country is currently grappling with economic challenges and a need for administrative reform, making capacity building and digital transformation essential for stabilizing governance and fostering development amidst ongoing tensions and conflicts."
     },
     {
       "title": "مكافحة المخدرات بسنار تضبط مواد مخدرة وتلقي القبض على متهم ينشط في ترويجها",
@@ -837,7 +1180,7 @@
       "published_at": "2026-07-16T13:05:07+00:00",
       "source_url": "https://www.alnilin.com/13478576.htm",
       "source_name": "النيلين",
-      "context": "The recent crackdown on drug trafficking in Sudan, particularly in regions like Senar, comes amid escalating concerns over the rising influence of organized crime and drug cartels in the country. Following the 2019 ousting of President Omar al-Bashir, Sudan has faced instability, which has allowed illicit activities to flourish. The transitional government is under pressure to restore law and order, making drug enforcement a critical focus for maintaining public safety and governance."
+      "context": "The recent crackdown on drug trafficking in Sudan, particularly in regions like Senar, is significant amid the ongoing instability following the 2019 ousting of President Omar al-Bashir. The power struggle between military and civilian factions has exacerbated lawlessness, allowing drug trade networks to flourish. This operation highlights the efforts of local authorities, such as the Drug Enforcement Police, to regain control and combat the rising influence of narcotics in a volatile political landscape."
     },
     {
       "title": "وزيرة الصناعة والتجارة تلتقي وزير الصناعة والمعادن الليبي على هامش أعمال الجمعية العامة للمنظمة العربية للتنمية الصناعية",
@@ -944,7 +1287,7 @@
       "published_at": "2026-07-16T10:46:02+00:00",
       "source_url": "https://thenilepost.com/en/uncategorized/story/shamim-malende-accuses-human-rights-commission-of-failing-ugandans-as-she-challenges-attorney-generals-defence/",
       "source_name": "The Nile Post",
-      "context": "Shamim Malende's criticism of the Uganda Human Rights Commission comes amid heightened scrutiny of human rights abuses in Uganda, particularly following the violent crackdown on opposition protests in 2020. The ongoing political tension between the ruling National Resistance Movement and opposition parties, exemplified by the arrest of prominent figures like Bobi Wine, has intensified calls for accountability and reform within institutions meant to protect citizens' rights."
+      "context": "Shamim Malende's criticism of the Uganda Human Rights Commission comes amid heightened scrutiny of human rights abuses in Uganda, particularly following the violent crackdown on opposition protests in 2020. The ongoing tensions between the government and civil society, exacerbated by the controversial 2021 elections, have led to increased calls for accountability and reform. Malende's challenge to the Attorney General's defense highlights the urgent demand for effective human rights protections in a politically charged environment."
     },
     {
       "title": "Unity State launches 92-kilometer road project linking Mayom to Warrap",
@@ -1065,7 +1408,7 @@
       "published_at": "2026-07-16T09:35:40+00:00",
       "source_url": "https://thenilepost.com/en/national/story/katikkiro-mayiga-reveals-how-dr-aisha-kasolo-quietly-opened-doors-for-buganda-communities-through-government-programmes/",
       "source_name": "The Nile Post",
-      "context": "The Buganda Kingdom, a significant cultural institution in Uganda, has been navigating complex political dynamics since the 1966 abolition of traditional kingdoms. Recently, the government has sought to strengthen ties with these kingdoms to promote national unity and development. Dr. Aisha Kasolo's initiatives align with the 2020 National Development Plan, aiming to enhance community access to government resources, which is crucial in a region still grappling with the legacies of colonialism and ongoing political tensions."
+      "context": "The Buganda Kingdom, a significant cultural institution in Uganda, has historically navigated complex relationships with the central government, particularly since the 1966 abolition of traditional kingdoms. Dr. Aisha Kasolo's recent initiatives come amid ongoing efforts to enhance local governance and development, especially following the 2021 elections that saw increased political tensions. Her work aligns with President Museveni's push for decentralization, aiming to empower local communities and address longstanding grievances in the Buganda region."
     },
     {
       "title": "Opinion| Beyond survival: Can South Sudan’s December 2026 elections build a politics of peace, service and accountability?",
@@ -1144,7 +1487,7 @@
       "published_at": "2026-07-16T08:00:09+00:00",
       "source_url": "https://thenilepost.com/en/national/story/being-short-is-a-disability-we-will-eradicate-it-in-uganda-gen-muhoozi-sparks-national-debate/",
       "source_name": "The Nile Post",
-      "context": "Gen Muhoozi Kainerugaba, son of Ugandan President Yoweri Museveni, has been positioning himself as a potential successor amid rising political tensions in Uganda. His controversial remarks come at a time when the country is grappling with issues of governance and human rights, particularly following the violent 2021 elections. This statement also reflects ongoing societal attitudes towards physical appearance and disability, which are often intertwined with broader discussions about inclusivity and representation in Ugandan politics."
+      "context": "Gen Muhoozi Kainerugaba, the son of Ugandan President Yoweri Museveni, has been a prominent figure in Uganda's political landscape, especially following his controversial statements about height. This remark comes amid rising tensions in Uganda regarding political representation and inclusivity, particularly as the country approaches the 2026 presidential elections. His comments have reignited debates about societal norms and discrimination, reflecting broader issues of governance and human rights in the region."
     },
     {
       "title": "Opinion| Beyond elite power struggles: South Sudan’s real crisis is the collapse of institutions",
@@ -1175,7 +1518,7 @@
       "published_at": "2026-07-16T07:55:33+00:00",
       "source_url": "https://thenilepost.com/en/news/story/im-more-fearless-than-ever-muwanga-kivumbi-vows-fresh-fight-after-dramatic-re-arrest/",
       "source_name": "The Nile Post",
-      "context": "Muwanga Kivumbi's re-arrest comes amid heightened tensions in Uganda, where opposition figures face increasing crackdowns from the government. His previous detention in 2021, following the controversial presidential elections, highlighted the ongoing struggle for political freedom in the country. This incident occurs against the backdrop of the 2021 Kampala Agreement, which aimed to foster dialogue and reduce political violence, yet has seen limited progress in addressing human rights abuses."
+      "context": "Muhammad Muwanga Kivumbi, a vocal critic of the Ugandan government, was previously arrested in 2021 during a crackdown on opposition figures following the controversial re-election of President Yoweri Museveni. His recent re-arrest on October 20, 2023, coincides with heightened tensions in Uganda, where the government has intensified its suppression of dissent amid ongoing protests against human rights abuses and electoral malpractices, drawing international scrutiny and calls for justice."
     },
     {
       "title": "أسرار خوارزميات إنستجرام الجديدة.. كيف توزع المنصة المحتوى على الجمهور؟",
@@ -1299,7 +1642,7 @@
       "published_at": "2026-07-16T06:39:46+00:00",
       "source_url": "https://thenilepost.com/en/news/story/uganda-is-heading-in-a-dangerous-direction-musevenis-son-in-law-odrek-rwabwogo-sounds-alarm-over-politics-and-governance/",
       "source_name": "The Nile Post",
-      "context": "Odrek Rwabwogo's warning comes amid rising tensions in Uganda, particularly following the controversial 2021 presidential elections that saw President Yoweri Museveni extend his 37-year rule. The political landscape is further complicated by ongoing unrest in neighboring South Sudan, where instability has historically influenced Uganda's internal dynamics. Additionally, the recent crackdown on dissent and civil liberties in Uganda raises concerns about governance and the potential for escalating conflict."
+      "context": "Odrek Rwabwogo's warning comes amid escalating political tensions in Uganda, particularly following the controversial 2021 elections, which were marred by violence and allegations of fraud. His concerns reflect a broader unease within the ruling National Resistance Movement (NRM) as internal dissent grows, especially with the backdrop of increasing opposition from figures like Bobi Wine and ongoing regional instability linked to conflicts in South Sudan and the Democratic Republic of Congo."
     },
     {
       "title": "“I Am Not A National Thief!” – Chris Obore Breaks Down In Luzira Prison Over Corruption Allegations",
@@ -1314,7 +1657,7 @@
       "published_at": "2026-07-16T06:38:15+00:00",
       "source_url": "https://thenilepost.com/en/news/story/i-am-not-a-national-thief-chris-obore-breaks-down-in-luzira-prison-over-corruption-allegations/",
       "source_name": "The Nile Post",
-      "context": "Chris Obore's arrest comes amid heightened scrutiny of corruption in South Sudan, a country grappling with a fragile peace following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan. The ongoing economic crisis and widespread allegations of mismanagement have intensified public outrage, particularly against government officials. Obore's position as a key communication figure makes his situation emblematic of broader issues of accountability and governance in a nation still recovering from years of civil war."
+      "context": "Chris Obore's emotional breakdown in Luzira Prison comes amid heightened scrutiny of corruption in South Sudan, a country grappling with a fragile peace following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan. The ongoing political turmoil and allegations of mismanagement by government officials have intensified public outcry, making Obore's case emblematic of broader concerns about accountability and governance in a nation still recovering from years of civil war."
     },
     {
       "title": "ميتا توقف ميزة Muse Image بعد أيام من إطلاقها بسبب مخاوف تتعلق بالخصوصية",
@@ -1393,21 +1736,6 @@
       "context": "The call for the suspension of the new social insurance scheme comes amid ongoing economic challenges in South Sudan, exacerbated by the civil conflict that erupted in 2013. Trade unions, including the South Sudan Workers Trade Union Federation, argue that the scheme, introduced in 2023, lacks adequate consultation and could further burden workers in a country already grappling with high unemployment and inflation rates. The political landscape remains tense, with ongoing negotiations for peace and stability following the 2018 Revitalized Agreement on the Resolution of the Conflict."
     },
     {
-      "title": "Hyena attacks family home in Rumbek North, injures two boys",
-      "summary": "A hyena entered a family home in Rumbek North County in Lakes State during heavy The post Hyena attacks family home in Rumbek North, injures two boys appeared first on Radio Tamazuj .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-07-16T05:22:35+00:00",
-      "source_url": "https://www.radiotamazuj.org/en/news/article/hyena-attacks-family-home-in-rumbek-north-injures-two-boys",
-      "source_name": "Radio Tamazuj",
-      "context": "The incident in Rumbek North occurs amidst ongoing challenges in South Sudan, where wildlife-human conflicts have escalated due to environmental changes and displacement caused by the civil war that erupted in 2013. The fragile peace established by the Revitalized Agreement on the Resolution of the Conflict in South Sudan in 2018 has yet to stabilize rural communities, leaving families vulnerable to both human and animal threats as they navigate a landscape of insecurity and resource scarcity."
-    },
-    {
       "title": "الكشف عن حجم خسائر الشركات الأمريكية جراء العقوبات المفروضة على روسيا",
       "summary": "صرّح الرئيس التنفيذي لغرفة التجارة الأمريكية في روسيا، روبرت إيجي، بأن الشركات الأمريكية خسرت 200 مليار دولار خلال 4 سنوات بسبب العقوبات المفروضة على موسكو. وقال إيجي لوكالة “سبوتنيك”: “تعاني الشركات الأمريكية معاناة شديدة جراء العقوبات المفروضة على روسيا، فقد خسرت نحو 200 مليار دولار خلال السنوات الـ4 الماضية وحدها”. وأضاف أنه “ساد الارتباك وحالة …",
       "country_tags": [
@@ -1450,37 +1778,7 @@
       "published_at": "2026-07-16T00:30:02+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/rsf-drone-strike-targets-power-station-in-northern-sudan/3999702",
       "source_name": "Anadolu Agency",
-      "context": "The recent drone strike by the Rapid Support Forces (RSF) on a power station in northern Sudan highlights the escalating violence amid the ongoing conflict between the RSF and the Sudanese Armed Forces, which intensified following the military coup in October 2021. This attack not only underscores the RSF's tactics but also exacerbates the humanitarian crisis, as power disruptions affect civilians already suffering from the fallout of the conflict."
-    },
-    {
-      "title": "طبيبة أعصاب: البكاء المتكرر دون سبب قد يكون علامة على مرض",
-      "summary": "تشير طبيبة الأعصاب يكاتيرينا ديميانوفسكايا إلى أن الحساسية المفرطة، أو الرغبة في البكاء عند مشاهدة فيلم مؤثر أو بعد يوم عصيب، لا تدل بالضرورة على وجود مشكلات في الصحة النفسية. ووفقا لها، إذا ظهر البكاء دون سبب واضح، أو استمر لفترة طويلة، أو ترافق مع أعراض أخرى، فقد يكون علامة على وجود مشكلة صحية، رغم …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-07-15T22:30:24+00:00",
-      "source_url": "https://www.alnilin.com/13478391.htm",
-      "source_name": "النيلين",
-      "context": "تعيش السودان حالة من عدم الاستقرار السياسي والاجتماعي منذ اندلاع النزاع المسلح في أبريل 2023 بين الجيش وقوات الدعم السريع. هذا الصراع أدى إلى تفاقم الأزمات النفسية بين السكان، حيث يعاني الكثيرون من الضغوط النفسية والعواطف المتقلبة. في ظل هذه الظروف، تبرز أهمية فهم العلامات النفسية مثل البكاء المتكرر كأحد المؤشرات على الصحة النفسية المتدهورة في المجتمع السوداني."
-    },
-    {
-      "title": "كأس العالم يلحق ضررا بخصوبة الرجال",
-      "summary": "كشف تحذير طبي جديد أن الإفراط في شرب الكحول خلال متابعة مباريات كأس العالم قد يلحق ضررا بخصوبة الرجال يستمر لأشهر بعد انتهاء البطولة.ويحذر خبراء من أن جلسة واحدة من الإفراط في الشرب تؤدي إلى تراجع جودة الحيوانات المنوية لمدة تصل إلى 90 يوما.وأوضحت الدكتورة صوفي ديكس، المسؤولة الطبية في منصة “ميد إكسبريس”، أن الجسم …",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-07-15T20:30:13+00:00",
-      "source_url": "https://www.alnilin.com/13478390.htm",
-      "source_name": "النيلين",
-      "context": "في ظل الأزمات الاقتصادية والاجتماعية التي تعاني منها السودان، يزداد الإقبال على مشاهدة الفعاليات الرياضية الكبرى مثل كأس العالم كوسيلة للهروب من الواقع. ومع ذلك، فإن المخاطر الصحية المرتبطة بالإفراط في شرب الكحول تثير القلق، خاصة في ظل التحديات الصحية العامة التي تواجه البلاد. هذه التحذيرات تأتي في وقت حساس حيث تسعى الحكومة السودانية إلى تحسين الصحة العامة وتعزيز الوعي حول قضايا الخصوبة."
+      "context": "The recent drone strike by the Rapid Support Forces (RSF) on a power station in northern Sudan highlights the escalating violence amid the ongoing conflict that erupted in April 2023 between the RSF and the Sudanese Armed Forces (SAF). This attack not only exacerbates the humanitarian crisis but also disrupts essential services in a country already struggling with political instability following the ousting of President Omar al-Bashir in 2019."
     },
     {
       "title": "Insecurity displaces nearly 600 people from Sudan's Kulbus, UN migration agency says",
@@ -1495,7 +1793,7 @@
       "published_at": "2026-07-15T19:06:59+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/insecurity-displaces-nearly-600-people-from-sudans-kulbus-un-migration-agency-says/3999528",
       "source_name": "Anadolu Agency",
-      "context": "Kulbus, located in Sudan's Darfur region, has been a flashpoint for violence since the Darfur conflict erupted in 2003, involving government forces and various rebel groups. The recent surge in insecurity is linked to ongoing clashes between Sudanese Armed Forces and the Rapid Support Forces, which intensified following the military coup in October 2021. The displacement of nearly 600 individuals highlights the deteriorating humanitarian situation amid a backdrop of political instability and ethnic tensions."
+      "context": "Kulbus, located in Sudan's Darfur region, has been a flashpoint for violence amid ongoing conflicts involving various armed groups and government forces since the Darfur War began in 2003. The recent surge in insecurity, particularly following the outbreak of fighting between the Sudanese Armed Forces and the Rapid Support Forces in April 2023, has exacerbated humanitarian crises, leading to significant displacement and instability in border areas like Kulbus, which is close to Chad."
     },
     {
       "title": "Army-allied groups recapture strategic Orshi Reservoir area in Sudan’s Darfur from RSF",
@@ -1510,7 +1808,7 @@
       "published_at": "2026-07-15T17:06:57+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/army-allied-groups-recapture-strategic-orshi-reservoir-area-in-sudan-s-darfur-from-rsf/3999340",
       "source_name": "Anadolu Agency",
-      "context": "The recapture of the Orshi Reservoir is significant amid the ongoing conflict in Sudan, which escalated in April 2023 between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF). Control over water resources like the Orshi Reservoir is critical, especially as the Darfur region grapples with humanitarian crises exacerbated by violence and displacement. The conflict has disrupted access to essential services, intensifying the struggle for survival among local populations."
+      "context": "The recapture of the Orshi Reservoir by army-allied groups is significant amid the ongoing conflict in Sudan, which escalated in April 2023 between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF). The reservoir's strategic importance lies in its role as a vital water source for the Ambro locality, where residents have faced severe shortages exacerbated by the fighting. Control of such resources is critical for both military strategy and humanitarian needs in the region."
     },
     {
       "title": "Armed clashes kill 8, injure 16 in northern Sudan",
@@ -1525,7 +1823,7 @@
       "published_at": "2026-07-15T17:05:27+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/armed-clashes-kill-8-injure-16-in-northern-sudan/3999336",
       "source_name": "Anadolu Agency",
-      "context": "The clashes in Al-Dabbah city occur amid escalating tensions in Sudan following the 2021 military coup that ousted Prime Minister Abdalla Hamdok. The power struggle between the Sudanese Armed Forces and the Rapid Support Forces has led to increased violence, particularly in regions like Darfur. The situation is further complicated by ongoing humanitarian crises and the recent peace agreement attempts, including the Jeddah talks in 2023, which have yet to yield lasting stability."
+      "context": "The clashes in Al-Dabbah city occur amid escalating tensions following the October 2021 military coup that ousted Sudan's transitional government. The power struggle between the Sudanese Armed Forces and the Rapid Support Forces has intensified, leading to increased violence in various regions. This incident highlights the deteriorating security situation and the challenges facing humanitarian efforts, particularly as Sudan grapples with ongoing economic instability and civil unrest."
     },
     {
       "title": "South Sudan workers seek delay of NSIF rollout pending reforms",
@@ -1556,39 +1854,7 @@
       "published_at": "2026-07-15T16:21:46+00:00",
       "source_url": "https://www.thereporterethiopia.com/51856/",
       "source_name": "The Reporter Ethiopia",
-      "context": "Ethiopia has faced significant internal strife, particularly following the Tigray conflict that erupted in November 2020, leading to widespread violence and humanitarian crises. The National Dialogue, initiated in 2021, aims to address deep-seated ethnic tensions and political grievances, involving key actors like the federal government, regional states, and civil society. The dialogue's outcomes are critical for fostering national unity and stability, especially in light of ongoing tensions in regions such as Oromia and Amhara."
-    },
-    {
-      "title": "Kiir to commission modern Terminal 3 at Juba Airport on Thursday – Minister Rizik",
-      "summary": "The Minister of Transport, Rizik Zakaria Hassan, has announced that President Salva Kiir will officially inaugurate the newly constructed Terminal 3 at Juba International Airport on Thursday, marking a significant milestone in South Sudan’s drive to modernize its aviation infrastructure and enhance international air travel services. Ahead of the inauguration, the President on Wednesday received […] The post Kiir to commission modern Terminal 3 at Juba Airport on Thursday – Minister Rizik appeared first on Eye Radio .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Politics"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T16:15:44+00:00",
-      "source_url": "https://www.eyeradio.org/kiir-to-commission-modern-terminal-3-at-juba-airport-on-thursday-minister-rizik/?utm_source=rss&utm_medium=rss&utm_campaign=kiir-to-commission-modern-terminal-3-at-juba-airport-on-thursday-minister-rizik",
-      "source_name": "Eye Radio",
-      "context": "The inauguration of Terminal 3 comes amid ongoing efforts to stabilize South Sudan following years of civil conflict that began in 2013, leading to a peace agreement in 2018. This development is crucial as it reflects the government's commitment to improving infrastructure and attracting foreign investment, particularly in light of the recent establishment of the Revitalized Transitional Government of National Unity, which aims to foster national reconciliation and economic recovery."
-    },
-    {
-      "title": "SSPDF, UPDF clash over Kajo-Keji border dispute",
-      "summary": "Clashes erupted between the South Sudan People’s Defence Forces (SSPDF) and the Uganda People’s Defence The post SSPDF, UPDF clash over Kajo-Keji border dispute appeared first on Radio Tamazuj .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Security"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T15:58:30+00:00",
-      "source_url": "https://www.radiotamazuj.org/en/news/article/updf-sspdf-clash-over-kajo-keji-border-dispute",
-      "source_name": "Radio Tamazuj",
-      "context": "The Kajo-Keji border dispute has its roots in the complex post-independence dynamics between South Sudan and Uganda, particularly following South Sudan's independence in 2011. Tensions have escalated due to the influx of refugees and competition over resources in the border region, exacerbated by the ongoing civil conflict in South Sudan. Recent clashes highlight the fragile security situation and the failure of the 2018 Revitalized Peace Agreement to stabilize relations between the two nations."
+      "context": "Ethiopia has faced significant political turmoil since the outbreak of the Tigray conflict in November 2020, which exacerbated ethnic tensions and led to widespread violence. The National Dialogue, initiated in 2021, aims to address these divisions and promote reconciliation among various ethnic groups, particularly following the peace agreement signed in November 2022 between the federal government and Tigray People's Liberation Front (TPLF). This conference is crucial for shaping Ethiopia's political future and fostering stability."
     },
     {
       "title": "Implications of Saudi, Somalia security cooperation",
@@ -1604,105 +1870,7 @@
       "published_at": "2026-07-15T15:46:04+00:00",
       "source_url": "https://www.thereporterethiopia.com/51853/",
       "source_name": "The Reporter Ethiopia",
-      "context": "The Saudi military delegation's visit to Gorisil comes amid Somalia's ongoing struggle against the militant group Al-Shabaab, which has intensified since the collapse of the central government in 1991. In 2020, the Somali Federal Government signed a security cooperation agreement with Saudi Arabia, aimed at bolstering its military capabilities. This partnership is particularly significant as regional dynamics shift, with Saudi Arabia seeking to expand its influence in the Horn of Africa amidst competing interests from other powers like Turkey and the UAE."
-    },
-    {
-      "title": "South Sudan, Kenya deepen Cooperation on Border Security and Immigration",
-      "summary": "South Sudan and Kenya have reaffirmed their commitment to strengthening cooperation on border security and immigration management following high-level discussions held in Nairobi. According to Kenya media reports, the talks took place during a courtesy meeting between South Sudan’s Minister of Interior, Aleu Ayieny Aleu, and his Kenyan counterpart, and Kenya’s Cabinet Secretary for Interior and […] The post South Sudan, Kenya deepen Cooperation on Border Security and Immigration appeared first on Eye Radio .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan",
-        "Kenya"
-      ],
-      "topic_tags": [
-        "Politics",
-        "Diplomacy"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T15:10:17+00:00",
-      "source_url": "https://www.eyeradio.org/south-sudan-kenya-deepen-cooperation-on-border-security-and-immigration/?utm_source=rss&utm_medium=rss&utm_campaign=south-sudan-kenya-deepen-cooperation-on-border-security-and-immigration",
-      "source_name": "Eye Radio",
-      "context": "The border between South Sudan and Kenya has historically been a site of tension, exacerbated by conflicts involving armed groups and issues of cattle raiding. The 2011 independence of South Sudan heightened the need for effective border management, particularly as both countries face challenges from regional instability and cross-border crime. Recent agreements, such as the 2022 Joint Border Security Initiative, underscore the urgency for collaboration in addressing these security concerns amid ongoing political transitions in both nations."
-    },
-    {
-      "title": "Kajo-Keji commissioner says Ugandan army attacked SSPDF post",
-      "summary": "Kajo-Keji County Commissioner Wani Jackson Mule has accused the Uganda People’s Defence Forces (UPDF) of crossing into South Sudan territory and attacking a South Sudan People’s Defence Forces (SSPDF) base along the border in Kajo-Keji County. Mule said the clashes occurred on Tuesday evening in the border area, forcing residents to flee their homes and […] The post Kajo-Keji commissioner says Ugandan army attacked SSPDF post appeared first on Eye Radio .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Security"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T14:04:15+00:00",
-      "source_url": "https://www.eyeradio.org/kajo-keji-commissioner-says-ugandan-army-attacked-sspdf-post/?utm_source=rss&utm_medium=rss&utm_campaign=kajo-keji-commissioner-says-ugandan-army-attacked-sspdf-post",
-      "source_name": "Eye Radio",
-      "context": "The Kajo-Keji region has been a flashpoint for tensions between Uganda and South Sudan, particularly since the 2016 outbreak of civil war in South Sudan, which has led to cross-border incursions. The 2006 Comprehensive Peace Agreement aimed to stabilize the region, but ongoing disputes over territory and security have persisted. Recent escalations, including the UPDF's involvement in South Sudanese conflicts, have raised concerns about regional stability and the safety of civilians along the border."
-    },
-    {
-      "title": "Machar’s co-accused asks court to dismiss charges, says prosecution lacks evidence",
-      "summary": "A lawmaker standing trial alongside suspended First Vice President Riek Machar on Wednesday asked the The post Machar’s co-accused asks court to dismiss charges, says prosecution lacks evidence appeared first on Radio Tamazuj .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Politics",
-        "Justice & Rights"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T13:48:09+00:00",
-      "source_url": "https://www.radiotamazuj.org/en/news/article/machars-co-accused-asks-court-to-dismiss-charges-says-prosecution-lacks-evidence",
-      "source_name": "Radio Tamazuj",
-      "context": "The trial of Riek Machar, South Sudan's suspended First Vice President, is a critical moment in the country's fragile peace process following the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan. Machar's ongoing legal battles reflect the deep political divisions within the ruling Sudan People's Liberation Movement, exacerbated by the 2013 civil war and subsequent power struggles. His co-accused's request to dismiss charges highlights the contentious nature of the current political landscape."
-    },
-    {
-      "title": "Nasir Trial: Third accused Gatwech concludes defense, denies role in Nasir attack",
-      "summary": "The third accused in the ongoing Special Court trial over the Nasir garrison attack, Gatwech Lam, has denied allegations that he supported, encouraged, or participated in activities linked to the 2025 Nasir crisis, asking the court to dismiss the case against him. Lam, a Member of Parliament, concluded his defense statement on Wednesday during the […] The post Nasir Trial: Third accused Gatwech concludes defense, denies role in Nasir attack appeared first on Eye Radio .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Politics",
-        "Security",
-        "Justice & Rights"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T13:43:15+00:00",
-      "source_url": "https://www.eyeradio.org/nasir-trial-third-accused-gatwech-concludes-defense-denies-role-in-nasir-attack/?utm_source=rss&utm_medium=rss&utm_campaign=nasir-trial-third-accused-gatwech-concludes-defense-denies-role-in-nasir-attack",
-      "source_name": "Eye Radio",
-      "context": "The Nasir garrison attack is part of the broader conflict in South Sudan, which erupted in December 2013, leading to a civil war that has involved various factions and resulted in widespread violence and human rights abuses. The trial is significant as it addresses accountability for the 2025 crisis, a pivotal moment in the ongoing struggle for power between the Sudan People's Liberation Army (SPLA) factions, particularly under leaders like Riek Machar and Salva Kiir."
-    },
-    {
-      "title": "W. Equatoria residents alarmed as fuel price surge drives up transport costs",
-      "summary": "Residents, commercial motorcycle taxi operators known as boda-boda riders, and farmers in Western Equatoria State The post W. Equatoria residents alarmed as fuel price surge drives up transport costs appeared first on Radio Tamazuj .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T13:34:18+00:00",
-      "source_url": "https://www.radiotamazuj.org/en/news/article/w-equatoria-residents-alarmed-as-fuel-price-surge-drives-up-transport-costs",
-      "source_name": "Radio Tamazuj",
-      "context": "Western Equatoria State, a region in South Sudan, has faced ongoing economic challenges exacerbated by the civil conflict that erupted in 2013. The recent surge in fuel prices is linked to the instability in oil production and supply chains, particularly following the 2020 peace agreement aimed at unifying rival factions. As transport costs rise, local communities, including boda-boda operators and farmers, are increasingly burdened, threatening livelihoods and food security in the region."
-    },
-    {
-      "title": "NPA supports ethical election reporting training in Bor",
-      "summary": "As South Sudan prepares for its first-ever general elections since gaining independence in 2011, the The post NPA supports ethical election reporting training in Bor appeared first on Radio Tamazuj .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Politics"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T12:40:27+00:00",
-      "source_url": "https://www.radiotamazuj.org/en/news/article/npa-supports-ethical-election-reporting-training-in-bor",
-      "source_name": "Radio Tamazuj",
-      "context": "South Sudan is gearing up for its first general elections since independence in 2011, a significant milestone following years of civil conflict that erupted in 2013 and again in 2016. The peace agreement signed in 2018, which aimed to end the violence and establish a transitional government, has set the stage for these elections. Ethical reporting is crucial as the country navigates a fragile political landscape marked by mistrust and ongoing tensions among various factions."
+      "context": "The recent Saudi military delegation's visit to Somalia comes amid heightened security concerns due to the resurgence of Al-Shabaab attacks, particularly following the group's increased activity in the Galgaduud region. This cooperation aligns with Saudi Arabia's broader strategy to strengthen ties with the Somali Federal Government, especially after the 2020 agreement to enhance military training and support, reflecting a shift in regional alliances as Gulf states seek to counter Iranian influence in the Horn of Africa."
     },
     {
       "title": "Sudan’s war economy fueling conflict, risks global supply chains: UN report",
@@ -1719,23 +1887,7 @@
       "published_at": "2026-07-15T12:32:36+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/sudan-s-war-economy-fueling-conflict-risks-global-supply-chains-un-report/3998989",
       "source_name": "Anadolu Agency",
-      "context": "Sudan has been embroiled in conflict since the Darfur crisis in 2003, exacerbated by the 2019 ousting of President Omar al-Bashir, which led to a power struggle between military and civilian factions. The ongoing violence, particularly in regions like Darfur and South Kordofan, has intensified the exploitation of resources such as gum arabic, with armed groups reportedly profiting from its trade, raising concerns about human rights abuses and the stability of global supply chains."
-    },
-    {
-      "title": "Fuel prices soar as pound plunges, South Sudanese feel economic pressure",
-      "summary": "South Sudanese residents have expressed concern over rising fuel prices and the continued depreciation of the South Sudanese pound, saying the increasing cost of living is putting pressure on households and businesses. Speaking during Eye Radio’s Dawn Show on Wednesday, callers from Juba, Wau, and other parts of the country said the exchange rate on […] The post Fuel prices soar as pound plunges, South Sudanese feel economic pressure appeared first on Eye Radio .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Business & Economy"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T12:21:26+00:00",
-      "source_url": "https://www.eyeradio.org/fuel-prices-soar-as-pound-plunges-south-sudanese-feel-economic-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=fuel-prices-soar-as-pound-plunges-south-sudanese-feel-economic-pressure",
-      "source_name": "Eye Radio",
-      "context": "The economic crisis in South Sudan has been exacerbated by ongoing political instability since the civil war that erupted in December 2013, leading to a fractured government and disrupted trade. The recent peace agreement signed in 2018 has yet to stabilize the economy, with inflation rates soaring and the South Sudanese pound losing value against the US dollar, impacting everyday life for citizens. The situation is further strained by global oil price fluctuations, affecting fuel availability and costs."
+      "context": "Sudan has been embroiled in conflict since the ousting of President Omar al-Bashir in April 2019, leading to a power struggle between military and civilian factions. The ongoing violence, particularly in Darfur, has exacerbated human rights abuses and destabilized the economy, with gum arabic becoming a key export linked to these abuses. The UN report highlights the urgent need for scrutiny of trade practices as the conflict threatens global supply chains reliant on this commodity."
     },
     {
       "title": "US Ambassador Visits Tigray in Bid to Revive “Dead” Peace Deal",
@@ -1753,54 +1905,7 @@
       "published_at": "2026-07-15T12:07:23+00:00",
       "source_url": "https://www.thereporterethiopia.com/51848/",
       "source_name": "The Reporter Ethiopia",
-      "context": "The Pretoria Agreement, signed in November 2022, aimed to end a brutal two-year conflict between the Tigray People's Liberation Front (TPLF) and the Ethiopian federal government. However, tensions have resurfaced, with the TPLF recently declaring the agreement \"dead\" due to unmet commitments, particularly regarding humanitarian access and political representation. Ambassador Ervin Massinga's visit to Mekelle comes as the National Dialogue conference in Addis Ababa seeks to address these escalating issues and restore stability."
-    },
-    {
-      "title": "Abyei people cannot remain hostages of Juba-Khartoum dispute -Yakani",
-      "summary": "Civil society activist Edmond Yakani has called on the governments of South Sudan and Sudan to resolve the long-standing dispute over the Abyei Administrative Area through peaceful dialogue, warning that residents of the area have remained caught in political delays. Yakani, the Executive Director of the Community Empowerment for Progress Organization (CEPO), said the continued […] The post Abyei people cannot remain hostages of Juba-Khartoum dispute -Yakani appeared first on Eye Radio .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T11:33:39+00:00",
-      "source_url": "https://www.eyeradio.org/abyei-people-cannot-remain-hostages-of-juba-khartoum-dispute-yakani/?utm_source=rss&utm_medium=rss&utm_campaign=abyei-people-cannot-remain-hostages-of-juba-khartoum-dispute-yakani",
-      "source_name": "Eye Radio",
-      "context": "The Abyei Administrative Area, claimed by both Sudan and South Sudan, has been a flashpoint since the 2005 Comprehensive Peace Agreement, which aimed to end the Second Sudanese Civil War. Tensions escalated in 2011 when South Sudan gained independence, yet the status of Abyei remains unresolved, leading to violent clashes and political stalemates. The African Union's 2013 proposal for a referendum on Abyei's status has yet to be implemented, leaving its residents in a precarious situation."
-    },
-    {
-      "title": "SSPDF recaptures Lankien, Nyirol County",
-      "summary": "The South Sudan People’s Defence Forces (SSPDF) have recaptured the town of Lankien in Nyirol The post SSPDF recaptures Lankien, Nyirol County appeared first on Radio Tamazuj .",
-      "country_tags": [
-        "Sudan",
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T11:09:37+00:00",
-      "source_url": "https://www.radiotamazuj.org/en/news/article/sspdf-recaptures-lankien-nyirol-county",
-      "source_name": "Radio Tamazuj",
-      "context": "The recapture of Lankien is significant as it reflects ongoing tensions between the SSPDF and opposition forces, particularly the Sudan People's Liberation Army-In Opposition (SPLA-IO) led by Riek Machar. This conflict has roots in the civil war that erupted in December 2013, exacerbated by the 2018 Revitalized Peace Agreement, which has struggled to fully implement key provisions, including disarmament and power-sharing, leading to continued violence in regions like Nyirol County."
-    },
-    {
-      "title": "Wau Rotary Club donates four rickshaw ambulances to Twic County",
-      "summary": "The Rotary Club of Wau, in partnership with the MAMA Project and other partners, has donated four customized motor tricycle ambulances to Transformation of the World in Christ (TWIC) to improve emergency healthcare access for remote and displaced communities in Twic County, Warrap State. The tuk-tuk ambulances are expected to provide affordable emergency transport for […] The post Wau Rotary Club donates four rickshaw ambulances to Twic County appeared first on Eye Radio .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Humanitarian"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T11:07:20+00:00",
-      "source_url": "https://www.eyeradio.org/wau-rotary-club-donates-four-tuk-tuk-ambulances-to-twic-county/?utm_source=rss&utm_medium=rss&utm_campaign=wau-rotary-club-donates-four-tuk-tuk-ambulances-to-twic-county",
-      "source_name": "Eye Radio",
-      "context": "Twic County, part of Warrap State in South Sudan, has faced ongoing challenges due to civil conflict and displacement since the outbreak of violence in 2013. The humanitarian situation remains dire, with limited access to healthcare exacerbated by infrastructure deficits. The donation of rickshaw ambulances by the Wau Rotary Club and partners aims to address these urgent healthcare needs, particularly for remote communities affected by the conflict and ongoing instability in the region."
+      "context": "The Tigray conflict, which erupted in November 2020, saw the TPLF clash with the Ethiopian federal government, leading to a devastating humanitarian crisis. The Pretoria Agreement, signed in November 2022, aimed to cease hostilities but has faced challenges, with the TPLF recently declaring it \"dead\" amid escalating tensions. Ambassador Massinga's visit comes as the National Dialogue conference in Addis Ababa seeks to address broader political issues, highlighting the fragile peace in the region."
     },
     {
       "title": "Rastafarians in Kenya fail in bid to get cannabis legalised for religious purposes",
@@ -1817,66 +1922,6 @@
       "source_url": "https://www.bbc.co.uk/news/articles/c0lyl5ryyr4o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
       "context": "In Kenya, the 2010 Constitution recognizes the freedom of religion, yet cannabis remains illegal despite ongoing discussions about its potential legalization. The Rastafarian community, which views cannabis as a sacrament, has faced legal challenges in their quest for recognition. The recent court ruling on October 3, 2023, highlights the tension between traditional beliefs and national drug policies, prompting calls for a comprehensive review of cannabis legislation amidst a growing global trend towards legalization."
-    },
-    {
-      "title": "Adil says SPLM will not entertain community-based recommendations for elective positions",
-      "summary": "The Chairperson of the Sudan People’s Liberation Movement (SPLM) in Central Equatoria State, Emmanuel Adil Anthony, has said recommendations based on community interests as it prepares for the 2026 general elections, stressing that appointments must follow party procedures and merit, in line with resolutions from the recent SPLM Leadership Summit. According to a statement from the Office […] The post Adil says SPLM will not entertain community-based recommendations for elective positions appeared first on Eye Radio .",
-      "country_tags": [
-        "Sudan"
-      ],
-      "topic_tags": [
-        "Diplomacy"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T10:22:06+00:00",
-      "source_url": "https://www.eyeradio.org/adil-says-splm-will-not-entertain-community-based-recommendations-for-elective-positions/?utm_source=rss&utm_medium=rss&utm_campaign=adil-says-splm-will-not-entertain-community-based-recommendations-for-elective-positions",
-      "source_name": "Eye Radio",
-      "context": "The SPLM's stance comes amid ongoing tensions in Sudan following the 2019 ousting of President Omar al-Bashir, which led to a fragile transitional government. The 2021 Juba Peace Agreement aimed to address conflicts among various groups, but political fragmentation persists, particularly in Central Equatoria State. As the SPLM prepares for the 2026 elections, internal party dynamics and adherence to established procedures are critical for maintaining unity and legitimacy within the party and the broader political landscape."
-    },
-    {
-      "title": "One killed, 12 injured in intercommunal clashes in Bor County",
-      "summary": "At least one person was killed and 12 others wounded, including a soldier, in renewed The post One killed, 12 injured in intercommunal clashes in Bor County appeared first on Radio Tamazuj .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Security"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T10:00:50+00:00",
-      "source_url": "https://www.radiotamazuj.org/en/news/article/one-killed-12-injured-in-intercommunal-clashes-in-bor-county",
-      "source_name": "Radio Tamazuj",
-      "context": "The intercommunal clashes in Bor County are part of a broader pattern of violence stemming from longstanding ethnic tensions between the Dinka and Nuer communities in South Sudan. This unrest has been exacerbated by the fragile peace agreement signed in September 2018, which aimed to end a civil war that erupted in 2013. Recent incidents, including clashes in Jonglei State, highlight the ongoing challenges of implementing peace and fostering stability in the region."
-    },
-    {
-      "title": "Prof James Wani Igga lectures SPLM members on party discipline and mobilization",
-      "summary": "Prof. James Wani Igga on Tuesday delivered a lecture on effective mobilization and party discipline to SPLM members in Central Equatoria State, aimed at strengthening the party’s grassroots structures ahead of the 2026 elections. The call was made by SPLM First Deputy Chairperson Prof. James Wani Igga during the Central Equatoria State SPLM Expanded Leadership […] The post Prof James Wani Igga lectures SPLM members on party discipline and mobilization appeared first on Eye Radio .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T09:45:40+00:00",
-      "source_url": "https://www.eyeradio.org/prof-james-wani-igga-lectures-splm-members-on-party-discipline-and-mobilization/?utm_source=rss&utm_medium=rss&utm_campaign=prof-james-wani-igga-lectures-splm-members-on-party-discipline-and-mobilization",
-      "source_name": "Eye Radio",
-      "context": "The SPLM (Sudan People's Liberation Movement) has been pivotal in South Sudan's political landscape since the country gained independence in 2011. Following years of civil conflict, the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan aimed to establish a power-sharing government, yet challenges remain in unifying the party and mobilizing support. With the 2026 elections approaching, strengthening grassroots structures is crucial for the SPLM to maintain its influence amid ongoing political tensions."
-    },
-    {
-      "title": "Aweil North community demands services before gold mining begins",
-      "summary": "The community of Mayom Angok Boma in Aweil North County, Northern Bahr el Ghazal State has demanded the construction of a road, school, and police station before Lol Malual Mining Company begins gold mining operations in the area. They raised the demands during a meeting in Mayom Angok involving community members, government officials, company representatives, […] The post Aweil North community demands services before gold mining begins appeared first on Eye Radio .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Politics"
-      ],
-      "language": "en",
-      "published_at": "2026-07-15T09:31:16+00:00",
-      "source_url": "https://www.eyeradio.org/aweil-north-community-demands-services-before-gold-mining-begins/?utm_source=rss&utm_medium=rss&utm_campaign=aweil-north-community-demands-services-before-gold-mining-begins",
-      "source_name": "Eye Radio",
-      "context": "The demand for infrastructure development in Aweil North comes amid South Sudan's ongoing struggle for stability following years of civil war, which officially ended with the 2018 Revitalized Agreement on the Resolution of the Conflict in South Sudan. The region, rich in natural resources, has seen increased interest from companies like Lol Malual Mining, raising concerns among local communities about equitable development and the potential for conflict over resource management."
     },
     {
       "title": "NMG Fires Back: “Daily Monitor Has Never Fabricated Fake News Against Museveni’s Government”",
@@ -1952,7 +1997,7 @@
       "published_at": "2026-07-14T16:12:20+00:00",
       "source_url": "https://www.thereporterethiopia.com/51837/",
       "source_name": "The Reporter Ethiopia",
-      "context": "The decision to phase out premium payments for gold suppliers comes amid Ethiopia's ongoing economic challenges, exacerbated by the civil conflict in Tigray that began in November 2020. The International Monetary Fund's engagement with Ethiopia, including a $3 billion loan agreement in 2021, has prompted reforms aimed at stabilizing the economy. This move reflects the NBE's efforts to align with international market standards and improve fiscal sustainability as the country seeks recovery post-conflict."
+      "context": "The decision to phase out premium payments for gold suppliers in Ethiopia comes amid ongoing economic reforms tied to the International Monetary Fund's $4 billion loan agreement in 2021. This move is part of a broader strategy to stabilize the Ethiopian economy, which has been affected by internal conflicts, particularly the Tigray War that began in November 2020, and rising inflation rates that have strained the country’s financial resources."
     },
     {
       "title": "Sudan: Army says it captures Fashfoun area in Blue Nile state after fighting with RSF",
@@ -1967,7 +2012,7 @@
       "published_at": "2026-07-14T09:54:18+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/sudan-army-says-it-captures-fashfoun-area-in-blue-nile-state-after-fighting-with-rsf/3997502",
       "source_name": "Anadolu Agency",
-      "context": "The recent fighting in Blue Nile state is part of the ongoing conflict between Sudan's Armed Forces (SAF) and the Rapid Support Forces (RSF), which escalated following the ousting of President Omar al-Bashir in 2019. The SAF's recapture of Al-Kurmuk on October 10, 2023, marked a strategic gain, as control of border towns is crucial for both resources and regional influence amid Sudan's fractured political landscape and ongoing power struggles."
+      "context": "The conflict in Sudan has escalated since April 2023, when clashes erupted between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF), a paramilitary group. The fighting has led to significant territorial disputes, particularly in the Blue Nile state, which is strategically important for controlling trade routes and resources. The recent capture of Fashfoun follows the SAF's earlier recapture of Al-Kurmuk, highlighting the ongoing struggle for dominance between these two factions."
     },
     {
       "title": "Kamaru Usman on WCMCU 2026: tournament favorites, African legends and Hollywood in football",
@@ -1984,7 +2029,7 @@
       "published_at": "2026-07-14T09:49:26+00:00",
       "source_url": "https://capitalethiopia.com/2026/07/14/kamaru-usman-on-wcmcu-2026-tournament-favorites-african-legends-and-hollywood-in-football/",
       "source_name": "Capital Ethiopia",
-      "context": "As Ethiopia navigates a fragile peace following the Tigray conflict, sports figures like Kamaru Usman serve as unifying symbols for a nation seeking stability and international recognition. The upcoming WCMCU 2026 tournament presents an opportunity for African nations to showcase their talents on a global stage, reflecting the continent's growing influence in sports. Usman's insights highlight the intersection of sports and diplomacy, particularly in a region striving for cohesion after years of turmoil."
+      "context": "As Ethiopia navigates a complex political landscape following the Tigray conflict, sports figures like Kamaru Usman serve as unifying symbols amidst national recovery efforts. The upcoming WCMCU 2026 tournament highlights Africa's growing influence in global sports, especially after the 2022 FIFA World Cup showcased the continent's talent. Usman's insights reflect not only his personal journey but also the aspirations of many Africans seeking recognition on the world stage."
     },
     {
       "title": "Oil Climbs to Four-Week High as US-Iran Conflict Threatens Hormuz Shipping, Again",
@@ -1999,7 +2044,7 @@
       "published_at": "2026-07-14T09:29:04+00:00",
       "source_url": "https://www.thereporterethiopia.com/51834/",
       "source_name": "The Reporter Ethiopia",
-      "context": "The Strait of Hormuz is a critical chokepoint for global oil shipments, with about 20% of the world's oil passing through it. Tensions have escalated since the U.S. withdrew from the Iran nuclear deal in 2018, leading to increased military posturing from both nations. Recent skirmishes, including Iran's seizure of oil tankers and U.S. military deployments in the region, have heightened fears of potential disruptions, making the current situation particularly volatile for global energy markets."
+      "context": "The Strait of Hormuz is a critical chokepoint for global oil shipments, with approximately 20% of the world's oil passing through it. Tensions have escalated since the U.S. withdrew from the Iran nuclear deal in 2018, leading to a series of confrontations, including Iran's seizure of oil tankers in 2019. The recent military skirmishes have reignited fears of supply disruptions, impacting global markets and raising stakes for energy-dependent nations like Ethiopia, which relies on stable oil prices."
     },
     {
       "title": "EU Targets Sudan’s Gold Trade With New Sanctions Aimed at War Economy",
@@ -2015,7 +2060,7 @@
       "published_at": "2026-07-14T09:25:52+00:00",
       "source_url": "https://www.thereporterethiopia.com/51831/",
       "source_name": "The Reporter Ethiopia",
-      "context": "Sudan has been engulfed in civil war since April 2023, following a power struggle between the Sudanese Armed Forces and the Rapid Support Forces, leading to widespread violence and humanitarian crises. The conflict has exacerbated existing economic challenges, with gold exports previously serving as a crucial revenue source for both factions. The EU's sanctions aim to disrupt this funding, reflecting international efforts to stabilize the region and address the escalating humanitarian situation."
+      "context": "Sudan has been embroiled in a civil war since April 2023, following a power struggle between the Sudanese Armed Forces and the Rapid Support Forces, which has led to widespread violence and humanitarian crises. The conflict has intensified the role of gold mining as a crucial revenue source for both factions, prompting international concerns about the funding of armed conflict and the exploitation of resources. The EU's sanctions aim to disrupt these financial flows and promote stability."
     },
     {
       "title": "EU bans gold imports from Sudan to curb money financing the war",
@@ -2045,7 +2090,7 @@
       "published_at": "2026-07-14T08:06:35+00:00",
       "source_url": "https://www.thereporterethiopia.com/51828/",
       "source_name": "The Reporter Ethiopia",
-      "context": "Tewolde Gebremariam's appointment comes at a pivotal moment for Pakistan International Airlines (PIA), which was privatized in 2023 amid ongoing financial struggles and operational inefficiencies. His leadership is crucial as PIA seeks to stabilize and revitalize its operations under the new ownership of the Pakistani conglomerate, the Shaheen Group, following years of government mismanagement and the airline's mounting debt, which reached approximately $3.5 billion."
+      "context": "Tewolde Gebremariam's appointment comes at a crucial time for Pakistan International Airlines (PIA), which was privatized in 2023 amid ongoing financial struggles and operational inefficiencies. His leadership is significant as PIA seeks to stabilize and revitalize under local ownership, following years of government mismanagement. Additionally, Tewolde's experience at Ethiopian Airlines, which has become a leading carrier in Africa, positions him to implement strategies that could enhance PIA's competitiveness in a challenging aviation market."
     },
     {
       "title": "“I Have Achieved Everything, My Only Remaining Mission Is Getting Beyoncé” – Gen Muhoozi Sparks Online Buzz",
@@ -2135,7 +2180,7 @@
       "published_at": "2026-07-14T01:01:41+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/sudan-s-army-says-it-downed-another-fh-95-drone-amid-clashes-with-rsf/3997092",
       "source_name": "Anadolu Agency",
-      "context": "The downing of the FH-95 drone occurs amid escalating clashes between Sudan's army and the Rapid Support Forces (RSF), a paramilitary group that emerged from the Janjaweed militias involved in the Darfur conflict. This conflict intensified following the ousting of President Omar al-Bashir in April 2019, leading to a power struggle and a fragile transition to civilian rule. The recent surge in drone activity highlights the ongoing militarization and external involvement in Sudan's internal strife."
+      "context": "The recent downing of the FH-95 drone by Sudan's army highlights the ongoing conflict between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF), which escalated in April 2023. This clash has drawn international attention, particularly as both sides vie for control amid a power vacuum following the ousting of former President Omar al-Bashir in 2019. The use of drones signifies a shift in military tactics, raising concerns about regional security and foreign involvement."
     },
     {
       "title": "Ethiopia Facilitates Repatriation for 1,971 Citizens Granted Saudi Amnesty",
@@ -2150,7 +2195,7 @@
       "published_at": "2026-07-13T18:33:39+00:00",
       "source_url": "https://www.thereporterethiopia.com/51825/",
       "source_name": "The Reporter Ethiopia",
-      "context": "The repatriation of Ethiopian citizens follows a broader context of labor migration to Saudi Arabia, where many Ethiopians seek employment amid domestic challenges. The Saudi royal amnesty, announced in April 2023, aimed to address the legal status of undocumented migrants, reflecting ongoing efforts to reform labor laws and improve human rights conditions. This development is particularly significant as Ethiopia grapples with internal conflicts, including the Tigray War's aftermath and its impact on migration patterns."
+      "context": "The repatriation of Ethiopian citizens follows a broader trend of labor migration to the Gulf states, which has been a significant issue for Ethiopia, especially since the 2020 Tigray conflict exacerbated economic challenges. The Saudi royal amnesty, announced in April 2023, reflects ongoing diplomatic efforts between Ethiopia and Saudi Arabia to address the plight of migrant workers, particularly as Ethiopia seeks to strengthen ties with Gulf nations amid regional instability."
     },
     {
       "title": "حكم غيابي بإعدام محمد حمدان دقلو، فماذا نعرف عن حميدتي وصعوده في السودان؟",
@@ -2180,7 +2225,7 @@
       "published_at": "2026-07-13T12:53:23+00:00",
       "source_url": "https://www.thereporterethiopia.com/51821/",
       "source_name": "The Reporter Ethiopia",
-      "context": "The lifting of the credit cap by the National Bank of Ethiopia comes amid ongoing economic challenges exacerbated by the Tigray conflict, which began in November 2020 and has strained financial resources. The move is part of broader reforms aimed at stabilizing the economy and encouraging investment, following the government's commitment to an interest-based financial system in August 2020, which marked a significant shift from its previous state-controlled approach."
+      "context": "The removal of the credit cap by the National Bank of Ethiopia comes amid ongoing economic challenges following the Tigray conflict, which began in November 2020, and the subsequent peace agreement in November 2022. This policy shift aims to stimulate economic recovery and growth as the country grapples with inflation and foreign exchange shortages, critical issues exacerbated by the conflict and the global economic environment."
     },
     {
       "title": "NBE lifts credit cap, raises policy rate",
@@ -2195,7 +2240,7 @@
       "published_at": "2026-07-13T12:15:09+00:00",
       "source_url": "https://capitalethiopia.com/2026/07/13/nbe-lifts-credit-cap-raises-policy-rate/",
       "source_name": "Capital Ethiopia",
-      "context": "The NBE's decision to lift the credit cap comes amid Ethiopia's ongoing economic challenges, exacerbated by the Tigray conflict that began in November 2020. The conflict has strained the country's financial system, leading to inflation and currency devaluation. As part of the government's broader economic reforms initiated in 2021, this move aims to stabilize the economy and attract foreign investment, crucial for recovery following the peace agreement signed in November 2022."
+      "context": "The removal of the credit cap by the National Bank of Ethiopia comes amid ongoing economic challenges exacerbated by the Tigray conflict, which began in November 2020. This decision aligns with the government's efforts to stabilize the economy and attract foreign investment following the peace agreement signed in November 2022. The shift to an interest rate-based policy framework is seen as crucial for restoring confidence in Ethiopia's financial system and fostering economic recovery."
     },
     {
       "title": "Sudan's paramilitary RSF chief sentenced to death over war crimes",
@@ -2334,7 +2379,7 @@
       "published_at": "2026-07-13T00:36:25+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/un-warns-drone-attacks-deepen-humanitarian-crisis-in-sudan-s-kordofan-region/3996004",
       "source_name": "Anadolu Agency",
-      "context": "The Kordofan region of Sudan has been a focal point of conflict since the outbreak of the Sudanese Civil War in 2011, exacerbated by the 2019 ousting of President Omar al-Bashir, which led to a power vacuum. The Sudan People's Liberation Movement-North (SPLM-N) continues to clash with government forces, while the recent escalation of drone strikes has intensified humanitarian crises, particularly as cholera cases rise amid disrupted water supplies."
+      "context": "The Kordofan region of Sudan has been a flashpoint for conflict since the Sudanese Civil War, which reignited in 2011 with the emergence of the Sudan People's Liberation Movement-North (SPLM-N). The ongoing violence has exacerbated humanitarian crises, particularly following the 2021 military coup that destabilized the transitional government. Recent drone strikes by government forces have intensified the situation, complicating aid efforts as cholera outbreaks threaten already vulnerable populations."
     },
     {
       "title": "Ethiopian Airlines Begins Direct Flight to Port Louis, Mauritius",
@@ -2349,7 +2394,7 @@
       "published_at": "2026-07-12T23:40:38+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/07/12/ethiopian-airlines-begins-direct-flight-to-port-louis-mauritius/",
       "source_name": "Ethiopian Monitor",
-      "context": "The launch of Ethiopian Airlines' direct flight to Mauritius comes amid Ethiopia's efforts to strengthen regional ties and boost tourism following the end of the Tigray conflict in November 2022. This expansion aligns with the African Union's Agenda 2063, which emphasizes increased connectivity across the continent. Additionally, the flight enhances trade opportunities between Ethiopia and Mauritius, both of which are key players in the African Continental Free Trade Area established in 2021."
+      "context": "Ethiopian Airlines' new route to Mauritius comes amid Ethiopia's efforts to strengthen its international ties following a two-year civil conflict that ended with a peace agreement in November 2022. This expansion is significant as it enhances connectivity for tourism and trade, particularly in the wake of the African Continental Free Trade Area (AfCFTA) agreement, which aims to boost intra-African trade and economic cooperation among member states."
     },
     {
       "title": "Customs Commission Tops Revenues Collection Target",
@@ -2364,7 +2409,7 @@
       "published_at": "2026-07-12T23:40:24+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/07/12/customs-commission-tops-revenues-collection-target/",
       "source_name": "Ethiopian Monitor",
-      "context": "The Ethiopian Customs Commission's revenue achievement comes amid ongoing economic challenges exacerbated by the Tigray conflict, which began in November 2020, disrupting trade and revenue streams. The federal government's recent efforts to stabilize the economy, including the signing of the Pretoria Agreement in November 2022, have aimed to restore normalcy and boost tax revenues. This context highlights the Commission's role in supporting Ethiopia's recovery and fiscal sustainability during a critical period."
+      "context": "The Ethiopian Customs Commission's revenue performance comes amid ongoing economic challenges exacerbated by the Tigray conflict, which formally ended with the Pretoria Agreement in November 2022. The agreement aimed to stabilize the economy and restore public services, making revenue collection crucial for funding reconstruction efforts. Additionally, the government's focus on indirect taxes reflects a shift in fiscal policy as it seeks to bolster the economy in the face of rising inflation and external pressures."
     },
     {
       "title": "Sudan court sentences RSF leader to death in absentia",
@@ -2379,7 +2424,7 @@
       "published_at": "2026-07-12T23:23:26+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/sudan-court-sentences-rsf-leader-to-death-in-absentia/3995999",
       "source_name": "Anadolu Agency",
-      "context": "The death sentence for Rapid Support Forces (RSF) leader Mohamed Hamdan Dagalo, known as Hemedti, comes amid the ongoing conflict in Sudan that erupted in April 2023 between the RSF and the Sudanese Armed Forces, led by General Abdel Fattah al-Burhan. This ruling is significant as it marks the first legal accountability for Hemedti since the violence began, which has resulted in thousands of deaths and widespread displacement, complicating peace efforts following the 2020 Juba Agreement."
+      "context": "Since the outbreak of conflict in Sudan in April 2023, the Rapid Support Forces (RSF), led by Mohamed Hamdan Dagalo, also known as Hemedti, have been engaged in violent clashes with the Sudanese Armed Forces (SAF) led by General Abdel Fattah al-Burhan. This court ruling, the first against Hemedti since the conflict began, underscores the escalating accountability efforts amid ongoing violence and the struggle for power following the 2021 coup that ousted civilian leadership."
     },
     {
       "title": "Sudan rights commission says 6,000 held in RSF-run prisons in El Fasher",
@@ -2394,7 +2439,7 @@
       "published_at": "2026-07-12T19:30:55+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/sudan-rights-commission-says-6-000-held-in-rsf-run-prisons-in-el-fasher/3995940",
       "source_name": "Anadolu Agency",
-      "context": "The ongoing conflict in Sudan escalated in April 2023 when clashes erupted between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF), a paramilitary group. The power struggle has led to widespread violence, with the RSF accused of severe human rights violations, including the detention of civilians. The international community, including the African Union, has called for ceasefire agreements, but the situation remains volatile, particularly in regions like El Fasher, where RSF control is significant."
+      "context": "The ongoing conflict in Sudan escalated significantly after the outbreak of violence between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF) in April 2023. This power struggle has led to widespread human rights abuses, with the RSF accused of targeting civilians and critical infrastructure. The situation in El Fasher, a strategic city in Darfur, highlights the RSF's control over detention facilities and the dire humanitarian crisis resulting from the conflict."
     },
     {
       "title": "Somalia’s political crisis, deteriorating security and a “Questionable” agreement",
@@ -2409,7 +2454,7 @@
       "published_at": "2026-07-12T15:13:12+00:00",
       "source_url": "https://capitalethiopia.com/2026/07/12/somalias-political-crisis-deteriorating-security-and-a-questionable-agreement/",
       "source_name": "Capital Ethiopia",
-      "context": "Somalia has faced prolonged instability since the civil war erupted in 1991, leading to a power vacuum and the rise of militant groups like Al-Shabaab. The African Union Mission in Somalia (AMISOM), established in 2007, has been crucial in combating these threats. However, the U.S. decision to limit UN support for AMISOM, as revealed in July 2023, raises concerns about a potential resurgence of violence and the fragility of the Somali government amid ongoing political disputes and electoral delays."
+      "context": "Somalia has faced ongoing instability since the civil war erupted in 1991, leading to a power vacuum and the rise of militant groups like Al-Shabaab. The African Union Mission in Somalia (AMISOM), established in 2007, has been crucial in combating these threats. However, the recent U.S. decision to limit UN support for AMISOM, set to take effect in January 2024, raises concerns about the future of security and governance in a country already grappling with political fragmentation and violence."
     },
     {
       "title": "Bulambuli MP-Elect Biara Emmanuel Holds Thanksgiving Ceremony, Appreciates MPs for UGX 20 Million Support Towards Muyembe Health Centre IV",
@@ -2454,7 +2499,7 @@
       "published_at": "2026-07-12T08:56:25+00:00",
       "source_url": "https://capitalethiopia.com/2026/07/12/are-companies-giving-back-to-society-or-seeking-publicity-through-corporate-social-responsibility/",
       "source_name": "Capital Ethiopia",
-      "context": "In Ethiopia, the ongoing conflict in the Tigray region, which escalated in November 2020, has drawn international attention and scrutiny towards corporate social responsibility (CSR) practices. Amidst this backdrop, companies operating in the region face pressure to demonstrate genuine commitment to social causes rather than mere publicity stunts. The recent peace agreement in November 2022 has further intensified discussions on the role of businesses in rebuilding trust and supporting affected communities."
+      "context": "In Ethiopia, the ongoing conflict in the Tigray region, which escalated in November 2020, has drawn international attention and scrutiny towards corporate practices. Amidst humanitarian crises, companies are increasingly engaging in corporate social responsibility (CSR) initiatives, raising questions about their genuine commitment to societal welfare versus potential publicity motives. The Ethiopian government, alongside international organizations, continues to navigate complex diplomatic relationships while addressing the urgent needs of affected communities."
     },
     {
       "title": "Why this energy shock is different",
@@ -2502,21 +2547,6 @@
       "context": "The 105th anniversary of the Communist Party of China comes at a time when Ethiopia is navigating complex political dynamics, including the aftermath of the Tigray conflict and ongoing efforts for national reconciliation. China's Belt and Road Initiative, which aims to enhance infrastructure and trade in Africa, has significant implications for Ethiopia, particularly following the signing of the peace agreement in November 2022, which seeks to stabilize the region and foster economic growth."
     },
     {
-      "title": "SHOCK EXIT!! Mariam Wangadya Resigns As UHRC Boss After Months Of Leadership Battles And Allegations",
-      "summary": "The Uganda Human Rights Commission (UHRC) has been plunged into uncertainty after Chairperson Mariam Wangadya resigned from her The post SHOCK EXIT!! Mariam Wangadya Resigns As UHRC Boss After Months Of Leadership Battles And Allegations appeared first on The Nile Post .",
-      "country_tags": [
-        "South Sudan"
-      ],
-      "topic_tags": [
-        "Justice & Rights"
-      ],
-      "language": "en",
-      "published_at": "2026-07-12T07:15:37+00:00",
-      "source_url": "https://thenilepost.com/en/news/story/shock-exit-mariam-wangadya-resigns-as-uhrc-boss-after-months-of-leadership-battles-and-allegations/",
-      "source_name": "The Nile Post",
-      "context": "Mariam Wangadya's resignation comes amid heightened scrutiny of the Uganda Human Rights Commission, particularly following the 2021 presidential elections marred by violence and allegations of human rights abuses against opposition figures like Bobi Wine. Her departure raises concerns about the commission's ability to address ongoing human rights violations in Uganda, especially as tensions persist between the government and civil society organizations advocating for justice and accountability."
-    },
-    {
       "title": "How men with female surnames are standing up to ridicule in Kenya",
       "summary": "Children often inherit their father's first name as a surname, but traditions are changing and causing upset.",
       "country_tags": [
@@ -2529,7 +2559,7 @@
       "published_at": "2026-07-11T23:27:45+00:00",
       "source_url": "https://www.bbc.co.uk/news/articles/c75ygy71wdgo?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "In Kenya, the 2010 Constitution introduced progressive gender equality provisions, challenging traditional norms around naming conventions. As a result, some men are adopting their mothers' surnames, defying patriarchal expectations. This shift has sparked debates about gender roles and identity, particularly in a society where lineage and family names carry significant cultural weight, highlighting ongoing tensions between modernity and tradition in Kenyan society."
+      "context": "In Kenya, the 2010 Constitution introduced progressive gender equality measures, challenging traditional norms surrounding naming conventions. Despite this, many men with female surnames face societal ridicule, reflecting deep-rooted patriarchal values. The ongoing discourse around gender identity and equality, particularly in the wake of the #MeToo movement and increased advocacy for women's rights, has intensified scrutiny on these naming practices, making this issue particularly relevant in contemporary Kenyan society."
     },
     {
       "title": "UNICEF warns half a million civilians at risk amid fighting in El-Obeid, Sudan",
@@ -2545,7 +2575,7 @@
       "published_at": "2026-07-11T20:00:24+00:00",
       "source_url": "https://www.aa.com.tr/en/africa/unicef-warns-half-a-million-civilians-at-risk-amid-fighting-in-el-obeid-sudan/3995273",
       "source_name": "Anadolu Agency",
-      "context": "El Obeid, the capital of North Kordofan, has become a focal point in the ongoing conflict between the Sudanese Armed Forces and the Rapid Support Forces, which escalated in April 2023. This fighting has exacerbated an already dire humanitarian situation, following years of political instability and violence stemming from the 2019 ousting of President Omar al-Bashir. The recent clashes have displaced thousands, further straining resources and aid efforts in the region."
+      "context": "El Obeid, the capital of North Kordofan, has been a focal point of violence since the outbreak of conflict in Sudan in April 2023, following a power struggle between the Sudanese Armed Forces and the Rapid Support Forces. This fighting has exacerbated an already dire humanitarian situation, with the UN estimating that over 24 million people in Sudan require assistance. The ongoing instability threatens to further destabilize the region and complicate peace efforts initiated in 2021."
     },
     {
       "title": "ماذا نعرف عن طائفة \"نهاية العالم\" الروحية التي استقطبت الشباب والجميلات في الثمانينيات؟",
@@ -2726,7 +2756,7 @@
       "published_at": "2026-07-10T20:56:33+00:00",
       "source_url": "https://www.bbc.co.uk/sport/athletics/articles/cg74xrnnknro?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "Emmanuel Wanyonyi's record-breaking performance comes at a time when Kenyan athletics is under scrutiny due to recent doping scandals, including the suspension of several athletes in 2023. His achievement not only revitalizes national pride but also highlights Kenya's enduring dominance in middle-distance running, particularly following the country's success at the Tokyo 2020 Olympics. This victory in Monaco further cements Kenya's reputation as a powerhouse in track and field amidst ongoing efforts to combat doping in sports."
+      "context": "Emmanuel Wanyonyi's record-breaking performance comes at a time when Kenya is striving to reclaim its status as a powerhouse in middle-distance running, following a dip in global dominance amid increased competition from athletes in other nations. The recent success of Kenyan athletes in international events, including the Tokyo 2020 Olympics, has reignited national pride and investment in sports, particularly as the country prepares for the upcoming World Athletics Championships in Budapest in August 2023."
     },
     {
       "title": "Kenya Power to Pay 15.5 Cents per kWh in Newly Finalized Ethiopia Energy Deal",
@@ -3024,7 +3054,7 @@
       "published_at": "2026-07-07T23:32:04+00:00",
       "source_url": "https://www.bbc.co.uk/news/articles/c20yyjdzw7po?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "El-Obeid, the capital of North Kordofan, has been a focal point in Sudan's ongoing conflict since the outbreak of violence in April 2023 between the Sudanese Armed Forces and the Rapid Support Forces. The city has faced severe shortages of food and medical supplies amid escalating hostilities, exacerbated by the 2020 Juba Peace Agreement's failure to address underlying grievances. As tensions rise, fears of a humanitarian catastrophe loom, prompting urgent calls for international intervention."
+      "context": "El-Obeid, the capital of North Kordofan, has been significantly impacted by the ongoing conflict between the Sudanese Armed Forces and the Rapid Support Forces (RSF) since the coup in October 2021. The city has faced severe shortages of food and medical supplies, exacerbated by the fighting that erupted in April 2023. The UN's warning of potential mass violence highlights the dire humanitarian crisis and the urgent need for international intervention to protect civilians."
     },
     {
       "title": "ما الذي يحدث مع اللاجئين السودانيين والسوريين في مصر؟",
@@ -3343,7 +3373,7 @@
       "published_at": "2026-07-04T00:51:44+00:00",
       "source_url": "https://www.bbc.co.uk/news/articles/cy72mn3m7l3o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC News",
-      "context": "In Kenya, prolonged drought conditions exacerbated by climate change have led to severe food and water shortages, particularly in rural areas. The 2021 National Drought Management Authority report highlighted that over 2.5 million people are affected, prompting families to prioritize livestock over education. This crisis has intensified following the 2022 elections, where political instability has diverted attention and resources away from rural education initiatives, resulting in more than 2,000 primary schools facing closure due to dwindling enrolment."
+      "context": "In recent years, rural Kenya has experienced severe droughts exacerbated by climate change, leading to significant livestock losses and forcing families to prioritize cattle over education. The 2020-2021 drought, coupled with ongoing economic challenges, has resulted in a staggering decline in school enrolment, particularly in pastoralist communities. The government's efforts to address these issues through the National Drought Management Authority have struggled to keep pace with the urgent needs of affected families."
     },
     {
       "title": "DRC Ebola claims 452 lives, says WHO",
@@ -3358,7 +3388,7 @@
       "published_at": "2026-07-03T20:39:57+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/07/03/drc-ebola-claims-452-lives-says-who/",
       "source_name": "Ethiopian Monitor",
-      "context": "The ongoing Ebola outbreak in the DRC highlights the region's struggle with health crises amid political instability and conflict, particularly in the eastern provinces where armed groups, such as the M23, have exacerbated humanitarian challenges. The DRC has faced multiple Ebola outbreaks since 1976, with the most recent significant outbreak occurring in 2018-2020, which underscores the need for robust health infrastructure and international cooperation, especially as the region grapples with the COVID-19 pandemic's aftermath."
+      "context": "The ongoing Ebola outbreak in the DRC highlights the region's struggle with health crises amidst political instability, particularly following the 2018-2020 Ebola outbreak that claimed over 2,200 lives. The DRC's health system remains fragile due to persistent conflict in eastern provinces, exacerbated by the presence of armed groups like the M23. This outbreak underscores the urgent need for regional cooperation, especially with neighboring countries like Uganda and Rwanda, to prevent cross-border transmission and manage public health responses effectively."
     },
     {
       "title": "Kenya’s forex reserves hit record high of 14 bln USD",
@@ -3373,7 +3403,7 @@
       "published_at": "2026-07-03T20:35:23+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/07/03/kenyas-forex-reserves-hit-record-high-of-14-bln-usd/",
       "source_name": "Ethiopian Monitor",
-      "context": "Kenya's record high forex reserves come amid ongoing economic recovery efforts following the COVID-19 pandemic and global supply chain disruptions. The increase is partly attributed to the successful implementation of the International Monetary Fund's Extended Fund Facility agreement in 2021, which aimed to stabilize the economy. Additionally, the recent rise in remittances and exports, particularly in the agricultural sector, has bolstered the reserves, highlighting Kenya's strategic position in the East African Community."
+      "context": "Kenya's forex reserves have been bolstered by a surge in remittances and strong agricultural exports, particularly tea and horticulture, which are vital to the economy. This record high comes amid ongoing concerns about inflation and the impact of global economic pressures, including the fallout from the COVID-19 pandemic and geopolitical tensions. Additionally, the East African Community's efforts to enhance regional trade could further stabilize Kenya's economic outlook in the coming months."
     },
     {
       "title": "ESX Admits Prime Capital as Trading Member",
@@ -3388,7 +3418,7 @@
       "published_at": "2026-07-03T20:01:49+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/07/03/esx-admits-prime-capital-as-trading-member/",
       "source_name": "Ethiopian Monitor",
-      "context": "The admission of Prime Capital S.C. as a Trading Member of the Ethiopian Securities Exchange comes amid Ethiopia's ongoing economic reforms initiated in 2018 under Prime Minister Abiy Ahmed. These reforms aim to liberalize the economy and attract foreign investment, particularly following the 2020-2021 Tigray conflict that disrupted economic stability. The move signals a commitment to strengthening financial markets, crucial for post-conflict recovery and fostering investor confidence in a rapidly changing political landscape."
+      "context": "The admission of Prime Capital S.C. as a Trading Member of the Ethiopian Securities Exchange is significant amid Ethiopia's ongoing economic reforms initiated by Prime Minister Abiy Ahmed since 2018. These reforms aim to liberalize the economy and attract foreign investment, particularly after the 2020 Tigray conflict, which disrupted economic stability. The move aligns with the government's efforts to enhance the capital market, following the establishment of the ESX in 2021 as part of broader financial sector reforms."
     },
     {
       "title": "Ethiopian Airlines Commences Passenger service to Lyon, France",
@@ -3403,7 +3433,7 @@
       "published_at": "2026-07-03T19:59:26+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/07/03/ethiopian-airlines-commences-passenger-service-to-lyon-france/",
       "source_name": "Ethiopian Monitor",
-      "context": "Ethiopian Airlines' new service to Lyon comes amid ongoing efforts to strengthen Ethiopia's international ties following the Tigray conflict, which officially ended with a peace agreement in November 2022. This expansion highlights the airline's role in promoting economic recovery and tourism in Ethiopia, as the country seeks to rebuild its image and foster regional cooperation in the Horn of Africa, particularly with European partners."
+      "context": "Ethiopian Airlines' new service to Lyon comes amid Ethiopia's ongoing recovery from a two-year civil conflict in the Tigray region, which officially ended with a peace agreement in November 2022. This expansion reflects the airline's strategy to bolster economic ties and tourism as the country seeks to stabilize and rebuild its international reputation. Additionally, it highlights Ethiopia's role as a key player in African aviation, enhancing connectivity with Europe."
     },
     {
       "title": "Addis Bank Registers 5 million shares with Regulators ahead of Planned Listing",
@@ -3418,7 +3448,7 @@
       "published_at": "2026-07-03T19:44:22+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/07/03/addis-bank-registers-5-million-shares-with-regulators-ahead-of-planned-listing/",
       "source_name": "Ethiopian Monitor",
-      "context": "Addis Bank's registration of 5 million shares comes amid Ethiopia's ongoing economic reforms, initiated by Prime Minister Abiy Ahmed in 2018, aimed at liberalizing the economy and attracting foreign investment. This move is significant as it follows the establishment of the Ethiopian Capital Market Authority in 2020, which is pivotal for the country's nascent stock market. The bank's listing is expected to enhance competition in the financial sector, crucial for economic recovery post-conflict in the Tigray region."
+      "context": "Addis Bank's registration of 5 million shares comes amid Ethiopia's ongoing economic reforms aimed at liberalizing the financial sector, initiated in 2018 under Prime Minister Abiy Ahmed's administration. This move aligns with the government's broader strategy to attract private investment and enhance competition, particularly following the signing of the 2020 peace agreement with the Tigray People's Liberation Front, which has opened opportunities for economic recovery and growth in the region."
     },
     {
       "title": "Why Digital Innovation Keeps Upgrading PH Bingo Online",
@@ -3478,7 +3508,7 @@
       "published_at": "2026-07-02T10:06:52+00:00",
       "source_url": "https://www.bbc.com/arabic/articles/ce8kj2e0lz6o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC عربي",
-      "context": "تعتبر كرة القدم في الصومال وسيلة للتعبير عن الهوية الوطنية والتواصل الاجتماعي، خاصة في ظل الصراعات المستمرة منذ عقود. بعد انهيار الحكومة في عام 1991، أصبحت الرياضة وسيلة للشباب للهروب من الواقع الصعب، وتعزيز الوحدة بين المجتمعات. كما أن تنظيم البطولات المحلية، مثل دوري الصومال لكرة القدم، يعكس جهود الحكومة الانتقالية لتعزيز الاستقرار وبناء الثقة بين الفئات المختلفة."
+      "context": "تعتبر كرة القدم جزءًا أساسيًا من ثقافة الشباب في الصومال، خاصة في ظل الأزمات السياسية والأمنية المستمرة منذ انهيار الحكومة في 1991. في السنوات الأخيرة، شهدت البلاد جهودًا متزايدة لإعادة بناء البنية التحتية الرياضية، مثل إنشاء دوري الصومال لكرة القدم في 2020، مما يعكس الأمل في تحقيق الاستقرار من خلال الرياضة. كما تلعب الأندية المحلية، مثل نادي \"هورن\" لكرة القدم، دورًا مهمًا في توحيد الشباب وتعزيز الهوية الوطنية."
     },
     {
       "title": "Council Advances Bill Approving Ethiopia’s Entry BRICS New Development Bank",
@@ -3494,7 +3524,7 @@
       "published_at": "2026-07-01T20:03:07+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/07/01/council-advances-bill-approving-ethiopias-entry-brics-new-development-bank/",
       "source_name": "Ethiopian Monitor",
-      "context": "Ethiopia's bid to join the New Development Bank comes amid ongoing economic challenges exacerbated by the Tigray conflict, which officially ended with a peace agreement in November 2022. The country seeks to bolster its financial resources and international partnerships as it navigates post-conflict recovery and regional tensions, particularly with neighboring Sudan and Eritrea. Joining the NDB aligns with Ethiopia's broader strategy to enhance its global economic standing and attract foreign investment."
+      "context": "Ethiopia's bid to join the New Development Bank comes amid ongoing economic challenges and political tensions following the Tigray conflict, which officially ended with a peace agreement in November 2022. The country's integration into the BRICS-led financial framework is seen as a strategic move to diversify its funding sources and bolster economic recovery, particularly as it navigates strained relations with Western nations and seeks to enhance regional partnerships."
     },
     {
       "title": "منظمة العفو تدعو إلى إرسال قوات للحماية في السودان بعد الكشف عن \"تطهير عرقي\" مع مخاوف من تكراره في الأُبيّض",
@@ -3539,7 +3569,7 @@
       "published_at": "2026-06-28T19:06:52+00:00",
       "source_url": "https://ethiopianmonitor.com/2026/06/28/ethiopian-cargo-lands-2026-aflas-award-for-best-african-air-cargo-carrier/",
       "source_name": "Ethiopian Monitor",
-      "context": "Ethiopian Cargo and Logistics Services has emerged as a key player in the Horn of Africa's logistics sector, particularly amid the ongoing Tigray conflict, which has disrupted supply chains since late 2020. The Ethiopian government, under Prime Minister Abiy Ahmed, has prioritized the expansion of air cargo capabilities to bolster economic recovery and regional trade. Winning the 2026 AFLAS Award highlights the resilience and strategic importance of Ethiopian logistics in a challenging geopolitical landscape."
+      "context": "Ethiopian Cargo and Logistics Services has emerged as a key player in the Horn of Africa's logistics sector, particularly amid the ongoing Tigray conflict that has disrupted regional trade since late 2020. The Ethiopian government, under Prime Minister Abiy Ahmed, has prioritized the expansion of the national airline's cargo capabilities to bolster economic recovery and regional connectivity. Winning the 2026 AFLAS Award highlights Ethiopia's resilience and strategic importance in the African logistics landscape."
     },
     {
       "title": "Strengthening Families: Lessons from Decades of Alternative Care in Ethiopia",
@@ -4496,21 +4526,6 @@
       "context": "تاريخياً، كانت مصر تعتمد على مياه النيل كمصدر رئيسي للمياه، لكن بناء سد النهضة الإثيوبي في 2011 أثار توترات حادة بين البلدين. في عام 2020، فشلت المفاوضات الثلاثية بين مصر وإثيوبيا والسودان في التوصل إلى اتفاق حول ملء السد، مما زاد من حدة الصراع. الآن، تسعى إثيوبيا لتعزيز نفوذها في البحر الأحمر، مما يهدد المصالح المصرية في المنطقة ويعكس تحولاً استراتيجياً في الصراع الإقليمي."
     },
     {
-      "title": "Gold Surpasses U.S. Treasuries, Euro in Global Official Reserves: ECB",
-      "summary": "FRANKFURT – Gold became the largest component of global official reserves in 2025, surpassing holdings of U.S. Treasuries and the euro as rising prices boosted its share, the",
-      "country_tags": [
-        "Ethiopia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "en",
-      "published_at": "2026-06-02T23:09:20+00:00",
-      "source_url": "https://ethiopianmonitor.com/2026/06/02/gold-surpasses-u-s-treasuries-euro-in-global-official-reserves-ecb/",
-      "source_name": "Ethiopian Monitor",
-      "context": "The significance of gold surpassing U.S. Treasuries and the euro in global reserves comes amid Ethiopia's ongoing economic recovery following the Tigray conflict, which officially ended with a peace agreement in November 2022. As the Ethiopian government seeks to stabilize its economy and attract foreign investment, the rising value of gold could provide a crucial buffer against currency volatility and enhance the country's financial standing in the Horn of Africa."
-    },
-    {
       "title": "بابكر فيصل في بلا قيود: البرهان يسعى لإعطاء الجيش الشرعية للاستمرار في الحكم",
       "summary": "لم ينفِ بابكر فيصل رئيس المكتب التنفيذي للتجمع الاتحادي في السودان علمه بما أوردته تقارير دولية عن دعم دولة الإمارات العربية المتحدة لقوات الدعم السريع، ولكنه يرى تدخل أطراف خارجية في ما وصفها بالحروب الأهلية أمرا يمكن حدوثه في أي مكان.",
       "country_tags": [
@@ -4569,21 +4584,6 @@
       "source_url": "https://www.bbc.com/arabic/articles/cjwp6g239e4o?at_medium=RSS&at_campaign=rss",
       "source_name": "BBC عربي",
       "context": "تعيش السودان منذ عام 2019 حالة من عدم الاستقرار السياسي بعد الإطاحة بنظام عمر البشير، مما أدى إلى صراع بين الجيش وقوات الدعم السريع. تصاعدت الاشتباكات في أبريل 2023، مما أسفر عن مقتل الآلاف ونزوح الملايين. هذا السياق يجعل من المهم فهم تأثير الحرب على الشباب الذين عايشوا هذه الأحداث أو شهدوها عن بُعد، وكيف تشكلت رؤاهم حول السلام والفن في ظل هذه الظروف القاسية."
-    },
-    {
-      "title": "قرصنة على سواحل الصومال: بحارة مصريون يستغيثون لتحريرهم بعد نفاد الماء والطعام",
-      "summary": "كان محمد ورفاقه على متن ناقلة النفط M/T EUREKA التي تحمل علم توجو، وكانت قد أبحرت من ميناء الفجيرة الإماراتي محمّلة بـ2800 طن من وقود الديزل في طريقها إلى اليمن، قبل أن يقتادها القراصنة، في الثاني من مايو/أيار، إلى سواحل إقليم بونتلاند الصومالي، وفق آخر بيانات ملاحية منشورة على موقع \"مارين ترافيك\" (MarineTraffic).",
-      "country_tags": [
-        "Somalia"
-      ],
-      "topic_tags": [
-        "General"
-      ],
-      "language": "ar",
-      "published_at": "2026-05-13T18:31:04+00:00",
-      "source_url": "https://www.bbc.com/arabic/articles/c5yrl4nqg4qo?at_medium=RSS&at_campaign=rss",
-      "source_name": "BBC عربي",
-      "context": null
     },
     {
       "title": "Why acknowledging slavery is not enough without reparatory justice",
