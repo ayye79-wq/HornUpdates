@@ -15,6 +15,15 @@ from collections import Counter
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+# Publishing AI-generated opinion under human bylines is disabled by editorial
+# policy. Keep this script in the repository only as historical documentation;
+# scheduled or manual workflow calls exit safely without creating content.
+print(
+    "AI opinion generation is disabled. Opinion requires a contributor "
+    "manuscript and editorial review."
+)
+sys.exit(0)
+
 try:
     import openai
 except ImportError:
