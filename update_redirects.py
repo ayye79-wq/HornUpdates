@@ -16,6 +16,11 @@ reliable fix is an explicit 301! rule per slug, regenerated on every publish run
 import glob
 import os
 
+CANONICAL_ALIASES = {
+    "author-khalid-kayo": "/author-kalid-kayo.html",
+    "author-yared-kumbi": "/author-yared-kunbi.html",
+}
+
 STATIC_HEADER = """\
 # ── Force non-www to canonical https ──────────────────────────
 http://hornupdates.com/*   https://hornupdates.com/:splat  301!
@@ -55,7 +60,8 @@ def rules_for(pattern, label):
     for f in files:
         slug = os.path.basename(f).removesuffix(".html")
         fname = os.path.basename(f)
-        lines.append(f"/{slug:<82}{fname}  301!")
+        destination = CANONICAL_ALIASES.get(slug, f"/{fname}")
+        lines.append(f"/{slug:<82}{destination}  301!")
     return "\n".join(lines)
 
 
@@ -71,7 +77,7 @@ def main():
 
     content = "\n".join(sections) + "\n"
 
-    with open("_redirects", "w") as f:
+    with open("_redirects", "w", encoding="utf-8") as f:
         f.write(content)
 
     total = sum(1 for b in (opinions, explainers, authors)

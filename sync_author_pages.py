@@ -29,6 +29,7 @@ AUTHOR_PAGE = {
     "yared senbeto": "author-yared-kunbi.html",
     "yared k senbeto": "author-yared-kunbi.html",
     "nesru hussien bambis": "author-nesru-hussien-bambis.html",
+    "aba fantoli": "author-aba-fantoli.html",
 }
 
 # Bylines to skip (editorial desks, not individual author pages)
