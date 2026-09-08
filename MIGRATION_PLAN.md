@@ -20,7 +20,7 @@ Horn Updates should migrate only after the stabilized static site has a reliable
 - Create validated content collections and import pages in small batches.
 - Preserve filenames through explicit Astro routes or generated pages; never rely on a changed slug convention.
 - Retain Netlify redirects, headers, configuration, sitemap and feeds, updating generators only after parity tests pass.
-- Preserve alias author URLs for author-khalid-kayo and author-yared-kumbi while using canonical identities.
+- Preserve author-khalid-kayo as an alias of author-kalid-kayo and retain 410 responses for retired, unverified author profiles.
 
 ## Phase 4 — automation and cutover
 

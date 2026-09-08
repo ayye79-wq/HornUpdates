@@ -1,15 +1,11 @@
-name: Weekly Signal Brief Update
+name: Signal Brief Editorial Check
 
 on:
-  schedule:
-    - cron: '0 6 * * 1'
+  # A date must not advance without a human review of the underlying brief.
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  update-brief:
+  check-brief:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -18,16 +14,8 @@ jobs:
         with:
           token: ${{ secrets.PAT_GITHUB }}
 
-      - name: Update Signal Brief week and issue number
-        run: python3 scripts/update_signal_brief.py
-
       - name: Preview What to Watch bullets (editor reference — not written to file)
         run: python3 scripts/prefill_what_to_watch.py
 
-      - name: Commit if changed
-        run: |
-          git config user.name "Horn Updates Bot"
-          git config user.email "bot@hornupdates.com"
-          git add signal-brief.html
-          git diff --staged --quiet && echo "No changes to commit" || git commit -m "Auto: Signal Brief Issue update $(date -u '+%Y-%m-%d')"
-          git push || echo "Nothing to push"
+      - name: Confirm this workflow does not publish
+        run: git diff --exit-code

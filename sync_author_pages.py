@@ -2,8 +2,8 @@
 """
 sync_author_pages.py
 
-Reads opinion.html and ensures every named-author article is listed on the
-corresponding author page.  Run after publishing new opinion pieces.
+Legacy helper for checking named-author links. The redesigned opinion index is
+curated manually, so this script must not create author identities or pages.
 
 Usage:
     python sync_author_pages.py          # auto-update author pages
@@ -19,16 +19,9 @@ CHECK_ONLY = "--check" in sys.argv
 
 UNMAPPED_OUTPUT_FILE = "unmapped_authors.json"
 
-# Map normalised author names (lower-cased) to their author page files.
-# Multiple byline variants can point to the same file.
+# Only verified, currently published profile pages belong here.
 AUTHOR_PAGE = {
-    "omar farah": "author-omar-farah.html",
-    "daniel haile": "author-daniel-haile.html",
-    "amira hassan": "author-amira-hassan.html",
     "kalid kayo": "author-kalid-kayo.html",
-    "yared senbeto": "author-yared-kunbi.html",
-    "yared k senbeto": "author-yared-kunbi.html",
-    "nesru hussien bambis": "author-nesru-hussien-bambis.html",
     "aba fantoli": "author-aba-fantoli.html",
 }
 
