@@ -15,10 +15,15 @@ reliable fix is an explicit 301! rule per slug, regenerated on every publish run
 """
 import glob
 import os
+import re
 
 CANONICAL_ALIASES = {
     "author-khalid-kayo": "/author-kalid-kayo.html",
-    "author-yared-kumbi": "/author-yared-kunbi.html",
+}
+
+STATIC_RETIRED = {
+    "djibouti.html", "eritrea.html", "ethiopia.html", "kenya.html",
+    "somalia.html", "south-sudan.html", "sudan.html",
 }
 
 STATIC_HEADER = """\
@@ -40,6 +45,18 @@ https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 /privacy              /privacy.html          301!
 /signal-brief         /signal-brief.html     301!
 /terms                /terms.html            301!
+/author-khalid-kayo   /author-kalid-kayo.html 301!
+/author-khalid-kayo.html /author-kalid-kayo.html 301!
+
+# ── Retired indexes and feed alias ───────────────────────────
+/djibouti.html        /                       410!
+/eritrea.html         /                       410!
+/ethiopia.html        /                       410!
+/kenya.html           /                       410!
+/somalia.html         /                       410!
+/south-sudan.html     /                       410!
+/sudan.html           /                       410!
+/rss.xml              /feed.xml               301!
 """
 
 SECTION_NOTE = """\
@@ -66,6 +83,25 @@ def rules_for(pattern, label):
 
 
 def main():
+    existing = ""
+    if os.path.exists("_redirects"):
+        with open("_redirects", encoding="utf-8") as f:
+            existing = f.read()
+
+    retired = []
+    for line in existing.splitlines():
+        match = re.match(r"^/([^ ]+\.html)\s+.*\s410!$", line.strip())
+        if not match:
+            continue
+        if os.path.exists(match.group(1)):
+            continue
+        if match.group(1).removesuffix(".html") in CANONICAL_ALIASES:
+            continue
+        if match.group(1) in STATIC_RETIRED:
+            continue
+        if line.strip() not in retired:
+            retired.append(line.strip())
+
     opinions = rules_for("opinion-*.html", "Opinion articles")
     explainers = rules_for("explainer-*.html", "Explainers")
     authors = rules_for("author-*.html", "Author pages")
@@ -74,6 +110,8 @@ def main():
     for block in (opinions, explainers, authors):
         if block:
             sections.append(block)
+    if retired:
+        sections.append("# Retired pages — preserve 410 responses for search engines\n" + "\n".join(sorted(retired)))
 
     content = "\n".join(sections) + "\n"
 

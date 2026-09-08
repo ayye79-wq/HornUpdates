@@ -12,7 +12,7 @@
 
 - Removed the scheduled generate_opinion.yml workflow.
 - Removed every opinion-generation, failure-alert and opinion-file commit step from the twice-daily article workflow.
-- Kept feed ingestion and AI-assisted editorial metadata support, author-page syncing, redirects and site-index updates.
+- Retired feed ingestion, automatic author-page updates and homepage publishing; editorial content now changes only through reviewed repository updates.
 - Added an explicit distinction between institutional analysis and contributor opinion.
 - Added ARTICLE_TEMPLATE.html as the standard contract for title, dek, byline, dates, label, body, sources, related reading, corrections, JSON-LD and social metadata.
 
@@ -24,10 +24,9 @@
 
 ## Authors and URLs
 
-- Confirmed author-khalid-kayo.html is an HTML redirect to the canonical author-kalid-kayo.html.
-- Confirmed author-yared-kumbi.html is an HTML redirect to the canonical author-yared-kunbi.html.
-- Corrected Netlify extensionless aliases so both duplicate spellings resolve to their canonical author pages without deleting public URLs.
-- Added Aba Fantoli to the author-page synchronization mapping.
+- Preserved author-khalid-kayo.html as a redirect to the canonical author-kalid-kayo.html.
+- Retired unverified legacy author profiles with explicit 410 responses.
+- Limited author-page synchronization to the two currently published profiles.
 
 ## Repository and indexing
 

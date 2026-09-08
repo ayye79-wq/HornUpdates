@@ -1,5 +1,11 @@
-# Prevent reader.html and its query-string variants from being indexed
-# This is belt-and-suspenders alongside the meta noindex tag
+# Baseline browser protections for every page.
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Keep utility, confirmation, and intentionally archived pages out of search.
 
 /reader.html
   X-Robots-Tag: noindex, nofollow
@@ -8,3 +14,12 @@
 /reader.html?*
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-store
+
+/thank-you.html
+  X-Robots-Tag: noindex, nofollow
+
+/opinion-eritrea-us-sanctions-red-sea-2026-05-05.html
+  X-Robots-Tag: noindex, follow
+
+/opinion-tigray-council-debretsion-2026-05-05.html
+  X-Robots-Tag: noindex, follow
