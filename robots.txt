@@ -3,5 +3,7 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /opinion-health.html
+Disallow: /opinion-health
 
 Sitemap: https://hornupdates.com/sitemap.xml

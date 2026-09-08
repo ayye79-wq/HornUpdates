@@ -823,7 +823,7 @@ def generate_sitemap() -> None:
 
     # Pages to never include in sitemap
     exclude = {
-        "reader.html", "disclaimer.html", "thank-you.html",
+        "reader.html", "disclaimer.html", "thank-you.html", "opinion-health.html",
     }
     # Pages handled explicitly below — skip in glob pass
     handled_explicitly = {
@@ -895,19 +895,39 @@ def generate_sitemap() -> None:
 
 
 def patch_cookie_consent() -> None:
-    """Add cookie-consent.js to any HTML file missing it."""
+    """Add consent defaults and the cookie choice UI to HTML pages."""
     base = Path(__file__).resolve().parent
+    default_tag = '<script src="/consent-default.js"></script>'
     script_tag = '<script src="/cookie-consent.js"></script>'
     for html_file in base.glob("*.html"):
         try:
             content = html_file.read_text(encoding="utf-8")
+            changed = False
+            if default_tag not in content and "<head>" in content:
+                content = content.replace("<head>", "<head>\n" + default_tag, 1)
+                changed = True
             if script_tag not in content and "</body>" in content:
                 content = content.replace("</body>", script_tag + "\n</body>")
+                changed = True
+            if changed:
                 html_file.write_text(content, encoding="utf-8")
                 print(f"[cookie] patched {html_file.name}")
         except Exception as e:
             print(f"[cookie] error patching {html_file.name}: {e}")
 
+
+def remove_internal_dashboard_links() -> None:
+    """Keep the noindex operations dashboard out of public navigation."""
+    base = Path(__file__).resolve().parent
+    dashboard_link = '<a href="/opinion-health.html">Pipeline status</a>'
+    for html_file in base.glob("*.html"):
+        if html_file.name == "opinion-health.html":
+            continue
+        content = html_file.read_text(encoding="utf-8")
+        if dashboard_link in content:
+            html_file.write_text(content.replace(dashboard_link, ""), encoding="utf-8")
+
 if __name__ == "__main__":
     patch_cookie_consent()
+    remove_internal_dashboard_links()
     main()
