@@ -1,0 +1,21 @@
+{
+  "policy": {
+    "publish_from_primary_sources_first": true,
+    "require_source_url": true,
+    "require_why_it_matters": true,
+    "auto_publish": false,
+    "notes": "Collection is automated; publication remains editorial. Secondary reporting can be used for context but should not replace the primary source when one exists."
+  },
+  "sources": [
+    {"name":"OpenAI","type":"primary","url":"https://openai.com/news/","priority":1},
+    {"name":"Anthropic","type":"primary","url":"https://www.anthropic.com/news","priority":1},
+    {"name":"Google AI","type":"primary","url":"https://blog.google/technology/ai/","priority":1},
+    {"name":"Google DeepMind","type":"primary","url":"https://deepmind.google/discover/blog/","priority":1},
+    {"name":"Meta AI","type":"primary","url":"https://ai.meta.com/blog/","priority":1},
+    {"name":"Microsoft AI","type":"primary","url":"https://blogs.microsoft.com/ai/","priority":1},
+    {"name":"NVIDIA","type":"primary","url":"https://blogs.nvidia.com/blog/category/deep-learning/","priority":1},
+    {"name":"Hugging Face","type":"primary-community","url":"https://huggingface.co/blog","priority":2},
+    {"name":"TechCrunch AI","type":"secondary","url":"https://techcrunch.com/category/artificial-intelligence/","priority":3},
+    {"name":"Reuters Technology","type":"secondary","url":"https://www.reuters.com/technology/","priority":3}
+  ]
+}
