@@ -6,9 +6,14 @@ on:
       privacy:
         description: YouTube visibility for this run
         required: true
-        default: public
+        default: unlisted
         type: choice
-        options: [public, private, unlisted]
+        options: [unlisted, private, public]
+      record_state:
+        description: Mark this story as published (leave off for test uploads)
+        required: true
+        default: false
+        type: boolean
   schedule:
     - cron: '12 17 * * *'
 
@@ -21,13 +26,17 @@ concurrency:
 
 jobs:
   publish:
+    # Manual private/unlisted tests are always allowed. Public uploads, including
+    # scheduled runs, require the repository variable below to be exactly true.
+    if: ${{ (github.event_name == 'workflow_dispatch' && inputs.privacy != 'public') || vars.YOUTUBE_PUBLIC_PUBLISHING_ENABLED == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
       YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
       YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
       YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-      YOUTUBE_PRIVACY_STATUS: ${{ inputs.privacy || 'public' }}
+      YOUTUBE_PRIVACY_STATUS: ${{ github.event_name == 'schedule' && 'public' || inputs.privacy }}
+      RECORD_STATE: ${{ github.event_name == 'schedule' || inputs.record_state }}
       HORNUDATES_VOICE: en-US-AvaNeural
     steps:
       - uses: actions/checkout@v4
@@ -41,7 +50,13 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements-video.txt
       - name: Render and publish one verified story
-        run: python scripts/youtube_video_agent.py
+        shell: bash
+        run: |
+          if [[ "$RECORD_STATE" == "true" ]]; then
+            python scripts/youtube_video_agent.py
+          else
+            python scripts/youtube_video_agent.py --skip-state
+          fi
       - name: Commit publishing state
         run: |
           if git diff --quiet -- data/youtube-video-state.json; then
