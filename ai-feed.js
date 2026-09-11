@@ -9,15 +9,17 @@
     const response = await fetch('/data/ai-news.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    const stories = Array.isArray(data.stories) ? data.stories.filter(s => s.status === 'verified') : [];
+    const stories = Array.isArray(data.stories) ? data.stories.filter(s => s.status === 'verified' && s.internal_url) : [];
+
+    if (!stories.length) throw new Error('No verified stories available');
 
     root.innerHTML = stories.slice(0, 6).map((story, index) => `
       <article class="${index === 0 ? 'ai-lead-card' : 'ai-card'}">
         <span class="tag ${categoryClass(story.category)}">${escapeHtml(story.category)}</span>
-        <h3><a href="${escapeHtml(story.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(story.title)}</a></h3>
+        <h3><a href="${escapeHtml(story.internal_url)}">${escapeHtml(story.title)}</a></h3>
         <p>${escapeHtml(story.summary)}</p>
         <div class="why-matters"><strong>Why it matters:</strong> ${escapeHtml(story.why_it_matters)}</div>
-        <div class="story-meta">${escapeHtml(story.source)} · ${escapeHtml(story.published)}</div>
+        <div class="story-meta">${escapeHtml(story.source)} · ${escapeHtml(story.published)} · <a href="${escapeHtml(story.internal_url)}">Read analysis →</a></div>
       </article>`).join('');
 
     const updated = document.querySelector('[data-ai-updated]');
@@ -27,6 +29,6 @@
     }
   } catch (error) {
     console.error('Horn Updates AI feed failed:', error);
-    root.innerHTML = '<p class="feed-error">The live AI feed is temporarily unavailable. Please check back shortly.</p>';
+    root.innerHTML = '<p class="feed-error">The AI feed is temporarily unavailable. Browse our latest analysis again shortly.</p>';
   }
 })();

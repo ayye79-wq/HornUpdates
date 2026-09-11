@@ -1,0 +1,35 @@
+name: Validate AI publication
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'ai/**'
+      - 'data/ai-news.json'
+      - 'ai-feed.js'
+      - 'about.html'
+      - 'editorial-policy.html'
+      - 'newsletter.html'
+      - 'feed.xml'
+      - 'sitemap.xml'
+      - 'scripts/validate-ai-publication.mjs'
+      - '.github/workflows/validate-ai-publication.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'ai/**'
+      - 'data/ai-news.json'
+      - 'feed.xml'
+      - 'sitemap.xml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate publication data and internal links
+        run: node scripts/validate-ai-publication.mjs
