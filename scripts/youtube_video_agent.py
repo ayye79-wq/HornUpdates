@@ -243,6 +243,7 @@ def save_state(story: dict, video_id: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true", help="Render without uploading or changing state")
+    parser.add_argument("--skip-state", action="store_true", help="Upload without recording the story as published")
     args = parser.parse_args()
     story = choose_story()
     if not story:
@@ -255,7 +256,10 @@ def main() -> int:
         print("Dry run complete; YouTube upload skipped.")
         return 0
     video_id = upload(video, story)
-    save_state(story, video_id)
+    if args.skip_state:
+        print("Test upload complete; publishing state was not changed.")
+    else:
+        save_state(story, video_id)
     print(f"Published: https://youtu.be/{video_id}")
     return 0
 
