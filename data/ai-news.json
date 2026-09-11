@@ -1,0 +1,71 @@
+{
+  "updated_at": "2026-09-11T12:30:00Z",
+  "stories": [
+    {
+      "id": "openai-data-agent-2026-09-10",
+      "title": "OpenAI launches a Data agent for ChatGPT Work",
+      "summary": "OpenAI says the new Data agent can connect to company data, investigate changes, and build interactive dashboards from natural-language requests.",
+      "category": "Tools & Products",
+      "source": "OpenAI",
+      "published": "2026-09-10",
+      "url": "https://openai.com/index/put-data-to-work/",
+      "why_it_matters": "It pushes workplace AI beyond answering questions toward analyzing live business data and producing decision-ready outputs.",
+      "status": "verified"
+    },
+    {
+      "id": "openai-financial-services-2026-09-10",
+      "title": "OpenAI introduces ChatGPT for Financial Services",
+      "summary": "OpenAI announced a financial-services version of ChatGPT Work with built-in premium data and GPT-6 Astra reasoning for research, modeling, and client materials.",
+      "category": "Business & Jobs",
+      "source": "OpenAI",
+      "published": "2026-09-10",
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services/",
+      "why_it_matters": "AI vendors are moving from generic assistants into industry-specific systems tied directly to proprietary data and workflows.",
+      "status": "verified"
+    },
+    {
+      "id": "anthropic-misuse-report-2026-09-10",
+      "title": "Anthropic publishes a new report on malicious AI use",
+      "summary": "Anthropic says its threat-intelligence team disrupted operations in which actors attempted to use Claude for malicious activity and documented how those tactics are evolving.",
+      "category": "AI & Cybersecurity",
+      "source": "Anthropic",
+      "published": "2026-09-10",
+      "url": "https://www.anthropic.com/news",
+      "why_it_matters": "Frontier-model security is increasingly about observing real-world misuse, not only evaluating hypothetical risk in labs.",
+      "status": "verified"
+    },
+    {
+      "id": "openai-policy-window-2026-09-09",
+      "title": "OpenAI calls for mandatory national AI safety requirements",
+      "summary": "OpenAI publicly backed capability-based national AI safety regulation and also endorsed several California AI-safety bills while federal action remains unsettled.",
+      "category": "Policy",
+      "source": "OpenAI",
+      "published": "2026-09-09",
+      "url": "https://openai.com/index/ai-policy-window/",
+      "why_it_matters": "The policy fight is shifting from whether AI should be regulated toward who sets the rules and how capability thresholds are defined.",
+      "status": "verified"
+    },
+    {
+      "id": "google-ai-plan-updates-2026-09-09",
+      "title": "Google expands AI features across Gmail, Docs, Sheets and Chrome",
+      "summary": "Google announced new AI-plan features including voice drafting, mini-app generation in Sheets, and expanded Gemini task handling across Chrome and Photos.",
+      "category": "Tools & Products",
+      "source": "Google",
+      "published": "2026-09-09",
+      "url": "https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/",
+      "why_it_matters": "AI assistants are becoming embedded across everyday productivity surfaces instead of living in a single chatbot window.",
+      "status": "verified"
+    },
+    {
+      "id": "openai-gpt6-astra-2026-09-03",
+      "title": "GPT-6 Astra becomes OpenAI's new flagship model",
+      "summary": "OpenAI describes GPT-6 Astra as its most capable model, with major emphasis on computer use, coding, cybersecurity, science, and professional work.",
+      "category": "Models & Research",
+      "source": "OpenAI",
+      "published": "2026-09-03",
+      "url": "https://openai.com/research/index/",
+      "why_it_matters": "The frontier-model race is increasingly centered on agents that can browse, operate computers, write software, and complete longer professional tasks.",
+      "status": "verified"
+    }
+  ]
+}
