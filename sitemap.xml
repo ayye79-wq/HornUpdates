@@ -1,34 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hornupdates.com/</loc><lastmod>2026-09-08</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://hornupdates.com/signal-brief.html</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://hornupdates.com/explainers.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://hornupdates.com/opinion.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://hornupdates.com/about.html</loc><lastmod>2026-09-08</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://hornupdates.com/editorial-policy.html</loc><lastmod>2026-09-08</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hornupdates.com/</loc><lastmod>2026-09-11</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://hornupdates.com/ai/</loc><lastmod>2026-09-11</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hornupdates.com/ai/openai-data-agent.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hornupdates.com/ai/chatgpt-financial-services.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hornupdates.com/ai/anthropic-misuse-report-september-2026.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hornupdates.com/ai/openai-ai-policy-window.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hornupdates.com/ai/gpt-6-astra.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hornupdates.com/newsletter.html</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hornupdates.com/about.html</loc><lastmod>2026-09-11</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://hornupdates.com/editorial-policy.html</loc><lastmod>2026-09-11</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://hornupdates.com/contact.html</loc><lastmod>2026-09-08</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://hornupdates.com/privacy.html</loc><lastmod>2026-09-08</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://hornupdates.com/terms.html</loc><lastmod>2026-09-08</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://hornupdates.com/disclaimer.html</loc><lastmod>2026-09-08</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://hornupdates.com/newsletter.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hornupdates.com/author-kalid-kayo.html</loc><lastmod>2026-09-08</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hornupdates.com/author-aba-fantoli.html</loc><lastmod>2026-09-08</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://hornupdates.com/explainer-tigray.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-sudan-war.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-somalia-al-shabaab.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-gerd-nile.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-ethiopia-sea.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-ethiopia-eritrea-border.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-south-sudan-elections.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-south-sudan-crisis.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-iran-uae-ethiopia.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/explainer-sudan-ethiopia-border.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/opinion-tsimdo.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://hornupdates.com/opinion-tigray-tadesse-werede.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/opinion-tplf-offensive-warning.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/opinion-lencho-leta.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/opinion-africa-geoeconomics-fractured-world.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/opinion-horn-geopolitical-realignment.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/opinion-sudan-three-years.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://hornupdates.com/opinion-ethiopia-internal-tensions.html</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
