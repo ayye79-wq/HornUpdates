@@ -1,1 +1,84 @@
-<!doctype html><html lang="en"><head><script src="/consent-default.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>You're Subscribed | Horn Updates</title><meta name="description" content="Your Horn Updates AI Morning Brief subscription was received."><meta name="robots" content="noindex"><link rel="stylesheet" href="/redesign.css"></head><body><main class="container" style="max-width:760px;padding-top:7rem;padding-bottom:7rem"><section class="signal-box" style="grid-template-columns:1fr"><div class="eyebrow">Subscription received</div><h1>You're on the list.</h1><p>Thanks for signing up for the AI Morning Brief. We’ll focus on the developments worth knowing—what happened, why it matters, and what to watch next—without padding the email just to hit a quota.</p><p><a class="button" href="/">Back to Horn Updates</a> <a class="button" href="/ai/" style="background:#07111f">Browse AI coverage</a></p></section></main><script src="/cookie-consent.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="/consent-default.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>You're Subscribed | Horn Updates</title>
+  <meta name="description" content="Your Horn Updates AI Morning Brief subscription was received.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/redesign.css">
+  <style>
+    .subscription-confirmation {
+      max-width: 680px;
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .subscription-card {
+      display: block;
+      padding: 2rem 2.25rem;
+    }
+
+    .subscription-card h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      margin: .55rem 0 1rem;
+      line-height: 1.05;
+    }
+
+    .subscription-card > p {
+      max-width: 58ch;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: #344158;
+    }
+
+    .subscription-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      margin-top: 1.5rem !important;
+    }
+
+    .subscription-actions .button {
+      margin-top: 0;
+      padding: .7rem 1rem;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 620px) {
+      .subscription-confirmation {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      .subscription-card {
+        padding: 1.5rem;
+      }
+
+      .subscription-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .subscription-actions .button {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container subscription-confirmation">
+    <section class="signal-box subscription-card">
+      <div class="eyebrow">Subscription received</div>
+      <h1>You're on the list.</h1>
+      <p>Thanks for signing up for the AI Morning Brief. We’ll focus on the developments worth knowing—what happened, why it matters, and what to watch next—without padding the email just to hit a quota.</p>
+      <p class="subscription-actions">
+        <a class="button" href="/">Back to Horn Updates</a>
+        <a class="button" href="/ai/" style="background:#07111f">Browse AI coverage</a>
+      </p>
+    </section>
+  </main>
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>
