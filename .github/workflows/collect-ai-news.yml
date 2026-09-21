@@ -12,6 +12,8 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    env:
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,6 +22,7 @@ jobs:
       - name: Collect candidates
         run: node scripts/collect-ai-news.mjs
       - name: Open or update candidate-inbox pull request
+        id: candidate_pr
         uses: peter-evans/create-pull-request@v7
         with:
           branch: automation/refresh-ai-news-inbox
@@ -32,3 +35,13 @@ jobs:
             The collector only discovers candidates. Nothing in this pull request
             is published until it is verified and promoted into `data/ai-news.json`.
           add-paths: data/ai-inbox.json
+      - name: Email approval request through Resend
+        if: ${{ steps.candidate_pr.outputs.pull-request-operation != 'none' && env.RESEND_API_KEY != '' }}
+        env:
+          APPROVAL_EMAIL_TO: ${{ vars.APPROVAL_EMAIL_TO || 'Ayye79@gmail.com' }}
+          APPROVAL_EMAIL_FROM: ${{ vars.APPROVAL_EMAIL_FROM || 'HornUpdates Approvals <approvals@hornupdates.com>' }}
+          APPROVAL_PR_URL: ${{ steps.candidate_pr.outputs.pull-request-url }}
+        run: node scripts/send-ai-approval-email.mjs
+      - name: Explain skipped approval email
+        if: ${{ steps.candidate_pr.outputs.pull-request-operation != 'none' && env.RESEND_API_KEY == '' }}
+        run: echo 'Approval PR created, but email was skipped because RESEND_API_KEY is not configured.'
