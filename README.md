@@ -45,3 +45,17 @@ GitHub Actions runs the same validation for AI-publication changes.
 - `editorial-policy.html` — sourcing and AI-assistance standards
 
 Legacy Horn of Africa pages remain available as an archive so old links are not broken, but they are not promoted as the publication's current editorial focus.
+# Email approval requests
+
+The AI candidate collector opens or refreshes a review pull request and can send
+a branded HornUpdates approval email through Resend. Configure these repository
+settings before expecting mail:
+
+- Actions secret `RESEND_API_KEY`
+- Actions variable `APPROVAL_EMAIL_TO` (defaults to `Ayye79@gmail.com`)
+- Actions variable `APPROVAL_EMAIL_FROM` (defaults to
+  `HornUpdates Approvals <approvals@hornupdates.com>`)
+
+The sender domain must be verified in Resend. Approval email is intentionally a
+review gate: accepting the candidate-inbox PR does not automatically publish an
+unverified article.
