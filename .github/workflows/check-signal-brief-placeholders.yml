@@ -1,6 +1,9 @@
 name: Check Signal Brief Placeholders
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
