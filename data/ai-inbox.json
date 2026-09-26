@@ -1,6 +1,622 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-09-26T14:58:12.198Z",
   "note": "Automated discovery inbox only. Candidates are not published until verified and promoted into data/ai-news.json.",
-  "candidates": [],
-  "source_errors": []
+  "candidates": [
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Skip to main content",
+      "url": "https://www.anthropic.com/news#main-content",
+      "discovered_at": "2026-09-26T14:58:09.653Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "press@anthropic.com",
+      "url": "mailto:press@anthropic.com",
+      "discovered_at": "2026-09-26T14:58:09.653Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "How to get support",
+      "url": "https://support.claude.com/en/articles/9015913-how-to-get-support",
+      "discovered_at": "2026-09-26T14:58:09.653Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Introducing Claude Opus 5.5 Announcements Sep 22, 2026 Opus 5.5 performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5.",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "discovered_at": "2026-09-26T14:58:09.653Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Sep 23, 2026 Science Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "discovered_at": "2026-09-26T14:58:09.653Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Aug 27, 2026 Announcements Previewing the Model Hardware Standard",
+      "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "discovered_at": "2026-09-26T14:58:09.653Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Aug 25, 2026 Announcements Funding better evaluations of AI’s impact on wellbeing",
+      "url": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "discovered_at": "2026-09-26T14:58:09.653Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Aug 14, 2026 Announcements How Claude’s text watermark works",
+      "url": "https://www.anthropic.com/news/claude-text-watermark",
+      "discovered_at": "2026-09-26T14:58:09.653Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Claude Code Enterprise",
+      "url": "https://claude.com/product/claude-code/enterprise",
+      "discovered_at": "2026-09-26T14:58:09.654Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Claude for Microsoft 365",
+      "url": "https://claude.com/claude-for-microsoft-365",
+      "discovered_at": "2026-09-26T14:58:09.654Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Code modernization",
+      "url": "https://claude.com/solutions/code-modernization",
+      "discovered_at": "2026-09-26T14:58:09.654Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Anthropic",
+      "source_type": "primary",
+      "title": "Financial services",
+      "url": "https://claude.com/solutions/financial-services",
+      "discovered_at": "2026-09-26T14:58:09.654Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "Google DeepMind blog",
+      "url": "https://deepmind.google/blog/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "Sundar Pichai, CEO",
+      "url": "https://blog.google/authors/sundar-pichai/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "A new wave of Connected Apps is rolling out to Gemini.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "4 ways to tackle household chores with Gemini",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/household-chores-tips/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "The Gemini app is now available for Windows",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "Behind Project Suncatcher, our moonshot to put AI in space",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "Ask a Scientist: How can researchers use AI to spot a wildfire?",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/wildfire-tracking-ai/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "View more from Google Research",
+      "url": "https://blog.google/innovation-and-ai/technology/research/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "Build real-time voice applications with Gemini 3.8 Live and 3.5 Transcribe",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "DevFest 2026: Come Build with Us",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google AI",
+      "source_type": "primary",
+      "title": "Pairing Google Antigravity with Gemini 3.7 Flash solves notable multi-agent math and engineering problems.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/antigravity-teamwork-multi-agent/",
+      "discovered_at": "2026-09-26T14:58:09.924Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Gemini for Science",
+      "url": "https://ai.google/gemini-for-science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.182Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Experimental Tools",
+      "url": "https://labs.google/science?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.182Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Google AI Learn about all our AI",
+      "url": "https://ai.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.182Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Google DeepMind Explore the frontier of AI",
+      "url": "https://deepmind.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.182Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Google Labs Try our AI experiments",
+      "url": "https://labs.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.183Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Google Research Explore our research",
+      "url": "https://research.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.183Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Gemini app Chat with Gemini",
+      "url": "https://gemini.google.com/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.183Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Google AI Studio Build with our next-gen AI models",
+      "url": "https://aistudio.google.com/prompts/new_chat?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.183Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Google DeepMind",
+      "source_type": "primary",
+      "title": "Google Antigravity Our agentic development platform",
+      "url": "https://antigravity.google/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=",
+      "discovered_at": "2026-09-26T14:58:10.183Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Meta AI",
+      "source_type": "primary",
+      "title": "Introducing Muse Spark 1.1",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "discovered_at": "2026-09-26T14:58:11.552Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Meta AI",
+      "source_type": "primary",
+      "title": "Reimagining Independence: How Meta’s AI Models Are Helping the University of Pittsburgh Transform Assistive Robotics",
+      "url": "https://ai.meta.com/blog/assistive-robotics-university-of-pittsburgh-sam-dino/",
+      "discovered_at": "2026-09-26T14:58:11.552Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Meta AI",
+      "source_type": "primary",
+      "title": "How Meta’s AI Models Are Powering the First Wave of Genesis Mission Projects",
+      "url": "https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino/",
+      "discovered_at": "2026-09-26T14:58:11.552Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Meta AI",
+      "source_type": "primary",
+      "title": "Introducing Muse Image and Muse Video",
+      "url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "discovered_at": "2026-09-26T14:58:11.552Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Meta AI",
+      "source_type": "primary",
+      "title": "From Brain Waves to Words: Brain2Qwerty Offers a New Path to Communication Without Surgery",
+      "url": "https://ai.meta.com/blog/brain2qwerty-brain-ai-human-communication/",
+      "discovered_at": "2026-09-26T14:58:11.552Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Meta AI",
+      "source_type": "primary",
+      "title": "AI agents explained",
+      "url": "https://ai.meta.com/learn/agentic-ai/what-are-ai-agents/",
+      "discovered_at": "2026-09-26T14:58:11.552Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Meta AI",
+      "source_type": "primary",
+      "title": "What is agentic AI",
+      "url": "https://ai.meta.com/learn/agentic-ai/what-is-agentic-ai/",
+      "discovered_at": "2026-09-26T14:58:11.552Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Meta AI",
+      "source_type": "primary",
+      "title": "Agentic AI examples",
+      "url": "https://ai.meta.com/learn/agentic-ai/agentic-ai-examples/",
+      "discovered_at": "2026-09-26T14:58:11.552Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "Support for AI marketplace apps",
+      "url": "https://www.microsoft.com/software-development-companies/offers-benefits/isv-success?icid=DSM_All_SupportAIMarketplace&amp;ocid=cmm3atxvn98",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "When disaster strikes, AI helps responders reach people more quickly",
+      "url": "https://news.microsoft.com/source/features/ai/when-disaster-strikes-ai-helps-responders-reach-people-more-quickly/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "RetroChimera: New research advances AI-assisted molecule synthesis",
+      "url": "https://news.microsoft.com/source/features/ai/retrochimera-new-research-advances-ai-assisted-molecule-synthesis/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "What if everything changes tomorrow? A Canadian company is using AI to help businesses navigate supply chain uncertainty",
+      "url": "https://news.microsoft.com/source/canada/features/ai/kinaxis-supply-chain/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "How to build an AI agent: A simple guide for anyone",
+      "url": "https://news.microsoft.com/signal/articles/how-to-build-an-ai-agent-guide/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "Teaching AI to speak the language of pathology",
+      "url": "https://news.microsoft.com/signal/articles/teaching-ai-to-speak-the-language-of-pathology/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "A new approach to AI data puts communities in charge",
+      "url": "https://news.microsoft.com/signal/articles/a-new-approach-to-ai-data-puts-communities-in-charge/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "Microsoft expands Azure AI and HPC infrastructure with AMD",
+      "url": "https://blogs.microsoft.com/blog/2026/07/20/microsoft-expands-azure-ai-and-hpc-infrastructure-with-amd/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "New AI-powered library lets people meet Theodore Roosevelt in a whole new way",
+      "url": "https://news.microsoft.com/signal/articles/ai-theodore-roosevelt-presidential-library/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "Educator training and development",
+      "url": "https://education.microsoft.com/",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Microsoft AI",
+      "source_type": "primary",
+      "title": "Support for AI marketplace apps",
+      "url": "https://www.microsoft.com/software-development-companies/offers-benefits/isv-success?icid=DSM_Footer_SupportAIMarketplace&amp;ocid=cmm3atxvn98",
+      "discovered_at": "2026-09-26T14:58:11.854Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
+      "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
+      "url": "https://blogs.nvidia.com/blog/leading-models-nvidia/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "Isambard-AI, the UK’s Most Powerful AI Supercomputer, Goes Live",
+      "url": "https://blogs.nvidia.com/blog/isambard-ai/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack",
+      "url": "https://blogs.nvidia.com/blog/ai-security-agent-stack/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "University of Manchester Uses NVIDIA Earth-2 to Forecast Air Pollution Across the UK",
+      "url": "https://blogs.nvidia.com/blog/uk-air-pollution-research-earth-2/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "Heart of the Matter: How a Major Children’s Hospital Uses Open Source NVIDIA AI for Cardiac Care",
+      "url": "https://blogs.nvidia.com/blog/childrens-hospital-open-source-ai-cardiac-care/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "NVIDIA Rubin Platform, Open Models, Autonomous Driving: NVIDIA Presents Blueprint for the Future at CES",
+      "url": "https://blogs.nvidia.com/blog/2026-ces-special-presentation/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "Reaching Across the Isles: UK-LLM Brings AI to UK Languages With NVIDIA Nemotron",
+      "url": "https://blogs.nvidia.com/blog/uk-llm-nemotron/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "NVIDIA Research Shapes Physical AI",
+      "url": "https://blogs.nvidia.com/blog/physical-ai-research-siggraph-2025/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "NVIDIA CEO Drops the Blueprint for Europe’s AI Boom",
+      "url": "https://blogs.nvidia.com/blog/gtc-paris-2025/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "NVIDIA Releases New AI Models and Developer Tools to Advance Autonomous Vehicle Ecosystem",
+      "url": "https://blogs.nvidia.com/blog/autonomous-vehicle-ecosystem-ai-models-developer-tools/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "NVIDIA",
+      "source_type": "primary",
+      "title": "Innovation to Impact: How NVIDIA Research Fuels Transformative Work in AI, Graphics and Beyond",
+      "url": "https://blogs.nvidia.com/blog/nvidia-research-ai-graphics/",
+      "discovered_at": "2026-09-26T14:58:12.051Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "Inference Providers",
+      "url": "https://huggingface.co/inference/models",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "**Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization** nvidia • 3 days ago • 53",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-diarization",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "How to Use the Jev AI Model: A Step-by-Step Developer Guide sora-2 • 4 days ago • 22",
+      "url": "https://huggingface.co/blog/sora-2/how-to-use-the-jev-ai-model-a-step-by-step-develop",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "What Is Jev AI? A Practical Guide to System One and Executable Decisions sora-2 • 6 days ago • 16",
+      "url": "https://huggingface.co/blog/sora-2/what-is-jev-ai-a-practical-guide-to-system-one-and",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "Your model already knows it's wrong. Asking costs 0.06 seconds and zero tokens. FINAL-Bench • 6 days ago • 12",
+      "url": "https://huggingface.co/blog/FINAL-Bench/ztc",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "How to Train Your Robot: The LanceDB Edition CarolinePascal • 2 days ago • 8",
+      "url": "https://huggingface.co/blog/CarolinePascal/how-to-train-your-robot-the-lancedb-edition",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "FLUX 3 Action: a world action model you can fine-tune black-forest-labs • 3 days ago • 7",
+      "url": "https://huggingface.co/blog/black-forest-labs/flux-3-action",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "Jev ai vs djev vs Laya vs OpenJev vs SemIf: Which Decision Model Should You Use? sora-2 • 3 days ago • 7",
+      "url": "https://huggingface.co/blog/sora-2/jev-ai-vs-djev-vs-laya-vs-openjev-vs-semif-which-d",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "Open Yap 1K: 1,000 hours of full-duplex natural conversation, free for commercial use TheAgenticDataCompany • 23 days ago • 20",
+      "url": "https://huggingface.co/blog/TheAgenticDataCompany/open-yap-1k",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "Jev AI vs LLMs: When Should You Use a Decision Model Instead of a Chat Model? sora-2 • 6 days ago • 6",
+      "url": "https://huggingface.co/blog/sora-2/jev-ai-vs-llms-when-should-you-use-a-decision-mode",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "Compute:Arena / Measuring Local Inference Across Models, Quants, Chips, and Runtimes basecompute • 4 days ago • 6",
+      "url": "https://huggingface.co/blog/basecompute/local-inference-benchmarks-computearena",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    },
+    {
+      "source": "Hugging Face",
+      "source_type": "primary-community",
+      "title": "Optimum-Intel v2.2.0 & OpenVINO GenAI 2026.4.0: What's New echarlaix • 8 days ago • 8",
+      "url": "https://huggingface.co/blog/echarlaix/optimum-intel-v22",
+      "discovered_at": "2026-09-26T14:58:12.198Z",
+      "status": "candidate"
+    }
+  ],
+  "source_errors": [
+    {
+      "source": "OpenAI",
+      "error": "HTTP 403",
+      "discovered_at": "2026-09-26T14:58:09.474Z",
+      "status": "source_error"
+    }
+  ]
 }
