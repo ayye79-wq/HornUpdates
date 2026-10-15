@@ -21,6 +21,12 @@ jobs:
           node-version: '22'
       - name: Collect candidates
         run: node scripts/collect-ai-news.mjs
+      - name: Build approval checklist (keeps boxes already ticked)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr view automation/refresh-ai-news-inbox --json body -q .body > "$RUNNER_TEMP/previous-body.md" 2>/dev/null || true
+          PREVIOUS_BODY_FILE="$RUNNER_TEMP/previous-body.md" node scripts/inbox-pr-body.mjs "$RUNNER_TEMP/inbox-body.md"
       - name: Open or update candidate-inbox pull request
         id: candidate_pr
         uses: peter-evans/create-pull-request@v7
@@ -29,11 +35,7 @@ jobs:
           delete-branch: true
           commit-message: Refresh AI news candidate inbox
           title: Refresh AI news candidate inbox
-          body: |
-            Automated refresh of `data/ai-inbox.json`.
-
-            The collector only discovers candidates. Nothing in this pull request
-            is published until it is verified and promoted into `data/ai-news.json`.
+          body-path: ${{ runner.temp }}/inbox-body.md
           add-paths: data/ai-inbox.json
       - name: Email approval request through Resend
         if: ${{ steps.candidate_pr.outputs.pull-request-operation != 'none' && env.RESEND_API_KEY != '' }}

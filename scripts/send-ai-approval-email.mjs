@@ -45,12 +45,12 @@ const html = `<!doctype html>
     </div>
     <div style="padding:28px 32px">
       <h1 style="margin:0 0 10px;font:700 26px Arial,sans-serif;color:#0b1727">New stories need your review</h1>
-      <p style="margin:0 0 18px;font:16px/1.55 Arial,sans-serif;color:#415267">The automated collector found ${candidates.length} candidate stories. Check the original sources, then approve the candidate-inbox pull request or close it if the selection should be rejected.</p>
+      <p style="margin:0 0 18px;font:16px/1.55 Arial,sans-serif;color:#415267">The automated collector found ${candidates.length} candidate stories. Open the request, tick the stories worth covering and merge it. Claude then drafts each ticked story into a separate Publish pull request.</p>
       <table role="presentation" style="width:100%;border-collapse:collapse">${rows}</table>
       <div style="margin-top:26px">
         <a href="${escapeHtml(pullRequestUrl)}" style="display:inline-block;background:#087ea4;color:#fff;text-decoration:none;border-radius:8px;padding:13px 18px;font:700 15px Arial,sans-serif">Review approval request</a>
       </div>
-      <p style="margin:20px 0 0;font:13px/1.5 Arial,sans-serif;color:#637487">Approving this request stores the reviewed candidate inbox. It does not silently publish an article. Public stories still require promotion into the verified HornUpdates feed.</p>
+      <p style="margin:20px 0 0;font:13px/1.5 Arial,sans-serif;color:#637487">Merging the inbox only creates drafts. Nothing goes live until you review and merge the Publish pull request.</p>
     </div>
   </div>
 </body></html>`;

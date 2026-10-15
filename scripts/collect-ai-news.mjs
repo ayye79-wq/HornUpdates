@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { candidateId } from './lib/ai-site.mjs';
 
 const sources = JSON.parse(await fs.readFile(new URL('../ai-sources.json', import.meta.url), 'utf8')).sources;
 const keywords = ['ai','artificial-intelligence','artificial intelligence','gpt','claude','gemini','model','agent','machine-learning','deepmind','llm'];
@@ -22,7 +23,7 @@ for (const source of sources.filter(s => s.priority <= 2)) {
       const haystack = `${title} ${url}`.toLowerCase();
       if (!keywords.some(k => haystack.includes(k))) continue;
       seen.add(url);
-      results.push({ source: source.name, source_type: source.type, title, url, discovered_at: new Date().toISOString(), status: 'candidate' });
+      results.push({ id: candidateId(source.name, url), source: source.name, source_type: source.type, title, url, discovered_at: new Date().toISOString(), status: 'candidate' });
       if (seen.size >= 12) break;
     }
   } catch (error) {
@@ -34,15 +35,19 @@ const existingPath = new URL('../data/ai-inbox.json', import.meta.url);
 let existing = { candidates: [] };
 try { existing = JSON.parse(await fs.readFile(existingPath, 'utf8')); } catch {}
 
+const published = new Set(JSON.parse(await fs.readFile(new URL('../data/ai-news.json', import.meta.url), 'utf8')).stories.map(s => s.source_url));
+
+// Existing entries win so a re-discovered link keeps its original id and discovery time.
 const byUrl = new Map();
-for (const item of [...results, ...(existing.candidates || [])]) {
-  if (item.url && !byUrl.has(item.url)) byUrl.set(item.url, item);
+for (const item of [...(existing.candidates || []), ...results]) {
+  if (!item.url || byUrl.has(item.url) || published.has(item.url)) continue;
+  byUrl.set(item.url, { ...item, id: item.id || candidateId(item.source, item.url) });
 }
 
 const output = {
   generated_at: new Date().toISOString(),
   note: 'Automated discovery inbox only. Candidates are not published until verified and promoted into data/ai-news.json.',
-  candidates: [...byUrl.values()].slice(0, 120),
+  candidates: [...byUrl.values()].sort((a, b) => b.discovered_at.localeCompare(a.discovered_at)).slice(0, 120),
   source_errors: results.filter(x => x.status === 'source_error')
 };
 

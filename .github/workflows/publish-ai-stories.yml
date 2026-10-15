@@ -1,0 +1,105 @@
+name: Draft AI stories for publication
+
+# Runs when the candidate-inbox PR is merged (drafts every ticked candidate), or by hand
+# with a source URL. Either way the result is a "Publish" PR: nothing goes live until an
+# editor reviews and merges it.
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Source URL to draft a story from
+        required: true
+      title:
+        description: Optional link title for context
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publish-ai-stories
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'automation/refresh-ai-news-inbox')
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+
+      - name: Read ticked candidates
+        id: pick
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          ids=$(printf '%s\n' "$PR_BODY" | sed -n 's/^- \[[xX]\] `\([^`]*\)`.*/\1/p' | paste -sd, -)
+          echo "ids=$ids" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ -n "$ids" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No candidates ticked; inbox saved without drafting."
+          fi
+
+      - name: Draft stories with Claude
+        id: draft
+        if: steps.pick.outputs.run == 'true'
+        env:
+          IDS: ${{ steps.pick.outputs.ids }}
+          SOURCE_URL: ${{ inputs.source_url }}
+          SOURCE_TITLE: ${{ inputs.title }}
+          DRAFT_REPORT: ${{ runner.temp }}/draft-report.md
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not configured."
+            exit 1
+          fi
+          if [ -n "$SOURCE_URL" ]; then
+            node scripts/draft-ai-story.mjs --url "$SOURCE_URL" --title "$SOURCE_TITLE"
+          else
+            node scripts/draft-ai-story.mjs --ids "$IDS"
+          fi
+          cat "$DRAFT_REPORT" >> "$GITHUB_STEP_SUMMARY"
+
+      # PRs opened with GITHUB_TOKEN don't trigger other workflows, so validate here.
+      - name: Validate publication
+        if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
+        run: node scripts/validate-ai-publication.mjs
+
+      - name: Write publish PR body
+        if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
+        run: |
+          {
+            echo "**Review before merging — merging publishes these stories.**"
+            echo
+            echo "Claude drafted each story from its source. Check facts against the linked source, edit the article in \`ai/\` and its entry in \`data/ai-news.json\` if needed, or delete a story you don't want. After editing \`data/ai-news.json\` by hand, run \`node scripts/build-ai-site.mjs\` to refresh the archive, sitemap and RSS."
+            echo
+            cat "$RUNNER_TEMP/draft-report.md"
+          } > "$RUNNER_TEMP/publish-body.md"
+
+      - name: Open publish pull request
+        if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/publish-ai-stories-${{ github.run_id }}
+          delete-branch: true
+          commit-message: Draft AI stories for review
+          title: 'Publish: ${{ steps.draft.outputs.drafted }} AI ${{ steps.draft.outputs.drafted == ''1'' && ''story'' || ''stories'' }}'
+          body-path: ${{ runner.temp }}/publish-body.md
+          add-paths: |
+            ai/**
+            data/ai-news.json
+            sitemap.xml
+            feed.xml
