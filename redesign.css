@@ -36,3 +36,6 @@
 @media(max-width:900px){.home-hero{grid-template-columns:1fr}}
 @media(max-width:620px){.signal-item{grid-template-columns:1fr;gap:4px}.signal-num{font-size:1.4rem}.signal-item dl{grid-template-columns:1fr;gap:2px}.signal-item dd{margin-bottom:8px}}
 .home-hero .brief-card h2{max-width:none;font-size:1.45rem;line-height:1.15}
+.analysis-grid .story h3 a:hover,.beat-grid h3 a:hover{color:var(--accent)}
+.beat-link{margin-top:12px!important;font-size:.72rem!important;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.beat-link a{color:var(--accent)}
