@@ -13,13 +13,13 @@ const escapeHtml = value => String(value ?? '')
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#039;');
 
-const inbox = JSON.parse(await fs.readFile(new URL('../data/ai-inbox.json', import.meta.url), 'utf8'));
+const inbox = JSON.parse(await fs.readFile(new URL('../data/inbox.json', import.meta.url), 'utf8'));
 const candidates = (inbox.candidates || [])
   .filter(item => item.status === 'candidate' && item.url && item.title)
   .slice(0, 8);
 
 if (!candidates.length) {
-  console.log('No AI-news candidates are available for approval.');
+  console.log('No news candidates are available for approval.');
   process.exit(0);
 }
 
@@ -40,15 +40,15 @@ const html = `<!doctype html>
 <html><body style="margin:0;background:#eef3f7;padding:24px">
   <div style="max-width:680px;margin:auto;background:#fff;border-radius:14px;overflow:hidden;border:1px solid #dbe4ee">
     <div style="background:#07111f;padding:28px 32px;color:#fff">
-      <div style="font:700 22px Arial,sans-serif">HornUpdates AI</div>
+      <div style="font:700 22px Arial,sans-serif">Horn Updates · The Signal</div>
       <div style="margin-top:6px;font:14px Arial,sans-serif;color:#a9bfd4">Editorial approval request</div>
     </div>
     <div style="padding:28px 32px">
       <h1 style="margin:0 0 10px;font:700 26px Arial,sans-serif;color:#0b1727">New stories need your review</h1>
-      <p style="margin:0 0 18px;font:16px/1.55 Arial,sans-serif;color:#415267">The automated collector found ${candidates.length} candidate stories. Open the request, tick the stories worth covering and merge it. Claude then drafts each ticked story into a separate Publish pull request.</p>
+      <p style="margin:0 0 18px;font:16px/1.55 Arial,sans-serif;color:#415267">A new Signal inbox is open. Here are a few of the latest candidates; the full list is in the request. Tick the stories for this week's edition as they come in, then merge when you're ready. Claude drafts the ticked stories into one Signal edition in a separate Publish pull request.</p>
       <table role="presentation" style="width:100%;border-collapse:collapse">${rows}</table>
       <div style="margin-top:26px">
-        <a href="${escapeHtml(pullRequestUrl)}" style="display:inline-block;background:#087ea4;color:#fff;text-decoration:none;border-radius:8px;padding:13px 18px;font:700 15px Arial,sans-serif">Review approval request</a>
+        <a href="${escapeHtml(pullRequestUrl)}" style="display:inline-block;background:#087ea4;color:#fff;text-decoration:none;border-radius:8px;padding:13px 18px;font:700 15px Arial,sans-serif">Open the Signal inbox</a>
       </div>
       <p style="margin:20px 0 0;font:13px/1.5 Arial,sans-serif;color:#637487">Merging the inbox only creates drafts. Nothing goes live until you review and merge the Publish pull request.</p>
     </div>
@@ -71,7 +71,7 @@ const response = await fetch('https://api.resend.com/emails', {
   body: JSON.stringify({
     from: sender,
     to: [recipient],
-    subject: `HornUpdates: ${candidates.length} AI stories need approval`,
+    subject: `Horn Updates: ${candidates.length} stories waiting for this week's Signal`,
     html
   })
 });

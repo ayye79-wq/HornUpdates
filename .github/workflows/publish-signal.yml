@@ -1,7 +1,7 @@
-name: Draft AI stories for publication
+name: Draft The Signal for publication
 
-# Runs when the candidate-inbox PR is merged (drafts every ticked candidate), or by hand
-# with a source URL. Either way the result is a "Publish" PR: nothing goes live until an
+# Runs when the Signal inbox PR is merged (drafts the ticked candidates into one edition),
+# or by hand with a source URL. Either way the result is a "Publish" PR: nothing goes live until an
 # editor reviews and merges it.
 on:
   pull_request:
@@ -21,12 +21,12 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: publish-ai-stories
+  group: publish-signal
   cancel-in-progress: false
 
 jobs:
   draft:
-    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'automation/refresh-ai-news-inbox')
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'automation/refresh-news-inbox')
     runs-on: ubuntu-latest
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -53,7 +53,7 @@ jobs:
             echo "No candidates ticked; inbox saved without drafting."
           fi
 
-      - name: Draft stories with Claude
+      - name: Draft the edition with Claude
         id: draft
         if: steps.pick.outputs.run == 'true'
         env:
@@ -67,16 +67,16 @@ jobs:
             exit 1
           fi
           if [ -n "$SOURCE_URL" ]; then
-            node scripts/draft-ai-story.mjs --url "$SOURCE_URL" --title "$SOURCE_TITLE"
+            node scripts/draft-signal.mjs --url "$SOURCE_URL" --title "$SOURCE_TITLE"
           else
-            node scripts/draft-ai-story.mjs --ids "$IDS"
+            node scripts/draft-signal.mjs --ids "$IDS"
           fi
           cat "$DRAFT_REPORT" >> "$GITHUB_STEP_SUMMARY"
 
       # PRs opened with GITHUB_TOKEN don't trigger other workflows, so validate here.
       - name: Validate publication
         if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
-        run: node scripts/validate-ai-publication.mjs
+        run: node scripts/validate-publication.mjs
 
       - name: Write publish PR body
         if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
@@ -84,7 +84,7 @@ jobs:
           {
             echo "**Review before merging — merging publishes these stories.**"
             echo
-            echo "Claude drafted each story from its source. Check facts against the linked source, edit the article in \`ai/\` and its entry in \`data/ai-news.json\` if needed, or delete a story you don't want. After editing \`data/ai-news.json\` by hand, run \`node scripts/build-ai-site.mjs\` to refresh the archive, sitemap and RSS."
+            echo "Claude drafted each item from its source. Check every item against its linked source, especially attribution of contested claims. To edit, change the edition in \`data/signal.json\` (title, intro, items or their order; delete an item you don't want), then run \`node scripts/build-site.mjs\` and commit. Don't edit the generated HTML directly: it is rebuilt from the JSON."
             echo
             cat "$RUNNER_TEMP/draft-report.md"
           } > "$RUNNER_TEMP/publish-body.md"
@@ -93,13 +93,15 @@ jobs:
         if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
         uses: peter-evans/create-pull-request@v7
         with:
-          branch: automation/publish-ai-stories-${{ github.run_id }}
+          branch: automation/publish-signal-${{ github.run_id }}
           delete-branch: true
-          commit-message: Draft AI stories for review
-          title: 'Publish: ${{ steps.draft.outputs.drafted }} AI ${{ steps.draft.outputs.drafted == ''1'' && ''story'' || ''stories'' }}'
+          commit-message: Draft Signal edition for review
+          title: 'Publish: The Signal (${{ steps.draft.outputs.drafted }} ${{ steps.draft.outputs.drafted == ''1'' && ''item'' || ''items'' }})'
           body-path: ${{ runner.temp }}/publish-body.md
           add-paths: |
-            ai/**
-            data/ai-news.json
+            data/signal.json
+            signal/**
+            signal-brief.html
+            index.html
             sitemap.xml
             feed.xml
