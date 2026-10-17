@@ -20,10 +20,31 @@ function interleave(list) {
   return out;
 }
 const open = (inbox.candidates || []).filter(c => c.status === 'candidate' && c.id && c.url);
-const candidates = [...interleave(open.filter(c => ETHIOPIA_FIRST.includes(c.source))), ...interleave(open.filter(c => !ETHIOPIA_FIRST.includes(c.source)))];
-const listed = [...candidates.filter(c => ticked.has(c.id)), ...candidates.filter(c => !ticked.has(c.id))].slice(0, MAX_LISTED);
+const isEthiopia = c => ETHIOPIA_FIRST.includes(c.source);
+const ethiopia = interleave(open.filter(isEthiopia));
+const regional = interleave(open.filter(c => !isEthiopia(c)));
+const candidates = [...ethiopia, ...regional];
+
+// Ticked candidates always stay listed. About a third of the remaining slots go to
+// Sudan, Somalia, South Sudan and regional outlets so they aren't crowded out; any
+// slots one group can't fill go to the other.
+const free = Math.max(0, MAX_LISTED - ticked.size);
+const untickedEthiopia = ethiopia.filter(c => !ticked.has(c.id));
+const untickedRegional = regional.filter(c => !ticked.has(c.id));
+let regionalSlots = Math.min(untickedRegional.length, Math.round(free / 3));
+const ethiopiaSlots = Math.min(untickedEthiopia.length, free - regionalSlots);
+regionalSlots = Math.min(untickedRegional.length, free - ethiopiaSlots);
+const keep = new Set([...candidates.filter(c => ticked.has(c.id)), ...untickedEthiopia.slice(0, ethiopiaSlots), ...untickedRegional.slice(0, regionalSlots)]);
+const listedEthiopia = ethiopia.filter(c => keep.has(c));
+const listedRegional = regional.filter(c => keep.has(c));
+const listed = [...listedEthiopia, ...listedRegional];
+
 const tags = c => [c.language && c.language !== 'English' ? c.language : '', /state/.test(c.source_kind || '') ? 'state media' : '', c.source_published || ''].filter(Boolean).join(', ');
-const lines = listed.map(c => `- [${ticked.has(c.id) ? 'x' : ' '}] \`${c.id}\` — [${clean(c.title)}](${c.url}) · ${clean(c.source)}${tags(c) ? ` _(${tags(c)})_` : ''}`);
+const line = c => `- [${ticked.has(c.id) ? 'x' : ' '}] \`${c.id}\` — [${clean(c.title)}](${c.url}) · ${clean(c.source)}${tags(c) ? ` _(${tags(c)})_` : ''}`;
+const lines = [
+  ...(listedEthiopia.length ? ['**Ethiopia**', ...listedEthiopia.map(line)] : []),
+  ...(listedRegional.length ? ['', '**Sudan, Somalia, South Sudan and the region**', ...listedRegional.map(line)] : [])
+];
 const errors = (inbox.source_errors || []).map(e => `- ${clean(e.source)}: ${clean(e.error)}`);
 
 const body = `<!-- hornupdates-inbox -->
