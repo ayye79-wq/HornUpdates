@@ -1,0 +1,50 @@
+name: Collect Horn news candidates
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5,15 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    env:
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Collect candidates
+        run: node scripts/collect-news.mjs
+      - name: Build approval checklist (keeps boxes already ticked)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr view automation/refresh-news-inbox --json body -q .body > "$RUNNER_TEMP/previous-body.md" 2>/dev/null || true
+          PREVIOUS_BODY_FILE="$RUNNER_TEMP/previous-body.md" node scripts/inbox-pr-body.mjs "$RUNNER_TEMP/inbox-body.md"
+      - name: Open or update candidate-inbox pull request
+        id: candidate_pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/refresh-news-inbox
+          delete-branch: true
+          commit-message: Refresh news candidate inbox
+          title: "Signal inbox: tick stories, then merge"
+          body-path: ${{ runner.temp }}/inbox-body.md
+          add-paths: data/inbox.json
+      # Email once per inbox cycle (when a fresh inbox PR opens), not on every refresh.
+      - name: Email approval request through Resend
+        if: ${{ steps.candidate_pr.outputs.pull-request-operation == 'created' && env.RESEND_API_KEY != '' }}
+        env:
+          APPROVAL_EMAIL_TO: ${{ vars.APPROVAL_EMAIL_TO || 'Ayye79@gmail.com' }}
+          APPROVAL_EMAIL_FROM: ${{ vars.APPROVAL_EMAIL_FROM || 'HornUpdates Approvals <approvals@hornupdates.com>' }}
+          APPROVAL_PR_URL: ${{ steps.candidate_pr.outputs.pull-request-url }}
+        run: node scripts/send-approval-email.mjs
+      - name: Explain skipped approval email
+        if: ${{ steps.candidate_pr.outputs.pull-request-operation == 'created' && env.RESEND_API_KEY == '' }}
+        run: echo 'Approval PR created, but email was skipped because RESEND_API_KEY is not configured.'

@@ -1,0 +1,26 @@
+{
+  "policy": {
+    "require_source_url": true,
+    "auto_publish": false,
+    "notes": "Collection is automated; publication is editorial. Every Signal item links its source. State media is labelled and used for official positions, not as independent confirmation. Prefer covering contested events from more than one side."
+  },
+  "horn_keywords": ["ethiopia", "ethiopian", "addis ababa", "oromia", "oromo", "amhara", "tigray", "tplf", "fano", "afar", "somali region", "abiy", "gerd", "eritrea", "eritrean", "asmara", "isaias", "somalia", "somali", "somaliland", "puntland", "mogadishu", "al-shabaab", "al shabaab", "djibouti", "sudan", "sudanese", "khartoum", "darfur", "rsf", "el fasher", "south sudan", "juba", "kiir", "igad", "horn of africa", "red sea", "nile"],
+  "sources": [
+    {"name": "The Reporter Ethiopia", "kind": "independent", "type": "html", "url": "https://www.thereporterethiopia.com/", "link_pattern": "^https://www\\.thereporterethiopia\\.com/\\d+/$"},
+    {"name": "Ethiopia Insight", "kind": "independent", "type": "rss", "url": "https://www.ethiopia-insight.com/feed/", "filter": "all"},
+    {"name": "BBC Amharic", "kind": "international", "language": "Amharic", "type": "rss", "url": "https://feeds.bbci.co.uk/amharic/rss.xml", "filter": "all"},
+    {"name": "BBC Afaan Oromoo", "kind": "international", "language": "Afaan Oromoo", "type": "rss", "url": "https://feeds.bbci.co.uk/afaanoromoo/rss.xml", "filter": "all"},
+    {"name": "BBC Tigrinya", "kind": "international", "language": "Tigrinya", "type": "rss", "url": "https://feeds.bbci.co.uk/tigrinya/rss.xml", "filter": "all"},
+    {"name": "The Guardian (Ethiopia)", "kind": "international", "type": "rss", "url": "https://www.theguardian.com/world/ethiopia/rss", "filter": "horn"},
+    {"name": "Ethiopian News Agency", "kind": "state", "type": "html", "url": "https://www.ena.et/web/eng", "link_pattern": "/web/eng/w/eng_\\d+"},
+    {"name": "Fana Media Corporation", "kind": "state-affiliated", "type": "rss", "url": "https://www.fanamc.com/english/feed/", "filter": "all"},
+    {"name": "ReliefWeb (Ethiopia)", "kind": "humanitarian", "type": "rss", "url": "https://reliefweb.int/updates/rss.xml?search=country.exact:%22Ethiopia%22", "filter": "all"},
+    {"name": "BBC Africa", "kind": "international", "type": "rss", "url": "https://feeds.bbci.co.uk/news/world/africa/rss.xml", "filter": "horn"},
+    {"name": "Al Jazeera", "kind": "international", "type": "rss", "url": "https://www.aljazeera.com/xml/rss/all.xml", "filter": "horn"},
+    {"name": "Africanews", "kind": "international", "type": "rss", "url": "https://www.africanews.com/feed/rss", "filter": "horn"},
+    {"name": "Radio Dabanga (Sudan)", "kind": "independent", "type": "rss", "url": "https://www.dabangasudan.org/en/feed", "filter": "all"},
+    {"name": "Eye Radio (South Sudan)", "kind": "independent", "type": "rss", "url": "https://www.eyeradio.org/feed/", "filter": "all"},
+    {"name": "Garowe Online (Somalia)", "kind": "independent", "type": "html", "url": "https://www.garoweonline.com/en", "link_pattern": "^https://www\\.garoweonline\\.com/en/news/"},
+    {"name": "Hiiraan Online (Somalia)", "kind": "independent", "type": "rss", "url": "https://hiiraan.com/news.xml", "filter": "all"}
+  ]
+}

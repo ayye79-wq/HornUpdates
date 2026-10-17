@@ -19,6 +19,12 @@ https://www.hornupdates.com/*  https://hornupdates.com/:splat  301!
 /author-khalid-kayo   /author-kalid-kayo.html 301!
 /author-khalid-kayo.html /author-kalid-kayo.html 301!
 
+# ── Retired AI section (Sep–Oct 2026) ─────────────────────────
+/ai                   /signal-brief.html      301!
+/ai/                  /signal-brief.html      301!
+/ai/index.html        /signal-brief.html      301!
+/signal               /signal-brief.html      301!
+
 # ── Retired indexes and feed alias ───────────────────────────
 /djibouti.html        /                       410!
 /eritrea.html         /                       410!

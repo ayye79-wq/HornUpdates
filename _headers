@@ -23,3 +23,7 @@
 
 /opinion-tigray-council-debretsion-2026-05-05.html
   X-Robots-Tag: noindex, follow
+
+# Archived AI coverage: reachable for old links, kept out of search.
+/ai/*
+  X-Robots-Tag: noindex, follow

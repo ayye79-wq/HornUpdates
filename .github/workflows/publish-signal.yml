@@ -1,0 +1,107 @@
+name: Draft The Signal for publication
+
+# Runs when the Signal inbox PR is merged (drafts the ticked candidates into one edition),
+# or by hand with a source URL. Either way the result is a "Publish" PR: nothing goes live until an
+# editor reviews and merges it.
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: Source URL to draft a story from
+        required: true
+      title:
+        description: Optional link title for context
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publish-signal
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'automation/refresh-news-inbox')
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+
+      - name: Read ticked candidates
+        id: pick
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          ids=$(printf '%s\n' "$PR_BODY" | sed -n 's/^- \[[xX]\] `\([^`]*\)`.*/\1/p' | paste -sd, -)
+          echo "ids=$ids" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ -n "$ids" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No candidates ticked; inbox saved without drafting."
+          fi
+
+      - name: Draft the edition with Claude
+        id: draft
+        if: steps.pick.outputs.run == 'true'
+        env:
+          IDS: ${{ steps.pick.outputs.ids }}
+          SOURCE_URL: ${{ inputs.source_url }}
+          SOURCE_TITLE: ${{ inputs.title }}
+          DRAFT_REPORT: ${{ runner.temp }}/draft-report.md
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not configured."
+            exit 1
+          fi
+          if [ -n "$SOURCE_URL" ]; then
+            node scripts/draft-signal.mjs --url "$SOURCE_URL" --title "$SOURCE_TITLE"
+          else
+            node scripts/draft-signal.mjs --ids "$IDS"
+          fi
+          cat "$DRAFT_REPORT" >> "$GITHUB_STEP_SUMMARY"
+
+      # PRs opened with GITHUB_TOKEN don't trigger other workflows, so validate here.
+      - name: Validate publication
+        if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
+        run: node scripts/validate-publication.mjs
+
+      - name: Write publish PR body
+        if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
+        run: |
+          {
+            echo "**Review before merging — merging publishes these stories.**"
+            echo
+            echo "Claude drafted each item from its source. Check every item against its linked source, especially attribution of contested claims. To edit, change the edition in \`data/signal.json\` (title, intro, items or their order; delete an item you don't want), then run \`node scripts/build-site.mjs\` and commit. Don't edit the generated HTML directly: it is rebuilt from the JSON."
+            echo
+            cat "$RUNNER_TEMP/draft-report.md"
+          } > "$RUNNER_TEMP/publish-body.md"
+
+      - name: Open publish pull request
+        if: steps.draft.outputs.drafted != '' && steps.draft.outputs.drafted != '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/publish-signal-${{ github.run_id }}
+          delete-branch: true
+          commit-message: Draft Signal edition for review
+          title: 'Publish: The Signal (${{ steps.draft.outputs.drafted }} ${{ steps.draft.outputs.drafted == ''1'' && ''item'' || ''items'' }})'
+          body-path: ${{ runner.temp }}/publish-body.md
+          add-paths: |
+            data/signal.json
+            signal/**
+            signal-brief.html
+            index.html
+            sitemap.xml
+            feed.xml

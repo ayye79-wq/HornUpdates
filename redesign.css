@@ -11,3 +11,28 @@
 .beat-link{display:block;position:relative;cursor:pointer}.beat-link:hover{text-decoration:none}.beat-link article{height:100%;transition:background .18s ease,box-shadow .18s ease,transform .18s ease}.beat-link:hover article,.beat-link:focus-visible article{background:#f5f8ff;box-shadow:inset 4px 0 0 var(--accent);transform:translateY(-2px)}.beat-link:focus-visible{outline:3px solid rgba(61,103,255,.28);outline-offset:3px}.beat-cta{display:inline-block;margin-top:14px;color:var(--accent);font-size:.72rem;font-weight:850;text-transform:uppercase;letter-spacing:.06em}.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.filter-row a{border:1px solid #cbd5e1;border-radius:999px;padding:6px 11px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.055em;background:#fff;transition:.18s ease}.filter-row a:hover,.filter-row a.active{background:var(--navy);border-color:var(--navy);color:#fff;text-decoration:none}.empty-filter{padding:30px;background:var(--wash);border-left:4px solid var(--accent);max-width:720px}.empty-filter h2{margin-top:0}
 @media(max-width:900px){.ai-hero,.signal-box,.africa-feature,.opinion-band{grid-template-columns:1fr}.ai-news-grid{grid-template-columns:1fr 1fr}.ai-lead-card{grid-column:1/-1}.beat-grid{grid-template-columns:1fr 1fr}.story-grid{grid-template-columns:1fr 1fr}.brief-card h2{max-width:none}.ai-hero h1{max-width:none}.page-hero{max-width:820px}}
 @media(max-width:620px){.masthead{align-items:flex-start;flex-direction:column;padding:15px 18px 12px;gap:11px}.brand{font-size:1.7rem}.container{padding:22px 18px 30px}.section{padding:28px 0}.page-hero{padding:8px 0 18px}.page-hero h1{font-size:clamp(2.15rem,10.5vw,3.05rem);line-height:1}.page-hero p{font-size:1rem}.page-hero+.section{padding-top:22px}.ai-hero{padding-top:16px;gap:24px}.ai-hero h1{font-size:clamp(2.8rem,14vw,4rem)}.ai-news-grid,.beat-grid,.story-grid{grid-template-columns:1fr}.ai-lead-card{grid-column:auto}.section-title{align-items:flex-start;flex-direction:column;gap:6px}.signal-box,.africa-feature,.opinion-band{padding:22px}.watch-list{border-left:0;border-top:1px solid #44566b;padding:18px 0 0}.article-shell{padding:30px 18px}}
+
+/* Horn focus: homepage hero and The Signal */
+.home-hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.7fr);gap:38px;padding:26px 0 38px;border-bottom:1px solid var(--rule);align-items:start}
+.home-hero h1{font-size:clamp(2.6rem,5vw,4.3rem);margin:.3rem 0 .85rem;line-height:.98;letter-spacing:-.04em;max-width:14ch}
+.home-hero .dek{max-width:700px;font-size:1.18rem;line-height:1.55;margin-bottom:0}
+.home-hero .topic-row .tag{background:#fff}
+.edition-intro{font-family:var(--serif);font-size:1.08rem;line-height:1.55;color:var(--muted);max-width:780px;margin:0 0 18px}
+.signal-list{display:flex;flex-direction:column;border-top:3px solid var(--navy)}
+.signal-item{display:grid;grid-template-columns:64px minmax(0,1fr);gap:18px;padding:22px 0;border-bottom:1px solid var(--rule);scroll-margin-top:16px}
+.signal-item:target{background:var(--wash)}
+.signal-num{font-family:var(--serif);font-size:2rem;line-height:1;color:var(--accent)}
+.signal-item h2{font-size:1.45rem;margin:.3rem 0 .5rem;line-height:1.2}
+.signal-item>div>p{margin:0 0 .6rem;line-height:1.6;max-width:760px}
+.signal-item dl{display:grid;grid-template-columns:130px minmax(0,1fr);gap:6px 16px;margin:.6rem 0;max-width:820px}
+.signal-item dt{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding-top:3px}
+.signal-item dd{margin:0;line-height:1.5}
+.signal-sources{font-size:.82rem;color:var(--muted)}
+.source-kind{display:inline-block;border:1px solid #ccd6e2;border-radius:999px;padding:1px 7px;font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-left:2px}
+.edition-nav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;padding-top:16px;border-top:1px solid var(--rule);font-weight:700;font-size:.9rem}
+.edition-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule)}
+.edition-list li{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--rule)}
+.edition-list span{color:var(--muted);font-size:.85rem}
+@media(max-width:900px){.home-hero{grid-template-columns:1fr}}
+@media(max-width:620px){.signal-item{grid-template-columns:1fr;gap:4px}.signal-num{font-size:1.4rem}.signal-item dl{grid-template-columns:1fr;gap:2px}.signal-item dd{margin-bottom:8px}}
+.home-hero .brief-card h2{max-width:none;font-size:1.45rem;line-height:1.15}
