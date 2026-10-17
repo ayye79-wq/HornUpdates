@@ -1,0 +1,18 @@
+/* Shared site header and footer for explainer and opinion pages, which keep their own
+   article styles. Everything is scoped under .hu-header / .hu-footer so it cannot
+   collide with page-level CSS. Mirrors .site-header / .footer in redesign.css. */
+.hu-header,.hu-footer{--hu-navy:#07111f;--hu-accent:#3d67ff;--hu-serif:Georgia,"Times New Roman",serif;--hu-sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-family:var(--hu-sans);box-sizing:border-box}
+.hu-header *,.hu-footer *{box-sizing:border-box}
+.hu-header{background:var(--hu-navy);color:#fff;border-bottom:3px solid var(--hu-accent)}
+.hu-header .hu-masthead{max-width:1240px;margin:auto;padding:17px 24px 13px;display:flex;gap:30px;align-items:flex-end;justify-content:space-between}
+.hu-header a{color:#fff;text-decoration:none}
+.hu-header .hu-brand{font-family:var(--hu-serif);font-size:1.85rem;font-weight:700;letter-spacing:-.03em;line-height:1.1}
+.hu-header .hu-brand small{display:block;margin-top:2px;color:#aebdce;font:600 .76rem/1.35 var(--hu-sans);letter-spacing:.04em}
+.hu-header nav{display:flex;gap:20px;flex-wrap:wrap;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.hu-header nav a:hover,.hu-header nav a[aria-current="page"]{color:#73dce8}
+.hu-footer{background:var(--hu-navy);color:#cbd5df;padding:26px 22px;margin-top:40px}
+.hu-footer .hu-footer-inner{max-width:1240px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.8rem;line-height:1.5}
+.hu-footer nav{display:flex;gap:16px;flex-wrap:wrap}
+.hu-footer a{color:#cbd5df;text-decoration:none}
+.hu-footer a:hover{color:#fff}
+@media(max-width:620px){.hu-header .hu-masthead{align-items:flex-start;flex-direction:column;padding:15px 18px 12px;gap:11px}.hu-header .hu-brand{font-size:1.7rem}}
