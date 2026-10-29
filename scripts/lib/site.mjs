@@ -17,16 +17,24 @@ export const TOPICS = ['Politics', 'Conflict & Security', 'Economy', 'Humanitari
 
 // Background reading Claude may attach to a Signal item.
 export const EXPLAINERS = [
-  { url: '/explainer-tigray.html', title: 'The Tigray war explained', blurb: 'Causes, human cost, the Pretoria deal and what remains unresolved.' },
-  { url: '/explainer-gerd-nile.html', title: 'GERD and the Nile dispute', blurb: 'Why Ethiopia, Egypt and Sudan have not reached a deal on the dam.' },
-  { url: '/explainer-ethiopia-sea.html', title: 'Why Ethiopia wants Red Sea access', blurb: 'The landlocked state’s options and how they reshape the region.' },
-  { url: '/explainer-ethiopia-eritrea-border.html', title: 'The Ethiopia–Eritrea border', blurb: 'War, the Algiers Agreement, 2018 peace and an undemarcated line.' },
-  { url: '/explainer-sudan-ethiopia-border.html', title: 'Sudan’s war and Ethiopia’s west', blurb: 'Benishangul-Gumuz, the dam and the risk of spillover.' },
-  { url: '/explainer-iran-uae-ethiopia.html', title: 'Iran, the UAE and the Horn', blurb: 'How Gulf and Iran tensions reach Ethiopia through trade and the Red Sea.' },
-  { url: '/explainer-sudan-war.html', title: 'Sudan’s war explained', blurb: 'Why it started, who is fighting and what comes next.' },
-  { url: '/explainer-somalia-al-shabaab.html', title: 'How al-Shabaab survived', blurb: 'Why Somalia’s insurgency endures and what the next phase means.' },
-  { url: '/explainer-south-sudan-crisis.html', title: 'South Sudan’s polycrisis', blurb: 'Violence, elections, hunger and displacement at once.' },
-  { url: '/explainer-south-sudan-elections.html', title: 'Can South Sudan hold elections?', blurb: 'Why the vote keeps slipping and what it would take.' }
+  { url: '/explainer-tigray.html', title: 'The Tigray war explained', blurb: 'Causes, human cost, the Pretoria deal and what remains unresolved.', region: 'Ethiopia' },
+  { url: '/explainer-gerd-nile.html', title: 'GERD and the Nile dispute', blurb: 'Why Ethiopia, Egypt and Sudan have not reached a deal on the dam.', region: 'Ethiopia' },
+  { url: '/explainer-ethiopia-sea.html', title: 'Why Ethiopia wants Red Sea access', blurb: 'The landlocked state’s options and how they reshape the region.', region: 'Ethiopia' },
+  { url: '/explainer-ethiopia-eritrea-border.html', title: 'The Ethiopia–Eritrea border', blurb: 'War, the Algiers Agreement, 2018 peace and an undemarcated line.', region: 'Ethiopia' },
+  { url: '/explainer-sudan-ethiopia-border.html', title: 'Sudan’s war and Ethiopia’s west', blurb: 'Benishangul-Gumuz, the dam and the risk of spillover.', region: 'Ethiopia' },
+  { url: '/explainer-iran-uae-ethiopia.html', title: 'Iran, the UAE and the Horn', blurb: 'How Gulf and Iran tensions reach Ethiopia through trade and the Red Sea.', region: 'Ethiopia' },
+  { url: '/explainer-sudan-war.html', title: 'Sudan’s war explained', blurb: 'Why it started, who is fighting and what comes next.', region: 'Sudan, Somalia and South Sudan' },
+  { url: '/explainer-somalia-al-shabaab.html', title: 'How al-Shabaab survived', blurb: 'Why Somalia’s insurgency endures and what the next phase means.', region: 'Sudan, Somalia and South Sudan' },
+  { url: '/explainer-south-sudan-crisis.html', title: 'South Sudan’s polycrisis', blurb: 'Violence, elections, hunger and displacement at once.', region: 'Sudan, Somalia and South Sudan' },
+  { url: '/explainer-south-sudan-elections.html', title: 'Can South Sudan hold elections?', blurb: 'Why the vote keeps slipping and what it would take.', region: 'Sudan, Somalia and South Sudan' }
+];
+
+// Signed and long-form pieces featured on the homepage (keep in step with opinion.html).
+const ANALYSIS_PICKS = [
+  { url: '/opinion-tsimdo.html', label: 'Ethiopia · Opinion', title: 'I Oppose Abiy Ahmed. That Does Not Mean I Have to Support Tsimdo.', blurb: 'Political opposition should not require surrendering independent judgment about the movements that claim to speak for it.', byline: 'By Aba Fantoli' },
+  { url: '/opinion-tigray-tadesse-werede.html', label: 'Tigray · Analysis', title: 'The TPLF Has Moved to Take Back Tigray. Here Is What That Actually Means.', blurb: 'The structural forces behind Tigray’s political realignment and the risks ahead.', byline: 'By Kalid Kayo' },
+  { url: '/opinion-horn-geopolitical-realignment.html', label: 'Regional order · Long read', title: 'The Horn’s New Great Game', blurb: 'How outside powers and overlapping proxy alignments are changing the region.' },
+  { url: '/opinion-ethiopia-internal-tensions.html', label: 'Ethiopia · Long read', title: 'Abiy Ahmed’s Dual Gamble', blurb: 'Domestic fragmentation and external ambition are producing compounding pressure.' }
 ];
 
 export const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[ch]));
@@ -125,7 +133,7 @@ function renderHome(editions) {
     ? `<section class="section" id="latest"><div class="section-title"><h2>This week in the Horn</h2><p>From The Signal · ${escapeHtml(shortDate(latest.date))}</p></div><div class="story-grid">${latest.items.slice(0, HOME_ITEMS).map((item, i) => `<article class="story"><div class="eyebrow">${escapeHtml(item.country)} · ${escapeHtml(item.topic)}</div><h3><a href="${latest.url}#item-${i + 1}">${escapeHtml(item.headline)}</a></h3><p>${escapeHtml(item.why_it_matters)}</p></article>`).join('')}</div><p><a class="button" href="${latest.url}">Read the full edition →</a></p></section>`
     : '';
   const explainers = `<section class="section" id="explainers"><div class="section-title"><h2>Background that lasts</h2><p><a href="/explainers.html">All explainers →</a></p></div><div class="beat-grid">${EXPLAINERS.slice(0, 6).map((e, i) => `<article><div class="beat-num">${pad(i + 1)}</div><h3><a href="${e.url}">${escapeHtml(e.title)}</a></h3><p>${escapeHtml(e.blurb)}</p></article>`).join('')}</div></section>`;
-  const body = `<section class="home-hero"><div><div class="eyebrow">Horn Updates · Ethiopia and the Horn of Africa</div><h1>What is changing in the Horn — and why it matters.</h1><p class="dek">Sourced analysis of Ethiopia, Eritrea, Somalia, Sudan, South Sudan and Djibouti. We read local-language reporting so you get the context, not just the headline.</p><div class="topic-row">${COUNTRIES.slice(0, 6).map(c => `<span class="tag">${c}</span>`).join('')}</div></div>${card}</section>${items}${explainers}<section class="section"><div class="opinion-band"><div><div class="eyebrow">Opinion &amp; analysis</div><h2>Arguments, clearly labelled.</h2></div><div><p>Long-form analysis and signed commentary on Ethiopian politics, the Red Sea and the region’s wars, kept separate from reporting.</p><a class="button" href="/opinion.html">Read opinion &amp; analysis →</a></div></div></section><section class="section"><div class="signal-box"><div><div class="eyebrow">Editorial standard</div><h2>Every claim has a source.</h2></div><div><p>Automation helps us find and draft stories; an editor checks every item against its source before it is published. Contested claims are attributed to the party making them, and state media is labelled.</p><p><a href="/editorial-policy.html"><strong>Read the editorial policy →</strong></a></p></div></div></section><section class="section newsletter"><div class="eyebrow">The Signal by email</div><h2>One briefing a week. No noise.</h2><p>What happened in the Horn, why it matters and what to watch next.</p><a class="button" href="/newsletter.html">Subscribe</a></section>`;
+  const body = `<section class="home-hero"><div><div class="eyebrow">Horn Updates · Ethiopia and the Horn of Africa</div><h1>What is changing in the Horn — and why it matters.</h1><p class="dek">Sourced analysis of Ethiopia, Eritrea, Somalia, Sudan, South Sudan and Djibouti. We read local-language reporting so you get the context, not just the headline.</p><div class="topic-row">${COUNTRIES.slice(0, 6).map(c => `<span class="tag">${c}</span>`).join('')}</div></div>${card}</section>${items}<section class="section" id="analysis"><div class="section-title"><h2>Analysis &amp; opinion</h2><p><a href="/opinion.html">All analysis →</a></p></div><div class="story-grid analysis-grid">${ANALYSIS_PICKS.map(a => `<article class="story"><div class="eyebrow">${escapeHtml(a.label)}</div><h3><a href="${a.url}">${escapeHtml(a.title)}</a></h3><p>${escapeHtml(a.blurb)}</p>${a.byline ? `<div class="story-meta">${escapeHtml(a.byline)}</div>` : ''}</article>`).join('')}</div></section>${explainers}<section class="section"><div class="signal-box"><div><div class="eyebrow">Editorial standard</div><h2>Every claim has a source.</h2></div><div><p>Automation helps us find and draft stories; an editor checks every item against its source before it is published. Contested claims are attributed to the party making them, and state media is labelled.</p><p><a href="/editorial-policy.html"><strong>Read the editorial policy →</strong></a></p></div></div></section><section class="section newsletter"><div class="eyebrow">The Signal by email</div><h2>One briefing a week. No noise.</h2><p>What happened in the Horn, why it matters and what to watch next.</p><a class="button" href="/newsletter.html">Subscribe</a></section>`;
   return page({
     title: 'Horn Updates — Ethiopia and Horn of Africa News Analysis',
     description: 'Sourced weekly analysis of Ethiopia and the Horn of Africa: politics, conflict, economy and diplomacy across Ethiopia, Eritrea, Somalia, Sudan, South Sudan and Djibouti.',
@@ -134,6 +142,18 @@ function renderHome(editions) {
     body,
     jsonLd: { '@context': 'https://schema.org', '@graph': [{ '@type': 'Organization', name: 'Horn Updates', url: `${SITE}/` }, { '@type': 'WebSite', name: 'Horn Updates', url: `${SITE}/`, description: 'Weekly sourced analysis of Ethiopia and the Horn of Africa.' }] }
   }).replace('<a class="brand" href="/">', '<a class="brand" href="/" aria-current="page">');
+}
+
+function renderExplainers() {
+  const groups = [...new Set(EXPLAINERS.map(e => e.region))];
+  const sections = groups.map(region => `<section class="section"><div class="section-title"><h2>${escapeHtml(region)}</h2></div><div class="beat-grid">${EXPLAINERS.filter(e => e.region === region).map(e => `<article><h3><a href="${e.url}">${escapeHtml(e.title)}</a></h3><p>${escapeHtml(e.blurb)}</p><p class="beat-link"><a href="${e.url}">Read the explainer →</a></p></article>`).join('')}</div></section>`).join('');
+  return page({
+    title: 'Explainers: Ethiopia and the Horn of Africa | Horn Updates',
+    description: 'Background explainers on the Horn of Africa’s defining questions: Tigray, the GERD, Ethiopia’s search for sea access, Sudan’s war, al-Shabaab and South Sudan.',
+    canonical: '/explainers.html',
+    current: '/explainers.html',
+    body: `<section class="page-hero"><div class="eyebrow">Background</div><h1>Explainers</h1><p>The background behind the headlines: how the region’s conflicts, disputes and power struggles began, who the key players are, and what is still unresolved. Updated as events move.</p></section>${sections}<section class="section"><div class="signal-box"><div><div class="eyebrow">Stay current</div><h2>The Signal</h2></div><div><p>Explainers give you the background. The Signal, our weekly briefing, tells you what changed this week and why it matters.</p><p><a href="/signal-brief.html"><strong>Read The Signal →</strong></a></p></div></div></section>`
+  });
 }
 
 // ── Sitemap and RSS ────────────────────────────────────────────────────────────
@@ -194,6 +214,7 @@ export async function buildSite({ touch = false } = {}) {
   }
   await fs.writeFile(path.join(ROOT, 'signal-brief.html'), renderSignalIndex(editions));
   await fs.writeFile(path.join(ROOT, 'index.html'), renderHome(editions));
+  await fs.writeFile(path.join(ROOT, 'explainers.html'), renderExplainers());
   await buildSitemap(editions, (data.updated_at || new Date().toISOString()).slice(0, 10));
   await buildFeed(editions, data.updated_at);
   return data;
